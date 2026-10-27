@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "source_sha256": "acb87f7dfaca473bbc87dba2dfd43cc5f9717ba9d1bef14cd0bed90d3bf9b3cf",
+  "checker_sha256": "8627dc8ef6344d5cfbb6afa3ad1db0140fe847f3f92cc5f1bc73525fd8e65a4d",
+  "independent_flag_support": [
+    {
+      "k": 1,
+      "switch_probabilities": [
+        "1/2"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/2",
+      "all_label_states_positive": true
+    },
+    {
+      "k": 2,
+      "switch_probabilities": [
+        "2/3",
+        "3/4"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/12",
+      "all_label_states_positive": true
+    },
+    {
+      "k": 3,
+      "switch_probabilities": [
+        "3/4",
+        "4/5",
+        "5/6"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/120",
+      "all_label_states_positive": true
+    },
+    {
+      "k": 4,
+      "switch_probabilities": [
+        "4/5",
+        "5/6",
+        "6/7",
+        "7/8"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/1680",
+      "all_label_states_positive": true
+    },
+    {
+      "k": 5,
+      "switch_probabilities": [
+        "5/6",
+        "6/7",
+        "7/8",
+        "8/9",
+        "9/10"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/30240",
+      "all_label_states_positive": true
+    },
+    {
+      "k": 6,
+      "switch_probabilities": [
+        "6/7",
+        "7/8",
+        "8/9",
+        "9/10",
+        "10/11",
+        "11/12"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/665280",
+      "all_label_states_positive": true
+    },
+    {
+      "k": 7,
+      "switch_probabilities": [
+        "7/8",
+        "8/9",
+        "9/10",
+        "10/11",
+        "11/12",
+        "12/13",
+        "13/14"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/17297280",
+      "all_label_states_positive": true
+    },
+    {
+      "k": 8,
+      "switch_probabilities": [
+        "8/9",
+        "9/10",
+        "10/11",
+        "11/12",
+        "12/13",
+        "13/14",
+        "14/15",
+        "15/16"
+      ],
+      "all_on": "1/2",
+      "joint_policy_support": "1/518918400",
+      "all_label_states_positive": true
+    }
+  ],
+  "smallest_observed_fixture": {
+    "observed_nodes": 3,
+    "treated_nodes": 2,
+    "hidden_roots": 2,
+    "hidden_root_states": 2,
+    "minimum_cell": "31/128",
+    "policy_risks": {
+      "-1": "63/128",
+      "1": "65/128"
+    },
+    "risk_gap": "1/64",
+    "joint_support": "1/12",
+    "finite_record_checks": 584
+  },
+  "nonuniform_product_policies": [
+    {
+      "pi1_plus": "1/3",
+      "pi2_plus": "2/3",
+      "minimum_cell": "29/96",
+      "risk_gap": "1/1073741824",
+      "table_distributions_common": true,
+      "joint_policy_support": "1/12",
+      "finite_record_checks": 584,
+      "hidden_states_per_root": 5
+    },
+    {
+      "pi1_plus": "1/4",
+      "pi2_plus": "3/5",
+      "minimum_cell": "31/128",
+      "risk_gap": "1/1073741824",
+      "table_distributions_common": true,
+      "joint_policy_support": "1/12",
+      "finite_record_checks": 584,
+      "hidden_states_per_root": 5
+    },
+    {
+      "pi1_plus": "3/4",
+      "pi2_plus": "1/2",
+      "minimum_cell": "31/128",
+      "risk_gap": "1/1073741824",
+      "table_distributions_common": true,
+      "joint_policy_support": "1/12",
+      "finite_record_checks": 584,
+      "hidden_states_per_root": 5
+    }
+  ],
+  "scope": "Exact finite kernel/support/record checks; arbitrary graph completeness still depends on the analytic nested-mode argument."
+}

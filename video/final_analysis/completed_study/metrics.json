@@ -1,0 +1,227 @@
+{
+  "sample_size": 128,
+  "reference_size": 128,
+  "primary": {
+    "a": "descending",
+    "b": "ascending",
+    "kvd_degradation_difference_a_minus_b": -14.599631388627273,
+    "paired_bootstrap_95_percentile_interval": [
+      -76.27137654938234,
+      184.95599278745738
+    ],
+    "absolute_late_kvd_a": 65.31522695319018,
+    "absolute_late_kvd_b": 79.2977669854848,
+    "absolute_late_kvd_difference_a_minus_b_descriptive": -13.982540032294622,
+    "status": "sole prespecified primary comparison",
+    "direction": "Negative means less late-minus-early KVD degradation for proxy1-best.",
+    "interpretation": "A change score alone does not establish better late quality; absolute late KVD is reported alongside."
+  },
+  "schedules": [
+    "descending",
+    "ascending",
+    "rotate21",
+    "shuffle29"
+  ],
+  "kvd_by_horizon": [
+    [
+      85.4136875943928,
+      55.26986414265389,
+      70.84419550771077,
+      87.17147558989586,
+      63.5220519245664,
+      65.31522695319018
+    ],
+    [
+      84.79659623806015,
+      50.712132731267076,
+      58.23870234420065,
+      56.64553796244576,
+      62.66672891845241,
+      79.2977669854848
+    ],
+    [
+      63.88644841650154,
+      75.61710219565612,
+      66.70375935810114,
+      85.38955538121226,
+      85.01149618501631,
+      70.29431152181786
+    ],
+    [
+      57.20639019259207,
+      84.11447473856518,
+      62.42710365256289,
+      70.54717123522272,
+      72.09525713176689,
+      96.11764981651265
+    ]
+  ],
+  "kvd_degradation": [
+    -20.09846064120262,
+    -5.498829252575348,
+    6.4078631053163235,
+    38.911259623920586
+  ],
+  "exploratory_other_pairwise_comparisons": [
+    {
+      "a": "descending",
+      "b": "rotate21",
+      "kvd_degradation_difference_a_minus_b": -26.506323746518945,
+      "paired_bootstrap_95_percentile_interval": [
+        -149.1924099223807,
+        37.786666738210606
+      ],
+      "absolute_late_kvd_a": 65.31522695319018,
+      "absolute_late_kvd_b": 70.29431152181786,
+      "absolute_late_kvd_difference_a_minus_b_descriptive": -4.979084568627684
+    },
+    {
+      "a": "descending",
+      "b": "shuffle29",
+      "kvd_degradation_difference_a_minus_b": -59.00972026512321,
+      "paired_bootstrap_95_percentile_interval": [
+        -190.70477722738752,
+        2.9894256571889657
+      ],
+      "absolute_late_kvd_a": 65.31522695319018,
+      "absolute_late_kvd_b": 96.11764981651265,
+      "absolute_late_kvd_difference_a_minus_b_descriptive": -30.802422863322477
+    },
+    {
+      "a": "ascending",
+      "b": "rotate21",
+      "kvd_degradation_difference_a_minus_b": -11.906692357891671,
+      "paired_bootstrap_95_percentile_interval": [
+        -256.91759144014776,
+        34.497053432393926
+      ],
+      "absolute_late_kvd_a": 79.2977669854848,
+      "absolute_late_kvd_b": 70.29431152181786,
+      "absolute_late_kvd_difference_a_minus_b_descriptive": 9.003455463666938
+    },
+    {
+      "a": "ascending",
+      "b": "shuffle29",
+      "kvd_degradation_difference_a_minus_b": -44.410088876495934,
+      "paired_bootstrap_95_percentile_interval": [
+        -266.16003043629973,
+        -11.109833675455173
+      ],
+      "absolute_late_kvd_a": 79.2977669854848,
+      "absolute_late_kvd_b": 96.11764981651265,
+      "absolute_late_kvd_difference_a_minus_b_descriptive": -16.819882831027854
+    },
+    {
+      "a": "rotate21",
+      "b": "shuffle29",
+      "kvd_degradation_difference_a_minus_b": -32.50339651860426,
+      "paired_bootstrap_95_percentile_interval": [
+        -111.52759617331544,
+        44.68819642299563
+      ],
+      "absolute_late_kvd_a": 70.29431152181786,
+      "absolute_late_kvd_b": 96.11764981651265,
+      "absolute_late_kvd_difference_a_minus_b_descriptive": -25.823338294694793
+    }
+  ],
+  "exploratory_proxy3_pair": {
+    "a": "descending",
+    "b": "ascending",
+    "kvd_degradation_difference_a_minus_b": -14.599631388627273,
+    "paired_bootstrap_95_percentile_interval": [
+      -76.27137654938234,
+      184.95599278745738
+    ],
+    "absolute_late_kvd_a": 65.31522695319018,
+    "absolute_late_kvd_b": 79.2977669854848,
+    "absolute_late_kvd_difference_a_minus_b_descriptive": -13.982540032294622
+  },
+  "secondary_descriptive_fvd_by_horizon": [
+    [
+      1601.4965142002593,
+      1454.4155515439807,
+      1536.2308427212547,
+      1572.2189723356887,
+      1474.2190703129945,
+      1476.9837362036196
+    ],
+    [
+      1594.4741997994142,
+      1352.7670339951683,
+      1444.2500546325136,
+      1343.364113899027,
+      1361.4389237490805,
+      1459.1302085214984
+    ],
+    [
+      1429.7479572897219,
+      1477.6167966417142,
+      1458.4315889736417,
+      1475.9442388136704,
+      1519.7777430654778,
+      1458.661768980157
+    ],
+    [
+      1448.413402315904,
+      1560.7053057291341,
+      1510.6084479982392,
+      1511.8205733390696,
+      1515.4038230625247,
+      1670.7213098971833
+    ]
+  ],
+  "horizons": [
+    {
+      "index": 0,
+      "retained_frame_start": 0,
+      "retained_frame_end_exclusive": 16
+    },
+    {
+      "index": 1,
+      "retained_frame_start": 16,
+      "retained_frame_end_exclusive": 32
+    },
+    {
+      "index": 2,
+      "retained_frame_start": 32,
+      "retained_frame_end_exclusive": 48
+    },
+    {
+      "index": 3,
+      "retained_frame_start": 48,
+      "retained_frame_end_exclusive": 64
+    },
+    {
+      "index": 4,
+      "retained_frame_start": 64,
+      "retained_frame_end_exclusive": 80
+    },
+    {
+      "index": 5,
+      "retained_frame_start": 80,
+      "retained_frame_end_exclusive": 96
+    }
+  ],
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261026,
+    "generator": "numpy.default_rng (PCG64)",
+    "draw_order": "128 prompt indices, then 128 reference indices per replicate",
+    "pairing": "same prompt draw across all schedules/horizons; same independent reference draw across schedules/horizons",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "quantile_method": "linear",
+    "method": "frozen unbiased cubic MMD; exact cached-kernel count weighting; duplicate positions retained"
+  },
+  "limitations": [
+    "N=128 independent prompts and 128 reference clips; six windows are repeated observations, not 768 independent videos.",
+    "Percentile finite-reference paired bootstrap is not an exact test or simultaneous confidence procedure; no multiplicity correction.",
+    "KVD is an unbiased U-statistic and may be negative; no clipping is applied.",
+    "FVD is secondary/descriptive and biased/noisy at N=128 with 400-dimensional features; bootstrap KVD does not remove FVD bias.",
+    "Serial FP16 denoiser revision was frozen before outcomes; this is not official-default FP32 reproduction.",
+    "A scheduler proxy failure here concerns this heldout empirical ranking, not a refutation of a KL upper-bound theorem.",
+    "No claim of broad prior-art novelty or generalization beyond this fixed model/dataset/protocol."
+  ]
+}

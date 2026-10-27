@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "exact_rational_equalities_checked": 3560,
+  "source_sha256": "b61ce8aec7b3dd187021c1788f74c21746a2e6cd4c0417dc145e34948d878e0d",
+  "checker_sha256": "89f4ee99d086f964d50379992e96a1cb16cec725925d359c5272bada50ad79a6",
+  "diagnostics_not_a_convergence_certificate": [
+    {
+      "n": 100,
+      "n_weight_variance_over_log_n": 0.6240194308899812,
+      "sqrt_n_q_n": 1.0326044280860542,
+      "maximum_normalized_weight_squared": 0.23153800225390514
+    },
+    {
+      "n": 1000,
+      "n_weight_variance_over_log_n": 0.7239194528274119,
+      "sqrt_n_q_n": 1.0971794709831724,
+      "maximum_normalized_weight_squared": 0.17426830322285175
+    },
+    {
+      "n": 10000,
+      "n_weight_variance_over_log_n": 0.787247565594026,
+      "sqrt_n_q_n": 1.1184214806972033,
+      "maximum_normalized_weight_squared": 0.13581111641550947
+    },
+    {
+      "n": 100000,
+      "n_weight_variance_over_log_n": 0.8284128694302189,
+      "sqrt_n_q_n": 1.1252211208510827,
+      "maximum_normalized_weight_squared": 0.10997400918313344
+    },
+    {
+      "n": 1000000,
+      "n_weight_variance_over_log_n": 0.8566526584021836,
+      "sqrt_n_q_n": 1.1273795902377324,
+      "maximum_normalized_weight_squared": 0.09199694322928287
+    }
+  ],
+  "limits_of_check": "Checks exact averaging/variance weights, not martingale CLT, coverage, novelty, or the full proof."
+}

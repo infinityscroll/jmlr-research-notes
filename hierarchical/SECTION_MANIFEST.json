@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-28",
+  "status": "staged; not remotely published by this agent",
+  "copied_sources_unchanged": true,
+  "check_output": "PUBLICATION_CHECKS.json",
+  "files": [
+    {
+      "path": "PROOF_MAP.md",
+      "sha256": "d9591dd554b760bd810f80273236a2c1d5fbcae2599da6f2e95902b6d4b65566"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "a543ecc90f623121e6b8c51f673f2d34c82deb4eb5cbcbd453cf6a74ba27ac05"
+    },
+    {
+      "path": "PUBLICATION_CHECKS.json",
+      "sha256": "58ba651541a8306e54b16783e85c5400a4d412d3d8b2a3ff4b3d7101bf79ef85"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d48aa3b5b9ee2bda399102e62a56dc5e3b7a902ccebc43a60bd111063064f637"
+    },
+    {
+      "path": "REPRODUCTION_CASES.json",
+      "sha256": "1f70200625205adc5895f5ba6b331023ce844b61ecfbd407446ee30c20039554"
+    },
+    {
+      "path": "alphabet_refinement_gate_20261028/COMPLETENESS_FRONTIER.md",
+      "sha256": "a18c5d5b8c77756366c34321f0fde326ffbd426629a26d62273eb21b6f2d6d57"
+    },
+    {
+      "path": "alphabet_refinement_gate_20261028/independent_finite_alphabet_refinement_audit.md",
+      "sha256": "ed376bcf3d998c4a6dc7b7d140cf7a2d316a1f4dd0abcf65113b92234bdca808"
+    },
+    {
+      "path": "alphabet_refinement_gate_20261028/positive_finite_alphabet_refinement.md",
+      "sha256": "4364d97a03288717303da9e21732b92683c0ffe587cf89ab67d2723d846c6fb1"
+    },
+    {
+      "path": "alphabet_refinement_gate_20261028/root_composition_review.md",
+      "sha256": "461641ff04f65d0c35f0d917f6d42dbd2c9cd4e1edb0fa3a78854956dbfd5854"
+    },
+    {
+      "path": "binary_selected/general_positive/hidden_capacity_attack/capacity_compression_v2.md",
+      "sha256": "1dfc788b295bf9dc30202bfa7315f5eb44f98b662b04c6794b543ef84cd7d6af"
+    },
+    {
+      "path": "binary_selected/general_positive/hidden_capacity_attack/certificate.json",
+      "sha256": "3f62c07d25d6e01f3c5f7d1d56506bdd2f54b711dcd9cb95025fb320749790b7"
+    },
+    {
+      "path": "binary_selected/general_positive/hidden_capacity_attack/check_capacity.py",
+      "sha256": "959c73478b307b5ad851929204b637e8857fec2638257867523b9178f8397840"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/check_six_node.py",
+      "sha256": "0e4de3f6b8a0477d98e0bb1ac4ab9b9ef7f925a4e11a5c2959d829b9c4a8b1f3"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/joint_target_corollary.md",
+      "sha256": "8119664d55ca00547478e336784a0143a359d20c47fe3623e877b590dac282bf"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/six_node_certificate.json",
+      "sha256": "5897e823d4e0b8c9dfe557f37a1221f37a7f47b4f850a3972cdf9656df7f93dc"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/theorem.md",
+      "sha256": "60e9bae29d787b80f2056a96e681276b3ec9c3f1d49f2eb0c0435136469e1147"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/check_multiple_switches.py",
+      "sha256": "8627dc8ef6344d5cfbb6afa3ad1db0140fe847f3f92cc5f1bc73525fd8e65a4d"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/independent_multiple_policy_audit.md",
+      "sha256": "1b2634a4196b1837ac141a52f6033b4b771f3e37bb9abae58a2f36c133fb3d50"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/multiple_policy_completeness.md",
+      "sha256": "acb87f7dfaca473bbc87dba2dfd43cc5f9717ba9d1bef14cd0bed90d3bf9b3cf"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/multiple_switch_certificate.json",
+      "sha256": "eb27c9e92f3b5062a038ac48d703aa365d943744e848959914f5e503f840d400"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/check_private_switch.py",
+      "sha256": "66ee4fd2b7f3a0a36787e330e4d30d97a86db6681ffa1f907e395d9922cf058a"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/independent_private_switch_audit.md",
+      "sha256": "58f2ba02acccb89f810cc8a776aed911e58d0ec7cf46caa7123abae5b3d672fb"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/primary_scope_gate.md",
+      "sha256": "10944eef7eb0166220043c19968ff3f63231e975a4d2969a4841d66209fd108f"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/private_switch_certificate.json",
+      "sha256": "5decdb47376c039fee198a10590497cd2133cf28386b8018baf571c88190e9bb"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/private_switch_completeness.md",
+      "sha256": "274e543e79b4dc24e4ee745a48887f4deb191b60b59cf46d4ffa8723aacac755"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/root_private_switch_review.md",
+      "sha256": "a992d57508f6dbacd309bc2e21c38df461ac6ac93fd671a1ff70af888059eb32"
+    },
+    {
+      "path": "reproduce.py",
+      "sha256": "8df4348f151292e081325e0e806de77325493a8aa1ef6a4678e58e6206f75cc4"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/check_receiver_closure.py",
+      "sha256": "67af0e9b2a1ed99771a91367cb24108dcd6ce3177c745cff16b55269336877b7"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/exact_controls_and_boundary.md",
+      "sha256": "a3b5bf21aaa6bbbf48273a8952dec12fffa17b001a0c47eb19756ca591d57d90"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/independent_separated_receiver_audit.md",
+      "sha256": "564a50202619df7cac9fbe023542dcbbeb8c3405ae36a00ec353e1f41f99432d"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/primary_scope_comparison.md",
+      "sha256": "c9b2ef8535a4e06af62b0e5a001220ad85d998065c68538fda68e8bc163aec48"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/receiver_closure_certificate.json",
+      "sha256": "da0181b826284f096dcb03f0aab9a47bbab7acef30228bd4c109b737368d652b"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/root_receiver_review.md",
+      "sha256": "0fdc2b829d47dd8f7dfa9a2a137958d64e91616b2ed3937732bd8ecc54ad83bf"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/separated_receiver_completeness.md",
+      "sha256": "9b6d81b482c7fbf5b63e703d20e5e6af4a12bea865ac48341b3b4d7c7f15f2ce"
+    }
+  ]
+}

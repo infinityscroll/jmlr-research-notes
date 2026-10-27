@@ -1,0 +1,30 @@
+{
+  "modified_files": [
+    "default_damping_instability_20261027/released_damped_interface_certificate.json",
+    "default_damping_instability_20261027/README.md",
+    "replicated_analysis/n512_seed11/audit.json",
+    "replicated_analysis/n8192_seed23/audit.json",
+    "replicated_analysis/n8192_seed83/audit.json",
+    "replicated_analysis/n8192_seed47/audit.json",
+    "replicated_analysis/n512_seed131/audit.json",
+    "replicated_analysis/n2048_seed11/audit.json",
+    "replicated_analysis/n2048_seed131/audit.json",
+    "replicated_analysis/n8192_seed131/audit.json",
+    "replicated_analysis/n512_seed47/audit.json",
+    "replicated_analysis/n512_seed23/audit.json",
+    "replicated_analysis/n512_seed83/audit.json",
+    "replicated_analysis/n8192_seed11/audit.json",
+    "replicated_analysis/n2048_seed47/audit.json",
+    "replicated_analysis/n2048_seed83/audit.json",
+    "replicated_analysis/n2048_seed23/audit.json",
+    "stale_regularizer_instability_20261027/official_interface_certificate.json",
+    "stale_regularizer_instability_20261027/README.md",
+    "rank100_native_gate_20261027/structured_release_protocol.json",
+    "rank100_native_gate_20261027/structured_release_results.json",
+    "rank100_native_gate_20261027/full_model_interface_results.json"
+  ],
+  "reason": "Remove machine-specific paths from public copies; original source artifacts remain unchanged.",
+  "numeric_results_changed": false,
+  "proof_equations_changed": false,
+  "protocol_hash_rebound": true
+}

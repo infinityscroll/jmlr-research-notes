@@ -1,0 +1,19 @@
+# Root audit of the mixed critical-spectrum bootstrap repair
+
+27 October 2026. Source: `spd_critical_spectrum_bootstrap_theorem_20261027.md`, SHA256 `44af0d68b27fc67e97557b7155fd48920423dbe0d65413347789f9a75a6d4c10`.
+
+**No blocking error found in the stated fixed-dimensional SPD-quadratic theorem.** This is an internal mathematical audit. It is not a novelty assessment, a nonlinear extension, or a nonasymptotic coverage guarantee.
+
+I independently derived the centered-bootstrap recursion and checked that one scalar multiplier per run gives the full covariance block `Sigma+X*X*^T`. The cross-run blocks and original-versus-bootstrap blocks are zero because the corresponding centered multiplier has mean zero. Using independent multipliers per coordinate would be a different method and would change this computation; the source does not do that.
+
+The deterministic kernel is `g_a(x)=a(1-x^(a-1))/(a-1)` for a unequal to one and `-log x` at one. Direct integration of its products gives `(a+b)/(a+b-1)` whenever a+b>1. I checked the cancellation in this expression algebraically. The product formulation handles integer eigenvalues, where an early deterministic factor can be zero; dividing by a global initial product would be invalid. The source explicitly avoids that division. Its compact-interval limit and integrable small-x bounds establish the cross-weight limits, including one critical exponent. The mixed critical/regular covariance disappears because its finite cross limit is divided by sqrt(log n).
+
+The coordinate second-moment recurrence is exact under Exp(1) weights. At critical drift it gives log(t)/t, and at regular drift it gives 1/t. The fourth-moment expansion needs only finite fourth noise moments, not symmetric noise: the term with one noise factor vanishes, while the term with three noise factors is controlled by the first moment of the preceding iterate. Fixed-dimensional norm inequalities then control the full innovation's fourth moment.
+
+The matrix conditional-variance remainder is nonnegative within each bootstrap block. Its expected norm tends to zero by splitting finitely many early times from a tail with small iterate second moment. The maximal normalized weight tends to zero and the total squared weights stay bounded, which also yields the required conditional Lindeberg condition. These facts justify the triangular-array martingale CLT without pretending the bootstrap differences are independent in finite samples.
+
+The covariance formula is positive definite by its positive-kernel integral on the regular subspace and the positive definite critical principal submatrix. The Lyapunov representation has coefficient `a_i+a_j-1`, so `Gamma=Sigma+Q` agrees with the kernel formula. A scalar functional with any critical component uses the slower scale; a functional entirely in the regular subspace uses root n. The same scale cancels in its implemented Student ratio.
+
+For the ellipsoid, the anisotropic transform leaves the quadratic statistic unchanged. I checked the Wishart degrees of freedom by the Schur complement: with B uncentered independent Gaussian bootstrap differences, the directional residual has B-d+1 degrees of freedom. The factor is exactly `dB/(B-d+1)` and B must be at least d. At d=1 this reduces to t_B squared, providing a consistency check. Centering by the bootstrap mean would be a different statistic.
+
+The result is a positive repair for the stated harmonic regime `eta lambda_min(H)>=1/2`, including critical and regular eigendirections in the same model. It leaves subcritical counterexamples intact and does not establish a uniform transition as an eigenvalue approaches the threshold. Classical spectral stochastic-approximation and Student/Wishart arguments underlie the proof; novelty of this exact online-bootstrap specialization remains unresolved.

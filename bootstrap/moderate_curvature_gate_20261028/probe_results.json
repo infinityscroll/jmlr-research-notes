@@ -1,0 +1,83 @@
+{
+  "protocol": {
+    "n": 1000000,
+    "replications": 512,
+    "B": 3,
+    "seed": 202610281911,
+    "eta": 0.94,
+    "alpha": 0.51,
+    "sigma": 4.0,
+    "x0": 0.0,
+    "cutoff": 3.182446305284263,
+    "max_wall_seconds": 300,
+    "source_sha256": "7b8ad9f3fc187769581b6c7a46f0ddd6785baaf6291faa571aff24339e3eb7eb",
+    "protocol_sha256": "aa01a09c68126da5e8f63bdd4938b4a17992dd541ef189e69e25b1951be044f5"
+  },
+  "complete": true,
+  "completed_steps": 1000000,
+  "elapsed_seconds": 59.144153125118464,
+  "results": {
+    "logcosh_ASGD": {
+      "covered": 405,
+      "replications": 512,
+      "coverage": 0.791015625,
+      "monte_carlo_95_CP": [
+        0.7531873024538851,
+        0.8254443207901072
+      ],
+      "mean_original": -0.006606885382952448,
+      "sd_original": 0.003978824638268325,
+      "mean_original_in_sigma_over_sqrt_n_units": -1.6517213457381121,
+      "mean_rms": 0.00367999184147811,
+      "mean_radius": 0.011711376439388242,
+      "mean_bootstrap_minus_original": 4.3660586417121844e-05
+    },
+    "quadratic_ASGD": {
+      "covered": 486,
+      "replications": 512,
+      "coverage": 0.94921875,
+      "monte_carlo_95_CP": [
+        0.9264764030294992,
+        0.966563409948979
+      ],
+      "mean_original": -6.636265305079259e-05,
+      "sd_original": 0.003921682498880396,
+      "mean_original_in_sigma_over_sqrt_n_units": -0.016590663262698147,
+      "mean_rms": 0.0036319440957837275,
+      "mean_radius": 0.011558467068625917,
+      "mean_bootstrap_minus_original": 3.912459757575458e-05
+    },
+    "logcosh_SAA_control": {
+      "covered": 486,
+      "replications": 512,
+      "coverage": 0.94921875,
+      "monte_carlo_95_CP": [
+        0.9264764030294992,
+        0.966563409948979
+      ],
+      "mean_original": -7.46558720915759e-05,
+      "sd_original": 0.003920193354469487,
+      "mean_original_in_sigma_over_sqrt_n_units": -0.018663968022893974,
+      "mean_rms": 0.0036336533174748586,
+      "mean_radius": 0.011563906574881768,
+      "mean_bootstrap_minus_original": 3.191396137249922e-05
+    },
+    "quadratic_SAA_control": {
+      "covered": 486,
+      "replications": 512,
+      "coverage": 0.94921875,
+      "monte_carlo_95_CP": [
+        0.9264764030294992,
+        0.966563409948979
+      ],
+      "mean_original": -6.6984375e-05,
+      "sd_original": 0.0039208906013031624,
+      "mean_original_in_sigma_over_sqrt_n_units": -0.01674609375,
+      "mean_rms": 0.003633039388258363,
+      "mean_radius": 0.011561952778115026,
+      "mean_bootstrap_minus_original": 3.870312499999999e-05
+    }
+  },
+  "outputs_sha256": "83a9cdf7df452b6594bdcd6d215725d2ab3a0bfa00ec39740b2cd142e69653ed",
+  "claim_scope": "Monte Carlo evidence only; no deterministic coverage theorem or novelty claim."
+}

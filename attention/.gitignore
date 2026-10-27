@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+external_cache/
+runs/
+verification_local.json

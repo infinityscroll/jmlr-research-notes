@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "assertions": 225,
+  "fixtures": [
+    {
+      "M": 1,
+      "N": 2,
+      "states": 15,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 1,
+      "N": 3,
+      "states": 35,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 1,
+      "N": 4,
+      "states": 70,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 2,
+      "N": 2,
+      "states": 28,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 2,
+      "N": 3,
+      "states": 84,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 2,
+      "N": 4,
+      "states": 210,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 3,
+      "N": 2,
+      "states": 45,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 3,
+      "N": 3,
+      "states": 165,
+      "one_token_chi": "1/267386880"
+    },
+    {
+      "M": 3,
+      "N": 4,
+      "states": 495,
+      "one_token_chi": "1/267386880"
+    }
+  ],
+  "scope": "Exact complete multinomial likelihood identities and common-sign conditioning; not a replacement for the proof",
+  "source_sha256": "7390561c70dea239f91c018446504b240f6246631ce4ede711b2d1e78fd6d7ce",
+  "checker_sha256": "d3ed44605dac2ee0e47ac820d99d3ed3fa46de8efaf6948f13fa06f85e26b241"
+}

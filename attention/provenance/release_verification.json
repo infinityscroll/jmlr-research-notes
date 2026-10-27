@@ -1,0 +1,144 @@
+{
+  "default_verification": {
+    "scope": "Bounded reproducibility checks, not analytic/formal proof verification",
+    "python_version": "3.12.14",
+    "numpy_version": "2.3.5",
+    "source_integrity": {
+      "byte_identical_copies_checked": 20
+    },
+    "exact_algebra": {
+      "lyapunov_identities": 2,
+      "exact_offset_and_finite_step_cases": 112,
+      "exact_margin_and_cone_arithmetic": "PASS"
+    },
+    "saved_diagnostics": {
+      "checkpoints": 173,
+      "cases": 2,
+      "scalar_values": 4844,
+      "max_saved_value_error": 2.6645352591003757e-15,
+      "max_gauge_error": 5.773159728050814e-15
+    },
+    "metric_orientation": {
+      "margin_fraction": 0.9244816991341795,
+      "svm_first_bregman_gap": 0.03850028646172787,
+      "reverse_bregman_gap": 0.07551830086582045
+    },
+    "generic_p_geometry": {
+      "exact_KKT_and_Hurwitz_fixtures": 4,
+      "finite_metric_checks": [
+        {
+          "p": 1.25,
+          "margin_fraction": 0.5731918635636887,
+          "svm_first_bregman_gap": 0.8371654686829806
+        },
+        {
+          "p": 1.5,
+          "margin_fraction": 0.5503212081491046,
+          "svm_first_bregman_gap": 0.69714656786131
+        },
+        {
+          "p": 2.0,
+          "margin_fraction": 0.5144957554275265,
+          "svm_first_bregman_gap": 0.48550424457247354
+        },
+        {
+          "p": 3.0,
+          "margin_fraction": 0.47003493605729074,
+          "svm_first_bregman_gap": 0.2635571962853953
+        },
+        {
+          "p": 4.0,
+          "margin_fraction": 0.4455182276024785,
+          "svm_first_bregman_gap": 0.17465940252453027
+        },
+        {
+          "p": 5.0,
+          "margin_fraction": 0.43067779920509963,
+          "svm_first_bregman_gap": 0.1335268908774102
+        }
+      ],
+      "scope": "Finite checks; the all-p theorem is an analytic claim, not proved by this grid."
+    },
+    "training_steps": 0,
+    "network_calls": 0,
+    "native_interface": "NOT RUN (use --native)",
+    "status": "PASS"
+  },
+  "native_verification": {
+    "scope": "Bounded reproducibility checks, not analytic/formal proof verification",
+    "python_version": "3.12.14",
+    "numpy_version": "2.5.4",
+    "source_integrity": {
+      "byte_identical_copies_checked": 20
+    },
+    "exact_algebra": {
+      "lyapunov_identities": 2,
+      "exact_offset_and_finite_step_cases": 112,
+      "exact_margin_and_cone_arithmetic": "PASS"
+    },
+    "saved_diagnostics": {
+      "checkpoints": 173,
+      "cases": 2,
+      "scalar_values": 4844,
+      "max_saved_value_error": 2.6645352591003757e-15,
+      "max_gauge_error": 5.773159728050814e-15
+    },
+    "metric_orientation": {
+      "margin_fraction": 0.9244816991341795,
+      "svm_first_bregman_gap": 0.03850028646172787,
+      "reverse_bregman_gap": 0.07551830086582045
+    },
+    "generic_p_geometry": {
+      "exact_KKT_and_Hurwitz_fixtures": 4,
+      "finite_metric_checks": [
+        {
+          "p": 1.25,
+          "margin_fraction": 0.5731918635636887,
+          "svm_first_bregman_gap": 0.8371654686829806
+        },
+        {
+          "p": 1.5,
+          "margin_fraction": 0.5503212081491046,
+          "svm_first_bregman_gap": 0.69714656786131
+        },
+        {
+          "p": 2.0,
+          "margin_fraction": 0.5144957554275265,
+          "svm_first_bregman_gap": 0.48550424457247354
+        },
+        {
+          "p": 3.0,
+          "margin_fraction": 0.47003493605729074,
+          "svm_first_bregman_gap": 0.2635571962853953
+        },
+        {
+          "p": 4.0,
+          "margin_fraction": 0.4455182276024785,
+          "svm_first_bregman_gap": 0.17465940252453027
+        },
+        {
+          "p": 5.0,
+          "margin_fraction": 0.43067779920509963,
+          "svm_first_bregman_gap": 0.1335268908774102
+        }
+      ],
+      "scope": "Finite checks; the all-p theorem is an analytic claim, not proved by this grid."
+    },
+    "training_steps": 0,
+    "network_calls": 0,
+    "native_interface": {
+      "cases": 48,
+      "max_gradient_error": 7.45931094670027e-17,
+      "max_update_error": 0.0,
+      "max_prediction_error": 2.220446049250313e-16,
+      "optimizer_sha256": "d4ce054aca1fe0001fc9567cfcae1cd72dde60c57910f04198a04172e1f3983b",
+      "torch_version": "2.14.1"
+    },
+    "status": "PASS"
+  },
+  "portable_reproduction_loop_AST_matches_original_except_output_path": true,
+  "python_sources_compile": true,
+  "optional_reproduction_help_checked": true,
+  "new_training_steps_during_release_preparation": 0,
+  "scope": "Bounded checks and retained-state reproduction; not formal or external expert verification."
+}

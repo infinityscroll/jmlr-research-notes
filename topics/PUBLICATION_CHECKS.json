@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "python": "3.9.6",
+  "scope": "Finite checks and unchanged source hashes; not formal theorem verification.",
+  "sources_verified": 72,
+  "checks": [
+    {
+      "name": "selector",
+      "checker": "efficient_joint_adaptation_gate_20261028/check_selector_algebra.py",
+      "certificate": "efficient_joint_adaptation_gate_20261028/selector_algebra_certificate.json",
+      "certificate_sha256": "18ea59f28c9da24a47736d8da0d4dc57c55ed53721ba1548228bdc1b448207d2",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.618
+    },
+    {
+      "name": "paired-sign-lower",
+      "checker": "joint_adaptation_gate_20261028/check_paired_sign_identity.py",
+      "certificate": "joint_adaptation_gate_20261028/paired_sign_identity_certificate.json",
+      "certificate_sha256": "8e7a72d4529513184e7e0c1be222da6d64e5a167eb0d58313374e2834ed6e08f",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.527
+    },
+    {
+      "name": "short-information",
+      "checker": "anchor_selection_frontier_20261028/check_short_regime_missing_information.py",
+      "certificate": "anchor_selection_frontier_20261028/short_regime_missing_information_certificate.json",
+      "certificate_sha256": "7f86990c2769910db3ae9bb0bb11fe1cca274b14aff6739bb2d5592d5a12f05f",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.094
+    },
+    {
+      "name": "unknown-anchor-short",
+      "checker": "anchor_selection_frontier_20261028/check_unknown_anchor_short_document.py",
+      "certificate": "anchor_selection_frontier_20261028/unknown_anchor_short_document_certificate.json",
+      "certificate_sha256": "3a5a4d758d0ff76c58e39f5a48518f4beec1de85e8b35256898d2184e3acc63e",
+      "exact_saved_certificate_match": true,
+      "seconds": 1.159
+    },
+    {
+      "name": "unknown-anchor-long",
+      "checker": "anchor_selection_frontier_20261028/check_unknown_anchor_long_document.py",
+      "certificate": "anchor_selection_frontier_20261028/unknown_anchor_long_document_certificate.json",
+      "certificate_sha256": "a2ba307c2c57596f8c19f96c22d2c7bedd28670931a17f1c60ac1c3129403faa",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.357
+    },
+    {
+      "name": "general-k-moments",
+      "checker": "multitopic_frontier_gate_20261027/check_general_k_algebra.py",
+      "certificate": "multitopic_frontier_gate_20261027/general_k_algebra_certificate.json",
+      "certificate_sha256": "7fde61bdac7d17d64e181a3d469f2b0cae235cde29cd4ee47f79eaea20453539",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.437
+    },
+    {
+      "name": "lower-embedding",
+      "checker": "multitopic_frontier_gate_20261027/check_lower_embedding.py",
+      "certificate": "multitopic_frontier_gate_20261027/lower_embedding_certificate.json",
+      "certificate_sha256": "efbf14d097828f55ec144b221e4533cca8af9bbeec21b4c6417af6501dcf5b9e",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.31
+    },
+    {
+      "name": "frequency-lemma",
+      "checker": "adaptive_anchor_oracle_20261027/check_empirical_frequency_lemma.py",
+      "certificate": "adaptive_anchor_oracle_20261027/empirical_frequency_lemma_certificate.json",
+      "certificate_sha256": "c730a43d67cba1b66777c4f978d55027789bb77507a04a2d94bd1d140043a2a4",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.229
+    },
+    {
+      "name": "greedy-geometry",
+      "checker": "adaptive_greedy_recovery_20261027/check_greedy_geometry.py",
+      "certificate": "adaptive_greedy_recovery_20261027/greedy_geometry_certificate.json",
+      "certificate_sha256": "b144ca8e656d12f0b1dc3ed44148da414e0c8cff5b23d3a5e5f4fb3859f71cab",
+      "exact_saved_certificate_match": true,
+      "seconds": 1.619
+    },
+    {
+      "name": "classical-contraction",
+      "checker": "greedy_decisive_prior_gate_20261027/check_contraction_identity.py",
+      "certificate": "greedy_decisive_prior_gate_20261027/contraction_certificate.json",
+      "certificate_sha256": "1520cf9b42825c69649edb799a1d5e4ff4938ee3abc0487b89b564aeeff154e2",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.182
+    }
+  ]
+}

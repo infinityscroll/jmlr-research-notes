@@ -1,0 +1,15 @@
+# Replicated kernel regime comparison
+
+Fixed before inspecting any output from the new seeds. This expands the previous descriptive pilot; it does not reuse its test sets.
+
+The primary comparison is released ASkotchV2 versus the same pinned repository's inducing KRR with PCG/Falkon. The locally corrected ASkotchV2 is a separately labelled diagnostic arm. Its results cannot be substituted for the released method or attributed solely to the bug, because timed iteration counts can differ.
+
+The grid has three sample sizes (512, 2048, 8192), three kernel smoothness settings (Matérn 0.5, Matérn 2.5, RBF), two label-noise levels (0.05, 0.3) and five independent data seeds: 90 cells. Each method receives exactly twelve validation candidates, the product of six regularizations from 1e-8 to 100 and two method-specific capacities, with four seconds available per candidate. This includes fresh transfer, model setup, preconditioning, steps, validation and retained snapshots. A completed inducing solve may finish early; unused time is recorded, not disguised as consumed work. No method receives additional data-dependent tuning after test inspection.
+
+Compilation warmup is symmetric, discarded and separately reported, as in the existing harness. These are warmed solver budgets, not a cold end-to-end deployment comparison. Validation has 2048 observations and the test set has 4096. Train sizes are nested within each seed; validation/test random streams are disjoint and shared across methods. The test stream is first constructed after a selection record and SHA256 of its saved weights have been written. Source, config and launcher hashes are frozen before launch. Method order rotates through all positions; the 15 (sample-size, seed) shards run in a fixed shuffled order on one GPU container at a time.
+
+The full solver uses the previously declared safeguard mu=min(lambda,0.9/nu), nu=n/block. These satisfy checked practical inequalities; they are not asserted to certify the theorem's stochastic spectral parameters. Inducing capacities are n/8 and n/2; ASkotch block capacities are approximately n/100 and n/20 with rank at most16. They are computational tuning parameters, not claims that the model families have equal rank.
+
+The primary report will show paired test-MSE differences over the five seeds at every grid cell, all seed values, uncertainty intervals and selected hyperparameters. Any region boundary is descriptive on this grid; interpolation will not be presented as a proved universal boundary. A regularization selected at a grid endpoint is flagged as unresolved tuning. Numerical failures, missed deadlines and absent eligible configurations remain in the results. They are not silently dropped or rerun under a better setting.
+
+The newer BLOKS work already examines broad kernel-solver tradeoffs. A replicated crossover here is evidence about this pinned implementation and this controlled family, not by itself a novelty claim. The separately proved stale-regularizer defect remains an exact implementation result. No change to a published theorem is inferred from these practical timed experiments.

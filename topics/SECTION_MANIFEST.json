@@ -1,0 +1,320 @@
+{
+  "date": "2026-10-28",
+  "status": "staged; not remotely published by this agent",
+  "copied_sources_unchanged": true,
+  "check_output": "PUBLICATION_CHECKS.json",
+  "files": [
+    {
+      "path": "PROOF_MAP.md",
+      "sha256": "f65fd9949edaa6d0db60457751cd2870918206cf7a9f20d44e53a4b20f421bbd"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "b8329d8e764b3c6d6238dfa4f920677742bd67ef662b0624c1263ee13e258f2c"
+    },
+    {
+      "path": "PUBLICATION_CHECKS.json",
+      "sha256": "fcc677f9c127ba1a952bfb0e8c6613c27f25b612d41850d213def4d249996d46"
+    },
+    {
+      "path": "README.md",
+      "sha256": "72f9500ae8870fdf82154cf7bd3ee452c7ce5a2f9978e72fad38fe4647cdc822"
+    },
+    {
+      "path": "REPRODUCTION_CASES.json",
+      "sha256": "fc4b658015650f48cafebd3ef3308b2b3341036b0606d32e28e64484033b4b86"
+    },
+    {
+      "path": "adaptive_anchor_oracle_20261027/adaptive_estimator_and_constrained_frontier.md",
+      "sha256": "e221094bcc7e3a82eccb0ce428fa394aea49091c3aad9e7e6748c2ed0fa6d7d2"
+    },
+    {
+      "path": "adaptive_anchor_oracle_20261027/adaptive_upper_independent_audit.md",
+      "sha256": "0220ef6a2964acb37f6c4a58f6ffc337a5c8939c9f9b05efa2634e5861b748f4"
+    },
+    {
+      "path": "adaptive_anchor_oracle_20261027/check_empirical_frequency_lemma.py",
+      "sha256": "5a3ec1c0a3f5a1115dbfad8ec5c3fdcb1791953fba1c3b920d069988ded6996f"
+    },
+    {
+      "path": "adaptive_anchor_oracle_20261027/empirical_frequency_lemma_certificate.json",
+      "sha256": "c730a43d67cba1b66777c4f978d55027789bb77507a04a2d94bd1d140043a2a4"
+    },
+    {
+      "path": "adaptive_anchor_oracle_20261027/empirical_frequency_maximum_independent_audit.md",
+      "sha256": "570c94292750ce6ba4e4c3872d886f3db11026a649d4d45f98baab52daa7d655"
+    },
+    {
+      "path": "adaptive_anchor_oracle_20261027/empirical_frequency_maximum_lemma.md",
+      "sha256": "82e5a1c0db59497f1ea9e402e07a4b6ea6694d3084b1481c8c8035ee2d977ce8"
+    },
+    {
+      "path": "adaptive_anchor_oracle_20261027/matching_constrained_lower_independent_audit.md",
+      "sha256": "eb61d1038fa1d452a4e23f36cdab0d15e82dd2696292b105feecae8720053759"
+    },
+    {
+      "path": "adaptive_greedy_recovery_20261027/check_greedy_geometry.py",
+      "sha256": "65a80886e061a04b56ecb0417efb51c442f9a29f0776a13fe2699fed3d280d15"
+    },
+    {
+      "path": "adaptive_greedy_recovery_20261027/greedy_geometry_certificate.json",
+      "sha256": "b144ca8e656d12f0b1dc3ed44148da414e0c8cff5b23d3a5e5f4fb3859f71cab"
+    },
+    {
+      "path": "adaptive_greedy_recovery_20261027/independent_greedy_projection_audit.md",
+      "sha256": "a433c40904a308b8af173e762c26b463356a8900471a89ef072e5ea7f1f958dc"
+    },
+    {
+      "path": "adaptive_greedy_recovery_20261027/penalized_successive_projection_theorem.md",
+      "sha256": "93a8dcf921f94cc594ef08f01b7620ff8427be8c686fbc90704771165b36b7a7"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/MATCHED_ALL_N_FRONTIER.md",
+      "sha256": "0002f4d1c2ea902bbd071df0e413a93b1c64199b05e15b9d9233f39507713a15"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/all_document_lengths_bernstein_upper.md",
+      "sha256": "bd9c774907a8691508d41bf4ea019d4b7b996b99707a0a1e8694aedd74aac2d3"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/check_short_regime_missing_information.py",
+      "sha256": "432cc18af3c3a93251cffe3a11361e5ead04968884ab2f645ec11c845c37f33c"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/check_unknown_anchor_long_document.py",
+      "sha256": "d3ed44605dac2ee0e47ac820d99d3ed3fa46de8efaf6948f13fa06f85e26b241"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/check_unknown_anchor_short_document.py",
+      "sha256": "3a4a30447fc9900876188139522438ed50b0b0b585af75b3d30b38d967d826cb"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/independent_all_document_lengths_upper_audit.md",
+      "sha256": "e597865ab8c0cb2f3d85557a15386463dc4f94063e725805c78afa5024fac3d2"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/independent_long_document_lower_audit.md",
+      "sha256": "9d98d508653a69dcdaeb4e4b4d9457a3f380f975d4f68a72cd59f01d0c9c8d50"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/independent_short_document_upper_audit.md",
+      "sha256": "ef23032377b436dbb656a33cbf7fd0827e7967a6c853773454adcb715b78b829"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/independent_short_regime_all_N_lower_audit.md",
+      "sha256": "c8fc75c0d593092452f445203a3c9b58cd1d2f30c03423c73031d366d663ee03"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/independent_unknown_anchor_lower_audit.md",
+      "sha256": "402e219d5fe8d33a5a2fac89f3836241b54146ec42f01febbafb0d1bbd8751e5"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/primary_gate.md",
+      "sha256": "b7a6ce4b21e290ae79880fac7f38613f56c655c504807efea35654df7d7578fe"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/short_document_sharp_log_upper.md",
+      "sha256": "db1e141e00097be07ad8d884bbe4bda13b2ad098a32445d5ab0d5847876daf8d"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/short_regime_missing_information_certificate.json",
+      "sha256": "7f86990c2769910db3ae9bb0bb11fe1cca274b14aff6739bb2d5592d5a12f05f"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/unknown_anchor_long_document_certificate.json",
+      "sha256": "a2ba307c2c57596f8c19f96c22d2c7bedd28670931a17f1c60ac1c3129403faa"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/unknown_anchor_long_document_lower.md",
+      "sha256": "7390561c70dea239f91c018446504b240f6246631ce4ede711b2d1e78fd6d7ce"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/unknown_anchor_short_document_certificate.json",
+      "sha256": "3a5a4d758d0ff76c58e39f5a48518f4beec1de85e8b35256898d2184e3acc63e"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/unknown_anchor_short_document_lower.md",
+      "sha256": "a9b2bf464a168958da011917bc1faf52f8c9fa33ef83da9a2333336b6a1cea56"
+    },
+    {
+      "path": "anchor_selection_frontier_20261028/unknown_anchor_short_regime_all_N_lower.md",
+      "sha256": "3b7a7c77c4f46761fd8e1c5708fe9b1709bdebe579f2eccdd3ab27ef28a5c851"
+    },
+    {
+      "path": "anchor_strength_continuum_20261027/independent_known_strength_audit.md",
+      "sha256": "50761ad589c26132c2cfe8462a5a2f5682db4ed3fcc0561be23251e6acf7238f"
+    },
+    {
+      "path": "anchor_strength_continuum_20261027/known_strength_minimax.md",
+      "sha256": "196e7a7341666a0f5a45b9f2d46f473d546aac122999b68c88b24855f262fde4"
+    },
+    {
+      "path": "anchor_strength_continuum_20261027/root_continuum_audit.md",
+      "sha256": "008aacccaebb99736d8e52253c60c8eb6ad2b07a9583f827c3518ceff3244f54"
+    },
+    {
+      "path": "efficient_joint_adaptation_gate_20261028/check_selector_algebra.py",
+      "sha256": "f75e518a431e6a5108ec2c5de8616b827c7ff8e3e3ad01e5999006c88f761ffe"
+    },
+    {
+      "path": "efficient_joint_adaptation_gate_20261028/design_compression_selector_theorem.md",
+      "sha256": "188c39bfbe31e11b668bddd7d31d251a56ba4d179b72fb7d23fbfb6339b70a16"
+    },
+    {
+      "path": "efficient_joint_adaptation_gate_20261028/independent_design_compression_audit.md",
+      "sha256": "a960bb22cb633c337992f0219f2b00343838cde5a919e6a15a757b3a251e0024"
+    },
+    {
+      "path": "efficient_joint_adaptation_gate_20261028/primary_comparison.md",
+      "sha256": "d6a2a4d5a0a32589a525f0494b306e39f6d204a6979b72b371a6af4b58e3a49b"
+    },
+    {
+      "path": "efficient_joint_adaptation_gate_20261028/root_selector_review.md",
+      "sha256": "cfb89a95d4642c0a63051752df8e161fa4efdbaff529257ae9486cdf88252831"
+    },
+    {
+      "path": "efficient_joint_adaptation_gate_20261028/selector_algebra_certificate.json",
+      "sha256": "18ea59f28c9da24a47736d8da0d4dc57c55ed53721ba1548228bdc1b448207d2"
+    },
+    {
+      "path": "greedy_decisive_prior_gate_20261027/check_contraction_identity.py",
+      "sha256": "cf3692eff91d525b0430204c30a524888c67e8bf2630db6ecb313a101009c84e"
+    },
+    {
+      "path": "greedy_decisive_prior_gate_20261027/classical_spa_contraction_reduction.md",
+      "sha256": "6f6613f2758ffca32473fea5392a19775be72ee06384ef9a63e711e74335827d"
+    },
+    {
+      "path": "greedy_decisive_prior_gate_20261027/contraction_certificate.json",
+      "sha256": "1520cf9b42825c69649edb799a1d5e4ff4938ee3abc0487b89b564aeeff154e2"
+    },
+    {
+      "path": "greedy_decisive_prior_gate_20261027/primary_overlap_verdict.md",
+      "sha256": "9fd356decd7c024c69e3d1178d5e566b143cf0f79509f6ab15547802e55c66f1"
+    },
+    {
+      "path": "greedy_decisive_prior_gate_20261027/root_contraction_audit.md",
+      "sha256": "d9d420e264c3bc191fa6e2b2e86edda897f4f4e7d02b0e5d9ac380b95af4b39c"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/JOINT_ADAPTIVE_FRONTIER.md",
+      "sha256": "74c6c292f7ad09bd00e896712c1162c081ed323ea1271769c794b9e9b6d87e1e"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/check_paired_sign_identity.py",
+      "sha256": "5892c30e036500f10d5d9d033c6b3c584155b8be8be34f0cf2b68d5bf9ddbfbe"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/independent_paired_sign_lower_audit.md",
+      "sha256": "814af42be531839c56020f9e3ee6871869958706f492f11ae9913ba11b25eac7"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/joint_adaptive_upper.md",
+      "sha256": "7e150f93282f68228e49a2c1068eaa831b2188da590f140c7b68eca0819293fd"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/paired_sign_constrained_lower.md",
+      "sha256": "abe59e38ca5b8a8b28808848ce4da0c8e9fea80ea5b2d6c8966916f6e0483638"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/paired_sign_identity_certificate.json",
+      "sha256": "8e7a72d4529513184e7e0c1be222da6d64e5a167eb0d58313374e2834ed6e08f"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/primary_joint_adaptation_gate.md",
+      "sha256": "d947b22e968345055fd9b0b6ec27fdad06198a07c483ce7a55351183485b20e8"
+    },
+    {
+      "path": "joint_adaptation_gate_20261028/root_adaptive_upper_audit.md",
+      "sha256": "9bf48345df4bb23a9a87a9db5e6f9ecb0a91e62d1a39fc51ae0ffcbfdfc5e1ac"
+    },
+    {
+      "path": "joint_adaptation_historical_gate_20261028/PRIMARY_SUBSUMPTION_AND_SIGNIFICANCE.md",
+      "sha256": "7a1ae9c8a08f300eb6f8163dbaca9af14230ef801715783542525b0964cf9699"
+    },
+    {
+      "path": "joint_adaptation_historical_gate_20261028/root_regime_comparison_review.md",
+      "sha256": "169b11916b4c2be97f937f33ab2295a35bf1e75b6e0b40f823269478c3a85dac"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/check_general_k_algebra.py",
+      "sha256": "e7147462276304174c0436ca9d520db75e2d7a221c1ae46e2cec694e296252a7"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/check_lower_embedding.py",
+      "sha256": "dab33bdf1e2af37e56708c9443234d00309b52c73260440e47191d32250f8cbb"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/general_k_algebra_certificate.json",
+      "sha256": "7fde61bdac7d17d64e181a3d469f2b0cae235cde29cd4ee47f79eaea20453539"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/general_k_lower.md",
+      "sha256": "3edaed4fc1d02c5f6f5f58c8c9ed2ab1874d5e8df26d4c0d86281e60ce1dffe2"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/general_k_upper.md",
+      "sha256": "56aef7d5bbdad0e97cf092a21d31515d8fda07fa4d40c1926e9976e92e9147c6"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/growing_vocabulary_lower.md",
+      "sha256": "a2f855ed3a2bb1ee5280ba04adce315ee1be07ed877da8c72a7815e729582091"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/independent_general_k_lower_audit.md",
+      "sha256": "322a1d3c64518f156a8be8e1f8568082d9395ea8d78c0852323ef850344596f6"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/independent_growing_frontier_primary_comparison.md",
+      "sha256": "e66956e3600f807c87c9fcbd648b7f595247c999f145ec878edb25f1574027fa"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/independent_growing_vocabulary_lower_audit.md",
+      "sha256": "ed5287e0b95f60d44d40b8925f0f15e5cb7920dd332c3092fc74c1cc910161d9"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/independent_root_growing_vocabulary_upper_audit.md",
+      "sha256": "bc9bad1c68228d71d8d6d7b6c1fa622e465862efa7991a4c80205f2791e6e816"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/lower_embedding_certificate.json",
+      "sha256": "efbf14d097828f55ec144b221e4533cca8af9bbeec21b4c6417af6501dcf5b9e"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/root_growing_vocabulary_upper.md",
+      "sha256": "de3cf1d8af33b58a58ed23a019f49e3d71ac48230af291f0f843c446b3e7cdcd"
+    },
+    {
+      "path": "multitopic_frontier_gate_20261027/root_upper_audit.md",
+      "sha256": "0a321770d81308c3dc71bd89248020079ed62b750a5dc4848ac14481f16e1770"
+    },
+    {
+      "path": "reproduce.py",
+      "sha256": "915e5edc4b8f6f4a7f178ba4fe5552722f8953253689c60ed92114782e72e359"
+    },
+    {
+      "path": "weak_sparsity_frontier_gate_20261028/independent_sparse_upper_and_observable_threshold_audit.md",
+      "sha256": "21f490538d00f5ed077d7c4bd985203119cb00870c8f3c9a9eed4426e57a5aea"
+    },
+    {
+      "path": "weak_sparsity_frontier_gate_20261028/independent_weak_sparsity_lower_audit.md",
+      "sha256": "8179d913e5747a1348a39f1ffc6eb8db153b9495741d56a65c45442c69038b5c"
+    },
+    {
+      "path": "weak_sparsity_frontier_gate_20261028/observable_conditioning_threshold.md",
+      "sha256": "c5bfd6b01e846b238acadbaba1caf9b116c72ed20d86f65c5f6b6e59818712b8"
+    },
+    {
+      "path": "weak_sparsity_frontier_gate_20261028/primary_gate.md",
+      "sha256": "e6ab528e266a734a01251bc47db585724566bba87d4b4dc5b2a64756a5118f6b"
+    },
+    {
+      "path": "weak_sparsity_frontier_gate_20261028/weak_sparsity_joint_lower.md",
+      "sha256": "bd43ef4d96e7f7c561bd90b5c90d0a1e32a4e3b4ad527c11bd03380de25f3c09"
+    },
+    {
+      "path": "weak_sparsity_frontier_gate_20261028/weak_sparsity_joint_upper.md",
+      "sha256": "fb24214c2aab2d510f1182cc3000489a0d117f1fe5f3e7aa4d9ee3db81a83ab9"
+    }
+  ]
+}

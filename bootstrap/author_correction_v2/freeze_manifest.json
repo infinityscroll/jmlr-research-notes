@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-26",
+  "version": "v2",
+  "scope": "Author correction with the rounded decimal explicitly marked as an approximation. Exact quantile expression, all-n proof and supporting verifiers unchanged.",
+  "parent_freeze": {
+    "path": "../author_correction/freeze_manifest.json",
+    "sha256": "40e5d74ef4252fc052098f04cb74418f33190503730a42357fd5fd77f795ff4b",
+    "snapshot": "parent_v1_freeze_manifest.json"
+  },
+  "only_manuscript_change": "Proposition 1 decimal display: equality with ellipsis replaced by approximation sign.",
+  "files": [
+    {
+      "path": "main.tex",
+      "sha256": "17f7f8c0b1032eb04bc1340e0a546bb5ecea3a06d35ed0a5cf80e551824060ae",
+      "bytes": 11247
+    },
+    {
+      "path": "check_endpoint.py",
+      "sha256": "a5558d6f809315f689511164351a0743f4402d18126907061cab8dfadc4a0d9b",
+      "bytes": 4692
+    },
+    {
+      "path": "bootstrap_exact_cleanroom.py",
+      "sha256": "4dabe6ebc867ce7d1dd15619ca6190598c136e27ca293150ab2fa555a5657b01",
+      "bytes": 3701
+    },
+    {
+      "path": "endpoint_results.json",
+      "sha256": "3b0201f6c9f5567f6379c590db06aa9925a2185b50df1fe8cc4ffa4d7903f779",
+      "bytes": 3465
+    },
+    {
+      "path": "source_map.json",
+      "sha256": "1bd3633e8f6d26df84b9c7f64481622b8babf0065be018e7202029ac6f397ed5",
+      "bytes": 5537
+    },
+    {
+      "path": "verification.json",
+      "sha256": "f4a1ceab9e9b42fb4cab5f46461d02bc500b3bc3f257d177dbcd1afb608b8b63",
+      "bytes": 1613
+    },
+    {
+      "path": "parent_v1_freeze_manifest.json",
+      "sha256": "40e5d74ef4252fc052098f04cb74418f33190503730a42357fd5fd77f795ff4b",
+      "bytes": 1115
+    }
+  ]
+}

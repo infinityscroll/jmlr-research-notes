@@ -1,0 +1,55 @@
+{
+  "scope": "Curated original artifacts copied unchanged; primary downloaded papers and bulk upstream repositories excluded. New public verification wrappers are separate.",
+  "files": [
+    {
+      "path": "video/final_analysis/cached_metrics.py",
+      "source_sha256": "22fda73e4bcdbddd344ef052ac161402054f835727d0cf1ef42c88ab3b0fbfa9",
+      "release_sha256": "22fda73e4bcdbddd344ef052ac161402054f835727d0cf1ef42c88ab3b0fbfa9"
+    },
+    {
+      "path": "video/final_analysis/test_cached_metrics.py",
+      "source_sha256": "313b69b3f9cc5fc6ffea084db23fbe0b342855bbdea2992b11e27706fecfb2bb",
+      "release_sha256": "313b69b3f9cc5fc6ffea084db23fbe0b342855bbdea2992b11e27706fecfb2bb"
+    },
+    {
+      "path": "video/final_analysis/test_cached_metrics_result.json",
+      "source_sha256": "c11a2b6242f9ab5599c0067ac960e0a13c26804746692f126be598af81a067fd",
+      "release_sha256": "c11a2b6242f9ab5599c0067ac960e0a13c26804746692f126be598af81a067fd"
+    },
+    {
+      "path": "video/final_analysis/test_integrity_result.json",
+      "source_sha256": "4ef165d7f2edbb3561a261f85571c232d33a4a71fab95fb3443844e9af90576b",
+      "release_sha256": "4ef165d7f2edbb3561a261f85571c232d33a4a71fab95fb3443844e9af90576b"
+    },
+    {
+      "path": "video/final_analysis/completed_study/features.npz",
+      "source_sha256": "1d26a1f11e89859c3f113f18f6e8e88fb5cced320f7e21935f9fc4d3c9a8fa1e",
+      "release_sha256": "1d26a1f11e89859c3f113f18f6e8e88fb5cced320f7e21935f9fc4d3c9a8fa1e"
+    },
+    {
+      "path": "video/final_analysis/completed_study/metrics.json",
+      "source_sha256": "de7463254eedc02d61721ffac37fed2881866d9506094e7d00fffab59c904986",
+      "release_sha256": "de7463254eedc02d61721ffac37fed2881866d9506094e7d00fffab59c904986"
+    },
+    {
+      "path": "video/final_analysis/completed_study/provenance.json",
+      "source_sha256": "57b0291c486a9e21802479a505f118e13f25b2cf3f68132d65f09b7259217783",
+      "release_sha256": "57b0291c486a9e21802479a505f118e13f25b2cf3f68132d65f09b7259217783"
+    },
+    {
+      "path": "video/final_analysis/completed_study/evidence/protocol.json",
+      "source_sha256": "2293c86d470d06e1dd8daa6c352b689c1fe43344ae70382f4be3567b42adbf4e",
+      "release_sha256": "2293c86d470d06e1dd8daa6c352b689c1fe43344ae70382f4be3567b42adbf4e"
+    },
+    {
+      "path": "video/final_analysis/completed_study/evidence/selection.json",
+      "source_sha256": "024d775ea996656e22edd37f7e5063d73aff320d2a475ec96779e21ed250e926",
+      "release_sha256": "024d775ea996656e22edd37f7e5063d73aff320d2a475ec96779e21ed250e926"
+    },
+    {
+      "path": "video/final_analysis/completed_study/evidence/analysis_freeze.json",
+      "source_sha256": "761041b1d85ac62c20d99c6a829cc50d84e736304d91401659399c2523f449b2",
+      "release_sha256": "761041b1d85ac62c20d99c6a829cc50d84e736304d91401659399c2523f449b2"
+    }
+  ]
+}

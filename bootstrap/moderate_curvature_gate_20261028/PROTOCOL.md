@@ -1,0 +1,11 @@
+# Fixed moderate-curvature gate, before execution
+
+28 October 2026. This new experiment is chosen from the parent-proposed model, not by tuning observed results. It tests the original offline Algorithm 1 interval, and is not a theorem certificate.
+
+Parameters fixed before the run: n=1,000,000; 512 independent Monte Carlo repetitions; B=3; eta=.94; alpha=.51; X0=0; iid data Z=+4 or -4 with equal probability; seed202610281911; Student cutoff t_(3,.975)=3.182446305284263. Two paired objectives are retained: g(x)=x+.25 log cosh(2x) and the quadratic control g(x)=x. All four streams per repetition use the same original dataset or the same empirical bootstrap draw across objectives. Each stream averages post-update iterates1..n. The radius is the original-centered RMS with divisor3. No burn-in, fitted tuning, changed center, restart, or SAA substitution is used for the target procedure.
+
+The complete empirical dataset law is generated without a gigabyte-sized array: first draw K~Bin(n,.5); generate its uniformly random ordering sequentially by drawing each next sign with probability remaining_plus/remaining_positions. Bootstrap draws are independently Bernoulli(K/n) conditionally on K. This is exactly the usual iid-data/empirical-resampling joint distribution in mathematical probability. Standard pseudorandom floating-point implementation is used, not exact real-number sampling.
+
+Retain every terminal ASGD statistic and sample mean, every coverage indicator, and all planned checkpoints100,1000,10000,100000,1000000. Checkpoints before n are diagnostics only: they use the n-observation empirical bootstrap law and are not standalone short-horizon Algorithm 1 experiments. Include the exact empirical-risk root (SAA) on the same original/resampled sample means as a separately labeled control. Do not change any parameter or launch a second discovery seed after seeing results.
+
+Local CPU only. Check a 300-second wall budget every1000 steps; if exceeded, retain an explicit incomplete output and do not promote checkpoint coverage to the planned terminal outcome. No paid execution or external contact. Confidence intervals describe Monte Carlo uncertainty, not a deterministic coverage proof or a violation of the paper's asymptotic theorem.

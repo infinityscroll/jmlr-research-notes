@@ -1,0 +1,52 @@
+[
+  {
+    "name": "selector",
+    "checker": "efficient_joint_adaptation_gate_20261028/check_selector_algebra.py",
+    "certificate": "selector_algebra_certificate.json"
+  },
+  {
+    "name": "paired-sign-lower",
+    "checker": "joint_adaptation_gate_20261028/check_paired_sign_identity.py",
+    "certificate": "paired_sign_identity_certificate.json"
+  },
+  {
+    "name": "short-information",
+    "checker": "anchor_selection_frontier_20261028/check_short_regime_missing_information.py",
+    "certificate": "short_regime_missing_information_certificate.json"
+  },
+  {
+    "name": "unknown-anchor-short",
+    "checker": "anchor_selection_frontier_20261028/check_unknown_anchor_short_document.py",
+    "certificate": "unknown_anchor_short_document_certificate.json"
+  },
+  {
+    "name": "unknown-anchor-long",
+    "checker": "anchor_selection_frontier_20261028/check_unknown_anchor_long_document.py",
+    "certificate": "unknown_anchor_long_document_certificate.json"
+  },
+  {
+    "name": "general-k-moments",
+    "checker": "multitopic_frontier_gate_20261027/check_general_k_algebra.py",
+    "certificate": "general_k_algebra_certificate.json"
+  },
+  {
+    "name": "lower-embedding",
+    "checker": "multitopic_frontier_gate_20261027/check_lower_embedding.py",
+    "certificate": "lower_embedding_certificate.json"
+  },
+  {
+    "name": "frequency-lemma",
+    "checker": "adaptive_anchor_oracle_20261027/check_empirical_frequency_lemma.py",
+    "certificate": "empirical_frequency_lemma_certificate.json"
+  },
+  {
+    "name": "greedy-geometry",
+    "checker": "adaptive_greedy_recovery_20261027/check_greedy_geometry.py",
+    "certificate": "greedy_geometry_certificate.json"
+  },
+  {
+    "name": "classical-contraction",
+    "checker": "greedy_decisive_prior_gate_20261027/check_contraction_identity.py",
+    "certificate": "contraction_certificate.json"
+  }
+]

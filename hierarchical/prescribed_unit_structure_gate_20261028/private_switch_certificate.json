@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "source_sha256": "274e543e79b4dc24e4ee745a48887f4deb191b60b59cf46d4ffa8723aacac755",
+  "checker_sha256": "66ee4fd2b7f3a0a36787e330e4d30d97a86db6681ffa1f907e395d9922cf058a",
+  "bow": {
+    "minimum_physical_cell": "1/4",
+    "selected_probability_gap": "1/16",
+    "whole_policy_support": "1/2",
+    "natural_atom_swap": "PASS"
+  },
+  "nested_mode_contraction": {
+    "patterns": 5400,
+    "survivors": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        5,
+        5,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    ],
+    "mixed_survivors": 0
+  },
+  "overlap_fixtures": [
+    {
+      "pi_plus": "1/4",
+      "lambda": "1/16777216",
+      "minimum_physical_cell": "7/32",
+      "all_original_kernel_states": 512,
+      "finite_record_checks": 584,
+      "selected_policy_probability_gap": "1/16777216",
+      "hidden_states_per_edge": 4,
+      "policy_tables_identical_across_models": true,
+      "common_positive_unit_dag": "C0->C1",
+      "natural_atom_swap": "PASS"
+    },
+    {
+      "pi_plus": "1/3",
+      "lambda": "1/16777216",
+      "minimum_physical_cell": "29/96",
+      "all_original_kernel_states": 512,
+      "finite_record_checks": 584,
+      "selected_policy_probability_gap": "1/16777216",
+      "hidden_states_per_edge": 4,
+      "policy_tables_identical_across_models": true,
+      "common_positive_unit_dag": "C0->C1",
+      "natural_atom_swap": "PASS"
+    },
+    {
+      "pi_plus": "1/2",
+      "lambda": "1/16777216",
+      "minimum_physical_cell": "27/64",
+      "all_original_kernel_states": 512,
+      "finite_record_checks": 584,
+      "selected_policy_probability_gap": "1/16777216",
+      "hidden_states_per_edge": 4,
+      "policy_tables_identical_across_models": true,
+      "common_positive_unit_dag": "C0->C1",
+      "natural_atom_swap": "PASS"
+    },
+    {
+      "pi_plus": "2/3",
+      "lambda": "1/16777216",
+      "minimum_physical_cell": "29/96",
+      "all_original_kernel_states": 512,
+      "finite_record_checks": 584,
+      "selected_policy_probability_gap": "1/16777216",
+      "hidden_states_per_edge": 4,
+      "policy_tables_identical_across_models": true,
+      "common_positive_unit_dag": "C0->C1",
+      "natural_atom_swap": "PASS"
+    },
+    {
+      "pi_plus": "3/4",
+      "lambda": "1/16777216",
+      "minimum_physical_cell": "7/32",
+      "all_original_kernel_states": 512,
+      "finite_record_checks": 584,
+      "selected_policy_probability_gap": "1/16777216",
+      "hidden_states_per_edge": 4,
+      "policy_tables_identical_across_models": true,
+      "common_positive_unit_dag": "C0->C1",
+      "natural_atom_swap": "PASS"
+    }
+  ],
+  "scope": "Finite exact original-kernel and label-contraction certificates; arbitrary-graph theorem and arbitrary-record identity remain analytic arguments."
+}

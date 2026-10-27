@@ -1,0 +1,203 @@
+{
+  "source_archive": "jmlr_breakthrough_portfolio_20261026",
+  "copied_on": "2026-10-28",
+  "note": "Research sources and checkers copied unchanged. README, PROOF_MAP, reproduction runner and publication checks are packaging additions. Internal reviews are AI-generated, not external review. Historical sources may discuss claims beyond the imported sections; see PROOF_MAP.md.",
+  "files": [
+    {
+      "path": "alphabet_refinement_gate_20261028/COMPLETENESS_FRONTIER.md",
+      "archive_path": "hierarchical/alphabet_refinement_gate_20261028/COMPLETENESS_FRONTIER.md",
+      "archive_sha256": "a18c5d5b8c77756366c34321f0fde326ffbd426629a26d62273eb21b6f2d6d57",
+      "staged_sha256": "a18c5d5b8c77756366c34321f0fde326ffbd426629a26d62273eb21b6f2d6d57",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "alphabet_refinement_gate_20261028/independent_finite_alphabet_refinement_audit.md",
+      "archive_path": "hierarchical/alphabet_refinement_gate_20261028/independent_finite_alphabet_refinement_audit.md",
+      "archive_sha256": "ed376bcf3d998c4a6dc7b7d140cf7a2d316a1f4dd0abcf65113b92234bdca808",
+      "staged_sha256": "ed376bcf3d998c4a6dc7b7d140cf7a2d316a1f4dd0abcf65113b92234bdca808",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "alphabet_refinement_gate_20261028/positive_finite_alphabet_refinement.md",
+      "archive_path": "hierarchical/alphabet_refinement_gate_20261028/positive_finite_alphabet_refinement.md",
+      "archive_sha256": "4364d97a03288717303da9e21732b92683c0ffe587cf89ab67d2723d846c6fb1",
+      "staged_sha256": "4364d97a03288717303da9e21732b92683c0ffe587cf89ab67d2723d846c6fb1",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "alphabet_refinement_gate_20261028/root_composition_review.md",
+      "archive_path": "hierarchical/alphabet_refinement_gate_20261028/root_composition_review.md",
+      "archive_sha256": "461641ff04f65d0c35f0d917f6d42dbd2c9cd4e1edb0fa3a78854956dbfd5854",
+      "staged_sha256": "461641ff04f65d0c35f0d917f6d42dbd2c9cd4e1edb0fa3a78854956dbfd5854",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "binary_selected/general_positive/hidden_capacity_attack/capacity_compression_v2.md",
+      "archive_path": "hierarchical/binary_selected/general_positive/hidden_capacity_attack/capacity_compression_v2.md",
+      "archive_sha256": "1dfc788b295bf9dc30202bfa7315f5eb44f98b662b04c6794b543ef84cd7d6af",
+      "staged_sha256": "1dfc788b295bf9dc30202bfa7315f5eb44f98b662b04c6794b543ef84cd7d6af",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "binary_selected/general_positive/hidden_capacity_attack/certificate.json",
+      "archive_path": "hierarchical/binary_selected/general_positive/hidden_capacity_attack/certificate.json",
+      "archive_sha256": "3f62c07d25d6e01f3c5f7d1d56506bdd2f54b711dcd9cb95025fb320749790b7",
+      "staged_sha256": "3f62c07d25d6e01f3c5f7d1d56506bdd2f54b711dcd9cb95025fb320749790b7",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "binary_selected/general_positive/hidden_capacity_attack/check_capacity.py",
+      "archive_path": "hierarchical/binary_selected/general_positive/hidden_capacity_attack/check_capacity.py",
+      "archive_sha256": "959c73478b307b5ad851929204b637e8857fec2638257867523b9178f8397840",
+      "staged_sha256": "959c73478b307b5ad851929204b637e8857fec2638257867523b9178f8397840",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/check_six_node.py",
+      "archive_path": "hierarchical/binary_selected/general_positive/multimode_hedge/check_six_node.py",
+      "archive_sha256": "0e4de3f6b8a0477d98e0bb1ac4ab9b9ef7f925a4e11a5c2959d829b9c4a8b1f3",
+      "staged_sha256": "0e4de3f6b8a0477d98e0bb1ac4ab9b9ef7f925a4e11a5c2959d829b9c4a8b1f3",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/joint_target_corollary.md",
+      "archive_path": "hierarchical/binary_selected/general_positive/multimode_hedge/joint_target_corollary.md",
+      "archive_sha256": "8119664d55ca00547478e336784a0143a359d20c47fe3623e877b590dac282bf",
+      "staged_sha256": "8119664d55ca00547478e336784a0143a359d20c47fe3623e877b590dac282bf",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/six_node_certificate.json",
+      "archive_path": "hierarchical/binary_selected/general_positive/multimode_hedge/six_node_certificate.json",
+      "archive_sha256": "5897e823d4e0b8c9dfe557f37a1221f37a7f47b4f850a3972cdf9656df7f93dc",
+      "staged_sha256": "5897e823d4e0b8c9dfe557f37a1221f37a7f47b4f850a3972cdf9656df7f93dc",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "binary_selected/general_positive/multimode_hedge/theorem.md",
+      "archive_path": "hierarchical/binary_selected/general_positive/multimode_hedge/theorem.md",
+      "archive_sha256": "60e9bae29d787b80f2056a96e681276b3ec9c3f1d49f2eb0c0435136469e1147",
+      "staged_sha256": "60e9bae29d787b80f2056a96e681276b3ec9c3f1d49f2eb0c0435136469e1147",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/check_multiple_switches.py",
+      "archive_path": "hierarchical/multiple_private_switch_gate_20261028/check_multiple_switches.py",
+      "archive_sha256": "8627dc8ef6344d5cfbb6afa3ad1db0140fe847f3f92cc5f1bc73525fd8e65a4d",
+      "staged_sha256": "8627dc8ef6344d5cfbb6afa3ad1db0140fe847f3f92cc5f1bc73525fd8e65a4d",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/independent_multiple_policy_audit.md",
+      "archive_path": "hierarchical/multiple_private_switch_gate_20261028/independent_multiple_policy_audit.md",
+      "archive_sha256": "1b2634a4196b1837ac141a52f6033b4b771f3e37bb9abae58a2f36c133fb3d50",
+      "staged_sha256": "1b2634a4196b1837ac141a52f6033b4b771f3e37bb9abae58a2f36c133fb3d50",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/multiple_policy_completeness.md",
+      "archive_path": "hierarchical/multiple_private_switch_gate_20261028/multiple_policy_completeness.md",
+      "archive_sha256": "acb87f7dfaca473bbc87dba2dfd43cc5f9717ba9d1bef14cd0bed90d3bf9b3cf",
+      "staged_sha256": "acb87f7dfaca473bbc87dba2dfd43cc5f9717ba9d1bef14cd0bed90d3bf9b3cf",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "multiple_private_switch_gate_20261028/multiple_switch_certificate.json",
+      "archive_path": "hierarchical/multiple_private_switch_gate_20261028/multiple_switch_certificate.json",
+      "archive_sha256": "eb27c9e92f3b5062a038ac48d703aa365d943744e848959914f5e503f840d400",
+      "staged_sha256": "eb27c9e92f3b5062a038ac48d703aa365d943744e848959914f5e503f840d400",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/check_private_switch.py",
+      "archive_path": "hierarchical/prescribed_unit_structure_gate_20261028/check_private_switch.py",
+      "archive_sha256": "66ee4fd2b7f3a0a36787e330e4d30d97a86db6681ffa1f907e395d9922cf058a",
+      "staged_sha256": "66ee4fd2b7f3a0a36787e330e4d30d97a86db6681ffa1f907e395d9922cf058a",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/independent_private_switch_audit.md",
+      "archive_path": "hierarchical/prescribed_unit_structure_gate_20261028/independent_private_switch_audit.md",
+      "archive_sha256": "58f2ba02acccb89f810cc8a776aed911e58d0ec7cf46caa7123abae5b3d672fb",
+      "staged_sha256": "58f2ba02acccb89f810cc8a776aed911e58d0ec7cf46caa7123abae5b3d672fb",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/primary_scope_gate.md",
+      "archive_path": "hierarchical/prescribed_unit_structure_gate_20261028/primary_scope_gate.md",
+      "archive_sha256": "10944eef7eb0166220043c19968ff3f63231e975a4d2969a4841d66209fd108f",
+      "staged_sha256": "10944eef7eb0166220043c19968ff3f63231e975a4d2969a4841d66209fd108f",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/private_switch_certificate.json",
+      "archive_path": "hierarchical/prescribed_unit_structure_gate_20261028/private_switch_certificate.json",
+      "archive_sha256": "5decdb47376c039fee198a10590497cd2133cf28386b8018baf571c88190e9bb",
+      "staged_sha256": "5decdb47376c039fee198a10590497cd2133cf28386b8018baf571c88190e9bb",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/private_switch_completeness.md",
+      "archive_path": "hierarchical/prescribed_unit_structure_gate_20261028/private_switch_completeness.md",
+      "archive_sha256": "274e543e79b4dc24e4ee745a48887f4deb191b60b59cf46d4ffa8723aacac755",
+      "staged_sha256": "274e543e79b4dc24e4ee745a48887f4deb191b60b59cf46d4ffa8723aacac755",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "prescribed_unit_structure_gate_20261028/root_private_switch_review.md",
+      "archive_path": "hierarchical/prescribed_unit_structure_gate_20261028/root_private_switch_review.md",
+      "archive_sha256": "a992d57508f6dbacd309bc2e21c38df461ac6ac93fd671a1ff70af888059eb32",
+      "staged_sha256": "a992d57508f6dbacd309bc2e21c38df461ac6ac93fd671a1ff70af888059eb32",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/check_receiver_closure.py",
+      "archive_path": "hierarchical/terminal_receiver_completeness_gate_20261028/check_receiver_closure.py",
+      "archive_sha256": "67af0e9b2a1ed99771a91367cb24108dcd6ce3177c745cff16b55269336877b7",
+      "staged_sha256": "67af0e9b2a1ed99771a91367cb24108dcd6ce3177c745cff16b55269336877b7",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/exact_controls_and_boundary.md",
+      "archive_path": "hierarchical/terminal_receiver_completeness_gate_20261028/exact_controls_and_boundary.md",
+      "archive_sha256": "a3b5bf21aaa6bbbf48273a8952dec12fffa17b001a0c47eb19756ca591d57d90",
+      "staged_sha256": "a3b5bf21aaa6bbbf48273a8952dec12fffa17b001a0c47eb19756ca591d57d90",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/independent_separated_receiver_audit.md",
+      "archive_path": "hierarchical/terminal_receiver_completeness_gate_20261028/independent_separated_receiver_audit.md",
+      "archive_sha256": "564a50202619df7cac9fbe023542dcbbeb8c3405ae36a00ec353e1f41f99432d",
+      "staged_sha256": "564a50202619df7cac9fbe023542dcbbeb8c3405ae36a00ec353e1f41f99432d",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/primary_scope_comparison.md",
+      "archive_path": "hierarchical/terminal_receiver_completeness_gate_20261028/primary_scope_comparison.md",
+      "archive_sha256": "c9b2ef8535a4e06af62b0e5a001220ad85d998065c68538fda68e8bc163aec48",
+      "staged_sha256": "c9b2ef8535a4e06af62b0e5a001220ad85d998065c68538fda68e8bc163aec48",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/receiver_closure_certificate.json",
+      "archive_path": "hierarchical/terminal_receiver_completeness_gate_20261028/receiver_closure_certificate.json",
+      "archive_sha256": "da0181b826284f096dcb03f0aab9a47bbab7acef30228bd4c109b737368d652b",
+      "staged_sha256": "da0181b826284f096dcb03f0aab9a47bbab7acef30228bd4c109b737368d652b",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/root_receiver_review.md",
+      "archive_path": "hierarchical/terminal_receiver_completeness_gate_20261028/root_receiver_review.md",
+      "archive_sha256": "0fdc2b829d47dd8f7dfa9a2a137958d64e91616b2ed3937732bd8ecc54ad83bf",
+      "staged_sha256": "0fdc2b829d47dd8f7dfa9a2a137958d64e91616b2ed3937732bd8ecc54ad83bf",
+      "transformation": "none; byte-for-byte copy"
+    },
+    {
+      "path": "terminal_receiver_completeness_gate_20261028/separated_receiver_completeness.md",
+      "archive_path": "hierarchical/terminal_receiver_completeness_gate_20261028/separated_receiver_completeness.md",
+      "archive_sha256": "9b6d81b482c7fbf5b63e703d20e5e6af4a12bea865ac48341b3b4d7c7f15f2ce",
+      "staged_sha256": "9b6d81b482c7fbf5b63e703d20e5e6af4a12bea865ac48341b3b4d7c7f15f2ce",
+      "transformation": "none; byte-for-byte copy"
+    }
+  ]
+}

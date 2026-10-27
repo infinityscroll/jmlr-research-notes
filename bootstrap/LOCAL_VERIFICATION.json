@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "checks": {
+    "unchanged_curated_files": 43,
+    "release_hashes_checked": 48,
+    "retained_bias_certificates": [
+      {
+        "certificate": "moderate_bias_certificate.json",
+        "negative_mean_lower": "46163488495523193/8796093022208000000",
+        "million_steps_recomputed_by_default": false
+      },
+      {
+        "certificate": "root_bias_certificate.json",
+        "negative_mean_lower": "23081750376873377/4398046511104000000",
+        "million_steps_recomputed_by_default": false
+      }
+    ],
+    "endpoint_exact": {
+      "status": "passed",
+      "exact_census": [
+        {
+          "n": 1,
+          "resample_comparisons": 2,
+          "original_noise_variance": "1/160000",
+          "bootstrap_difference_second_moment": "0"
+        },
+        {
+          "n": 2,
+          "resample_comparisons": 16,
+          "original_noise_variance": "241/40960000",
+          "bootstrap_difference_second_moment": "181/40960000"
+        },
+        {
+          "n": 3,
+          "resample_comparisons": 216,
+          "original_noise_variance": "8393/1474560000",
+          "bootstrap_difference_second_moment": "2153/368640000"
+        },
+        {
+          "n": 4,
+          "resample_comparisons": 4096,
+          "original_noise_variance": "3713137/671088640000",
+          "bootstrap_difference_second_moment": "8718167/1342177280000"
+        }
+      ],
+      "coefficient_checks_through_n": 128,
+      "all_n_rational_coverage_upper_bound": "1/675",
+      "upper_bound_percent": 0.14814814814814814,
+      "t3_cdf_at_4_numeric_crosscheck": 0.985995771994927,
+      "scope": "Finite identity checks plus explicit analytic bound; not Lean formalization."
+    },
+    "endpoint_floating_weights": "PASS",
+    "retained_probe": {
+      "status": "PASS",
+      "no_new_random_draws": true,
+      "terminal_cases": [
+        {
+          "case": "logcosh_ASGD",
+          "covered": 405,
+          "replications": 512,
+          "exact_outward_CP_lower": "7531873/10000000",
+          "exact_outward_CP_upper": "82544433/100000000"
+        },
+        {
+          "case": "quadratic_ASGD",
+          "covered": 486,
+          "replications": 512,
+          "exact_outward_CP_lower": "2316191/2500000",
+          "exact_outward_CP_upper": "96656341/100000000"
+        },
+        {
+          "case": "logcosh_SAA_control",
+          "covered": 486,
+          "replications": 512,
+          "exact_outward_CP_lower": "2316191/2500000",
+          "exact_outward_CP_upper": "96656341/100000000"
+        },
+        {
+          "case": "quadratic_SAA_control",
+          "covered": 486,
+          "replications": 512,
+          "exact_outward_CP_lower": "2316191/2500000",
+          "exact_outward_CP_upper": "96656341/100000000"
+        }
+      ],
+      "exact_small_joint_law_checks": 64,
+      "maximum_SAA_residual": 3.729655473350135e-17,
+      "outputs_sha256": "83a9cdf7df452b6594bdcd6d215725d2ab3a0bfa00ec39740b2cd142e69653ed",
+      "checker_sha256": "680ed0ee27d9ffe51526ad392c76f8c7beffab13c5614fbc0a6f39be4d6b47e0",
+      "scope": "Saved numerical statistics, confidence endpoints and algorithm-law mapping; not independent terminal-trajectory replication."
+    },
+    "limiting_bound": {
+      "status": "PASS",
+      "source_sha256": "59ce6000f9c72fb8fc575c8d45c562ae4caf146b11353a8363d065a554aa8e9c",
+      "checker_sha256": "2ef577c4988fb0505c0c2502e7f3cb182c0837626a9f542519867c54d3e0261f",
+      "t3_tail_at_16_over_5_upper": "2771066961839198817126301467218126912154855733729106681168473460683741446071719103521185243515653016303117/56170981956521126816964797508500327518294987767808000000000000000000000000000000000000000000000000000000000",
+      "beta_cdf_at_256_over_331_upper": "94112934527/112135680000",
+      "poisson_zero_probability_upper": "46875/161659",
+      "limiting_coverage_strict_upper": "111/125",
+      "sharper_rational_upper": "501844346148349/566491934160000",
+      "display_only": {
+        "t3_tail_upper": 0.04933271353497309,
+        "beta_cdf_upper": 0.8392773337353463,
+        "sharper_limiting_upper": 0.8858808323413976
+      },
+      "new_random_draws": 0,
+      "new_sgd_trajectories": 0,
+      "scope": "Arithmetic inequalities for the limiting noncentral law only; analytic theorem required, no finite-n coverage claim."
+    },
+    "critical_weight_identities": {
+      "status": "PASS",
+      "exact_rational_equalities_checked": 3560,
+      "source_sha256": "b61ce8aec7b3dd187021c1788f74c21746a2e6cd4c0417dc145e34948d878e0d",
+      "checker_sha256": "89f4ee99d086f964d50379992e96a1cb16cec725925d359c5272bada50ad79a6",
+      "diagnostics_not_a_convergence_certificate": [
+        {
+          "n": 100,
+          "n_weight_variance_over_log_n": 0.6240194308899812,
+          "sqrt_n_q_n": 1.0326044280860542,
+          "maximum_normalized_weight_squared": 0.23153800225390514
+        },
+        {
+          "n": 1000,
+          "n_weight_variance_over_log_n": 0.7239194528274119,
+          "sqrt_n_q_n": 1.0971794709831724,
+          "maximum_normalized_weight_squared": 0.17426830322285175
+        },
+        {
+          "n": 10000,
+          "n_weight_variance_over_log_n": 0.787247565594026,
+          "sqrt_n_q_n": 1.1184214806972033,
+          "maximum_normalized_weight_squared": 0.13581111641550947
+        },
+        {
+          "n": 100000,
+          "n_weight_variance_over_log_n": 0.8284128694302189,
+          "sqrt_n_q_n": 1.1252211208510827,
+          "maximum_normalized_weight_squared": 0.10997400918313344
+        },
+        {
+          "n": 1000000,
+          "n_weight_variance_over_log_n": 0.8566526584021836,
+          "sqrt_n_q_n": 1.1273795902377324,
+          "maximum_normalized_weight_squared": 0.09199694322928287
+        }
+      ],
+      "limits_of_check": "Checks exact averaging/variance weights, not martingale CLT, coverage, novelty, or the full proof."
+    }
+  },
+  "full_bias_recomputed": false,
+  "new_random_draws": 0,
+  "retained_files_unchanged": true,
+  "elapsed_seconds": 3.959596666973084,
+  "scope": "Finite identities, saved evidence and arithmetic only; no CLT proof, expert review or novelty clearance.",
+  "verification_environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "platform": "darwin",
+    "note": "Bounded verification run using installed local runtime; no machine-local executable path distributed."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "n": 1000000,
+  "fixed_point_scale": 17592186044416,
+  "gain_intervals_verified": 1000000,
+  "recursion_average_lower": "46163488495523193/8796093022208000000",
+  "recursion_average_upper": "11540878801468899/2199023255552000000",
+  "lower_display_only": 0.005248181025254234,
+  "proves_negative_mean_strictly_exceeds": "131/25000",
+  "normalized_lower_display_only": 1.3120452563135585,
+  "source_sha256": "863d6b4751e273442d32e65aa720ee90f79d0737f390b67d880dd030152af9b3",
+  "checker_sha256": "a9d4642fcfaa53306bcd767cd3c34fbb9d04295bdc8dbc7ca481169dd310bc9b",
+  "new_random_draws": 0,
+  "elapsed_seconds": 56.443942958,
+  "scope": "Negative-mean bound only, not a finite-bootstrap-coverage certificate."
+}

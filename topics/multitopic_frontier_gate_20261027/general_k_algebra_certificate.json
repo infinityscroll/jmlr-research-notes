@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "source_sha256": "56aef7d5bbdad0e97cf092a21d31515d8fda07fa4d40c1926e9976e92e9147c6",
+  "checker_sha256": "e7147462276304174c0436ca9d520db75e2d7a221c1ae46e2cec694e296252a7",
+  "counts": {
+    "source_binding": 1,
+    "factor_completion": 880,
+    "leverage_identity": 16,
+    "covariance_inverse": 232,
+    "population_max_volume": 4,
+    "coordinate_invariance": 348,
+    "population_reconstruction": 112,
+    "pair_centering": 27,
+    "exact_pair_variance": 27
+  },
+  "total_assertions": 1647,
+  "fixtures": [
+    {
+      "K": 2,
+      "N": 2,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 2,
+      "N": 2,
+      "epsilon": "1/16"
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "epsilon": "1/16"
+    },
+    {
+      "K": 3,
+      "N": 2,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 3,
+      "N": 2,
+      "epsilon": "1/16"
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "epsilon": "1/16"
+    },
+    {
+      "K": 4,
+      "N": 2,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 4,
+      "N": 3,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 4,
+      "N": 2,
+      "epsilon": "1/16"
+    },
+    {
+      "K": 4,
+      "N": 3,
+      "epsilon": "1/16"
+    },
+    {
+      "K": 5,
+      "N": 2,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 5,
+      "N": 3,
+      "epsilon": "1/4"
+    },
+    {
+      "K": 5,
+      "N": 2,
+      "epsilon": "1/16"
+    },
+    {
+      "K": 5,
+      "N": 3,
+      "epsilon": "1/16"
+    }
+  ],
+  "scope": "Exact factor completion, covariance leverage, affine determinant/reconstruction, and full-token degenerate-pair variance only. No stochastic experiment or verification of continuum risk inequalities."
+}

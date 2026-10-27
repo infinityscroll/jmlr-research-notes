@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-10-26T03:54:08.459857+00:00",
+  "sha256": {
+    "modal_replicated_grid.py": "a9c09fa7630dc61cbcec73cb17107c172b3bb947ea488f4b32cd1da8de9b1d2b",
+    "regime_replicates/runner.py": "1fbc3321e9aa00726ef52d05a6b3d9a05d1ffbd6d818efd31938a9b5051d9f10",
+    "regime_replicates/common.py": "76c97d2f75a4b8227ea302a8ab8f9c5028d0e0949f2fb547f9a7a6f1d13e3205",
+    "regime_replicates/config.json": "c0be7c2fb77e804827df1180d826609e8761ea22111c75fcc57ddb8adf366db5",
+    "regime_replicates/PROTOCOL.md": "88d0d4f3da621ab0a8172d7fcc0da9d2f05774d76d2e018003a6176dabe1b565"
+  },
+  "new_test_outputs_inspected": false
+}

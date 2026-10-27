@@ -1,0 +1,27 @@
+{
+  "frozen_utc": "2026-10-26T06:10:14.138871+00:00",
+  "protocol_sha256": "2293c86d470d06e1dd8daa6c352b689c1fe43344ae70382f4be3567b42adbf4e",
+  "selection_sha256": "024d775ea996656e22edd37f7e5063d73aff320d2a475ec96779e21ed250e926",
+  "source_sha256": {
+    "final_analysis/cached_metrics.py": "22fda73e4bcdbddd344ef052ac161402054f835727d0cf1ef42c88ab3b0fbfa9",
+    "final_analysis/analyze_complete.py": "75f638b4a3da42b06dd90a9616c188cb92879c557d418e862cc86b1af8f1b8eb",
+    "final_analysis/test_cached_metrics.py": "313b69b3f9cc5fc6ffea084db23fbe0b342855bbdea2992b11e27706fecfb2bb",
+    "final_analysis/test_integrity.py": "504d237df4ab3d96f17169175171d684c7873f98f43766db620198a95ff8e153",
+    "final_analysis/media_tool.py": "26efb2ccd9d387fa657ae29818d2873b9154966ec506ec04a950b0577fc6e21a",
+    "final_analysis/freeze_analysis.py": "c858c44ec1320f5e664eefc1dd2c2a2b14c37fd0501974bd5fc940dfcd3a317b",
+    "heldout_metrics.py": "22d16224145712706a1cd0de59aaea8755f3e674d27b8b7da55cddd7a40d508a",
+    "schedule_core.py": "caa40cfa726d51a507120c446fbe910f70176b3d2e6ff5e64dc0724ba8a0f8d9",
+    "next_stage/study_contract.py": "389964899b313bce18ded30417272a32f5f6ca3b44b687dad5291ae723abc57b",
+    "next_stage/assemble_features.py": "ed2af141677eba7a08bdb7787df97520190262a2f435fd032d7c93fca8575931",
+    "next_stage/download_study_media.py": "7c48c89c24b0c3447a1a58757ef8be5860fa4c3554e1d8cdf5ebe8bbba1036cd",
+    "next_stage/study_worker.py": "7d931166c0a55d24be889944696d9a2cad5c43b749efef0fc792744f4df4e8c9",
+    "next_stage/modal_study.py": "9371d9a346654b3a7709c7912b25c6c7ffa5b927e27b5790b8f9518dc3e33854",
+    "next_stage/freeze_study.py": "1948012c0dd2bcaad8e14b54e6e6150743aa0b628b70be4f23b415b2ff5063db"
+  },
+  "preoutcome_declaration": "No held-out feature/result values were read while designing, testing or freezing this analysis. Tests use synthetic features only.",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261026,
+  "primary": "proxy1 best minus proxy1 worst in late-minus-early KVD, with absolute late KVD alongside",
+  "other_comparisons": "exploratory; proxy3 retains its originally secondary designation but is not promoted to a second confirmatory test",
+  "fvd": "secondary descriptive, N=128 caveat, no bootstrap bias correction claim"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "data": "synthetic shard features only; real manifest identities reused",
+  "complete_shards": 36,
+  "generated_pairs": 512,
+  "features_shape": [
+    4,
+    128,
+    6,
+    400
+  ],
+  "rejections": [
+    "wrong global seed",
+    "duplicate output",
+    "foreign media path",
+    "nonfinite features",
+    "changed calibration bytes"
+  ],
+  "heldout_study_results_read": false
+}

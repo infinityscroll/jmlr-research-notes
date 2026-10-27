@@ -1,0 +1,125 @@
+{
+  "unchanged_copies": {
+    "proofs/selected_path_noncollapse_theorem.md": {
+      "sha256": "46db3f866ad368b39f1bf600e730133a2f52570b6f4a24464aebb39e57187ae7",
+      "original_relative_path": "selected_query_coupling_gate_20261028/selected_path_noncollapse_theorem.md",
+      "copy": "byte-identical"
+    },
+    "proofs/positive_gram_extension.md": {
+      "sha256": "29c18514bf16ab7282b227e46bafcee71e677332644c92af8d2ff78ccd97fc36",
+      "original_relative_path": "selected_query_coupling_gate_20261028/positive_gram_extension.md",
+      "copy": "byte-identical"
+    },
+    "proofs/printed_single_layer_cone_compatibility.md": {
+      "sha256": "bcd9d2fbb6270cf036b4daf27d87f9a59200f2e3ab7db1de78dd33abd08a4ec5",
+      "original_relative_path": "selected_query_coupling_gate_20261028/printed_single_layer_cone_compatibility.md",
+      "copy": "byte-identical"
+    },
+    "proofs/p_three_halves_dynamics.md": {
+      "sha256": "262392416101c3332a636c66ddc3df899ff1ca3bba9e303b5e0e7b2f1571e23d",
+      "original_relative_path": "non_euclidean_selected_path_gate_20261028/p_three_halves_dynamics.md",
+      "copy": "byte-identical"
+    },
+    "proofs/generic_p_open_input_theorem.md": {
+      "sha256": "db10a99b365cb9de1c422d9ded8e4839c703f9656dfd11aae5684613660d4551",
+      "original_relative_path": "non_euclidean_selected_path_gate_20261028/generic_p_open_input_theorem.md",
+      "copy": "byte-identical"
+    },
+    "audits/independent_selected_path_audit.md": {
+      "sha256": "6d4d6b026e5a54f4f0dcdc0dae33f4edd065d8d6d2d7fb961134150e006bf4e1",
+      "original_relative_path": "selected_query_coupling_gate_20261028/independent_selected_path_audit.md",
+      "copy": "byte-identical"
+    },
+    "audits/independent_positive_gram_audit.md": {
+      "sha256": "517d13f3069eeffb557fa48f4c7a4fc07d24ee943137657c00ff95654b1f1588",
+      "original_relative_path": "selected_query_coupling_gate_20261028/independent_positive_gram_audit.md",
+      "copy": "byte-identical"
+    },
+    "audits/independent_printed_cone_audit.md": {
+      "sha256": "1aa317371d3e23188eea13b57f14656fe846ed52be1f043056dfa9cf9e3149d3",
+      "original_relative_path": "selected_query_coupling_gate_20261028/independent_printed_cone_audit.md",
+      "copy": "byte-identical"
+    },
+    "audits/independent_p_three_halves_audit.md": {
+      "sha256": "caddf16cfdfdf775b75c9a3a0da031a06e65abba5570eaf9770035fa77a6e80b",
+      "original_relative_path": "non_euclidean_selected_path_gate_20261028/independent_p_three_halves_audit.md",
+      "copy": "byte-identical"
+    },
+    "notes/primary_scope_comparison.md": {
+      "sha256": "f1f16e5539c703560c633ef2313c4fdd5c9ed444275d2a024561223794b0618f",
+      "original_relative_path": "selected_query_coupling_gate_20261028/primary_scope_comparison.md",
+      "copy": "byte-identical"
+    },
+    "notes/diagnostic_report.md": {
+      "sha256": "a989b3ac731f903c0ae1c21d7f71407a2c67d460dfb28e0c1f3924e219e04d4b",
+      "original_relative_path": "selected_query_coupling_gate_20261028/diagnostic_report.md",
+      "copy": "byte-identical"
+    },
+    "notes/source_mapping_and_scope.md": {
+      "sha256": "05fca3971974520b9850aa79acc64557ca8a230dcf3a6b25a7d157d9847f6985",
+      "original_relative_path": "non_euclidean_selected_path_gate_20261028/source_mapping_and_scope.md",
+      "copy": "byte-identical"
+    },
+    "data/diagnostic_protocol.json": {
+      "sha256": "62c7808592fd9951a0144bd0cb267fae7ea88e8dc25f2be490a2185e4d7fa081",
+      "original_relative_path": "selected_query_coupling_gate_20261028/diagnostic_protocol.json",
+      "copy": "byte-identical"
+    },
+    "data/diagnostic_results.json": {
+      "sha256": "91a5f699b343c348dc46726ba89b40a6517d76c3a5103f2f7fce7d49e902fe4a",
+      "original_relative_path": "selected_query_coupling_gate_20261028/diagnostic_results.json",
+      "copy": "byte-identical"
+    },
+    "data/diagnostic_states.npz": {
+      "sha256": "6719aefe0dbe135064578d85d8bf7ed2590a220eaa4e39ec63570da0bfdb7bc5",
+      "original_relative_path": "selected_query_coupling_gate_20261028/diagnostic_states.npz",
+      "copy": "byte-identical"
+    },
+    "provenance/WORKING_DERIVATION.md": {
+      "sha256": "a8b8bc78c85244296de63aeeb05106b5052811e75658a96754ab96e152fa07bb",
+      "original_relative_path": "selected_query_coupling_gate_20261028/WORKING_DERIVATION.md",
+      "copy": "byte-identical"
+    },
+    "provenance/algebra_and_retained_states_certificate.json": {
+      "sha256": "e9435b4bf7293557dc05ada3ff34ab5649733da422c04c328912df5630e172a2",
+      "original_relative_path": "selected_query_coupling_gate_20261028/algebra_and_retained_states_certificate.json",
+      "copy": "byte-identical"
+    },
+    "provenance/three_halves_interface_certificate.json": {
+      "sha256": "41cd30e4bd612ccc355c186fbeedb9720f247d0c9adea6cc2262891dbc60d385",
+      "original_relative_path": "non_euclidean_selected_path_gate_20261028/three_halves_interface_certificate.json",
+      "copy": "byte-identical"
+    },
+    "audits/independent_generic_p_audit.md": {
+      "sha256": "5827651ea3d5c6251cbab80f5aca20033a2f856823b503a0217cea6b001adb5d",
+      "original_relative_path": "non_euclidean_selected_path_gate_20261028/independent_generic_p_audit.md",
+      "copy": "byte-identical"
+    },
+    "notes/TARGETED_SUBSUMPTION_TEST.md": {
+      "sha256": "7046f22882e1db2993636f413d2d6f0f99898283766baadbeeffbcb8d6b42e35",
+      "original_relative_path": "selected_path_targeted_novelty_20261028/TARGETED_SUBSUMPTION_TEST.md",
+      "copy": "byte-identical"
+    }
+  },
+  "original_script_hashes": {
+    "selected_query_coupling_gate_20261028/run_fixed_diagnostic.py": "6a0aa3eb24ea1ab448b40a4c441523b73791c24d56f3b9a0e2e77bc42973d3e3",
+    "selected_query_coupling_gate_20261028/check_algebra_and_retained_states.py": "36564294d477b794643d707e6104683c5426834412e96c5aa8a12588868513bb",
+    "non_euclidean_selected_path_gate_20261028/check_three_halves_interface.py": "3d1076cf11a4b66ad7d2ff70806da818ff816b97384d4feecfa93a6fe69165b2"
+  },
+  "portable_replacements": {
+    "verify.py": {
+      "description": "New combined bounded verification entrypoint; no workspace dependency injection, no overwrite of historical certificates.",
+      "sha256": "94c87b7b693134583a4777cc9729801bd5cf9e810cbb4b7a9d07207b824ceb6a"
+    },
+    "run_diagnostic.py": {
+      "description": "Portable optional reproduction of the original two fixed trajectories; writes a new output directory.",
+      "sha256": "eb66d363782b6a9ecb520393068ce424745a943c8e72db7e7e288265528f6b5c"
+    }
+  },
+  "new_helpers": {
+    "fetch_optimizer.py": {
+      "sha256": "277d3deb21dcc9faec169266b3343aee70b2aa97b84520bc16028653e4d3f4ee",
+      "description": "Explicit single-file upstream fetch with commit/SHA pin; no implicit network access."
+    }
+  }
+}

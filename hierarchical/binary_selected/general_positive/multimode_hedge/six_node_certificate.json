@@ -1,0 +1,3592 @@
+{
+  "status": "PASS",
+  "scope": "exact CPT finite enumeration; no sampling or ranks",
+  "observed_order": [
+    "U",
+    "A",
+    "R",
+    "Z",
+    "B",
+    "Y"
+  ],
+  "observed_states": [
+    -1,
+    1
+  ],
+  "directed_edges": [
+    [
+      "U",
+      "A"
+    ],
+    [
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "Y"
+    ],
+    [
+      "R",
+      "Z"
+    ],
+    [
+      "Z",
+      "B"
+    ]
+  ],
+  "hidden_edges": [
+    [
+      "U",
+      "R"
+    ],
+    [
+      "A",
+      "Y"
+    ],
+    [
+      "R",
+      "Y"
+    ],
+    [
+      "U",
+      "B"
+    ]
+  ],
+  "hidden_states": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "hidden_laws": "independent uniform",
+  "outer_hedge": [
+    "U",
+    "A",
+    "R",
+    "B",
+    "Y"
+  ],
+  "inner_hedge": [
+    "R",
+    "Y"
+  ],
+  "routing_edges": [
+    [
+      "R",
+      "Z"
+    ],
+    [
+      "Z",
+      "B"
+    ],
+    [
+      "B",
+      "Y"
+    ]
+  ],
+  "t": "3/16",
+  "lambda": "243/1048576",
+  "outer_coefficient": "U*A/32 + U*A*B*Z/64",
+  "inner_coefficient": "B/4",
+  "all_local_cell_lower_bound": "1/8",
+  "minimum_common_observed_atom": "1048333/268435456",
+  "observational_atoms_checked": 64,
+  "hidden_assignments_per_atom": 256,
+  "models": {
+    "outer": {
+      "U": {
+        "parents": [
+          "H0",
+          "H3"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              0,
+              0
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              0,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              0,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              0,
+              3
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              1
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              1,
+              2
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              1
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              2,
+              2
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              2,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              0
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              3,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              3
+            ],
+            "p_plus": "7/8"
+          }
+        ],
+        "integer_denominator": 8,
+        "minimum_cell": "1/8"
+      },
+      "A": {
+        "parents": [
+          "U",
+          "H1"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1,
+              0
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              3
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              1,
+              0
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              1,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              3
+            ],
+            "p_plus": "1/8"
+          }
+        ],
+        "integer_denominator": 8,
+        "minimum_cell": "1/8"
+      },
+      "R": {
+        "parents": [
+          "H0",
+          "H2"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              0,
+              0
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              0,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              0,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              0,
+              3
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              1
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              1,
+              2
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              1
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              2,
+              2
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              2,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              0
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              3,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              3
+            ],
+            "p_plus": "7/8"
+          }
+        ],
+        "integer_denominator": 8,
+        "minimum_cell": "1/8"
+      },
+      "Z": {
+        "parents": [
+          "R"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              1
+            ],
+            "p_plus": "3/4"
+          }
+        ],
+        "integer_denominator": 4,
+        "minimum_cell": "1/4"
+      },
+      "B": {
+        "parents": [
+          "A",
+          "Z",
+          "H3"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1,
+              -1,
+              0
+            ],
+            "p_plus": "253/1024"
+          },
+          {
+            "parent_values": [
+              -1,
+              -1,
+              1
+            ],
+            "p_plus": "265/1024"
+          },
+          {
+            "parent_values": [
+              -1,
+              -1,
+              2
+            ],
+            "p_plus": "247/1024"
+          },
+          {
+            "parent_values": [
+              -1,
+              -1,
+              3
+            ],
+            "p_plus": "259/1024"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              0
+            ],
+            "p_plus": "759/1024"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              1
+            ],
+            "p_plus": "771/1024"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              2
+            ],
+            "p_plus": "765/1024"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              3
+            ],
+            "p_plus": "777/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              0
+            ],
+            "p_plus": "259/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              1
+            ],
+            "p_plus": "247/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              2
+            ],
+            "p_plus": "265/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              3
+            ],
+            "p_plus": "253/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              0
+            ],
+            "p_plus": "777/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              1
+            ],
+            "p_plus": "765/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              2
+            ],
+            "p_plus": "771/1024"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              3
+            ],
+            "p_plus": "759/1024"
+          }
+        ],
+        "integer_denominator": 1024,
+        "minimum_cell": "247/1024"
+      },
+      "Y": {
+        "parents": [
+          "B",
+          "H1",
+          "H2"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1,
+              0,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              0,
+              1
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              0,
+              2
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              0,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              0
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              3
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              0
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              3
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              1
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              2
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              0
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              3
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              1
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              2
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              1
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              2
+            ],
+            "p_plus": "7/8"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              0
+            ],
+            "p_plus": "1/8"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              3
+            ],
+            "p_plus": "7/8"
+          }
+        ],
+        "integer_denominator": 8,
+        "minimum_cell": "1/8"
+      }
+    },
+    "inner": {
+      "U": {
+        "parents": [
+          "H0",
+          "H3"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              0,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              0,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              0,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              0,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              2,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              3,
+              3
+            ],
+            "p_plus": "1/2"
+          }
+        ],
+        "integer_denominator": 2,
+        "minimum_cell": "1/2"
+      },
+      "A": {
+        "parents": [
+          "U",
+          "H1"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              -1,
+              3
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              0
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              1
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              2
+            ],
+            "p_plus": "1/2"
+          },
+          {
+            "parent_values": [
+              1,
+              3
+            ],
+            "p_plus": "1/2"
+          }
+        ],
+        "integer_denominator": 2,
+        "minimum_cell": "1/2"
+      },
+      "R": {
+        "parents": [
+          "H0",
+          "H2"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              0,
+              0
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              0,
+              1
+            ],
+            "p_plus": "5/16"
+          },
+          {
+            "parent_values": [
+              0,
+              2
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              0,
+              3
+            ],
+            "p_plus": "5/16"
+          },
+          {
+            "parent_values": [
+              1,
+              0
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              1,
+              1
+            ],
+            "p_plus": "5/16"
+          },
+          {
+            "parent_values": [
+              1,
+              2
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              1,
+              3
+            ],
+            "p_plus": "5/16"
+          },
+          {
+            "parent_values": [
+              2,
+              0
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              2,
+              1
+            ],
+            "p_plus": "5/16"
+          },
+          {
+            "parent_values": [
+              2,
+              2
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              2,
+              3
+            ],
+            "p_plus": "5/16"
+          },
+          {
+            "parent_values": [
+              3,
+              0
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              3,
+              1
+            ],
+            "p_plus": "5/16"
+          },
+          {
+            "parent_values": [
+              3,
+              2
+            ],
+            "p_plus": "11/16"
+          },
+          {
+            "parent_values": [
+              3,
+              3
+            ],
+            "p_plus": "5/16"
+          }
+        ],
+        "integer_denominator": 16,
+        "minimum_cell": "5/16"
+      },
+      "Z": {
+        "parents": [
+          "R"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              1
+            ],
+            "p_plus": "3/4"
+          }
+        ],
+        "integer_denominator": 4,
+        "minimum_cell": "1/4"
+      },
+      "B": {
+        "parents": [
+          "A",
+          "Z",
+          "H3"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1,
+              -1,
+              0
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              -1,
+              -1,
+              1
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              -1,
+              -1,
+              2
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              -1,
+              -1,
+              3
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              0
+            ],
+            "p_plus": "3/4"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              1
+            ],
+            "p_plus": "3/4"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              2
+            ],
+            "p_plus": "3/4"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              3
+            ],
+            "p_plus": "3/4"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              0
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              1
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              2
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              1,
+              -1,
+              3
+            ],
+            "p_plus": "1/4"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              0
+            ],
+            "p_plus": "3/4"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              1
+            ],
+            "p_plus": "3/4"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              2
+            ],
+            "p_plus": "3/4"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              3
+            ],
+            "p_plus": "3/4"
+          }
+        ],
+        "integer_denominator": 4,
+        "minimum_cell": "1/4"
+      },
+      "Y": {
+        "parents": [
+          "B",
+          "H1",
+          "H2"
+        ],
+        "rows": [
+          {
+            "parent_values": [
+              -1,
+              0,
+              0
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              0,
+              1
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              0,
+              2
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              0,
+              3
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              0
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              1
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              2
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              1,
+              3
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              0
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              1
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              2
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              2,
+              3
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              0
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              1
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              2
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              -1,
+              3,
+              3
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              0
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              1
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              2
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              0,
+              3
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              0
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              1
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              2
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              1,
+              3
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              0
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              1
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              2
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              2,
+              3
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              0
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              1
+            ],
+            "p_plus": "130991/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              2
+            ],
+            "p_plus": "131153/262144"
+          },
+          {
+            "parent_values": [
+              1,
+              3,
+              3
+            ],
+            "p_plus": "130991/262144"
+          }
+        ],
+        "integer_denominator": 262144,
+        "minimum_cell": "130991/262144"
+      }
+    }
+  },
+  "common_observed_law": [
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "probability": "1048333/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "probability": "1048819/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "probability": "3146457/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "probability": "3144999/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "probability": "9434997/268435456"
+    },
+    {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "probability": "9439371/268435456"
+    }
+  ],
+  "targets": {
+    "-1": {
+      "outer_p_plus": "1/2",
+      "inner_p_plus": "4194547/8388608",
+      "gap": "243/8388608"
+    },
+    "1": {
+      "outer_p_plus": "1/2",
+      "inner_p_plus": "4194547/8388608",
+      "gap": "243/8388608"
+    }
+  },
+  "gap_decimal_descriptive_only": 2.8967857360839844e-05,
+  "ATE_gap": "0/1",
+  "full_intervention_laws": {
+    "outer": {
+      "-1": [
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9/128"
+        }
+      ],
+      "1": [
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9/128"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9/128"
+        }
+      ]
+    },
+    "inner": {
+      "-1": [
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        }
+      ],
+      "1": [
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            -1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            -1,
+            1,
+            1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            -1
+          ],
+          "probability": "1048333/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            -1,
+            1,
+            1
+          ],
+          "probability": "1048819/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "probability": "3146457/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "probability": "3144999/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            -1
+          ],
+          "probability": "9434997/134217728"
+        },
+        {
+          "values_without_A": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "probability": "9439371/134217728"
+        }
+      ]
+    }
+  },
+  "source_sha256": "0e4de3f6b8a0477d98e0bb1ac4ab9b9ef7f925a4e11a5c2959d829b9c4a8b1f3",
+  "theorem_sha256": "60e9bae29d787b80f2056a96e681276b3ec9c3f1d49f2eb0c0435136469e1147"
+}

@@ -1,0 +1,71 @@
+{
+  "n": 10000,
+  "block_size": 100,
+  "rank": 100,
+  "delta": 1e-10,
+  "lambd": 1e-08,
+  "steps": 20000,
+  "case_wall_seconds": 120,
+  "checkpoints": [
+    0,
+    1,
+    10,
+    100,
+    500,
+    1000,
+    2500,
+    5000,
+    10000,
+    20000
+  ],
+  "cases": [
+    {
+      "dtype": "float64",
+      "seed": 2026102701,
+      "variant": "released"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102701,
+      "variant": "repaired"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102701,
+      "variant": "repaired_eta1"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102702,
+      "variant": "released"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102702,
+      "variant": "repaired"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102702,
+      "variant": "repaired_eta1"
+    },
+    {
+      "dtype": "float32",
+      "seed": 2026102701,
+      "variant": "released"
+    },
+    {
+      "dtype": "float32",
+      "seed": 2026102702,
+      "variant": "released"
+    }
+  ],
+  "source": {
+    "commit": "61cdb69cb11adea48ecb13c823ad654d46dc15df",
+    "source": "<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official",
+    "unmodified": true
+  },
+  "additional_paid_jobs": 0,
+  "scope": "Unchanged released optimizer, preconditioner, power; structured kernel model adapter. No untouched FullKRR pipeline claim.",
+  "script_sha256": "a1b8bd30125762c5bbf1c0794ba103a9a652092b7745718231b3b75b111d8bea"
+}

@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-26T07:36:36.914904+00:00",
+  "status": "complete_protocol_primary_v2_audited",
+  "all_54_comparison_records_unchanged": true,
+  "primary": "official_askotchv2 minus inducing_pcg_falkon",
+  "source_files": {
+    "summarize_regimes_v2.py": "8ca8e8e45e993af25f9143251ab3acac9f9a028539c8477f3323061cd2121598",
+    "audit_complete_aggregate_v2.py": "875b42205e17f15bb60774c797c124940ebbe0f649041d0534f7dee110dd7a2c",
+    "protocol_role_correction.json": "f5608ed7e86e3c4752d9899d4a033c6aedbd5031f09f8b0ee38cb0d2bc896675",
+    "aggregate.json": "fdf88eddc2ef1dd92973306c4e58a327b198142fb640432deb58259ed33ee4a1",
+    "visualization_source_freeze.json": "30edce91fa00fc08fb8d5c84efbd5e3524d213e5746b65341005ae15894fdabf",
+    "summarize_regimes.py": "89af9eca9d5455491f74c4929aa82fe4fa71009cff4adce8f5f4b861478d9c41",
+    "../regime_replicates/config.json": "c0be7c2fb77e804827df1180d826609e8761ea22111c75fcc57ddb8adf366db5",
+    "../regime_replicates/PROTOCOL.md": "88d0d4f3da621ab0a8172d7fcc0da9d2f05774d76d2e018003a6176dabe1b565"
+  },
+  "artifacts": {
+    "INDEPENDENT_AUDIT.md": "4c63e5a03aef737747e9cc367b19a9073810bc49bb20e86e4c82f0f138230dfc",
+    "REGIME_REPORT.md": "f47fc37aa35b7cc5779a4cdaecc14d369fb109e3d624a36e0f5123d347c2ba34",
+    "complete_source_and_timing_audit.json": "4c1c013bb6ba61135535f9d3b49ed0dec2b9faf7da72859e7a1599353650e675",
+    "paired_seed_effects.csv": "9457f9cf7a978341dc540e0c9ccff652441f5018c3b0d2d3d2e6a97c18b70f12",
+    "paired_seed_effects_official_vs_inducing.pdf": "6ede86ba272e9e8d41b7a2b20161db345b0e4a121946733043ebeeea97377b57",
+    "paired_seed_effects_official_vs_inducing.png": "1d58e843f06e0f83d0638374368547451c87b7afd50a47cdcb90a847aaef5028",
+    "regime_grid_corrected_vs_inducing.pdf": "7d2d5935d328b186e0e0733ed15f7674dbede0369beb5de6e168ec59bbc2880c",
+    "regime_grid_corrected_vs_inducing.png": "7f17f53b7e4465b2837bc5eeadfd20305f81bd986dff6a5936498bac251a81bc",
+    "regime_grid_official_vs_corrected.pdf": "d75a8787c671e74d74301eb32510f7e87305587f503c47bedb86e191c431c992",
+    "regime_grid_official_vs_corrected.png": "86ac317735c8b8e4bc1725b8e6802094c22f12de519fde29e613a3e39b6a9bb9",
+    "regime_grid_official_vs_inducing.pdf": "57cace29ac7109c92069393ab02621457c53d3b73b8d58128626dbc4d87d5ac2",
+    "regime_grid_official_vs_inducing.png": "12ea83282e368cdaca1b488a10ef3e4bed8fc76c5c6195cb863aa3dc545d61f6",
+    "regime_summary.csv": "134ca43a2566303c46140ae6cbe4768bc3f02f727072da65f017510ef2f74e2f",
+    "regime_summary.json": "1c675ccba318dd1f4a53507c4a174d11251a8d2b841a6c9ffbf1a846eeb93046",
+    "selected_model_hyperparameters.csv": "4929177006abe4fc09a342af97a460090d36917a7f6464049a285bf3fdc49a20"
+  },
+  "scope": "Protocol roles restored after outcomes; v1 preserved, no metric/data/selection changes. Complete-source audit and PNG/PDF QA passed. No universal boundary or consumed-time parity claim."
+}

@@ -1,0 +1,32 @@
+{
+  "arithmetic": "fractions.Fraction, exact",
+  "scope": "finite full-count checks; not all-N proof certification",
+  "fixtures": [
+    {
+      "N": 2,
+      "theta": "1/16",
+      "r": "1/64",
+      "count_pairs": 784,
+      "exact_identity_checks": 3,
+      "normalization_checks": 2,
+      "chi_square_float_for_readability": 7.1426954472489e-11,
+      "complete_chi_square_float_for_readability": 3.114799396990387e-07,
+      "short_scale_float_for_readability": 4.547473508864641e-13,
+      "chi_square_exact_sha256": "db78c55f2afe71aa8bcb554d78ec234d88c6c0564ead057229b3592c192f277c"
+    },
+    {
+      "N": 3,
+      "theta": "1/32",
+      "r": "1/128",
+      "count_pairs": 7056,
+      "exact_identity_checks": 3,
+      "normalization_checks": 2,
+      "chi_square_float_for_readability": 2.4112462535499943e-12,
+      "complete_chi_square_float_for_readability": 2.5432867672715318e-08,
+      "short_scale_float_for_readability": 2.1316282072803006e-14,
+      "chi_square_exact_sha256": "bbda098ceba467755a7ed591024962337f5d33893629d5b774a7d67ac0eda3c6"
+    }
+  ],
+  "source_sha256": "5892c30e036500f10d5d9d033c6b3c584155b8be8be34f0cf2b68d5bf9ddbfbe",
+  "proof_sha256": "abe59e38ca5b8a8b28808848ce4da0c8e9fea80ea5b2d6c8966916f6e0483638"
+}

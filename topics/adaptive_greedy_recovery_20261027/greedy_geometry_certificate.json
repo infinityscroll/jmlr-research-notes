@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "source_sha256": "93a8dcf921f94cc594ef08f01b7620ff8427be8c686fbc90704771165b36b7a7",
+  "checker_sha256": "65a80886e061a04b56ecb0417efb51c442f9a29f0776a13fe2699fed3d280d15",
+  "fixtures": 48,
+  "K": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "almost_pure_nonanchor_selected_fixtures": 32,
+  "assertions": 4338,
+  "counts": {
+    "source_sha256": 1,
+    "small_oracle_error_event": 48,
+    "subprobability_inputs": 1152,
+    "row_error_envelope": 1152,
+    "uniform_raw_noise_not_small": 48,
+    "rank_one_residual_equals_dense_projector": 170,
+    "remaining_vertex_norm": 168,
+    "remaining_pair_separation": 420,
+    "selected_penalty_and_norm_deficit": 168,
+    "zero_atom_variance_identity": 168,
+    "new_vertex_not_previously_matched": 168,
+    "linear_barycentric_error": 168,
+    "designated_anchor_matches_own_vertex": 56,
+    "full_inductive_vertex_bound": 168,
+    "unused_designated_anchors_available": 168,
+    "final_singular_guard_exact_LDL": 48,
+    "all_vertices_once": 48,
+    "gross_errors_zero_oracle_exact_recovery": 16,
+    "negative_control_unpenalized_wrong_first_selection": 1,
+    "penalty_removes_gross_contamination": 1,
+    "almost_pure_nonanchor_recovery_exercised": 1
+  },
+  "scope": "Exact Fraction checks of finite geometry, scores, projection updates, matching, and inverse guards; arbitrary deterministic penalties and supplied error envelopes. No concentration, expected-risk, finite-sample performance, or numerical-stability validation."
+}

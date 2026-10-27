@@ -1,0 +1,643 @@
+{
+  "scope": "Curated source artifacts; source and public hashes distinguish explicit path-only sanitization and linked protocol hash updates. Bounded public verification reruns retained arithmetic and exact certificates.",
+  "files": [
+    {
+      "path": "kernel/rank100_default_gate_20261027/rank100_mean_step_certificate.json",
+      "source_sha256": "cb4c1f8a0ed7b519784211d1962d1a339d4b0685fcaa25e2978759f620d997ad",
+      "release_sha256": "cb4c1f8a0ed7b519784211d1962d1a339d4b0685fcaa25e2978759f620d997ad"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/general_block_operator.py",
+      "source_sha256": "eecb2c18bb1ec6fc5d443d41bbd937190e1ecdd3cf54e1b3f4adf3dc8aa2777e",
+      "release_sha256": "eecb2c18bb1ec6fc5d443d41bbd937190e1ecdd3cf54e1b3f4adf3dc8aa2777e"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/exploratory_rank100_grid.json",
+      "source_sha256": "84cc9d11c8a0d350561f9d2bc018475d479bc0aa9a563abc89116fd9605db2bc",
+      "release_sha256": "84cc9d11c8a0d350561f9d2bc018475d479bc0aa9a563abc89116fd9605db2bc"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/check_rank100_mean_step.py",
+      "source_sha256": "7b7633766c127720c6f74a3eafa72de7d89e788de8b279aff965478e9d6dbfe1",
+      "release_sha256": "7b7633766c127720c6f74a3eafa72de7d89e788de8b279aff965478e9d6dbfe1"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/exploratory_operator_spectrum.json",
+      "source_sha256": "75e4c93d8be0510a193842ebbb746281e95d9b8d63841eb903a9d2326e3507fc",
+      "release_sha256": "75e4c93d8be0510a193842ebbb746281e95d9b8d63841eb903a9d2326e3507fc"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/independent_hostile_audit.md",
+      "source_sha256": "eba588758d64438c21a722a35eb59604c3bcf58c5821fec64d4ec2a838295d87",
+      "release_sha256": "eba588758d64438c21a722a35eb59604c3bcf58c5821fec64d4ec2a838295d87"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/independent_dense_and_certificate_check.py",
+      "source_sha256": "173a8ba6356bc69d76fa70a9a6fc63503aa8d6ac39e8425c9cbae36eadb14b27",
+      "release_sha256": "173a8ba6356bc69d76fa70a9a6fc63503aa8d6ac39e8425c9cbae36eadb14b27"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/theorem.md",
+      "source_sha256": "1b1cb234971e70130c0072aacac7988c2112ae04ddcd68703847f088f952e57b",
+      "release_sha256": "1b1cb234971e70130c0072aacac7988c2112ae04ddcd68703847f088f952e57b"
+    },
+    {
+      "path": "kernel/rank100_default_gate_20261027/independent_dense_certificate.json",
+      "source_sha256": "514d769d9b21338cbee2acfc49eb00bb018a1f5febe421706df2ba7f4efcea90",
+      "release_sha256": "514d769d9b21338cbee2acfc49eb00bb018a1f5febe421706df2ba7f4efcea90"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/run_structured_release.py",
+      "source_sha256": "a1b8bd30125762c5bbf1c0794ba103a9a652092b7745718231b3b75b111d8bea",
+      "release_sha256": "a1b8bd30125762c5bbf1c0794ba103a9a652092b7745718231b3b75b111d8bea"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/structured_release_protocol.json",
+      "source_sha256": "c28c6519282022bd813660424683dfbb39d0844040d43ddbaf0ed68b0b683739",
+      "release_sha256": "52f6bea4277f0a25965e996ffb42f64d38378f998a1cd591d13b8904da5c90cb",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/eta1_repair_certificate.json",
+      "source_sha256": "eebce83eedda40caea24d995f262fffab199dae690f6ee9825a1a4929bc2c209",
+      "release_sha256": "eebce83eedda40caea24d995f262fffab199dae690f6ee9825a1a4929bc2c209"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/independent_eta1_repair_audit.md",
+      "source_sha256": "9f52436e0ac5b8f915102874a634fa0f1b8ede6961b8efc85861fa7200da730f",
+      "release_sha256": "9f52436e0ac5b8f915102874a634fa0f1b8ede6961b8efc85861fa7200da730f"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/check_full_model_interface.py",
+      "source_sha256": "ae544a4211fc9079c3d62b1e50846e9268614cb19c3789f1601ec52d3acf22d9",
+      "release_sha256": "ae544a4211fc9079c3d62b1e50846e9268614cb19c3789f1601ec52d3acf22d9"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/REPORT.md",
+      "source_sha256": "6385ff901aea78c0629e2be015ae7b7cadf9a34f45cdd9024bc08cb949a4ee02",
+      "release_sha256": "6385ff901aea78c0629e2be015ae7b7cadf9a34f45cdd9024bc08cb949a4ee02"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/structured_release_results.json",
+      "source_sha256": "3ac96c1dbd178878b382fdba24bcf521c5f5a2fd870080f79c46857ea445abc5",
+      "release_sha256": "4b7660e447a50d4c5891192756a001631239b0c700d7863b18e8b97840c802e5",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/eta1_repair_theorem.md",
+      "source_sha256": "e72f428b57cd871d6bd594b9faa640fe961e7a5e3d51feb3419df4c0e8010013",
+      "release_sha256": "e72f428b57cd871d6bd594b9faa640fe961e7a5e3d51feb3419df4c0e8010013"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/structured_release_checkpoints.npz",
+      "source_sha256": "584daabf65f98a1e7dd0d41e008d8d747f9089832876a5e5708c1cf2c368fa0d",
+      "release_sha256": "584daabf65f98a1e7dd0d41e008d8d747f9089832876a5e5708c1cf2c368fa0d"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/certify_eta1_repair.py",
+      "source_sha256": "2ea52b974c326a5ad09b3ff32ad16bdba9578ffb44876009e089ffdb6525c54b",
+      "release_sha256": "2ea52b974c326a5ad09b3ff32ad16bdba9578ffb44876009e089ffdb6525c54b"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/check_saved_results.py",
+      "source_sha256": "f6a3ce6dd602f395ec86116094d847a980251831c1d9d8f947edda5781b9c339",
+      "release_sha256": "f6a3ce6dd602f395ec86116094d847a980251831c1d9d8f947edda5781b9c339"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/independent_driver_review.md",
+      "source_sha256": "811ca55b3247778df29102ed344ae170a416a00f041d30baeec32ac7403dfb18",
+      "release_sha256": "811ca55b3247778df29102ed344ae170a416a00f041d30baeec32ac7403dfb18"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/independent_eta1_saved_certificate.json",
+      "source_sha256": "764c99af25bfb58de07147a1331c5056cf2344c41a2469934fef13fe6e0d747e",
+      "release_sha256": "764c99af25bfb58de07147a1331c5056cf2344c41a2469934fef13fe6e0d747e"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/independent_eta1_saved_check.py",
+      "source_sha256": "8d6636be78ad71c71713f06febe1f6fc4e52ffc562c04801f28f9a130b42c449",
+      "release_sha256": "8d6636be78ad71c71713f06febe1f6fc4e52ffc562c04801f28f9a130b42c449"
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/full_model_interface_results.json",
+      "source_sha256": "d8f22afa165efcefaa9a747826a14efb2e8e890131b3bf63e28a5578c07bba62",
+      "release_sha256": "b5d7d055c24a93d10846c7ed65a95c74cea7cf203e64fe0ea7b72eb416a3f73f",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/rank100_native_gate_20261027/saved_result_check.json",
+      "source_sha256": "8c2782ab66b251f902110efb0c5aeea692e1c1138fa5af6442724812b51e072e",
+      "release_sha256": "8c2782ab66b251f902110efb0c5aeea692e1c1138fa5af6442724812b51e072e"
+    },
+    {
+      "path": "kernel/moderate_conditioning_gate_20261028/exploration.json",
+      "source_sha256": "b1569b432c8f9d8fd943d258ef566051e25cce9f0b152fea0ae4965426d3626a",
+      "release_sha256": "b1569b432c8f9d8fd943d258ef566051e25cce9f0b152fea0ae4965426d3626a"
+    },
+    {
+      "path": "kernel/moderate_conditioning_gate_20261028/explore_operator.py",
+      "source_sha256": "c49c68ec2e84b017e5d295f8688710e6f2e38ba170f837926667ce1216192b22",
+      "release_sha256": "c49c68ec2e84b017e5d295f8688710e6f2e38ba170f837926667ce1216192b22"
+    },
+    {
+      "path": "kernel/moderate_conditioning_gate_20261028/current_source_comparison.json",
+      "source_sha256": "911e823aedd8f3cb294c81e295dbf03f8e214b26b16b8f191fc377a62c861c21",
+      "release_sha256": "911e823aedd8f3cb294c81e295dbf03f8e214b26b16b8f191fc377a62c861c21"
+    },
+    {
+      "path": "kernel/moderate_conditioning_gate_20261028/check_rationalized_operators.py",
+      "source_sha256": "bebefdd631177636e076543649fca88ceeac9767e166d35270bcbebec091818e",
+      "release_sha256": "bebefdd631177636e076543649fca88ceeac9767e166d35270bcbebec091818e"
+    },
+    {
+      "path": "kernel/moderate_conditioning_gate_20261028/RESULTS.md",
+      "source_sha256": "0df60f35a34d8e5265a9d1dd547463024f06ade8e3cf12100a4ac6b1c7cd5bee",
+      "release_sha256": "0df60f35a34d8e5265a9d1dd547463024f06ade8e3cf12100a4ac6b1c7cd5bee"
+    },
+    {
+      "path": "kernel/moderate_conditioning_gate_20261028/rationalized_operator_check.json",
+      "source_sha256": "df80b9b52f7b9f7acfde67f307d179bd9a68a1bc596863a0fe4ea4c913422c22",
+      "release_sha256": "df80b9b52f7b9f7acfde67f307d179bd9a68a1bc596863a0fe4ea4c913422c22"
+    },
+    {
+      "path": "kernel/moderate_conditioning_gate_20261028/PROTOCOL.md",
+      "source_sha256": "a027fc3b72c71ac60e4ee9bc53e878ac360e0f4f150e9fd4ae43caf36962929c",
+      "release_sha256": "a027fc3b72c71ac60e4ee9bc53e878ac360e0f4f150e9fd4ae43caf36962929c"
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/root_uniform_certificate.json",
+      "source_sha256": "31e038f46bb085f96c8c2aa5e77033f04368f7f86c737be5b0669b2b13e8fde5",
+      "release_sha256": "31e038f46bb085f96c8c2aa5e77033f04368f7f86c737be5b0669b2b13e8fde5"
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/check_released_damped_interface.py",
+      "source_sha256": "7f6b5874620485cde7e9c7e26a8807b81c27477d48f09b21363ec52de73f58f4",
+      "release_sha256": "7f6b5874620485cde7e9c7e26a8807b81c27477d48f09b21363ec52de73f58f4"
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/uniform_stepsize_certificate.json",
+      "source_sha256": "2f70bb9202a143e64133dbc0df9867e881de2f027c0fee0d55596585164f3913",
+      "release_sha256": "2f70bb9202a143e64133dbc0df9867e881de2f027c0fee0d55596585164f3913"
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/released_damped_interface_certificate.json",
+      "source_sha256": "c8ccc45533af76d73bc1e9b729ab25e4ab44ccc6652af4ab5386b0e6f18dd8be",
+      "release_sha256": "a4bebac428db149036ed3cda1e4731e3bbbf9b429c47e3cf72bb136411c146f9",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/README.md",
+      "source_sha256": "740b40876c8203e28af907e3e820cd534168ee9e622978311f03d0908dc04a24",
+      "release_sha256": "d6301995b3f3969919772e5766876718a7779afa893bd228061c043aa647c493",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/root_uniform_audit.py",
+      "source_sha256": "1bc9496e74579658ce702123c568990f8bcfac9f1a8ba59ac2594ed714e95018",
+      "release_sha256": "1bc9496e74579658ce702123c568990f8bcfac9f1a8ba59ac2594ed714e95018"
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/check_uniform_stepsizes.py",
+      "source_sha256": "1b23b97cf499eea9da6c6109dba4bc4f5a8e7839ff4d795b45fdc1c649ce9e33",
+      "release_sha256": "1b23b97cf499eea9da6c6109dba4bc4f5a8e7839ff4d795b45fdc1c649ce9e33"
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/root_uniform_source_audit.md",
+      "source_sha256": "2cb534b5f262c489eacc8e400f570624541c278c1928ac6ecfd66fe130d2ed9c",
+      "release_sha256": "2cb534b5f262c489eacc8e400f570624541c278c1928ac6ecfd66fe130d2ed9c"
+    },
+    {
+      "path": "kernel/default_damping_instability_20261027/theorem.md",
+      "source_sha256": "acbbd52115deee4548f393ae5194f1b1c7a3412937b6fea3e359cd4cedc7ed71",
+      "release_sha256": "acbbd52115deee4548f393ae5194f1b1c7a3412937b6fea3e359cd4cedc7ed71"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/official_interface_certificate.json",
+      "source_sha256": "07ba7a77ba8659796ba1ff73e13384c1ead144dc2d18cfcfb2cfcf0c99ca6ac5",
+      "release_sha256": "04b5a24c480ae91fbc82f37e82a21173c3d846aaa442e452108aa79ec4a2bb6c",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/current_source_status_20261027.md",
+      "source_sha256": "192e7ac2e50198d92c58696ceb523f11ed72bb55974989b12e341b77937bec6a",
+      "release_sha256": "192e7ac2e50198d92c58696ceb523f11ed72bb55974989b12e341b77937bec6a"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/root_exact_certificate.json",
+      "source_sha256": "aedf0cd53c1ba97f5e7bb917537d2a8ee003a806c76529947cbcb4c56b7ca945",
+      "release_sha256": "aedf0cd53c1ba97f5e7bb917537d2a8ee003a806c76529947cbcb4c56b7ca945"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/check_exact_instability.py",
+      "source_sha256": "1d3e3347834a583f1ab78b80d5c73e138cdc8cdf6b88a11a83acf95e88d85bef",
+      "release_sha256": "1d3e3347834a583f1ab78b80d5c73e138cdc8cdf6b88a11a83acf95e88d85bef"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/README.md",
+      "source_sha256": "b822b078bc8e959881a855f23516672f1eb7f66fd369cd5b65871939260ba85e",
+      "release_sha256": "2646bf5500906bc00d02e61bf4f7ed98200822c8750733f5c5bb5cab4aabf586",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/check_official_interface.py",
+      "source_sha256": "83789fa75bd3a5be958923d15e775d2163309c221b15f2b6e7e82c703520433b",
+      "release_sha256": "83789fa75bd3a5be958923d15e775d2163309c221b15f2b6e7e82c703520433b"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/exact_certificate.json",
+      "source_sha256": "9d69fce36318772bfc8d9c85554147cd9a1f90aa28dfd3507e4fc6c477d311bb",
+      "release_sha256": "9d69fce36318772bfc8d9c85554147cd9a1f90aa28dfd3507e4fc6c477d311bb"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/root_mathematical_and_source_audit.md",
+      "source_sha256": "718948837c0df62361847258ec1b3cf8fba50abdbb07e0a5aaec65743afd7e0f",
+      "release_sha256": "718948837c0df62361847258ec1b3cf8fba50abdbb07e0a5aaec65743afd7e0f"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/nystrom_root_audit_20261027.md",
+      "source_sha256": "4143202b191258821e885e0d65d43c9a151fadfb46854171c6b43b088669d37b",
+      "release_sha256": "4143202b191258821e885e0d65d43c9a151fadfb46854171c6b43b088669d37b"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/theorem.md",
+      "source_sha256": "31310da5f52c1ac30237f83b24a16b5d1c1ad4fe8acca10a173aebc5b92659d4",
+      "release_sha256": "31310da5f52c1ac30237f83b24a16b5d1c1ad4fe8acca10a173aebc5b92659d4"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/root_exact_audit.py",
+      "source_sha256": "f9cff61a863b9956a72350479ef4b1e67c1e34b334f83320faee37f408516eea",
+      "release_sha256": "f9cff61a863b9956a72350479ef4b1e67c1e34b334f83320faee37f408516eea"
+    },
+    {
+      "path": "kernel/stale_regularizer_instability_20261027/nystrom_full_rank_equivalence_20261027.md",
+      "source_sha256": "fd599b8c5c13328b3fcfa45f1a4db6da6da3241d755e05d63360d42450beabc5",
+      "release_sha256": "fd599b8c5c13328b3fcfa45f1a4db6da6da3241d755e05d63360d42450beabc5"
+    },
+    {
+      "path": "kernel/replicated_analysis/aggregate.json",
+      "source_sha256": "fdf88eddc2ef1dd92973306c4e58a327b198142fb640432deb58259ed33ee4a1",
+      "release_sha256": "fdf88eddc2ef1dd92973306c4e58a327b198142fb640432deb58259ed33ee4a1"
+    },
+    {
+      "path": "kernel/replicated_analysis/protocol_role_correction.json",
+      "source_sha256": "f5608ed7e86e3c4752d9899d4a033c6aedbd5031f09f8b0ee38cb0d2bc896675",
+      "release_sha256": "f5608ed7e86e3c4752d9899d4a033c6aedbd5031f09f8b0ee38cb0d2bc896675"
+    },
+    {
+      "path": "kernel/replicated_analysis/complete_source_and_timing_audit.json",
+      "source_sha256": "239059056b25c4acd1ef8be8a0202ae77e5f148483af971809bf32175a94318f",
+      "release_sha256": "239059056b25c4acd1ef8be8a0202ae77e5f148483af971809bf32175a94318f"
+    },
+    {
+      "path": "kernel/replicated_analysis/summarize_regimes_v2.py",
+      "source_sha256": "8ca8e8e45e993af25f9143251ab3acac9f9a028539c8477f3323061cd2121598",
+      "release_sha256": "8ca8e8e45e993af25f9143251ab3acac9f9a028539c8477f3323061cd2121598"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_summary.csv",
+      "source_sha256": "134ca43a2566303c46140ae6cbe4768bc3f02f727072da65f017510ef2f74e2f",
+      "release_sha256": "134ca43a2566303c46140ae6cbe4768bc3f02f727072da65f017510ef2f74e2f"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_grid_official_vs_corrected.png",
+      "source_sha256": "86ac317735c8b8e4bc1725b8e6802094c22f12de519fde29e613a3e39b6a9bb9",
+      "release_sha256": "86ac317735c8b8e4bc1725b8e6802094c22f12de519fde29e613a3e39b6a9bb9"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_grid_official_vs_corrected.pdf",
+      "source_sha256": "d75a8787c671e74d74301eb32510f7e87305587f503c47bedb86e191c431c992",
+      "release_sha256": "d75a8787c671e74d74301eb32510f7e87305587f503c47bedb86e191c431c992"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_summary.json",
+      "source_sha256": "1c675ccba318dd1f4a53507c4a174d11251a8d2b841a6c9ffbf1a846eeb93046",
+      "release_sha256": "1c675ccba318dd1f4a53507c4a174d11251a8d2b841a6c9ffbf1a846eeb93046"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/INDEPENDENT_AUDIT.md",
+      "source_sha256": "4c63e5a03aef737747e9cc367b19a9073810bc49bb20e86e4c82f0f138230dfc",
+      "release_sha256": "37084ae4a7894c5e737909cfec6beb551599fa489d939eead09b5cc92cb79db2",
+      "transformation": "Replace a missing historical raw-source-auditor link with an explicit statement of archive exclusions and the public verification entrypoint. Original measurements and historical audit conclusions unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_grid_official_vs_inducing.png",
+      "source_sha256": "12ea83282e368cdaca1b488a10ef3e4bed8fc76c5c6195cb863aa3dc545d61f6",
+      "release_sha256": "12ea83282e368cdaca1b488a10ef3e4bed8fc76c5c6195cb863aa3dc545d61f6"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/artifact_manifest.json",
+      "source_sha256": "a667c0d237c77eb758e14e981048eff724461627c589227257af23d2d808161a",
+      "release_sha256": "a667c0d237c77eb758e14e981048eff724461627c589227257af23d2d808161a"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_grid_official_vs_inducing.pdf",
+      "source_sha256": "57cace29ac7109c92069393ab02621457c53d3b73b8d58128626dbc4d87d5ac2",
+      "release_sha256": "57cace29ac7109c92069393ab02621457c53d3b73b8d58128626dbc4d87d5ac2"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/complete_source_and_timing_audit.json",
+      "source_sha256": "4c1c013bb6ba61135535f9d3b49ed0dec2b9faf7da72859e7a1599353650e675",
+      "release_sha256": "4c1c013bb6ba61135535f9d3b49ed0dec2b9faf7da72859e7a1599353650e675"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/selected_model_hyperparameters.csv",
+      "source_sha256": "4929177006abe4fc09a342af97a460090d36917a7f6464049a285bf3fdc49a20",
+      "release_sha256": "4929177006abe4fc09a342af97a460090d36917a7f6464049a285bf3fdc49a20"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/paired_seed_effects_official_vs_inducing.pdf",
+      "source_sha256": "6ede86ba272e9e8d41b7a2b20161db345b0e4a121946733043ebeeea97377b57",
+      "release_sha256": "6ede86ba272e9e8d41b7a2b20161db345b0e4a121946733043ebeeea97377b57"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_grid_corrected_vs_inducing.pdf",
+      "source_sha256": "7d2d5935d328b186e0e0733ed15f7674dbede0369beb5de6e168ec59bbc2880c",
+      "release_sha256": "7d2d5935d328b186e0e0733ed15f7674dbede0369beb5de6e168ec59bbc2880c"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/REGIME_REPORT.md",
+      "source_sha256": "f47fc37aa35b7cc5779a4cdaecc14d369fb109e3d624a36e0f5123d347c2ba34",
+      "release_sha256": "f47fc37aa35b7cc5779a4cdaecc14d369fb109e3d624a36e0f5123d347c2ba34"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/regime_grid_corrected_vs_inducing.png",
+      "source_sha256": "7f17f53b7e4465b2837bc5eeadfd20305f81bd986dff6a5936498bac251a81bc",
+      "release_sha256": "7f17f53b7e4465b2837bc5eeadfd20305f81bd986dff6a5936498bac251a81bc"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/paired_seed_effects.csv",
+      "source_sha256": "9457f9cf7a978341dc540e0c9ccff652441f5018c3b0d2d3d2e6a97c18b70f12",
+      "release_sha256": "9457f9cf7a978341dc540e0c9ccff652441f5018c3b0d2d3d2e6a97c18b70f12"
+    },
+    {
+      "path": "kernel/replicated_analysis/report_v2/paired_seed_effects_official_vs_inducing.png",
+      "source_sha256": "1d58e843f06e0f83d0638374368547451c87b7afd50a47cdcb90a847aaef5028",
+      "release_sha256": "1d58e843f06e0f83d0638374368547451c87b7afd50a47cdcb90a847aaef5028"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed11/audit.json",
+      "source_sha256": "c1232b68d4749a3666f70ebb92273125a096aa67e5913cca7644643492da492f",
+      "release_sha256": "c4fc41205fcb42e211d54281acc6c457cdf0bc8107ee1daf29616448173ab2ba",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed11/trials.json",
+      "source_sha256": "06825c5503d894e6cce0ea123249a8cb76dd92e3268430545929c5dcdd99a8d3",
+      "release_sha256": "06825c5503d894e6cce0ea123249a8cb76dd92e3268430545929c5dcdd99a8d3"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed11/cells.csv",
+      "source_sha256": "31976f3d1d54d632e20a741a62f1817ca8140d2c294e800c33d82f19fb5baa17",
+      "release_sha256": "31976f3d1d54d632e20a741a62f1817ca8140d2c294e800c33d82f19fb5baa17"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed23/audit.json",
+      "source_sha256": "adf2b1b53cd553c69b17096c5fe642fee5e4389db22a1d533affe6ed93bb80e6",
+      "release_sha256": "d405b082a6f0e0039c8c0cd533186ff56b183d2247541d2667ee6d14c27d88eb",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed23/trials.json",
+      "source_sha256": "514693ee3b0cbc73d961860fcc024a03e07eef2e763af1470f9fd351505b5ec0",
+      "release_sha256": "514693ee3b0cbc73d961860fcc024a03e07eef2e763af1470f9fd351505b5ec0"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed23/cells.csv",
+      "source_sha256": "2da24cdcb48fe86fbe00030f365d13d666cd950b7dc216af97b8eb076da01337",
+      "release_sha256": "2da24cdcb48fe86fbe00030f365d13d666cd950b7dc216af97b8eb076da01337"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed83/audit.json",
+      "source_sha256": "5f3457ae2946b4b7c4a900a8f73d1d2c7e26c1902b65b79dd2f94c52ce9f24b5",
+      "release_sha256": "aa9e2d0b6534f818d0a348e5539338b834ab1f642771fa8ce36ca0df91a2dc19",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed83/trials.json",
+      "source_sha256": "53b20a73a7f16224b0905c288fac3100323541c6a24bad6429a68a5a541fbdfb",
+      "release_sha256": "53b20a73a7f16224b0905c288fac3100323541c6a24bad6429a68a5a541fbdfb"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed83/cells.csv",
+      "source_sha256": "87c06e5748337617142c09d3848b0abd00098f3a03e80e43bf981bab5e54da56",
+      "release_sha256": "87c06e5748337617142c09d3848b0abd00098f3a03e80e43bf981bab5e54da56"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed47/audit.json",
+      "source_sha256": "99ef7c56e6d61f2bbfff38c640bc5206580c109776a05b9a582c8f4bcd3369c5",
+      "release_sha256": "e90515187259ebd7e5bc34582d6401ae1d5711d8a383f7b13a7a481b312d0af6",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed47/trials.json",
+      "source_sha256": "25a59c08f933a04b7283c6edede5af8aea8fa8ef83136d5ccd7b2d02f86f9110",
+      "release_sha256": "25a59c08f933a04b7283c6edede5af8aea8fa8ef83136d5ccd7b2d02f86f9110"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed47/cells.csv",
+      "source_sha256": "f572cdca15d60e9f507ded789d26023a556df2386ea17b0558ca74d5841daac1",
+      "release_sha256": "f572cdca15d60e9f507ded789d26023a556df2386ea17b0558ca74d5841daac1"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed131/audit.json",
+      "source_sha256": "1f2c5a53a12a167d698d1d5e19ff2216717266910d65fcbee7873bd059f75778",
+      "release_sha256": "40709a3d5fae3cfc1a125d7e8bf15be1455a8e1a4253edd194819336e5e23cf3",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed131/trials.json",
+      "source_sha256": "d8f05d571f456df3207d3cc10ca88410222540bf599242d4d5124da907350cdc",
+      "release_sha256": "d8f05d571f456df3207d3cc10ca88410222540bf599242d4d5124da907350cdc"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed131/cells.csv",
+      "source_sha256": "555491b3e091f4afd1b7b2a8717c0a1ad579e427fdaaa320e11f11041c752dbe",
+      "release_sha256": "555491b3e091f4afd1b7b2a8717c0a1ad579e427fdaaa320e11f11041c752dbe"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed11/audit.json",
+      "source_sha256": "7f6770b5444eaefd2d1a9490e987599379b3583259b4a3cbd0f9219e2df2d359",
+      "release_sha256": "a4e292836297747b91338c1be78f513185e6bd477c28c2816e2e910e230d1444",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed11/trials.json",
+      "source_sha256": "044fbc7d40a607896b2e0b6cece526f9fdbedb7b9a5cf47927c9590a6f7c65d8",
+      "release_sha256": "044fbc7d40a607896b2e0b6cece526f9fdbedb7b9a5cf47927c9590a6f7c65d8"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed11/cells.csv",
+      "source_sha256": "6b747cffc3e72b96d938c67d5ac0f4b8dde15b196485326b283c3e60800c3918",
+      "release_sha256": "6b747cffc3e72b96d938c67d5ac0f4b8dde15b196485326b283c3e60800c3918"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed131/audit.json",
+      "source_sha256": "1b15d072614b674db3dfd3c7b2ebd4140877e064cb1df2f3d4bc4dbcb358ee2e",
+      "release_sha256": "178ea5aeb92cbea26c70984a72abad4e52e575a857a63688dc184fc378dd0db0",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed131/trials.json",
+      "source_sha256": "c04f6033ea9d386c25335028f2bac9f8be5b43c7e7f81cfe86d387531d07d2c7",
+      "release_sha256": "c04f6033ea9d386c25335028f2bac9f8be5b43c7e7f81cfe86d387531d07d2c7"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed131/cells.csv",
+      "source_sha256": "e3b9c1e1677c531c887e2b49caa959e886c0c1fb33ce32b8106eec82648bea18",
+      "release_sha256": "e3b9c1e1677c531c887e2b49caa959e886c0c1fb33ce32b8106eec82648bea18"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed131/audit.json",
+      "source_sha256": "268b876a9c3abf9ec42b03fe92df270143c2f388fe094d799218f775b9f5de6b",
+      "release_sha256": "73515331ea962e0588e9fdc9e90a312a68b593a4070ea09ce5bf673c5ddefcfd",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed131/trials.json",
+      "source_sha256": "d7a4f64ea4157bddd252ed853f6587ce7b2c0a10b8b33e841449734fe4bd9b43",
+      "release_sha256": "d7a4f64ea4157bddd252ed853f6587ce7b2c0a10b8b33e841449734fe4bd9b43"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed131/cells.csv",
+      "source_sha256": "0f4b14ce294573607fb3aabc7f37a5066cd41cdfff59a43054a703a2c2036617",
+      "release_sha256": "0f4b14ce294573607fb3aabc7f37a5066cd41cdfff59a43054a703a2c2036617"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed47/audit.json",
+      "source_sha256": "c5282ed88740979487c61946819c95aa1e5d80066b09367542e892953cd50a14",
+      "release_sha256": "8053e5c38e718a810af76a51082b1bcf73d5a4098585a70dfd062e32975891c1",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed47/trials.json",
+      "source_sha256": "e6c05e0f036aa2d1573bc84fc4f4e8ca989f74bb0d04213b6460a6035e24df29",
+      "release_sha256": "e6c05e0f036aa2d1573bc84fc4f4e8ca989f74bb0d04213b6460a6035e24df29"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed47/cells.csv",
+      "source_sha256": "f0ab910d922c7b56e70fdddcd965ea110f2ff33fcae9f55c79608a86578deae1",
+      "release_sha256": "f0ab910d922c7b56e70fdddcd965ea110f2ff33fcae9f55c79608a86578deae1"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed23/audit.json",
+      "source_sha256": "ebf3e3e7e97da65fd962c3af9ad616e2a4976dc76fb078cbc992246d9bd8e3b0",
+      "release_sha256": "12347d26dec18c16d10e3108f4c38f0afac3b17f4ce5642e06f771fe0abe4680",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed23/trials.json",
+      "source_sha256": "d4f78d13bfa3869167fdb64dbde3fb69095ceeb43aae87662a4778a9031b646b",
+      "release_sha256": "d4f78d13bfa3869167fdb64dbde3fb69095ceeb43aae87662a4778a9031b646b"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed23/cells.csv",
+      "source_sha256": "d540da4afc7663d6d6af35a6aed5b068c9b1e234aaa84cb3cf026be825b6300a",
+      "release_sha256": "d540da4afc7663d6d6af35a6aed5b068c9b1e234aaa84cb3cf026be825b6300a"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed83/audit.json",
+      "source_sha256": "33163ef1de7742c7e0927ace5074a53d6a4134e4f9e906ecd3d153e37a57a23a",
+      "release_sha256": "5cbee4a3703016fb14107e567a40bd63b01be4a2c4827dc0bf9275f8ee583347",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed83/trials.json",
+      "source_sha256": "4f73b26cb223ca4da4cbcf18bf18f00f21db323df0526cf65a7c4d5c63009bfc",
+      "release_sha256": "4f73b26cb223ca4da4cbcf18bf18f00f21db323df0526cf65a7c4d5c63009bfc"
+    },
+    {
+      "path": "kernel/replicated_analysis/n512_seed83/cells.csv",
+      "source_sha256": "b0acc2b7b6ce03f023d9fdad4befe88466e5fee6b3ab784eb41b99091fbd01b1",
+      "release_sha256": "b0acc2b7b6ce03f023d9fdad4befe88466e5fee6b3ab784eb41b99091fbd01b1"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed11/audit.json",
+      "source_sha256": "a1fc8b62e2e27e2e5e9b49d21e0c19a44f1d32be1d9fb7287361b6382333fa58",
+      "release_sha256": "9496fad8b6ce87d63a3fa01d504cbd69c1b8c99e0b4a7edf460cb7151e5ad40c",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed11/trials.json",
+      "source_sha256": "df38fb1cfd3e76e8077cfa427dbf0da4cfaff4758a019fd16ce3e98905895e51",
+      "release_sha256": "df38fb1cfd3e76e8077cfa427dbf0da4cfaff4758a019fd16ce3e98905895e51"
+    },
+    {
+      "path": "kernel/replicated_analysis/n8192_seed11/cells.csv",
+      "source_sha256": "3faf0aad68103c0ac50c68c7b3aed1a21c1db12e0b797250a639c318e6771a42",
+      "release_sha256": "3faf0aad68103c0ac50c68c7b3aed1a21c1db12e0b797250a639c318e6771a42"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed47/audit.json",
+      "source_sha256": "a1630db97c95cdf90224415d048b85149d1d2efec4de71874f02896e204a6bec",
+      "release_sha256": "6258fc2b959256649138909e5667910d9f426267b09ed42dacf3e5c2aafe794b",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed47/trials.json",
+      "source_sha256": "9adece3547fa1f76fc5bbc3e2cdedf088d6df806fce967e5de3f647d4cc02555",
+      "release_sha256": "9adece3547fa1f76fc5bbc3e2cdedf088d6df806fce967e5de3f647d4cc02555"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed47/cells.csv",
+      "source_sha256": "282be8d8e62119138de3fe2ac6a83d6225f469090869e902fb2735eaa87459c0",
+      "release_sha256": "282be8d8e62119138de3fe2ac6a83d6225f469090869e902fb2735eaa87459c0"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed83/audit.json",
+      "source_sha256": "0d8f18ec6249d894f88b6a3955cb07e7982ff868ba082ffc6a53a66e91a658b9",
+      "release_sha256": "fb60dfc596e8d9d96bfaa2d0c67020d0f1452fc36ef522f0de766854ac92424d",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed83/trials.json",
+      "source_sha256": "53b07794c09122e006842634dda0ef63bd4afa2ae6f6ff367caed228f8192c06",
+      "release_sha256": "53b07794c09122e006842634dda0ef63bd4afa2ae6f6ff367caed228f8192c06"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed83/cells.csv",
+      "source_sha256": "03261772248068253005d716db8adb873ff7bd6937369629f3e15b1ad1bbbae7",
+      "release_sha256": "03261772248068253005d716db8adb873ff7bd6937369629f3e15b1ad1bbbae7"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed23/audit.json",
+      "source_sha256": "79b2ced6fcce0f92f72ea68841afed702c7855b1503d161818f4229d5cb79c55",
+      "release_sha256": "6dc407cb3a10970cb1ce51b6dbb603a4131d0575d7c51377c74b160f8030fd28",
+      "transformation": "Replace machine-specific home/workspace/runtime path prefixes with placeholders; native result protocol hash rebound to sanitized protocol. Scientific measurements, parameters and exact proof statements unchanged."
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed23/trials.json",
+      "source_sha256": "837e458a333216d2c2d83b9e1f315042ce93ba4e9356e59fcbcee141f305ae87",
+      "release_sha256": "837e458a333216d2c2d83b9e1f315042ce93ba4e9356e59fcbcee141f305ae87"
+    },
+    {
+      "path": "kernel/replicated_analysis/n2048_seed23/cells.csv",
+      "source_sha256": "e076f061f5575f0a033c55c8efa53d9c8339e9789e320e5913b032ec590f97a4",
+      "release_sha256": "e076f061f5575f0a033c55c8efa53d9c8339e9789e320e5913b032ec590f97a4"
+    },
+    {
+      "path": "kernel/regime_replicates/PROTOCOL.md",
+      "source_sha256": "88d0d4f3da621ab0a8172d7fcc0da9d2f05774d76d2e018003a6176dabe1b565",
+      "release_sha256": "88d0d4f3da621ab0a8172d7fcc0da9d2f05774d76d2e018003a6176dabe1b565"
+    },
+    {
+      "path": "kernel/regime_replicates/config.json",
+      "source_sha256": "c0be7c2fb77e804827df1180d826609e8761ea22111c75fcc57ddb8adf366db5",
+      "release_sha256": "c0be7c2fb77e804827df1180d826609e8761ea22111c75fcc57ddb8adf366db5"
+    },
+    {
+      "path": "kernel/regime_replicates/common.py",
+      "source_sha256": "76c97d2f75a4b8227ea302a8ab8f9c5028d0e0949f2fb547f9a7a6f1d13e3205",
+      "release_sha256": "76c97d2f75a4b8227ea302a8ab8f9c5028d0e0949f2fb547f9a7a6f1d13e3205"
+    },
+    {
+      "path": "kernel/regime_replicates/runner.py",
+      "source_sha256": "1fbc3321e9aa00726ef52d05a6b3d9a05d1ffbd6d818efd31938a9b5051d9f10",
+      "release_sha256": "1fbc3321e9aa00726ef52d05a6b3d9a05d1ffbd6d818efd31938a9b5051d9f10"
+    },
+    {
+      "path": "kernel/regime_replicates/freeze.json",
+      "source_sha256": "89e17ec29f65fafa3ebddb586239c3443e3caf06093b3965ed3b4e89382fda6a",
+      "release_sha256": "89e17ec29f65fafa3ebddb586239c3443e3caf06093b3965ed3b4e89382fda6a"
+    }
+  ]
+}

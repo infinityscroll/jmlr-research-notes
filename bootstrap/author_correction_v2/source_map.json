@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-26",
+  "version": "v2",
+  "parent_freeze": {
+    "path": "../author_correction/freeze_manifest.json",
+    "sha256": "40e5d74ef4252fc052098f04cb74418f33190503730a42357fd5fd77f795ff4b",
+    "snapshot": "parent_v1_freeze_manifest.json",
+    "change": "Only the rounded decimal display in Proposition 1 changed from equality with ellipsis to an approximation sign; the exact quantile bound and all proofs are unchanged."
+  },
+  "purpose": "Claim-to-source map for a focused draft correction to the closed alpha=1 endpoint in the offline ASGD coverage statement.",
+  "manuscript": {
+    "path": "main.tex",
+    "sha256": "17f7f8c0b1032eb04bc1340e0a546bb5ecea3a06d35ed0a5cf80e551824060ae"
+  },
+  "sources": [
+    {
+      "id": "published_paper",
+      "title": "Cheap Bootstrap for Fast Uncertainty Quantification of Stochastic Gradient Descent",
+      "authors": [
+        "Henry Lam",
+        "Zitong Wang"
+      ],
+      "journal": "Journal of Machine Learning Research",
+      "volume": 27,
+      "issue": 93,
+      "pages": "1-42",
+      "year": 2026,
+      "url": "https://www.jmlr.org/papers/volume27/25-0008/25-0008.pdf",
+      "landing_url": "https://www.jmlr.org/beta/papers/v27/25-0008.html",
+      "local_path": "../paper.pdf",
+      "sha256": "d12b31f7aba87849a1e734e68a081078a5973db7b9fc5538b819bd25800b2b16",
+      "landing_metadata_checked": "2026-10-26"
+    },
+    {
+      "id": "arxiv_v2",
+      "url": "https://arxiv.org/html/2310.11065v2",
+      "local_path": "../arxiv_v2.html",
+      "sha256": "e95f907b65bbd43f4f7efe3b37169d770ef568f399460d81bef8894ea87b597c",
+      "endpoint_checked": "2026-10-26"
+    },
+    {
+      "id": "internal_endpoint_source",
+      "path": "../endpoint_audit.md",
+      "sha256": "115ffa9657f15a11f046490a5e713a9c065c00b5674d33ad7f72cf1e9af39e00"
+    },
+    {
+      "id": "official_helper",
+      "url": "https://github.com/BeetrootWang/Cheap-Bootstrap-for-Fast-Uncertainty-Quantification-of-Stochastic-Gradient-Descent",
+      "commit": "002e46606fae75cd491bc0f005708a1f31a24dfa",
+      "path": "../official/cheap_bootstrap/methods.py",
+      "function": "bootstrap_CI_COfB",
+      "sha256": "25d7162a45af15dc457e93601ca33d921d6fe874f8005a162eebbd605d844127"
+    }
+  ],
+  "claims": [
+    {
+      "id": "closed_endpoint",
+      "manuscript": "Section 1",
+      "source": "published_paper",
+      "locator": "Assumption 5, printed p. 8",
+      "content": "alpha in (1/2,1]; Hessian classes Glivenko-Cantelli"
+    },
+    {
+      "id": "coverage_scope",
+      "manuscript": "Section 1",
+      "source": "published_paper",
+      "locator": "Theorem 1, printed pp. 8-9",
+      "content": "ASGD statement invokes Assumptions 1-5; raw-SGD clause instead invokes 1-4 and 6"
+    },
+    {
+      "id": "interval_formula",
+      "manuscript": "Equations (1)-(2)",
+      "source": "published_paper",
+      "locator": "ASGD definition printed p. 2; equation (3) and Algorithm 1 printed p. 6, lines 6,9,10",
+      "content": "Average x1 through xn; same x0 in each resample; RMS about original average with divisor B; Student-t_B"
+    },
+    {
+      "id": "assumption_verification",
+      "manuscript": "Section 2",
+      "source": "published_paper",
+      "locator": "Assumptions 1-5, printed pp. 7-8",
+      "content": "Independent direct verification for the bounded quadratic example; no extra assumption inferred"
+    },
+    {
+      "id": "all_n_contradiction",
+      "manuscript": "Proposition 1 and equations (5)-(10)",
+      "source": "internal_endpoint_source",
+      "content": "Self-contained coefficient, dependent-bootstrap second moment, Markov/L2 triangle and integral proof in manuscript"
+    },
+    {
+      "id": "quantile_free_bound",
+      "manuscript": "Last paragraph of Section 3",
+      "source": "bootstrap_exact_cleanroom.py",
+      "content": "Analytic t3 tail bound and sqrt(2)<17/12 give coverage<1/675 without quantile inversion"
+    },
+    {
+      "id": "simulation",
+      "manuscript": "Section 4",
+      "source": "endpoint_results.json",
+      "locator": "runs[4] and runs[0]",
+      "content": "Retained 0/5000 counterexample run and 4749/5000 interior control; no simulation rerun during preparation"
+    },
+    {
+      "id": "helper_difference",
+      "manuscript": "Section 4",
+      "source": "official_helper",
+      "content": "Helper averages trajectories but uses bootstrap-mean centering, B-1 divisor and t_(B-1); not substituted for paper Algorithm 1"
+    },
+    {
+      "id": "limits",
+      "manuscript": "Section 5",
+      "content": "No online-interval or raw-SGD refutation; no independent proof of interior theorem; no replacement procedure, priority, endorsement or expert-review assertion"
+    }
+  ],
+  "reproduction": {
+    "floating_point_verifier": {
+      "path": "check_endpoint.py",
+      "sha256": "a5558d6f809315f689511164351a0743f4402d18126907061cab8dfadc4a0d9b",
+      "copied_unchanged_from": "../check_endpoint.py"
+    },
+    "exact_arithmetic_verifier": {
+      "path": "bootstrap_exact_cleanroom.py",
+      "sha256": "4dabe6ebc867ce7d1dd15619ca6190598c136e27ca293150ab2fa555a5657b01",
+      "copied_unchanged_from": "../../audits/bootstrap_exact_cleanroom.py"
+    },
+    "retained_simulations": {
+      "path": "endpoint_results.json",
+      "sha256": "3b0201f6c9f5567f6379c590db06aa9925a2185b50df1fe8cc4ffa4d7903f779",
+      "copied_unchanged_from": "../endpoint_results.json"
+    },
+    "limitation": "Finite arithmetic checks and Monte Carlo do not establish the uniform-in-n theorem; the analytic proof does."
+  }
+}

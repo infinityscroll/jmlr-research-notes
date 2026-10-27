@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "n": 1000000,
+  "scale": 4398046511104,
+  "independent_gain_enclosures": 1000000,
+  "certified_negative_mean_lower": "23081750376873377/4398046511104000000",
+  "readable_lower": 0.005248182418852907,
+  "threshold": "131/25000",
+  "new_random_draws": 0,
+  "scope": "Bias bound only; no finite-coverage theorem or trajectory replication.",
+  "source_sha256": "863d6b4751e273442d32e65aa720ee90f79d0737f390b67d880dd030152af9b3",
+  "checker_sha256": "b69bcda461616112b4147a205d8ec58056ab852ec6999613332086ffbf506dd1",
+  "elapsed_seconds": 45.284741666
+}

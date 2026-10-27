@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "data": "synthetic only; no study features read",
+  "explicit_duplicate_index_cases": 99,
+  "max_explicit_kvd_abs_error": 1.4210854715202004e-14,
+  "max_bootstrap_abs_error": 1.0658141036401503e-14,
+  "max_pairwise_percentile_abs_error": 5.329070518200751e-15,
+  "rng_count_arrays_exact": true,
+  "missing_final_shard_rejected_before_reads": true,
+  "full_size_2000_bootstrap_seconds": 0.047077709110453725,
+  "numpy_version": "2.3.5"
+}

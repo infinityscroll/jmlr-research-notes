@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "python": "3.12.14",
+  "scope": "Finite checks and unchanged source hashes; not formal theorem verification.",
+  "sources_verified": 28,
+  "checks": [
+    {
+      "name": "multimode",
+      "checker": "binary_selected/general_positive/multimode_hedge/check_six_node.py",
+      "certificate": "binary_selected/general_positive/multimode_hedge/six_node_certificate.json",
+      "certificate_sha256": "5897e823d4e0b8c9dfe557f37a1221f37a7f47b4f850a3972cdf9656df7f93dc",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.14
+    },
+    {
+      "name": "capacity",
+      "checker": "binary_selected/general_positive/hidden_capacity_attack/check_capacity.py",
+      "certificate": "binary_selected/general_positive/hidden_capacity_attack/certificate.json",
+      "certificate_sha256": "3f62c07d25d6e01f3c5f7d1d56506bdd2f54b711dcd9cb95025fb320749790b7",
+      "exact_saved_certificate_match": true,
+      "seconds": 1.017
+    },
+    {
+      "name": "private-switch",
+      "checker": "prescribed_unit_structure_gate_20261028/check_private_switch.py",
+      "certificate": "prescribed_unit_structure_gate_20261028/private_switch_certificate.json",
+      "certificate_sha256": "5decdb47376c039fee198a10590497cd2133cf28386b8018baf571c88190e9bb",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.142
+    },
+    {
+      "name": "multiple-policies",
+      "checker": "multiple_private_switch_gate_20261028/check_multiple_switches.py",
+      "certificate": "multiple_private_switch_gate_20261028/multiple_switch_certificate.json",
+      "certificate_sha256": "eb27c9e92f3b5062a038ac48d703aa365d943744e848959914f5e503f840d400",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.318
+    },
+    {
+      "name": "receivers",
+      "checker": "terminal_receiver_completeness_gate_20261028/check_receiver_closure.py",
+      "certificate": "terminal_receiver_completeness_gate_20261028/receiver_closure_certificate.json",
+      "certificate_sha256": "da0181b826284f096dcb03f0aab9a47bbab7acef30228bd4c109b737368d652b",
+      "exact_saved_certificate_match": true,
+      "seconds": 0.073
+    }
+  ]
+}

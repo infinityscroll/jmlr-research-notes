@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "source_sha256": "59ce6000f9c72fb8fc575c8d45c562ae4caf146b11353a8363d065a554aa8e9c",
+  "checker_sha256": "2ef577c4988fb0505c0c2502e7f3cb182c0837626a9f542519867c54d3e0261f",
+  "t3_tail_at_16_over_5_upper": "2771066961839198817126301467218126912154855733729106681168473460683741446071719103521185243515653016303117/56170981956521126816964797508500327518294987767808000000000000000000000000000000000000000000000000000000000",
+  "beta_cdf_at_256_over_331_upper": "94112934527/112135680000",
+  "poisson_zero_probability_upper": "46875/161659",
+  "limiting_coverage_strict_upper": "111/125",
+  "sharper_rational_upper": "501844346148349/566491934160000",
+  "display_only": {
+    "t3_tail_upper": 0.04933271353497309,
+    "beta_cdf_upper": 0.8392773337353463,
+    "sharper_limiting_upper": 0.8858808323413976
+  },
+  "new_random_draws": 0,
+  "new_sgd_trajectories": 0,
+  "scope": "Arithmetic inequalities for the limiting noncentral law only; analytic theorem required, no finite-n coverage claim."
+}

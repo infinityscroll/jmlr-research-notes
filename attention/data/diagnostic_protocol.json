@@ -1,0 +1,28 @@
+{
+  "date_utc": "2026-10-27T21:08:25.256410+00:00",
+  "deltas": [
+    0.0,
+    0.5
+  ],
+  "p": 2.0,
+  "eta": 0.1,
+  "steps": 50000,
+  "initial_l": [
+    4.0,
+    -4.0
+  ],
+  "initial_k": [
+    4.0,
+    0.0
+  ],
+  "paired_labels": [
+    1,
+    -1
+  ],
+  "seed": null,
+  "optimizer_sha256": "d4ce054aca1fe0001fc9567cfcae1cd72dde60c57910f04198a04172e1f3983b",
+  "producer_sha256": "6a0aa3eb24ea1ab448b40a4c441523b73791c24d56f3b9a0e2e77bc42973d3e3",
+  "working_derivation_sha256": "a8b8bc78c85244296de63aeeb05106b5052811e75658a96754ab96e152fa07bb",
+  "outcome_adaptive_choices": false,
+  "scope": "Fixed diagnostic, not proof"
+}

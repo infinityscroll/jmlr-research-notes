@@ -1,0 +1,27 @@
+[
+  {
+    "name": "multimode",
+    "checker": "binary_selected/general_positive/multimode_hedge/check_six_node.py",
+    "certificate": "six_node_certificate.json"
+  },
+  {
+    "name": "capacity",
+    "checker": "binary_selected/general_positive/hidden_capacity_attack/check_capacity.py",
+    "certificate": "certificate.json"
+  },
+  {
+    "name": "private-switch",
+    "checker": "prescribed_unit_structure_gate_20261028/check_private_switch.py",
+    "certificate": "private_switch_certificate.json"
+  },
+  {
+    "name": "multiple-policies",
+    "checker": "multiple_private_switch_gate_20261028/check_multiple_switches.py",
+    "certificate": "multiple_switch_certificate.json"
+  },
+  {
+    "name": "receivers",
+    "checker": "terminal_receiver_completeness_gate_20261028/check_receiver_closure.py",
+    "certificate": "receiver_closure_certificate.json"
+  }
+]

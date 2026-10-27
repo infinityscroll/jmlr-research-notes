@@ -1,0 +1,30 @@
+{
+  "status": "PASS exact saved-certificate verification",
+  "witnesses": 64,
+  "witnesses_strictly_positive_definite": 64,
+  "initial_domination_checks": 64,
+  "Bernstein_PSD_matrices": 320,
+  "fresh_unisolvent_nodes_per_box": [
+    "1/13",
+    "2/11",
+    "3/7",
+    "7/11",
+    "12/13"
+  ],
+  "direct_map_polynomial_evaluations": 448,
+  "coordinate_equalities": 2688,
+  "maximum_energy_prefactor_exact": "966570000000009937218814069268255121/322190000000000000000000000000000000",
+  "maximum_energy_prefactor_display": 3.0000000000000306,
+  "both_gradients": true,
+  "all_closed_subintervals_cover_entire_interval": true,
+  "source_pins": {
+    "eta1_repair_theorem.md": "e72f428b57cd871d6bd594b9faa640fe961e7a5e3d51feb3419df4c0e8010013",
+    "certify_eta1_repair.py": "2ea52b974c326a5ad09b3ff32ad16bdba9578ffb44876009e089ffdb6525c54b",
+    "eta1_repair_certificate.json": "eebce83eedda40caea24d995f262fffab199dae690f6ee9825a1a4929bc2c209",
+    "independent_eta1_saved_check.py": "8d6636be78ad71c71713f06febe1f6fc4e52ffc562c04801f28f9a130b42c449"
+  },
+  "operator_sha256": "eecb2c18bb1ec6fc5d443d41bbd937190e1ecdd3cf54e1b3f4adf3dc8aa2777e",
+  "uses_producer_interpolation": false,
+  "degree_and_source_reduction": "Analytically audited in separate source-bound review; not inferred from finitely many checks",
+  "paid_jobs": 0
+}

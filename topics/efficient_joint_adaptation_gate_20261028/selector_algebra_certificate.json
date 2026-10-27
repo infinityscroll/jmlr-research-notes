@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "source_sha256": "188c39bfbe31e11b668bddd7d31d251a56ba4d179b72fb7d23fbfb6339b70a16",
+  "checker_sha256": "f75e518a431e6a5108ec2c5de8616b827c7ff8e3e3ad01e5999006c88f761ffe",
+  "assertions": 777,
+  "counts": {
+    "source_sha256": 1,
+    "fixture_probability_weights": 8,
+    "fixture_positive_covariance": 8,
+    "compression_dependence_mass": 128,
+    "compression_dependence_covariance": 128,
+    "compression_nonnegative": 128,
+    "compressed_covariance_exact": 8,
+    "compressed_mass_exact": 8,
+    "compressed_support_bound": 8,
+    "heavy_atoms_are_anchor_clusters": 8,
+    "heavy_atoms_cover_vertices": 8,
+    "positive_greedy_pivot": 84,
+    "greedy_distinct_vertices": 8,
+    "congruence_covariance": 8,
+    "affine_leverage_exact": 140,
+    "affine_greedy_indices_exact": 8,
+    "raw_compression_preserves_covariance": 8,
+    "raw_compression_preserves_mass": 8,
+    "raw_compression_heavy_coverage": 8,
+    "raw_compression_heavy_purity": 8,
+    "raw_compressed_greedy_coverage": 8,
+    "rank_one_determinant_identity": 24,
+    "progress_polynomial_bound": 24
+  },
+  "fixtures": [
+    {
+      "K": 2,
+      "e": "1/10000",
+      "p": 10,
+      "support": 4,
+      "heavy": 2
+    },
+    {
+      "K": 2,
+      "e": "1/100000",
+      "p": 10,
+      "support": 4,
+      "heavy": 2
+    },
+    {
+      "K": 3,
+      "e": "1/10000",
+      "p": 15,
+      "support": 7,
+      "heavy": 3
+    },
+    {
+      "K": 3,
+      "e": "1/100000",
+      "p": 15,
+      "support": 7,
+      "heavy": 3
+    },
+    {
+      "K": 4,
+      "e": "1/10000",
+      "p": 20,
+      "support": 11,
+      "heavy": 4
+    },
+    {
+      "K": 4,
+      "e": "1/100000",
+      "p": 20,
+      "support": 11,
+      "heavy": 4
+    },
+    {
+      "K": 5,
+      "e": "1/10000",
+      "p": 25,
+      "support": 16,
+      "heavy": 6
+    },
+    {
+      "K": 5,
+      "e": "1/100000",
+      "p": 25,
+      "support": 16,
+      "heavy": 6
+    }
+  ],
+  "scope": "Exact finite algebra only. No statistical theorem, arbitrary-input QR, log inequality, finite-bit stability, or runtime claim is inferred from these fixtures."
+}

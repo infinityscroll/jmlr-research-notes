@@ -1,0 +1,56 @@
+# Selected-path failure: primary comparison and exact scope
+
+28 October 2026. This bounded comparison binds `selected_path_noncollapse_theorem.md`, SHA256 `46db3f866ad368b39f1bf600e730133a2f52570b6f4a24464aebb39e57187ae7`. It assesses the fixed two-token p=2 theorem, not a pending general-input extension. It is not exhaustive novelty clearance or external expert review.
+
+## What the new proof would establish
+
+Two composed, unmasked self-attention layers train all eight entries of their direct matrices simultaneously. Their upper queries, keys and values are the actual learned first-layer outputs. On a finite open initialization basin, these outputs converge to two distinct original tokens; both selected-path optimal token margins have a positive limit. Nevertheless, the lower matrix's selected-query unit margin converges to only `2/sqrt(5)` of the global Frobenius token-SVM optimum. The upper matrix reaches its checkpoint optimum.
+
+This closes specific defects in earlier internal candidates: it uses the direct parameterization, actual evolving memories, the selected query rather than all queries, and a nonvanishing comparator scale. The mathematical addition is the discrete coupled-clock proof. The lower branch that upper attention eventually ignores still supplies a leading cumulative gradient. A pointwise small attention weight does not license removing this gradient.
+
+## Original paper and released metric
+
+[Julistiono, Ataee Tarzanagh and Azizan, *Optimizing Attention with Mirror Descent*, Definition 5 and Theorem 10](https://www.jmlr.org/papers/volume27/25-0549/25-0549.pdf) treats one direct attention matrix with fixed inputs/query and head. Its theorem requires a sufficiently large, sufficiently narrow cone around the locally optimal p-token-SVM, and a small step. The released `att_svm.py` and `optimizers.py` match our comparator and p=2 update after transposing the query/key convention. Their joint attention/head regularization-path theorem is not simultaneous training of two attention layers.
+
+There is a material initialization qualification: our basin tends to `Theta_bad`, at angle `arccos(2/sqrt(5))` from the selected-only SVM. The result does **not** by itself refute a possible depth-two theorem retaining an appropriately narrow SVM-cone initialization assumption. It refutes the unqualified layerwise selected-token margin prediction, not the published theorem or every imaginable extension of all its hypotheses.
+
+## Closest exact antecedents
+
+**Generalized and hierarchical SVM descriptions.** [Ataee Tarzanagh et al., *Transformers as Support Vector Machines*, Section 6 and Appendix E Theorem 9](https://arxiv.org/pdf/2308.16898) is the most relevant conceptual antecedent. Section 6 proposes a generalized SVM after specifying selected and masked token sets, including equalities for multi-token compositions. It also reports cases where a single-selected-token comparator predicts poorly. Theorem 9 is a constrained regularization-path result with fixed nonlinear heads satisfying its score-preservation assumption. It is not an iterate theorem for two simultaneously trained attention blocks consuming the entire intermediate sequence. Our two-token example has one selected token at each selected query, not a persistent multi-token composition. Neither the fixed-head theorem nor the empirical generalized-SVM prediction directly supplies its discrete clock or its selected-only margin fraction. This comparison does not imply that richer hierarchical SVM formulations must fail.
+
+**Gradient starvation.** [Pezeshki et al., NeurIPS 2021, Section 3 and Theorem 2](https://arxiv.org/html/2011.09468v3) proves feature competition in a linearized-network, regularized cross-entropy framework; Theorem 2 studies an equilibrium feature-response derivative as feature strength changes. It already establishes that coupled gradients can suppress useful directions. Our result must not claim discovery of that phenomenon. The primary theorem does not give this nonhomogeneous two-layer softmax trajectory, unregularized matrix limits, or selected-token SVM calculation. Our example is also not an accuracy/generalization failure: the fixed data are already correctly classified by uniform attention.
+
+**Multilayer backward dynamics.** [Tian et al., *JoMA*, Assumption 1, equation (2), and Theorem 1](https://arxiv.org/html/2310.00535v3) uses stationary backpropagated statistics in continuous attention/MLP dynamics. Its softmax invariant additionally requires fixed expected attention and an expectation factorization. Here the actual upper-key derivative changes the lower gradient's sign and contributes at the leading cumulative scale. Those stationary assumptions do not provide our recurrence. JoMA remains clear antecedent for studying how later layers change attention learning.
+
+**Learned token embeddings and genuine two-layer experiments.** [Wu et al., *Attention with Trained Embeddings Provably Selects Important Tokens*, final NeurIPS 2025 paper](https://proceedings.neurips.cc/paper_files/paper/2025/file/29be2340edb8b224728248d4bb1ea9d4-Paper-Conference.pdf) is closer than its theoretical headline alone suggests. Equation (18), printed page 9, is an empirical two-attention model with residual and LayerNorm; Appendix F.4 also trains key-query matrices in both blocks. These are genuine multilayer-training antecedents. However, Section 4.2 equation (9) and Theorem 4.3 still freeze context embeddings E1 after one step, then train p by flow; the directional characterization assumes that limit exists. Section 5 distinguishes equation (18) from the analyzed model. Neither the theorem nor the reported empirical statistic establishes the lower selected-query direct-matrix SVM law or our guarded direction. Learned embeddings, joint empirical training and their importance are therefore old; this exact coupled asymptotic claim is not supplied there.
+
+**Actual two-attention training.** [Nichani, Damian and Lee, *How Transformers Learn Causal Structure with Gradient Descent*, Algorithm 1 and Theorem 4.4](https://proceedings.mlr.press/v235/nichani24a.html) uses stagewise population training of a disentangled two-attention architecture and establishes task/structure recovery. It is stronger on meaningful task learning and different on optimizer/comparator scope. It does not state simultaneous full-matrix layerwise SVM convergence or the present failure. Merely reaching depth two is therefore not our distinguishing claim.
+
+**Recent general attention dynamics.** [Xu et al., *High-Dimensional Learning Dynamics of Attention-Indexed Models*, Theorem 2 and Appendix E](https://arxiv.org/html/2609.03858v1) gives high-dimensional moment limits under fresh Gaussian data, controlled learning-rate scaling, and fixed rescaled time intervals; Appendix E addresses direct attention matrices. These are not finite-dimension, unregularized, infinite-iteration token-margin statements. The existence of a broad dynamical framework is not a theorem-level derivation of this example, and our special orbit does not supersede that framework.
+
+**General implicit-bias machinery.** [Sun et al., JMLR 2023, Theorem 13 and Proposition 16](https://www.jmlr.org/papers/volume24/23-0836/23-0836.pdf) supplies power-mirror margin selection for fixed separable linear inputs. Our lower update has a negative leading coefficient on another normal, so the positive exponential-clock reduction is unavailable. [Cai et al., Section 4 after Example 4.4](https://arxiv.org/html/2502.16075v2) expressly excludes softmax from its nontrivial near-homogeneous class. Our scores remain bounded and the logistic loss approaches a positive infimum. These are explicit premise failures; they are not proof of historical novelty.
+
+## A useful interpretation, with no new priority claim
+
+Let `C1=x1 d'` and `C2=x2 d'`. The limiting `Theta_bad` is exactly the unique solution of
+
+    minimize ||W||_F²/2
+    subject to <C1,W>>=1,  <C2,W><=0.
+
+Indeed `Theta_bad=C1−(2/5)C2`, `<C1,Theta_bad>=1`, and `<C2,Theta_bad>=0`; these are the complete KKT conditions with positive multipliers. Thus an ignored query behaves as an active **zero-margin constraint**. Its true opposite-routing gap grows like `log log t`, while the matrix norm grows like `log t`.
+
+This is a concrete clue toward a corrected multilayer comparator. It does not make the selected-only comparator correct, and it does not prove that this guarded optimization characterizes arbitrary deep attention. Existing generalized-SVM ideas make a blanket claim that “transformers are not SVMs” particularly inappropriate.
+
+## Significance and remaining gate
+
+The candidate is now a genuine negative statement about simultaneous attention training, with a parameterization-matched selected-query metric and persistent feature separation. That is more directly responsive to the original depth question than the earlier factorization, fixed-memory, consensus or all-query examples. The inspected primary results do not directly subsume its exact conclusion.
+
+Major restrictions remain: p=2 only; two tokens and a paired-sign dataset; fixed identity values and head; no residual or normalization; a favorable large finite basin with an existence threshold; no random-start, generalization, or task-performance claim. The fixed-input theorem by itself is not an open family of independently perturbed datasets. The negative example is the negative of the positive one, not an independent sample. Its interpretation is a failure of a particular natural layerwise metric, not failure to classify or to optimize the bounded prediction score.
+
+The next significance gate is specialist assessment of this exact distinction and comparison to any already published multilayer counterexample or generalized margin theorem. A broader input-family result would reduce an obvious scope objection, but additional internal proof checks alone cannot establish novelty or newsworthiness. No external contact or publication occurred.
+
+## Primary provenance
+
+The target paper, Tarzanagh2023, Sun2023, Wu2025, Nichani2024 and Cai2025 PDFs/text were read from the unchanged `../evolving_memory_gate_20261027/novelty_audit/primary_sources/` archive, whose `manifest.json` records URLs and hashes. In particular, the target PDF is `984c74508677a57e0a24e8f8dcf4564510ccf73ea111cfb53e2872e82c6f0c9e`, and Tarzanagh2023 is `f11a455e8a5e1434f7d778fb919b8d3f517c6bfd38d8581f2f40c1d5eb1575ea`. Current primary HTML was read for Pezeshki v3, JoMA v3 and Xu v1. Searches included multilayer/two-layer attention implicit bias, max-margin counterexamples, evolving embeddings and gradient starvation. Search absence is not used as evidence of priority.
+
+The final 42-page Wu2025 proceedings version was additionally downloaded and read here, particularly equation (18) and Appendix F.4; `primary_sources/wu2025_neurips.pdf` has SHA256 `754176ac1b639d2f3145d9279755c6e18cd7166982f99764bdfa7d9738f2b255`. The arXiv copy in the older archive has different pagination and equation numbering. The separate `printed_single_layer_cone_compatibility.md` strengthens the initialization comparison for the root's general-Gram family, conditional on that extension's review; it does not alter the fixed epsilon=1/2 source assessed here.

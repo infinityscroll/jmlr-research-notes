@@ -1,0 +1,606 @@
+{
+  "protocol_sha256": "52f6bea4277f0a25965e996ffb42f64d38378f998a1cd591d13b8904da5c90cb",
+  "torch": "2.14.1",
+  "numpy": "2.5.4",
+  "source": {
+    "commit": "61cdb69cb11adea48ecb13c823ad654d46dc15df",
+    "source": "<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official",
+    "unmodified": true
+  },
+  "cases": [
+    {
+      "dtype": "float64",
+      "seed": 2026102701,
+      "variant": "released",
+      "actual_rounded_delta": 1.000000082740371e-10,
+      "status": "complete",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.9901440002157216,
+          "relative_contrast_error": 0.9901440002157069,
+          "sum_error": 1.2232703738845885e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.906578762146387,
+          "relative_contrast_error": 0.9065787621463858,
+          "sum_error": -3.4924596548080444e-10
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.5174587534992916,
+          "relative_contrast_error": 0.5174587534992771,
+          "sum_error": -1.2141754268668592e-09
+        },
+        {
+          "step": 500,
+          "relative_A_error": 0.6614806180813276,
+          "relative_contrast_error": 0.6614806180813136,
+          "sum_error": -1.1900027629963006e-09
+        },
+        {
+          "step": 1000,
+          "relative_A_error": 0.627910761385304,
+          "relative_contrast_error": 0.627910761385304,
+          "sum_error": 3.5555558497435413e-11
+        },
+        {
+          "step": 2500,
+          "relative_A_error": 0.6366802248053971,
+          "relative_contrast_error": 0.6366802248053965,
+          "sum_error": 2.431477241771063e-10
+        },
+        {
+          "step": 5000,
+          "relative_A_error": 0.018298905052833506,
+          "relative_contrast_error": 0.018298905052833207,
+          "sum_error": -1.7341506008961005e-10
+        },
+        {
+          "step": 10000,
+          "relative_A_error": 0.00019864012282836942,
+          "relative_contrast_error": 0.00019864012282836942,
+          "sum_error": 8.326672684688674e-13
+        },
+        {
+          "step": 20000,
+          "relative_A_error": 2.7113622143429772e-08,
+          "relative_contrast_error": 2.711362214341864e-08,
+          "sum_error": -1.060151966214562e-12
+        }
+      ],
+      "eta_min": 1.0079068144275534,
+      "eta_max": 1.0099000863817629,
+      "rho_min": 1.009997386755386e-08,
+      "rho_max": 1.0099991489883409e-08,
+      "S_min": 9.997386755385971e-11,
+      "S_max": 9.999148988340931e-11,
+      "preconditioner_calls": 20000,
+      "steps_completed": 20000,
+      "wall_seconds": 50.05709866597317,
+      "random_draw_digest": "222fe7f9e82a4045785bb4f46aaec77087b1e1f7f2fd2ad968989f6e670c154f"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102701,
+      "variant": "repaired",
+      "actual_rounded_delta": 1.000000082740371e-10,
+      "status": "complete",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.9901440002157216,
+          "relative_contrast_error": 0.9901440002157069,
+          "sum_error": 1.2232703738845885e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.9065753444017592,
+          "relative_contrast_error": 0.906575344401758,
+          "sum_error": -3.510649548843503e-10
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.5158234983225986,
+          "relative_contrast_error": 0.5158234983225839,
+          "sum_error": -1.2196323950774968e-09
+        },
+        {
+          "step": 500,
+          "relative_A_error": 0.6574058052691041,
+          "relative_contrast_error": 0.6574058052690902,
+          "sum_error": -1.1824141665783827e-09
+        },
+        {
+          "step": 1000,
+          "relative_A_error": 0.6220490818673691,
+          "relative_contrast_error": 0.6220490818673691,
+          "sum_error": 5.395861535362201e-11
+        },
+        {
+          "step": 2500,
+          "relative_A_error": 0.6297334102526712,
+          "relative_contrast_error": 0.6297334102526705,
+          "sum_error": 2.596181047920254e-10
+        },
+        {
+          "step": 5000,
+          "relative_A_error": 0.0183694172436721,
+          "relative_contrast_error": 0.018369417243671807,
+          "sum_error": -1.722666453929378e-10
+        },
+        {
+          "step": 10000,
+          "relative_A_error": 0.0001942608268637571,
+          "relative_contrast_error": 0.00019426082686375712,
+          "sum_error": 1.1256551246674462e-12
+        },
+        {
+          "step": 20000,
+          "relative_A_error": 2.041051258421734e-08,
+          "relative_contrast_error": 2.0410512584217205e-08,
+          "sum_error": 1.1646239528317892e-13
+        }
+      ],
+      "eta_min": 1.0079068144275534,
+      "eta_max": 1.0099000863817629,
+      "rho_min": 1.009997386755386e-08,
+      "rho_max": 1.0099991489883409e-08,
+      "S_min": 9.997386755385971e-11,
+      "S_max": 9.999148988340931e-11,
+      "preconditioner_calls": 20000,
+      "steps_completed": 20000,
+      "wall_seconds": 54.175455291057006,
+      "random_draw_digest": "222fe7f9e82a4045785bb4f46aaec77087b1e1f7f2fd2ad968989f6e670c154f"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102701,
+      "variant": "repaired_eta1",
+      "actual_rounded_delta": 1.000000082740371e-10,
+      "status": "complete",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.990144947088442,
+          "relative_contrast_error": 0.9901449470884276,
+          "sum_error": 1.2123564374633133e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.9065002885494198,
+          "relative_contrast_error": 0.9065002885494187,
+          "sum_error": -3.2650859793648124e-10
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.5104618605501189,
+          "relative_contrast_error": 0.5104618605501045,
+          "sum_error": -1.2034888641210273e-09
+        },
+        {
+          "step": 500,
+          "relative_A_error": 0.6356018844269524,
+          "relative_contrast_error": 0.6356018844269387,
+          "sum_error": -1.179969899567368e-09
+        },
+        {
+          "step": 1000,
+          "relative_A_error": 0.582723920420513,
+          "relative_contrast_error": 0.582723920420513,
+          "sum_error": 2.4940050025179517e-11
+        },
+        {
+          "step": 2500,
+          "relative_A_error": 0.520088737187852,
+          "relative_contrast_error": 0.5200887371878515,
+          "sum_error": 2.1644197545356292e-10
+        },
+        {
+          "step": 5000,
+          "relative_A_error": 0.012522096542371273,
+          "relative_contrast_error": 0.012522096542371053,
+          "sum_error": -1.4984813390128693e-10
+        },
+        {
+          "step": 10000,
+          "relative_A_error": 9.580484995124226e-05,
+          "relative_contrast_error": 9.580484995124227e-05,
+          "sum_error": 4.64406291200703e-13
+        },
+        {
+          "step": 20000,
+          "relative_A_error": 7.810339182128049e-09,
+          "relative_contrast_error": 7.810339182124916e-09,
+          "sum_error": 5.626610288800293e-13
+        }
+      ],
+      "eta_min": 1.0079068144275534,
+      "eta_max": 1.0099000863817629,
+      "rho_min": 1.009997386755386e-08,
+      "rho_max": 1.0099991489883409e-08,
+      "S_min": 9.997386755385971e-11,
+      "S_max": 9.999148988340931e-11,
+      "preconditioner_calls": 20000,
+      "steps_completed": 20000,
+      "wall_seconds": 61.644194666994736,
+      "random_draw_digest": "222fe7f9e82a4045785bb4f46aaec77087b1e1f7f2fd2ad968989f6e670c154f"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102702,
+      "variant": "released",
+      "actual_rounded_delta": 1.000000082740371e-10,
+      "status": "complete",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.9901440000237401,
+          "relative_contrast_error": 0.9901440000237253,
+          "sum_error": -1.2241798685863614e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.9057034046074158,
+          "relative_contrast_error": 0.9057034046074149,
+          "sum_error": -3.001332515850663e-10
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.5146846841238719,
+          "relative_contrast_error": 0.5146846841238701,
+          "sum_error": -4.2928149923682213e-10
+        },
+        {
+          "step": 500,
+          "relative_A_error": 0.6566983021464909,
+          "relative_contrast_error": 0.6566983021464905,
+          "sum_error": 2.4637358819745714e-10
+        },
+        {
+          "step": 1000,
+          "relative_A_error": 0.7556691966141553,
+          "relative_contrast_error": 0.7556691966141553,
+          "sum_error": 2.1532997607209836e-11
+        },
+        {
+          "step": 2500,
+          "relative_A_error": 0.27531686868614147,
+          "relative_contrast_error": 0.2753168686861409,
+          "sum_error": 2.34061658943574e-10
+        },
+        {
+          "step": 5000,
+          "relative_A_error": 0.023942365722053768,
+          "relative_contrast_error": 0.02394236572205155,
+          "sum_error": -4.733414771251887e-10
+        },
+        {
+          "step": 10000,
+          "relative_A_error": 0.0003304429610813988,
+          "relative_contrast_error": 0.0003304429610813978,
+          "sum_error": 9.814704604593771e-12
+        },
+        {
+          "step": 20000,
+          "relative_A_error": 2.414028909383932e-06,
+          "relative_contrast_error": 2.414028909383926e-06,
+          "sum_error": -7.893685705084863e-13
+        }
+      ],
+      "eta_min": 1.0080631399353914,
+      "eta_max": 1.0099000940330385,
+      "rho_min": 1.0099973334170205e-08,
+      "rho_max": 1.0099991352582116e-08,
+      "S_min": 9.997333417020476e-11,
+      "S_max": 9.999135258211526e-11,
+      "preconditioner_calls": 20000,
+      "steps_completed": 20000,
+      "wall_seconds": 62.41205625003204,
+      "random_draw_digest": "d63d09dfd7c63672f34092f89f0cea4c64cbc557be1805de5c7f76c78e7fd6ab"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102702,
+      "variant": "repaired",
+      "actual_rounded_delta": 1.000000082740371e-10,
+      "status": "complete",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.9901440000237401,
+          "relative_contrast_error": 0.9901440000237253,
+          "sum_error": -1.2241798685863614e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.9057011897653338,
+          "relative_contrast_error": 0.9057011897653329,
+          "sum_error": -3.001332515850663e-10
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.5130477074273503,
+          "relative_contrast_error": 0.5130477074273484,
+          "sum_error": -4.2814463085960597e-10
+        },
+        {
+          "step": 500,
+          "relative_A_error": 0.6519686229804218,
+          "relative_contrast_error": 0.6519686229804212,
+          "sum_error": 2.461177928125835e-10
+        },
+        {
+          "step": 1000,
+          "relative_A_error": 0.7487074501982344,
+          "relative_contrast_error": 0.7487074501982345,
+          "sum_error": 1.6196821661651484e-11
+        },
+        {
+          "step": 2500,
+          "relative_A_error": 0.26205195049509367,
+          "relative_contrast_error": 0.2620519504950931,
+          "sum_error": 2.3028157158933027e-10
+        },
+        {
+          "step": 5000,
+          "relative_A_error": 0.02423288190055637,
+          "relative_contrast_error": 0.024232881900554292,
+          "sum_error": -4.581162116323867e-10
+        },
+        {
+          "step": 10000,
+          "relative_A_error": 0.0003232554160913986,
+          "relative_contrast_error": 0.0003232554160913976,
+          "sum_error": 9.860445793208328e-12
+        },
+        {
+          "step": 20000,
+          "relative_A_error": 3.6730160805330354e-06,
+          "relative_contrast_error": 3.6730160805330147e-06,
+          "sum_error": -1.4354073485378649e-12
+        }
+      ],
+      "eta_min": 1.0080631399353914,
+      "eta_max": 1.0099000940330385,
+      "rho_min": 1.0099973334170205e-08,
+      "rho_max": 1.0099991352582116e-08,
+      "S_min": 9.997333417020476e-11,
+      "S_max": 9.999135258211526e-11,
+      "preconditioner_calls": 20000,
+      "steps_completed": 20000,
+      "wall_seconds": 56.02950895787217,
+      "random_draw_digest": "d63d09dfd7c63672f34092f89f0cea4c64cbc557be1805de5c7f76c78e7fd6ab"
+    },
+    {
+      "dtype": "float64",
+      "seed": 2026102702,
+      "variant": "repaired_eta1",
+      "actual_rounded_delta": 1.000000082740371e-10,
+      "status": "complete",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.9901449470637471,
+          "relative_contrast_error": 0.9901449470637326,
+          "sum_error": -1.2114469427615404e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.9056314870772504,
+          "relative_contrast_error": 0.9056314870772496,
+          "sum_error": -2.9194779926910996e-10
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.5074960941730712,
+          "relative_contrast_error": 0.5074960941730695,
+          "sum_error": -4.2098236008314416e-10
+        },
+        {
+          "step": 500,
+          "relative_A_error": 0.630808929602012,
+          "relative_contrast_error": 0.6308089296020115,
+          "sum_error": 2.413145239188452e-10
+        },
+        {
+          "step": 1000,
+          "relative_A_error": 0.7040318164174169,
+          "relative_contrast_error": 0.7040318164174169,
+          "sum_error": 2.786570973967173e-11
+        },
+        {
+          "step": 2500,
+          "relative_A_error": 0.23279002295621085,
+          "relative_contrast_error": 0.23279002295621043,
+          "sum_error": 2.0187407301364146e-10
+        },
+        {
+          "step": 5000,
+          "relative_A_error": 0.016789518487864,
+          "relative_contrast_error": 0.016789518487862278,
+          "sum_error": -4.170181977514176e-10
+        },
+        {
+          "step": 10000,
+          "relative_A_error": 0.00015971522434776565,
+          "relative_contrast_error": 0.00015971522434776514,
+          "sum_error": 7.164713267115985e-12
+        },
+        {
+          "step": 20000,
+          "relative_A_error": 1.9413632701535518e-07,
+          "relative_contrast_error": 1.9413632701534208e-07,
+          "sum_error": 1.149524919696887e-12
+        }
+      ],
+      "eta_min": 1.0080631399353914,
+      "eta_max": 1.0099000940330385,
+      "rho_min": 1.0099973334170205e-08,
+      "rho_max": 1.0099991352582116e-08,
+      "S_min": 9.997333417020476e-11,
+      "S_max": 9.999135258211526e-11,
+      "preconditioner_calls": 20000,
+      "steps_completed": 20000,
+      "wall_seconds": 52.125102874822915,
+      "random_draw_digest": "d63d09dfd7c63672f34092f89f0cea4c64cbc557be1805de5c7f76c78e7fd6ab"
+    },
+    {
+      "dtype": "float32",
+      "seed": 2026102701,
+      "variant": "released",
+      "actual_rounded_delta": 0.0,
+      "status": "failed",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.9999965565353833,
+          "relative_contrast_error": 0.9999965565353618,
+          "sum_error": 1.4715624274685979e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.9999407302928408,
+          "relative_contrast_error": 0.9999407302928179,
+          "sum_error": 1.5133991837501526e-09
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.9975834874418473,
+          "relative_contrast_error": 0.9975834813053389,
+          "sum_error": 7.833587005734444e-07
+        },
+        {
+          "step": 368,
+          "relative_A_error": 1.0049219362020243,
+          "relative_contrast_error": 1.0049200619222858,
+          "sum_error": 1.3690433661395218e-05
+        }
+      ],
+      "eta_min": 1.3881193399429321,
+      "eta_max": 11985.5654296875,
+      "rho_min": 0.0001000099946395494,
+      "rho_max": 0.0001000099946395494,
+      "S_min": 9.999999747378752e-05,
+      "S_max": 9.999999747378752e-05,
+      "preconditioner_calls": 368,
+      "exception_type": "_LinAlgError",
+      "exception": "linalg.cholesky: The factorization could not be completed because the input is not positive-definite (the leading minor of order 91 is not positive-definite).",
+      "traceback": "Traceback (most recent call last):\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/rank100_native_gate_20261027/run_structured_release.py\", line 119, in main\n    opt.step(); done=t\n    ^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/askotchv2.py\", line 57, in step\n    block_precond, block_eta, _ = _get_block_properties(\n                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/rank100_native_gate_20261027/run_structured_release.py\", line 94, in props\n    ans = original_props(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/utils/bcd.py\", line 66, in _get_block_properties\n    precond, L = _get_block_precond_L(model, precond_params, block)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/utils/bcd.py\", line 56, in _get_block_precond_L\n    precond, block_lin_op_reg = _get_block_precond(model, precond_params, block)\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/utils/bcd.py\", line 50, in _get_block_precond\n    precond = pi._get_precond(precond_params, update_params, model.lambd, model.device)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/preconditioners/preconditioner_inits.py\", line 27, in _get_precond\n    precond.update(**update_params)\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/preconditioners/nystrom.py\", line 41, in update\n    C = torch.linalg.cholesky(cholesky_target)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch._C._LinAlgError: linalg.cholesky: The factorization could not be completed because the input is not positive-definite (the leading minor of order 91 is not positive-definite).\n",
+      "steps_completed": 368,
+      "wall_seconds": 0.8564057080075145,
+      "random_draw_digest": "5a41b9fa4d01fecda37e9da054ea1a0ebc042306716f63d7418681ce69949a99"
+    },
+    {
+      "dtype": "float32",
+      "seed": 2026102702,
+      "variant": "released",
+      "actual_rounded_delta": 0.0,
+      "status": "failed",
+      "checkpoints": [
+        {
+          "step": 0,
+          "relative_A_error": 1.0,
+          "relative_contrast_error": 1.0,
+          "sum_error": 0.0
+        },
+        {
+          "step": 1,
+          "relative_A_error": 0.9999952090347494,
+          "relative_contrast_error": 0.999995209034689,
+          "sum_error": -2.459273673593998e-09
+        },
+        {
+          "step": 10,
+          "relative_A_error": 0.9999238349603881,
+          "relative_contrast_error": 0.9999238349603864,
+          "sum_error": 4.256435204297304e-10
+        },
+        {
+          "step": 100,
+          "relative_A_error": 0.9988094847903656,
+          "relative_contrast_error": 0.998809484477692,
+          "sum_error": 1.7682577890809625e-07
+        },
+        {
+          "step": 500,
+          "relative_A_error": 0.9882643951063566,
+          "relative_contrast_error": 0.9882643950928502,
+          "sum_error": 3.6750861909240484e-08
+        },
+        {
+          "step": 1000,
+          "relative_A_error": 0.9608226213008959,
+          "relative_contrast_error": 0.960822553249067,
+          "sum_error": 2.6086745492648333e-06
+        },
+        {
+          "step": 1434,
+          "relative_A_error": 0.9240942807688984,
+          "relative_contrast_error": 0.9240942247620284,
+          "sum_error": 2.3665770640945993e-06
+        }
+      ],
+      "eta_min": -63.91958236694336,
+      "eta_max": 223.7185821533203,
+      "rho_min": 0.0001000099946395494,
+      "rho_max": 0.0001000099946395494,
+      "S_min": 9.999999747378752e-05,
+      "S_max": 9.999999747378752e-05,
+      "preconditioner_calls": 1434,
+      "exception_type": "_LinAlgError",
+      "exception": "linalg.cholesky: The factorization could not be completed because the input is not positive-definite (the leading minor of order 91 is not positive-definite).",
+      "traceback": "Traceback (most recent call last):\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/rank100_native_gate_20261027/run_structured_release.py\", line 119, in main\n    opt.step(); done=t\n    ^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/askotchv2.py\", line 57, in step\n    block_precond, block_eta, _ = _get_block_properties(\n                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/rank100_native_gate_20261027/run_structured_release.py\", line 94, in props\n    ans = original_props(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/utils/bcd.py\", line 66, in _get_block_properties\n    precond, L = _get_block_precond_L(model, precond_params, block)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/utils/bcd.py\", line 56, in _get_block_precond_L\n    precond, block_lin_op_reg = _get_block_precond(model, precond_params, block)\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/opts/utils/bcd.py\", line 50, in _get_block_precond\n    precond = pi._get_precond(precond_params, update_params, model.lambd, model.device)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/preconditioners/preconditioner_inits.py\", line 27, in _get_precond\n    precond.update(**update_params)\n  File \"<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official/fast_krr/preconditioners/nystrom.py\", line 41, in update\n    C = torch.linalg.cholesky(cholesky_target)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch._C._LinAlgError: linalg.cholesky: The factorization could not be completed because the input is not positive-definite (the leading minor of order 91 is not positive-definite).\n",
+      "steps_completed": 1434,
+      "wall_seconds": 3.1424959171563387,
+      "random_draw_digest": "93792d7122a052d2bccae03452345f5892004946d90a3063e7cf20b2d230dfd5"
+    }
+  ],
+  "paired_float64_draws_equal": [
+    true,
+    true
+  ]
+}

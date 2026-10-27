@@ -1,0 +1,55 @@
+{
+  "counts_and_sampling": {
+    "initial_steps": 64,
+    "partitions": 4,
+    "context_frames": 16,
+    "warmup": 48,
+    "retained": 96,
+    "height": 320,
+    "width": 512,
+    "fps": 8,
+    "cfg": 12.0,
+    "eta": 1.0,
+    "selected_schedules": 4,
+    "windows": 6,
+    "features": 400,
+    "lookahead": false
+  },
+  "manifests": {
+    "calibration": "59ddcaa20eaf861f3375393d3c34dcab93649726010d2e8b8b50c46e58ebbbad",
+    "reference": "dd58922890f54a47dabe6c30223dd2ac4d5973227ba0b2796eae5e34435a94b0",
+    "heldout": "c9feaafe84bbfc33029ab9b9ec5707e055fa3a817d97214398f6fab25ee96533"
+  },
+  "overall_deadline_unix": 1793053153.092314,
+  "overall_deadline_iso": "2026-10-26T22:19:13.092314+00:00",
+  "stage_wall_caps_seconds": {
+    "calibration": 7200,
+    "rollout": 55800
+  },
+  "precision": "fp16-serial",
+  "chunk": 1,
+  "probe_sha256": "238af2a534ff8311d424f538d33f3c434a979aecd7f765ee6c8ce99097c41592",
+  "probe_filename": "throughput_repair_result.json",
+  "explicit_preoutcome_precision_revision": true,
+  "precision_scope": "Both TF32 flags false; FP16 mode autocasts only apply_model, returning FP32 before CFG; original serial CFG calls; VAE/text/scheduler FP32",
+  "precision_revision_sha256": "7f58d660a7299a788b9bc363affb2193b0dd54de18c9137f78fe2155e649a43c",
+  "base_seed": 20261026,
+  "selected_schedule_count": 4,
+  "reference_count": 128,
+  "comparison": "proxy1-best minus proxy1-worst in late-minus-early KVD; absolute late KVD alongside; proxy3 secondary",
+  "selection_ties": "lexicographic schedule name; fill proxy2 extremes inward",
+  "source_sha256": {
+    "study_worker.py": "7d931166c0a55d24be889944696d9a2cad5c43b749efef0fc792744f4df4e8c9",
+    "study_contract.py": "389964899b313bce18ded30417272a32f5f6ca3b44b687dad5291ae723abc57b",
+    "modal_study.py": "9371d9a346654b3a7709c7912b25c6c7ffa5b927e27b5790b8f9518dc3e33854",
+    "freeze_study.py": "1948012c0dd2bcaad8e14b54e6e6150743aa0b628b70be4f23b415b2ff5063db",
+    "../schedule_core.py": "caa40cfa726d51a507120c446fbe910f70176b3d2e6ff5e64dc0724ba8a0f8d9",
+    "../fifo_adapter.py": "6f4620c181221060d2bc0e236c1756d02138164ec556ae315f220c9b18b6947e",
+    "../modal_smoke.py": "d713f8d9e3cad61e6f434ffee6de2f8ea11b626c0bbd99cf7d7275a20472f085",
+    "../cuda_wheels.json": "e374a9b93f5b047b9ba9914be2bea8e82a879910241ea4892e968cf484841984",
+    "../xformers_build_metadata.json": "468e0008d6278f997589f5a103e8c8def6fb329b431e2c3162846ceaf149f77a",
+    "../repair_decord_metadata.py": "ccd0d384d2b76f19865ed7794fe531ceae8a8aa73dd8dedd26bb54ac41001c86",
+    "../cpu_import_gate.py": "0cfe6d8410e7ffd30b181d76f622aad206ecff80fc85697a8be30230bca913fe",
+    "../smoke_worker.py": "563eec1ee905b484cd1b33e21621343dba4841bac8fad57af44277f8e3dcaf52"
+  }
+}

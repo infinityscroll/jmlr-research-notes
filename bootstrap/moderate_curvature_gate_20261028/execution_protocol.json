@@ -1,0 +1,14 @@
+{
+  "n": 1000000,
+  "replications": 512,
+  "B": 3,
+  "seed": 202610281911,
+  "eta": 0.94,
+  "alpha": 0.51,
+  "sigma": 4.0,
+  "x0": 0.0,
+  "cutoff": 3.182446305284263,
+  "max_wall_seconds": 300,
+  "source_sha256": "7b8ad9f3fc187769581b6c7a46f0ddd6785baaf6291faa571aff24339e3eb7eb",
+  "protocol_sha256": "aa01a09c68126da5e8f63bdd4938b4a17992dd541ef189e69e25b1951be044f5"
+}

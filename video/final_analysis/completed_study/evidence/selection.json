@@ -1,0 +1,120 @@
+{
+  "schedules": [
+    "descending",
+    "ascending",
+    "rotate21",
+    "shuffle29"
+  ],
+  "rankings": {
+    "homogeneous_train": [
+      "descending",
+      "alternating",
+      "rotate21",
+      "shuffle17",
+      "shuffle29",
+      "alternating_reverse",
+      "rotate42",
+      "ascending"
+    ],
+    "homogeneous_fifo": [
+      "descending",
+      "rotate21",
+      "alternating",
+      "alternating_reverse",
+      "shuffle17",
+      "rotate42",
+      "shuffle29",
+      "ascending"
+    ],
+    "mixed_fifo": [
+      "descending",
+      "rotate21",
+      "alternating_reverse",
+      "alternating",
+      "shuffle17",
+      "rotate42",
+      "shuffle29",
+      "ascending"
+    ]
+  },
+  "means": {
+    "homogeneous_train": {
+      "alternating_reverse": 58.68419893071041,
+      "shuffle17": 57.73773597128093,
+      "rotate21": 56.569778988974576,
+      "shuffle29": 58.378035977393665,
+      "alternating": 56.162775125631015,
+      "ascending": 60.44123023556676,
+      "rotate42": 59.129782049898495,
+      "descending": 55.50224762626385
+    },
+    "homogeneous_fifo": {
+      "alternating_reverse": 1.3973603136559998,
+      "shuffle17": 1.4069461461878041,
+      "rotate21": 1.1282407914420767,
+      "shuffle29": 1.610298636707173,
+      "alternating": 1.375796865428935,
+      "ascending": 2.1257751718115747,
+      "rotate42": 1.5773672855152538,
+      "descending": 1.0162819660982185
+    },
+    "mixed_fifo": {
+      "alternating_reverse": 1.434727982578753,
+      "shuffle17": 1.4496534286482663,
+      "rotate21": 1.1915868356644117,
+      "shuffle29": 1.6394292491063802,
+      "alternating": 1.435460659511064,
+      "ascending": 2.1443354385822335,
+      "rotate42": 1.6214952182710287,
+      "descending": 1.081009666083725
+    }
+  },
+  "primary_best": "descending",
+  "primary_worst": "ascending",
+  "secondary_best": "descending",
+  "secondary_worst": "ascending",
+  "rule": "proxy1 and proxy3 extremes; fill alternating proxy2 extremes inward; lexicographic score ties",
+  "protocol_sha256": "2293c86d470d06e1dd8daa6c352b689c1fe43344ae70382f4be3567b42adbf4e",
+  "heldout_manifest_sha256": "c9feaafe84bbfc33029ab9b9ec5707e055fa3a817d97214398f6fab25ee96533",
+  "calibration_shard_sha256": {
+    "calibration_00.json": "93a4826fde12eecd101f898c5a3955a8dd0698c091f292b38ef068bae829cecd",
+    "calibration_01.json": "433980d548a906ae655dfa22212884743326c98c9bf80f315d069c2db1d1d533",
+    "calibration_02.json": "e0978ae24dc35f5fe30dc2a52b3b67a5b95729183089afc0b843059289d108fd",
+    "calibration_03.json": "1a4377d9087a94522dd4645d1e23ae7d6243147804b7fe6dd0cc57165cc27afb"
+  },
+  "calibration_ids": [
+    "video6266",
+    "video6001",
+    "video1295",
+    "video6050",
+    "video2395",
+    "video1834",
+    "video5724",
+    "video320",
+    "video5873",
+    "video560",
+    "video6144",
+    "video3035",
+    "video445",
+    "video650",
+    "video5208",
+    "video2998",
+    "video5970",
+    "video4455",
+    "video2680",
+    "video196",
+    "video2935",
+    "video5132",
+    "video3288",
+    "video2745",
+    "video187",
+    "video1615",
+    "video2192",
+    "video1421",
+    "video4662",
+    "video3354",
+    "video2191",
+    "video2897"
+  ],
+  "status": "frozen before held-out rollout"
+}

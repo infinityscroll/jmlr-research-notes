@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "no_new_random_draws": true,
+  "terminal_cases": [
+    {
+      "case": "logcosh_ASGD",
+      "covered": 405,
+      "replications": 512,
+      "exact_outward_CP_lower": "7531873/10000000",
+      "exact_outward_CP_upper": "82544433/100000000"
+    },
+    {
+      "case": "quadratic_ASGD",
+      "covered": 486,
+      "replications": 512,
+      "exact_outward_CP_lower": "2316191/2500000",
+      "exact_outward_CP_upper": "96656341/100000000"
+    },
+    {
+      "case": "logcosh_SAA_control",
+      "covered": 486,
+      "replications": 512,
+      "exact_outward_CP_lower": "2316191/2500000",
+      "exact_outward_CP_upper": "96656341/100000000"
+    },
+    {
+      "case": "quadratic_SAA_control",
+      "covered": 486,
+      "replications": 512,
+      "exact_outward_CP_lower": "2316191/2500000",
+      "exact_outward_CP_upper": "96656341/100000000"
+    }
+  ],
+  "exact_small_joint_law_checks": 64,
+  "maximum_SAA_residual": 3.729655473350135e-17,
+  "outputs_sha256": "83a9cdf7df452b6594bdcd6d215725d2ab3a0bfa00ec39740b2cd142e69653ed",
+  "checker_sha256": "680ed0ee27d9ffe51526ad392c76f8c7beffab13c5614fbc0a6f39be4d6b47e0",
+  "scope": "Saved numerical statistics, confidence endpoints and algorithm-law mapping; not independent terminal-trajectory replication."
+}

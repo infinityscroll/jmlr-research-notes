@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact fractions.Fraction",
+  "frozen_main_sha256": "60e9bae29d787b80f2056a96e681276b3ec9c3f1d49f2eb0c0435136469e1147",
+  "orthogonality": {
+    "helmert_gram_entries": 203,
+    "walsh_bit_counts": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "three_vertex_tree_label_patterns": 125,
+    "surviving_tree_patterns": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        3
+      ],
+      [
+        4,
+        4,
+        4
+      ]
+    ]
+  },
+  "compressed_actual_hedge": {
+    "same_graph_as_six_node_obstruction": true,
+    "edge_root_states_each": 3,
+    "edge_roots": [
+      [
+        "A",
+        "Y"
+      ],
+      [
+        "Y",
+        "R"
+      ],
+      [
+        "R",
+        "U"
+      ],
+      [
+        "U",
+        "B"
+      ]
+    ],
+    "hidden_joint_states": 81,
+    "lambda": "1/1048576",
+    "local_cell_minima": {
+      "outer": "1/8",
+      "inner": "1/4"
+    },
+    "equal_observation_atoms": 64,
+    "action_results": {
+      "-1": {
+        "outer_y_positive": "1/2",
+        "inner_y_positive": "4194305/8388608",
+        "gap": "1/8388608",
+        "joint_atoms_each": 32
+      },
+      "1": {
+        "outer_y_positive": "1/2",
+        "inner_y_positive": "4194305/8388608",
+        "gap": "1/8388608",
+        "joint_atoms_each": 32
+      }
+    },
+    "mode_count_outer": 2,
+    "route_reentry_count_h": 1,
+    "old_independent_bit_states_each": 4
+  },
+  "universal_realization_boundary": {
+    "observed_nodes": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "X",
+      "Y"
+    ],
+    "directed_edges": [
+      [
+        "A1",
+        "X"
+      ],
+      [
+        "A2",
+        "X"
+      ],
+      [
+        "B1",
+        "Y"
+      ],
+      [
+        "B2",
+        "Y"
+      ]
+    ],
+    "sole_bidirected_edge": [
+      "X",
+      "Y"
+    ],
+    "latent_states_used": 5,
+    "mode_count": 4,
+    "lambda": "1/256",
+    "minimum_local_cell": "1/4",
+    "conditional_covariance_matrix": [
+      [
+        "1/16",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/16",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/16",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/16"
+      ]
+    ],
+    "rank": 4,
+    "required_latent_states_at_least": 5,
+    "conditional_marginals_X_Y": "uniform for every external parent setting",
+    "observed_atoms_checked": 64,
+    "scope": "Lower bound for this specified connected-set perturbation law on this graph, not an impossibility theorem for binary-root hedge witnesses."
+  }
+}

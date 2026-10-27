@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "source_sha256": "3edaed4fc1d02c5f6f5f58c8c9ed2ab1874d5e8df26d4c0d86281e60ce1dffe2",
+  "checker_sha256": "dab33bdf1e2af37e56708c9443234d00309b52c73260440e47191d32250f8cbb",
+  "counts": {
+    "source_binding": 1,
+    "parameter_domain": 4,
+    "document_domain": 4,
+    "projection_event_zero": 18,
+    "topic_stochasticity": 8,
+    "topic_nonnegativity": 8,
+    "gram_floor": 8,
+    "singular_value_floor": 8,
+    "interior_mixture": 80,
+    "mixture_spectral_floor": 8,
+    "corpus_anchor_floor": 36,
+    "positive_likelihood": 40,
+    "score_centering": 40,
+    "parameter_free_baseline": 4,
+    "all_extra_topic_permutations": 862,
+    "exact_quotient_distance": 4
+  },
+  "total_assertions": 1133,
+  "fixtures": [
+    {
+      "K": 3,
+      "p": 13,
+      "n": 256,
+      "s": "3/16",
+      "alpha": "1/384",
+      "beta": "1/4500000",
+      "max_V_over_beta": "28192/1449",
+      "max_U_over_alpha_beta": "1048576/27"
+    },
+    {
+      "K": 3,
+      "p": 13,
+      "n": 256,
+      "s": "1/4",
+      "alpha": "1/384",
+      "beta": "1/4500000",
+      "max_V_over_beta": "2882/161",
+      "max_U_over_alpha_beta": "12288"
+    },
+    {
+      "K": 4,
+      "p": 14,
+      "n": 384,
+      "s": "3/16",
+      "alpha": "1/512",
+      "beta": "1/8000000",
+      "max_V_over_beta": "68480/2781",
+      "max_U_over_alpha_beta": "16777216/243"
+    },
+    {
+      "K": 4,
+      "p": 14,
+      "n": 384,
+      "s": "1/4",
+      "alpha": "1/512",
+      "beta": "1/8000000",
+      "max_V_over_beta": "6968/309",
+      "max_U_over_alpha_beta": "65536/3"
+    },
+    {
+      "K": 5,
+      "p": 15,
+      "n": 516,
+      "s": "3/16",
+      "alpha": "1/640",
+      "beta": "1/12500000",
+      "max_V_over_beta": "433120/14769",
+      "max_U_over_alpha_beta": "26214400/243"
+    },
+    {
+      "K": 5,
+      "p": 15,
+      "n": 516,
+      "s": "1/4",
+      "alpha": "1/640",
+      "beta": "1/12500000",
+      "max_V_over_beta": "43870/1641",
+      "max_U_over_alpha_beta": "102400/3"
+    },
+    {
+      "K": 6,
+      "p": 16,
+      "n": 640,
+      "s": "3/16",
+      "alpha": "1/768",
+      "beta": "1/18000000",
+      "max_V_over_beta": "58432/1737",
+      "max_U_over_alpha_beta": "4194304/27"
+    },
+    {
+      "K": 6,
+      "p": 16,
+      "n": 640,
+      "s": "1/4",
+      "alpha": "1/768",
+      "beta": "1/18000000",
+      "max_V_over_beta": "5892/193",
+      "max_U_over_alpha_beta": "49152"
+    }
+  ],
+  "scope": "Exact admissible original-family fixtures for K3..6, both parameter endpoints, full permutations, positive rational spectral floors and score identities. Conditioning event has zero projection in these fixtures. Does not replace the continuum Fisher, conditioning-probability, or minimax proof."
+}

@@ -1,0 +1,132 @@
+{
+  "scope": "Attention public-release staging; no third-party optimizer cache or downloaded papers included.",
+  "file_count_including_this_manifest": 32,
+  "files": {
+    ".gitignore": {
+      "sha256": "3b2d74254718b0b2507a7e384f57867a1a2802de368d414d06661228ec5273e8",
+      "bytes": 72
+    },
+    "README.md": {
+      "sha256": "1092c5fbfc9299969a9673535f9c90caeec8b8cb1b0142ab659d5a232b0ec4fd",
+      "bytes": 7265
+    },
+    "THIRD_PARTY.md": {
+      "sha256": "fdc5936bf32ee917ec20c51b4c72f236a29b6094e21e3b490f518a89d42edef6",
+      "bytes": 1828
+    },
+    "audits/independent_generic_p_audit.md": {
+      "sha256": "5827651ea3d5c6251cbab80f5aca20033a2f856823b503a0217cea6b001adb5d",
+      "bytes": 8584
+    },
+    "audits/independent_p_three_halves_audit.md": {
+      "sha256": "caddf16cfdfdf775b75c9a3a0da031a06e65abba5570eaf9770035fa77a6e80b",
+      "bytes": 6873
+    },
+    "audits/independent_positive_gram_audit.md": {
+      "sha256": "517d13f3069eeffb557fa48f4c7a4fc07d24ee943137657c00ff95654b1f1588",
+      "bytes": 8545
+    },
+    "audits/independent_printed_cone_audit.md": {
+      "sha256": "1aa317371d3e23188eea13b57f14656fe846ed52be1f043056dfa9cf9e3149d3",
+      "bytes": 8671
+    },
+    "audits/independent_selected_path_audit.md": {
+      "sha256": "6d4d6b026e5a54f4f0dcdc0dae33f4edd065d8d6d2d7fb961134150e006bf4e1",
+      "bytes": 9150
+    },
+    "data/diagnostic_protocol.json": {
+      "sha256": "62c7808592fd9951a0144bd0cb267fae7ea88e8dc25f2be490a2185e4d7fa081",
+      "bytes": 625
+    },
+    "data/diagnostic_results.json": {
+      "sha256": "91a5f699b343c348dc46726ba89b40a6517d76c3a5103f2f7fce7d49e902fe4a",
+      "bytes": 275775
+    },
+    "data/diagnostic_states.npz": {
+      "sha256": "6719aefe0dbe135064578d85d8bf7ed2590a220eaa4e39ec63570da0bfdb7bc5",
+      "bytes": 15605
+    },
+    "fetch_optimizer.py": {
+      "sha256": "277d3deb21dcc9faec169266b3343aee70b2aa97b84520bc16028653e4d3f4ee",
+      "bytes": 1674
+    },
+    "notes/TARGETED_SUBSUMPTION_TEST.md": {
+      "sha256": "7046f22882e1db2993636f413d2d6f0f99898283766baadbeeffbcb8d6b42e35",
+      "bytes": 9776
+    },
+    "notes/diagnostic_report.md": {
+      "sha256": "a989b3ac731f903c0ae1c21d7f71407a2c67d460dfb28e0c1f3924e219e04d4b",
+      "bytes": 3089
+    },
+    "notes/primary_scope_comparison.md": {
+      "sha256": "f1f16e5539c703560c633ef2313c4fdd5c9ed444275d2a024561223794b0618f",
+      "bytes": 11292
+    },
+    "notes/source_mapping_and_scope.md": {
+      "sha256": "05fca3971974520b9850aa79acc64557ca8a230dcf3a6b25a7d157d9847f6985",
+      "bytes": 4006
+    },
+    "proofs/generic_p_open_input_theorem.md": {
+      "sha256": "db10a99b365cb9de1c422d9ded8e4839c703f9656dfd11aae5684613660d4551",
+      "bytes": 12768
+    },
+    "proofs/p_three_halves_dynamics.md": {
+      "sha256": "262392416101c3332a636c66ddc3df899ff1ca3bba9e303b5e0e7b2f1571e23d",
+      "bytes": 14006
+    },
+    "proofs/positive_gram_extension.md": {
+      "sha256": "29c18514bf16ab7282b227e46bafcee71e677332644c92af8d2ff78ccd97fc36",
+      "bytes": 11766
+    },
+    "proofs/printed_single_layer_cone_compatibility.md": {
+      "sha256": "bcd9d2fbb6270cf036b4daf27d87f9a59200f2e3ab7db1de78dd33abd08a4ec5",
+      "bytes": 7015
+    },
+    "proofs/selected_path_noncollapse_theorem.md": {
+      "sha256": "46db3f866ad368b39f1bf600e730133a2f52570b6f4a24464aebb39e57187ae7",
+      "bytes": 14771
+    },
+    "provenance/PORTABLE_CHANGES.md": {
+      "sha256": "932b1fc9c5fe0a567343dcfe6b7a133c03c32b1b37421fe2e1ce5a5eb025dd31",
+      "bytes": 2601
+    },
+    "provenance/WORKING_DERIVATION.md": {
+      "sha256": "a8b8bc78c85244296de63aeeb05106b5052811e75658a96754ab96e152fa07bb",
+      "bytes": 4714
+    },
+    "provenance/algebra_and_retained_states_certificate.json": {
+      "sha256": "e9435b4bf7293557dc05ada3ff34ab5649733da422c04c328912df5630e172a2",
+      "bytes": 2372
+    },
+    "provenance/release_verification.json": {
+      "sha256": "d1c3de47455fb3410142f65c03ee898ff0a71634fc6233d06ec2c10d0a53eab4",
+      "bytes": 4602
+    },
+    "provenance/source_manifest.json": {
+      "sha256": "d1ce6f24dc7e7298c6702b641fc8472e96d07bcc05ca6806247f39cc96cf5fb6",
+      "bytes": 6772
+    },
+    "provenance/three_halves_interface_certificate.json": {
+      "sha256": "41cd30e4bd612ccc355c186fbeedb9720f247d0c9adea6cc2262891dbc60d385",
+      "bytes": 748
+    },
+    "requirements-native.txt": {
+      "sha256": "3393bed0efa2cc30106e4981e3ded6ef6c8d9294f84eb87fa45bf28a63252dca",
+      "bytes": 34
+    },
+    "requirements.txt": {
+      "sha256": "99f43573522565d7c480efd1f954892948033915df6a4e685327e995d3396eb6",
+      "bytes": 15
+    },
+    "run_diagnostic.py": {
+      "sha256": "eb66d363782b6a9ecb520393068ce424745a943c8e72db7e7e288265528f6b5c",
+      "bytes": 5225
+    },
+    "verify.py": {
+      "sha256": "94c87b7b693134583a4777cc9729801bd5cf9e810cbb4b7a9d07207b824ceb6a",
+      "bytes": 11885
+    }
+  },
+  "proof_status": "All five included sources have separate internal analytic reviews; no external or formal verification or priority claim.",
+  "new_training_steps": 0
+}

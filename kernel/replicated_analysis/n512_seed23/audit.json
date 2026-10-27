@@ -1,0 +1,188 @@
+{
+  "status": "passed",
+  "issues": [],
+  "run": "<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/regime_replicates/output/n512_seed23",
+  "summary_sha256": "3eeef5d06b7075f8b33b7dbf8e90faa120b80ef415f564daf4ff43f464554762",
+  "config_sha256": "776d6db282bf1340e16a7402a9965975c6c7e115943daf615b0a703a7cc44de8",
+  "source_commit": "61cdb69cb11adea48ecb13c823ad654d46dc15df",
+  "expected_workers": 18,
+  "observed_workers": 18,
+  "expected_candidates_per_worker": 12,
+  "observed_candidates": 216,
+  "suite_elapsed_seconds": 704.6434730290002,
+  "timing": "warm",
+  "selection_before_test": {
+    "runner": "<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/regime_replicates/runner.py",
+    "sha256": "1fbc3321e9aa00726ef52d05a6b3d9a05d1ffbd6d818efd31938a9b5051d9f10",
+    "selection_write_lines": [
+      210
+    ],
+    "test_creation_lines": [
+      212
+    ],
+    "source_order_passed": true,
+    "limitation": "Source ordering plus saved weights hash and consistent runtime timestamps, not an independently trusted event logger."
+  },
+  "methods": {
+    "official_askotchv2": {
+      "workers": 6,
+      "candidates": 72,
+      "stops": {
+        "budget": 72
+      },
+      "measured_seconds": {
+        "minimum": 4.00080976199979,
+        "median": 4.008536984000102,
+        "maximum": 4.014042437000171,
+        "total": 288.5759673629991
+      },
+      "warmup_seconds": {
+        "minimum": 0.07338984299985896,
+        "median": 0.07988187100022515,
+        "maximum": 13.669820690000051,
+        "total": 24.98388734399896
+      },
+      "overrun_seconds": {
+        "minimum": 0.0008097619997897709,
+        "median": 0.008536984000102166,
+        "maximum": 0.014042437000171049,
+        "total": 0.5759673629991084
+      },
+      "eligible_checkpoints": 432,
+      "late_or_invalid_checkpoints": 0,
+      "selected_invalid_acceleration_settings": 0
+    },
+    "corrected_askotchv2": {
+      "workers": 6,
+      "candidates": 72,
+      "stops": {
+        "budget": 72
+      },
+      "measured_seconds": {
+        "minimum": 4.000334242000008,
+        "median": 4.00740977449982,
+        "maximum": 4.015313833000164,
+        "total": 288.4836327939979
+      },
+      "warmup_seconds": {
+        "minimum": 0.07280492300014885,
+        "median": 0.08078005699985624,
+        "maximum": 13.720955471999787,
+        "total": 25.025414861000172
+      },
+      "overrun_seconds": {
+        "minimum": 0.00033424200000808924,
+        "median": 0.007409774499819832,
+        "maximum": 0.015313833000163868,
+        "total": 0.4836327939979128
+      },
+      "eligible_checkpoints": 432,
+      "late_or_invalid_checkpoints": 0,
+      "selected_invalid_acceleration_settings": 0
+    },
+    "inducing_pcg_falkon": {
+      "workers": 6,
+      "candidates": 72,
+      "stops": {
+        "residual_tolerance": 72
+      },
+      "measured_seconds": {
+        "minimum": 0.012187355000151001,
+        "median": 0.03365512699997453,
+        "maximum": 0.1813228529999833,
+        "total": 3.7573237719971075
+      },
+      "warmup_seconds": {
+        "minimum": 0.04792393199977596,
+        "median": 0.0592651355000271,
+        "maximum": 13.593785602000025,
+        "total": 24.463342225999895
+      },
+      "overrun_seconds": {
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.0,
+        "total": 0.0
+      },
+      "eligible_checkpoints": 144,
+      "late_or_invalid_checkpoints": 0,
+      "selected_invalid_acceleration_settings": 0
+    }
+  },
+  "acceleration": {
+    "trials": 144,
+    "code_inequality_violations": 0,
+    "lambda_nu_above_one": 84,
+    "theoretical_projection_bounds_certified": false
+  },
+  "cases": [
+    {
+      "n": 512,
+      "kernel": "matern_0.5",
+      "noise_sd": 0.05,
+      "seed": 23,
+      "official_test_mse": 0.18246570229530334,
+      "corrected_test_mse": 0.18246565759181976,
+      "inducing_test_mse": 0.2311963438987732,
+      "corrected_over_inducing": 0.7892238022228862,
+      "official_over_corrected": 1.0000002449966978
+    },
+    {
+      "n": 512,
+      "kernel": "matern_0.5",
+      "noise_sd": 0.3,
+      "seed": 23,
+      "official_test_mse": 0.2854030132293701,
+      "corrected_test_mse": 0.28756198287010193,
+      "inducing_test_mse": 0.3294660151004791,
+      "corrected_over_inducing": 0.8728122771096816,
+      "official_over_corrected": 0.992492159014959
+    },
+    {
+      "n": 512,
+      "kernel": "matern_2.5",
+      "noise_sd": 0.05,
+      "seed": 23,
+      "official_test_mse": 0.09620590507984161,
+      "corrected_test_mse": 0.0954337939620018,
+      "inducing_test_mse": 0.12365470081567764,
+      "corrected_over_inducing": 0.7717765142164508,
+      "official_over_corrected": 1.0080905419955035
+    },
+    {
+      "n": 512,
+      "kernel": "matern_2.5",
+      "noise_sd": 0.3,
+      "seed": 23,
+      "official_test_mse": 0.23938439786434174,
+      "corrected_test_mse": 0.24060070514678955,
+      "inducing_test_mse": 0.25202086567878723,
+      "corrected_over_inducing": 0.9546856546927617,
+      "official_over_corrected": 0.9949447060776245
+    },
+    {
+      "n": 512,
+      "kernel": "rbf",
+      "noise_sd": 0.05,
+      "seed": 23,
+      "official_test_mse": 0.09059931337833405,
+      "corrected_test_mse": 0.09108992666006088,
+      "inducing_test_mse": 0.1026715338230133,
+      "corrected_over_inducing": 0.8871974856933864,
+      "official_over_corrected": 0.9946139677600383
+    },
+    {
+      "n": 512,
+      "kernel": "rbf",
+      "noise_sd": 0.3,
+      "seed": 23,
+      "official_test_mse": 0.23885363340377808,
+      "corrected_test_mse": 0.24284018576145172,
+      "inducing_test_mse": 0.2390250563621521,
+      "corrected_over_inducing": 1.0159612111690886,
+      "official_over_corrected": 0.9835836381644439
+    }
+  ],
+  "numerical_failures": [],
+  "scope": "One frozen (n,seed) shard of the replicated90cell grid; equal available warmed budgets, unused inducing time reported. Aggregate requires all five seeds. Numerical failures are outcomes, not silent omissions."
+}

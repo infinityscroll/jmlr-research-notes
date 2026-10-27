@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "official_source": {
+    "commit": "61cdb69cb11adea48ecb13c823ad654d46dc15df",
+    "source": "<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official",
+    "unmodified": true
+  },
+  "device": "cpu",
+  "dtype": "float64",
+  "inputs": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0044721471353898505,
+      0.0
+    ],
+    [
+      0.0022360735676949252,
+      0.003872993028709416
+    ]
+  ],
+  "kernel": [
+    [
+      1.0,
+      0.99999,
+      0.99999
+    ],
+    [
+      0.99999,
+      1.0,
+      0.99999
+    ],
+    [
+      0.99999,
+      0.99999,
+      1.0
+    ]
+  ],
+  "rhs": [
+    0.000160000000000049,
+    -0.000160000000000049,
+    0.0
+  ],
+  "checks": [
+    {
+      "stale": true,
+      "one_step_checks": 24,
+      "max_absolute_error": 8.498801662426558e-11
+    },
+    {
+      "stale": false,
+      "one_step_checks": 24,
+      "max_absolute_error": 8.498801662426558e-11
+    }
+  ],
+  "scope": "All three blocks and native state basis; proves code-interface match numerically, not the instability theorem.",
+  "exact_checker_sha256": "1d3e3347834a583f1ab78b80d5c73e138cdc8cdf6b88a11a83acf95e88d85bef",
+  "theorem_sha256": "31310da5f52c1ac30237f83b24a16b5d1c1ad4fe8acca10a173aebc5b92659d4",
+  "patch_sha256": "ba5ae441c6f4156e735f2510fa266fc9c6fbf81bafa55ee1ed1f9fa5b8ca5904",
+  "checker_sha256": "83789fa75bd3a5be958923d15e775d2163309c221b15f2b6e7e82c703520433b"
+}

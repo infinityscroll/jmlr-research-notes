@@ -1,0 +1,294 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\newtheorem{proposition}{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Var}{\operatorname{Var}}
+\title{A harmonic-step endpoint correction for the\\cheap offline bootstrap coverage theorem}
+\author{}
+\date{26 October 2026\\\small Draft for mathematical review}
+\begin{document}
+\maketitle
+\vspace{-1.5em}
+\begin{abstract}
+The averaged-SGD statement of Theorem 1 in Lam and Wang,
+\emph{Cheap Bootstrap for Fast Uncertainty Quantification of Stochastic
+Gradient Descent}, permits the learning-rate endpoint $\alpha=1$ through
+Assumption 5. A bounded one-dimensional quadratic example satisfies its
+stated assumptions but has coverage at most
+$(1+\sqrt2\,t_{3,.975})^2/30000\approx0.001008575$ for every sample size,
+instead of the asserted limit $0.95$. The argument uses the published
+offline Algorithm 1, including its common initialization, original-estimate
+centering, and $t_3$ critical value. We give the complete finite-sample
+calculation. This is an endpoint correction, not a new inference procedure.
+\end{abstract}
+
+\section{The precise statement being corrected}
+
+In the published version of Lam and Wang \cite{LW}, Assumption 5
+(printed p.~8) permits
+\[
+ \eta_t=\eta t^{-\alpha},\qquad \alpha\in(1/2,1],
+\]
+and requires the relevant Hessian function classes to be
+Glivenko--Cantelli. The averaged-SGD part of Theorem 1 (p.~8) invokes
+Assumptions 1--5 and asserts asymptotically nominal coverage for any fixed
+number of bootstrap runs. The same endpoint and assertion are present in
+arXiv v2 \cite{LWv2}.
+
+Here we address only the \emph{offline averaged-SGD interval}.
+Write the recursion, with one-based data indexing, as
+\[
+ x_t=x_{t-1}-\eta_t\nabla h(x_{t-1},Z_t),\qquad
+ \bar x_n=\frac1n\sum_{t=1}^n x_t.
+ \tag{1}
+\]
+For each $b=1,\ldots,B$, Algorithm 1 (p.~6) draws $n$ observations
+independently from the empirical distribution, runs the same recursion
+from the same $x_0$, and obtains $\bar x_n^{*b}$. Its interval is
+\[
+ I_n=\left[\bar x_n-t_{B,1-\gamma/2}R_n,\,
+                 \bar x_n+t_{B,1-\gamma/2}R_n\right],
+ \qquad
+ R_n^2=\frac1B\sum_{b=1}^B(\bar x_n^{*b}-\bar x_n)^2 .
+ \tag{2}
+\]
+This is the paper's equation (3) and Algorithm 1, lines 6 and 9--10.
+There is no burn-in in (1). Assumption 6's separate condition
+$\eta l>1/2$ is used by the raw-SGD statement, not by this averaged-SGD
+part of Theorem 1.
+
+\section{A bounded example satisfying Assumptions 1--5}
+
+Let
+\[
+ \Pp(Z=\sigma)=\Pp(Z=-\sigma)=\tfrac12,\qquad
+ \sigma=\tfrac1{100},\qquad
+ h(x,Z)=\tfrac12(x-Z)^2,\qquad x_0=1,\qquad
+ \eta_t=\frac1{4t}.
+ \tag{3}
+\]
+Then $H(x)=\E h(x,Z)=\tfrac12(x^2+\sigma^2)$ and $x^*=0$.
+Take the compact neighborhood $\mathcal X=[-1,1]$.
+The stated assumptions can be checked directly:
+\begin{enumerate}
+ \item Both Hessians equal one. The samplewise eigenvalue bounds hold
+ with $l=1/2$ and $L=3/2$; the Hessian Lipschitz bound holds with
+ any positive upper bound, for example $l_1=1$.
+ \item Gradient noise is $-Z_t$, independent of the preceding data
+ and of mean zero.
+ \item The initialization bound holds with $\tau_0=1$.
+ At $x^*$ the fourth moment of the gradient is $10^{-8}$, its
+ $L^4$ norm is $0.01$, and $S(x^*)=10^{-4}$.
+ One may take $\tau=0.01$, $\lambda_1=5\cdot10^{-5}$ and
+ $\lambda_2=2\cdot10^{-4}$.
+ \item The empirical minimizer is $\hat x_n=\bar Z_n\in[-.01,.01]$
+ for every $n$. Since $Z_t^2=\sigma^2$ identically,
+ \[
+ H_n(x)-H(x)=-x\bar Z_n,\qquad
+ \sup_{x\in\mathcal X}|H_n(x)-H(x)|
+ \le |\bar Z_n|\longrightarrow0\quad\text{almost surely}.
+ \]
+ \item Here $\eta=1/4$ and $\alpha=1$. The Hessian class is the
+ singleton constant function $1$, so its empirical mean equals
+ its expectation for every sample.
+\end{enumerate}
+All observations, all moments, and the initialization are bounded.
+In fact each iterate stays in $[-.01,1]$, since each update is a
+convex combination of its previous value and $Z_t$.
+
+\begin{proposition}\label{prop:bound}
+For the model in (3), use the exact offline interval (2) with
+$B=3$ and $\gamma=0.05$. For every integer $n\ge1$,
+\[
+ \Pp(0\in I_n)
+ \le \frac{(1+\sqrt2\,t_{3,.975})^2}{30000}
+ \approx0.001008574881.
+ \tag{4}
+\]
+Consequently its coverage cannot converge to $0.95$.
+\end{proposition}
+
+\section{Complete coefficient and coverage calculation}
+
+Put $a=1/4$, and define the positive deterministic quantities
+\[
+ p_t=\prod_{k=1}^t(1-a/k),\qquad
+ q_n=\frac1n\sum_{t=1}^n p_t,\qquad
+ w_{ni}=\frac{a}{i p_i}\frac1n\sum_{t=i}^n p_t.
+ \tag{5}
+\]
+Iterating $x_t=(1-a/t)x_{t-1}+(a/t)Z_t$ and averaging gives
+\[
+ \bar x_n=q_nx_0+e_0,\qquad
+ e_0=\sum_{i=1}^n w_{ni}Z_i.
+ \tag{6}
+\]
+For a bootstrap run the same identity holds with the same $q_n,w_{ni}$
+and resampled observations:
+\[
+ \bar x_n^{*b}=q_nx_0+e_b,\qquad
+ e_b=\sum_{i=1}^n w_{ni}Z_i^{*b}.
+ \tag{7}
+\]
+In particular, the initialization contribution cancels exactly in
+$\bar x_n^{*b}-\bar x_n=e_b-e_0$. It does not cancel in the distance
+of $\bar x_n$ from $x^*=0$.
+
+Let $V_n=\sum_iw_{ni}^2$ and $s_n=\sum_iw_{ni}$. We next compute the
+unconditional second moment of a bootstrap difference, retaining its
+dependence on the original data. Conditional on $Z_1,\ldots,Z_n$,
+the bootstrap draws are independent with mean $\bar Z_n$ and variance
+$\sigma^2-\bar Z_n^2$. Therefore
+\[
+ \E[e_b\mid Z_1,\ldots,Z_n]=s_n\bar Z_n,\qquad
+ \Var(e_b\mid Z_1,\ldots,Z_n)=
+        V_n(\sigma^2-\bar Z_n^2).
+\]
+Since $\E\bar Z_n^2=\sigma^2/n$ and
+$\E[\bar Z_ne_0]=\sigma^2s_n/n$, it follows that
+\[
+\begin{aligned}
+ \E e_0^2&=\sigma^2 V_n,\\
+ \E e_b^2&=\sigma^2\{(1-1/n)V_n+s_n^2/n\},\\
+ \E[e_be_0]&=\sigma^2s_n^2/n,\\
+ \E(e_b-e_0)^2&=
+ \sigma^2\left(2V_n-\frac{V_n+s_n^2}{n}\right)
+ \le2\sigma^2V_n.
+\end{aligned}
+ \tag{8}
+\]
+The bootstrap differences need not be independent unconditionally;
+nothing below uses such independence. By (2) and (8),
+$\E R_n^2\le2\sigma^2V_n$.
+
+For $t=t_{3,.975}$, coverage implies
+\[
+ q_n|x_0|\le |e_0|+tR_n.
+\]
+Markov's inequality applied to the square, followed by the $L^2$
+triangle inequality, gives
+\[
+\begin{aligned}
+ \Pp(0\in I_n)
+ &\le\frac{\E(|e_0|+tR_n)^2}{q_n^2x_0^2}\\
+ &\le\frac{(\sqrt{\E e_0^2}
+                 +t\sqrt{\E R_n^2})^2}{q_n^2x_0^2}\\
+ &\le\frac{\sigma^2V_n}{q_n^2x_0^2}(1+\sqrt2\,t)^2 .
+\end{aligned}
+ \tag{9}
+\]
+
+It remains to bound the coefficient ratio uniformly in $n$.
+For $0<a<1$, concavity gives
+\[
+ \left(\frac{i}{i+1}\right)^a
+ \le1-\frac{a}{i+1}.
+\]
+Starting with $p_1=1-a$, induction in (5) yields
+$p_i\ge(1-a)i^{-a}$. Since every $p_t$ is positive,
+\[
+ \frac{w_{ni}}{q_n}
+ =\frac{a}{i p_i}
+       \frac{\sum_{t=i}^n p_t}{\sum_{t=1}^n p_t}
+ \le \frac{a}{1-a}\,i^{a-1}.
+\]
+For $a=1/4$, this proves
+\[
+ \frac{V_n}{q_n^2}
+ \le\frac19\sum_{i=1}^\infty i^{-3/2}
+ \le\frac19\left(1+\int_1^\infty x^{-3/2}\,dx\right)
+ =\frac13.
+ \tag{10}
+\]
+Substitute $\sigma=1/100$ and $x_0=1$ into (9).
+This proves (4), with no limit theorem or simulation required.
+The decimal in (4) uses $t_{3,.975}=3.182446305284263$; the expression
+in terms of the quantile is the exact bound.
+
+For a purely rational corroborating bound, the Student-$t_3$ density
+is at most $6\sqrt3/(\pi x^4)$ for $x>0$, so
+$\Pp(T_3>4)<2\sqrt3/(64\pi)<1/48<1/40$ and $t_{3,.975}<4$.
+Using $\sqrt2<17/12$ in (4) therefore also gives
+$\Pp(0\in I_n)<1/675$ for every $n$, without numerical quantile inversion.
+
+\section{Reproduction and the distinct repository formula}
+
+The accompanying unmodified verifier \texttt{check\_endpoint.py}
+implements (1)--(2) using closed-form recursion weights in floating-point and resamples
+the bounded observations from their empirical distribution. Its
+\texttt{verify\_weights()} function checks those coefficients against
+explicit iterate averages. The accompanying retained result file
+\texttt{endpoint\_results.json} records the seeds and settings.
+At $n=10{,}000$ for (3), it records 0 covered intervals in 5,000
+replications with seed \texttt{2026102605}; the Wilson 95\% interval
+is approximately $[0,0.000768]$. This finite run is illustrative:
+Proposition~\ref{prop:bound}, rather than the observed zero count,
+establishes the all-$n$ failure. A separate retained control at
+$\alpha=.501$, $\eta=.5$, $x_0=0$ and $\sigma=1$ has coverage
+$4749/5000=.9498$. No inference about all interior exponents is made
+from that control.
+
+The official repository is pinned to commit
+\texttt{002e46606fae75cd491bc0f005708a1f31a24dfa} \cite{code}.
+Its packaged function \texttt{bootstrap\_CI\_COfB} in
+\texttt{cheap\_bootstrap/methods.py} averages each bootstrap trajectory
+but computes its radius using centering at the \emph{bootstrap mean},
+divisor $B-1$, and a $t_{B-1}$ critical value. That is a different formula
+from (2). The counterexample and verifier here use the published
+averaged-SGD Algorithm 1, not that helper. This observation does not
+identify which variant generated each published experiment.
+
+From this directory, the coefficient check is
+\begin{verbatim}
+python -c "import check_endpoint as c; c.verify_weights()"
+\end{verbatim}
+Running \texttt{python check\_endpoint.py} reruns its retained simulation
+settings and rewrites the local result file. NumPy is required.
+The separate unmodified \texttt{bootstrap\_exact\_cleanroom.py} uses
+Python's rational arithmetic to check the recursion and second-moment
+identities exhaustively through $n=4$, and coefficient identities through
+$n=128$. It can be run without NumPy:
+\begin{verbatim}
+python bootstrap_exact_cleanroom.py
+\end{verbatim}
+Those finite checks do not replace the analytic all-$n$ argument above.
+The freeze manifest records both verifier hashes and the retained results.
+
+\section{Extent of the correction}
+
+The inclusion of $\alpha=1$ in the stated offline averaged-SGD coverage
+claim cannot hold without modification. Restricting that claim to
+$\alpha\in(1/2,1)$ removes this particular counterexample; this note does
+not independently prove the remaining theorem or supply a replacement
+harmonic-step inference procedure.
+
+The proof addresses neither the online multiplier interval of Algorithm 2
+nor the separate raw-SGD interval under Assumption 6. Online multipliers
+also alter the initialization contribution, so (7) is not its recursion.
+No conclusion about the reported $\alpha=.501$ experiments follows from
+the endpoint contradiction. No priority, author endorsement, external
+expert-review, or new-algorithm claim is made.
+
+\begin{thebibliography}{9}
+\bibitem{LW}
+H.~Lam and Z.~Wang.
+Cheap Bootstrap for Fast Uncertainty Quantification of Stochastic
+Gradient Descent.
+\emph{Journal of Machine Learning Research}, 27(93):1--42, 2026.
+\url{https://www.jmlr.org/papers/volume27/25-0008/25-0008.pdf}.
+\bibitem{LWv2}
+H.~Lam and Z.~Wang.
+Same title, arXiv:2310.11065v2, 2026.
+\url{https://arxiv.org/html/2310.11065v2}.
+\bibitem{code}
+Official accompanying code repository, commit
+\texttt{002e46606fae75cd491bc0f005708a1f31a24dfa}.
+\url{https://github.com/BeetrootWang/Cheap-Bootstrap-for-Fast-Uncertainty-Quantification-of-Stochastic-Gradient-Descent}.
+\end{thebibliography}
+\end{document}

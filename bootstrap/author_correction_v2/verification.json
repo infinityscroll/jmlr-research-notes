@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-26",
+  "main_sha256": "17f7f8c0b1032eb04bc1340e0a546bb5ecea3a06d35ed0a5cf80e551824060ae",
+  "version": "v2",
+  "parent_freeze": {
+    "path": "../author_correction/freeze_manifest.json",
+    "sha256": "40e5d74ef4252fc052098f04cb74418f33190503730a42357fd5fd77f795ff4b"
+  },
+  "source_change": "Single rounded-decimal display correction; exact bound, proof and supporting verifier sources unchanged.",
+  "compile": {
+    "tool": "mcp__codex_app__compile_latex_document",
+    "status": "success",
+    "message": "The current source compiled successfully with the desktop editor's compiler.",
+    "standalone_pdf_exported": false
+  },
+  "floating_point_coefficient_check": {
+    "command": "python -c \"import check_endpoint as c; c.verify_weights()\"",
+    "status": "passed",
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "bound_decimal": 0.0010085748808316406
+  },
+  "exact_arithmetic_check": {
+    "command": "python bootstrap_exact_cleanroom.py",
+    "status": "passed",
+    "exhaustive_n": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "resample_comparisons": [
+      2,
+      16,
+      216,
+      4096
+    ],
+    "coefficient_checks_through_n": 128,
+    "rational_all_n_bound": "1/675",
+    "scope": "Finite identities checked in rational arithmetic; all-n inequalities proved analytically in the manuscript."
+  },
+  "retained_simulation_rerun": false,
+  "public_actions": {
+    "email": false,
+    "publication": false,
+    "contact": false
+  },
+  "review_status": "Prepared for independent mathematical transfer audit; no author endorsement or external expert review asserted."
+}

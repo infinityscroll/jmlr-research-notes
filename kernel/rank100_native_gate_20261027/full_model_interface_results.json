@@ -1,0 +1,92 @@
+{
+  "source": {
+    "commit": "61cdb69cb11adea48ecb13c823ad654d46dc15df",
+    "source": "<workspace>/work/jmlr_breakthrough_portfolio_20261026/kernel/official",
+    "unmodified": true
+  },
+  "n": 120,
+  "block_size": 100,
+  "rank": 100,
+  "dtype": "float64",
+  "native_kernel_columns": [
+    {
+      "diagonal": 1.0,
+      "off_diagonal": 0.9999999999,
+      "max_off_diagonal_deviation": 0.0,
+      "delta_from_native": 1.000000082740371e-10,
+      "delta_from_torch": 1.000000082740371e-10
+    }
+  ],
+  "comparisons": [
+    {
+      "repaired": false,
+      "state": 0,
+      "gradient_max_abs_difference": 0.0,
+      "state_max_abs_difference": 0.008407463972616824,
+      "state_scaled_difference": 9.208945712152732e-07,
+      "native_properties": {
+        "eta": 1.0098948723222232,
+        "rho": 1.0099989883399014e-08,
+        "small_eigenvalue": 9.998988339901426e-11
+      },
+      "adapter_properties": {
+        "eta": 1.0098946991189126,
+        "rho": 1.0099988915038328e-08,
+        "small_eigenvalue": 9.998891503832754e-11
+      }
+    },
+    {
+      "repaired": false,
+      "state": 1,
+      "gradient_max_abs_difference": 1.3530278148260722e-16,
+      "state_max_abs_difference": 0.010426450660816045,
+      "state_scaled_difference": 1.0384800914386834e-06,
+      "native_properties": {
+        "eta": 1.0098946603263506,
+        "rho": 1.0099989455305492e-08,
+        "small_eigenvalue": 9.998945530549102e-11
+      },
+      "adapter_properties": {
+        "eta": 1.0098946295062254,
+        "rho": 1.0099990003148363e-08,
+        "small_eigenvalue": 9.999000314836344e-11
+      }
+    },
+    {
+      "repaired": true,
+      "state": 0,
+      "gradient_max_abs_difference": 0.0,
+      "state_max_abs_difference": 0.008407463972616824,
+      "state_scaled_difference": 9.208945712152732e-07,
+      "native_properties": {
+        "eta": 1.0098948723222232,
+        "rho": 1.0099989883399014e-08,
+        "small_eigenvalue": 9.998988339901426e-11
+      },
+      "adapter_properties": {
+        "eta": 1.0098946991189126,
+        "rho": 1.0099988915038328e-08,
+        "small_eigenvalue": 9.998891503832754e-11
+      }
+    },
+    {
+      "repaired": true,
+      "state": 1,
+      "gradient_max_abs_difference": 1.3530278148260722e-16,
+      "state_max_abs_difference": 0.010426521654153476,
+      "state_scaled_difference": 1.038496684949036e-06,
+      "native_properties": {
+        "eta": 1.0098946603263506,
+        "rho": 1.0099989455305492e-08,
+        "small_eigenvalue": 9.998945530549102e-11
+      },
+      "adapter_properties": {
+        "eta": 1.0098946295062254,
+        "rho": 1.0099990003148363e-08,
+        "small_eigenvalue": 9.999000314836344e-11
+      }
+    }
+  ],
+  "scope": "One-step actual FullKRR comparison; no full n10000 untouched pipeline run",
+  "script_sha256": "ae544a4211fc9079c3d62b1e50846e9268614cb19c3789f1601ec52d3acf22d9"
+}

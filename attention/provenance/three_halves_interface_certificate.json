@@ -1,0 +1,15 @@
+{
+  "scope": "Exact algebra and bounded full-native/released-SMD one-step interface only; no basin or asymptotic certification",
+  "proof_sha256": "262392416101c3332a636c66ddc3df899ff1ca3bba9e303b5e0e7b2f1571e23d",
+  "checker_sha256": "3d1076cf11a4b66ad7d2ff70806da818ff816b97384d4feecfa93a6fe69165b2",
+  "optimizer_sha256": "d4ce054aca1fe0001fc9567cfcae1cd72dde60c57910f04198a04172e1f3983b",
+  "exact_rational_assertions": 454,
+  "native_one_step_cases": 24,
+  "new_trajectories": 0,
+  "max_gradient_error": 5.628364527915375e-17,
+  "max_update_error": 0.0,
+  "max_prediction_error": 1.1102230246251565e-16,
+  "margin_fraction": 0.9244816991341795,
+  "official_bregman_limit": 0.03850028646172787,
+  "reverse_bregman_limit": 0.07551830086582045
+}

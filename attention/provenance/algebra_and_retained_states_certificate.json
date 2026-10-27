@@ -1,0 +1,67 @@
+{
+  "scope": "Bounded exact algebra and independent saved-state recomputation; no analytic proof certification or rerun",
+  "source_sha256": "46db3f866ad368b39f1bf600e730133a2f52570b6f4a24464aebb39e57187ae7",
+  "checker_sha256": "36564294d477b794643d707e6104683c5426834412e96c5aa8a12588868513bb",
+  "protocol_sha256": "62c7808592fd9951a0144bd0cb267fae7ea88e8dc25f2be490a2185e4d7fa081",
+  "result_sha256": "91a5f699b343c348dc46726ba89b40a6517d76c3a5103f2f7fce7d49e902fe4a",
+  "states_sha256": "6719aefe0dbe135064578d85d8bf7ed2590a220eaa4e39ec63570da0bfdb7bc5",
+  "exact_lyapunov_and_margin_checks": "PASS",
+  "retained_checkpoints": 173,
+  "retained_cases": 2,
+  "recomputed_scalar_values": 4844,
+  "max_saved_value_error": 2.6645352591003757e-15,
+  "max_conserved_gauge_error": 5.773159728050814e-15,
+  "all_outcomes_retained": true,
+  "new_training_steps": 0,
+  "final_results": {
+    "step": 50000,
+    "cases": [
+      {
+        "delta": 0.0,
+        "l": [
+          7.932462197155288,
+          -4.307224040517468
+        ],
+        "a": 0.9996412271266311,
+        "b": 0.01329183945176131,
+        "m": 7.887253582633088,
+        "k": [
+          7.999272874215553,
+          0.018162398612158702
+        ],
+        "prediction": 0.9992709925084827,
+        "loss": 0.3134578000799423,
+        "A": 0.0003606158128532005,
+        "B": -3.3890611110678306e-05,
+        "lower_margin_fraction": 0.8788055689754964,
+        "upper_margin_fraction": 0.999998172891994,
+        "upper_optimal_margin": 1.3944083156996532,
+        "memory_distance": 1.3949086812881986,
+        "gradient_interface_error": 4.935830390240259e-17
+      },
+      {
+        "delta": 0.5,
+        "l": [
+          6.7233863295506495,
+          -3.06796365599095
+        ],
+        "a": 0.9987989847840493,
+        "b": 0.04444823620669327,
+        "m": 6.634118145135459,
+        "k": [
+          6.955601609781919,
+          0.018113702283162218
+        ],
+        "prediction": 0.9987729556970458,
+        "loss": 0.3135918385982879,
+        "A": 0.0012133896171262109,
+        "B": -0.00031371206768245166,
+        "lower_margin_fraction": 0.7227174727898438,
+        "upper_margin_fraction": 0.9999990165713967,
+        "upper_optimal_margin": 1.0663566045380344,
+        "memory_distance": 1.0669965740983893,
+        "gradient_interface_error": 7.093392713486413e-17
+      }
+    ]
+  }
+}

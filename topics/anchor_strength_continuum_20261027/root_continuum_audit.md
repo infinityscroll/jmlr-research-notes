@@ -1,0 +1,15 @@
+# Root analytic review of the known-strength continuum
+
+27 October 2026. Source: `known_strength_minimax.md`, SHA256 `196e7a7341666a0f5a45b9f2d46f473d546aac122999b68c88b24855f262fde4`. The root read the complete proof and its lower families. No mathematical blocker was found. This is internal analytic review, not novelty clearance or external review.
+
+The frequent-core determinant argument supplies a fixed positive population singular-value floor independent of alpha. The deterministic containing set D_* handles the random empirical core without conditioning as though it were independent. Exact count pair moments obey the all-N Bernstein bound by disjoint-token pairing and conditional Jensen; the lower experiment remains the full multinomial count law.
+
+The rare false-screen shell exponent is positive even in its first shell: log(2)-1+1/2>0. The weak-q shell counts form a convergent geometric sum once m alpha exceeds a fixed q-dependent constant. Taking the minimum with the separate p-way bound yields the stated location count. The nontrivial case m alpha>A Lambda guarantees this condition and lets screen failure be absorbed by the target risk. The estimator itself does not need q to make that proof split. The expected normalized maximum uses an integrated Bernstein bound over a deterministic set; no artificial high-probability logarithm enters.
+
+Maximum absolute determinant recovers a permutation of the population vertices with linear perturbation error. Near-unit determinant of a stochastic matrix forces every row to concentrate on a different coordinate; the row-subtraction argument rules out repeated coordinates. The reconstruction C_jR V^{-1}=A_j diag(mu) avoids an inverse-alpha multiplier on the vocabulary tail, and column normalization uses the fixed mu lower bound.
+
+For the unknown-location lower construction, M=1 is handled separately in the sparsity membership argument; this matters at small q and fixed vocabulary. The exact multinomial likelihood second moments and off-diagonal identity E_0 L_j L_k=1 justify the mixture bound for every M. The capped theta stays uniformly inside the positive-mixture and conditioning region. Common-block separation survives all topic permutations. None of these steps needs a starting sample size depending on alpha.
+
+The ordinary-tail families retain strong anchors for every allowed alpha. For q>1/2 the r bound implies mt>=1/16 and gamma<=1/8, while all threshold-count contributions remain below radius four. The critical dyadic family supplies the logarithm also for fixed p, and competing permutations have fixed positive cost while its identity diameter tends to zero. All lower divergences scale with m=nN, not a fictitious number of independent overlapping pairs.
+
+The result supports its stated fixed-K, fixed-q, exact-separability, common-conditioning expected-risk scope, including fixed or polynomial vocabulary and all N>=2. It does not itself establish unknown-alpha adaptation, efficient implementation, or historical priority. Those are separate results or questions.

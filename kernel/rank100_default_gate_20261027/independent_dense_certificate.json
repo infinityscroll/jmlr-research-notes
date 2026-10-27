@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "arithmetic": "Python Fraction only",
+  "assertions": 706,
+  "dense_fixtures": [
+    {
+      "n": 4,
+      "b": 3,
+      "stale": false,
+      "all_blocks": 4,
+      "covariance_basis_vectors": 6
+    },
+    {
+      "n": 4,
+      "b": 3,
+      "stale": true,
+      "all_blocks": 4,
+      "covariance_basis_vectors": 6
+    },
+    {
+      "n": 5,
+      "b": 3,
+      "stale": false,
+      "all_blocks": 10,
+      "covariance_basis_vectors": 6
+    },
+    {
+      "n": 5,
+      "b": 3,
+      "stale": true,
+      "all_blocks": 10,
+      "covariance_basis_vectors": 6
+    },
+    {
+      "n": 6,
+      "b": 4,
+      "stale": false,
+      "all_blocks": 15,
+      "covariance_basis_vectors": 6
+    },
+    {
+      "n": 6,
+      "b": 4,
+      "stale": true,
+      "all_blocks": 15,
+      "covariance_basis_vectors": 6
+    },
+    {
+      "n": 5,
+      "b": 4,
+      "stale": false,
+      "all_blocks": 5,
+      "covariance_basis_vectors": 6
+    },
+    {
+      "n": 5,
+      "b": 4,
+      "stale": true,
+      "all_blocks": 5,
+      "covariance_basis_vectors": 6
+    }
+  ],
+  "dense_covariance_images": 48,
+  "native_power_formula_cases": 12,
+  "saved_Bernstein_PSD_matrices": 108,
+  "tensor_polynomial_equalities": 116,
+  "elapsed_seconds": 1.511863874970004,
+  "source_hashes": {
+    "theorem.md": "1b1cb234971e70130c0072aacac7988c2112ae04ddcd68703847f088f952e57b",
+    "general_block_operator.py": "eecb2c18bb1ec6fc5d443d41bbd937190e1ecdd3cf54e1b3f4adf3dc8aa2777e",
+    "check_rank100_mean_step.py": "7b7633766c127720c6f74a3eafa72de7d89e788de8b279aff965478e9d6dbfe1",
+    "rank100_mean_step_certificate.json": "cb4c1f8a0ed7b519784211d1962d1a339d4b0685fcaa25e2978759f620d997ad",
+    "independent_dense_and_certificate_check.py": "173a8ba6356bc69d76fa70a9a6fc63503aa8d6ac39e8425c9cbae36eadb14b27"
+  },
+  "scope": "Independent dense rational operator and polynomial certificate verification; no native rank100 float64 execution or finite-precision instability claim."
+}

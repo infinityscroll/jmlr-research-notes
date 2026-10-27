@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-26",
+  "scope": "Frozen author-correction draft and its unchanged supporting verifiers/results; separate future audits may be stored outside this directory.",
+  "files": [
+    {
+      "path": "main.tex",
+      "sha256": "8c135d700b845e6523a175527d93888ef854df9b7f95beba90b17b837d1a64f4",
+      "bytes": 11248
+    },
+    {
+      "path": "check_endpoint.py",
+      "sha256": "a5558d6f809315f689511164351a0743f4402d18126907061cab8dfadc4a0d9b",
+      "bytes": 4692
+    },
+    {
+      "path": "bootstrap_exact_cleanroom.py",
+      "sha256": "4dabe6ebc867ce7d1dd15619ca6190598c136e27ca293150ab2fa555a5657b01",
+      "bytes": 3701
+    },
+    {
+      "path": "endpoint_results.json",
+      "sha256": "3b0201f6c9f5567f6379c590db06aa9925a2185b50df1fe8cc4ffa4d7903f779",
+      "bytes": 3465
+    },
+    {
+      "path": "source_map.json",
+      "sha256": "dca60278628449fb9cedc42d34af563623a74f76864a64efbed6b82bffc9d53c",
+      "bytes": 5120
+    },
+    {
+      "path": "verification.json",
+      "sha256": "b820449cd267ef5013ee19d5e3ab8d7da7528a7b3a08805192bcdb0228f5052a",
+      "bytes": 1303
+    }
+  ]
+}

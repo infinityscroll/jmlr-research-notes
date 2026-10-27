@@ -1,0 +1,25 @@
+{
+  "date_utc": "2026-10-26T07:32:28.470352+00:00",
+  "correction": "Restore frozen experimental protocol: released ASkotchV2 versus inducing primary; corrected ASkotchV2 diagnostic. Add complete stop/timing clarification and exact repository implementation labels. No numerical comparison definitions, data, seeds, selections, hyperparameters or estimates change.",
+  "reason": "Version 1 followed an incorrect analysis-preparation instruction; inspection of pre-existing frozen PROTOCOL.md established the intended roles.",
+  "v1_freeze_inspection_scope": "actual_outcomes_read_before_freeze=false refers only to the renderer-author inspection. The root inspected the complete aggregate around 07:17 UTC, before the 07:19:22 renderer freeze; this was not a globally blinded visualization preregistration. The experimental protocol and aggregation source were frozen earlier. V2 restores protocol roles after outcomes.",
+  "v2_output_directory": "report_v2",
+  "all_54_comparison_records_exactly_unchanged": true,
+  "released_primary_descriptive_counts": {
+    "negative_means": 13,
+    "positive_means": 5,
+    "negative_intervals": 12,
+    "positive_intervals": 4,
+    "intervals_containing_zero": 2
+  },
+  "v1_unchanged_renderer_sha256": "89af9eca9d5455491f74c4929aa82fe4fa71009cff4adce8f5f4b861478d9c41",
+  "v1_unchanged_source_freeze_sha256": "30edce91fa00fc08fb8d5c84efbd5e3524d213e5746b65341005ae15894fdabf",
+  "v1_original_report_sha256": "182ccf09d8341b91bededc19c6e612d57c0d70bba372c97e3b13fd15a14ea967",
+  "v1_report_with_supersession_notice_sha256": "b6788ed61f7c1e5d4892f0f090bcf9404f7ba39deedf2986506489506b4fdcf1",
+  "v2_renderer_sha256": "8ca8e8e45e993af25f9143251ab3acac9f9a028539c8477f3323061cd2121598",
+  "frozen_experimental_protocol_sha256": "88d0d4f3da621ab0a8172d7fcc0da9d2f05774d76d2e018003a6176dabe1b565",
+  "aggregate_sha256": "fdf88eddc2ef1dd92973306c4e58a327b198142fb640432deb58259ed33ee4a1",
+  "complete_source_timing_audit_sha256": "239059056b25c4acd1ef8be8a0202ae77e5f148483af971809bf32175a94318f",
+  "outcomes_already_inspected_at_v2_creation": true,
+  "presentation_only_change": "Draw layout before saving and use tight figure bounds; grid cells/statistical annotations unchanged."
+}

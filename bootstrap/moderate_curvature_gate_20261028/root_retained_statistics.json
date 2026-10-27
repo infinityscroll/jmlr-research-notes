@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "counts": [
+    405,
+    486,
+    486,
+    486
+  ],
+  "repetitions": 512,
+  "t3_CDF": 0.9750000000000105,
+  "all_masks_match": true,
+  "SAA_equation_checked": true,
+  "mean_original": -0.006606885382952448,
+  "sd_original": 0.003978824638268325,
+  "coverage_is_empirical": true,
+  "independent_trajectory_replication": false,
+  "outputs_sha256": "83a9cdf7df452b6594bdcd6d215725d2ab3a0bfa00ec39740b2cd142e69653ed"
+}

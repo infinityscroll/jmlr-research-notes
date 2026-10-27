@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "source_sha256": "6f6613f2758ffca32473fea5392a19775be72ee06384ef9a63e711e74335827d",
+  "checker_sha256": "cf3692eff91d525b0430204c30a524888c67e8bf2630db6ecb313a101009c84e",
+  "cases": 320,
+  "assertions": 2436,
+  "counts": {
+    "source_hash": 1,
+    "core_center_barycentric_floor": 4,
+    "axis_ball_membership": 28,
+    "ideal_substochastic_coefficients": 320,
+    "exact_contraction_error_identity": 320,
+    "uniform_transformed_error_envelope": 320,
+    "empirical_row_subprobability": 320,
+    "anchor_reassignment_envelope": 1120,
+    "counterexample_raw_spa_selects_outlier": 1,
+    "example_transformed_coordinates": 1,
+    "example_substochastic_coordinates": 1
+  },
+  "scope": "Exact finite contraction identities and coefficient/error checks; no validation of probabilistic concentration, expected risk, numerical stability, or historical novelty."
+}

@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "method": "exact Fraction enumeration, no random numbers",
+  "source_sha256": "3b7a7c77c4f46761fd8e1c5708fe9b1709bdebe579f2eccdd3ab27ef28a5c851",
+  "checker_sha256": "432cc18af3c3a93251cffe3a11361e5ead04968884ab2f645ec11c845c37f33c",
+  "fixtures": [
+    {
+      "groups": "jkc",
+      "r": "1/8",
+      "kappa": "1/16",
+      "fair_sign_patterns": 8,
+      "observed_cross_minus_one": "3655/3875536896",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jkc",
+      "r": "1/6",
+      "kappa": "1/8",
+      "fair_sign_patterns": 8,
+      "observed_cross_minus_one": "10439/882524160",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjkc",
+      "r": "1/8",
+      "kappa": "1/16",
+      "fair_sign_patterns": 16,
+      "observed_cross_minus_one": "31084423415/17265174009624576",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjkc",
+      "r": "1/6",
+      "kappa": "1/8",
+      "fair_sign_patterns": 16,
+      "observed_cross_minus_one": "7961326659/365618811165440",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjkkc",
+      "r": "1/8",
+      "kappa": "1/16",
+      "fair_sign_patterns": 32,
+      "observed_cross_minus_one": "16244304695/4716970918281216",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjkkc",
+      "r": "1/6",
+      "kappa": "1/8",
+      "fair_sign_patterns": 32,
+      "observed_cross_minus_one": "14782179841/366677055897600",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjkkcc",
+      "r": "1/8",
+      "kappa": "1/16",
+      "fair_sign_patterns": 64,
+      "observed_cross_minus_one": "12495157007409526465/3666133621004022975873024",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjkkcc",
+      "r": "1/6",
+      "kappa": "1/8",
+      "fair_sign_patterns": 64,
+      "observed_cross_minus_one": "520011628516897803/13120153990857499264000",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jk0",
+      "r": "1/8",
+      "kappa": "1/16",
+      "fair_sign_patterns": 4,
+      "observed_cross_minus_one": "1/1048320",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jk0",
+      "r": "1/6",
+      "kappa": "1/8",
+      "fair_sign_patterns": 4,
+      "observed_cross_minus_one": "1/82880",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjccc",
+      "r": "1/8",
+      "kappa": "1/16",
+      "fair_sign_patterns": 32,
+      "observed_cross_minus_one": "0",
+      "identities_passed": 8
+    },
+    {
+      "groups": "jjccc",
+      "r": "1/6",
+      "kappa": "1/8",
+      "fair_sign_patterns": 32,
+      "observed_cross_minus_one": "0",
+      "identities_passed": 8
+    }
+  ],
+  "total_fair_sign_patterns": 312,
+  "identity_assertions": 96,
+  "scope": "Conditional C5 identity, its 1/4 factor and sign, fair centering, and likelihood normalization only."
+}
