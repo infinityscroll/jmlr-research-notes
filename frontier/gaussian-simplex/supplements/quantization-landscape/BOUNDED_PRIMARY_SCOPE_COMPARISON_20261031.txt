@@ -1,0 +1,56 @@
+PRESCRIBED-MASS GAUSSIAN QUANTIZATION: BOUNDED PRIMARY COMPARISON
+31 October 2026. Root. This is a scope check, not exhaustive novelty clearance.
+
+The new note studies W2^2(N(0,I_N), sum_i p_i delta_(a_i)) as a function
+of the centers, with fixed positive p and N>=m-1. Its assignment may depend
+on the realized Gaussian vector. It is derived from the separately audited
+covariance-concavity theorem. No prior theorem is claimed false here.
+
+1. Luo and Mixon, BalLOT: Balanced k-means clustering with optimal transport
+arXiv:2512.05926v1, 5 December 2025.
+https://arxiv.org/html/2512.05926v1
+Primary passages checked: Theorem 6, Section 2 discussion, Section 3.2.
+
+Theorem 6 proves absence of nonglobal local minima for E f(F,mu), with
+F a fixed finite coupling matrix, under a balanced mixture model with
+distinct planted means. Section 3.2 takes expectation with this F fixed;
+the result is transport between planted means plus constant noise variance.
+That objective differs from our population transport, where the assignment
+is chosen as a function of the observation. The theorem therefore does
+not directly establish the present result. Conversely our result does not
+establish their finite-sample or mixture-model guarantees.
+
+A direct illustration of the distinction: for the symmetric one-dimensional
+mixture of N(-a,1) and N(a,1), a>0, the two equally weighted optimal
+population centers are +/-E|a+Z|, where
+  E|a+Z|=2phi(a)+a(2Phi(a)-1)>a.
+The fixed-coupling expected-cost reduction instead has centers +/-a.
+The strict inequality follows from phi(a)>a[1-Phi(a)], by integrating
+x phi(x)>a phi(x) over x>a. This illustrates different objectives; it is
+not a counterexample to the literal Theorem 6.
+
+2. Mulgund, Stochastic Domination of Gaussian Maxima by the Regular Simplex
+arXiv:2609.28452v2, revised 27 September 2026.
+https://arxiv.org/abs/2609.28452
+https://arxiv.org/html/2609.28452v2
+Primary passages checked: abstract and Theorem 1.1.
+
+The stated comparison fixes every coordinate variance to one and compares
+the distribution of the unconstrained maximum with the regular-simplex
+maximum. It does not state prescribed-label-mass covariance concavity,
+nor a Gaussian quantization landscape theorem. Our covariance domain and
+optimized assignment offsets are different. This limited comparison is
+not an independent audit of that paper or a proof that no deeper
+implication between the results exists.
+
+3. Older terminology
+The bounded search also used 'principal points', 'self-consistent points',
+'optimal Gaussian quantization', and 'prescribed probabilities'. Ordinary
+principal-point objectives optimize nearest-center assignments and their
+resulting masses; that is not our fixed-mass objective. Search snippets
+and absence of matching hits are not evidence of priority. A complete
+historical check of the prescribed-mass landscape remains outstanding.
+
+The claim supported by this file is the literal scope distinction above.
+No claim of a newly resolved named clustering conjecture, exhaustive
+literature exclusion, or external expert validation is made.

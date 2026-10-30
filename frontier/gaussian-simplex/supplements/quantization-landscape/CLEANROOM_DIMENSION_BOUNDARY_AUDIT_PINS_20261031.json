@@ -1,0 +1,13 @@
+{
+  "status": "PASS; independent analytic audit, no fresh Fraction replay.",
+  "files": [
+    {
+      "path": "DIMENSION_BOUNDARY_AND_LLOYD_SEPARATION_20261031.txt",
+      "sha256": "ead4e863136e4a0b143ae6ad0fccc6e8ccee0ae74546c0daca66dfd8880af2aa"
+    },
+    {
+      "path": "CLEANROOM_DIMENSION_BOUNDARY_AUDIT_20261031.txt",
+      "sha256": "87ebf5651efadfbd07f839e35cd023614521dc4e4d072607b028b5ff19b8f806"
+    }
+  ]
+}

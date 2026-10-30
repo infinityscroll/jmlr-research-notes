@@ -1,0 +1,44 @@
+CLEANROOM AUDIT OF THE DIMENSION BOUNDARY AND ONE-STEP LLOYD BOUNDS
+31 October2026. gaussian_cleanroom_end_to_end.
+Independent internal AI-agent mathematical audit, not external review.
+
+Source read in full:
+DIMENSION_BOUNDARY_AND_LLOYD_SEPARATION_20261031.txt
+SHA256 ead4e863136e4a0b143ae6ad0fccc6e8ccee0ae74546c0daca66dfd8880af2aa.
+
+PASS. No source repair requested. The arguments are elementary and
+independent of the new covariance-concavity theorem. This audit
+checks the analytic derivation; it does not claim a fresh replay
+of the author's separate Fraction script.
+
+In one dimension the ordered capacity assignment consists of fixed
+quantile intervals, by the equal-mass exchange argument. Within
+each open center-order chamber the distortion is a quadratic with
+Hessian2D_p. Its unique minimizer is the increasing tuple of interval
+conditional means and lies strictly inside that chamber.
+
+For p=(1/2,1/4,1/4), both C and E in(A1) have weighted mean0 and the
+asserted strict order. Their explained variances are respectively
+8b^2 and6a^2-8ab+8b^2, so the distortion difference is2a(4b-3a).
+The elementary estimates give a>3/8 and q<3/4. The exponential
+series majorant is exactly2459/1856<4/3, so b/a>1856/2459 and
+4b-3a>a*(47/2459). It follows that
+distortion(E)-distortion(C)>2*(9/64)*(47/2459)=423/78688.
+Thus E is a genuine nonglobal strict local minimum below N=m-1.
+The source does not overstate sharpness for every mass or dimension.
+
+For every distinct pair of old sites, the corresponding Laguerre
+cells lie on opposite sides of their pairwise score hyperplane,
+whether or not they share a facet. The marginal density bound
+M=1/sqrt(2pi) makes the cell's residual tail at least(p_i-Ms)_+.
+Layer-cake integration gives a one-sided first moment pi^2/(2M).
+Dividing by cell masses and adding the two sides proves exactly
+|c_i-c_j|>=sqrt(2pi)(p_i+p_j)/2.
+
+The updated-center norm bound is the one-dimensional halfspace
+first-moment bound in the direction of c_i; weighted centering
+follows from summing the cell integrals. For each fixed N and p,
+these inequalities indeed place all updates from distinct sites
+in a fixed compact centered set with positive pair separation.
+No tie rule at coincident old sites is covered, and no convergence
+or saddle-avoidance claim follows from these one-step estimates.

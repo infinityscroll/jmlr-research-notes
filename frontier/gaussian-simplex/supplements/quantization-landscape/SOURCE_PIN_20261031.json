@@ -1,0 +1,10 @@
+{
+  "source": "PRESCRIBED_MASS_GAUSSIAN_KMEANS_LANDSCAPE_20261031.txt",
+  "sha256": "e61d0ae805c5fa24b2d95b0c1bf5c4d4674cf4d627f22b3550182132e4024679",
+  "status": "Complete proof candidate awaiting independent audit",
+  "hypothesis": "audited covariance-concavity input; p_i>0; N>=m-1",
+  "no_spurious": "all prescribed positive mass vectors, including collisions",
+  "strict_saddle": "all pairwise-distinct nonglobal stationary configurations",
+  "balanced_global_geometry": "unique regular-simplex Gram, with orthogonal/label orbit",
+  "generic_Lloyd_convergence_claimed": false
+}

@@ -1,0 +1,112 @@
+DIMENSION BOUNDARY EXAMPLE AND A LLOYD UPDATE SEPARATION LEMMA
+31October2026. strong_signal_prior_art, checking root's proposed formulas.
+Separate appendix. The landscape source and its hash remain unchanged.
+
+A. A NONGLOBAL STRICT LOCAL MINIMUM BELOW THE DIMENSION THRESHOLD
+Take standard Gaussian data in R, three labeled centers, and prescribed
+masses p=(1/2,1/4,1/4). Thus N=1<m-1=2. Use the same capacity-constrained
+population distortion as in the landscape theorem. Put
+  q=Phi^(-1)(3/4), a=phi(0), b=phi(q).
+Consider the two center configurations, in label order,
+  C=(0,-4b,4b),
+  E=(-2a,4(a-b),4b).                                  (A1)
+Both have weighted mean0. The first has mass ordering(1/4,1/2,1/4)
+from left to right; the second has ordering(1/2,1/4,1/4).
+
+For strictly ordered one-dimensional centers, the optimal prescribed-
+mass assignment consists of successive Gaussian quantile intervals in
+that same order. This follows by the elementary exchange argument:
+if x<y are assigned in reversed center order, swapping equal amounts
+increases the linear score by (a_j-a_i)(y-x)>0. Equivalently it is the
+one-dimensional monotone transport coupling. Once a center-order chamber
+is fixed, these intervals and their masses are fixed, independently of
+the distances between the centers. The distortion in that open chamber
+is therefore a strictly convex quadratic with Hessian2D_p. Its unique
+stationary point is the vector of the intervals' conditional means.
+Those means are strictly increasing, so it lies inside the chamber and
+is a strict local minimum of the full center objective.
+
+For the central-large-cell order, the intervals are
+  (-infinity,-q), (-q,q), (q,infinity),
+with conditional means -4b,0,4b. For the edge-large-cell order they are
+  (-infinity,0), (0,q), (q,infinity),
+with conditional means -2a,4(a-b),4b. Thus both configurations in(A1)
+are strict local minima, with center-coordinate Hessian
+  2D_p=diag(1,1/2,1/2).
+The within-interval formula gives distortion=1 minus explained variance.
+Their explained variances are
+  V_C=8b^2,
+  V_E=6a^2-8ab+8b^2.
+Consequently
+  distortion(E)-distortion(C)=2a(4b-3a).              (A2)
+The following entirely rational bounds certify this is positive.
+
+First a>3/8. For example
+  pi=4 integral_0^1 (1+x^2)^(-1)dx
+       <4(1-1/3+1/5)=52/15<32/9,
+using1/(1+x^2)<1-x^2+x^4 for0<x<=1. Hence
+  a=(2pi)^(-1/2)>3/8.
+Since exp(-t^2/2)>=1-t^2/2,
+  Phi(3/4)>=1/2+a[3/4-(3/4)^3/6]
+           >1/2+(3/8)(87/128)>3/4.
+Therefore0<q<3/4 and b/a=exp(-q^2/2)>exp(-9/32).
+For x=9/32, the bound n!>=2*3^(n-2) for n>=2 gives
+  exp(x)<=1+x+(x^2/2)/(1-x/3)
+         =2459/1856<4/3.
+Thus b/a>1856/2459>3/4. In fact(A2) obeys the explicit gap
+  distortion(E)-distortion(C)
+       >2*(9/64)*(47/2459)=423/78688>0.                (A3)
+The exact constants are intentionally crude; no numerical quantile
+estimate is used. This also checks that4(a-b)<4b, although strict
+ordering already follows from the interval conditional means.
+
+Hence E is a genuine nonglobal strict local minimum for prescribed-mass
+population Gaussian quantization. The condition N>=m-1 in the general
+landscape theorem cannot simply be dropped. This one example does not
+assert that the threshold is sharp for every m,N or every mass vector.
+It concerns unequal prescribed masses, not a balanced equal-mass
+counterexample to the Gaussian simplex endpoint.
+
+B. ONE LLOYD UPDATE HAS UNIFORM SEPARATION AND A UNIFORM NORM BOUND
+Let a_1,...,a_m be pairwise distinct Gaussian sites in R^N. Let their
+optimal Laguerre cells E_i have positive prescribed masses p_i. Write
+  c_i=(1/p_i)integral_(E_i)x dgamma_N(x)
+for the updated centers. For every pair i!=j,
+  |c_i-c_j| >=sqrt(2pi)(p_i+p_j)/2.                    (B1)
+This estimate is dimension independent and does not depend on the old
+center separation or the offsets.
+
+Proof. Let u=(a_i-a_j)/|a_i-a_j|. The Laguerre inequalities provide a
+threshold t with E_i contained in {u.x>=t} and E_j contained in {u.x<=t}.
+The one-dimensional Gaussian density is at most M=1/sqrt(2pi). For s>=0,
+  gamma(E_i intersect {u.x-t>s})>=max(p_i-Ms,0).
+Integrating this lower bound in s gives
+  integral_(E_i)(u.x-t)d gamma>=p_i^2/(2M).
+Similarly integral_(E_j)(t-u.x)d gamma>=p_j^2/(2M).
+After division by the respective cell masses,
+  u.(c_i-c_j)>= (p_i+p_j)/(2M),
+which proves(B1). The argument uses only pairwise separating hyperplanes
+and the marginal Gaussian density; no boundary regularity is needed.
+
+Every update also satisfies
+  |c_i|<=phi(Phi^(-1)(p_i))/p_i.                       (B2)
+Indeed, in the direction c_i/|c_i|, among all sets of Gaussian mass p_i
+the largest first moment is attained by an upper halfspace, whose first
+moment is phi(Phi^(-1)(p_i)). The zero-vector case is immediate.
+Finally sum_i p_i c_i=E X=0.
+
+Thus all updates starting from distinct sites lie in a fixed compact
+set of centered, pairwise-separated configurations. The distinct-site
+hypothesis matters: an arbitrary tie assignment at coincident old sites
+need not be separated by any hyperplane, so(B1) is not asserted for such
+an initialization. These one-step bounds do not establish convergence
+of Lloyd iterates, avoidance of saddle sets, or convergence to a global
+optimum from generic or all initial conditions.
+
+C. PINS AND STATUS
+Main landscape proof:
+PRESCRIBED_MASS_GAUSSIAN_KMEANS_LANDSCAPE_20261031.txt
+SHA256e61d0ae805c5fa24b2d95b0c1bf5c4d4674cf4d627f22b3550182132e4024679.
+The two arguments in this appendix are elementary and do not depend on
+the new covariance-concavity theorem. They are offered for independent
+internal audit. No separate priority claim is made.

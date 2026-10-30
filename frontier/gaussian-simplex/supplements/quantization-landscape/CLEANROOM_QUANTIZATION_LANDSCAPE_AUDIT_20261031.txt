@@ -1,0 +1,187 @@
+CLEANROOM AUDIT: PRESCRIBED-MASS GAUSSIAN QUANTIZATION LANDSCAPE
+31 October2026. gaussian_cleanroom_end_to_end.
+Independent internal AI-agent mathematical audit; no external review,
+priority clearance, algorithmic convergence claim, or source edits.
+
+SOURCE READ IN FULL
+PRESCRIBED_MASS_GAUSSIAN_KMEANS_LANDSCAPE_20261031.txt
+SHA256 e61d0ae805c5fa24b2d95b0c1bf5c4d4674cf4d627f22b3550182132e4024679.
+This is the final terminology-corrected version: Section9 calls the
+unnormalized Gaussian integrals cell first-moment vectors.
+
+INHERITED INPUT
+The source's pinned covariance-concavity theorem
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+and its balanced trace optimum are accepted as the already separately
+audited mathematical dependency. This audit verifies the new consequences,
+including the rank-deficient differentiability needed for strict saddles.
+It does not repeat that large input proof or certify historical novelty.
+
+VERDICT
+PASS within the stated scope: population standard Gaussian input,
+arbitrary fixed positive masses, m>=2, and N>=m-1.
+Every local minimum of the capacity-constrained distortion is global.
+At every pairwise-distinct nonglobal ordinary stationary point, the
+objective is C2 and has a strictly negative Hessian direction.
+Equal masses have exactly the stated centered regular-simplex optima.
+No mathematical repair requested.
+
+1. Objective, centering, and the Gram representation
+The distortion identity is exact:
+inf sum_i integral f_i|X-a_i|^2
+ =N+sum_i p_i|a_i|^2-2J_p(A).
+The relaxed atomless assignment problem has an indicator optimizer;
+its weakly compact maximizing face has an extreme point, and any
+genuinely fractional assignment admits a zero-integral transfer
+between two labels on a positive-measure region.
+
+Subtracting the weighted center mu does not change J_p, because the
+assignments sum to1 and E X=0. The weighted quadratic term splits
+into its centered part plus |mu|^2. This gives nearby improvement
+at every noncentered point, without a differentiability assumption.
+
+For centered A, Kp=0 and AX lies in V=p-perp. Pairing it with
+P_V e_i gives exactly its ith score. The target law with probabilities
+p_i is centered, since P_V p=0. Any coupling of scores and labels
+lifts to a relaxed assignment on X by conditional expectation;
+indicator purification preserves the optimal value. Thus J_p(A)=F_p(K)
+also holds at deficient rank, at coincident rows, and at K=0.
+Conversely every centered PSD Gram matrix is realizable when N>=m-1.
+The upper bound F_p(K)<=E|Z|<=sqrt(tr K) and p_min>0 prove coercivity
+of h_p and existence of a global optimizer.
+
+2. Continuous polar lift and nonsmooth configurations
+The partial coisometry of A extends to O:R^N->V with OO^T=P_V:
+there are at least dim V-rank A unused source directions.
+For the same fixed O, A_t=K_t^(1/2)O is centered, has Gram K_t,
+and converges to A even at singular K. Concavity of h_p along the
+segment toward any strictly better K* gives strict improvement
+for every t>0. This proves the full no-spurious conclusion with
+no hidden boundary derivative. The source properly declines to
+extract a Hessian conclusion from this generally nonsmooth path.
+
+3. Equal-mass optimizer and scale
+For trace T the input bound is F<=mu_m sqrt(T/(m-1)), with equality
+only at K=(T/(m-1))P when T>0. The optimizing trace is
+T*=m^2 mu_m^2/(m-1); the Gram scalar is
+m^2 mu_m^2/(m-1)^2. Therefore the distortion minimum is
+N-m mu_m^2/(m-1), the center radius is
+mu_m sqrt(m/(m-1)), and the pair distance is
+sqrt2 m mu_m/(m-1). All constants and equality conditions check.
+
+4. Affine-max C2 lemma: the necessary distinct-site argument
+The offset coercivity inequality follows directly from Jensen:
+G>=max h-p.h>=p_min(max h-min h). Distinct slopes make pair ties
+Gaussian-null, so the first offset derivative is the mass vector
+minus p. At its normalized minimum every cell has positive mass.
+
+Three affine functions tying on a full hyperplane would have
+collinear slopes and offsets with the middle function an exact
+convex combination of the two extremes. It could never win
+strictly anywhere, contradicting its positive mass. This exclusion
+does not require full affine rank and is strong enough to ensure
+that triple-winning strata have codimension at least2.
+
+On a compact ball, independent affine differences make the near-triple
+region O(t^2); the max remainder there is O(t), hence O(t^3).
+Dependent collinear triples have a fixed nonwinning gap on that
+compact ball. Away from the triple region, two-line crossing gives
+one-half t^2 times the displayed facet integral. The denominator
+is |a_i-a_j|, and summing i<j counts each crossing exactly once.
+
+The source also supplies the essential global remainder estimate.
+In normal/tangent coordinates for a fixed pair, the switching strip
+has normal width O(|t|(1+|y|)) after moving the O(|t||u|) term to
+the left. Its max remainder is O(|t|(1+|y|)). Integration in u,
+after division by t^2, is bounded by a Gaussian-integrable constant
+times (1+|y|)^2. The tail condition forces |y|>=cR-C0 uniformly
+for small t. Thus the normalized tail remainder vanishes with R.
+This justifies a global second derivative, not a merely formal
+boundary calculation.
+
+For continuity, pair hyperplanes admit continuous orthonormal
+parameterizations locally. Their third-score tests are nontrivial
+tangent affine functions, or nonzero constants. Their zero sets
+are negligible unless absent, so facet indicators converge almost
+everywhere. Bounded offsets, positive pair distances, and Gaussian
+polynomial domination give continuity of the Hessian coefficients.
+This also covers disappearing facets. Positive cell masses persist
+locally. The C2 assertion is therefore valid at every specified
+distinct-site point, including rank deficiency.
+
+5. Envelope and offset uniqueness
+The positive-facet adjacency graph is connected: a generic path
+between interiors crosses facets and avoids all codimension2
+strata. Hence its Laplacian L is positive definite on1-perp.
+This gives local strict convexity of the offset objective at its
+minimum; global convexity excludes a second normalized minimum.
+The implicit-function theorem gives C1 offsets h(A), and the
+envelope gradient then gives a C2 J_p(A).
+The envelope Hessian is the minimum of the joint second derivative
+over zero-sum offset variations. This is precisely the Schur
+complement with the positive offset block, with no rank assumption
+on the site matrix.
+
+6. Boundary supergradient and independent-noise factors
+The outward normal of E_i at an ij facet is
+(a_j-a_i)/|a_i-a_j|. Gaussian integration by parts consequently
+gives b=L A with the sign shown in the source. Euler homogeneity
+then gives J_p=tr(LK).
+
+At [A,0] the optimal cells are cylinders. A variation only in new
+independent Gaussian coordinates has zero mixed offset derivative,
+because E Z=0; its optimizing first offset variation is zero.
+The row Hessian is
+sum_(i<j)w_ij|B_i-B_j|^2=tr(LBB^T).
+This checks the factor1/2 in the second-order expansion of J_p.
+
+Along [sqrt(1-t)A,sqrt(t)B], the scaling contribution is
+-(t/2)J_p, the independent-coordinate contribution is
+(t/2)tr(LK'), and the remaining C2 terms are o(t).
+The covariance value depends only on the Gram matrix even in the
+enlarged source space. Concavity therefore turns this finite
+one-sided directional derivative into the global support
+inequality with supergradient L/2. No inverse of a singular K
+or unproved smooth extension of F_p on a PSD boundary is used.
+
+7. Arbitrary-mass strict saddle
+Stationarity gives (L-D_p)A=0. On V, let
+M=P_V(L-D_p)P_V. Then tr(MK)=0. A better covariance and the
+support inequality force tr(MK')>0, so M has a positive direction.
+Full rank would imply M=0 because the range of A is all of V;
+therefore rank A<m-1<=N and an unused source coordinate exists.
+
+For Az=0 and v in V, the perturbation A+eps v z^T has exact Gram
+K+eps^2 vv^T and keeps the weighted center fixed. The independent
+Gaussian coordinate calculation applies after an orthogonal
+change of source coordinates, within the original dimension.
+Its distortion curvature is
+2v^T(D_p-L)v=-2v^T Mv<0.
+The argument does not assume a unique or full-rank global optimum
+at unequal masses. Rotational zero directions do not contradict
+the stated meaning of strict saddle.
+
+8. Collision descent and the exact collinear check
+For coincident sites, any optimal split of their union gives the
+same original linear value. The conditional scalar Gaussian
+projection on a positive-measure union is atomless and nonconstant.
+The upper/lower quantile split has strictly ordered conditional
+means. The prescribed opposite site displacements cancel the
+weighted linear norm term and increase J_p linearly, whereas the
+quadratic penalty is only O(eps^2). This verifies explicit descent
+of distortion at every collision independently of the polar lift.
+
+For the equal-mass three-cell collinear example, each adjacent
+facet weight is phi(q)/(3phi(q))=1/3 and the nonadjacent facet
+is empty. The path Laplacian eigenvalues are0,1/3,1. On the
+normalized (1,-2,1) direction its eigenvalue is1, so the distortion
+curvature is2(1/3-1)=-4/3 as claimed.
+
+9. Limits of this audit
+The result is conditional on the pinned covariance-concavity input.
+It concerns fixed capacities and population Gaussian data with
+enough ambient dimensions. It supplies no conclusion for ordinary
+free-mass Voronoi k-means, empirical clouds, Gaussian mixtures,
+N<m-1, global algorithmic convergence, or avoidance of saddle
+manifolds. No extra numerical experiment is needed or offered as
+a substitute for the analytic arguments checked above.

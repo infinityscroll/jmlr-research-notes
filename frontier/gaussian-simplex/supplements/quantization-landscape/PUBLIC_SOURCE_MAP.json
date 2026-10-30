@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-31",
+  "scope": "Audited analytic corollary; source files copied unchanged. Internal AI-agent audits; no external acceptance or exhaustive priority claim.",
+  "source_files": {
+    "BOUNDED_PRIMARY_SCOPE_COMPARISON_20261031.txt": "5e97b099b24c8c2e8a631eec1b1adf4866b6c480ccc56ddc961d90ad95f8f341",
+    "CLEANROOM_DIMENSION_BOUNDARY_AUDIT_20261031.txt": "87ebf5651efadfbd07f839e35cd023614521dc4e4d072607b028b5ff19b8f806",
+    "CLEANROOM_DIMENSION_BOUNDARY_AUDIT_PINS_20261031.json": "4907b18995238dc8c15362b51e4dff788ab077c1c8b5ebf8912ea2e90bc926da",
+    "CLEANROOM_QUANTIZATION_LANDSCAPE_AUDIT_20261031.txt": "c67b36bc3c8082403a23a1d13ae7370aee941ff9795057145f050e0d0e020191",
+    "CLEANROOM_QUANTIZATION_LANDSCAPE_AUDIT_PINS_20261031.json": "05de35990bc37a81f9e8df8e404ba8fdde8dbfd36ac4d24154c6ac84a78c9a15",
+    "DIMENSION_BOUNDARY_AND_LLOYD_SEPARATION_20261031.txt": "ead4e863136e4a0b143ae6ad0fccc6e8ccee0ae74546c0daca66dfd8880af2aa",
+    "DIMENSION_BOUNDARY_RATIONAL_CHECK.json": "dc6395d127078df1d370513303f31428536366fbc1e20bc2002b65440cf1c356",
+    "PRESCRIBED_MASS_GAUSSIAN_KMEANS_LANDSCAPE_20261031.txt": "e61d0ae805c5fa24b2d95b0c1bf5c4d4674cf4d627f22b3550182132e4024679",
+    "ROOT_LANDSCAPE_AUDIT_20261031.txt": "f1f1f8651afcfe0188f365406d841a2473eecd3bc986b0e80809188a17c98e7c",
+    "SOURCE_PIN_20261031.json": "5a344e0a1c42fe2ccbf3ac6a488ce76dda4418a25ad4ec7ef92b9a50362c18a0",
+    "check_dimension_boundary.py": "d040dfc562888450e747a9633af23bdca5e2456d97ab59c5366ccbd5350dfaa2"
+  },
+  "dependencies": {
+    "../../review/proof_sources/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b"
+  },
+  "historical_paths": "Relative paths in original source-pin files refer to the original workspace. This public map supplies the portable dependency path.",
+  "checker_scope": "Nine exact rational inequalities for the one-dimensional boundary example, not mechanical verification of the analytic theorem."
+}

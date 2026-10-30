@@ -1,0 +1,19 @@
+{
+  "source_sha256": "ead4e863136e4a0b143ae6ad0fccc6e8ccee0ae74546c0daca66dfd8880af2aa",
+  "checker_sha256": "d040dfc562888450e747a9633af23bdca5e2456d97ab59c5366ccbd5350dfaa2",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "arithmetic": "stdlib fractions.Fraction; exact rational operations",
+  "checks": {
+    "pi_upper": true,
+    "integral_lower_value": true,
+    "normal_quartile_test": true,
+    "exponential_bound_value": true,
+    "exponential_bound_upper": true,
+    "density_ratio_lower": true,
+    "density_gap_factor": true,
+    "variance_gap_value": true,
+    "variance_gap_positive": true
+  },
+  "passed": 9,
+  "total": 9
+}

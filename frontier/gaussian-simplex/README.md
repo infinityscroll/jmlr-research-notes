@@ -18,6 +18,7 @@ arbitrary output bias. Constants can depend on the number of cells.
 - [Precise application scope](review/proof_sources/ALL_M_ENDPOINT_AND_SMALL_NOISE.txt)
 - [Explicit all-cell coercivity supplement](review/proof_sources/EXPLICIT_ALL_M_GAP_20261031.txt)
 - [New equal-mass Gaussian multi-bubble stability consequence](supplements/bubble-stability/README.md)
+- [Prescribed-mass Gaussian quantization: no spurious local minima](supplements/quantization-landscape/README.md)
 - [Audits](review/audits/)
 - [Frozen downloadable package](../../archives/gaussian_covariance_simplex_review_20261031.zip)
 

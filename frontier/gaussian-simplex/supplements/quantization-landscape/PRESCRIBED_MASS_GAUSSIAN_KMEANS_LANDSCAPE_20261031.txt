@@ -1,0 +1,305 @@
+PRESCRIBED-MASS POPULATION GAUSSIAN QUANTIZATION: LANDSCAPE COROLLARY
+31 October2026. strong_signal_prior_art, incorporating root's polar-lift proof.
+New proof for independent internal audit. No public priority or algorithmic
+convergence claim. Frozen earlier sources are unchanged.
+
+SUMMARY
+Conditional only on the already internally audited covariance-concavity
+theorem, prescribed-positive-mass Gaussian quantization in source dimension
+N>=m-1 has no nonglobal local minima. This includes coincident centers and
+arbitrary fixed positive masses. At every pairwise-distinct nonglobal
+stationary configuration the objective is C2 and has a strictly negative
+Hessian direction. Thus this stronger strict-saddle statement also holds
+for arbitrary prescribed masses; it does not assume their global optimum
+has full affine rank or is unique.
+
+For equal masses, the global centers are exactly a centered regular
+(m-1)-simplex of the explicit radius below. No claim is made for ordinary
+unconstrained k-means (whose masses vary with the centers), empirical data,
+mixtures, N<m-1, or convergence of Lloyd iterations.
+
+1. PRECISE OBJECTIVE AND INPUT
+Fix m>=2, p_i>0, sum p_i=1, N>=m-1. Put D_p=diag(p_1,...,p_m).
+For A in R^(m x N), whose rows a_i are the centers, set
+  J_p(A)=sup_f sum_i integral f_i(x) a_i.x dgamma_N(x),
+where f_i>=0, sum_i f_i=1, integral f_i=p_i. The supremum is attained
+by an indicator partition; relaxed and indicator values agree by the
+atomless linear assignment extreme-point argument. Define
+  H_p(A)=J_p(A)-(1/2)sum_i p_i|a_i|^2,
+  D_p^quant(A)=N-2H_p(A).                              (1)
+The superscript distinguishes distortion from the diagonal matrix D_p.
+Equivalently this distortion is W2^2(gamma_N,sum_i p_i delta_(a_i)).
+It uses the optimal CAPACITY-CONSTRAINED Laguerre assignment, not ordinary
+nearest-center Voronoi assignment with free cluster masses.
+
+Covariance-concavity input:
+  C -> MCov(N(0,C),nu) is concave on the closed PSD cone
+for every fixed finite target nu (indeed every nu in P2 in our source).
+Pinned proof:
+../all_dimensional_covariance_concavity_20261031/
+  ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+SHA256225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+Its balanced simplex trace optimum/equality is used only in Section4.
+This note proves the new optimization implications, not that input again.
+
+2. CENTERING, COVARIANCE AND EXISTENCE
+Let mu=sum_i p_i a_i and A0=A-1 mu^T. Then p^T A0=0 and
+  J_p(A)=J_p(A0),
+  H_p(A)=H_p(A0)-|mu|^2/2.                            (2)
+The first identity follows from E X=0; the second is weighted variance
+decomposition. Thus every local maximum of H_p and every stationary
+point is centered. In the rest of the proof K=A A^T has Kp=0.
+Write V=p-perp in R^m, dimension m-1, and let P_V be its orthogonal
+projection. The score vector Z=A X lies in V and has covariance K.
+The discrete target takes value P_V e_i with probability p_i. It is
+centered because sum_i p_i P_V e_i=0. Its pairing with Z is Z_i.
+Consequently
+  J_p(A)=F_p(K),
+  h_p(K)=F_p(K)-(1/2)tr(D_p K)                        (3)
+is concave on {K>=0:Kp=0}. This covariance description is valid at rank
+deficiency and at K=0: relaxed couplings give the same value as the
+original atomless assignment problem. Conversely every such K is
+realizable by a centered A in R^(m x N), since N>=m-1.
+
+The function F_p is continuous on the closed cone, by the main theorem
+or W2 continuity, and 0<=F_p(K)<=sqrt(tr K). Indeed independent labels
+give zero and every selected score is bounded by |Z|. Therefore
+  h_p(K)<=sqrt(tr K)-(p_min/2)tr K ->-infinity
+as tr K->infinity. A global maximum exists on a compact subset of the
+closed cone. Distortion minimizers exist in every permitted dimension.
+No uniqueness or rank assertion is needed for general p.
+
+3. NO SPURIOUS LOCAL MINIMA: CONTINUOUS POLAR LIFT
+Let A be centered, K=A A^T. Extend its polar partial isometry to a map
+O:R^N->V such that
+  O O^T=P_V,   A=K^(1/2) O.
+Such an extension exists because N>=dim V; choose orthonormal images for
+the missing row directions in the orthogonal complement of the original
+source row span.
+
+If K is not globally maximizing h_p, choose K* with h_p(K*)>h_p(K), and
+for 0<t<=1 define
+  K_t=(1-t)K+t K*,  A_t=K_t^(1/2) O.
+Then A_t A_t^T=K_t, A_t->A by continuity of the PSD square root, and
+  H_p(A_t)=h_p(K_t)
+     >=h_p(K)+t[h_p(K*)-h_p(K)]>H_p(A).               (4)
+This gives arbitrarily nearby strict improvement, even at singular K or
+coincident centers. A noncentered configuration is improved arbitrarily
+nearby by reducing mu in(2). Hence every local minimum of distortion is
+global, for every prescribed positive mass vector p.
+
+The path need not be differentiable in t at0: this is why(4) alone does
+not prove a Hessian strict-saddle theorem. Sections5--7 supply the missing
+boundary differentiability at every pairwise-distinct site configuration.
+
+4. EXACT BALANCED GLOBAL MINIMIZERS
+Now p_i=1/m. Put d=m-1, P=I-(1/m)11^T, and
+  mu_m=E max_(1<=i<=m) Z_i,  Z_i independent N(0,1).
+The audited balanced trace optimum gives, for K>=0,K1=0 and T=tr K,
+  F_(1/m)(K)<=mu_m sqrt(T/d),                         (5)
+with equality for T>0 only when K=(T/d)P. Optimizing
+mu_m sqrt(T/d)-T/(2m) yields
+  T*=m^2 mu_m^2/d,
+  K*=alpha* P,  alpha*=m^2 mu_m^2/d^2,
+  min_A D_(1/m)^quant(A)=N-m mu_m^2/d.                (6)
+Thus the centers have weighted mean0, Gram K*, and form a regular
+(m-1)-simplex up to orthogonal embeddings and label permutations. Their
+individual norms and mutual distances are, respectively,
+  |a_i|=mu_m sqrt(m/d),
+  |a_i-a_j|=sqrt(2)m mu_m/d.
+There are no other local minima by Section3. The equality and positive
+scale exclude coincident centers at a balanced optimum.
+
+5. C2 GAUSSIAN AFFINE-MAX LEMMA, INCLUDING DEFICIENT SITE RANK
+Let A have pairwise-distinct rows. For offsets h in R^m set
+  G(A,h)=E max_i(a_i.X+h_i)-sum_i p_i h_i.
+The offset minimum is normalized by sum_i h_i=0. It exists: Jensen gives
+  G(A,h)>=max_i h_i-p.h>=p_min(max_i h_i-min_i h_i),
+which is coercive on that hyperplane. Pairwise score ties have Gaussian
+measure zero. Hence G_h equals the cell-mass vector minus p, and a
+minimizing h gives every cell its strictly positive prescribed mass.
+Cells are the polyhedra
+  E_i={x:a_i.x+h_i>=a_j.x+h_j for every j}.
+
+For any configuration (A,h) with distinct rows and every cell of positive
+mass, no three affine scores tie on an entire codimension-one hyperplane.
+If this happened, their slopes would be collinear, one of the three
+slopes would lie strictly between the other two, and the corresponding
+offset would be the same convex combination. That middle affine score
+could never be a strict winner, so its cell would have Gaussian mass0.
+This contradiction also handles arbitrary affine rank deficiency.
+Therefore triple-winning strata have codimension at least2.
+
+For i<j let Sigma_ij be the common winning facet (possibly empty),
+  w_ij= integral_(Sigma_ij) phi_N(x)dH^(N-1)(x)/|a_i-a_j|,
+and let L be the weighted Laplacian with L_ij=-w_ij and
+L_ii=sum_(j!=i)w_ij. Empty facets have w_ij=0. All weights are finite,
+since Gaussian hyperplane mass is at most1/sqrt(2pi) and every
+|a_i-a_j| is positive.
+
+The following exact second derivative holds for arbitrary row variation
+V=(v_i) and offset variation beta:
+  D2 G(A,h)[(V,beta),(V,beta)]
+    =sum_(i<j) 1/|a_i-a_j|
+       integral_(Sigma_ij)
+          [(v_i-v_j).x+beta_i-beta_j]^2 phi_N(x)dH^(N-1)(x).
+                                                               (7)
+In particular G_hh=L. This formula holds as a C2 derivative, not merely
+as a formal boundary variation, at all configurations just specified.
+
+Justification of(7) and its global tail control. On a fixed bounded ball,
+exclude O(|t|)-neighborhoods of triple-winning strata. The region in which
+three scores are within O(|t|) of the winner has volume O(t^2): the two
+independent affine difference equations give codimension2, while the
+finite collinear triples cannot be winning and have a positive gap on
+compact sets. The integrand's Taylor remainder there is O(|t|), so this
+part contributes O(|t|^3). Elsewhere only two affine functions exchange
+the maximum. Integrating their elementary two-line crossing in the normal
+direction gives half t^2 times the corresponding integrand in(7), plus
+o(t^2). This is uniform for variations in a bounded parameter set.
+
+For completeness, the tail truncation is uniform after division by t^2.
+Subtract the first-order winning affine branch. The convex-max remainder
+is zero unless some pair i,j has
+  |(a_i-a_j).x+h_i-h_j|<=C|t|(1+|x|),
+and on that event it is at most C|t|(1+|x|). Write x=y+u n along the
+fixed pair's unit normal. For small |t|, the displayed strip confines u
+to an interval centered at u0=-(h_i-h_j)/|a_i-a_j|, of length at most
+C'|t|(1+|y|), and |u|<=C0+C'|t|(1+|y|). Integration in u bounds the
+remainder divided by t^2 by a constant times
+  (1+|y|)^2 phi_(N-1)(y).
+The additional condition |x|>R forces |y|>=cR-C0 (uniformly for small t).
+Its Gaussian integral tends to zero as R->infinity. This proves the
+required global o(t^2), with no unproved regularity at infinity.
+
+The coefficients in(7) vary continuously near (A,h). Parameterize each
+pair hyperplane by continuously chosen orthonormal tangent coordinates.
+Every third-score equality is either a genuine tangent hyperplane or
+a nonzero constant: an identically zero third score was excluded above.
+Facet indicators therefore converge for almost every tangent point.
+Gaussian polynomial domination, with uniformly bounded offsets and
+positive pair distances, proves continuity of their integrals. Positivity
+of every cell persists in a neighborhood by ordinary dominated
+convergence of its indicator. These observations justify the asserted
+C2 regularity, including topology changes with vanishing facets.
+
+The positive-weight adjacency graph is connected: full-dimensional
+positive-mass cells partition R^N, and a generic polygonal path between
+two cell interiors crosses finitely many facets while avoiding all
+codimension2 strata. Hence L is strictly positive on1-perp. The offset
+minimum is unique modulo constants; strict positivity gives local strict
+convexity, and global convexity rules out a second minimum. The implicit
+function theorem applied to G_h=0 shows normalized h=h(A) is C1 locally.
+Consequently J_p(A)=G(A,h(A)) is C2 on the open set of distinct centers.
+Its gradient has rows
+  b_i=integral_(E_i) x dgamma_N(x).                   (8)
+The envelope Hessian is equivalently the minimum of(7) over beta with
+sum beta_i=0. No assumption of full affine rank was used.
+
+6. GAUSSIAN IBP AND A FINITE BOUNDARY COVARIANCE SUPERGRADIENT
+Gaussian integration by parts on each polyhedral cell gives
+  b_i=sum_(j!=i)w_ij(a_i-a_j),  hence b=L A.            (9)
+Indeed the outward normal of E_i on Sigma_ij is
+(a_j-a_i)/|a_i-a_j| and integral_E x phi=-integral_boundary n phi.
+Truncation by balls and Gaussian decay justify the formula on unbounded
+cells. Euler homogeneity, or the winning-score identity, also gives
+  J_p(A)=sum_i a_i.b_i=tr(LK).                         (10)
+
+Append q independent standard Gaussian source coordinates Z. The initial
+site matrix is [A,0]. For a row matrix B in R^(m x q), perturb to[A,eps B].
+On each original facet the added-coordinate law remains an independent
+standard Gaussian. Thus the mixed offset derivative in direction[0,B]
+is zero, since E Z=0. The minimizing offset derivative is zero modulo
+constants. Formula(7) and E ZZ^T=I give
+  J_p([A,eps B])=J_p(A)+(eps^2/2)tr(LBB^T)+o(eps^2).  (11)
+This is an exact boundary derivative calculation, including rank-deficient
+A. The Laplacian weights are unchanged by the cylindrical extension.
+
+Let K' be any PSD covariance on V=p-perp and choose B B^T=K'. Use
+  A_t=[sqrt(1-t)A,sqrt(t)B],
+so A_t A_t^T=(1-t)K+tK'. The C2 Taylor expansion at[A,0], (10)--(11), gives
+  F_p((1-t)K+tK')
+    =F_p(K)+(t/2)tr[L(K'-K)]+o(t).                   (12)
+The linear term from scaling is -(t/2)J_p(A); the added-coordinate
+first derivative is zero. Cross and scaling-quadratic terms are o(t).
+Concavity along this segment now proves the GLOBAL supporting inequality
+  F_p(K')<=F_p(K)+(1/2)tr[L(K'-K)].                   (13)
+Thus L/2 is a finite covariance supergradient at every Gram represented
+by distinct centers, even when K lies on the PSD boundary. No formal
+inverse of K and no full-rank regularization argument is needed.
+
+7. STRICT SADDLES FOR ALL PRESCRIBED POSITIVE MASSES
+Every ordinary stationary point of distortion with distinct centers is
+centered by(2). Equations(8)--(9) give
+  (L-D_p)A=0.                                        (14)
+Define M=P_V(L-D_p)P_V, symmetric on V. In particular tr(MK)=0.
+Suppose A is nonglobal. Some K' on the centered PSD cone has h_p(K')>h_p(K).
+Subtracting the linear trace penalty in(13) yields
+  0<h_p(K')-h_p(K)<= (1/2)tr[M(K'-K)]
+                      =(1/2)tr(MK').                (15)
+Therefore M has a strictly positive eigenvalue on V. If rank(A)=m-1,
+its range is V and(14) forces M=0, a contradiction. Hence
+  rank(A)<m-1<=N.
+Choose a unit unused source direction z with A z=0, and a unit v in V
+with v^T M v>0. Perturb the centers by
+  A_eps=A+eps v z^T.
+This preserves p-centering and has exact Gram K+eps^2 vv^T. Applying(11),
+now within the available source coordinates, gives
+  d^2/deps^2 D_p^quant(A_eps)|_(eps=0)
+     =2v^T(D_p-L)v=-2v^T M v<0.                      (16)
+Thus every pairwise-distinct nonglobal stationary point is a strict
+saddle of the C2 distortion objective. This holds also for unequal p,
+even if a global optimum has deficient rank. The proof uses only the
+existence of a better covariance, not a full-rank or unique optimizer.
+
+The phrase 'strict saddle' here means a strictly negative Hessian
+eigenvalue at a stationary point; it does not mean all other Hessian
+eigenvalues are nonzero. Rotation symmetries naturally produce flat
+directions. Collision points are excluded from this C2 statement but
+are already covered by the no-spurious theorem and the next direct test.
+
+8. COLLISIONS HAVE AN EXPLICIT LINEAR IMPROVEMENT
+Suppose a_i=a_j=a. Take an optimal indicator assignment and let E be the
+union of these two cells, with Gaussian mass p_i+p_j. Pick any unit source
+direction z. The distribution of z.X restricted to E has no atoms and
+is not concentrated at one point, because E has positive Gaussian measure.
+Split E at its conditional quantile into E_+ of mass p_i (the larger
+z-projections) and E_- of mass p_j. Keep the other cells unchanged.
+Perturb
+  a_i(eps)=a+eps z,
+  a_j(eps)=a-(p_i/p_j)eps z,  eps>0.
+The weighted center remains fixed. Evaluating the new assignment yields
+  J_p(A_eps)>=J_p(A)+eps c,
+  c=integral_(E_+) z.x dgamma
+        -(p_i/p_j)integral_(E_-) z.x dgamma >0.
+The strict inequality is p_i times the difference of the two conditional
+means. The weighted squared-norm change is exactly
+  eps^2[p_i+p_i^2/p_j].
+Consequently
+  H_p(A_eps)-H_p(A)>=eps c-(eps^2/2)[p_i+p_i^2/p_j]>0
+for all sufficiently small positive eps. Thus collisions admit an
+explicit linear ascent for H_p, independent of the polar-lift argument.
+No collision can be a global optimum or a local minimum of distortion.
+
+9. EXACT THREE-CELL FACTOR CHECK
+For m=3,N>=2,p_i=1/3, let q=Phi^(-1)(2/3) and a=3phi(q). The centered
+collinear configuration (-a e_1,0,a e_1) has balanced quantile cells
+with boundaries at +/-q. Their cell first-moment vectors are (-phi(q)e_1,0,phi(q)e_1),
+so it is stationary. Its facet Laplacian is exactly
+  L=(1/3)[[1,-1,0],[-1,2,-1],[0,-1,1]].
+The nonzero eigenvalues are1/3 on (-1,0,1) and1 on (1,-2,1).
+With v=(1,-2,1)/sqrt(6) and unused z=e_2, (16) gives distortion second
+derivative exactly -4/3. This checks the factor2, the independent-noise
+Hessian, and the direction of the strict-saddle conclusion without a
+numerical approximation or a generic-rank assumption.
+
+10. SCOPE, PRIORITY AND ALGORITHMS
+The mathematical input is the internal covariance-concavity proof pinned
+in Section1. The present note is a new conditional corollary proof and
+is being separately audited. Root is performing a bounded current-primary
+literature comparison; this source does not infer novelty from absent
+search hits. It is a theorem about the population Gaussian objective
+with prescribed masses and enough source dimensions. It is not a proof
+of empirical k-means behavior, unconstrained Lloyd convergence, global
+convergence from every initialization, or an avoidance theorem for saddle
+manifolds. Any such dynamical statement requires additional arguments.

@@ -1,0 +1,18 @@
+{
+  "status": "PASS within stated fixed-capacity population Gaussian scope; internal AI-agent audit.",
+  "mechanical_proof_verification": false,
+  "files": [
+    {
+      "path": "PRESCRIBED_MASS_GAUSSIAN_KMEANS_LANDSCAPE_20261031.txt",
+      "sha256": "e61d0ae805c5fa24b2d95b0c1bf5c4d4674cf4d627f22b3550182132e4024679"
+    },
+    {
+      "path": "CLEANROOM_QUANTIZATION_LANDSCAPE_AUDIT_20261031.txt",
+      "sha256": "c67b36bc3c8082403a23a1d13ae7370aee941ff9795057145f050e0d0e020191"
+    },
+    {
+      "path": "../all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b"
+    }
+  ]
+}

@@ -9,12 +9,13 @@ not accepted papers or claims of author endorsement.
 | Result | Scope | Review status |
 | --- | --- | --- |
 | [Gaussian covariance concavity and simplex optimality](frontier/gaussian-simplex/README.md) | A covariance theorem for every finite-dimensional target with finite second moment; balanced first-moment optimality for every cell count, both-sign near-zero noise results, and a separately audited quadratic Gaussian-bubble stability consequence. | Complete manuscript, three internal analytic audits, assembly audits and two exact checkers. Full correlation ranges remain open. |
+| [Gaussian quantization landscape](frontier/gaussian-simplex/supplements/quantization-landscape/README.md) | For arbitrary prescribed positive masses and `N >= m - 1`, every local minimum is global; every distinct nonglobal stationary configuration is a strict saddle. | Audited corollary of covariance concavity, with an exact lower-dimensional counterexample. No Lloyd convergence or empirical-data claim. |
 | [Marcus inequality for three blocks](frontier/marcus-three-blocks/README.md) | Every block size and every complex PSD Gram rank. | Complete proof, independent derivation and exact checks. The arbitrary-block conjecture remains open. |
 | [Coupled cactus causal models](frontier/causal-cactus/README.md) | Exact generic real-fiber count for the declared coherent cactus class, including cross-component error correlations. | Scoped technical note with audited proof and exact checks. Earlier-literature overlap remains unresolved. |
 | [Gaussian polynomial independence](frontier/gaussian-polynomial-independence/README.md) | A compact extremal critical-fiber obstruction allowing arbitrary degeneracy. | Scoped analytic lemma and root audit. The full U-conjecture remains open. |
 
-The new theorem packages include readable PDFs and preserve their frozen
-manuscripts, proof sources, audit records and checksums. Downloadable archives
+The Gaussian covariance and Marcus packages include readable PDFs and preserve
+their frozen manuscripts, proof sources, audit records and checksums. Downloadable archives
 are in [archives/](archives/).
 All independent internal reviews are **AI-agent reviews**, not external expert
 endorsement. Publication records the work; it does not settle its novelty or
