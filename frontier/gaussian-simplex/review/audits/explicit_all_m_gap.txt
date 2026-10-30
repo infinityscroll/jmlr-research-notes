@@ -1,0 +1,58 @@
+INDEPENDENT AUDIT: EXPLICIT ALL-m COVARIANCE AND CENTROID GAP
+31 October 2026. strong_signal_prior_art. Verdict: PASS.
+Source: EXPLICIT_ALL_M_GAP_20261031.txt
+SHA256 01e6bbfa3ae80a7f19c8de9f98592441202483947b282be55a51784a0f413989.
+No source changes requested. This audit is separate from the pinned main
+covariance-concavity proof and does not change any frozen noise interval.
+
+I read the complete supplement and independently checked the following.
+
+1. Covariance coordinates and the optimizer's apex.
+C acts on the reduced (m-1)-space; its full score covariance is QCQ^T.
+The stated trace and radius imply m/2<=lambda(C)<=3m/2. At a mean-zero
+offset optimizer, max h<=j(C)<=E|S|<=sqrt(T). Setting k_i=max h-h_i proves
+||h||^2<=m(m-1)(max h)^2 without a missing dimension factor. Since Q is
+an isometry and a=-C^{-1/2}Q^T h, this yields
+|a|<=sqrt(2m)(m-1). The trace hypothesis is explicitly present.
+
+2. The facet ball and its Gaussian mass.
+For z_e=C^{-1/2}(r_i+r_j), the ij gap is zero and every other gap is1.
+The row inner products give |z_e|<=2sqrt(m-2)/m. Every gap gradient has
+norm at most sqrt(3m), so the radius1/(2sqrt(3m)) loses at most1/2 of each
+positive gap. The whole tangent ball lies in the facet's relative interior.
+It is (m-2)-dimensional but is integrated against the FULL (m-1)-dimensional
+Gaussian density. Therefore the mass coefficient b_m has exactly the
+stated volume and density factors. Substitution of
+v_(m-2)=pi^((m-2)/2)/Gamma(m/2) verifies the alternate formula in(1).
+
+3. Whitening and the all-direction Hessian factor.
+With y_i=C^{1/2}r_i and S=C^{-1/2}HC^{-1/2},
+(y_i-y_j)^T S(y_i-y_j)=(r_i-r_j)^T H(r_i-r_j).
+The main Hessian has weight mu_e/ell_e^3, bounded below by
+b_m/(3m)^(3/2). For B=QHQ^T with B1=0, direct expansion gives
+sum_(i<j)(Bii+Bjj-2Bij)^2
+  =m sum_i Bii^2+(tr H)^2+2||H||_F^2.
+Thus the factor4 in the main theorem and the factor2 in this edge estimate
+give exactly kappa_m=b_m/[2(3m)^(3/2)].
+
+4. Taylor and the global gap.
+Permutation invariance makes the derivative scalar on 1-perp, hence zero
+on trace-zero directions. Integrating the Hessian contributes the further
+factor1/2 in(11). The exact maximal distance from mI on the trace-T PSD
+domain is m sqrt((m-1)(m-2)), attained at rank1. The chosen theta contracts
+that distance to m/2. Its endpoint still has eigenvalues at least m/2>0,
+so no open-ball or limiting issue arises. The direction of the concavity
+inequality is correct and gives g_m=kappa_m theta/2, exactly as stated.
+
+5. Centroid normalization, including rank loss.
+The normalized score Gram has traceT and zero row sums. Balanced duality
+gives s sqrt(W)<=J(K)<=s sqrt(w_m), and therefore the square-root gap
+bound(13). Orthogonal Procrustes on O(N), N>=m-1, gives(14), including
+zero eigenvalues. Rescaling and the two-square inequality produce
+2+2sqrt(w_m)/(m s g_m). The elementary bound mu_m<=sqrt(m) changes this
+to 2+2/[m(m-1)g_m] with no extra m or m-1 factor. If W=0 the orbit
+distance squared equals w_m, so the same coefficient is valid.
+
+The result is a valid explicit, conservative global H_m coefficient for
+every fixed m>=3. It supplies no uniform-in-m numerical noise interval
+without the separate transfer step, and the source correctly says so.

@@ -1,0 +1,81 @@
+EXACT ALL-CELL ENDPOINT AND SMALL-NOISE IMPLICATIONS
+31 October 2026. strong_signal_prior_art.
+
+Status: independent internal audit PASS, conditional only on the mathematical
+validity of the pinned complete proof and its classical external inputs;
+no remaining H_m conjecture is used. This is not a public priority statement.
+Main proof SHA256:
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+Full source and transfer pins are in INDEPENDENT_END_TO_END_AUDIT_20261031.txt.
+
+Definitions
+Fix any integer m>=3 and let d=m-1. Let g=(g_1,...,g_m) be the regular
+simplex winning partition in R^d. In larger dimensions it ignores the
+extra coordinates. Let Z_1,...,Z_m be independent standard normals and
+  mu_m=E max_i Z_i, w_m=mu_m^2/(m-1).
+A relaxed assignment f:R^N->Delta_m has nonnegative measurable components
+summing to1. Balanced means E f_i=1/m. Its centroids are b_i=E[Xf_i(X)].
+T_rho denotes the standard Gaussian Ornstein--Uhlenbeck noise operator.
+
+A. Balanced first moment, every finite dimension
+For every balanced relaxed f,
+  sum_i||b_i||^2 <= w_m.
+For N>=d, equality holds exactly for regular simplex winning partitions,
+up to an orthogonal transformation, a label permutation and Gaussian-null
+changes. The partition may be cylindrical in the unused coordinates.
+For N<d the displayed benchmark is strict.
+
+For N>=d there is a finite K_m, depending only on m, such that
+  dist_F(b(f),ordered regular-centroid orbit)^2
+    <=K_m(w_m-sum_i||b_i||^2).
+This is a global estimate for all relaxed assignments, not only stationary
+points or a prescribed covariance subfamily. It is the shared hypothesis
+H_m of both already audited finite-cell transfer theorems.
+
+B. Positive correlation, balanced problem
+There exists rho_m^+>0, depending on m but not N, such that for every finite
+N>=d, every 0<rho<=rho_m^+, and every balanced relaxed assignment f,
+  sum_i <f_i,T_rho f_i> <= sum_i <g_i,T_rho g_i>.
+Equality has exactly the same regular-simplex classification as in A.
+For N<d the same benchmark is strict. The interval may be chosen closed
+at its positive upper endpoint by the explicit finite inequalities in the
+transfer proof; its size is not claimed uniform over m.
+
+At each fixed rho in this interval, the usual balanced low-influence
+m-candidate plurality comparison follows from Isaksson--Mossel's same-rho,
+exact-expectation Gaussian transfer and its plurality limit. The quantifiers
+are: for each epsilon>0 there is an influence cutoff tau>0, depending on
+m,rho,epsilon, for the additive-epsilon asymptotic plurality comparison.
+There is no explicit tau, no uniform-in-rho cutoff, and no finite-voter
+exact-optimizer assertion here. This standard discrete implication retains
+the separate primary-source audit used in the earlier review package.
+
+C. Negative correlation, FREE common-mass bilinear problem
+There exists r_m^->0, depending on m but not N, such that for every finite
+N>=d, every 0<r<=r_m^-, and every two relaxed assignments f,h satisfying
+  E f=E h=p
+for an arbitrary common probability vector p,
+  sum_i <f_i,T_{-r}h_i> >= sum_i <g_i,T_{-r}g_i>.
+The vector p is not prescribed or assumed uniform. Equality forces p to
+be uniform and f=h to be ONE COMMON regular simplex winning partition,
+up to a common orthogonal transformation, common labels and null changes.
+For N<d the benchmark is strict. In particular f=h gives the free-mass
+negative-noise single-partition inequality as a corollary.
+
+Equivalently, at positive kernel parameter r the bilinear minimum with
+free common masses is attained exactly by the antipodal pair
+  f(x)=g(Qx), h(x)=g(-Qx),
+with common labels and an isometric identification of the d used coordinates.
+This reflection equivalence is the one used in Heilman's2022 Theorem7.9.
+
+D. What is not asserted
+These are small-correlation theorems for each fixed number of cells. They
+do not cover every positive or negative correlation, do not optimize a
+given unequal mass vector, do not give an m-uniform interval, and do not
+claim strict covariance concavity for every arbitrary P2 target. Existing
+explicit four-cell intervals and frozen releases retain their original
+values; no numerical bound is silently changed by the all-m argument.
+
+Binary m=2 is outside the general transfer files' stated m>=3 scope. Its
+classical Borell conclusions are consistent with these results, but no
+additional binary claim is needed for the implications above.

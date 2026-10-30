@@ -1,0 +1,99 @@
+Targeted primary-source priority comparison, 2026-10-30
+
+Conclusion. The checked later theorems do not directly subsume the exact
+one-observable, arbitrary-degree additive statement or the isolated-Morse-
+fiber statement. That is not a novelty finding. The 1967 primary source
+already uses saddle-point analysis and sphere-maximizing directions to
+remove variables. It is a direct ancestor of our tail-peeling mechanism.
+The exact nonhomogeneous extensions in KLR 1973 Sections11.4--11.6 remain
+an unclosed comparison gate. We should not promote these scoped results
+as a new major theorem, and they do not meet the full-conjecture objective.
+
+1. Linnik (1962), Sur certaines questions de statistique analytique,
+Annales scientifiques de l'Universite de Clermont-Ferrand2,8(2),53--61.
+Primary full text:
+https://www.numdam.org/article/ASCFM_1962__8_2_53_0.pdf
+Cached: sources/linnik_1962.pdf. Precise locator: Section5, pp.60--61
+(PDF pages9--10 including cover). The full orthogonal-unlinking assertion
+is stated there, with degree-at-most-two and Zinger's two-variable,
+all-degree cases recorded. The proposed method uses polynomial moment
+equations, finite generation, and algebraic dimension/rank calculations.
+No additive or isolated-Morse-fiber theorem appears in that discussion.
+This verifies a pre-1973 formulation; it does not independently verify
+the contents of the 1954 mimeograph cited by the next paper.
+
+2. Zinger--Linnik (1967), Polynomial statistics from a normal sample,
+Dokl. Akad. Nauk SSSR176(4),766--767.
+Institutional primary landing page:
+https://www.mathnet.ru/eng/dan33365
+Public primary PDF read through web tool:
+https://www.mathnet.ru/php/getFT.phtml?jrnid=dan&option_lang=eng&paperid=33365&what=fullt
+The PDF's Russian text was available to the web reader; a local urllib
+download returned HTTP403, so no local PDF is claimed. Theorem2 on p.767
+removes coordinate directions associated with extrema on the unit sphere
+for decorrelated homogeneous polynomials. Theorem3 treats symmetric
+homogeneous observables with a nonexceptional maximizing point against
+an arbitrary polynomial. Theorem4 treats a symmetric homogeneous statistic
+of centered coordinates. Section4 mentions unspecified nonhomogeneous,
+rational, and holomorphic extensions. The proof description explicitly
+uses multidimensional saddle points and algebraic geometry. Page766 and
+reference1 attribute the conjecture to Linnik's 1954 Calcutta notes.
+
+Our inference from this source: homogeneous additive tail-peeling cases
+overlap the old directional mechanism. We have not established that our
+mixed-degree additive theorem is new. A different technical proof is not
+by itself a priority claim. The source does not state our precise finite
+isolated-critical-fiber criterion, but its saddle-point methods make a
+method-level novelty claim premature as well.
+
+3. Harge (2005), Characterization of equality in the correlation
+inequality for convex functions, the U-conjecture,
+Ann. Inst. H. Poincare Probab. Statist.41,753--765.
+https://www.numdam.org/article/AIHPB_2005__41_4_753_0.pdf
+Cached: sources/harge_2005.pdf. Theorem1.2, p.754: both observables are
+convex L2 functions; one is real analytic and minimized at the origin.
+This does not cover arbitrary polynomial g or nonconvex additive/Morse f.
+Theorem1.1 describes equality in a convex correlation inequality and its
+linear-plus-orthogonal-block decomposition. Our scoped claims do not
+follow by simply invoking these statements.
+
+4. Malicet--Nourdin--Peccati--Poly (2015 preprint; JFA2016), Squared
+chaotic random variables: new moment inequalities with applications.
+https://arxiv.org/html/1503.02154
+https://arxiv.org/pdf/1503.02154
+Cached: sources/malicet_nourdin_peccati_poly_2015.pdf.
+Exact locator: Section1.5, Theorem1.7; proof Section3.6. Each observable
+belongs to a class of sums of squares of fixed-order Wiener-chaos
+polynomials. Pairwise independence yields orthogonal unlinking, including
+multiple observables. Its nonnegative-square structure does not include
+an arbitrary signed mixed-degree additive f and unrestricted polynomial g.
+We cannot assume independence of separate chaos components of an
+arbitrary polynomial pair; that would discard the central cancellation
+problem. Their theorem is neither a general additive theorem nor the
+isolated-Morse-fiber criterion in our notes.
+
+5. Hong--Hu (2020 preprint; Chinese J. Appl. Probab. Statist.2022),
+Unlinking Theorem for Symmetric Quasi-convex Polynomials.
+https://arxiv.org/html/2012.14568
+https://arxiv.org/pdf/2012.14568
+Cached: sources/hong_hu_2020.pdf. Theorem1.1 requires both polynomials to
+be symmetric and quasi-convex. It does not subsume our unrestricted g or
+nonconvex f. Introduction cites KLR Sections11.4--11.6 and the n=2 result,
+making those sections a concrete priority gate rather than evidence that
+no earlier relevant theorem exists.
+
+Scope of the check. Targeted searches used the precise phrases
+U-conjecture/additive/separable/critical/Morse, the KLR section numbers,
+and the explicit Zinger--Linnik titles. Searches with no relevant result
+provide no evidence of novelty. Publisher summaries and unrelated search
+results were not treated as mathematical theorem sources. No paywall,
+authentication, private archive, or contact was used. The book's publicly
+visible Google Books record supplied metadata, not readable Chapter11.
+
+Comparison with our exact frozen statements.
+  Additive: ORTHOGONALLY_ADDITIVE_PEELING_20261030.txt,
+  SHA2569e9c580f266cbde1834530029dc09118041c827d4349fc6564338852b7971240.
+  Morse: MORSE_FIBER_RIGIDITY_20261030.txt,
+  SHA256ac5f1e9b41ceabd4e9ab06e22a44db9896ae855eb8a97c6748f3fb7d6421db3a.
+Both passed independent internal mathematical audit. That establishes
+neither historical novelty nor a resolution of the full U-conjecture.

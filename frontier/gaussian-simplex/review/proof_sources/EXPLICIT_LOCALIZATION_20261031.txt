@@ -1,0 +1,78 @@
+EXPLICIT FREE-MASS LOCALIZATION SUPPLEMENT
+31 October2026. Separate from the frozen existential reconstruction.
+Base proof: FREE_COMMON_MASS_NEGATIVE_TRANSFER_AUDIT_20261031.txt,
+SHA256 9a6339628de87b4d0ae95526438caab8544da303bb2934c8494c204b33adc2ef.
+The derivation below was independently checked by gaussian_cleanroom_end_to_end
+before this supplement was written. Its numerical checker is separate.
+
+1. A constructive replacement for qualitative localization
+Use all notation of the base proof. For a competitive pair at r<=1, put
+F=(f+h)/2, p=E F, u=half||p-U||_1. The base Hermite estimates imply
+  u<=sqrt(3m)/2 sqrt(r), W(F)>=<b(f),b(h)> >= w-2r.
+
+Globally balance F as follows. For each donor i with p_i>1/m, remove the
+fraction (p_i-1/m)/p_i of F_i(x). Distribute the total removed function to
+recipient labels proportionally to their deficits 1/m-p_j. This is a
+simplex-valued balanced assignment F0 and
+  sum_i||F0_i-F_i||_1=2u.
+If u=0 set F0=F. The signs of the changes are fixed by the donor/recipient
+label sets. Since each change has absolute value at most1, Bessel's
+inequality for the Gaussian coordinate functions gives
+  e^2:=||b(F0)-b(F)||_F^2
+     <=sum_i||F0_i-F_i||_2^2<=2u,
+  e<=(3m)^(1/4)r^(1/4).
+This bound has no unnecessary factor of dimension.
+
+Both centroid matrices have norm at most1 by Parseval. Consequently
+  Delta0=w-W(F0)<=2r+2e.
+Choose c nearest in the regular centroid orbit to b(F), and put
+q=||b(F)-c||_F^2. H_m and orbit-distance Lipschitz continuity give
+  sqrt(q)<=sqrt(K Delta0)+e,
+  q<=4Kr+4Ke+2e^2.
+
+Let J=w-<c,b(F)> be the regular linear assignment cost. Its pointwise
+nonnegativity and the exact identity 2J=w-W(F)+q do not need balance.
+Writing a=|c_i-c_j| and beta=binom(m,2)sqrt(2/pi)/a, the usual Gaussian
+score-gap union bound and layer cake give
+  d(F,g_c)^2<=2beta J
+     <=beta[(4K+2)r+4Ke+2e^2]
+     <=C_loc r^(1/4),
+  C_loc=beta[(4K+2)+4K(3m)^(1/4)+2sqrt(3m)].
+Thus the explicit sufficient cutoff for the anchor condition is
+  r<=[c_A^2/(576 C_loc)]^4.                              (L)
+This holds in the ORIGINAL nearest frame and covers all competitive
+free-common-mass pairs in fixed d=m-1. It replaces section1's qualitative
+cutoff in the base proof; every other argument is unchanged.
+
+2. A concrete four-cell interval
+Use the already audited four-cell covariance-coercivity dependency,
+K=400000, and choose R=24. The independent exact-rational checker
+check_free_mass_explicit_constants.py verifies the base hierarchy for
+  0<r<=10^(-80).
+The elementary outward bounds used there are
+  a>1/3, beta<18, c_A>1/2500, c'_4>1/3000,
+  B^-_3<16, M2=A2<384000, A<620,
+  C_3<700, C_Q<268800000,
+  C_J<2880000000, B<9300000, beta_R<438,
+  C_loc<86400180, eps_R<25/20^24.
+For the edge bound, w4=3theta^2/pi^3, theta=acos(-1/3)>pi/2, so
+  a^2=2w4/3>1/(2pi)>1/9.
+For the anchor bound in dimension3,
+  c_A=1/[128 sqrt(2pi) exp(2)].
+All exponential bounds in the checker come from finite Taylor sums with
+a geometric remainder; all comparisons use fractions, not floating point.
+The classical rational bounds 25/8<pi<22/7 are stated inputs.
+
+At r=10^(-80), r^(1/4)=10^(-20) exactly. In particular
+  86400180*10^(-20)<(1/60000)^2,
+which gives d(F,g_c)<c_A/24. The mass, compact-potential and mixed-kernel
+conditions are much weaker than this localization cutoff.
+
+Conditional on the already audited H4 dependency and the base proof's
+external dimension theorem, the resulting assertion is the full free
+common-mass four-cell bilinear Gaussian inequality for
+  -10^(-80)<=rho<0,
+with the base proof's relaxed class, every finite ambient dimension and
+unique common regular-simplex equality case. The number10^(-80) is a
+convenient certified range, not an optimized endpoint. This supplement
+does not alter any previously frozen archive or its claimed interval.

@@ -1,0 +1,113 @@
+\section{The negative transfer with free common masses}\label{app:negative}
+We first work in dimension $d=m-1$. A pair is competitive if
+$B_{-r}(f,h)\leq B_{-r}(g,g)$, and its matching mass vector is denoted by $p$.
+Let $F=(f+h)/2$ and $U=\1/m$.
+
+\subsection{Uniform localization in the nearest frame}
+Parseval gives
+$\norm{b(f)}_{\HS}^2\leq\sum_i\Var(f_i)\leq1-\norm p^2\leq1$,
+and likewise for $h$.
+The absolute value of the degree-at-least-two bilinear Hermite remainder
+is at most $r^2$, by Cauchy--Schwarz; the same bound holds for the reference.
+Competitiveness therefore implies
+\begin{equation}\label{eq:competitive-negative}
+ \norm{p-U}^2\leq r(\ip{b(f)}{b(h)}_{\HS}-w)+2r^2\leq r+2r^2,
+ \qquad
+ \ip{b(f)}{b(h)}_{\HS}\geq w-2r.
+\end{equation}
+In particular all masses are positive if $r\leq1/(4m^2)$.
+
+For every $\eta_*>0$, there is a $\delta_*>0$ such that all competitive
+pairs with $0<r<\delta_*$ obey
+\begin{equation}\label{eq:qual-local}
+ \frac12\sum_i\norm{F_i-g_i}_1<\eta_*,
+\end{equation}
+where $g$ is selected by \emph{any} nearest regular centroid matrix to $b(F)$.
+To prove this uniformly, suppose otherwise and choose a violating sequence
+$r_n\downarrow0$. Weak compactness of the bounded simplex-valued set in
+$L^2(\gamma_d)^m$ gives weak subsequential limits $f_*,h_*$.
+By~\eqref{eq:competitive-negative}, they are balanced and have centroid
+inner product at least $w$. The endpoint and Cauchy--Schwarz give the reverse
+chain
+\[
+ \ip{b(f_*)}{b(h_*)}\leq\norm{b(f_*)}\norm{b(h_*)}\leq w.
+\]
+Equality forces identical centroid matrices of norm squared $w$, and endpoint
+equality gives $f_*=h_*=g_*$ for one ordered regular partition.
+Weak convergence to an indicator gives strong $L^1$ convergence, since
+$\sum_i\norm{f_{n,i}-g_{*,i}}_1=2-2\sum_i\ip{f_{n,i}}{g_{*,i}}\to0$,
+and likewise for $h_n,F_n$.
+The centroids converge by weak continuity of first moments.
+Any nearest regular matrices $c_n$ then satisfy
+$\norm{c_n-b(F_n)}\leq\norm{c_*-b(F_n)}\to0$.
+Their winning labels converge off the null hyperplanes of $c_*$, so their
+regular partitions converge in $L^1$. This contradicts the violation and
+proves~\eqref{eq:qual-local}.
+
+\subsection{The mixed comparison retains the mass penalty}
+Use a nearest regular frame for $b(F)$, and put
+\[
+ D=D_-(F),\quad z=\sqrt{D/r},\quad
+ \eta=\tfrac12\sum_i\norm{F_i-g_i}_1,\quad
+ q=\norm{b(F)-c}_{\HS}^2,\quad u=\tfrac12\norm{p-U}_1.
+\]
+The loss $D_-$ is affine, so $2D=D_-(f)+D_-(h)$.
+Writing $q_f=f-g$ and $q_h=h-g$, the constant term in their mixed quadratic
+expansion is $\norm{p-U}^2$. Its first-order term satisfies
+\[
+ \ip{b(f)-c}{b(h)-c}
+ =q-\tfrac14\norm{b(f)-b(h)}_{\HS}^2\leq q.
+\]
+The higher remainder has absolute value at most
+$C_Qr\sqrt{D_-(f)D_-(h)}\leq C_QrD$, where $C_Q=C_dM_-$.
+Consequently
+\begin{equation}\label{eq:negative-comparison}
+ B_{-r}(f,h)-B_{-r}(g,g)
+ \geq\norm{p-U}^2+2D-rq-C_QrD.
+\end{equation}
+No positivity of a negative-correlation higher-chaos term is assumed.
+
+\subsection{Repair and absorption of the unequal masses}
+Choose the localization cutoff~\eqref{eq:qual-local} with $\eta_*=c_A/24$.
+The repair in Appendix~\ref{subsec:repair} is then available. Its mass
+imbalance satisfies both $v\leq u+\eps_RA_-z$ and $v\leq\eta$.
+Using~\eqref{eq:repair-bounds} and~\eqref{eq:repair-coercivity},
+$\eta\leq A_-z$, and $(x+y)^2\leq2x^2+2y^2$, we obtain
+\begin{align}
+ rq&\leq(2-\sigma)rJ_{\rm in}+B\sqrt{rD}\,u
+                  +72(2K+1)ru^2+\widetilde E_RD,\label{eq:negative-rq}\\
+ B&=6A_-/c_A,\qquad
+ \widetilde E_R=2C_J\eps_R+72(2K+1)A_-^2\eps_R^2.\nonumber
+\end{align}
+Young's inequality gives
+$B\sqrt{rD}\,u\leq\sigma D/8+(2B^2/\sigma)ru^2$.
+Put $C_{\rm mass}=72(2K+1)+2B^2/\sigma$.
+
+Choose finite $R\geq3$ with $\widetilde E_R\leq\sigma/8$.
+Then choose $r_m^->0$ small enough that
+\begin{equation}\label{eq:negative-range}
+ r_m^-\leq\min\left\{\frac1{16},\frac1{4m^2},
+ \frac{\delta_*}{2},\frac{\sigma}{32\beta_R},
+ \frac{\sigma}{8C_Q},\frac{2}{mC_{\rm mass}}\right\}.
+\end{equation}
+Here $\delta_*$ is the uniform cutoff just proved. Every entry is positive
+and depends only on $m$ and its finite coercivity constant.
+For $0<r\leq r_m^-$, the compact comparison~\eqref{eq:compact} and
+$(1-\beta_Rr)^{-1}\leq1+2\beta_Rr$ imply from~\eqref{eq:negative-rq}
+\[
+ rq\leq(2-5\sigma/8)D+C_{\rm mass}ru^2.
+\]
+Insert this into~\eqref{eq:negative-comparison} and use
+$u^2\leq m\norm{p-U}^2/4$ to get
+\begin{equation}\label{eq:negative-strict}
+ B_{-r}(f,h)-B_{-r}(g,g)
+ \geq\tfrac12\norm{p-U}^2+\tfrac{\sigma}{2}D.
+\end{equation}
+Thus a competitive pair has $p=U$ and $D=0$.
+The strict gap~\eqref{eq:minus-gap} forces $F=g$; since $g$ is an indicator
+and $F=(f+h)/2$, simplex-valuedness forces $f=h=g$ almost everywhere.
+This proves the full relaxed fixed-dimensional assertion. The remaining
+dimension reduction and recovery of fractional equality are given next in
+Section~\ref{sec:dimension}. No quantitative localization for unbalanced
+assignments was assumed: its uniform qualitative form was proved above.
+

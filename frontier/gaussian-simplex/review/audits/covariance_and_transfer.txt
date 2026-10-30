@@ -1,0 +1,265 @@
+INDEPENDENT END-TO-END AUDIT: ALL-DIMENSIONAL COVARIANCE CONCAVITY
+31 October 2026. Auditor: strong_signal_prior_art.
+
+Verdict: PASS. No substantive mathematical gap was found in the pinned
+source or in its balanced endpoint/coercivity implication. This is an
+internal mathematical audit, not external verification or priority clearance.
+No frozen release was changed and no publication or outreach occurred.
+
+Audited main source:
+  ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+  SHA256 225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+The audit covers every section, including singular covariance, finite-target
+lifting, and P2 approximation. It does not merely check the tetrahedral case.
+
+Additional pinned sources, relative to the stochastic directory:
+  five_cell_endpoint_20261030/ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt
+  SHA256 3cfd9d783cb6b1e0f6b8401d4ae945287e10fa8a31ab4740ac7838f68b9aa970
+  FINITE_CELL_COERCIVITY_TO_NOISE_TRANSFER_20261030.txt
+  SHA256 1d951abe62965c31d3b8ce5209099d62167ed9fc9b554f0c91d4c057b9a3dff5
+  negative_free_mass_20261031/FREE_COMMON_MASS_NEGATIVE_TRANSFER_AUDIT_20261031.txt
+  SHA256 9a6339628de87b4d0ae95526438caab8544da303bb2934c8494c204b33adc2ef
+
+The latter two files retain historical conditional-status wording. This audit
+checks that the new endpoint theorem supplies precisely their hypothesis H_m.
+Their resulting unconditional implications are recorded separately in
+ALL_CELL_ENDPOINT_AND_SMALL_NOISE_SCOPE_20261031.txt.
+
+1. Duality, geometry and regularity
+
+The dual lower coercive bound is valid because E[y_i.X]=0 for each fixed i:
+E max_i(y_i.X+h_i) >= max_i h_i. For positive p, max h-p.h is at least
+p_min times the offset range. After removing common constants, this is
+coercive. Each distinct pair has a nonzero score difference, so its Gaussian
+tie set is null when C is positive definite. The mass derivative therefore
+exists, and optimal offsets supply exactly the prescribed probabilities.
+The corresponding deterministic winning map attains the dual objective.
+
+For d+1 affinely independent sites, h_i=c-y_i.a is an isomorphism modulo
+constants. The translated fan has every simplex face as a winner stratum.
+All the relative interiors have positive intrinsic Gaussian mass, including
+the apex with its zero-dimensional counting measure. Its normal cones are
+simplicial in their own affine spans; no generic-position assumption on a
+or the masses is required.
+
+Writing the objective using the FIXED support function and a translated
+Gaussian gives locally smooth dependence on a and C. Gaussian derivatives
+have polynomial factors and the support function has linear growth. The
+offset Hessian is a positive complete-graph Laplacian, hence invertible
+modulo constants. Thus the optimized Hessian exists smoothly. This supplies
+regularity without assuming smooth motion of multiple junctions.
+
+2. Boundary integration and the convex covariance bound
+
+On Gamma_S the inward normal is the projected target gap with positive
+sign. Intrinsic divergence of gamma is -P_S x gamma. The outward boundary
+normal is minus the stated inward normal, which gives equation(2).
+Apply the same calculation to (x-m_e)gamma on a facet. The boundary value
+averages to m_g-m_e, and the two minus signs give precisely equation(3).
+Both means lie in the same affine facet, so their difference is tangent.
+Polynomial Gaussian decay removes the truncation-sphere terms at infinity.
+
+The use of Brascamp--Lieb is legitimate for the conditional Gaussian on a
+convex polyhedral facet. For specificity, take the squared-distance convex
+penalty to the closed domain, divide by a parameter tending to zero, and
+smooth it by convolution. Add the quadratic Gaussian potential. Its Hessian
+remains at least I; its density is bounded by the unpenalized Gaussian.
+Apply the variance inequality to linear functions and pass normalization
+and second moments by dominated convergence. This proves Cov_e<=P_e.
+The argument does not assume that the covariance deficit is invertible.
+
+3. The local matrices: all factors and their ambient meaning
+
+Let v_k=-grad l_k for the target barycentric coordinates. Then
+  v_k.(y_i-y_j)=delta_kj-delta_ki,   sum_k v_k=0.
+For k outside e, v_k is tangent to e and pairs with
+P_e(y_i-y_l) as delta_kl. These are the SAME vectors for all eligible edges;
+that global fact is essential to the diagonal assembly.
+
+With D_g=2Area_g/mu_g, the height formula yields
+  N_e[:,g]=P_e(y_i-y_k)/D_g,
+  row_g(N_e^{-1})=D_g v_k^T.
+These inverses are in the (d-1)-dimensional tangent space. Equations(3)-(4)
+give E_e=N_e T_e^T=T_e N_e^T>=0. Therefore
+  T_e=E_e N_e^{-T}, B_e=N_e^{-1}E_e N_e^{-T}=N_e^{-1}T_e>=0.
+This uses N_e^{-1}, never E_e^{-1}. The first-moment identity gives
+w_e P_e m_e=N_e 1, hence B_e(g,g')=1/w_e-D_g v_k.m_g'.
+I independently rederived each normalization, including w_e=mu_e/ell_e.
+
+4. Uniform chain factorization, including its diagonal
+
+If g=e+k and g'=e+l are distinct, v_k is tangent to Gamma_g'. When its
+first-moment boundary identity is tested against v_k, every boundary except
+adding k vanishes. For h=g union g', the surviving reciprocal height is
+Area_g'/(3Vol_3(h)). This remains the correct height in higher ambient
+dimension: it is the distance of target vertex k to the affine triangle g'.
+Consequently
+  D_g v_k.m_g'=D_g D_g' mu_h/(6Vol_3(h)).
+
+The two oriented triangle coefficients on their common edge have product
+equal to minus the product of their tetrahedral boundary coefficients.
+This follows directly from partial_2 partial_3=0 and fixes the minus sign.
+Triangles without a shared edge interact in neither matrix.
+
+For the diagonal, sum over the three edges in g. Their omitted vertices
+are exactly the three vertices of g. Thus
+  (A-B)_gg=D_g sum_(k in g) v_k.m_g
+           =-D_g sum_(k outside g) v_k.m_g
+           =-D_g^2 sum_(h containing g) mu_h/(6Vol_3(h)).
+For d=2 there are no outside vertices, and the same diagonal is zero.
+This checks all entries of the exact uniform identity
+  A-B=-D partial_3 diag(mu_h/(6Vol_3(h))) partial_3^T D.
+No numerical dimension induction is involved.
+
+5. The gauge and the cycle norm
+
+The complete simplex chain complex is exact in positive degrees, by the
+explicit cone-to-a-fixed-vertex contraction. In particular, graph cycles
+are im partial_2 and ker partial_2=im partial_3. Higher chain relations do
+not require partial_3 to be injective.
+
+For a fixed edge flow j, its triangle representatives form an affine space
+lambda+im partial_3. Minimizing the strictly positive quadratic norm
+lambda^T D lambda on that affine space produces
+partial_3^T D lambda=0. The represented flow and every flow pairing are
+unchanged. In this representative the displayed discrepancy vanishes, so
+lambda^T B lambda=j^T W^{-1}j.
+
+For arbitrary cell vectors z_i, signed differences telescope around each
+triangle. This justifies subtracting m_g in equation(14). Square-root
+Cauchy--Schwarz in the positive semidefinite facet deficits then gives
+equation(15). Weighted least-squares duality on the graph identifies the
+supremum over divergence-free edge flows with the residual after minimizing
+ONE global offset vector. There are no independent offsets on slices or
+on individual facets. Singular facet deficits cause no exceptional case.
+
+6. Covariance Hessian and strictness
+
+For C(t)=I+tH the square-root derivatives are H/2 and -H^2/4. Differentiating
+the expected affine maximum twice gives the facet quadratic term plus the
+interior acceleration term. The distributional derivative of the piecewise
+constant winning gradient has only facet jump measures; multiple junctions
+add no codimension-two contribution to this second derivative. Equivalently
+one can truncate to a compact set, use the polyhedral coarea formula, and
+then pass Gaussian polynomial tails to zero. The smoothness in section1
+identifies the result with the ordinary optimized Hessian.
+
+Gaussian integration by parts yields
+E[X Y(X)^T]=sum_e w_e d_e d_e^T. Thus the acceleration contribution is
+-(1/4)sum_e w_e|H d_e|^2. Multiplying by4 and writing b=2h' gives the exact
+quadratic offset Schur complement in equation(17). The term involving h''
+vanishes because the current cell probabilities equal p.
+
+Insert z_i=H y_i into the cycle estimate. Conditional variances cancel,
+leaving
+  4F''(I)[H,H] <= -sum_e w_e(d_e^T H d_e)^2/ell_e^2.
+If every edge quadratic form vanishes, the differences from one target
+vertex form a basis; the remaining edge differences recover every mixed
+bilinear entry of H. Hence H=0. Positive facet weights give negative
+definiteness for all nonzero H, including trace-changing directions.
+Whitening transforms the sites by C0^{1/2} and preserves affine independence,
+so the same conclusion holds at every positive definite C0.
+
+7. Singular covariances, finite lifting, and arbitrary P2 laws
+
+Both gluing inequalities are valid for arbitrary couplings, not only for
+transport maps. A coupling of a singular Gaussian with Y can be lifted to
+a standard Gaussian by conditional randomization on its null coordinates.
+This proves the square-root continuity estimate(19) without a rank condition.
+Adding epsilon I then extends simplex concavity to the closed PSD cone.
+
+The lift (y_i,epsilon e_i) is affinely independent for any epsilon>0.
+With covariance diag(C,0), the additional coordinates contribute exactly
+zero to the cost, and labels recover every original coupling. Subtracting
+a common target point does not change the expectation because the source
+has mean zero. Projection to the span of the lifted differences is exact:
+couplings of the projected Gaussian can be lifted by its conditional law.
+The resulting covariance is a LINEAR restriction of diag(C,0), not a
+nonlinear square-root parametrization. Thus concavity pulls back in C.
+For a one-atom target the value is simply0, covering the trivial dimension0
+case separately.
+
+For target approximation, glue an optimal coupling between the two target
+laws onto a Gaussian-target coupling. Cauchy--Schwarz gives(21). Finite
+target laws are dense in P2, so the concavity inequality passes to the limit
+in every finite source dimension. Squared Wasserstein covariance convexity
+then follows from the exact second-moment identity. Strictness for arbitrary
+targets is not claimed and does not follow from this limiting argument.
+
+8. Balanced endpoint and coercivity: the direction of every inequality
+
+Let m>=3, L=m(m-1), P=I-11^T/m, K*=mP, mu=E max_(i<=m)Z_i and
+w=mu^2/(m-1). The balanced score functional J_m is the maximal-covariance
+functional for a uniform regular simplex, in score coordinates. Its domain
+is K>=0,K1=0. Permutation averaging at trace L gives K*. Therefore
+J_m(K)<=J_m(K*)=sqrt(m)mu=sqrt(Lw).
+
+Negative Hessian at K*, continuity, and compactness of the fixed-trace PSD
+domain supply a LOCAL gap c||K-K*||_F^2. Fix one small theta>0 so every
+K_theta=(1-theta)K*+theta K is in that local neighborhood. Concavity gives
+  theta[J_m(K*)-J_m(K)] >= J_m(K*)-J_m(K_theta).
+Hence there is a GLOBAL gap g||K-K*||_F^2 with g=c theta>0. The direction
+of this inequality is correct. The local theorem is not being substituted
+for a global theorem without this concavity step.
+
+For balanced relaxed f, write b_i=E[Xf_i], W=||b||_F^2. If W>0 normalize
+B=sqrt(L/W)b and K=BB^T. The same f is an admissible balanced coupling, so
+  sqrt(LW) <= J_m(K) <= sqrt(Lw).
+This proves W<=w and, with Delta=w-W,
+  ||K-K*||_F^2 <= sqrt(L)/(g sqrt(w)) Delta.
+The orthogonal Procrustes identity and square-root estimate give
+  min_O ||B-B*O||_F^2
+    =sum_(j=1)^(m-1)(sqrt(lambda_j(K))-sqrt(m))^2
+    <=||K-K*||_F^2/m.
+For ambient N>=m-1, orthogonal O ranges over O(N); no orientation restriction
+is hidden. Rescaling the two centroid matrices then gives the valid bound
+  dist_F(b,regular-centroid orbit)^2
+    <=[2+2sqrt(w)/(m g sqrt(L))] Delta.
+W=0 is immediate after taking K_m at least1. All constants depend on m,
+not on the ambient N. This is exactly the H_m needed by both transfers.
+
+If W=w, the global gap forces K=K*. Equality in the pointwise score bound
+forces each fractional assignment to be the indicator of the unique
+winning score almost everywhere. The winning vectors form a regular
+simplex. For N<m-1, pad with independent Gaussian coordinates; equality is
+impossible because the embedded centroid Gram has rank at most N. Thus
+the equality statement includes relaxed functions and unused coordinates.
+
+9. Transfer-hypothesis audit and primary scope
+
+Both transfer files require H_m for ALL balanced relaxed assignments in
+R^(m-1), with a finite K>=1. Section8 supplies exactly this. Their constants
+are finite for each fixed m; no uniform lower bound on the interval as
+m tends to infinity is asserted. Their existence, integrality, rotation,
+tail control and exact balance arguments were previously audited; I reread
+both complete sources and checked that their quantifiers now match H_m.
+
+I also directly reread the primary dimension statements on31 October2026:
+  Heilman--Tarter, arXiv2011.05583v2, Theorem1.9:
+  https://arxiv.org/html/2011.05583v2#S1.SS4
+It reduces fixed-positive-mass noise maximizers, for positive correlation,
+to m-1 dimensions when ambient N>=m-1. The relaxed positive problem has an
+indicator maximizer by strict positivity of the OU quadratic form.
+
+  Heilman, arXiv2209.11216v1, Problem7.1 and Theorem7.9:
+  https://arxiv.org/html/2209.11216#S7
+Its feasible pairs have corresponding masses equal but FREE. Its common
+dimension reduction has no hyperstability assumption. Reflection of the
+second argument converts the negative-kernel objective to that theorem's
+positive-kernel bilinear objective. The sequential fixed-mass purification
+in the transfer proof supplies indicators without a false general claim
+about extrema of bilinear functions. Strict reference ordering recovers
+equality for the original fractional pair.
+
+The resulting exact scope is stated in the companion implication record.
+It does not assert arbitrary prescribed unequal-mass negative optimality,
+full-correlation simplex optimality, or a numerical interval for every m.
+
+10. Audit boundary
+
+This audit is a uniform analytic reconstruction. No finite sampling result
+is substituted for the chain identity, and no new computation is necessary
+for its validity. Classical inputs are the Gaussian-restricted convex
+Brascamp--Lieb variance bound and the cited published dimension reductions.
+Priority, independent external review and any public presentation remain
+separate tasks. Earlier frozen endpoint/noise packages remain unchanged.

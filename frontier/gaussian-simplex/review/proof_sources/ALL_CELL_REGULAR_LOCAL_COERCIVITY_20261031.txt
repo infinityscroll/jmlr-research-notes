@@ -1,0 +1,137 @@
+FULL LOCAL COVARIANCE COERCIVITY AT THE REGULAR SIMPLEX, EVERY CELL COUNT
+31 October 2026. Root derivation; independent audit requested.
+This is a local theorem and a conditional global reduction, not a proof
+of unrestricted covariance concavity or the full balanced endpoint.
+
+Let m>=3, P=I-11^T/m and K_*=mP. On symmetric PSD matrices with K1=0 put
+  J_m(K)=inf_{sum h_i=0} E max_i(X_i+h_i), X~N(0,K).
+The trace normalization is tr K=m(m-1). The two-group endpoint theorem
+proved in TWO_GROUP_BALANCED_ENDPOINT_20261031.txt is the only nontrivial
+new input below: equation(7) there gives a NEGATIVE DEFINITE Hessian in
+the squared amplitudes of every S_a x S_b invariant covariance family,
+in its positive interior. Mere strict concavity would not suffice.
+
+THEOREM
+For every m>=3, the full covariance Hessian of J_m at K_* is negative
+definite on the space
+  V={H=H^T: H1=0, tr H=0}.
+Consequently there are r_m,c_m>0 such that every trace-normalized K with
+||K-K_*||_F<=r_m satisfies
+  J_m(K_*)-J_m(K)>=c_m||K-K_*||_F^2.                     (1)
+No symmetry assumption is imposed on this local perturbation K.
+The constants here are existential, not explicit certified numerics.
+
+1. Regularity and permutation symmetry.
+Work on the (m-1)-dimensional zero-sum score space, where K_* is strictly
+positive definite. Choose fixed regular score sites s_i in that space.
+Every zero-sum offset vector has the unique form h_i=-s_i dot a. Thus
+the offset objective is a Gaussian convolution of the FIXED simplex
+support function max_i s_i dot x, evaluated at -a, with the score
+covariance represented in this fixed coordinate system. The support
+function has at most linear growth. Differentiation of the positive
+Gaussian density therefore gives continuous derivatives of every needed
+order in a and in the positive definite covariance, with locally uniform
+Gaussian domination. This directly supplies C^2 regularity without a
+moving-facet topology assumption. The offset Hessian is the complete
+adjacency Laplacian with strictly positive Gaussian facet weights, so it
+is invertible modulo constants. The implicit function theorem and envelope
+Schur complement give a continuous covariance Hessian for the minimized
+functional near K_*.
+
+Permuting labels preserves J_m and fixes K_*. The gradient there is a
+scalar multiple of the identity on the zero-sum space. Thus its first
+variation vanishes on V. Its Hessian Q(H)=D^2J_m(K_*)[H,H] is a permutation-
+invariant quadratic form on V.
+
+2. An elementary classification of the invariant quadratic form.
+Write d_i=H_ii, h_ij=H_ij for i<j, D=sum_i d_i^2 and O=sum_{i<j}h_ij^2.
+The constraints give sum_i d_i=0, sum_{j!=i}h_ij=-d_i and sum_{i<j}h_ij=0.
+Every entry-pair orbit under label permutations is one of: equal/distinct
+diagonals; equal off-diagonal entries; a diagonal incident/nonincident to
+an edge; two edges sharing a vertex/disjoint. Their cross sums reduce to
+
+  sum_{i<j} d_i d_j=-D/2,
+  sum_{i<j}(d_i+d_j)h_ij=-D,
+  sum_{i<j}sum_{k not in {i,j}}d_k h_ij=D,
+  sum_i sum_{j<k, j,k!=i}h_ij h_ik=D/2-O,
+  sum_{unordered disjoint edge pairs}h_ij h_kl=(O-D)/2.
+
+The fourth line follows by squaring each row sum; the fifth follows by
+squaring the total off-diagonal sum. Hence there are real alpha,beta with
+  Q(H)=alpha D+beta O.                                  (2)
+For m=3 the absent disjoint-edge orbit gives O=D, so only one coefficient
+combination is needed. No irreducible-representation theorem is invoked.
+
+3. Orthogonal splitting and the two signs.
+For any trace-zero diagonal d define
+  S(d)_ii=d_i, S(d)_ij=-(d_i+d_j)/(m-2), i!=j.
+It has zero row sums and trace, with
+  O(S(d))=D/(m-2).
+For H in V, T=H-S(d) has zero diagonal and zero row sums. Moreover
+sum_{i<j}S(d)_ij T_ij=0, by the zero row sums of T. Therefore
+  Q(H)=[alpha+beta/(m-2)]D+beta O(T).                    (3)
+
+For m>=4 use the split a=2,b=m-2. Take a nonzero d constant on each
+of these groups, with a d_A+b d_B=0. Then S(d) belongs to the invariant
+two-group trace tangent space, and the previously proved strict Hessian
+there gives Q(S(d))<0. Thus alpha+beta/(m-2)<0.
+
+There is also a nonzero invariant T with diagonal zero: choose every
+cross-group entry equal to t!=0, every within-A off-diagonal entry equal
+to -b t/(a-1), and every within-B off-diagonal entry equal to -a t/(b-1).
+Its row sums vanish. The same two-group Hessian theorem gives
+  beta O(T)=Q(T)<0,
+so beta<0. Equation(3) proves Q(H)<0 for every nonzero H in V.
+
+When m=3, the zero-diagonal zero-row-sum space is zero. The split2+1 gives
+a nonzero invariant S(d); the singleton version of the two-group theorem
+makes alpha+beta<0. Since every H=S(d), this proves the m=3 case as well.
+All paths used lie in the positive interior near K_*; the two-group
+squared-amplitude coordinates are linear in K, so no chain-rule term is
+being omitted when importing their Hessian signs.
+
+4. Local coercivity.
+Negative definiteness on the finite-dimensional unit sphere in V gives
+a uniform negative Hessian bound at K_*. Continuity gives such a bound
+through a sufficiently small neighborhood. The first derivative on V
+vanishes, so Taylor's integral formula proves(1). This covers every
+local covariance direction, not just the two-group invariant directions.
+
+5. What global covariance concavity WOULD now suffice to prove.
+Suppose, additionally, J_m were concave on the ENTIRE trace-normalized
+PSD covariance domain. This is NOT proved for general m here. The stationary
+regular point would then be a global maximum. Let D_m bound the diameter
+of the compact domain and choose a fixed theta in (0,1) with theta D_m<r_m.
+For any K, put K_theta=(1-theta)K_*+theta K. Concavity and(1) give
+  theta[J_m(K_*)-J_m(K)]
+    >=J_m(K_*)-J_m(K_theta)
+    >=c_m theta^2||K-K_*||_F^2.
+Thus the single additional global concavity statement would imply the
+UNIFORM global quadratic gap
+  J_m(K_*)-J_m(K)>=c_m theta||K-K_*||_F^2,               (4)
+and equality only at K_*. One would not need a separate global uniqueness
+assumption or a fresh exhaustive covariance cover.
+
+For completeness, (4) would transfer to centroid-orbit coercivity H_m.
+For balanced assignments let W=sum|b_i|^2 and w=mu_m^2/(m-1). When W>0,
+normalize B_i=sqrt(m(m-1)/W)b_i, with Gram K. The score dual gives
+  sqrt(m(m-1)W)<=J_m(K)<=sqrt(m)mu_m.
+Hence W<=w and J_m(K_*)-J_m(K) is at most a finite m-dependent constant
+times w-W, by the difference-of-square-roots identity. Equation(4) bounds
+||K-K_*||_F^2 by another such constant times w-W.
+
+In dimension at least m-1, the normalized Gram comparison gives
+  min_{O in O(N)} ||B-B_* O||_F^2
+     =sum_{j=1}^{m-1}(sqrt(lambda_j(K))-sqrt(m))^2
+     <=(1/m)||K-K_*||_F^2,
+where B_* is any regular reference with Gram K_*. The orthogonal group
+includes reflections; equivalently the regular orbit permits label
+permutations as well as orientation-preserving rotations. Rescaling back to b
+adds only a multiple of (sqrt(w)-sqrt(W))^2<=w-W. Thus the squared
+centroid distance from the regular orbit is at most K_m(w-W), for finite
+K_m. W=0 is immediate. This is precisely the type of hypothesis needed
+by the already audited finite-cell small-noise transfer.
+
+The actual result established here stops at local statement(1). The
+conditional reduction(4) identifies the remaining global inequality;
+it is not permission to treat that inequality as proved.

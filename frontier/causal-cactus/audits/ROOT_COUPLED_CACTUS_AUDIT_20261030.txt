@@ -1,0 +1,48 @@
+ROOT HOSTILE AUDIT: COUPLED CACTUS REAL FIBERS
+30 October 2026
+Audited source SHA256: b85de74435d6f4db9f5d9ae4eeb624f7ff74422c33e4ce6d7ea4af2162d9f2a7
+
+I read every section of COUPLED_CACTUS_THEOREM.txt and the entire inherited
+RECURSIVE_BLOCK_CLASS.txt, including the exact two-branch recurrence.
+No substantive gap was found in the stated declared graph class.
+
+The marginal block covariance identity is valid with arbitrary allowed
+cross-component error correlations because the directed T is block diagonal.
+The proof does not replace a marginal inverse by a block of the full inverse.
+For coherent cactus components, the two articulation parents are nonadjacent
+and have a unique common child, so the three precision entries identify the
+articulation precision. All other vertices have one child and are reached
+by backward propagation. These equations force every competing branch,
+including alternatives that were not initially assumed generic.
+
+For simple cycles, the inherited affine y-recurrence gives exactly two
+branches and strictly positive precisions for both signs of R-1. The second
+branch is rational in the true parameters. Its error-basis change is dense
+generically by the displayed uniform-coefficient specialization for every
+length>=3. It is not dense for length2, as explicitly excluded.
+
+Allowed cross-error entries vary independently over a nonempty open subset
+of the positive-definite domain. A nonzero coefficient in one missing-entry
+equation is therefore a proper algebraic obstruction. Finitely many branch
+tuples permit one common exceptional algebraic set. Partial probes exclude
+any tuple flipping that cycle even when other cycles are flipped, because
+their relevant diagonal transformation entries are generically nonzero.
+Unprobed cycles have exactly the complete-column/complete-row support which
+preserves every such flip. Congruence proves positivity for all survivors.
+Thus the claimed2^u cardinality concerns complete admissible REAL fibers.
+
+The recursive extension correctly treats the entire correlated core as a
+single initial block; the later error-independent conditional product lemma
+then applies. The length-two simultaneous reciprocal swap is an obstruction
+to dropping a new theorem assumption, not a literature counterexample.
+
+An independently implemented Fraction fixture recovered every parameter of
+a signed five-vertex figure-eight from its covariance, and checked density
+and scaled-orthogonality of the uniform alternate cycle transforms through
+length9. These calculations supplement the uniform argument; no finite-test
+extrapolation is being used. ROOT_INDEPENDENT_FIXTURE_CHECK.json records them.
+
+Scope: this is a complete structural criterion for the DECLARED cactus-core
+and recursive-extension family. No full graph characterization, priority
+clearance, external acceptance, or requested stature benchmark is established.
+Novelty relative to existing cyclic-SEM algorithms must still be checked.

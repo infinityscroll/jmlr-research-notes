@@ -1,0 +1,53 @@
+\section{The positive-correlation transfer}\label{app:positive}
+Work first in dimension $d=m-1$. Call balanced $f$ competitive if
+$S_\rho(f)\geq S_\rho(g)$, and choose a nearest reference centroid frame.
+Write $D=D_+(f)$, $z=\sqrt{D/\rho}$, and use the positive constants from
+Appendix~\ref{app:common}. If $\Delta=w-W(f)=0$, the endpoint equality already
+gives $f=g$, so assume otherwise.
+
+Hermite expansion, positivity of its coefficients for $\rho>0$, and Parseval
+give for a competitive assignment
+\[
+ \frac1m+\rho w\leq S_\rho(g)\leq S_\rho(f)
+ \leq\frac1m+\rho W(f)+\rho^2(1-1/m).
+\]
+Hence $\Delta\leq(1-1/m)\rho\leq\rho$ and $\eta^2\leq L\rho$.
+For $h=f-g$, the mean of each $h_i$ is zero. Equations~\eqref{eq:weighted-moments}
+and~\eqref{eq:Mehler} give the exact comparison and its error bound
+\begin{equation}\label{eq:positive-comparison}
+ S_\rho(f)-S_\rho(g)=-2D+\rho q+\mathcal R,\qquad
+ 0\leq\mathcal R\leq C_Q\rho D,\qquad C_Q=C_dM_+.
+\end{equation}
+This bounds the perturbation's quadratic remainder; it does not estimate
+the difference of the two full higher-chaos tails separately.
+
+Here the original mass error $u$ in the repair lemma is zero. Thus
+\eqref{eq:repair-bounds}--\eqref{eq:repair-coercivity} yield
+\[
+ \rho q\leq(2-\sigma)\rho J_{\rm in}+E_RD,\qquad
+ E_R=2C_J\eps_R+36(2K+1)A_+^2\eps_R^2.
+\]
+Choose a finite $R\geq3$ with $E_R\leq\sigma/4$, possible because
+$\eps_R\to0$. Choose any positive $\rho_m^+$ satisfying
+\begin{equation}\label{eq:positive-range}
+ \rho_m^+\leq
+ \min\left\{\frac1{16},\frac{\sigma}{16\beta_R},
+                  \frac{\sigma}{4C_Q},\frac{c_A^2}{576L}\right\}.
+\end{equation}
+For every competitive assignment at $0<\rho\leq\rho_m^+$,
+$\eta\leq c_A/24$, so the repair is available.
+Using~\eqref{eq:compact} and $(1-\beta_R\rho)^{-1}\leq1+2\beta_R\rho$,
+\[
+ \rho q\leq\left(\frac{2-\sigma}{1-\beta_R\rho}+E_R\right)D.
+\]
+Since $4\beta_R\rho\leq\sigma/4$, substituting this into
+\eqref{eq:positive-comparison} proves
+\[
+ S_\rho(f)-S_\rho(g)\leq-\frac{\sigma}{4}D.
+\]
+Strict ordering in~\eqref{eq:plus-gap} makes $D>0$ unless $f=g$.
+Thus no distinct competitive assignment exists in dimension $d$.
+The finite-dimensional and equality transfer is completed in
+Section~\ref{sec:dimension}. The interval is closed at its upper endpoint
+because every defining bound in~\eqref{eq:positive-range} is non-strict.
+

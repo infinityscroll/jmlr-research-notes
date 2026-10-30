@@ -1,0 +1,260 @@
+\section{Common estimates for the two transfers}\label{app:common}
+Throughout the transfer appendices $d=m-1$, the reference $g$ and centroids
+$c_i$ are as in Section~1, and $K=K_m\geq1$ satisfies~\eqref{eq:Hm}.
+Set
+\[
+ a=|c_i-c_j|=\sqrt2\alpha,\qquad
+ P_0=\binom m2,\qquad
+ \beta=P_0\sqrt{2/\pi}/a,\qquad \sigma=(K+1)^{-1}.
+\]
+The first moment obeys $w\leq1$ by Parseval, so
+$a^2=2w/(m-1)\leq1$.
+All integrals in these appendices use $\gamma_d$ unless specified otherwise.
+
+\subsection{The same nearest frame controls the mismatch}
+For balanced $f$ choose a nearest regular centroid matrix $c$ and its partition
+$g$. Put $\Delta=w-W(f)$, $q=\norm{b(f)-c}_{\HS}^2$,
+$\eta=\frac12\sum_i\norm{f_i-g_i}_1$, and
+$J=w-\sum_i c_i\cdot b_i(f)$.
+Then
+\begin{equation}\label{eq:linear-identity}
+ 2J=\Delta+q\leq(1+K)\Delta.
+\end{equation}
+If $\Gamma$ is the gap between the two largest regular linear scores, a union
+bound on the $P_0$ Gaussian score differences of standard deviation $a$ gives
+$\Prob(\Gamma\leq t)\leq\beta t$. With $p_{\rm wrong}=1-f_{\rm winner}$,
+$J\geq\E[p_{\rm wrong}\Gamma]$ and $\E p_{\rm wrong}=\eta$.
+Layer cake yields
+\[
+ J\geq\int_0^\infty(\eta-\beta t)_+\dd t
+   =\frac{\eta^2}{2\beta},\qquad
+ \eta^2\leq L\Delta,\quad L=\beta(1+K).
+\]
+Thus no second choice of alignment is needed.
+
+\subsection{A saturated positive gap and a damped negative gap}
+Let $\phi,\Phi$ be the standard normal density and distribution function, and
+\[
+ H_\delta(u)=\phi(u)\Phi(u+\delta)-\phi(u+\delta)\Phi(u).
+\]
+For $\delta>0$, this is positive: $\Phi(u)/\phi(u)$ is strictly increasing,
+as is clear from its integral representation
+$\int_0^\infty e^{uy-y^2/2}\dd y$.
+In reference cell $i$, put $z_{ij}=(v_i-v_j)\cdot x/\sqrt2\geq0$.
+For independent normal utilities with label $i$ of mean zero and label $j$
+of mean $-\delta$, the winning-probability difference is
+\[
+ \E\left[\int_M^\infty H_\delta(u)\dd u\right],
+\]
+where $M$ is the maximum of the other utilities. Lowering their means
+increases this difference.
+
+For $G_i=T_rg_i$, subtract the mean of winner $i$.
+The other means are nonpositive and
+$\delta=\sqrt2\,r z_{ij}/\sqrt{1-r^2}$.
+Raise all other means to zero; the event $M\leq0$ has probability
+$2^{-(m-2)}$. For $0\leq u,\delta\leq1$,
+$\partial_\delta H_\delta(u)\geq\phi(1)\phi(2)$.
+Integrate over $0\leq u\leq1$; for larger $\delta$ use monotonicity when the
+competitor mean is lowered. Consequently
+\begin{equation}\label{eq:plus-gap}
+ G_i-G_j\geq c_+\min(rz_{ij},1),\qquad
+ c_+=\frac{e^{-5/2}}{2^{m-1}\pi}.
+\end{equation}
+
+For $G_i=T_{-r}g_i$, subtract label $j$'s mean instead.
+Now $j$ has mean zero, $i$ has mean $-\delta$, and every other mean is at most
+$U_x=\sqrt2\,r|x|/\sqrt{1-r^2}$. Raise those means to $U_x$.
+Their maximum is at most $U_x$ with probability $2^{-(m-2)}$.
+On $U_x\leq u\leq U_x+1$ and $0\leq\delta\leq1$,
+\[
+ \partial_\delta H_\delta(u)
+ =\phi(u)\phi(u+\delta)+(u+\delta)\phi(u+\delta)\Phi(u)
+ \geq\phi(U_x+1)\phi(U_x+2).
+\]
+The same integral argument and monotonicity for $\delta\geq1$ give a gap at
+least $c_+e^{-U_x^2-3U_x}\min(\delta,1)$. Since
+$3U_x\leq U_x^2+9/4$ and
+$2U_x^2=4r^2|x|^2/(1-r^2)\leq|x|^2/32$ for $r\leq1/16$,
+\begin{equation}\label{eq:minus-gap}
+ G_j-G_i\geq c_-\min(rz_{ij},1)e^{-|x|^2/32},
+ \qquad c_-=\frac{e^{-19/4}}{2^{m-1}\pi}.
+\end{equation}
+Thus the reference winner is the unique largest positive potential and the
+unique smallest negative potential, outside null hyperplanes.
+
+\subsection{Weighted moments and uniform tails}
+Let
+\[
+ \psi(x)=e^{|x|^2/8},\qquad
+ \omega_r(x)=\min\left(r\min_{i<j}|(v_i-v_j)\cdot x|/\sqrt2,\,1\right).
+\]
+Use $\widetilde\omega_r^+=\omega_r$ and
+$\widetilde\omega_r^-=e^{-|x|^2/32}\omega_r$.
+Define the finite constants
+\begin{align*}
+ B_+&=P_0\left[2^{(d-1)/2}\phi(0)e^{1/4}+2^{d/2-2}\right],\\
+ B_-&=P_0\left[\phi(0)e^{5/16}(8/3)^{(d-1)/2}
+                  +\tfrac14(8/3)^{d/2}\right].
+\end{align*}
+For $|h|\leq1$, $\lambda>0$, and $0<r\leq1$,
+\begin{equation}\label{eq:Fenchel}
+ \int|h|\psi\leq\lambda\int|h|\widetilde\omega_r^\pm
+                      +\frac{B_\pm}{\lambda r}.
+\end{equation}
+Here are the constants explicitly. For the positive case dominate the
+positive part by summing over the individual planes. Write $x=ue+z$.
+On $|u|\leq1$, replace $\psi$ by
+$A(z)=e^{1/8}e^{|z|^2/8}$ and $\phi(u)$ by $\phi(0)$, and integrate
+$(A-\lambda r|u|)_+$ over the whole line. Its integral is
+$A^2/(\lambda r)$. On $|u|>1$ the saturated plane weight is at least $r$,
+and $(A-B)_+\leq A^2/(4B)$. Gaussian exponential moments give $B_+$.
+For the negative case use the exact identity
+\[
+ (\psi-\lambda\widetilde\omega_r^-)_+
+ =e^{-|x|^2/32}(e^{5|x|^2/32}-\lambda\omega_r)_+
+ \leq(e^{5|x|^2/32}-\lambda\omega_r)_+.
+\]
+The same calculation, with this auxiliary exponential, gives $B_-$.
+The moment controlled on the left of~\eqref{eq:Fenchel} remains $\psi$.
+
+For any relaxed $k$, define the nonnegative losses
+\[
+ D_+(k)=-\sum_i\ip{k_i-g_i}{T_rg_i},\qquad
+ D_-(k)= \sum_i\ip{k_i-g_i}{T_{-r}g_i}.
+\]
+Each vanishes only for $k=g$ by the strict gaps. Optimizing
+\eqref{eq:Fenchel}, using $\sum_i|k_i-g_i|=2p_{\rm wrong}$ and
+\eqref{eq:plus-gap} or~\eqref{eq:minus-gap}, gives
+\begin{equation}\label{eq:weighted-moments}
+ \sum_i\left(\int|k_i-g_i|\psi\right)^2\leq M_\pm D_\pm(k)/r,
+ \qquad M_\pm=8B_\pm/c_\pm.
+\end{equation}
+In the relevant sign put $A_\pm^2=\max(1,m/4)M_\pm$.
+If $z=\sqrt{D_\pm(k)/r}$ and $\eta=\frac12\sum_i\norm{k_i-g_i}_1$,
+then $\eta\leq A_\pm z$.
+For $R\geq2$, let $\eps_R=(1+R)e^{-R^2/8}$.
+The pointwise bound
+$(1+|x|)\1_{\{|x|>R\}}\leq\eps_R\psi(x)$ implies both
+\begin{equation}\label{eq:tails}
+ \frac12\sum_i\left|\E[(k_i-g_i)\1_{\{|X|>R\}}]\right|
+ \leq\eps_RA_\pm z,\qquad
+ \left(\sum_i\left|\E[X(k_i-g_i)\1_{\{|X|>R\}}]\right|^2\right)^{1/2}
+ \leq\eps_RA_\pm z.
+\end{equation}
+These are separate bounds, obtained from Cauchy--Schwarz across labels.
+
+\subsection{The quadratic Mehler error}
+The Mehler kernel relative to $\gamma_d\otimes\gamma_d$ is
+\[
+ M_\rho(x,y)=(1-\rho^2)^{-d/2}
+ \exp\!\left(\frac{2\rho x\cdot y-\rho^2(|x|^2+|y|^2)}
+                   {2(1-\rho^2)}\right).
+\]
+For $|\rho|\leq1/16$, writing $\ell=\log M_\rho$ and
+$L_{xy}=|x|^2+|y|^2$, direct differentiation gives
+$|\ell'|\leq d+L_{xy}$, $|\ell''|\leq2d+2L_{xy}$ and
+$M_\rho\leq2^d e^{L_{xy}/34}$.
+For example the nondimensional parts of $\ell'$ and $\ell''$ are
+\[
+ \frac{(1+\rho^2)x\cdot y-\rho L_{xy}}{(1-\rho^2)^2},
+ \qquad
+ \frac{2\rho(3+\rho^2)x\cdot y-(1+3\rho^2)L_{xy}}{(1-\rho^2)^3};
+\]
+$|x\cdot y|\leq L_{xy}/2$ gives the stated bounds. The exponent bound follows
+from $|\rho|/[2(1+|\rho|)]\leq1/34$.
+Put $t_0=13/136$ and
+\[
+ C_d=2^{d-1}\left[d^2+2d+\frac{2d+2}{2t_0}+\frac1{t_0^2}\right].
+\]
+Taylor's theorem, $M''=M((\ell')^2+\ell'')$, and the maxima of
+$L_{xy}e^{-t_0L_{xy}}$ and $L_{xy}^2e^{-t_0L_{xy}}$, using $e>2$, give
+\begin{equation}\label{eq:Mehler}
+ |M_\rho-1-\rho x\cdot y|
+ \leq C_d\rho^2\psi(x)\psi(y).
+\end{equation}
+Thus a mixed remainder for deviations $f-g,h-g$ is bounded by
+$C_dM_\pm r\sqrt{D_\pm(f)D_\pm(h)}$.
+
+\subsection{Exact mass repair on fixed facet slabs}\label{subsec:repair}
+Fix a reference frame, $R\geq3$, and a relaxed $k$ with mismatch $\eta$.
+Let $p=\E k$, $U=\1/m$, $u=\frac12\norm{p-U}_1$.
+Truncate $k$ to $g$ outside $B_R$, obtaining $k^R$, whose half-$\ell^1$
+mass imbalance $v$ satisfies
+\[
+ v\leq u+\eps_RA_\pm z,\qquad v\leq\eta.
+\]
+Set
+\[
+ c_A=\Vol(B_{d-1})\,8^{-(d-1)}(2\pi)^{-d/2}e^{-2}>0.
+\]
+For donor $i$ and recipient $j$, use the facet disk centered at $v_i+v_j$,
+of tangential radius $1/8$, and its donor-side normal slab of width
+$\tau=(\eta+2v)/c_A$.
+Assume $\eta\leq c_A/24$, so $\tau\leq1/8$.
+At the anchor, the \emph{unscaled} $v_i$ and $v_j$ scores tie and exceed
+all other scores by one. A displacement of size at most $\sqrt2/8$ reduces
+these gaps by at most $1/4$. Distinct unoriented anchors are at least
+$\sqrt2$ apart; opposite slabs at one anchor have disjoint interiors.
+All oriented supports therefore lie in their correct cells, are mutually
+disjoint up to null sets, and are contained in $B_2$.
+
+Their Gaussian mass is at least $c_A\tau$.
+Since the total missing donor mass in its reference cell is at most $\eta$,
+each slab has available $k_i^R$ mass at least $c_A\tau-\eta=2v$.
+Choose any excess-to-deficit flow of total mass $v$, and transfer each pair
+mass proportionally to $k_i^R$ on its slab. Each pair amount is at most $v$.
+Disjoint supports keep the assignment simplex-valued, and all masses are
+repaired exactly. If $v=0$, make no transfers. Call the result $k'$.
+
+Let $b'=b(k')$, $e_0=\norm{b'-b(k)}_{\HS}$, and
+\[
+ J'=w-\sum_i c_i\cdot b_i',\qquad
+ J_{\rm in}=\E\!\left[\1_{B_R}\sum_i k_i(X)
+                  (\max_j c_j\cdot X-c_i\cdot X)\right].
+\]
+The linear cost per unit transferred mass is at most $a\tau\leq\tau$.
+Its total is at most $3\eta v/c_A$. Tail removal and the centroid cost of
+transferring mass in $B_3$ consequently give
+\begin{equation}\label{eq:repair-bounds}
+ J'\leq J_{\rm in}+\frac3{c_A}\eta u+C_J\eps_Rz^2,\qquad
+ e_0\leq6(u+\eps_RA_\pm z),\qquad C_J=3A_\pm^2/c_A.
+\end{equation}
+For the first inequality use $v\leq u+\eps_RA_\pm z$ and
+$\eta\leq A_\pm z$; for the second use~\eqref{eq:tails} and
+$3\sqrt2v$ as the Frobenius centroid cost.
+
+Suppose now that $c$ is a nearest regular centroid matrix for $b(k)$,
+and put $q=\norm{b(k)-c}_{\HS}^2$.
+Distance to $\cO_m$ is one-Lipschitz. Applying~\eqref{eq:Hm} to balanced $k'$
+gives
+$2J'\geq(1+1/K)(\sqrt q-e_0)_+^2$.
+Young's inequality with parameter $1/(2K)$, also covering $\sqrt q\leq e_0$,
+therefore gives
+\begin{equation}\label{eq:repair-coercivity}
+ q\leq(2-\sigma)J'+(2K+1)e_0^2.
+\end{equation}
+The linear cost retains the original frame; no new alignment is introduced.
+
+\subsection{Comparison on a fixed ball}
+Write $H_i(y)=\E g_i(y+Z)$. Then $\nabla H_i(0)=c_i$ and
+$\norm{\nabla^2H_i}_{\rm op}\leq\sqrt2$, by Gaussian differentiation:
+in a unit direction the second derivative is
+$\E[g_i(y+Z)((u\cdot Z)^2-1)]$, bounded by Cauchy--Schwarz.
+Conicality gives $T_{\pm r}g_i(x)=H_i(\pm tx)$,
+$t=r/\sqrt{1-r^2}$. On $B_R$ and for $r\leq1/16$,
+\[
+ \norm{\nabla(T_{\pm r}g_i-1/m\mp r c_i\cdot x)}
+ \leq(1+3R)r^2.
+\]
+The orthogonal reflection swapping vertices $i,j$ fixes their bisector and
+all other vertices, so the pair remainder vanishes on the bisector.
+Integrating normally from that plane, inside $B_R$, gives the appropriate
+signed potential gap at least
+$r(c_i-c_j)\cdot x(1-\beta_Rr)$ in reference cell $i$, where
+\begin{equation}\label{eq:compact}
+ \beta_R=\frac{2(1+3R)}a,\qquad
+ rJ_{\rm in}\leq\frac{D_\pm(k)}{1-\beta_Rr}
+ \quad\hbox{if }\beta_Rr<1.
+\end{equation}
+

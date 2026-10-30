@@ -1,0 +1,35 @@
+ROOT REVIEW — 31 October 2026
+
+The complete uniform covariance proof was read and independently checked
+at root during its derivation. Three internal analytic audits cover its
+full pinned source. The final manuscript received separate core and
+transfer/application assembly audits; both pass at the final assembly
+record. Root checked the final statements, dimensional conventions,
+discrete consequences, source context, and proof-lineage disclosures.
+All ten current TeX hashes match the successful-compilation record.
+
+The explicit all-m gap supplement was independently derived at root at
+the level of its facet ball, whitening, edge identity, Taylor factor,
+global contraction and Procrustes coefficient; its complete source was
+then read. The separate independent audit passes. Fixed trace is essential
+to its stated apex bound and is explicitly imposed in that supplement.
+
+The Gaussian-fitting corollary was read at root. Its zero-value homogeneity
+argument, mean correction, closed-PSD existence, scale formula and limits
+are sound; a separate independent audit also passes. Mean and scale
+reductions are credited as known context, not claimed new results.
+
+Root freshly replayed both independent finite exact-algebra checkers.
+The release reproduction script additionally validates the final
+package and runs them in a fresh temporary directory. Those finite checks
+are corroboration; the analytic proof does not depend on a finite scan.
+
+The final source-specific primary check directly read Heilman2610.32158v1
+Section1.2, including the exact equal-mass first-moment problem and its
+emphasized N=n+1 regime. Our attainment theorem covers that regime for
+n>=2 and its higher-dimensional extensions. The lower-dimensional optimum
+with more than n+1 cells remains undetermined by this theorem.
+
+No external expert review, formal Lean proof or exhaustive priority
+clearance is represented by these internal checks. No paid computation,
+publication or outreach was performed during this continuation.

@@ -1,0 +1,143 @@
+INDEPENDENT AUDIT: FINITE-CELL COERCIVITY TO POSITIVE NOISE
+31 October 2026
+
+Audited source: ../FINITE_CELL_COERCIVITY_TO_NOISE_TRANSFER_20261030.txt
+SHA256: 1d951abe62965c31d3b8ce5209099d62167ed9fc9b554f0c91d4c057b9a3dff5
+
+Verdict. No substantive gap found. The conditional theorem follows with the
+stated constants and quantifiers. H_m is the remaining endpoint premise;
+this audit establishes neither H_m for five or more cells nor an unconditional
+noise theorem there. It also supplies no literature-priority determination.
+The original source and frozen four-cell packages were not changed.
+
+1. Quantifiers and same-frame L1 estimate
+H_m applies to all balanced relaxed assignments in dimension m-1. Since K>0,
+its nonnegative left side implies Delta>=0. Orthogonal compactness supplies
+a nearest centroid matrix c. Its winning-score cells are well-defined up to
+null hyperplanes. Direct expansion gives 2J=Delta+q. The two-largest score
+gap is bounded by a union over all unordered Gaussian score differences;
+each has standard deviation a. Thus P(Gamma<=t)<=beta*t, with the stated
+beta. For fractional mismatch p in [0,1], Tonelli gives
+ E[p Gamma]=integral E[p 1_{Gamma>t}]dt >= integral(d0-beta*t)_+dt.
+There is no separate L1 alignment and no assumption that f is an indicator.
+Equality Delta=0 forces J=q=0 and then f=g almost everywhere.
+
+2. Saturation and dimension-dependent weighted constants
+The independent normal score representation remains valid in H by centering
+m independent normals; centering does not change their maximizer. The gap
+between labels i,j is the integral of positive H_delta above the maximum of
+the other m-2 scores. Lowering those means can only increase the gap. The
+event all other centered normal variables are <=0 has probability 2^{-(m-2)}.
+Integration over u in [0,1] then gives the exact stated c_m. The argument
+for delta>=1 uses monotonicity of the gap when the j mean decreases.
+
+For one unit-normal plane write x=u e+z. On |u|<=1, the triangular positive
+part integrates to phi(0)*exp(1/4)*E exp(|z|^2/4)/(lambda*rho), and that
+Gaussian expectation is 2^{(d-1)/2}. On the complement, the one-plane
+saturated weight is >=rho and the square inequality gives 2^{d/2}/(4lambda
+rho). The maximum over planes is at most their sum. This proves B_d,
+including the factor P, without a hidden bounded-support restriction.
+
+D >= (c_m/2) sum_i integral |h_i|w_rho; therefore summing the optimized
+one-plane estimates yields M2=8 B_d/c_m. The scalar mismatch and tail mass
+need factor sqrt(m)/2; the vector centroid tail needs no such factor. The
+choice A2=max(1,m/4) M2 covers both exactly. The function
+(1+r)exp(-r^2/8) decreases for r>=2, giving the claimed uniform tail bound.
+
+3. General Mehler estimate
+Let r=|rho|<=1/16 and L=|x|^2+|y|^2. The exact log derivatives obey
+ |ell'| <= d*r/(1-r^2)+L/[2(1-r)^2],
+ |ell''| <= d*(1+r^2)/(1-r^2)^2+L/(1-r)^3.
+The four coefficients at r=1/16 are <1, <1, <2, <2 respectively, so the
+source's d+L and 2d+2L bounds hold uniformly. The kernel exponential is
+bounded by exp(L/34), since the quadratic exponent is at most
+r*L/[2(1+r)]. Its determinant prefactor is certainly <=2^d.
+The gap between 1/8 and 1/34 is t0=13/136. Bounding L*exp(-t0 L) by
+1/(2t0) and L^2*exp(-t0 L) by 1/t0^2 proves the displayed C_d after the
+Taylor factor 1/2. Integrability follows from Gaussian exponential moments.
+
+R_quad>=0 is used only for positive rho, as required by the theorem;
+the absolute kernel estimate alone also holds for negative rho. The exact
+comparison keeps -2D separate from the quadratic perturbation remainder.
+No invalid bound on the total difference of higher-chaos energies is used.
+
+4. Facet geometry and fractional balance repair for every m>=3
+The anchor v_i+v_j has squared norm 2-4/m. The i and j scores tie, and each
+exceeds any other score by exactly 1. Two distinct unordered anchors are
+distance sqrt(2) when sharing one label and distance 2 otherwise. The patch
+displacement has norm <=sqrt(2)/8. This makes all distinct patches disjoint,
+puts them in B2, and reduces any third-label score gap by at most 1/4.
+The two orientations at the same anchor are disjoint half-slabs.
+
+The Gaussian lower density on B2 and the tangential ball volume give c_A
+exactly as stated. A donor patch loses at most d0 mass compared with its
+reference indicator. With tau=(d0+2u)/c_A its remaining donor mass is >=2u,
+and d0<=c_A/24 ensures tau<=1/8. Each required transfer is <=u. Multiplying
+the donor density by the needed mass divided by its available integral is
+an explicit admissible fractional transfer. Disjoint supports avoid reuse.
+
+The repair cost is at most a*tau*u <=3d0*u/c_A because a<=1. This implies
+C_J=3A2/c_A. For centroid error the tail contributes epsilon_R*A*z and
+the transfers contribute <=2sqrt(2)u (or the coarser 3sqrt(2)u used in the
+four-cell proof), so e<=6epsilon_R*A*z is safe. These estimates do not
+require the repaired centroids to choose the same nearest rotation.
+
+5. Original-frame coercivity and final strictness
+Distance to the orthogonal orbit is one-Lipschitz. Both that distance and
+the distance to the original c are >=(sqrt(q)-e)_+. Applying H_m to the
+balanced f' proves the displayed lower bound for 2J'. The stated Young
+parameter gives coefficient 2-1/(K+1), not merely 2. This is the strict
+margin needed for the argument.
+
+The Gaussian convolution Hessian estimate is dimension-free: for a unit u,
+u^T Hess H_i(y)u=E[((u.Z)^2-1)g_i(y+Z)], whose absolute value is <=sqrt(2)
+by Cauchy--Schwarz. Conicality and the t-rho estimate therefore give the
+gradient remainder. Reflection in the i,j bisector fixes all other vertices
+and swaps those two; the pair remainder is exactly zero on that plane.
+The projected point and intervening segment remain in B_R. This proves the
+relative compact-potential bound with B_R=2(1+3R)/a.
+
+The order of choices is valid: m,K determine all fixed constants, then a
+finite R makes E_R<=sigma/4, then a positive rho_m satisfies all four upper
+bounds. Neither choice depends on a competitor or ambient dimension.
+Competitiveness gives Delta <=(1-1/m)rho by Hermite positivity and Parseval,
+including relaxed f. The L1 estimate then supplies the exact repair capacity.
+
+The worst final coefficient is
+ -2+(2-sigma)/(1-sigma/16)+sigma/2.
+Adding sigma/4 and putting over its positive denominator leaves numerator
+ -sigma/8-3sigma^2/64 <0.
+Thus the required -sigma*D/4 follows with strict slack for all K>=1. If
+f differs from g on positive measure, the saturated score inequality gives
+D>0, excluding competitiveness. No sequence-dependent tail condition occurs.
+
+6. Ambient dimensions, relaxed maxima and discrete transfer
+In any fixed finite dimension, the feasible set is bounded, closed and
+convex in the finite product of L2 spaces, hence weakly compact. T_rho is
+compact and positive definite for 0<rho<1, so its quadratic form is weakly
+continuous and a maximum exists. On a positive-measure fractional overlap
+of two labels, choose two equal-measure pieces and a sufficiently small
+opposite-pair perturbation. Both signs preserve mass and feasibility. Their
+average stability exceeds the original by strict positivity of T_rho.
+Consequently every maximizing relaxed assignment is an indicator partition.
+
+Primary dimension reduction checked again at its exact version:
+https://arxiv.org/pdf/2011.05583v2
+Heilman--Tarter, Theorem 1.9, printed page 7. It applies to every maximizing
+positive-mass partition in ambient N>=m-1, and reduces it after rotation and
+null changes to m-1 coordinates. Thus value and equality transfer both hold.
+For N<m-1, embed directly into R^{m-1}; equality would force the full-rank
+regular centroid matrix, impossible for an N-dimensional assignment.
+
+Primary discrete transfer checked at:
+https://arxiv.org/pdf/0903.3362v3
+Isaksson--Mossel, Theorem 7.1 and Lemma 7.3, printed pages 23--24. The former
+preserves the expectation vector and approximates stability at the same
+fixed rho; the latter identifies the plurality limit. This yields the
+usual additive-epsilon, low-influence corollary, with thresholds depending
+on m,rho,epsilon. No uniform threshold as rho tends to zero is supplied.
+
+Verification. exact_checks.py independently checks rational derivative
+coefficients, normalization identities, the strictness polynomial, and
+simplex anchor geometry. These finite checks supplement the analytic
+all-m proof above; they are not substitutes for it or for H_m.

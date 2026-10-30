@@ -1,0 +1,26 @@
+{
+  "theorem": "Marcus inequality for three blocks, all k>=1 and all complex PSD Gram ranks",
+  "internal_audit": "passed",
+  "external_review": false,
+  "exhaustive_priority_clearance": false,
+  "full_arbitrary_m_conjecture_resolved": false,
+  "latex_compilation": "success",
+  "checks": {
+    "transport_tables": 839,
+    "union_kernel_pairs": 9268,
+    "literal_trace_coordinates": 620,
+    "independent_complex_polynomial_trials": 24
+  },
+  "files_sha256": {
+    "LITERAL_LAYER_CHECK.json": "e59bcdd9a3b2593d32df94b7f6b21912f6ae80b4be8430002fbcc82ef12a8b4c",
+    "LITERATURE_REVIEW.txt": "ee9a6a1ca4151eb6a898c5c04d9cd9633a33c51ff21d605863a9294a81acec49",
+    "PURE_ENTRY_THREE_BLOCK_PROOF.txt": "58d9485473da97390fa7fa4e528798d93011ba87072026cfc785b40ce68641a6",
+    "PURE_MIXING_THREE_BLOCK_PROOF.txt": "31d1dbc6e2f775cb1a0dd61d90838fb4cac90440d00d2d2898b2df12ba5160fa",
+    "README.txt": "7b5858c2391bc60c726fb8f233e68dbcc0e21cf079bf8d65e6c27a7ba3bfb3ff",
+    "ROOT_UNIFORM_THEOREM_AUDIT.txt": "fcad39563dd779993776ae5bd902cee4ac944df789f9f0fb15c3e3299a903c99",
+    "check_literal_layers.py": "66c375d165fe28afb803fa5648a3da95deff7020be8e7bc4ca3ac58252b8f523",
+    "check_pure_mixing.output.json": "75e749180a3a49104a787ddbf43b751dc1c0b86989434d82db73bb5b9a0b78a9",
+    "check_pure_mixing.py": "205a46472440680a95a3c1f3828e0da172df71682d6fadc280035e68e9c3f920",
+    "main.tex": "5e809236a3c54293ff9ae05437eb5b5e93a5d8f0d1ab729555e786727e5a1d62"
+  }
+}

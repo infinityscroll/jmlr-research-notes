@@ -1,0 +1,25 @@
+Bounded primary-source review, 30 October 2026
+
+Ian M. Wanless, Lieb's permanental dominance conjecture, arXiv2202.01867v1,
+3 February2022, Section2 Conjecture3:
+https://arxiv.org/html/2202.01867
+States Marcus's arbitrary-m block-permanent conjecture; records Lieb's
+m2 result and a real-matrix result of Pate in a different parameter range.
+
+Fuzhen Zhang, An update on a few permanent conjectures, Special Matrices4
+(2016),305-316, Section7:
+https://doi.org/10.1515/spma-2016-0030
+Records the Marcus per-in-per conjecture as dating to1965 and discusses
+the two-block case and earlier weaker/special-case results.
+
+Yair Lavi, Minc's list, updated29 October2026:
+https://yair-lavi.com/mincs-list/
+Its Conjecture9 entry still marks the general problem open. It records the
+two-block theorem and a three-2-by-2-block rank-at-most-two result, with
+the remaining small case reduced to ranks3-4.
+
+Targeted searches for Marcus three-block and block-permanent proofs did
+not locate an existing all-size, all-rank complex three-block theorem.
+This is bounded retrieval, not exhaustive novelty clearance. The current
+research-page entry is a status report, not a substitute for reviewing
+all original papers. No external mathematician has reviewed this draft.

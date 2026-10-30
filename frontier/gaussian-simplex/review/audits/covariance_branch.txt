@@ -1,0 +1,243 @@
+INDEPENDENT END-TO-END AUDIT OF ALL-DIMENSIONAL COVARIANCE CONCAVITY
+2026-10-31. Auditor: strong_signal_branch_count.
+
+Verdict: PASS, at the pinned source hash below. No mathematical repair
+identified. This is an internal independent audit, not external review
+or a historical priority assessment.
+
+Pinned source:
+ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+SHA256 225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+The auditor did not edit that source.
+
+Scope checked: every step of sections 1-9, proving covariance concavity
+for all P2 targets in every finite dimension, plus section 10's balanced
+simplex endpoint, equality description and finite centroid-orbit
+coercivity via the referenced local-coercivity note. The subsequent
+small-positive/small-negative noise-transfer applications are explicitly
+pending in the source and are not certified by this audit.
+
+1. Independent derivation before reading the source
+
+The auditor independently derived the planar endpoint/ground-state
+argument, then the tetrahedral wedge calculation. For a tetrahedron,
+the assembled difference is a negative rank-one stress matrix, removed
+by the freedom to add a constant to its four triangle-cycle coefficients.
+After root proposed the full-simplex chain identity, the auditor derived
+all its entries independently from projected target gaps. This agreed
+with every sign and factor before reading the pinned full source.
+
+The independent tetrahedron derivation is frozen separately at
+stochastic/tetrahedron_covariance_concavity_20261031/
+TETRAHEDRON_COVARIANCE_CONCAVITY.txt,
+SHA256 eb12f4e957852ba765cc00d435dc9a963742438a8a8124ceed359833390ecafb.
+Its isolated citation-initial typo is recorded in a separate correction;
+no mathematical correction is needed.
+
+2. Duality, attainment, and regularity
+
+The finite-site dual bound is pointwise. Its objective dominates
+max h-sum p_i h_i, hence p_min times the offset range. After fixing the
+common-offset gauge, this is coercive and gives attainment. Gaussian
+ties have measure zero. Its derivative in h equals the cell masses
+minus p, so the minimizing winning assignment achieves the coupling
+bound exactly. No unproved transport-map existence is needed here.
+
+For an affinely independent target every offset vector is a translated
+normal fan. Every target subset is a face of the simplex, and its normal
+cone has the stated intrinsic dimension. All stratum masses are strictly
+positive and finite. The support-function Gaussian convolution gives
+smoothness at positive definite covariances and finite translations.
+The complete-graph facet Laplacian has positive weights, making the
+offset Hessian invertible on the common-offset quotient. Thus the later
+offset Schur complement is legitimate for arbitrary positive masses.
+
+3. Boundary identities and covariance deficit
+
+For stratum S, its inward normal at S+k is the normalized projected gap
+P_S(y_i-y_k). The sign is correct: this increases the winning score gap
+of i over k. Integrating grad gamma=-x gamma over the stratum changes
+the outward normal -n into the positive first-moment sum in equation(2).
+
+For equation(3), integrate the derivative of (x-m_e)gamma on the facet.
+The boundary displacement m_g-m_e is negative t_g, and the outward
+normal is negative n_g; the product is positive. The covariance deficit
+is symmetric, so the resulting N T^T also equals T N^T. All differences
+of relevant means lie in the facet tangent plane. Truncation by large
+spheres introduces only Gaussian-polynomial tails, which vanish.
+
+The covariance bound Cov_e<=P_e is the standard Gaussian restriction
+inequality for a convex set in the facet's affine span. A direct primary
+reference, supplementing the source's valid Brascamp-Lieb argument, is:
+
+  Marek Kanter and Harold Proppe,
+  "Reduction of variance for Gaussian densities via restriction to
+   convex sets," Journal of Multivariate Analysis 7(1),74-81 (1977),
+  DOI 10.1016/0047-259X(77)90032-X.
+  https://doi.org/10.1016/0047-259X(77)90032-X
+
+The publisher's primary record states covariance domination when a
+Gaussian density is multiplied by a log-concave factor. The indicator
+of each convex stratum domain is such a factor. Only the non-strict
+PSD statement is used. No inverse covariance deficit is assumed.
+
+4. Local inverse and every normalization
+
+For e={i,j}, g=e+k, the projected gap has length 2 Area(g)/ell_e.
+Consequently N_e[:,g]=P_e(y_i-y_k)/D_g with D_g=2 Area(g)/mu_g.
+The global barycentric vector v_k=-grad l_k is tangent to e whenever
+k is outside e, and its pairing with these projected gaps is delta_kl.
+Thus the restricted inverse row really is D_g v_k^T, independently of
+the choice of orthonormal coordinates on the facet.
+
+From E_e=N_e T_e^T and symmetry one obtains
+T_e=E_e N_e^(-T), B_e=N_e^(-1)E_eN_e^(-T)=N_e^(-1)T_e.
+This proves B_e PSD even if E_e is singular. The first-moment identity
+w_e P_e m_e=N_e 1 gives the constant 1/w_e in every local B entry.
+There is no missing edge length, factorial, or Gaussian normalization.
+
+5. Chain factorization and diagonal terms
+
+For distinct incident triangles g=e+k and g', v_k is tangent to g'.
+Its pairing with every boundary normal of g' vanishes except the one
+adding k. The surviving reciprocal height is Area(g')/(3 Vol_3(h)),
+h=g union g'. Multiplication by D_g yields
+
+ D_g v_k dot m_g'
+   =D_g D_g' mu_h/(6 Vol_3(h)).
+
+The oriented edge incidences of g,g' have product equal to minus their
+two tetrahedron-boundary incidences. This follows from partial_2
+partial_3=0 on their unique shared edge. Hence the off-diagonal sign
+is exactly the negative sign in equation(10).
+
+The diagonal is not inferred from the off-diagonals. Summing its three
+local contributions gives D_g(sum_(k in g)v_k) dot m_g. The global
+barycentric identity sum_all v_k=0 converts this to minus the outside
+vertices. Each outside vertex contributes exactly its reciprocal-height
+term. This yields -D_g^2 sum_(h containing g) mu_h/(6Vol_3(h)), matching
+the diagonal of the same factorization. The d=2 case has no outside
+vertices and no tetrahedra, so A-B=0 directly.
+
+Thus the full uniform identity is verified:
+  A-B=-D partial_3 diag(mu_h/(6Vol_3(h))) partial_3^T D.
+
+6. Gauge, matrix Cauchy, and the actual global offset problem
+
+The simplex chain complex is exact in positive degree. Triangle chains
+span all graph cycles, and their kernel is precisely im partial_3.
+Selecting the D-orthogonal representative of a triangle chain is valid
+because D is positive definite. Dependencies among tetrahedron boundaries
+only make its coefficient representation nonunique; they do not affect
+projection onto their image. The condition partial_3^T D lambda=0 kills
+the entire negative factorization while preserving the edge cycle flow.
+
+Subtracting a common stratum mean m_g in each triangle is valid because
+the signed cell-vector differences telescope. Cauchy is applied once
+to the direct sum of all facet PSD forms, with vectors E_e^(1/2)z_e
+and E_e^(1/2)N_e^(-T)eta_e. Its second squared norm is exactly lambda^T
+B lambda, which the chosen gauge makes equal to j^T W^(-1)j.
+
+Weighted least squares then gives the mean-residual minimum over one
+global offset vector. The gauge did not introduce independent offsets
+on different strata or Gaussian slices. This is the key distinction
+from an invalid slice-by-slice relaxation.
+
+7. Covariance Hessian: signs, factors, strictness
+
+At I+tH, the square-root derivatives are H/2 and -H^2/4. The boundary
+score derivative is (X dot H d_e+b_i-b_j)/2 after setting b=2h'. Its
+square gives the factor4 in (17). The interior second derivative is
+-E[X dot H^2Y]/4; Gaussian integration by parts gives exactly
+E[XY^T]=sum_e w_e d_e d_e^T. Each unoriented facet is counted once.
+Second derivatives of offsets cancel because their cell masses equal p.
+The connected offset Laplacian makes the minimized expression precisely
+the Hessian Schur complement.
+
+Adding the conditional variance to the controlled cycle mean cancels
+every tangential term. The remainder is
+  -sum_e w_e(d_e^T H d_e)^2/ell_e^2.
+All weights are positive. The simplex edge dyads span Sym_d: the edges
+from one vertex give diagonal quadratic forms in a basis; differences
+of these edges determine all cross terms. Thus the Hessian is negative
+definite for every nonzero symmetric H. The affine change to general
+PD covariance has the stated congruence order and preserves all masses.
+
+8. Singular covariance, affine pullback, and arbitrary P2 targets
+
+The common-Gaussian coupling estimate (19) is valid at singular C:
+lift a coupling with C^(1/2)G using the Gaussian conditional law of G
+given C^(1/2)G. Hence adding epsilon I and passing to the limit really
+extends simplex concavity to the full PSD cone.
+
+The displayed target lift (y_i,epsilon e_i) is affinely independent,
+and its cost against (X,0) is exactly the original cost. The common-site
+translation contributes zero because the source is centered. Projection
+onto the lifted difference span is a fixed linear covariance map;
+couplings can be lifted back by Gaussian conditioning. Its possible
+singularity is already covered. No epsilon limit is needed.
+
+An equivalent check avoids the extra coordinates: write y_i=L s_i+b
+from a canonical simplex s_i with the same masses. Then
+  F_nu(C)=F_eta(L^T C L).
+One direction projects X to L^T X; the other lifts through its Gaussian
+conditional distribution. Target labels preserve the coupling. This
+gives exactly the same concavity pullback. A one-site target is the
+trivial zero functional, covering the harmless zero-dimensional base case.
+
+Finally the gluing estimate sqrt(tr C)W2(nu,nu') is correct, and finite
+laws approximate every P2 law in any finite dimension. Pointwise passage
+at the three covariances in a concavity inequality proves the all-P2
+claim. The W2-squared identity has the stated sign and factor2. Neither
+lifting nor approximation is used to assert general strictness.
+
+9. Balanced-simplex consequences checked
+
+The uniform simplex score functional J_m is the stated maximal-covariance
+problem on the zero-sum score space. Permutation averaging fixes its
+trace and yields K_*=mI-11^T. Concavity gives the global maximum there.
+The strict covariance Hessian supplies local quadratic coercivity.
+
+The referenced ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt section5
+was read. Its segment inequality has the correct direction:
+theta[J(K_*)-J(K)]>=J(K_*)-J(K_theta). A fixed small theta puts every
+K_theta in the local neighborhood, giving the claimed uniform global
+quadratic gap on the compact fixed-trace PSD set.
+
+For balanced relaxed assignments, normalized centroids give
+sqrt(m(m-1)W)<=J_m(K)<=sqrt(m)mu_m, hence W<=mu_m^2/(m-1).
+Equality forces K=K_* and saturation of the score dual. The maximizing
+score is unique almost surely at regular covariance, so the relaxed
+assignment must be the regular simplex partition up to the stated
+symmetries and null sets. Equality requires enough ambient dimension
+to realize its rank m-1; otherwise the bound is strict.
+
+The normalized Procrustes formula and its bound by
+||K-K_*||_F^2/m are valid because K1=0 and K_* acts as mI on that
+subspace. Rescaling adds only a constant multiple of W_* -W, proving
+the finite centroid-orbit coercivity claimed in the referenced note.
+The later noise-transfer applications still require their own review,
+as the pinned source explicitly states.
+
+10. Separate exact algebra verification
+
+The independent checker reconstructs nonregular rational simplex sites
+in dimensions2 through6. It uses arbitrary positive FORMAL scaled
+stratum masses, constructs facet and triangle mean vectors from boundary
+identities, and checks the local inverse, symmetry, all B entries,
+assembled factorization, chain exactness, and edge-dyad spanning.
+
+  882 local B entries and1742 assembled matrix entries pass exactly.
+  Arithmetic: SymPy rational; no random search or quadrature.
+
+Files in stochastic/tetrahedron_covariance_concavity_20261031/:
+  check_simplex_chain_exact.py
+  SHA256 b793a2f3660349ad65e56429a26a25d5781ffc82567dfac324684af1445eb8d4
+  SIMPLEX_CHAIN_EXACT_CHECKS.json
+  SHA256 1e21bbebc9fa0b12fa23e37692318c31c2797dd2b8d6f4f512721725b655adb1
+
+These checks validate algebra only. Formal masses need not be realizable
+by a Gaussian, so the script does not test or assume PSD of each formal
+deficit. The analytic Gaussian covariance restriction supplies that step.
+
+No correction requested to the pinned mathematical proof.

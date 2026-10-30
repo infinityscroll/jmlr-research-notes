@@ -1,0 +1,13 @@
+{
+  "compiler": "Tectonic0.17.0, official GitHub asset digest verified",
+  "source_policy": "Unmodified frozen TeX compiled in temporary directories",
+  "gaussian_pages": 17,
+  "marcus_pages": 5,
+  "unresolved_references": 0,
+  "compiler_warnings": 0,
+  "visual_checks": "All pages rendered; contact sheets and selected detailed pages inspected",
+  "pdf_sha256": {
+    "marcus-three-blocks.pdf": "1617ff1be0a341500a7d81b9ef5dc3b9c953a627a3493f925b915272789f1910",
+    "gaussian-covariance-simplex.pdf": "d4d7187a6372fe403da8208e877e226af84ac7f18a35d7d7276c1b0136bb71b0"
+  }
+}

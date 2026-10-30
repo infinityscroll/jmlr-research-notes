@@ -1,0 +1,235 @@
+A COMPLETE RECURSIVE SUBCLASS, AND THE PRECISE MISSING GENERALIZATION
+30 October 2026. Independent derivation and calibration, no novelty claim.
+The unrestricted mixed-graph identification problem remains unresolved.
+
+1. General exact block-factorization lemma
+========================================
+Suppose vertices have an ordered partition C1,...,Ct such that directed
+edges only stay inside a block or go to a later block, and every
+bidirected edge stays inside one block. Thus the Gaussian errors in
+different blocks are independent, while errors within a block need not
+be. Let A_j be the union of the blocks preceding C_j. From the observed
+covariance define the conditional regression and covariance
+  R_j=Sigma_(A_j,A_j)^(-1) Sigma_(A_j,C_j),
+  Q_j=Sigma_(C_j,C_j)-Sigma_(C_j,A_j)R_j.
+For j=1, omit R_j and use Q_j=Sigma_(C_j,C_j).
+All Q_j are positive definite.
+
+Write T_j=I-Lambda_(C_j,C_j), and B_j=Lambda_(A_j,C_j).
+The structural equations give exactly
+  R_j=B_j T_j^(-1),  Q_j=T_j^(-T)Omega_j T_j^(-1).
+Therefore the entire real fiber is the Cartesian product, over j, of
+the following block solution sets:
+  T_j has its required directed sparsity, diagonal1, and is invertible;
+  B_j=R_j T_j satisfies every required zero of the incoming arrows;
+  Omega_j=T_j^T Q_j T_j satisfies every required error-covariance zero.
+Positivity of Omega_j is automatic. Once these choices are made, the
+conditional Gaussian laws and hence the joint covariance are fixed.
+This proves both necessity and sufficiency, including global branches.
+It also explains why downstream independent-error blocks cannot resolve
+ambiguity in an earlier block: their solution sets do not use the
+earlier block's parameter values.
+
+Ordinary independent-error sinks are singleton blocks. Their incoming
+coefficients are uniquely their observed regression coefficients; their
+removal preserves the whole earlier fiber. Removing a source or an
+error-correlated sink and discarding its cross-covariance is NOT covered.
+
+2. Recursively defined graph class
+==================================
+Build a graph by repeatedly adjoining a block, with arbitrary forward
+arrows from existing vertices and no error correlation across blocks.
+Each new block is one of these types:
+  E. No internal arrows; arbitrary allowed bidirected edges.
+  C. A directed simple cycle of length at least2; no internal bidirected
+     edges. There are exactly the cycle arrows, no directed chords.
+  F. Arbitrary internal arrows; EVERY pair inside the block has an
+     allowed bidirected edge (fully unrestricted internal error matrix).
+The decomposition is a supplied certificate defining the subclass.
+Singletons are type E. Graphs can have arbitrarily many vertices,
+cycles, and unknown allowed error correlations. A complete
+necessary-and-sufficient generic identification test follows below.
+
+3. Type E is always identified
+=============================
+Here T=I, so B=R and Omega=Q. The allowed zeros merely constrain the
+observed distribution; there is no parameter ambiguity.
+
+4. Complete type-C cycle criterion
+=================================
+Call an earlier vertex a partial parent of a cycle if it has arrows to
+a nonempty proper subset of the cycle vertices. Then:
+  (i) a cycle with a partial parent is generically rationally identified;
+  (ii) a cycle of length at least3 without a partial parent has exactly
+       two admissible real branches generically;
+  (iii) a 2-cycle without a partial parent has a one-dimensional fiber.
+
+Proof of (i). Number a cycle modulo m, with arrow coefficient a_i from
+i to i+1. Its incoming coefficient matrix is B=R T. Hence
+  B_(u,j)=R_(u,j)-a_(j-1)R_(u,j-1).
+For a partial parent u choose a missing target j. Since u has at least
+one incoming arrow into the cycle, R_(u,j-1) is generically nonzero:
+the directed cycle reaches every vertex, and setting one nonzero
+incoming coefficient gives a nonzero path expression. Consequently
+  a_(j-1)=R_(u,j)/R_(u,j-1).
+Thus one cycle coefficient is identified by a rational formula.
+
+For m>=3, set d_i=1/(Omega_ii), and K=Q^(-1). Direct multiplication gives
+  K_(i,i+1)=-a_i d_(i+1),
+  K_ii=d_i+a_i^2 d_(i+1).
+Known nonzero a_i gives d_(i+1)=-K_(i,i+1)/a_i. Iterate
+  d_(i+2)=K_(i+1,i+2)^2/(K_(i+1,i+1)-d_(i+1)),
+  a_(i+1)=-K_(i+1,i+2)/d_(i+2).
+At a true nonzero-edges parameter point the denominators are positive
+and nonzero. These formulas recover the entire cycle, then B and Omega.
+For m=2, knowing a and writing the other coefficient as b, its one
+noise-zero equation instead gives
+  b=(Q12-a Q11)/(Q22-a Q12).
+Positive definiteness of Q ensures the denominator is nonzero at any
+admissible solution, so the 2-cycle is also recovered.
+
+5. Exact two-branch calculation for an uninstrumented cycle
+=========================================================
+For m>=3 assume all a_i are nonzero, p=product a_i is not1, and p^2
+is not1. These remove only proper algebraic exceptional sets.
+Suppose another cycle has the same Q, with noise precisions d_i'>0.
+The off-diagonal precision entries force
+  a_i'=a_i d_(i+1)/d_(i+1)'.
+Set x_i=d_i'/d_i and r_i=a_i^2 d_(i+1)/d_i, R=product r_i=p^2.
+The diagonal precision equations become
+  x_i-1=r_i (x_(i+1)-1)/x_(i+1).
+If any x_i=1, all are1 and the branch is the original. Otherwise set
+  y_i=1/(x_i-1).
+The equations become the affine recurrence
+  y_(i+1)=r_i y_i-1.
+There is exactly one cyclic solution when R!=1:
+  y_i=S_i/(R-1),
+  S_i=1+r_(i-1)+r_(i-1)r_(i-2)+...+
+                 r_(i-1)...r_(i-m+1)>0.
+Hence x_i=1+(R-1)/S_i is positive. For R>1 it exceeds1; for 0<R<1,
+S_i>=1 makes its numerator S_i+R-1 strictly positive. Multiplying
+the original recurrence gives product x_i=R, so
+  product a_i'=1/p.
+The second T is invertible since p!=1, and its noise variances are
+positive. Thus there are exactly TWO admissible real branches.
+This independently recovers the known directed-cycle obstruction.
+
+If no partial external parent exists, every incoming row B_u is either
+fully unrestricted or zero on the cycle. The corresponding condition
+B_u=R_u T accepts BOTH internal branches: unrestricted rows have no
+zeros to violate; zero rows have R_u=0. Thus both branches survive in
+the full block. Conversely part4 shows any partial row generically
+removes the second branch, proving the claimed complete criterion.
+
+For m=2, every real a except a possible single pole gives b by the
+displayed formula. When Q12!=0 the pole is a=Q22/Q12; its numerator
+does not vanish there because det Q>0. Moreover
+  1-ab=(Q22-2aQ12+a^2Q11)/(Q22-aQ12),
+whose numerator is positive. Every other real a is admissible and
+has positive-definite diagonal noise by congruence. If Q12=0 there
+is no pole. This proves the one-dimensional obstruction.
+
+6. Complete type-F criterion, including arbitrary cyclic arrows
+=============================================================
+For target vertex j in a fully confounded block let P_j be its internal
+parents, H_j its allowed external parents, and U_j=A\H_j. Its internal
+coefficient vector beta_j satisfies exactly the LINEAR equations
+  R_(U_j,P_j) beta_j = R_(U_j,j).                       (1)
+There are no internal error zeros. Therefore the block is generically
+identified if and only if EVERY matrix R_(U_j,P_j) has full column rank.
+If any rank is deficient, the product of these affine solution sets has
+positive dimension. A small real movement from the true solution retains
+invertibility of T and positivity of T^TQT, so this is actual
+nonidentifiability, not merely a deficient sufficient test.
+
+This rank has a structural characterization. Form a directed network
+whose source nodes are U_j, whose other nodes are the current block,
+and whose edges are the allowed incoming arrows and internal arrows.
+The generic rank of R_(U_j,P_j) equals the maximum number of mutually
+vertex-disjoint directed paths from distinct sources in U_j to distinct
+targets in P_j. Consequently the condition is the existence of |P_j|
+such paths for every j. Empty P_j passes vacuously.
+
+Proof of the generic-rank statement. A vertex separator of size q
+factors the walk-transfer matrix through q coordinates, by decomposing
+every walk at its first hit of the separator; this is an identity of
+formal power series and hence rational functions. Rank is at most q.
+Conversely, on q vertex-disjoint paths set their edge coefficients to1
+and every other allowed coefficient to0. The selected transfer minor
+is a permutation matrix, since the surviving graph is a disjoint union
+of directed paths. This supplies a nonzero determinant specialization.
+Directed vertex Menger equates the maximum linking and minimum cut.
+Cycles do not disturb either argument, and the specialization has
+invertible T. This is the classical structural transfer-rank mechanism,
+not a newly discovered general identification theorem; compare
+https://ir.cwi.nl/pub/6465/6465D.pdf .
+
+The generic fiber dimension of a type-F block is precisely
+  sum_j (|P_j|-maximum_linking_size(U_j,P_j)).
+It is singleton if this is zero, and infinite otherwise; there is no
+finite degree greater than1, because the fiber is affine with the
+det(T)=0 hypersurface removed.
+
+7. Complete theorem for the recursive class
+==========================================
+A graph with the certified decomposition of part2 is generically
+globally identifiable if and only if:
+  every type-C block has a partial external parent; and
+  every type-F block passes the linking condition in part6.
+Necessity follows from the exact product-fiber lemma and the explicit
+alternative branches/affine directions. Sufficiency gives rational
+recovery block by block. If all type-F tests pass, no uninstrumented
+2-cycle occurs, and u uninstrumented cycles of lengths>=3 occur,
+the full graph has exactly 2^u admissible real branches generically.
+Failed type-F tests and uninstrumented 2-cycles give positive-dimensional
+fibers, whose dimensions add across blocks.
+
+8. Checks and indispensable generalization
+==========================================
+cycle_block_audit.py verifies the reciprocal branch formulas for signed
+rational cycles of every length3,...,8, every single-edge recovery
+position, and every nonempty proper incoming support through length6.
+It checks the 2-cycle continuum and a ten-vertex exact fixture with a
+correlated root block, one identified cycle, one ambiguous cycle and
+an independent-error sink. Two distinct full parameterizations have
+exactly the same covariance. All checks pass; the proof is analytic,
+not inferred from finitely many instances.
+
+What cannot be discarded:
+* Cross-block error correlations destroy the independent conditional
+  factorization. The one-error-probe example from FIBER_COMPOSITION.txt
+  already rescues an otherwise ambiguous ancestral block.
+* Partial internal error sparsity combined with general internal arrows
+  lies between the fully confounded linear criterion and the diagonal
+  cycle recurrence. Its quadratic constraints must be used jointly.
+* Multiple overlapping cycles inside one block are outside the cycle
+  primitive; pure cycle degree2 is not a theorem about arbitrary SCCs.
+* Jacobian rank only settles local dimension, not competing real branches.
+
+A concrete contrast: one partial parent identifies a diagonal-noise
+cycle completely, but if the same cycle's error matrix becomes fully
+unrestricted, every cycle coefficient at a vertex targeted by ALL active
+external parents remains free. At the other vertices, the incoming zero
+constraints identify coefficients linearly. This exposes exactly how
+error-covariance zeros carry information missing from regressions.
+
+9. Current-method comparison and prior-art boundary
+==================================================
+The April2026 IIC paper (arXiv:2604.09309v1) propagates known coefficients
+through sufficient rules. The May2026 latent-factor paper
+(arXiv:2605.28105v1) allows unidentified parents in sufficient criteria.
+Their settings and guarantees do not imply the complete real-fiber
+necessity claims above for arbitrary graphs, nor does this subclass
+supersede those methods. Explicit latent factors can restrict Omega
+beyond a bidirected zero pattern.
+
+The nearest warning against a novelty claim is Gupta--Blaeser,
+AAAI2024: the directed-TREE case with arbitrary confounding already has
+a complete randomized polynomial-time algorithm, returning identifiable,
+2-identifiable or infinite possibilities for each coefficient.
+https://ojs.aaai.org/index.php/AAAI/article/download/30023/31799
+Thus a tree-only extension or fractional-linear propagation itself is
+not a new full solution. The cycle and block derivations here are an
+independent exact testbed and a boundary for the missing generalization.
+
+No complete characterization of unrestricted mixed graphs is proved.

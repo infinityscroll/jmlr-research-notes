@@ -1,0 +1,294 @@
+\section{Covariance concavity}
+\subsection{The simplex dual and its strata}
+First let $\nu=\sum_{i=0}^d p_i\delta_{y_i}$, where the sites are affinely
+independent and $p_i>0$. For $C>0$,
+\begin{equation}\label{eq:dual}
+ \mathcal F_\nu(C)=\min_h
+ \left\{\E\max_i(y_i\cdot X+h_i)-\sum_i p_i h_i\right\},
+ \qquad X\sim N(0,C).
+\end{equation}
+Indeed the maximum bounds every coupling. The objective is at least
+$\max h-\sum p_i h_i\geq(\min p_i)(\max h-\min h)$, so a minimum exists
+modulo common offsets. Ties have Gaussian measure zero. Differentiation in
+$h_i$ makes the winning masses equal to $p_i$, and that winning assignment
+attains the bound.
+
+Every offset class has a unique representation $h_i=c-y_i\cdot a$.
+The cells are therefore the target simplex's normal fan translated by $a$.
+For each nonempty vertex set $S$, let $\Gamma_S$ be the locus where all
+labels in $S$ tie for the maximum. It is a simplicial cone in an affine
+space of dimension $d+1-|S|$, based at $a$, with boundary facets
+$\Gamma_{S\cup\{k\}}$, $k\notin S$. At $C=I$ define
+\[
+ \mu_S=\int_{\Gamma_S}\gamma_d(x)\dd\mathcal H^{d+1-|S|}(x),\qquad
+ m_S=\frac1{\mu_S}\int_{\Gamma_S}x\gamma_d(x)\dd\mathcal H^{d+1-|S|}(x),
+\]
+and let $P_S$ be the orthogonal projection onto its tangent space.
+All these masses are positive and all polynomial moments are finite.
+For the apex, $\mu_{\{0,\ldots,d\}}=\gamma_d(a)$ and its mean is $a$.
+
+The offset objective is the Gaussian convolution of the fixed support
+function $\max_i y_i\cdot x$, evaluated at $-a$, plus
+$(\sum_i p_i y_i)\cdot a$. Linear growth of the support function gives smooth
+dependence on $a,C>0$ by differentiation of the Gaussian density. The offset
+Hessian is the complete graph Laplacian with positive facet weights
+$\mu_{\{i,j\}}/|y_i-y_j|$. It is invertible modulo constants. The implicit
+function theorem thus gives smooth minimizing offsets and a well-defined
+optimized Hessian.
+
+\subsection{Intrinsic Gaussian integration}
+For $i\in S$ and $k\notin S$, the inward normal within the stratum is
+\[
+ n_{S,k}=\frac{P_S(y_i-y_k)}{|P_S(y_i-y_k)|}.
+\]
+Intrinsic integration by parts yields, for positive-dimensional strata,
+\begin{equation}\label{eq:stratum-mean}
+ \mu_S P_Sm_S=\sum_{k\notin S}\mu_{S\cup\{k\}}n_{S,k}.
+\end{equation}
+For an edge stratum $e=\{i,j\}$ a second integration gives
+\begin{equation}\label{eq:stratum-cov}
+ \mu_e(P_e-\Cov_e X)
+ =\sum_{k\notin e}\mu_{e\cup\{k\}}
+       n_{e,k}(m_e-m_{e\cup\{k\}})^T.
+\end{equation}
+To verify the signs, the intrinsic Gaussian derivative is $-P_Sx\gamma_d$,
+whereas the outward boundary normal is $-n_{S,k}$. In the second identity,
+integrate the derivative of $((x-m_e)\cdot u)\gamma_d$ in a tangent direction
+$v$. The two negative boundary signs produce the displayed product.
+Both means lie in the same affine facet, so their difference is tangent.
+Truncation by intrinsic balls produces only polynomial Gaussian tail terms
+on the artificial sphere, which vanish as the radius tends to infinity.
+Lower-dimensional intersections have zero boundary measure.
+
+We use the classical convex-support Brascamp--Lieb consequence
+\begin{equation}\label{eq:BL}
+ \Cov_e X\leq P_e.
+\end{equation}
+For a direct applicable formulation, Bobkov--Ledoux
+\cite[Proposition 2.1]{BL2000} allows a smooth strictly convex potential on
+an open convex support. In orthonormal intrinsic coordinates the relative
+interior of the facet is such a support, and its Gaussian potential has
+Hessian $I$. Apply that proposition to linear functions; the facet boundary
+has zero intrinsic measure. Neither strictness nor invertibility of the
+covariance deficit is needed.
+
+\subsection{Facet matrices}
+Orient each edge $e=(i,j)$ with $i<j$ and put
+\[
+ d_e=y_i-y_j,\qquad \ell_e=|d_e|,\qquad w_e=\mu_e/\ell_e.
+\]
+For every target triangle $g$ let $A_g>0$ be its Euclidean area and set
+$D_g=2A_g/\mu_g$. Let $l_k$ be the global affine barycentric coordinate
+of vertex $k$ and write $v_k=-\nabla l_k$. Then
+\begin{equation}\label{eq:barycentric}
+ \sum_kv_k=0,\qquad v_k\cdot(y_i-y_j)=\delta_{kj}-\delta_{ki}.
+\end{equation}
+For $k\notin e$, $v_k$ is tangent to $\Gamma_e$. The vectors
+$P_e(y_i-y_k)$ form a basis of that tangent space, with dual rows $v_k^T$.
+
+Index the columns of $N_e,T_e$ by triangles $g=e\cup\{k\}$ and define
+\[
+ N_e[:,g]=\frac{\mu_g}{\ell_e}n_{e,k},\qquad
+ T_e[:,g]=m_e-m_g,\qquad E_e=w_e(P_e-\Cov_e X).
+\]
+All matrices and inverses in this paragraph act on the facet tangent space.
+The triangle height formula gives
+\begin{equation}\label{eq:Ninverse}
+ N_e[:,g]=\frac{P_e(y_i-y_k)}{D_g},
+ \qquad \operatorname{row}_g(N_e^{-1})=D_gv_k^T.
+\end{equation}
+Equations~\eqref{eq:stratum-cov}--\eqref{eq:BL} imply
+\begin{equation}\label{eq:Blocal}
+ E_e=N_eT_e^T=T_eN_e^T\geq0,\quad
+ T_e=E_eN_e^{-T},\quad
+ B_e=N_e^{-1}E_eN_e^{-T}=N_e^{-1}T_e\geq0.
+\end{equation}
+There is no inverse of $E_e$ here. Equation~\eqref{eq:stratum-mean} also gives
+$w_eP_em_e=N_e\1$, hence the exact entries
+\begin{equation}\label{eq:Bentries}
+ B_e[g,g']=\frac1{w_e}-D_gv_k\cdot m_{g'},\qquad g=e\cup\{k\}.
+\end{equation}
+
+\subsection{The chain factorization}
+Let $\partial_2$ and $\partial_3$ be the usual boundary maps from oriented
+triangles to edges and from tetrahedra to triangles, on the complete simplex.
+All vertices in a simplex are ordered increasingly; for example
+$\partial_2[i,j,k]=[j,k]-[i,k]+[i,j]$.
+Coning chains to one fixed vertex proves that the graph cycle space is
+$\im\partial_2$ and $\ker\partial_2=\im\partial_3$.
+In dimension two $\partial_3$ is absent.
+
+Put $W=\diag(w_e)$ and
+$A=\partial_2^TW^{-1}\partial_2$. For a triangle coefficient vector
+$\lambda$, let $\eta_{e,g}=(\partial_2)_{e,g}\lambda_g$ on triangles
+incident to $e$, and define $B$ by
+$\lambda^TB\lambda=\sum_e\eta_e^TB_e\eta_e$.
+For a target tetrahedron $h$, let $V_h$ be its intrinsic three-dimensional
+volume, and set $c_h=\mu_h/(6V_h)$. Also write $D=\diag(D_g)$.
+
+\begin{lemma}[Exact boundary factorization]\label{lem:factor}
+\begin{equation}\label{eq:factor}
+ A-B=-D\partial_3\diag(c_h)\partial_3^TD.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Suppose distinct triangles $g,g'$ share edge $e$, and let $k=g\setminus e$.
+Because $k\notin g'$, the vector $v_k$ is tangent to $\Gamma_{g'}$.
+Test~\eqref{eq:stratum-mean} there against $v_k$.
+By~\eqref{eq:barycentric}, all boundary normals vanish in this pairing except
+the one adjoining $k$. Its pairing is the reciprocal target height
+$A_{g'}/(3V_h)$, where $h=g\cup g'$. Thus
+\[
+ v_k\cdot m_{g'}=\frac{\mu_hA_{g'}}{3V_h\mu_{g'}}.
+\]
+The off-diagonal entry of $A-B$ is therefore
+$(\partial_2)_{e,g}(\partial_2)_{e,g'}D_gD_{g'}c_h$.
+The identity $\partial_2\partial_3=0$, on the shared edge of this tetrahedron,
+gives
+\[
+ (\partial_2)_{e,g}(\partial_2)_{e,g'}
+ =-(\partial_3)_{g,h}(\partial_3)_{g',h}.
+\]
+This proves the claimed off-diagonal entries. Triangles sharing no edge
+interact in neither matrix.
+
+For the diagonal, summing~\eqref{eq:Bentries} over the three edges of $g$
+and using~\eqref{eq:barycentric} gives
+\[
+ (A-B)_{g,g}
+ =D_g\sum_{k\in g}v_k\cdot m_g
+ =-D_g\sum_{l\notin g}v_l\cdot m_g
+ =-D_g^2\sum_{h\supset g}c_h.
+\]
+The last equality uses the same stratum mean identity and reciprocal height.
+If $d=2$, the sum over outside vertices is empty and the difference is zero,
+also when the triangle stratum is the apex. These are all entries of
+\eqref{eq:factor}. The volumes in this argument are intrinsic to the target
+tetrahedra, so there is no factor depending on the ambient dimension.
+\end{proof}
+
+\subsection{An admissible gauge and the cycle estimate}
+For a fixed edge cycle $j$, choose $\partial_2\lambda=j$.
+Its representatives form $\lambda+\im\partial_3$. Minimize
+$\lambda^TD\lambda$ on this closed affine space. Since $D>0$, the minimizing
+representative exists and satisfies
+\begin{equation}\label{eq:gauge}
+ \partial_3^TD\lambda=0.
+\end{equation}
+This uses no injectivity of $\partial_3$. It changes only cycle coordinates.
+By~\eqref{eq:factor},
+\begin{equation}\label{eq:gauge-equality}
+ \lambda^TB\lambda=\lambda^TA\lambda=j^TW^{-1}j.
+\end{equation}
+
+Give the cells arbitrary vectors $z_i$ and write
+$z_e=z_i-z_j$, $a_e=z_e\cdot m_e$.
+Signed edge differences telescope around each triangle, so
+\[
+ j\cdot a=\sum_e z_e\cdot T_e\eta_e.
+\]
+By~\eqref{eq:Blocal}, square-root Cauchy--Schwarz in the PSD matrices $E_e$,
+followed by Cauchy--Schwarz across edges, gives
+\[
+ (j\cdot a)^2\leq
+ \left(\sum_e z_e^TE_ez_e\right)j^TW^{-1}j.
+\]
+Singular deficits cause no exception. Weighted least-squares duality on the
+edge graph now yields
+\begin{equation}\label{eq:cycle-bound}
+ \min_b\sum_e w_e(a_e+b_i-b_j)^2
+ \leq\sum_e w_e\bigl(|P_ez_e|^2-\Var_e(z_e\cdot X)\bigr).
+\end{equation}
+For clarity, at the least-squares minimizer the weighted residual is a cycle.
+Cauchy--Schwarz gives the dual supremum
+$\sup_{j\ne0}(j\cdot a)^2/(j^TW^{-1}j)$, and that residual attains it
+unless it is zero. Thus~\eqref{eq:cycle-bound} uses a single global offset
+vector $b$, not offsets chosen independently on facets.
+
+\subsection{The exact covariance Hessian}
+Take $C(t)=I+tH$ with $H=H^T$. The first two derivatives of its square root
+at zero are $H/2$ and $-H^2/4$. Differentiating the affine maximum in
+\eqref{eq:dual} and eliminating the offset derivative gives
+\begin{equation}\label{eq:cov-Hessian}
+ 4D^2\mathcal F_\nu(I)[H,H]
+ =\min_b\sum_e w_e\E\bigl[(X\cdot Hd_e+b_i-b_j)^2\mid\Gamma_e\bigr]
+       -\sum_e w_e|Hd_e|^2.
+\end{equation}
+Here conditional expectation means the normalized intrinsic facet measure.
+To detail the second variation, the score velocity difference across a facet
+is $X\cdot Hd_e/2+h_i'-h_j'$. Differentiating the first derivative over moving
+cells contributes its square divided by $\ell_e$, integrated over the facet.
+Each unoriented facet is counted once. Gaussian integration by parts for the
+winning vector gives
+$\E[XY(X)^T]=\sum_e w_ed_ed_e^T$, so the interior acceleration is
+$-\frac14\sum_e w_e|Hd_e|^2$. Put $b=2h'$.
+The $h''$ term vanishes because the current masses equal $p$.
+The positive offset Hessian makes the displayed minimum exactly the Schur
+complement. Polyhedral truncation and Gaussian tails justify the boundary
+differentiation; multiple ties have zero facet measure, and the smoothness
+already proved identifies this calculation with the ordinary Hessian.
+
+Apply~\eqref{eq:cycle-bound} with $z_i=Hy_i$. The facet variances cancel,
+leaving
+\begin{equation}\label{eq:strict-Hessian}
+ 4D^2\mathcal F_\nu(I)[H,H]
+ \leq-\sum_e w_e\frac{(d_e^THd_e)^2}{\ell_e^2}.
+\end{equation}
+The edge dyads of an affinely independent simplex span the symmetric matrices:
+differences $b_i=y_i-y_0$ form a basis, and the quadratic forms at $b_i$
+and $b_i-b_j$ recover every bilinear entry in that basis.
+Thus the right side is strictly negative for $H\ne0$.
+At any $C_0>0$, transform the target sites by $C_0^{1/2}$ and the covariance
+direction $K$ by $H=C_0^{-1/2}KC_0^{-1/2}$. This reduces to the calculation
+at $I$, without a commutativity assumption. Integration along segments proves
+concavity on the positive definite cone. For $d=1$ the value is a positive
+constant times the square root of variance, giving the same assertions.
+
+\subsection{Singular covariance, finite lifting, and limits}
+For every fixed $\nu\in\cP_2$,
+\begin{equation}\label{eq:C-continuity}
+ |\mathcal F_\nu(C)-\mathcal F_\nu(C')|
+ \leq(\E|Y|^2)^{1/2}\norm{C^{1/2}-(C')^{1/2}}_{\HS}.
+\end{equation}
+Indeed any coupling of $C^{1/2}G$ with $Y$ lifts to one with standard $G$,
+using its Gaussian conditional law even when $C$ is singular. Reuse $G,Y$
+for $C'$ and apply Cauchy--Schwarz; then reverse the argument.
+Adding $\eps I$ and taking limits extends simplex concavity to the PSD cone.
+
+For an arbitrary finite target $\sum_{i=1}^m p_i\delta_{y_i}$ in $\R^N$,
+lift its sites to $(y_i,\eps e_i)$ in $\R^{N+m}$, for any fixed $\eps>0$.
+They are affinely independent. A Gaussian with covariance $\diag(C,0)$
+has exactly the old cost, so the two optimal values coincide. Subtract a
+common lifted site; its expected contribution is zero. Project onto the
+$(m-1)$-dimensional span $S$ of lifted differences. The projected source has
+covariance $P_S\diag(C,0)P_S$, linear in $C$, and its cost is unchanged.
+Every projected coupling lifts by the source conditional law. Simplex PSD
+concavity therefore pulls back to the original finite-target functional.
+A one-atom target has value zero.
+
+Finally, gluing a coupling of two targets to a Gaussian-target coupling gives
+\begin{equation}\label{eq:target-continuity}
+ |\mathcal F_\nu(C)-\mathcal F_{\nu'}(C)|
+ \leq\sqrt{\tr C}\,W_2(\nu,\nu').
+\end{equation}
+Finite laws are dense in $\cP_2$, by truncation and quantization. Pass to the
+limit in the concavity inequality. The identity
+$W_2^2(N(0,C),\nu)=\tr C+\int|y|^2\dd\nu-2\mathcal F_\nu(C)$ proves the
+equivalent assertion in Theorem~\ref{thm:covariance}. Neither lifting nor
+limits assert strictness for general targets.
+
+\begin{corollary}\label{cor:square}
+The function $C\mapsto\mathcal F_\nu(C)^2$ is concave on the PSD cone.
+\end{corollary}
+\begin{proof}
+Independence gives $\mathcal F_\nu\geq0$, and scaling the Gaussian gives
+$\mathcal F_\nu(tC)=\sqrt t\,\mathcal F_\nu(C)$.
+For $0<a<1$, concavity applied to $C/a$ and $D/(1-a)$ yields
+\[
+ \mathcal F_\nu(C+D)\geq
+ \sqrt a\,\mathcal F_\nu(C)+\sqrt{1-a}\,\mathcal F_\nu(D).
+\]
+Optimizing $a$, with endpoints obtained by limits, proves superadditivity
+of $\mathcal F_\nu^2$. Its degree-one homogeneity then proves concavity.
+\end{proof}
+

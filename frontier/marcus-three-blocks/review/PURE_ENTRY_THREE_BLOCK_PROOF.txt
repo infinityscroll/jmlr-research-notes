@@ -1,0 +1,203 @@
+An analytic pure-entry proof for three blocks of arbitrary size
+30 October 2026. Internal proof record; no priority claim.
+
+THEOREM.
+Let A be a complex Hermitian positive semidefinite matrix of order 3k,
+partitioned into three-by-three blocks A_ij of size k. Put G_ij=per(A_ij).
+Then
+  per(A)>=per(G)
+for every k>=1 and at every Gram rank.
+
+For k>=3 the proof gives the stronger polynomial inequality
+  ||PQR||_Fock^2 >= per Gram_Fock(P,Q,R)
+for arbitrary homogeneous degree-k polynomials in d complex variables
+whenever d<=8k^2/9. In particular it holds for d<=2k. The Fock convention
+is ||z^alpha||^2=alpha!. No equality characterization is asserted.
+
+The arbitrary number-of-blocks Marcus conjecture is not proved here.
+The k=2 trace argument and the rank-reduction argument are included below,
+so this proof requires no earlier finite certificate or local theorem.
+
+1. THE SEED AND ITS EXACT GROUP AVERAGE.
+Let V=C^d, H=S_k wreath S_3, and W=sum_{pi outside H} P_pi on V^{tensor 3k}.
+For a transport matrix M with row and column sums k, let z(M) count its
+entries equal to k, and define
+  r_i=2-sum_j(1_{M_ij=k}+1_{M_ji=k}),
+  b_i=3r_i/[6-2z(M)].
+When M is k times a permutation matrix, define every b_i to be zero.
+For other M, the denominator is positive and sum_i b_i=3.
+
+Set Q=sum_pi b_0(M_pi)(P_pi)^{T_block0}, restricted to
+  E=bar(Sym^k V) tensor Sym^k V tensor Sym^k V.
+Internal block permutations do not change the coefficients. Independent
+permutations of the two ordinary rows and columns do not change b_0.
+The restriction to E therefore loses no relevant symmetric-block term.
+Conjugation averaging over H gives the exact formal group-algebra identity
+  W=average_{h in H} P_h [Q^{T_block0}] P_h^*.
+Indeed that average is (b_0+b_1+b_2)/3=1 outside H and zero on H.
+
+Thus Q>=0 suffices for nonnegative W expectation on every product of
+three symmetric block tensors. Whole-block partial transpose is
+nonnegative on such products, and H preserves block-product tensors.
+
+2. EXACT CONTRACTION FACTORIZATION.
+Let Q_l be the part with M_00=k-l. For p=0,...,l, C_(l,p) is the literal
+fixed-slot trace contracting p first-block slots with the first ordinary
+block and l-p with the second. Put
+  E_(l,p)=binom(k,p)binom(k,l-p) C_(l,p).
+The output degrees are (k-l,k-p,k-l+p). Direct permutation counting gives
+the common coefficient
+of its remaining-ordinary-permutation sum is
+  A_l=(k!)^2/(k-l)!.
+All squared norms below are quadratic forms evaluated on the same
+arbitrary input tensor F in E; for example ||B_l||^2 means ||B_l F||^2.
+This factor can also be checked directly: choose the l crossing slots
+at each end of the first block, choose the ordinary crossing slots,
+multiply by (l!)^2 for the cross bijections and by (k-l)! for the
+uncrossed first-block permutations. The ordinary binomial factors are
+exactly those absorbed into E_(l,p).
+
+3. EVERY NONFINAL LAYER IS POSITIVE.
+For 1<=l<k, M_00=k-l is positive and less than k. Hence neither the first
+row nor the first column can contain an entry k, so r_0=2. At most one
+ordinary entry can equal k. Consequently the coefficient is exactly
+  b_0=1+(1/2)1_{an ordinary entry equals k}.                       (1)
+
+Write n=2k-l and r=k-l. The constant part of (1) is
+  Q_l^constant=A_l n! ||Sym_n sum_p E_(l,p)||^2                   (2)
+in quadratic-form notation, with the remaining dual identity understood.
+It is positive.
+
+The exceptional entry k is possible only when both input and output
+contraction types are boundary types p=0 or p=l. Reorder those outputs
+so that the shorter ordinary group of size r is first. The ordinary
+permutations producing the entry k are exactly the r! k! permutations
+preserving the two remaining groups. They act identically on the
+symmetric group tensors. The four boundary input/output choices therefore
+give the positive delta term
+  Q_l^delta=(k!)^3/2 * binom(k,l)^2 ||B_l||^2,                    (3)
+where B_l is the sum of the two pure l-fold contraction maps, with the
+shorter ordinary group first. Thus Q_l>=0 for every l<k. Also Q_0=0.
+
+4. THE LAST LAYER HAS ONLY ONE SIMPLE NEGATIVE TERM.
+At l=k the remaining ordinary tensor has degree k and there is no dual
+block left. Call a type boundary when p=0 or p=k; otherwise call it
+interior. The transport coefficient is independent of the remaining
+ordinary permutation:
+  interior/interior: 1;
+  boundary/interior or interior/boundary: 3/4;
+  boundary/boundary: 0.
+The last case is a permutation transport, where the coefficient was
+defined to be zero. The middle case has exactly one pure entry k and
+r_0=1, giving 3/4.
+
+Let B=B_k=C_(k,0)+C_(k,k), and let
+  I=Sym_k sum_{p=1}^{k-1} E_(k,p).
+The boundary output is already symmetric. The ordinary permutation sum
+is k! Sym_k and A_k=(k!)^2, giving exactly
+  Q_k=(k!)^3 [||I||^2+(3/2)Re<B,I>]
+      =(k!)^3 [||I+(3/4)B||^2-(9/16)||B||^2].                  (4)
+
+5. AN ORDINARY TRACE BOUND COMPENSATES (4).
+For l=k-1, B_(k-1) takes values in
+  bar(V) tensor V tensor Sym^k V.
+Trace the first two factors by tau. Completing the remaining pure trace
+gives the exact identity
+  tau B_(k-1)=B_k=B.
+The literal trace has tau tau^*=d I, hence
+  ||B_(k-1)||^2 >= ||B||^2/d.
+Equation (3) and binom(k,k-1)=k yield
+  Q_(k-1)^delta >= (k!)^3 k^2/(2d) ||B||^2.                      (5)
+
+Keep (5), discard the other positive terms, and add (4):
+  Q >= (k!)^3 {||I+(3/4)B||^2
+                    +[k^2/(2d)-9/16]||B||^2}.                  (6)
+Therefore Q>=0 whenever d<=8k^2/9. In particular, for k>=3 and d<=2k,
+the last coefficient is at least (4k-9)/16>0.
+All factorials in (3)-(6) use literal tensor traces; no Fock annihilation
+normalization is implicit. This completes the uniform positivity proof.
+
+6. THE QUADRATIC ENDPOINT, INCLUDED EXPLICITLY.
+Let k=2 and d=4. Put C=B_1, C_s=Sym_3 C and C_h=(I-Sym_3)C.
+The l=1 identity above gives
+  Q_1=112||C_s||^2+16||C_h||^2.
+In the notation of the last-layer formula, B=B_2 and I=4 Sym_2 C_(2,1),
+so Q_2=8[||I||^2+(3/2)Re<B,I>]. Let tau contract the dual slot with
+the first ordinary slot, and put A=tau C_s, D=tau C_h. Symmetrizing
+the three ordinary slots gives the exact trace identities
+  A=(B+I)/3, D=(2B-I)/3,
+and therefore B=A+D, I=2A-D. Substitution yields
+  Q=112||C_s||^2+16||C_h||^2
+       +56||A||^2-20 Re<A,D>-4||D||^2.                          (7)
+
+The two trace constants can be computed directly. On Sym^2 V, tau^*T
+has entries delta_ij T_kl. Symmetrizing its ordinary indices j,k,l and
+then tracing i=j gives (d+2)T/3. Thus
+  tau Sym_3 tau^*=(d+2)I/3,
+  tau(I-Sym_3)tau^*=2(d-1)I/3,
+where the second identity uses tau tau^*=dI. At d=4 both constants
+are 2, so ||C_s||^2>=||A||^2/2 and ||C_h||^2>=||D||^2/2.
+Equation (7) is consequently at least
+  112||A||^2-20 Re<A,D>+4||D||^2
+    =87||A||^2+4||D-(5/2)A||^2>=0.
+Smaller dimensions embed isometrically in dimension four. At k=1 the
+matrix G is A itself, so the desired inequality is equality.
+
+7. POLYNOMIAL TRANSFER AND ALL GRAM RANKS.
+Associate a symmetric tensor a with P(z)=a(z,...,z)/sqrt(k!), and similarly
+for the other two blocks. A direct permutation expansion gives
+  <a tensor b tensor c, W(a tensor b tensor c)>
+    =(k!)^3 [||PQR||_Fock^2-per Gram_Fock(P,Q,R)].
+The preceding seed proof therefore gives the polynomial inequality in
+the stated dimension range.
+
+For completeness, the needed Fock product inequalities follow directly
+from normal ordering. Multiplication by z_i has adjoint partial_i.
+Repeated use of partial_i z_i=z_i partial_i+1 gives, for polynomials F,T,
+  ||FT||^2=sum_alpha 1/alpha! ||(partial^alpha F)^*(D)T||^2,       (8)
+where the star conjugates coefficients and replaces variables by partial
+derivatives. If F is homogeneous of degree N, the |alpha|=N terms sum
+to ||F||^2||T||^2. Hence ||FT||^2>=||F||^2||T||^2. If P,Q have the
+same positive degree, the alpha=0 term for F=P,T=Q is |<P,Q>|^2 and
+is distinct from the top-degree terms. Thus
+  ||PQ||^2>=||P||^2||Q||^2+|<P,Q>|^2.                            (9)
+
+For a Gram matrix A of 3k vectors, each block polynomial is a product of
+k linear forms, and its Fock Gram entries are per(A_ij). Let U span the
+vectors in the first two blocks, so dim U is at most 2k. Expand the third
+polynomial in orthogonal variables as
+  R(x,y)=sum_beta y^beta R_beta(x),  rho=sum_{beta!=0} beta!||R_beta||^2.
+Equation (8), with F=PQ, gives
+  ||PQ R_beta||^2>=||PQ||^2||R_beta||^2.
+Let C=||P||^2||Q||^2+|<P,Q>|^2. Orthogonality of the y monomials gives
+  ||PQR||^2=sum_beta beta!||PQ R_beta||^2.
+The Gram permanent changes by exactly rho*C upon replacing R_0 by R:
+only the squared norm of R changes, while its inner products with P and
+Q are unchanged. Thus the original defect equals the projected defect
+plus
+  sum_{beta!=0} beta![||PQ R_beta||^2-C||R_beta||^2],
+which is at least rho[||PQ||^2-C]>=0 by (8)-(9). R_0 remains a product
+of the projected linear factors. The projected problem has at most 2k
+variables and has just been proved, including k=2 via Section6.
+Zero polynomials and singular Gram matrices require no inversion or
+limiting argument in this reasoning. This proves the theorem for every k.
+
+AUDIT AND SCOPE.
+The boundary-delta counting and final-layer compensation were derived
+independently by the unrestricted_minrank_audit and strong_signal_branch_count
+agents. The root agent independently passed the normalization audit and
+checked 24 exact complex polynomial triples against the literal layer
+formulas and the Fock defect; see ../pure_mixing_audit/check_literal_layers.py
+and ../pure_mixing_audit/LITERAL_LAYER_CHECK.json. The branch agent's
+independent proof is ../pure_mixing_audit/PURE_MIXING_THREE_BLOCK_PROOF.txt;
+the present audit agent has read and checked its complete argument.
+The previous quadratic-power seed remains refuted at k=9; none of its
+frozen finite certificates is altered by this different seed. The cubic
+prefix proof also remains valid as a separate result.
+This source proves the three-block case with the stated internal audit
+record. It does not claim an arbitrary-block-count proof, an equality
+classification, publication, or novelty/priority.
+
+Revision record: the earlier source, before the standalone quadratic and
+normal-ordering sections and completed root audit, had SHA256
+d7dd324077f54686ad5b83397a251211d944f6f81c41fcaad202c5391e5a157e.

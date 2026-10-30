@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{xurl}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\HS}{\mathrm F}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\Id}{I}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\gam}{\gamma}
+\newcommand{\dd}{\,d}
+\newcommand{\eps}{\varepsilon}
+\title{Gaussian Covariance Concavity and\\ Simplex Optimality near Independence}
+\author{}
+\date{Local review manuscript --- 31 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every probability law $\nu$ with finite second moment, we prove that its
+maximal covariance with a centered Gaussian is a concave function of the
+Gaussian covariance matrix. For a nondegenerate simplex target the Hessian
+is negative definite at every positive definite covariance. The proof uses
+Gaussian integration on the strata of a translated simplex normal fan and an
+exact factorization through the simplex boundary maps. A weighted choice of
+cycle coordinates cancels the extra boundary term. Singular covariance lifting
+and approximation extend the result to arbitrary targets.
+
+For every fixed number of cells, we deduce the balanced Gaussian first-moment
+inequality, its equality cases, and global centroid coercivity. Complete
+transfer arguments then give regular-simplex optimality on dimension-independent
+intervals adjacent to zero: a balanced maximum for positive correlation, and
+a minimum over pairs with arbitrary matching masses for negative correlation.
+The latter includes the single-partition problem without prescribed masses.
+The intervals depend on the number of cells. Full-correlation ranges remain
+open; no sharp multiway-cut hardness result is asserted.
+\end{abstract}
+\noindent\textit{Review status.}
+This is a local manuscript for mathematical review. Its source lineage and
+internal checks are recorded in Appendix~\ref{app:lineage}; no external review,
+publication, or priority clearance is claimed.
+\tableofcontents
+\input{statements}
+\input{covariance}
+\input{endpoint}
+\input{dimensions}
+\appendix
+\input{transfer_common}
+\input{positive}
+\input{negative}
+\input{lineage}
+\input{references}
+\end{document}

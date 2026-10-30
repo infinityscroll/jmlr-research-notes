@@ -1,0 +1,66 @@
+BOUNDED PRIMARY SEARCH: MULTIVARIATE NEAREST-GAUSSIAN COVARIANCE CONVEXITY
+31 October 2026. strong_signal_prior_art.
+
+Question: for arbitrary fixed nu in P2(R^n), ordinary arithmetic covariance
+convexity of C -> W2^2(N(0,C),nu), equivalently concavity of F_nu(C).
+This extends the earlier16-query comparison; it does not replace that log.
+
+Outcome: ten additional queries and the primary passages below produced
+no exact theorem/counterexample/explicit older open formulation of this
+ordinary-C property. This retrieval outcome is NOT a novelty certificate.
+There IS exact prior overlap for elementary mean/scale reductions.
+
+1. Wang--Wei, Relative Wasserstein Angle and the problem of W2-Nearest
+Gaussian Distribution, arXiv2601.22355v2 (latest version checked).
+https://arxiv.org/html/2601.22355v2
+Exact locators: section3.2, section3.4 equation(3) and the reconstruction
+paragraph immediately before Remarks; sections2.2 and3.1 for cone geometry.
+The paper fixes the best mean to the target mean, normalizes shape to trace1,
+and reconstructs covariance as r^2 cos^2(theta*) Sigma*. Since for a
+trace-one shape F_nu(Q)=r cos(theta_Q), that is exactly C*=F_nu(Q)^2Q.
+Those reductions must not be claimed new. The inspected convex-cone language
+concerns Wasserstein metric geometry; the inspected higher-dimensional
+algorithm and its eigencoordinates do not state ordinary-C convexity.
+No full-paper theorem-exclusion claim is inferred merely from text search.
+
+2. Zhang--Walder--Bonilla--Rizoiu--Xie, Quantile Propagation for
+Wasserstein-Approximate Gaussian Processes, NeurIPS2020.
+Primary proceedings PDF:
+https://papers.nips.cc/paper_files/paper/2020/file/f5e62af885293cf4d511ceef31e61c80-Paper.pdf
+Exact locator: section4.1, Theorem1; section4.2 for the L2 update.
+The theorem explicitly concerns measures on R and convexity in mean and
+STANDARD DEVIATION, not arbitrary multivariate covariance. The local
+Gaussian-process application does not change that univariate statement.
+This is adjacent prior art, not an identified general-C overlap.
+
+3. Gaussian-to-Gaussian covariance geometry and other paths.
+The IEEE primary abstract of On the Geometry of
+Covariance Matrices, IEEE SPL20(8),787--790(2013), DOI10.1109/LSP.2013.2266273,
+https://ieeexplore.ieee.org/document/6523941/
+identifies the Bures/Hellinger covariance distance with Wasserstein distance
+between corresponding GAUSSIAN distributions. This special target class
+does not replace a fixed non-Gaussian target by its second moments.
+The publisher abstract was visible in the indexed result; direct opening
+subsequently hit a verification page. The full paper was not inspected.
+The earlier primary comparison already distinguishes Takatsu's Gaussian
+geodesics and the Bass functional's generalized-geodesic convexity.
+
+An OpenReview result titled Variational inference via Wasserstein gradient
+flows was encountered, but its requested primary PDF triggered a browser
+verification challenge. No bypass or retry was attempted and no theorem
+coverage conclusion rests on that inaccessible text. Search snippets alone
+are not used as evidence of the target convexity or its failure.
+
+Search bound and exact query log
+1. Wasserstein nearest Gaussian covariance convexity non Gaussian target covariance matrix convex
+2. "Gaussian approximation" "Wasserstein" "convex" "covariance"
+3. "maximal covariance" "Gaussian" "concave"
+4. "nearest Gaussian" Wasserstein multivariate convexity
+5. "Gaussian" "Wasserstein projection" "convexity"
+6. "Wasserstein" "Gaussian" "covariance matrices" "non-Gaussian" "convex"
+7. "Wasserstein" "nearest normal" multivariate
+8. "Wasserstein" "Gaussian approximation" "convex in"
+9. "maximal covariance" "covariance matrix" Gaussian concavity
+10. "nearest Gaussian" "convex" -process -neighbor -neighbour
+After these ten queries, only identified primary links and within-source
+locators were followed. No contact, paid retrieval or publication occurred.

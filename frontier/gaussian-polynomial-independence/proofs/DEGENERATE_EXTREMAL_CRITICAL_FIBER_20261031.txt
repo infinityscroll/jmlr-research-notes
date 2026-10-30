@@ -1,0 +1,162 @@
+DEGENERATE EXTREMAL CRITICAL-FIBER RIGIDITY
+31 October2026. New proof candidate; independent audit requested.
+No claim of historical novelty or resolution of the full U-conjecture.
+
+THEOREM
+Let f,g be real polynomials on R^n and let X be standard Gaussian. Suppose
+that for some real c the critical set at value c,
+  K={x:f(x)=c, grad f(x)=0},
+is nonempty and compact, and every point of K is a local minimum of f.
+If f(X) and g(X) are independent, then g is constant. The same conclusion
+holds when every point of K is a local maximum.
+
+The Hessians may be completely degenerate. K may be positive-dimensional.
+The full level set f^{-1}(c) need NOT be compact. Other critical values may
+have noncompact or indefinite critical sets. The hypothesis concerns the
+entire critical set at ONE value, not just a chosen isolated component.
+
+1. A sign-definite polynomial witness on the compact critical set
+Assume g is nonconstant. Then |g| is unbounded on R^n, and Gaussian full
+support implies Pr(|g(X)|>M)>0 for every finite M. Let M0=max_K|g|.
+For sufficiently large integer k, with q(x)=g(x)^(2k) and Q=E q(X),
+  Q>2(M0+1)^(2k).
+Indeed, Pr(|g(X)|>M0+2)(M0+2)^(2k) is a lower bound for Q. Gaussian
+polynomial moments are finite, so Q is finite and positive.
+
+By compactness and continuity there is an open neighborhood U of K on
+which q-Q<=-Q/2. The local-minimum assumption supplies another open
+neighborhood of K on which f>=c: take the union of the individual local
+minimum neighborhoods. Shrink U inside this union and inside a bounded
+open set. Choose chi in C_c^infinity(U), 0<=chi<=1, equal1 on a neighborhood
+of K. In particular chi(q-Q) has one sign and its pushforward under f is
+supported in [c,infinity).
+
+2. Value localization and the nonstationary complement at infinity
+The real critical values of a polynomial are finite. Its semialgebraic
+critical set has finitely many connected components, and f is constant
+on each, by piecewise-C1 semialgebraic path connectedness and df=0.
+Choose a nonnegative smooth compactly supported function psi on R, equal1
+near c, supported in a small value interval containing no other critical
+value. Choose a slightly larger CLOSED value band with the same property.
+
+The amplitude
+  a_out(x)=(1-chi(x))(q(x)-Q)psi(f(x)) gamma_n(x)
+is Schwartz, and vanishes on a neighborhood of every critical point in
+that band. To justify uniform integration by parts at infinity, choose
+a finite union O of open balls containing K, with closure inside the
+region where chi=1. On the closed semialgebraic set
+  {x:f(x) is in the larger closed value band} minus O,
+the gradient never vanishes. The minimum of |grad f| over its intersection
+with a radius-R ball is positive whenever this intersection is nonempty.
+This minimum is a positive semialgebraic function of R, so for large R it
+is bounded below by C(1+R)^(-N), for some finite C,N>0.
+
+Consequently the vector field grad f/|grad f|^2 and each fixed finite
+number of its derivatives have polynomial growth on this region. Insert
+smooth cutoffs supported within the larger band and away from K when
+defining the vector field globally. Repeated integration by parts against
+exp(itf), with the Gaussian amplitude, therefore gives
+  integral a_out(x)exp(itf(x)) dx=O(|t|^(-L))
+for every L. Boundary terms at infinity vanish by Gaussian decay. This is
+the same semialgebraic nonstationary argument used in the already audited
+MORSE_FIBER_RIGIDITY proof; no properness of f is assumed.
+
+The Fourier transform of the finite signed pushforward f_*(a_out dx)
+thus decays faster than every power. Fourier inversion gives a C^infinity
+density. Smoothness alone is enough below; no analyticity claim is needed.
+
+3. Independence forces a signed one-sided measure to be smooth
+Since q=g^(2k) and f,g are independent, for every bounded test function H,
+  E[(q(X)-Q)H(f(X))]=0.
+In particular the entire pushforward of
+  (q-Q)psi(f)gamma_n dx
+is the zero signed measure. It follows that
+  nu=f_*[chi(q-Q)psi(f)gamma_n dx]
+equals minus the smooth pushforward from section2. Therefore nu has a
+C^infinity density near c.
+
+On the other hand nu is nonpositive and supported in [c,infinity).
+A smooth density that vanishes to the left of c has every derivative
+zero at c. Consequently, for EVERY integer L,
+  |nu([c,c+epsilon])|=O(epsilon^L) as epsilon decreases to0.       (1)
+
+4. A polynomial lower bound contradicts this flatness
+Fix x0 in K. On a sufficiently small ball around x0, chi=1, psi(f)=1,
+q-Q<=-Q/2, and f>=c. Taylor's theorem with grad f(x0)=0 and a bounded
+local Hessian gives
+  0<=f(x)-c<=C|x-x0|^2.
+This estimate remains valid when the Hessian vanishes or the actual
+order of vanishing is much higher. A ball of radius sqrt(epsilon/C)
+therefore contributes to nu([c,c+epsilon]). Gaussian density is bounded
+below by a positive constant on a fixed small ball around x0. Because
+the entire measure nu is nonpositive, contributions elsewhere cannot
+cancel this one. Thus, for sufficiently small epsilon,
+  |nu([c,c+epsilon])|>=c0 epsilon^(n/2), c0>0.                 (2)
+Equations(1) and(2) contradict each other. Hence g is constant. Replacing
+f by -f proves the maximum case.
+
+5. Explicit nonproper test with no nondegenerate critical point
+For every n>=3 put
+  S(x)=sum_{j=1}^n x_j^6,
+  f_n(x)=S(x)^2(1-x_1^3).
+Its critical points are exactly
+  0 and x_*=( (4/5)^(1/3),0,...,0 ).
+For j>=2,
+  partial_j f_n=12 x_j^5 S(1-x_1^3),
+and
+  partial_1 f_n=3x_1^2 S[4x_1^3(1-x_1^3)-S].
+If S>0 and x_1^3=1, the latter derivative is nonzero. Otherwise all
+x_j for j>=2 must vanish, and the remaining equation gives x_1^3=4/5.
+
+The critical values are0 and256/3125. Near0, f_n>=0, so K at value0 is
+the singleton{0} and consists of a local minimum. Hess f_n(0)=0. At x_*,
+the Hessian has only one nonzero entry, the x_1 second derivative
+  -36 x_{*,1}^{10};
+all transverse variables first occur to order6. Thus f_n has NO real
+nondegenerate critical point. Its level set at0 is
+  {0} union {x_1=1},
+which is noncompact, and f_n is unbounded both above and below.
+The theorem nevertheless proves that every independent polynomial g
+is constant. This checks genuinely degenerate and nonproper geometry;
+it is not a historical novelty claim.
+
+The essential linear-variable space of f_n is all R^n. If D_v f_n were
+identically zero, evaluation on the x_1 axis gives v_1=0. Evaluation at
+points with only x_1 and x_j nonzero then gives v_j=0 for every j>=2.
+Thus the conclusion is the expected full unlinking conclusion for this
+specific f_n, without any unused orthogonal direction.
+
+6. A stronger constraint on the graph-submersion independence pencil
+The same argument, without q or independence, proves the following fact:
+if f has such a compact extremal critical fiber, its Gaussian law cannot
+have a C^infinity density near c. Decompose the positive Gaussian
+pushforward using chi and1-chi. The latter is smooth by section2; if the
+whole law were smooth, the former would be smooth, one-sided and positive,
+contradicting the identical ball-mass argument.
+
+Now let F=X+h(V) and G=g(X,V) be independent, with X standard Gaussian
+independent of V. For every real lambda, the law of P_lambda=F+lambda G
+has characteristic function
+  exp(-t^2/2) phi_h(t) phi_G(lambda t).
+All its derivatives decay faster than every power, by the Gaussian factor
+and finite polynomial moments. Hence each P_lambda has a smooth density.
+No P_lambda can therefore have a compact critical-value fiber consisting
+entirely of local minima or entirely of local maxima. This extends the
+earlier unique-Morse-point pencil obstruction to degenerate critical sets.
+It does NOT classify all Gaussian-divisible polynomials, and does not
+assert that Gaussian divisibility reveals an additive input coordinate.
+
+7. Exact remaining gate
+This handles arbitrary degeneracy under a one-sided compact critical-set
+condition. It does not handle indefinite degenerate critical fibers,
+noncompact critical sets, or pencils all of whose relevant members are
+submersions. For mixed or saddle critical germs, the localized measure
+need not be one-sided, and the smooth-flatness contradiction is unavailable.
+The unrestricted graph-submersion case remains equivalent to full U.
+No generic perturbation preserving independence has been assumed.
+
+The next concrete mathematical question is whether a compact critical
+fiber can have a C^infinity Gaussian pushforward after localization when
+its germs are indefinite or have opposing extremal signs. A universal
+negative answer would substantially extend the pencil gate, but has not
+been proved here. Its truth must not be inferred from the extremal case.

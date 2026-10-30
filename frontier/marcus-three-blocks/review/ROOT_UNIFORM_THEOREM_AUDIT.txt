@@ -1,0 +1,81 @@
+Root independent audit: three blocks of arbitrary size
+30 October 2026. Verdict: the stated three-block theorem passes internal audit.
+
+Scope checked
+-------------
+For every k>=1 and every complex Hermitian PSD matrix of order3k, partitioned
+into k-by-k blocks, per(A)>=per([per(Aij)]). No rank restriction. No claim for
+four or more groups and no equality characterization. The polynomial theorem
+covers arbitrary degree-k triples in d<=8k^2/9 for k>=3, and d<=4 for k2.
+
+Independent derivation
+----------------------
+Before receiving either completed proof, root derived the pure-entry limit,
+the ordinary-cell indicator kernel for l<k, the 1,3/4,0 final coefficients,
+and the rank-at-most-two final isotypic defect. The two other agents then
+independently found the compensation by the preceding boundary contraction.
+Root checked the compensation directly as follows.
+
+For fixed l,p,q, the distinguished slot choices and cross bijections give
+binom(k,l)^2(l!)^2(k-l)!=(k!)^2/(k-l)!. The ordinary binomials are in E_p,E_q.
+In the exceptional ordinary-cell term, the remaining uncontracted k-subsets
+must match. Precisely k!(k-l)! permutations implement the reordered identity
+between the separately symmetric outputs. Consequently the coefficient of
+||B_l||^2 is (k!)^3 binom(k,l)^2/2, with no coset-normalization divisor.
+
+At l=k, the complete remaining symmetrizer contributes k!. With I the weighted
+interior sum and B the two boundary traces, the exact expression is
+(k!)^3[||I+3B/4||^2-9||B||^2/16]. The two pure (k-1)-fold contractions have
+the common codomain bar(V) tensor V tensor Sym^k(V), and tracing its first
+two factors gives B exactly. This trace has squared norm d. The preceding
+boundary term therefore compensates the negative square when d<=8k^2/9.
+For k>=3 this includes d<=2k. No ambient highest-weight decomposition is
+needed for this argument, and it works also in dimensions1 and2.
+
+At k2, the same layer formulas give Q1=112||Cs||^2+16||Ch||^2. For the traces
+U=tau Cs and Z=tau Ch, U=(B+I)/3 and Z=(2B-I)/3. The restricted squared trace
+norms in d4 are both2. Substitution gives the nonnegative lower bound
+87||U||^2+4||Z-(5/2)U||^2. This is an analytic endpoint, independent of a finite
+PSD certificate. At k1 the original matrix statement is identity.
+
+Transfer and normalization
+--------------------------
+For a polynomial P with its unscaled symmetric coefficient tensor a,
+||P||_Fock^2=k!||a||^2. The expectation of W on a tensor b tensor c is
+exactly ||PQR||_Fock^2-per Gram_Fock(P,Q,R). The main TeX source uses this
+convention; the independent notes also describe the equivalent isometric
+polynomial convention, where the expectation acquires the factor(k!)^3.
+
+The sum of the three coefficient functions is3 off the wreath subgroup and0
+on it. Thus the three partial-transpose tests average to the actual permanent
+defect. Partial transpose is used only against a product of whole symmetric
+blocks. Root rechecked the normal-ordering identity and all-rank projection:
+the first two blocks span at most2k dimensions; the discarded component of
+the third block contributes a nonnegative multiple of the two-block defect.
+The projected polynomial remains a product of projected linear factors.
+
+Reproducibility
+---------------
+check_literal_layers.py is a separate standard-library implementation using
+pairs of exact rational numbers for complex coefficients. It reconstructs
+literal differential contractions, accounts for the physical-to-Fock output
+factorials, and checks the complete cyclic identity against direct polynomial
+multiplication and a3-by-3 Gram permanent. All24 complex trials pass, including
+the quadratic endpoint. It imports neither Gaussian operator generators nor
+the other agent's verifier. The analytic proof, not these trials, supplies
+the universal quantifiers.
+
+The other independent verifier covers839 transport tables,9268 union-kernel
+pairs and620 trace coordinates. Exact stress matrices for the sole unproved
+sector of the previous formulation also pass through k7; these are optional
+corroboration and are not needed in the uniform theorem.
+
+Limits
+------
+The full arbitrary-group Marcus conjecture remains unproved. In fact, at k2
+the pure-entry coefficients equal the old quadratic-power coefficients for
+every group count; an existing exact m4,k2,d3 obstruction refutes positivity
+of this unchanged auxiliary seed. It is not a Marcus counterexample.
+External mathematical review, exhaustive priority clearance and Lean
+formalization have not been obtained. The previous frozen finite release
+remains unchanged.

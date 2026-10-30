@@ -1,0 +1,61 @@
+FINAL PRESENTATION DELTA: SOURCE-PINNED CORE AUDIT
+31 October 2026. strong_signal_branch_count.
+
+Verdict: PASS. The original core audit remains valid for the final assembly,
+and its single benchmark-notation recommendation has been resolved.
+No manuscript edits were made by this auditor. No outstanding core repair.
+
+Final manuscript directory:
+../gaussian_covariance_simplex_review_20261031/paper/
+Final ASSEMBLY_CHECKS.json SHA256:
+ddd8d2c9837f7988c69727b5d34c3069b8d021ad8df1164309a56f80f1259932
+Every one of its ten source hashes was independently recomputed and matched.
+
+This supplements, rather than overwrites, the original full core audit:
+ASSEMBLED_CORE_BRANCH_AUDIT_20261031.txt
+SHA256 63ab3dd135a7f0dbd947950f2dec5f0173907ae14ae7c019d4cfb584116cdf11.
+
+Only the following three source files changed from the audited revision:
+statements.tex
+48de1884aba78af921b616dd372164a5bf7e95658c706a78db2314d8c312937a
+references.tex
+b6e0e27bc5201cd9ee2831b5219543a7f540fab0a5cfba01bea472137af61b72
+lineage.tex
+28d7e954e8be3a3470a4060ad524c015f2b967a72a9275be89686c230bc99f4c
+They were read in full. The other seven files were compared byte-for-byte
+against the old captured sources and were unchanged: main, covariance,
+endpoint, dimensions, transfer_common, positive, and negative.
+
+The new statement convention explicitly evaluates S_rho(g)=B_rho(g,g)
+in dimension d=m-1, also when the competitor lives in N<d. This resolves
+the original notation recommendation without changing the inequality or
+any quantifier. The endpoint and near-independence theorem texts otherwise
+retain their previously audited mathematical scope.
+
+The related-problem paragraph correctly identifies Heilman1211.7138v2
+section8 Conjecture3 and its preceding stability discussion. It does not
+identify the unrestricted propeller or individual-variance Gaussian-maxima
+problem with the balanced endpoint. I directly reopened the primary
+Heilman2610.32158v1 text:
+https://arxiv.org/html/2610.32158v1
+The introduction following Theorem1.3 explicitly separates the mass
+constraints and the Gaussian variance constraints as the new paragraph
+states. Its version/date agree with the bibliography. The paragraph
+retains a bounded priority-assessment caveat and does not claim that every
+correlation range has been solved.
+
+Additional source locator, not required for this delta: section1.2 of the
+same October23 preprint explicitly discusses the first-moment objective
+with equal cell probabilities and emphasizes N=n+1. That passage is
+consistent with the scope comparison; it is not an independent proof of
+priority or a requirement to expand this already adequate manuscript.
+
+The lineage revision explicitly identifies the records as internal
+AI-agent audits and distinguishes them from external peer review. It does
+not change any displayed dependency hash, assign an author or affiliation,
+or imply publication or external review.
+
+The unchanged covariance/endpoint proofs, strictness and lifting scope,
+centroid normalization, and direct Bobkov--Ledoux citation are covered by
+the original audit. The separate noise-transfer assembly audit remains
+the appropriate record for those appendices and external reductions.

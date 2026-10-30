@@ -1,0 +1,90 @@
+\section{The balanced endpoint and a global coercivity estimate}
+Let $P=I-\1\1^T/m$, $K_*=mP$, and $L_0=m(m-1)$. On zero-sum score
+covariances define
+\[
+ J_m(K)=\inf_{\sum_i h_i=0}\E\max_i(X_i+h_i),\qquad
+ X\sim N(0,K),\quad K\geq0,\ K\1=0.
+\]
+This is the maximal covariance functional for the uniform regular target
+$v_1,\ldots,v_m$ on the zero-sum space. The dual remains valid for singular
+$K$ by continuity. Indeed the difference between two expected maxima,
+coupled through one standard Gaussian and with the same offsets, is at most
+$\norm{K^{1/2}-(K')^{1/2}}_{\HS}$, uniformly in those offsets. The same bound
+therefore controls their infima. Approximate on the zero-sum space by positive
+definite covariances and also use~\eqref{eq:C-continuity}.
+The assignment inequality below follows directly from the pointwise maximum,
+irrespective of singular dual attainment.
+
+On $\tr K=L_0$, permutation averaging gives $K_*$: invariance forces constant
+diagonal and off-diagonal entries, fixed by the trace and zero row sums.
+Theorem~\ref{thm:covariance} and permutation invariance therefore imply
+\begin{equation}\label{eq:score-maximum}
+ J_m(K)\leq J_m(K_*)=\sqrt m\,\mu_m=\sqrt{L_0w}.
+\end{equation}
+At $K_*$ the winner assignment is balanced by symmetry, so zero offsets
+attain this value.
+
+The strict Hessian in~\eqref{eq:strict-Hessian}, continuity, and permutation
+symmetry give constants $c_0,\delta_0>0$ such that
+\[
+ J_m(K_*)-J_m(K)\geq c_0\norm{K-K_*}_{\HS}^2
+ \quad\hbox{when }\norm{K-K_*}_{\HS}\leq\delta_0,\quad \tr K=L_0.
+\]
+Indeed the gradient at $K_*$ is scalar on the zero-sum space, so the first
+derivative vanishes on trace-zero directions; integrate the negative Hessian
+in a small neighborhood. The trace-normalized PSD domain is compact. Choose
+one $\theta\in(0,1)$ so that
+$K_\theta=(1-\theta)K_*+\theta K$ lies in that neighborhood for every $K$
+in the domain. Concavity gives
+\[
+ \theta[J_m(K_*)-J_m(K)]
+ \geq J_m(K_*)-J_m(K_\theta)
+ \geq c_0\theta^2\norm{K-K_*}_{\HS}^2.
+\]
+Thus, with $\kappa_m=c_0\theta>0$,
+\begin{equation}\label{eq:global-Gram-gap}
+ J_m(K_*)-J_m(K)\geq\kappa_m\norm{K-K_*}_{\HS}^2
+\end{equation}
+on the entire normalized PSD domain, including its boundary.
+
+For balanced relaxed $f$ with $W=\sum_i|b_i|^2>0$, normalize
+$B_i=\sqrt{L_0/W}\,b_i$ and let $K=BB^T$. Since $\sum_i b_i=0$,
+$K\1=0$ and $\tr K=L_0$. The same assignment is an admissible balanced
+score coupling, hence
+\[
+ \sqrt{L_0W}=\E\sum_i f_i(X)B_i\cdot X
+ \leq J_m(K)\leq\sqrt{L_0w}.
+\]
+This proves $W\leq w$; $W=0$ is immediate.
+If $W=w$, \eqref{eq:global-Gram-gap} forces $K=K_*$. Equality in the
+pointwise maximum inequality then forces $f$ to select the unique regular
+winning score almost everywhere. This also proves the relaxed equality
+classification. In $N<d$, pad the source by independent Gaussian coordinates;
+the centroid Gram has rank at most $N$ and cannot equal a regular rank-$d$
+Gram, proving strictness.
+
+For quantitative centroid alignment, put $\Delta=w-W$. The difference of
+square roots and~\eqref{eq:global-Gram-gap} imply
+\[
+ \norm{K-K_*}_{\HS}^2
+ \leq\frac{\sqrt{L_0}}{\kappa_m\sqrt w}\Delta.
+\]
+For $N\geq d$, orthogonal Procrustes alignment with any regular row matrix
+$B_*$ of Gram $K_*$ gives
+\begin{align*}
+ \min_{O\in O(N)}\norm{B-B_*O}_{\HS}^2
+ &=\sum_{j=1}^{m-1}(\sqrt{\lambda_j(K)}-\sqrt m)^2\\
+ &\leq \frac1m\norm{K-K_*}_{\HS}^2.
+\end{align*}
+Rescale the two matrices by $\sqrt{W/L_0}$ and $\sqrt{w/L_0}$ respectively.
+The two-square inequality, $W\leq w$, and
+$(\sqrt W-\sqrt w)^2\leq\Delta$ show that
+\begin{equation}\label{eq:K-explicit}
+ \dist_{\HS}(b,\cO_m)^2
+ \leq\left(2+\frac{2\sqrt w}{m\kappa_m\sqrt{L_0}}\right)\Delta.
+\end{equation}
+The case $W=0$ is immediate with this coefficient. This proves
+Theorem~\ref{thm:endpoint}, with $K_m$ equal to the displayed coefficient or
+any larger number. It is finite and independent of $N$; no explicit
+numerical value or uniform bound as $m\to\infty$ is asserted.
+

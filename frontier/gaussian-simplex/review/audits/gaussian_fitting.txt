@@ -1,0 +1,38 @@
+INDEPENDENT AUDIT: GAUSSIAN FITTING COROLLARY
+31 October 2026. strong_signal_branch_count.
+
+Source: GAUSSIAN_FITTING_COROLLARY_20261031.txt
+SHA256 692b6dd6d97d4a903f18c766b53ab79f52d241c499d17e93433bff202261c071.
+Verdict: PASS, conditional on the stated covariance-concavity theorem.
+No source edits requested. This is not a dependency of the main theorem.
+
+The square-concavity argument uses the correct nonnegative homogeneous
+functional. Applying concavity to C/alpha and D/(1-alpha) produces the
+displayed lower bound for F(C+D). Optimizing the scalar weight gives
+superadditivity of F^2; its degree-one homogeneity converts that result to
+concavity. The limiting weights handle one zero value, and nonnegativity
+handles both zero values. No hidden division or rank assumption occurs.
+
+The joint mean/covariance identity has the correct centered second moment
+and offset term. Ordinary convexity in (a,C) follows from covariance
+concavity and the independent quadratic mean term. The Cauchy--Schwarz
+lower bound makes all nonempty sublevels bounded in trace and mean;
+PSD trace bounds control the whole covariance matrix. Continuity closes
+the sublevels, so compactness gives existence on the closed PSD cone.
+
+The exact scale minimization is completion of the square in sqrt(t),
+not in t. It yields t=F(Q)^2 and the claimed unit-trace shape formulation,
+including degenerate covariances. The trace-one domain is compact for
+n>=1. If the target is a point mass, every shape returns the same zero
+covariance. Otherwise some projection is nonconstant, its increasing
+quantile coupling with a normal has strictly positive covariance, and
+conditional lifting supplies a positive F for that rank-one shape.
+Thus every optimum then has positive trace, can be normalized as stated,
+and has trace at most the target's centered second moment.
+
+The note correctly separates optimized mean from fixed mean, claims no
+general covariance uniqueness, and describes concave maximization on a
+convex domain without claiming an efficient value oracle. Its attribution
+of existing mean/scale reduction to Wang--Wei v2 is consistent with the
+separate primary-source scope check. No independent priority conclusion
+is drawn in this audit.

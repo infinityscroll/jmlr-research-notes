@@ -1,0 +1,314 @@
+FREE COMMON-MASS NEGATIVE-CORRELATION TRANSFER
+31 October 2026. Independent reconstruction and mathematical audit.
+Authoring agent: strong_signal_prior_art. No frozen release is modified.
+
+Status: the root route passes this independent paper audit. The statement
+below is CONDITIONAL on H_m; the four-cell application uses the previously
+audited four-cell endpoint coercivity. This file itself awaits the final
+cross-audit. The correlation interval is existential, not a numerical claim.
+No full negative-correlation interval or five-cell endpoint is established.
+
+0. Exact statement and notation
+Fix m>=3 and d=m-1. In H={x in R^m:sum x_i=0}, let
+  v_i=e_i-1/m, alpha=E max_{i<=m} Z_i/(m-1), c_i=alpha v_i,
+  g_i(x)=1{v_i.x=max_j v_j.x}, w=sum_i|c_i|^2.
+Ties have Gaussian measure zero. Here c_i=E[Xg_i(X)]. Write O for the
+orthogonal orbit of the ordered centroid matrix c; simplex label
+permutations already belong to this orbit. Put a=|c_i-c_j|=sqrt(2)alpha.
+
+H_m: for every balanced relaxed assignment k:R^d->Delta_m,
+  dist_F(b(k),O)^2 <= K(w-||b(k)||_F^2), b_i(k)=E[Xk_i(X)],
+where E k_i=1/m and K>=1 is finite. In particular W(k)<=w. If W(k)=w,
+then b(k)=c' in O, and the identity
+  E sum_i k_i(X)[max_j c'_j.X-c'_i.X]=w-<c',b(k)>=0
+forces k to be the regular winning partition with centroids c'. This
+derives endpoint equality directly from H_m, rather than adding it as a
+separate hypothesis.
+
+For r in (0,1), consider
+  B_{-r}(f,h)=sum_i <f_i,T_{-r}h_i>,
+where f,h are relaxed simplex assignments with E f=E h=p. The common
+probability vector p is FREE. Then H_m implies the existence of r_m>0
+such that, for all 0<r<=r_m and every finite N>=d,
+  B_{-r}(f,h)>=B_{-r}(g,g).
+Equality holds exactly for f=h equal to one common regular-simplex
+partition, up to a common rotation, labels and null sets. In N<d the
+benchmark is strict. Dimension reduction uses the external Theorem7.9
+specified in section11. The remainder of the proof through section10 is
+self-contained in dimension d.
+
+1. Uniform qualitative localization, including the nearest frame
+Call a pair competitive if B_{-r}(f,h)<=B_{-r}(g,g). Parseval and
+simplex-valuedness give, in every finite dimension,
+  ||b(f)||_F^2 <= sum_i Var(f_i)<=1-||p||_2^2<=1.
+The degree>=2 bilinear Hermite remainder has absolute value at most r^2:
+Cauchy--Schwarz bounds it by r^2 times the product of the two centered
+L2 norms. The analogous reference remainder is also at most r^2. Thus,
+with U=(1/m,...,1/m),
+  ||p-U||_2^2 <= r(<b(f),b(h)>-w)+2r^2 <= r+2r^2,       (1)
+  <b(f),b(h)> >= w-2r.                                   (2)
+Consequently all masses are positive if, for example, r<=1/(4m^2).
+
+Claim: for every eta>0 there is delta_eta>0 such that every competitive
+pair in R^d, at 0<r<delta_eta, has
+  d(F,g_c):=(1/2)sum_i||F_i-(g_c)_i||_1 < eta,
+where F=(f+h)/2 and c is ANY nearest member of O to b(F).
+
+Proof by contradiction. Choose r_n->0 and violating pairs. The feasible
+simplex assignments form a bounded weakly closed subset of L2(gamma_d)^m.
+Pass to a weakly convergent subsequence for both f_n,h_n. Equations(1)
+and(2), and weak continuity of each degree-one moment, imply that the
+limits f_*,h_* are balanced and
+  <b(f_*),b(h_*)> >= w.
+H_m and Cauchy--Schwarz give the reverse chain
+  <b(f_*),b(h_*)> <= ||b(f_*)|| ||b(h_*)|| <= w.
+Equality yields b(f_*)=b(h_*) and both squared norms equal w. Endpoint
+equality from section0 therefore gives f_*=h_*=g_* for the SAME ordered
+regular partition. Weak convergence to this indicator implies strong L1:
+  sum_i||f_{n,i}-g_{*,i}||_1
+    =2-2sum_i<f_{n,i},g_{*,i}> ->0,
+and the same holds for h_n and F_n. In particular b(F_n)->c_*.
+If c_n is any nearest centroid matrix, then
+  ||c_n-b(F_n)||<=||c_*-b(F_n)|| ->0,
+so c_n->c_*. Away from the finitely many score-tie hyperplanes the
+winning labels for c_n eventually equal those for c_*. Dominated
+convergence gives g_{c_n}->g_* in L1, contradicting the violation.
+This proves uniform localization. It supplies all smallness needed for
+the anchor slabs below, with no unproved quantitative endpoint extension
+to unbalanced assignments.
+
+2. Exact mean ordering and a global damped potential gap
+Work in any regular reference frame and write G_i=T_{-r}g_i. On reference
+cell i, G_i is the unique smallest potential, off the tie hyperplanes.
+Here is a quantitative proof for r<=1/16. Set s=sqrt(1-r^2), t=r/s,
+z=(v_i-v_j).x/sqrt(2)>=0, and delta=sqrt(2)t z. In the independent-normal
+winner representation, subtract label j's mean. Label j has mean0,
+label i has mean -delta, and every other mean is at most
+  U_x=sqrt(2)t|x|.
+Conditional on the maximum M of the other m-2 utilities, the difference
+G_j-G_i equals integral_M^infinity H_delta(u)du, where
+  H_delta(u)=phi(u)Phi(u+delta)-phi(u+delta)Phi(u).
+This is positive for delta>0: Phi(u)/phi(u) is strictly increasing,
+as follows from its representation integral_0^infinity exp(uy-y^2/2)dy.
+Raising all the other means to U_x can only decrease the difference.
+For these raised means Pr(M<=U_x)=2^{-(m-2)}. For u>=0 and 0<=delta<=1,
+  partial_delta H_delta(u)
+    =phi(u)phi(u+delta)+(u+delta)phi(u+delta)Phi(u)
+    >=phi(u)phi(u+delta).
+Integrating u over [U_x,U_x+1] therefore gives
+  G_j-G_i >= c_m exp(-U_x^2-3U_x) min(delta,1),
+  c_m=exp(-5/2)/(2^{m-1}pi).
+For delta>=1 use monotonicity when label i's mean is lowered. Since
+  3U_x<=U_x^2+9/4,
+  2U_x^2=4r^2|x|^2/(1-r^2)<=|x|^2/32  (r<=1/16),
+we obtain
+  G_j-G_i >= c'_m min(r z,1) exp(-|x|^2/32),              (3)
+  c'_m=exp(-19/4)/(2^{m-1}pi)>0.
+Thus for ANY relaxed k, with no balance condition,
+  D(k):=sum_i<k_i-g_i,G_i> >=0,
+and D(k)=0 iff k=g almost everywhere. D is affine on assignments and
+D(F)=(D(f)+D(h))/2.
+
+3. Weighted moments despite the damping
+Put psi(x)=exp(|x|^2/8), P=m(m-1)/2 and
+  w_r(x)=min(r min_{i<j}|(v_i-v_j).x|/sqrt(2),1),
+  w_tilde_r(x)=exp(-|x|^2/32)w_r(x),
+  B^-_d=P[phi(0)exp(5/16)(8/3)^((d-1)/2)+(8/3)^(d/2)/4].
+For any measurable |q|<=1 and lambda>0,
+  integral |q|psi <=lambda integral |q|w_tilde_r+B^-_d/(lambda r). (4)
+Indeed, let psi'=exp(5|x|^2/32). Then
+  (psi-lambda w_tilde_r)_+
+    =exp(-|x|^2/32)(psi'-lambda w_r)_+
+    <=(psi'-lambda w_r)_+.
+The minimum over the P planes is bounded by summing positive parts for
+the individual plane weights. Write x=u e+z for one plane. On |u|<=1,
+bound psi' by exp(5/32)exp(5|z|^2/32), phi(u) by phi(0), and integrate
+the full triangular positive part against du. The integral is A^2/(lambda r).
+On |u|>1, the plane weight is at least r, and
+  (A-lambda r)_+ <= A^2/(4lambda r).
+Gaussian exponential moments give precisely the displayed B^-_d.
+The auxiliary psi' is used ONLY in this Fenchel domination; the moment
+controlled in(4) remains the original psi.
+
+Optimize lambda in(4). For q_i=k_i-g_i, use sum_i|q_i|=2p_wrong and(3):
+  sum_i(integral |q_i|psi)^2 <= M2 D(k)/r,
+  M2=8B^-_d/c'_m.
+Set A2=max(1,m/4)M2, A=sqrt(A2), z0=sqrt(D(F)/r), d0=d(F,g).
+Then d0<=A z0. For R>=2 and eps=(1+R)exp(-R^2/8), both the half-l1
+tail mass error and the Frobenius tail centroid error of F-g are <=eps A z0.
+This follows from (1+|x|)1_{|x|>R}<=eps psi(x); these are two separate
+bounds, not a sum bound.
+
+4. A bilinear quadratic remainder with either sign of correlation
+Let ell be the logarithm of the Mehler kernel M_rho in dimension d and
+Lxy=|x|^2+|y|^2. For |rho|<=1/16, direct differentiation gives
+  |ell'|<=d+Lxy, |ell''|<=2d+2Lxy,
+  M_rho<=2^d exp(Lxy/34).
+With t0=13/136 and
+  C_d=2^{d-1}[d^2+2d+(2d+2)/(2t0)+1/t0^2],
+the elementary maxima of Lxy exp(-t0 Lxy) and Lxy^2 exp(-t0 Lxy)
+(using e>2) and Taylor's theorem give
+  |M_rho-1-rho x.y|<=C_d rho^2 psi(x)psi(y).
+Put C_Q=C_d M2. For q_f=f-g and q_h=h-g, this yields
+  |R_mixed|<=C_Q r sqrt(D(f)D(h))<=C_Q r D(F).             (5)
+No zero-mean assumption is needed here: the degree-zero term is explicitly
+retained in the next identity. Let q=||b(F)-c||_F^2. Since
+  <b(f)-c,b(h)-c>
+    =q-(1/4)||b(f)-b(h)||_F^2 <=q,
+the exact expansion and(5) imply
+  B_{-r}(f,h)-B_{-r}(g,g)
+    >=||p-U||_2^2+2D(F)-r q-C_Q r D(F).                  (6)
+This is the needed mixed estimate; it does not assert positivity of
+the negative-correlation higher-chaos remainder.
+
+5. Truncation and repair of an originally unbalanced average
+Choose c nearest to b(F), and let g be its partition. Assume d0<=c_A/24,
+which section1 guarantees uniformly for sufficiently small r. Put
+  c_A=Vol(B_{d-1})8^{-(d-1)}(2pi)^(-d/2)exp(-2),
+  u=(1/2)||p-U||_1.
+Replace F by g outside B_R, where R>=3. Call the truncated assignment F^R
+and its half-l1 mass imbalance v. If u_tail is the half-l1 tail mass error,
+  v<=u+u_tail<=u+eps A z0, and v<=d0.
+
+For each donor i and recipient j, use the normal slab on donor side i
+of the fixed facet disk centered at v_i+v_j, tangential radius1/8, normal
+width tau=(d0+2v)/c_A<=1/8. These oriented slabs are mutually disjoint
+off null sets, contained in B2 and in reference cell i. Indeed, distinct
+unoriented anchors are at least sqrt(2) apart; at each anchor i,j tie and
+all other score gaps equal1, and displacement at most sqrt(2)/8 reduces
+these gaps by at most1/4. Slab mass is at least c_A tau. The available
+F_i^R mass is therefore at least c_A tau-d0=2v, regardless of the
+concentration of the original mismatch. Transfer each required pair mass
+proportionally to F_i^R on that slab. This preserves the simplex condition
+and repairs all masses exactly. Each pair transfer is at most v.
+
+Let F' be the result, b'=b(F'), e0=||b'-b(F)||_F, and
+  J'=w-<c,b'>, J_in=E[1_{B_R}sum_i F_i(max_j c_j.X-c_i.X)].
+Since a<=1 (a^2=2w/(m-1), w<=1), the linear cost of a transfer is at
+most tau times its mass. The total transferred mass is v. Thus
+  J'<=J_in+(3/c_A)d0 u+C_J eps z0^2, C_J=3A2/c_A.        (7)
+For centroids, removal of the tail costs at most eps A z0; a transfer
+of mass v in B3 costs at most3sqrt(2)v in Frobenius norm. Consequently
+  e0<=6(u+eps A z0).                                    (8)
+The use of B3 here is a harmless weakening of the actual B2 support.
+
+6. Endpoint coercivity in the original nearest frame
+Apply H_m to the balanced F'. The distance to O is one-Lipschitz and
+c is nearest for b(F), so
+  2J'=(w-||b'||^2)+||b'-c||^2
+      >=(1+1/K)(sqrt(q)-e0)_+^2.
+If sqrt(q)<=e0 the next estimate is immediate; otherwise use Young's
+inequality with parameter1/(2K). In both cases,
+  q<=(2-sigma)J'+(2K+1)e0^2, sigma=1/(K+1).
+Combining(7),(8), d0<=A z0 and (x+y)^2<=2x^2+2y^2 gives
+  r q <=(2-sigma)r J_in+B sqrt(rD)u
+       +72(2K+1)r u^2+Etilde_R D,                       (9)
+  B=6A/c_A,
+  Etilde_R=2C_J eps+72(2K+1)A2 eps^2,
+where D=D(F). The original frame is retained throughout; no new optimal
+rotation of F' is inserted into its linear assignment cost.
+Finally,
+  B sqrt(rD)u <=sigma D/8+(2B^2/sigma)r u^2.              (10)
+
+7. Compact comparison and explicit hierarchy of finite constants
+Conicality gives G_i(x)=H_i(-t x), H_i(y)=E g_i(y+Z), t=r/sqrt(1-r^2).
+Gaussian differentiation shows grad H_i(0)=c_i and ||Hess H_i||op<=sqrt(2).
+Therefore on B_R, for r<=1/16,
+  ||grad(G_i-1/m+r c_i.x)||<=(1+3R)r^2.
+Reflection interchanging i,j fixes their entire bisector and the other
+regular vertices. The potential pair remainder vanishes on that plane.
+Integrating normally from the plane, inside B_R, gives in reference cell i
+  G_j-G_i>=r(c_i-c_j).x(1-beta_R r), beta_R=2(1+3R)/a.
+Hence r J_in<=D/(1-beta_R r).
+
+First choose finite R>=3 so that Etilde_R<=sigma/8. All constants except
+eps are independent of R, so this is possible. Next choose r_m>0 small
+enough that, for every 0<r<=r_m,
+  r<=1/16, r<=1/(4m^2),
+  d0<=c_A/24 for all competitive pairs (section1),
+  2beta_R r<=sigma/16, C_Q r<=sigma/8,
+  r<=2/(m Cmass), Cmass=72(2K+1)+2B^2/sigma.              (11)
+The qualitative cutoff from section1 may be halved to make its strict
+r<delta condition valid at the closed upper endpoint r_m.
+
+8. Final algebra and strict equality
+Since beta_R r<1/2, 1/(1-beta_R r)<=1+2beta_R r. Inserting(10),(11)
+into(9) gives
+  r q <=(2-5sigma/8)D+Cmass r u^2.
+Equation(6) therefore yields
+  B_{-r}(f,h)-B_{-r}(g,g)
+    >=||p-U||_2^2+(sigma/2)D-Cmass r u^2
+    >=(1/2)||p-U||_2^2+(sigma/2)D,                       (12)
+because u^2<=m||p-U||_2^2/4. Every competitive pair in R^d must consequently
+have p=U and D=0. Strict ordering in section2 forces F=g. Since F=(f+h)/2
+and g is an indicator assignment, simplex-valuedness forces f=h=g pointwise
+almost everywhere. This proves the full relaxed fixed-d theorem.
+
+9. Existence and indicator reduction without a false bilinear-extreme claim
+For any fixed finite N the set of relaxed pairs with common free masses
+is weakly compact in L2(gamma_N)^m times itself. The OU operator T_{-r}
+is compact: Hermite eigenspaces have finite multiplicities and |r|^k->0.
+Thus the bilinear objective is jointly weakly continuous on this bounded
+set, and a minimizer exists.
+
+Fix a minimizing pair and its attained mass vector p. Holding h fixed,
+minimize the continuous linear functional in f over the weakly compact
+fixed-p simplex-assignment set. Its minimum face has an extreme point,
+and an extreme point of a face is extreme in the full fixed-p set.
+Every such extreme point is an indicator: otherwise some fixed pair of
+labels is uniformly fractional on a positive-measure set; opposite label
+perturbations on two disjoint equal-measure subsets preserve all integrals
+and split the assignment nontrivially. Choose an indicator minimizer f1.
+Then fix f1 and repeat for h, obtaining an indicator h1 at the same p and
+same global minimum. This sequential argument, not a general assertion
+about extrema of bilinear functions on convex sets, supplies integrality.
+
+10. Equality of original fractional pairs
+After section11 identifies every indicator minimizing pair as (g,g),
+the sequential construction has f1=h1=g and p=U. The earlier pair (g,h)
+has the same minimum, but its objective excess is exactly D(h). By
+strict reference ordering, h=g. The original pair then has h=g, and
+the identical argument gives f=g. Thus the equality classification is
+valid for all original fractional minimizers, not merely for an indicator
+representative. This also avoids using positive definiteness of T_{-r},
+which would be false.
+
+11. External dimension theorem: exact scope checked in the primary source
+Primary: Steven Heilman, Hyperstable Sets with Voting and Algorithmic
+Hardness Applications, arXiv:2209.11216, section7, Problem7.1 and Theorem7.9.
+URL: https://arxiv.org/html/2209.11216#S7
+Primary HTML inspected 31 October2026; Problem7.1 at lines630-635 and
+Theorem7.9 at lines705-708 of the retrieved text. Problem7.1 minimizes
+the positive-correlation bilinear objective over two partitions whose
+corresponding masses agree, without fixing those masses. Theorem7.9
+reduces every such minimizer to a common (m-1)-dimensional subspace.
+It has no hyperstability hypothesis. The immediately preceding paragraph
+explicitly distinguishes this constraint from separately prescribed masses.
+
+Apply it to the indicator minimizing pair f1(x),h1(-x). Reflection preserves
+the mass vector and converts B_{-r}(f1,h1) to the positive-kernel objective.
+Equation(1) supplies positive masses for the chosen small r even before
+dimension reduction. After a common rotation, both reflected-back
+assignments depend on at most d=m-1 coordinates. They are still a global
+minimizing pair, so section8 makes them the same regular partition. The
+value and equality conclusion now holds in every finite N>=d. For N<d,
+embed into dimension d and apply the result; equality is impossible since
+the embedded centroid matrix has rank at most N whereas the regular
+centroid matrix has rank d.
+
+12. Audit conclusion and exact limits
+No gap was found in the root route. In particular:
+- common masses are allowed to vary; their quadratic penalty is retained;
+- localization is uniform in fixed d and over every nearest frame;
+- the damped gap controls the original Mehler weight, with finite constants;
+- repair capacity remains valid when the original common masses are unequal;
+- the mixed degree-one term is bounded by the average-centroid square;
+- the negative mixed higher remainder is bounded in absolute value;
+- mass absorption and strict equality have the displayed constants;
+- the external dimension theorem has the required free-common-mass scope.
+
+The result remains conditional on H_m for general m. For m=4, H_m is an
+existing internally audited dependency. This derivation establishes an
+existential small-negative interval, not the entire negative range, and
+does not supply a fixed numerical r_m. Priority of this transfer mechanism
+has not been independently established. No publication or outreach occurred.

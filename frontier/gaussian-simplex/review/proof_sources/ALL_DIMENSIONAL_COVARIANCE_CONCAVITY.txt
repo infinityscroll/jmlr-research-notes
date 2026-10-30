@@ -1,0 +1,314 @@
+GAUSSIAN MAXIMAL COVARIANCE IS CONCAVE IN THE COVARIANCE MATRIX
+31 October 2026. Root derivation, extending independent planar/tetrahedral
+work by strong_signal_branch_count and strong_signal_prior_art.
+Status: complete proof candidate awaiting full independent cleanroom audit.
+No public priority claim or completed-breakthrough claim is made here.
+
+MAIN THEOREM
+For every probability law nu in P2(R^n), in every finite dimension n,
+  F_nu(C)=sup{E[X dot Y]: X~N(0,C), Y~nu}
+is concave on the cone of positive semidefinite covariance matrices C.
+Equivalently C -> W2^2(N(0,C),nu) is convex in ordinary covariance
+coordinates. This concerns C itself, not its square root or a Bures geodesic.
+
+For a target of d+1 affinely independent sites in R^d, all masses positive,
+the covariance Hessian is negative definite at every positive definite C.
+Strictness for arbitrary target laws is NOT inferred by lifting or limits.
+
+The proof first treats a simplex target. Gaussian boundary identities give
+an exact matrix factorization on its triangle/tetrahedron chain complex.
+A weighted gauge choice removes the entire potentially adverse term.
+Lifting and approximation then give the stated general theorem.
+
+1. The simplex dual, smoothness, and its translated fan
+Let y_0,...,y_d be affinely independent in R^d, p_i>0, sum p_i=1, and
+nu=sum_i p_i delta_{y_i}. The case d=1 is a positive constant times the
+square root of a scalar variance and is immediate. Assume d>=2.
+For C>0,
+  F(C)=min_h { E max_i(y_i dot X+h_i)-sum_i p_i h_i }.       (1)
+The pointwise maximum bounds every coupling. The minimum exists modulo
+common offsets: its objective is at least max_i h_i-sum p_i h_i, which
+is at least min_i p_i times the offset range. At a minimizer, differentiation
+in h gives winning probabilities p_i. Ties have zero Gaussian mass; the
+winning assignment therefore attains the dual bound, proving (1).
+
+Every offset vector has the form h_i=c-y_i dot a, for a unique a and a
+common c. Thus the score diagram is the normal fan of the target simplex,
+translated by a. Every nonempty subset S of sites is a simplex face and
+has a nonempty winner stratum
+  Gamma_S={x: all i in S tie for the maximum score}.
+It has affine dimension d+1-|S|, and is a simplicial cone based at a in
+its affine span. Its codimension-one boundary strata are precisely
+Gamma_(S union {k}) for k outside S. In particular every pair is adjacent.
+
+At C=I, write gamma_d for the standard Gaussian density. For every such
+stratum define its intrinsic Gaussian mass and conditional mean
+  mu_S=int_(Gamma_S) gamma_d dH^(d+1-|S|)>0,
+  m_S=mu_S^(-1) int_(Gamma_S) x gamma_d dH^(d+1-|S|).
+A zero-dimensional stratum has mass gamma_d(a) and mean a. All masses
+are finite; all conditional polynomial moments exist. Let P_S be the
+orthogonal projector onto the stratum's tangent space.
+
+The covariance/offset objective is smooth locally: it is the convolution
+of the fixed simplex support function max_i y_i dot x with a positive
+Gaussian density, evaluated at -a, plus the linear term (sum p_i y_i) dot a.
+The support function has linear growth, so derivatives under this Gaussian
+integral are locally dominated to every required order. Its offset Hessian
+is a complete-graph Laplacian with positive facet weights, hence invertible
+modulo common constants. The implicit function theorem gives smooth
+minimizing offsets and the optimized Hessian used below. This avoids any
+unproved regularity assertion at moving multiple junctions.
+
+2. Gaussian integration by parts on every stratum
+Let S be a stratum of positive dimension. For k outside S, let n_(S,k)
+be the unit normal WITHIN its affine span, pointing inward from its boundary
+Gamma_(S union {k}). If i is any member of S, then
+  n_(S,k)=P_S(y_i-y_k)/|P_S(y_i-y_k)|.
+Intrinsic Gaussian integration by parts gives
+  mu_S P_S m_S=sum_(k outside S) mu_(S+k) n_(S,k).          (2)
+For a facet e={i,j}, a second integration gives
+  mu_e(P_e-Cov_e X)
+    =sum_(k outside e) mu_(e+k) n_(e,k)(m_e-m_(e+k))^T.    (3)
+The means differ by tangent vectors, since both strata lie in the same
+affine facet. The sign in (3) follows from applying the divergence theorem
+to (x-m_e)gamma_d: the outward boundary normal is -n_(e,k).
+Gaussian decay eliminates boundary terms at infinity. These statements
+can be proved on truncated polyhedra and passed to the limit; their new
+sphere-boundary integrals vanish by Gaussian polynomial tail bounds.
+
+We also use the standard Brascamp--Lieb covariance consequence
+  Cov_e X <= P_e.                                       (4)
+Indeed, in orthonormal coordinates on the facet's affine span, the
+conditional law has a quadratic Gaussian potential with Hessian I,
+restricted to a convex cone. Approximate the convex indicator potential
+by nonnegative smooth convex barriers, retain the quadratic potential,
+and apply the variance inequality to linear functions. Gaussian domination
+passes second moments to the limit. No strictness or invertibility of the
+covariance deficit is required. The underlying classical input is
+Brascamp--Lieb, JFA22(1976),366-389, DOI10.1016/0022-1236(76)90004-5.
+
+3. Facet matrices and global barycentric vectors
+Orient each edge e=(i,j) with i<j and put
+  d_e=y_i-y_j, ell_e=|d_e|, w_e=mu_e/ell_e.
+For a triangle g={i,j,k}, let A_g>0 be its Euclidean area, and set
+  D_g=2A_g/mu_g.                                        (5)
+The symbol D=diag(D_g) below is a positive diagonal matrix indexed by
+triangles. It must not be confused with a facet covariance deficit.
+
+Let l_k(y) be the barycentric coordinate of target vertex k and define
+  v_k=-grad l_k.
+These GLOBAL vectors satisfy
+  sum_k v_k=0,
+  v_k dot(y_i-y_j)=delta_(k,j)-delta_(k,i).                (6)
+For k outside facet e, v_k is tangent to that facet. Within its
+(d-1)-dimensional tangent space, the d-1 vectors P_e(y_i-y_k), k outside e,
+form a basis, whose dual rows are v_k^T. Indeed their pairings are exactly
+delta_kl by (6). The choice of i or j as the first vertex makes no difference
+after projecting onto the facet.
+
+Let N_e have columns (mu_g/ell_e)n_(e,k), indexed by g=e+k, and T_e have
+columns m_e-m_g. The elementary triangle height formula gives
+  |P_e(y_i-y_k)|=2A_g/ell_e,
+so
+  N_e[:,g]=P_e(y_i-y_k)/D_g,
+  row_g(N_e^(-1))=D_g v_k^T.                            (7)
+The inverse is taken in any orthonormal coordinates on the facet tangent
+space; (7) is its coordinate-independent form on tangent vectors.
+
+Define the positive semidefinite facet deficit
+  E_e=w_e(P_e-Cov_e X).
+Equations(3)-(4) imply E_e=N_e T_e^T, symmetrically, hence
+  T_e=E_e N_e^(-T),
+  B_e=N_e^(-1)E_e N_e^(-T)=N_e^(-1)T_e >=0.              (8)
+No inverse of E_e is used. Equation(2) on the facet says
+w_e P_e m_e=N_e 1, so the local B entries have the exact form
+  (B_e)_(g,g')=1/w_e-D_g v_k dot m_(g'),  g=e+k.          (9)
+
+4. Cycle space, its gauge, and the assembled comparison
+Use the usual oriented simplicial boundary maps on the complete simplex:
+  partial_2: triangle coefficients -> edge coefficients,
+  partial_3: tetrahedron coefficients -> triangle coefficients.
+All edges, triangles and tetrahedra are ordered by increasing labels.
+For example partial_2[i,j,k]=[j,k]-[i,k]+[i,j]. With d_e=y_i-y_j,
+these signed edge vectors telescope to zero, as do differences z_i-z_j
+of ANY chosen cell vectors z_i.
+
+The cycle space of the complete edge graph is im partial_2, and
+ker partial_2=im partial_3. These elementary exactness statements follow
+by coning a cycle to a fixed vertex; equivalently partial(cone)+cone(partial)
+is the identity in positive chain degree. Redundant tetrahedron boundaries
+cause no difficulty. For d=2, partial_3 is absent and its image is zero.
+
+Let W=diag(w_e) and
+  A=partial_2^T W^(-1) partial_2.
+For a triangle vector lambda, put eta_(e,g)=(partial_2)_(e,g)lambda_g
+on the triangles incident to e, and define B by
+  lambda^T B lambda=sum_e eta_e^T B_e eta_e.
+A and B are positive semidefinite. A may have a kernel, precisely the
+cycle-coordinate gauge im partial_3.
+
+For each tetrahedron h of target vertices, let V_h>0 be its Euclidean
+THREE-dimensional volume, even when the full ambient dimension is larger.
+Set c_h=mu_h/(6V_h). We claim the exact assembled identity
+  A-B=-D partial_3 diag(c_h) partial_3^T D.                (10)
+This is the central calculation. It is proved entry by entry next.
+
+5. Proof of the factorization, including diagonal entries
+Take triangles g!=g' sharing the edge e, let k be the vertex of g outside
+e, and put h=g union g'. Since k is outside g', v_k is tangent to Gamma_g'.
+In its first-moment formula(2), v_k annihilates every boundary normal except
+the one corresponding to adding k: equation(6) pairs it to zero with every
+other projected target difference. For the surviving boundary, its pairing
+with the normalized projected gap is the reciprocal target height. The
+height from vertex k to the affine triangle g' is 3V_h/A_(g'). Therefore
+  v_k dot m_(g')=mu_h A_(g')/[3V_h mu_(g')].               (11)
+Consequently the off-diagonal entry of A-B is
+  (partial_2)_(e,g)(partial_2)_(e,g') D_g D_(g') c_h.
+The chain identity partial_2 partial_3=0 gives, on this shared edge of h,
+  (partial_2)_(e,g)(partial_2)_(e,g')
+     =-(partial_3)_(g,h)(partial_3)_(g',h).
+Thus this is exactly the off-diagonal entry of the right side of(10).
+Distinct triangles sharing no edge contribute zero on both sides.
+
+For a diagonal entry g, equation(9) summed over its three edges gives
+  (A-B)_(g,g)=D_g sum_(k in g) v_k dot m_g
+            =-D_g sum_(l outside g) v_l dot m_g,
+using sum v_k=0. Apply(2) on Gamma_g as above: each l sees only the
+boundary h=g+l, and its reciprocal height is A_g/(3V_h). Hence
+  (A-B)_(g,g)=-D_g^2 sum_(h containing g) c_h,
+again exactly(10). When d=2, the triangle stratum is the point a and
+there are no outside vertices; its diagonal difference is zero directly.
+This proves(10) in all dimensions under consideration.
+
+6. The admissible weighted gauge
+Fix any edge-cycle flow j. Choose lambda with partial_2 lambda=j.
+Its representatives form lambda+im partial_3. Since D is strictly positive,
+there is a representative minimizing lambda^T D lambda on this affine
+space. Its first-order condition is
+  partial_3^T D lambda=0.                               (12)
+No injectivity of partial_3 is needed: this is ordinary orthogonal projection
+onto its finite-dimensional image in a positive inner product. This change
+of lambda does not change j. For this representative, (10) gives
+  lambda^T B lambda=lambda^T A lambda=j^T W^(-1)j.        (13)
+Only cycle coordinates are changed. The actual offsets, target masses,
+Gaussian covariance and coupling are not changed by this gauge choice.
+
+7. Every cycle mean is paid by conditional covariance deficits
+Give the cells arbitrary vectors z_i, put z_e=z_i-z_j and c_e=z_e dot m_e.
+Since signed differences telescope around a triangle, for every cycle j
+and any representing lambda,
+  j dot c
+   =sum_e sum_(g incident e) (partial_2)_(e,g)lambda_g
+                         z_e dot(m_e-m_g)
+   =sum_e z_e dot T_e eta_e.                             (14)
+Choose the representative in(12). From(8), Cauchy--Schwarz across all facets
+in their positive semidefinite forms gives
+  (j dot c)^2
+   <=[sum_e z_e^T E_e z_e][sum_e eta_e^T B_e eta_e]
+   =[sum_e z_e^T E_e z_e] j^T W^(-1)j.                   (15)
+This remains valid if a facet deficit is singular, by its square root.
+
+Weighted least-squares duality on the edge graph says
+  min_b sum_e w_e(c_e+b_i-b_j)^2
+    =sup_(nonzero cycle j) (j dot c)^2/(j^T W^(-1)j).
+Thus(15) proves
+  min_b sum_e w_e(c_e+b_i-b_j)^2
+    <=sum_e w_e[|P_e z_e|^2-Var_e(z_e dot X)].            (16)
+There is one global offset vector b; slice-dependent offsets have not
+been introduced. The gauge was used solely to estimate its dual cycle norm.
+
+8. The exact covariance Hessian and strict concavity
+At C=I take C(t)=I+tH, H symmetric. Its square root has first derivative
+H/2 and second derivative -H^2/4. Moving-interface differentiation of(1)
+and elimination of the offset derivative give
+  4 F''(I)[H,H]
+   =min_b sum_e w_e E_e[(d_e dot H X+b_i-b_j)^2]
+      -sum_e w_e|H d_e|^2,                              (17)
+where E_e[...] in this display means CONDITIONAL EXPECTATION on the facet,
+not the matrix E_e used above. The interior term follows from
+  E[X Y(X)^T]=sum_e w_e d_e d_e^T
+by Gaussian integration by parts for the winning assignment. Every
+unoriented facet is counted once. The factor4 and the sign of the interior
+term follow from the two square-root derivatives. The offset Hessian is
+invertible on its quotient, so the minimum is the actual Schur complement.
+
+Set z_i=H y_i in(16). Decomposing each conditional second moment in(17)
+into variance and mean, the cycle term is bounded by(16). Therefore
+  4 F''(I)[H,H]
+    <=-sum_e w_e |(I-P_e)H d_e|^2
+     =-sum_e w_e (d_e^T H d_e)^2/ell_e^2.                (18)
+This is strictly negative for every nonzero symmetric H. Indeed choose
+vertex0; the differences b_i=y_i-y_0 are a basis. If H vanishes on every
+edge quadratic form, then b_i^T H b_i=0 and
+(b_i-b_j)^T H(b_i-b_j)=0, forcing every b_i^T H b_j=0. Hence H=0.
+All facet weights in(18) are strictly positive.
+
+At a general C0>0, write C0+tK=C0^(1/2)(I+tH)C0^(1/2), with
+H=C0^(-1/2)K C0^(-1/2), and transform sites to C0^(1/2)y_i. They remain
+affinely independent and the masses stay fixed. The preceding argument
+applies, giving negative definite Hessian at every positive definite C.
+Concavity on that cone follows by integration along line segments.
+
+9. Singular covariances, arbitrary finite targets, and P2 limits
+For a fixed P2 target, common-standard-Gaussian coupling and gluing give
+  |F_nu(C)-F_nu(C')|
+     <=sqrt(E|Y|^2)||C^(1/2)-C'^(1/2)||_F.               (19)
+Any coupling with C^(1/2)G can be lifted to a coupling with G, including
+when C is singular by conditional randomization in its null coordinates.
+Thus square-root continuity extends the simplex-target concavity to all
+PSD matrices by adding epsilon I and taking epsilon down to zero.
+
+Now let nu=sum_(i=1)^m p_i delta_(y_i) be ANY finite target in R^n.
+Remove zero masses and duplicate sites if desired. Lift its sites to
+  y_i'=(y_i,epsilon e_i) in R^(n+m), epsilon>0.
+They are affinely independent. With source covariance diag(C,0), its
+Gaussian has the form (X,0), and every transport cost is exactly X dot y_i.
+Couplings correspond by retaining the site label, so
+  F_(nu')(diag(C,0))=F_nu(C).                            (20)
+Subtract a common lifted site and project onto the (m-1)-dimensional
+span of lifted site differences. The Gaussian covariance on that span
+is a fixed LINEAR restriction of diag(C,0), possibly singular. The proved
+simplex PSD concavity therefore pulls back to concavity in C. No limit
+in epsilon or hidden positive-rank assumption is needed.
+
+Finally, for any two P2 targets, gluing their optimal target coupling
+to a Gaussian-source coupling and using Cauchy--Schwarz gives
+  |F_nu(C)-F_(nu')(C)|<=sqrt(tr C) W2(nu,nu').             (21)
+Finite laws are dense in P2 in every finite dimension. Pass to the limit
+in the concavity inequality to obtain the main theorem for all P2 targets.
+The identity
+  W2^2(N(0,C),nu)=tr C+E|Y|^2-2F_nu(C)
+proves the stated covariance convexity of squared Wasserstein distance.
+Neither(20) nor(21) is being used to claim strictness for general targets.
+
+10. Balanced-simplex consequence and the remaining audit obligations
+For uniform target sites forming a regular (m-1)-simplex, J_m(K) is precisely
+the balanced Gaussian score support on K1=0. The main theorem makes it
+concave on all such PSD K. Permutation averaging at fixed trace m(m-1)
+gives the regular covariance K_*=mI-11^T. Therefore
+  J_m(K)<=J_m(K_*)=sqrt(m) mu_m, mu_m=E max_(i<=m) Z_i.
+At K_* the strict Hessian in(18), or the independently audited local
+coercivity theorem, gives a local quadratic gap. The compact fixed-trace
+segment argument in ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt now
+gives a global quadratic gap and equality only at K_*.
+
+For every balanced relaxed Gaussian assignment, its normalized centroid
+Gram then yields
+  sum_i |E[X f_i(X)]|^2 <= mu_m^2/(m-1),
+with equality exactly the regular simplex partition (orthogonal transforms,
+label permutations, and null sets allowed). The same source proves the
+finite centroid-orbit coercivity constant H_m. These are direct consequences
+IF the main proof survives the pending full independent audits.
+
+The existing finite-cell small-positive and small-negative transfer notes
+can then be applied for every fixed m, with m-dependent sufficiently small
+correlation. That application, its equality cases, discrete corollaries,
+and exact references must be rechecked against this new hypothesis before
+being asserted as a completed theorem in a final manuscript.
+
+Verification boundaries: finite rational checks of the chain factorization
+support the algebra but do not replace its uniform derivation. Gaussian
+covariance positivity is the analytic Brascamp--Lieb input. No numerical
+scan, undocumented dimension induction, slice-dependent offset or unproved
+smooth Hodge inequality is used in this proof. Priority and significance
+require a separate primary-literature assessment and external review.

@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "source_sha256": "31d1dbc6e2f775cb1a0dd61d90838fb4cac90440d00d2d2898b2df12ba5160fa",
+  "flow_and_group_normalization": [
+    {
+      "k": 1,
+      "transport_tables": 6,
+      "all_layer_counts_and_d1_sos_identities": true
+    },
+    {
+      "k": 2,
+      "transport_tables": 21,
+      "all_layer_counts_and_d1_sos_identities": true
+    },
+    {
+      "k": 3,
+      "transport_tables": 55,
+      "all_layer_counts_and_d1_sos_identities": true
+    },
+    {
+      "k": 4,
+      "transport_tables": 120,
+      "all_layer_counts_and_d1_sos_identities": true
+    },
+    {
+      "k": 5,
+      "transport_tables": 231,
+      "all_layer_counts_and_d1_sos_identities": true
+    },
+    {
+      "k": 6,
+      "transport_tables": 406,
+      "all_layer_counts_and_d1_sos_identities": true
+    }
+  ],
+  "union_level_kernel_checks": [
+    {
+      "k": 2,
+      "layer": 1,
+      "union_level_points": 6,
+      "ordered_kernel_pairs": 36
+    },
+    {
+      "k": 2,
+      "layer": 2,
+      "union_level_points": 4,
+      "ordered_kernel_pairs": 16
+    },
+    {
+      "k": 3,
+      "layer": 1,
+      "union_level_points": 20,
+      "ordered_kernel_pairs": 400
+    },
+    {
+      "k": 3,
+      "layer": 2,
+      "union_level_points": 14,
+      "ordered_kernel_pairs": 196
+    },
+    {
+      "k": 3,
+      "layer": 3,
+      "union_level_points": 8,
+      "ordered_kernel_pairs": 64
+    },
+    {
+      "k": 4,
+      "layer": 1,
+      "union_level_points": 70,
+      "ordered_kernel_pairs": 4900
+    },
+    {
+      "k": 4,
+      "layer": 2,
+      "union_level_points": 50,
+      "ordered_kernel_pairs": 2500
+    },
+    {
+      "k": 4,
+      "layer": 3,
+      "union_level_points": 30,
+      "ordered_kernel_pairs": 900
+    },
+    {
+      "k": 4,
+      "layer": 4,
+      "union_level_points": 16,
+      "ordered_kernel_pairs": 256
+    }
+  ],
+  "literal_trace_identity": [
+    {
+      "k": 2,
+      "dimension": 2,
+      "symmetric_basis_vectors": 27,
+      "literal_trace_coordinates_checked": 108
+    },
+    {
+      "k": 3,
+      "dimension": 2,
+      "symmetric_basis_vectors": 64,
+      "literal_trace_coordinates_checked": 512
+    }
+  ],
+  "negative_last_kernel_minor": "-9/16",
+  "dimension_bound": "d<=8k^2/9; in particular d<=2k for every integer k>=3",
+  "scope": "Independent finite exact algebra and literal tensor checks supporting the all-k written proof; no import of root or other-auditor generators."
+}

@@ -1,0 +1,175 @@
+{
+  "passed": true,
+  "exact_complex_product_trials": 24,
+  "records": [
+    {
+      "k": 1,
+      "d": 2,
+      "trial": 0,
+      "averaged_layer_form": "0",
+      "passed": true
+    },
+    {
+      "k": 1,
+      "d": 2,
+      "trial": 1,
+      "averaged_layer_form": "0",
+      "passed": true
+    },
+    {
+      "k": 1,
+      "d": 2,
+      "trial": 2,
+      "averaged_layer_form": "0",
+      "passed": true
+    },
+    {
+      "k": 2,
+      "d": 2,
+      "trial": 0,
+      "averaged_layer_form": "280980",
+      "passed": true
+    },
+    {
+      "k": 2,
+      "d": 2,
+      "trial": 1,
+      "averaged_layer_form": "242220",
+      "passed": true
+    },
+    {
+      "k": 2,
+      "d": 2,
+      "trial": 2,
+      "averaged_layer_form": "233268",
+      "passed": true
+    },
+    {
+      "k": 2,
+      "d": 3,
+      "trial": 0,
+      "averaged_layer_form": "144031",
+      "passed": true
+    },
+    {
+      "k": 2,
+      "d": 3,
+      "trial": 1,
+      "averaged_layer_form": "325034",
+      "passed": true
+    },
+    {
+      "k": 2,
+      "d": 3,
+      "trial": 2,
+      "averaged_layer_form": "458804",
+      "passed": true
+    },
+    {
+      "k": 3,
+      "d": 2,
+      "trial": 0,
+      "averaged_layer_form": "172903328",
+      "passed": true
+    },
+    {
+      "k": 3,
+      "d": 2,
+      "trial": 1,
+      "averaged_layer_form": "55953600",
+      "passed": true
+    },
+    {
+      "k": 3,
+      "d": 2,
+      "trial": 2,
+      "averaged_layer_form": "32505560",
+      "passed": true
+    },
+    {
+      "k": 3,
+      "d": 3,
+      "trial": 0,
+      "averaged_layer_form": "138205676",
+      "passed": true
+    },
+    {
+      "k": 3,
+      "d": 3,
+      "trial": 1,
+      "averaged_layer_form": "181308780",
+      "passed": true
+    },
+    {
+      "k": 3,
+      "d": 3,
+      "trial": 2,
+      "averaged_layer_form": "164620944",
+      "passed": true
+    },
+    {
+      "k": 4,
+      "d": 2,
+      "trial": 0,
+      "averaged_layer_form": "54955984992",
+      "passed": true
+    },
+    {
+      "k": 4,
+      "d": 2,
+      "trial": 1,
+      "averaged_layer_form": "96023350944",
+      "passed": true
+    },
+    {
+      "k": 4,
+      "d": 2,
+      "trial": 2,
+      "averaged_layer_form": "157992840576",
+      "passed": true
+    },
+    {
+      "k": 4,
+      "d": 3,
+      "trial": 0,
+      "averaged_layer_form": "92996282016",
+      "passed": true
+    },
+    {
+      "k": 4,
+      "d": 3,
+      "trial": 1,
+      "averaged_layer_form": "193920794552",
+      "passed": true
+    },
+    {
+      "k": 4,
+      "d": 3,
+      "trial": 2,
+      "averaged_layer_form": "200391671128",
+      "passed": true
+    },
+    {
+      "k": 5,
+      "d": 2,
+      "trial": 0,
+      "averaged_layer_form": "637704236517120",
+      "passed": true
+    },
+    {
+      "k": 5,
+      "d": 2,
+      "trial": 1,
+      "averaged_layer_form": "380822890642560",
+      "passed": true
+    },
+    {
+      "k": 5,
+      "d": 2,
+      "trial": 2,
+      "averaged_layer_form": "86025904602624",
+      "passed": true
+    }
+  ],
+  "scope": "Independent exact normalization and complex phase checks; the all-k positivity theorem is analytic."
+}

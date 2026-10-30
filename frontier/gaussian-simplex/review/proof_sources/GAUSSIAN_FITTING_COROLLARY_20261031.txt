@@ -1,0 +1,74 @@
+GAUSSIAN FITTING: COVARIANCE CONVEXITY AND EXACT SCALE REDUCTION
+31 October 2026. strong_signal_prior_art. Separate corollary for review.
+
+Dependency: covariance concavity for every nu in P2(R^n), proved in
+ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt, SHA256
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+Assume n>=1. Let mu=E Y, M=E|Y-mu|^2, and
+  F(C)=sup E[X.Y], X~N(0,C), Y~nu, C>=0.
+Centering nu does not change F because E X=0. Independent coupling gives
+F>=0; Cauchy--Schwarz gives F(C)<=sqrt(M tr C). Also
+F(tC)=sqrt(t)F(C) for t>=0, and F is continuous on the closed PSD cone.
+
+1. The square is concave, including its zeros.
+For C,D>=0 and any 0<alpha<1, concavity and homogeneity give
+  F(C+D)>=sqrt(alpha)F(C)+sqrt(1-alpha)F(D).
+Taking the supremum over alpha gives
+  F(C+D)^2>=F(C)^2+F(D)^2.
+If just one value is zero, use alpha tending to0 or1; if both vanish,
+the conclusion follows from F>=0. Thus no division by a zero value or
+positive-rank assumption is needed. Degree-one homogeneity of F^2 now
+turns this superadditivity into concavity on the entire PSD cone.
+
+2. Joint convexity and existence of a nearest Gaussian.
+The exact centered second-moment identity is
+  W2^2(N(a,C),nu)=|a-mu|^2+tr C+M-2F(C).                 (1)
+Consequently the objective is jointly convex in the ordinary coordinates
+(a,C), with C>=0, and every minimizer has a=mu. This is not a claim about
+square-root coordinates or Bures interpolation.
+Continuity and the bound
+  W2^2(N(a,C),nu)>=|a-mu|^2+(sqrt(tr C)-sqrt(M))^2
+make every nonempty sublevel bounded in a and C. It is also closed, hence
+compact in this finite-dimensional parameter space. A minimum therefore
+exists when singular Gaussians are allowed. No uniqueness of the optimal
+covariance is asserted for arbitrary nu.
+
+3. Optimize scale exactly, then optimize shape.
+Let Q>=0 have tr Q=1. For t>=0, equation(1) at the optimal mean gives
+  W2^2(N(mu,tQ),nu)
+    =M+t-2sqrt(t)F(Q)
+    =M-F(Q)^2+(sqrt(t)-F(Q))^2.
+The minimizing scale is t=F(Q)^2, including t=0. Since the trace-one PSD
+set is compact and F is continuous, its shape maximum is attained. Hence
+  min_(a in R^n,C>=0) W2^2(N(a,C),nu)
+    =min_(C>=0) W2^2(N(mu,C),nu)
+    =M-max_(Q>=0,tr Q=1) F(Q)^2,                         (2)
+and every maximizing Q supplies the optimal covariance
+  C=F(Q)^2 Q.                                           (3)
+The shape problem maximizes a concave function over a compact convex set.
+This is an exact convex optimization formulation, not an evaluation oracle
+or a claim that evaluating F is computationally inexpensive.
+
+If M=0, nu is the point mass at mu, F is identically0, all shapes maximize
+with value0, and every formula(3) yields the same covariance C=0. The
+nearest law in this special case is the point mass itself. Directions Q
+with F(Q)=0 always have best scale0, even when other shapes do better.
+If M>0, some one-dimensional projection S=u.(Y-mu) is nonconstant. Its
+increasing quantile coupling with a standard normal Z has E[ZS]>0:
+half the expectation of (Z-Z')(S-S') is positive. Lifting that scalar
+coupling to Y shows F(uu^T)>0. Thus the optimal covariance then has positive
+trace, though it need not have full rank. Every minimizer is obtained from
+(3) by normalizing its positive trace. Moreover tr C<=M at any optimum.
+
+Important mean convention: with a fixed mean a instead of optimizing it,
+the minimum in(2) has the additional term |a-mu|^2. In particular a fixed
+zero-mean Gaussian against an uncentered target does not have value(2).
+
+Historical scope
+Mean separation and scale/ray optimization are elementary known context.
+Wang--Wei, arXiv2601.22355v2, sections3.2--3.4, already gives mean matching,
+unit-trace shape search, and the reconstruction r^2 cos^2(theta)Q, which
+equals(3). https://arxiv.org/html/2601.22355v2#S3.SS4
+The theorem-dependent additions here are ordinary joint covariance
+convexity and concavity of the shape objective F^2. No priority claim is
+made for any part of this note, and the main proof does not depend on it.

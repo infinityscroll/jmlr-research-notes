@@ -1,0 +1,34 @@
+BOUNDED PRIMARY COMPARISON — 31 October 2026
+
+The source search found no exact prior statement of ordinary covariance
+concavity for arbitrary fixed P2 targets. This is a bounded retrieval result,
+not exhaustive priority clearance or external verification.
+
+Heilman, Euclidean Partitions Optimizing Noise Stability, arXiv1211.7138v2,
+Section8, Conjecture3: balanced four-cell first-moment structure and stability.
+https://arxiv.org/html/1211.7138#S8
+
+Heilman, On the Propeller Conjecture, arXiv2610.32158v1, Section1.2:
+equal-mass first-moment optimization remains a stated open direction,
+particularly N=n+1. Its unrestricted-mass result has different constraints.
+https://arxiv.org/html/2610.32158v1#S1.SS2
+
+Mulgund, Stochastic Domination of Gaussian Maxima by the Regular Simplex,
+arXiv2609.28452v2, Theorem1.1 retains individual unit-variance constraints.
+https://arxiv.org/html/2609.28452v2
+
+Heilman, Stable Gaussian minimal bubbles (2026): the inspected abstract
+retains a finite-dimensional condition for m>3. Its small-noise regime is
+correlation near1, distinct from the near-zero regime here.
+https://link.springer.com/article/10.1007/s00526-026-03408-z
+
+Wang--Wei, arXiv2601.22355v2, Sections3.2--3.4: mean and scale reductions
+are known context; no ordinary covariance-convexity theorem was located
+in the inspected passages. The fitting supplement credits that overlap.
+https://arxiv.org/html/2601.22355v2
+
+The present endpoint attains the regular benchmark for m cells when
+ambient dimension is at least m-1. For lower dimensions it supplies a
+strict upper benchmark, not the exact maximizing value. Full noise
+correlation ranges are not settled. Detailed exploratory search records
+remain preserved in the original research workspace.

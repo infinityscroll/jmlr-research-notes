@@ -1,0 +1,261 @@
+COUPLED CYCLE-CACTUS CORES: A STRUCTURAL REAL-FIBER THEOREM
+30 October 2026. New independent derivation, awaiting independent audit.
+This is a strict extension of the declared recursive E/C/F subclass.
+It is NOT a complete structural characterization for arbitrary mixed graphs.
+No novelty or priority claim is made; bounded literature review is separate.
+
+MODEL AND GRAPH CLASS
+The model is the original unrestricted-variance real Gaussian SEM:
+  Sigma=T^(-T) Omega T^(-1), T=I-Lambda invertible, Omega>0,
+with directed support zeros in Lambda and bidirected support zeros in Omega.
+No equal variance, known error correlation, stability, or latent-rank
+assumption is imposed. Positivity is used only in its original sense.
+
+A coupled cactus core has these graph properties:
+(1) Every weak component of its directed graph is either an isolated vertex,
+    a coherently oriented simple cycle of length at least three, or a
+    coherently oriented cactus with at least two cycles.
+(2) In the latter case the underlying undirected graph is a connected cactus:
+    every edge is in exactly one simple cycle, all cycles have length>=3,
+    their block-cut incidence graph is a tree, and every cycle is oriented
+    consistently around itself. There are no directed bridges or chords.
+(3) No bidirected edge lies inside a nontrivial directed component.
+    Arbitrary bidirected edges are allowed BETWEEN distinct components.
+    All their allowed entries are free, subject only to Omega>0.
+Isolated vertices can have arbitrary bidirected relationships to each other
+and to the cyclic components. The directed components are determined from
+G; they are not fitted to a covariance matrix.
+
+For a simple-cycle directed component C, an outside vertex v is a partial
+error probe if
+  empty != (sib(v) intersect C) != C.
+Let u be the number of simple-cycle components with NO partial error probe.
+Multi-cycle cactus components are not counted in u.
+
+THEOREM
+For every coupled cactus core G, outside a proper algebraic subset of its
+admissible real parameter domain, its ENTIRE admissible real fiber has
+exactly 2^u elements. In particular G is generically globally identifiable
+if and only if every simple-cycle component has a partial error probe.
+Every multi-cycle cactus component is already generically rationally
+identified from its own observed marginal covariance.
+
+This theorem allows arbitrary unknown cross-component error correlations.
+It does not assume that the error blocks are independent. The dimension of
+the generic fiber is zero in this class even when u>0; the theorem counts
+all competing real positive-definite branches, not just local dimension.
+
+1. MARGINAL BLOCKS REMAIN VALID WITH CORRELATED ERRORS
+There are no directed edges between the core's directed components. Hence
+T is block diagonal. For each component C, exactly
+  Sigma_CC=T_C^(-T) Omega_CC T_C^(-1).
+Cross entries of Omega may be nonzero; they do not enter this marginal
+identity. This is a marginal statement, NOT a conditional-independence or
+Schur-complement factorization.
+
+Each isolated vertex has T_C=1. A simple cycle of length m>=3 with diagonal
+Omega_CC generically has exactly two admissible real branches, by the
+already proved cycle calculation in RECURSIVE_BLOCK_CLASS.txt, section 5.
+Both branches are invertible and have positive diagonal noise variances.
+The other branch is a rational function of the TRUE block parameters;
+it need not be rational in the marginal covariance alone.
+
+For any proposed choices of component branches put
+  M_C=T_C'^T T_C^(-T), M=blockdiag(M_C).
+Their full forced error covariance is exactly
+  Omega'=T'^T Sigma T'=M Omega M^T.
+Thus Omega'>0 automatically, because T' is invertible and Sigma>0.
+A tuple of marginal branches is globally admissible if and only if it
+satisfies the missing cross-component error entries. There is no further
+variance inequality that could silently discard a surviving branch.
+
+2. OVERLAPPING CYCLES IDENTIFY THE WHOLE CACTUS BLOCK
+Here and throughout this section K means (Sigma_CC)^(-1), the INVERSE OF
+THE MARGINAL covariance. It is not the CC principal block of Sigma^(-1).
+Write d_v=1/Omega_vv and a_pv=lambda_pv. Then
+  K=T_C diag(d) T_C^T.
+
+In a coherently oriented cactus, for every directed edge p->v,
+  K_pv=-a_pv d_v.                                      (2.1)
+There is no reverse arrow. Also p and v have no common child: such a child
+would create a triangle not coherently oriented, or a second cycle using
+an edge of the cactus. This proves (2.1) from the matrix product.
+
+If v is an articulation vertex, choose parents p,q that precede v on two
+different incident cycles. They are nonadjacent and their unique common
+child is v; any extra adjacency/common child would join distinct cactus
+blocks into another cycle. Thus
+  K_pq=a_pv a_qv d_v.
+Consequently, at a generic nonzero-edge point,
+  d_v=K_pv K_qv/K_pq.                                 (2.2)
+This rational formula forces the same d_v in EVERY admissible branch.
+It simultaneously gives all coefficients on arrows into v by (2.1).
+
+Every cycle in a connected multi-cycle cactus contains an articulation
+vertex. Each nonarticulation vertex i has exactly one child j within the
+component, and
+  K_ii=d_i+a_ij^2 d_j.
+Starting at known articulation precisions and walking backward along each
+cycle segment gives
+  d_i=K_ii-K_ij^2/d_j, a_ij=-K_ij/d_j.                 (2.3)
+Every vertex is reached before the next articulation or before returning
+to the starting one. All denominators are positive true precisions.
+These formulas recover d and every a, not just their infinitesimal values.
+They force all alternative branches to coincide. The exclusion K_pq=0
+removes only a proper algebraic exceptional set, since all cycle edges
+can be chosen nonzero and sufficiently small to keep T invertible.
+This proves generic rational identification of every multi-cycle block.
+
+The five-vertex figure-eight example consists of cycles (0,1,2) and
+(0,3,4). It is already outside the old E/C/F primitives: its directed graph
+is strongly connected, is not a single cycle, and has diagonal errors.
+It also cannot satisfy ordinary HTC without external vertices: every
+vertex has a parent, and every other vertex is half-trek reachable from
+it, so the first vertex in a required total order cannot choose a nonempty
+HTC set of earlier vertices. This is a limitation of HTC, not a claim that
+the example or the entire family is new in the literature.
+
+3. A SIMPLE CYCLE'S NONTRIVIAL ERROR-BASIS CHANGE IS GENERICALLY DENSE
+For a length m>=3 cycle, let M_C be the nonidentity branch transformation
+in section 1. Every entry of M_C is a rational function of the true cycle
+coefficients and diagonal noise precisions. Every such entry is generically
+nonzero. It suffices to give one admissible specialization where all are
+nonzero simultaneously.
+
+Choose all forward coefficients a=1/2 and all noise precisions d=1.
+The second branch has forward coefficient a'=1/a=2 and precision d'=a^2.
+Let P be the cyclic shift appropriate to T^T=I-aP. Then
+  M_C=(I-a^(-1)P)(I-aP)^(-1).
+Expanding the finite geometric series gives its cyclic coefficients:
+  coefficient of P^0 = (1-a^(m-2))/(1-a^m),
+  coefficient of P^k = a^(k-2)(a^2-1)/(1-a^m), 1<=k<=m-1.
+For m>=3 and a=1/2 all are nonzero. Hence entrywise density holds away
+from a proper algebraic exceptional set. The identity branch has exactly
+the usual identity support. The identified cactus/isolated blocks also
+have M_C=I, even though their actual T_C may not equal I.
+
+4. EXACT SUPPORT-SPACE COMPOSITION LEMMA
+For two distinct components C,D let E_CD be their allowed bipartite error
+support. The true Omega_CD has independent free entries on E_CD. For any
+fixed tuple of the finitely many marginal branches,
+  Omega'_CD=M_C Omega_CD M_D^T.                       (4.1)
+The coefficient of one true free entry (Omega_CD)_ij in the new entry
+(Omega'_CD)_rs is exactly
+  (M_C)_ri (M_D)_sj.                                 (4.2)
+The branch maps depend only on marginal block parameters, not on the
+cross-error entries. Therefore the missing-entry equations hold generically
+for this tuple if and only if, for every allowed (i,j) and missing (r,s),
+product (4.2) is identically zero.
+
+If at least one such coefficient is nonzero as a rational function, that
+missing-entry equation is a nonzero rational function of the full true
+parameters. Clearing denominators gives a proper algebraic exception to
+its failure. There are only finitely many branch tuples, so all tuples
+that fail this support test are absent simultaneously outside a proper
+algebraic set. The positive-definite domain is an open nonempty set of the
+free real entries and is not contained in any nonzero polynomial's zeros.
+Conversely, if all coefficients vanish identically, every missing entry
+holds, and positivity of the lifted full error covariance follows from
+congruence. This proves both directions globally.
+
+This argument is where the finite branch hypothesis matters. An infinite
+union of proper subspaces cannot be replaced by a finite union. We do not
+apply this lemma to uninstrumented length-two cycles or arbitrary infinite
+base fibers.
+
+5. THE GRAPH CRITERION AND EXACT REAL BRANCH COUNT
+Suppose a simple-cycle component C is flipped to its other branch and has
+a partial error probe v in another component D. Choose i in C with edge
+i<->v and r in C without edge r<->v. The coefficient of Omega_iv in the
+forbidden output entry Omega'_rv is
+  (M_C)_ri (M_D)_vv.
+The first factor is generically nonzero by section 3. The second is 1
+if D is not flipped, and is generically nonzero if D is a flipped simple
+cycle. Thus EVERY branch tuple flipping C fails a missing-entry equation
+generically, regardless of what happens in the other components.
+
+Now suppose C has no partial error probe. For every outside vertex v,
+its allowed neighbors in C are either all of C or empty. Between C and
+an unflipped component D the allowed pattern is consequently C x S for
+some subset S of D. An arbitrary left multiplication M_C preserves that
+support. Between TWO unprobed simple cycles C,D the allowed pattern must
+be either empty or the full C x D: column-completeness from C and
+row-completeness from D force this. Arbitrary transformations on both
+sides preserve it. Unflipped components cause no change.
+
+Therefore every subset of the u unprobed simple cycles survives, and no
+other tuple survives generically. Each surviving tuple gives a distinct
+invertible T' and a positive-definite Omega'=T'^T Sigma T'. Hence there
+are exactly 2^u distinct ADMISSIBLE REAL parameter points, as stated.
+The formula is stronger than merely counting complex roots or Jacobian
+rank. It requires no spectral stability restriction.
+
+6. RECURSIVE COMPOSITION STRICTLY EXTENDS THE PREVIOUS CLASS
+Start with any coupled cactus core, including an empty core. Adjoin the
+previous E/C/F blocks in order, with arbitrary forward directed arrows
+from earlier vertices and no error correlation crossing one of these NEW
+block boundaries. The core's own cross-component error correlations stay
+arbitrary. Treat the entire core as the first block in the old exact
+conditional-fiber product lemma.
+
+That lemma remains applicable because it never required the earlier
+block to be identified or to have a special internal graph. Thus:
+* The resulting graph is generically globally identified iff u=0, every
+  new C block has a partial external directed parent, and every new F
+  block passes the old vertex-disjoint linking criterion.
+* If no F test fails and no uninstrumented two-cycle is adjoined, the
+  generic admissible real fiber has exactly 2^(u+v) points, where v is
+  the number of newly adjoined uninstrumented cycles of length>=3.
+* The old affine fiber dimensions and uninstrumented two-cycle dimensions
+  still add; any such failure gives an infinite fiber.
+With empty core this includes every previously declared E/C/F graph.
+It also includes confounded mutually probing cycle components and all
+multi-cycle cactus cores, which that declared class excludes.
+
+7. GRAPH-ONLY PROCEDURE AND HONEST LIMIT
+For the core, connected components and biconnected components of the
+underlying directed skeleton detect the cactus structure in linear graph
+traversal time. Check each cycle's length and coherent orientation, reject
+internal bidirected edges, then scan outside bidirected neighborhoods for
+each simple-cycle component. A direct implementation takes O(|V|^2+|D|+|B|)
+time; no covariance input or polynomial solving is part of the criterion.
+The recursive extension uses the existing supplied block certificate and
+max-flow linking tests. All operations terminate with explicit finite
+graph data. Their completeness is proved only for this declared class.
+
+The full finish line remains unmet. Directed edges between correlated
+core components, partially confounded interiors, general overlapping
+cycle graphs, and positive-dimensional primitive fibers are not covered.
+The four-vertex obstruction below shows why dropping the length condition
+and blindly applying the same partial-probe rule is wrong. The finite
+support-composition lemma suggests a route through explicit branch-change
+supports, but does not itself supply them for arbitrary mixed graphs.
+
+8. LENGTH-TWO CYCLES: AN EXACT GENERIC BOUNDARY
+For a two-cycle write T=[[1,-a],[-b,1]], with ab!=1 and ab!=0.
+Let P swap the two coordinates and D=diag(-1/a,-1/b). Then
+  T'=T P D=[[1,-1/b],[-1/a,1]], M=T'^T T^(-T)=D P.
+This is a nontrivial admissible branch with diagonal errors. Its change
+matrix is a scaled permutation, not entrywise dense.
+
+Take two disjoint two-cycles on {0,1} and {2,3}, with only the two cross
+bidirected edges 0<->2 and 1<->3. Each cycle has partial outside probes.
+Yet simultaneously applying the reciprocal swap in both blocks preserves
+the diagonal 2x2 cross-error support. It preserves positive definiteness
+by congruence and changes T generically. Thus this four-vertex graph is
+NOT generically globally identifiable, despite the tempting partial-probe
+condition. The exact fixture is TWO_CYCLE_LENGTH_BOUNDARY.json.
+This is an obstruction to extending the NEW theorem beyond its assumptions,
+not a refutation of a previously established literature criterion.
+
+VALIDATION
+exact_coupling_checks.py uses only Python Fraction arithmetic. It checks
+2048 flip/support-space cases covering all 512 cross-error supports between
+two three-cycles, five whole positive-definite covariance examples with
+one/two/four surviving branches, 24 generated cactus reconstructions, the
+five-vertex overlapping-cycle fixture, and the length-two simultaneous-swap
+obstruction. These calculations supplement the uniform proof; finite
+instances are not being substituted for generic completeness.
+
+All previous files and the Gaussian releases are preserved. No paid jobs,
+publication or external correspondence were performed.

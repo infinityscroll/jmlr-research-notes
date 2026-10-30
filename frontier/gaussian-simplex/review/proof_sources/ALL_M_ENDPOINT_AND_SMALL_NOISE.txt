@@ -1,0 +1,127 @@
+ALL-CELL BALANCED ENDPOINT AND SMALL-CORRELATION CONSEQUENCES
+31 October 2026. Root implication note.
+Depends on the all-dimensional covariance-concavity proof pinned at
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+The main proof has passed independent end-to-end reviews in the active
+session; detailed audit records and the transfer recheck accompany it.
+No full-correlation Standard Simplex theorem or sharp MAX-m-CUT claim.
+
+A. Exact balanced first-moment theorem, every m>=3
+Let X be standard Gaussian in R^N, let f_i>=0, sum_i f_i=1 and E f_i=1/m.
+Write b_i=E[X f_i(X)], W=sum_i|b_i|^2, and
+  mu_m=E max_(1<=i<=m) Z_i,  w_m=mu_m^2/(m-1),
+where the Z_i are independent standard normals. Then W<=w_m.
+For N>=m-1 equality holds precisely when f is the regular-simplex winning
+partition, up to an orthogonal map, labels and null sets. For N<m-1 the
+benchmark is strict. Relaxed assignments and arbitrary measurable cells
+are included; no equal-radius assumption on arbitrary centroid vectors
+is imposed.
+
+Proof. If W=0 the claim is immediate. Otherwise normalize B_i by
+B_i=sqrt(m(m-1)/W)b_i, and let K be their Gram matrix. Then K1=0 and
+tr K=m(m-1). Balanced score duality gives
+  sqrt(m(m-1)W)<=J_m(K),
+  J_m(K)=inf_(sum h=0)E max_i(X_i+h_i), (X_i)~N(0,K).
+This is the maximal covariance functional for the uniform simplex target,
+so the main theorem makes J_m concave on its whole PSD domain.
+Average K over all label permutations. The result is exactly
+K_*=mI-11^T, since zero row sums and the trace fix its diagonal and
+its off-diagonal entries. Permutation invariance and concavity give
+  J_m(K)<=J_m(K_*)=sqrt(m)mu_m.
+This proves the bound.
+
+B. Global quantitative covariance and centroid coercivity
+The main Hessian bound, or the separately audited local theorem
+ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt, supplies c,r>0 with
+J_m(K_*)-J_m(K)>=c||K-K_*||_F^2 in a neighborhood of K_*.
+The trace-normalized PSD domain is compact. Fix theta>0 small enough
+that (1-theta)K_*+theta K lies in that neighborhood for EVERY K in the
+domain. Concavity gives
+  J_m(K_*)-J_m(K)>=g_m||K-K_*||_F^2, g_m=c theta>0.        (1)
+In particular equality in the endpoint score bound forces K=K_*.
+The pointwise maximum inequality then forces f to choose the unique
+regular winning label off its null tie hyperplanes. Rank m-1 excludes
+endpoint equality in smaller ambient dimensions.
+
+Let O_m be the regular centroid orbit, allowing orthogonal transformations
+and label permutations. For N>=m-1 there is a finite K_m such that
+  dist_F(b(f),O_m)^2<=K_m(w_m-W).                         (2)
+One valid coefficient from(1) is
+  K_m=2+2sqrt(w_m)/(m g_m sqrt(m(m-1))),
+or any larger number. To verify it, set L=m(m-1). The score inequality and
+difference of square roots give
+  ||K-K_*||_F^2<=[sqrt(L)/(g_m sqrt(w_m))](w_m-W).
+Orthogonal Procrustes gives
+  min_(O in O(N))||B-B_*O||_F^2
+    =sum_(j=1)^(m-1)(sqrt(lambda_j(K))-sqrt(m))^2
+    <=||K-K_*||_F^2/m.
+Rescale B and B_* by sqrt(W/L) and sqrt(w_m/L). The two-square inequality,
+W<=w_m and (sqrt(W)-sqrt(w_m))^2<=w_m-W yield the displayed K_m. W=0 is
+immediate. This proves hypothesis H_m from the existing transfer notes
+for EVERY fixed m, with a constant independent of ambient dimension.
+These constants are finite and constructive from the analytic derivatives;
+no numerical value or uniform-in-m bound is asserted in this note.
+
+C. The exact small-noise Gaussian conclusions
+Combining(2) with the already audited finite-cell transfer gives, for each
+fixed integer m>=3, positive numbers epsilon_m^+ and epsilon_m^- depending
+only on m such that:
+
+Positive correlation. For 0<rho<=epsilon_m^+, among all balanced relaxed
+m-assignments in any finite dimension N>=m-1, the regular simplex uniquely
+maximizes
+  S_rho(f)=sum_i E[f_i(X)f_i(Y)],
+where X,Y are standard Gaussians with cross-covariance rho I.
+
+Negative correlation. For -epsilon_m^-<=rho<0, among all relaxed pairs
+f,h with E f_i=E h_i=p_i and a FREE common probability vector p, one common
+regular-simplex partition uniquely minimizes
+  B_rho(f,h)=sum_i E[f_i(X)h_i(Y)].
+At equality both assignments equal that SAME partition, up to one common
+orthogonal transform, labels and null sets. In particular the single-
+partition minimum S_rho(f) needs no imposed mass constraints.
+For N<m-1 the same regular benchmark is strict in both comparisons.
+The intervals may be different and shrink with m. Neither is claimed to
+extend to the full positive or negative correlation range.
+
+Dependencies for this application, relative to the stochastic folder:
+  FINITE_CELL_COERCIVITY_TO_NOISE_TRANSFER_20261030.txt;
+  finite_cell_transfer_audit_20261031/AUDIT.txt;
+  negative_free_mass_20261031/FREE_COMMON_MASS_NEGATIVE_TRANSFER_AUDIT_20261031.txt;
+  negative_free_mass_20261031/EXPLICIT_LOCALIZATION_20261031.txt.
+The existing explicit numerical intervals for m=4 remain separate frozen
+results. They have not been silently assigned to every m.
+
+The positive ambient reduction is Heilman--Tarter arXiv2011.05583v2,
+Theorem1.9. The negative matching-FREE-mass bilinear reduction is Heilman
+arXiv2209.11216v1, Problem7.1 and Theorem7.9; it is not the distinct
+fixed-mass 2m-2-dimensional theorem. The transfer review checks compactness,
+purification, competitive mass positivity, equality recovery and dimensions.
+
+D. Discrete consequence and exact limits
+At each fixed admissible rho in the relevant intervals, the usual
+low-influence m-candidate Plurality is Stablest conclusion follows by
+Isaksson--Mossel arXiv0903.3362v3, Theorem7.1 and Lemma7.3. Positive rho
+requires balanced output means. The negative single-rule lower bound
+allows arbitrary output means. The conclusion has additive epsilon and a
+sufficiently small influence threshold; it is not exact optimization at a
+finite electorate size. For a uniform m-symbol input channel, restrict
+negative rho also to rho>=-1/(m-1), as required for that channel to exist.
+No sharp MAX-m-CUT hardness ratio follows from a merely near-zero interval.
+
+E. Historical scope, not a novelty certificate
+Heilman arXiv1211.7138v2(2014), Section8, Conjecture3 explicitly isolates
+the balanced four-cell first-moment problem and its needed stability.
+The present endpoint and coercivity cover it and every larger cell count.
+Heilman arXiv2610.32158v1(23 October2026), introduction after Theorem1.3,
+still distinguishes the measure-constrained Standard Simplex problem from
+the newly solved unrestricted Propeller problem and says four-and-higher
+noise cases remain open. These are relevant primary status statements;
+they do not constitute an exhaustive priority search for this theorem.
+
+The separate recent Weak Simplex/mean-width results impose equal score
+variances or equal codeword radii. The present balanced theorem imposes
+cell masses and allows arbitrary centroid radii. The unrestricted propeller
+bound optimizes without masses. None of those results is being relabeled
+as the theorem proved here. External expert assessment and broader priority
+review remain outstanding.

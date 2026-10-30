@@ -1,0 +1,98 @@
+Pure-cell mixing: independent layer audit and trace compensation
+30 October 2026. Internal proof, awaiting complete independent checks.
+
+This is a three-block theorem. It does not settle Marcus for arbitrary numbers of blocks. It does not use positivity of the refuted square-power seed or assume positivity of the cubic repair.
+
+1. COEFFICIENT AND TWIRL
+For a 3 by 3 transport M with nonnegative integer entries and margins k, let h(M) be its number of entries equal to k. Such entries lie in distinct rows and columns. There can be 0,1,or3 of them, because two force the remaining one. Define
+  r_i=2-sum_j(1_{M_ij=k}+1_{M_ji=k}),
+  b_i=3r_i/sum_j r_j when the denominator is nonzero,
+and b_i=0 otherwise. Then sum_i r_i=6-2h, so the only zero denominator is h=3, exactly k times a permutation matrix, or the wreath subgroup H=S_k wreath S_3.
+Every r_i is nonnegative. Block relabeling permutes them, so the H-conjugation average of b_0 is one off H and zero on H. Ordinary row swaps, ordinary column swaps, and transposition preserve b_0. This is also the pointwise limit of the finite-power coefficients as the power tends to infinity, but no positivity is imported from those finite powers.
+
+Put V=C^d and E=Sym^k(bar V) tensor Sym^k V tensor Sym^k V, with the inherited tensor Hilbert norm. Let
+  Q=sum_pi b_0(M(pi)) (P_pi)^(T_block0),
+restricted to E, and Q_l retain M_00=k-l. The coefficient has internal-block bi-invariance, so Q is supported on E. The layer Q_0 is zero, since the distinguished row and column are then pure.
+
+2. EXACT LAYER NORMALIZATION
+For p=0,...,l, let C_p^(l) be the literal fixed-slot trace contracting p dual slots with the first ordinary block and l-p with the second. Its ordinary output group sizes are (k-p,k-l+p); the remaining dual degree is k-l. There are no differential/factorial multipliers in C_p. Embed the ordinary outputs in a common n-fold tensor power, n=2k-l, and set
+  E_p=binom(k,p)binom(k,l-p) C_p^(l).
+For a canonical ordinary subset A_p of size k-p, the exact layer formula is
+  Q_l=(k!)^2/(k-l)! sum_{p,q=0}^l E_p^* T_pq E_q,                (1)
+  T_pq=sum_{sigma in S_n} f_l(A_p,sigma A_q) P_sigma,
+with the identity on the remaining dual block understood.
+
+Counting check: choose the l crossing first-block slots at each end, the ordinary crossing slots for p,l-p and q,l-q, and the two cross bijections. The remaining first-block permutation has (k-l)! choices. The common factor is
+  binom(k,l)^2(l!)^2(k-l)!=(k!)^2/(k-l)!,
+while the ordinary choices give the two binomial factors in each E_p. Internal symmetry identifies these diagrams with the stated fixed-slot trace maps. The remaining ordinary permutations are counted once in T_pq. This establishes (1), including cross-type normalization.
+
+3. ALL SUBTERMINAL LAYERS ARE POSITIVE
+Assume 1<=l<k. The distinguished row and column are not pure, so r_0=2. Hence f_l=1 if no ordinary cell equals k, and f_l=3/2 if one does. An ordinary cell can equal k only when p,q are boundary types in {0,l}. For a boundary type define its uncontracted size-k subset
+  U(A)=A when p=0, and U(A)=A^c when p=l.
+A pure ordinary cell occurs exactly when U(A)=U(B). Thus on the ENTIRE union of subset levels,
+  f_l(A,B)=1+(1/2) kappa(A,B),
+  kappa(A,B)=1_{p,q boundary} 1_{U(A)=U(B)}.                     (2)
+This is a positive Gram kernel: its features are the constant feature and the boundary one-hot vector e_{U(A)}; the latter feature is zero on interior types. It is not merely positivity of each separate subset-level block.
+
+For completeness, positivity transfers to the group operators without an untracked normalization. If Phi is the equivariant feature map for (2), let R_sigma be its permutation representation, and J_p v=Phi(A_p) tensor v. Then the block operator T in (1) is
+  T_pq=J_p^* [sum_sigma R_sigma tensor P_sigma] J_q.
+The middle sum is n! times the orthogonal projection onto invariant vectors, hence is positive. Equivalently this is the standard positive-kernel/group-convolution correspondence, with its full group factor displayed.
+
+An explicit sum of squares is useful for compensation. Let P_n be the orthogonal full ordinary symmetrizer and put
+  A_l=P_n sum_p E_p.
+At the two boundary types reorder the remaining ordinary outputs so that the shortened group of size k-l comes first and the uncontracted group of size k comes last. Write
+  B_l=J_0 C_0^(l)+J_l C_l^(l)
+for the sum of these two pure traces in the common codomain
+  Sym^(k-l)(bar V) tensor Sym^(k-l)V tensor Sym^k V.
+Here J_0,J_l denote these reorderings, not the auxiliary feature embeddings above.
+
+For the constant kernel in (2), T_pq=n!P_n. For its delta part, there are exactly k!(k-l)! permutations carrying a prescribed uncontracted k-subset to another. On tensors internally symmetric in the two output groups, every such permutation is the same reordered identification. Both boundary E_p have coefficient binom(k,l). Consequently (1) gives the exact identity
+  Q_l= [(k!)^2 n!/(k-l)!] A_l^*A_l
+          +(1/2)(k!)^3 binom(k,l)^2 B_l^*B_l,  1<=l<k.          (3)
+In particular every such layer is PSD in EVERY dimension.
+
+4. THE TERMINAL LAYER: ONLY TWO AGGREGATE TRACE CHANNELS
+At l=k there are three cases:
+  p,q both interior: no pure cell, r_0=2, coefficient1;
+  exactly one boundary: one pure cell, r_0=1, coefficient3/4;
+  both boundary: a block permutation, coefficient0.
+These coefficients are independent of the remaining ordinary permutation. Every T_pq is therefore its coefficient times k!P_k. Define
+  A=sum_{p=1}^{k-1} binom(k,p)^2 P_k C_p^(k),
+  B=B_k=C_0^(k)+C_k^(k),
+both taking values in Sym^k V. Then
+  Q_k=(k!)^3 [A^*A+(3/4)(A^*B+B^*A)]
+     =(k!)^3 [(A+(3/4)B)^*(A+(3/4)B)-(9/16)B^*B].              (4)
+The last coefficient kernel is indeed indefinite for k>=2: a boundary/interior principal block is [[0,3/4],[3/4,1]], of determinant -9/16. Thus separate-layer positivity would be false.
+
+The maps in (4) are U(d)-equivariant into the irreducible Sym^k V. By Schur's lemma Q_k annihilates every isotypic component other than Sym^k V; in the standard highest-weight indexing this is c=0,b=0. Its multiplicity matrix has rank at most two. This confirms the proposed sector simplification, without relying on it for the following bound.
+
+5. A SINGLE TRACE COMPENSATES THE NEGATIVE CHANNEL
+Let tau:bar V tensor V tensor Sym^k V -> Sym^k V contract the first two factors. Its exact operator norm is sqrt(d): tau tau^*=dI. Literal fixed-slot contraction gives
+  tau B_(k-1)=B_k=B.                                         (5)
+There is no k or factorial factor in (5). Each summand simply completes its k-1 pure traces with the remaining dual/short ordinary pair. Hence
+  ||B x||^2<=d ||B_(k-1)x||^2.
+Taking just the boundary-delta square of Q_(k-1) in (3), and completing the square in (4), gives the explicit lower bound
+  <x,Qx> >= (k!)^3 ||(A+(3/4)B)x||^2
+      +(k!)^3 [k^2/2-9d/16] ||B_(k-1)x||^2,                  (6)
+after dropping the other positive squares. The omitted difference also contains
+  (9/16)(k!)^3 [d||B_(k-1)x||^2-||tau B_(k-1)x||^2]>=0.
+Therefore the pure-cell seed is PSD whenever k>=2 and d<=8k^2/9.
+In particular it is PSD at every d<=2k for ALL k>=3, since
+  k^2/2-9(2k)/16=k(4k-9)/8>0.
+This uses positivity of the entire subterminal layers and an actual trace relation; the indefinite terminal layer has not been discarded.
+
+6. k=2 AND THE THREE-BLOCK CONSEQUENCE
+For margins2, each mixed row has square sum2 and each pure row square sum4. Thus the square-power r_i is exactly twice the present r_i, and the pure coefficient coincides with the previously audited analytic quadratic seed. Its PSD proof in d<=5 is in exact_audit/ANALYTIC_THREE_QUADRATIC_PROOF.txt. Only d<=4 is needed here.
+A short version at d=4 is as follows. Put C=B_1, Cs=P_3 C, Ch=(I-P_3)C, S=B_2, T=P_2 C_1^(2). The exact seed is
+  112||Cs||^2+16||Ch||^2+48 Re<S,T>+128||T||^2.
+Write U=tau Cs, W=tau Ch. Direct symmetric-index tracing gives U=(S+4T)/3, W=2(S-2T)/3, and at d=4 both restricted trace norms squared equal2. Substitution yields the lower bound
+  112||U||^2-20 Re<U,W>+4||W||^2
+       =4||W-(5/2)U||^2+87||U||^2>=0.
+Smaller dimensions embed isometrically. The case k=1 is the identity per(A)=per(G).
+
+Finally, the conjugation average from Section1 gives
+  sum_{pi outside H}P_pi=Twirl_H(Q^(T_block0)).
+PSD of Q implies nonnegative expectation of this twirl on products of three symmetric block tensors, by the standard whole-block partial-transpose identity. The expectation is the positive normalization (k!)^3 times the Fock permanent defect. Thus the three-block Marcus inequality holds in Gram rank d<=2k for every k.
+The independently proved two-block normal-ordering inequality and rank reduction in analytic/RANK_REDUCTION.txt extend it to EVERY Gram rank: project the last block's k vectors onto the span of the first two blocks; the removed orthogonal part contributes a nonnegative multiple of the already nonnegative two-block defect. Projection cannot increase a negative counterexample's defect, and the projected rank is at most2k.
+
+Consequently the candidate proof establishes Marcus for THREE blocks of EVERY size, conditional only on the explicit identities audited here and the already checked rank-reduction argument. It is not a proof for four or more blocks, not an external priority claim, and not an equality characterization. Independent checks should focus on (1), the boundary-delta factor in (3), and the literal trace identity (5).

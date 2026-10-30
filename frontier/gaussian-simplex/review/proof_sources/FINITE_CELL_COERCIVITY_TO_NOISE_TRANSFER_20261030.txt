@@ -1,0 +1,195 @@
+FINITE-CELL CENTROID COERCIVITY IMPLIES SMALL-POSITIVE-NOISE OPTIMALITY
+30 October 2026. Root derivation; independent audit pending.
+
+Purpose and limits
+This is a conditional transfer theorem, not an unconditional solution for
+five or more cells. It identifies one finite-dimensional endpoint inequality
+which suffices for the full measurable-partition noise problem near zero.
+The four-cell application has already been proved separately. Priority of
+this abstract formulation has not been cleared. No frozen source is changed.
+
+Statement
+Fix an integer m>=3 and put d=m-1. Work in H={x in R^m:sum x_i=0},
+identified isometrically with R^d. Set v_i=e_i-(1/m)1, so
+<v_i,v_j>=delta_ij-1/m. Let g be the regular-simplex winning-score partition.
+Write mu_m=E max of m independent standard normals, alpha=mu_m/(m-1),
+c_i=alpha v_i and w=sum_i||c_i||^2=mu_m^2/(m-1).
+These are the Gaussian centroids and first-moment value of g: symmetry
+forces c_i=alpha v_i, and sum_i<c_i,v_i>=mu_m fixes alpha.
+Let O be the orthogonal orbit of the centroid matrix c, including label
+permutations, which are already implemented by orthogonal simplex symmetries.
+
+Hypothesis H_m: there is a finite K>0 such that every balanced relaxed
+assignment f on R^d, with f_i>=0,sum f_i=1,E f_i=1/m, satisfies
+  dist_F(b(f),O)^2 <= K (w-W(f)),
+  b_i(f)=E[X f_i(X)], W(f)=sum_i||b_i(f)||^2.
+Replace K by max(K,1). In particular H_m implies W(f)<=w.
+
+Conclusion: there exists rho_m>0, depending only on m and K, such that
+for every finite N>=m-1 and every 0<rho<=rho_m, g times unused coordinates
+uniquely maximizes balanced m-cell Gaussian noise stability, even among
+relaxed assignments. Equality is up to rotation, labels and null sets.
+For N<m-1 the same benchmark is strict. The corresponding fixed-rho
+low-influence m-candidate plurality corollary follows by Isaksson--Mossel.
+Dimension reduction uses Heilman--Tarter arXiv2011.05583v2 Theorem1.9.
+No positive-noise assertion is made without H_m.
+
+1. Same-frame L1 stability follows from H_m; it is not another hypothesis.
+Choose a nearest c in O and let g be its winning-score assignment. Put
+Delta=w-W(f), q=||b-c||_F^2 and d0=half sum_i||f_i-g_i||_1.
+The regular linear assignment cost J satisfies exactly
+  2J=Delta+q <=(1+K)Delta.
+Let a=||c_i-c_j||=sqrt(2)alpha>0, P=m(m-1)/2, and
+  beta=P sqrt(2/pi)/a.
+The gap Gamma between the two largest regular linear scores obeys
+Pr(Gamma<=t)<=beta t, by a union bound over P centered Gaussian pair
+differences of standard deviation a. With p(x)=1-f_winner(x),
+J>=E[p Gamma], E p=d0, and 0<=p<=1. Layer cake gives
+  J >= integral_0^infinity (d0-beta t)_+ dt = d0^2/(2beta).
+Thus, in exactly the same centroid-minimizing frame,
+  d0^2 <= L Delta, L=beta(1+K).
+If Delta=0, then q=J=0, and strict winning-score gaps off null hyperplanes
+already imply f=g. All later arguments may therefore assume Delta>0.
+
+2. Global saturated noise gap for every finite cell count.
+Let G_i=T_rho g_i, s=sqrt(1-rho^2), and z_ij=(v_i-v_j).x/sqrt(2).
+In winner cell i, subtract its mean from the independent-normal score
+representation. The j mean is -delta, delta=sqrt(2)rho z_ij/s, and the
+other m-2 means are nonpositive. Conditional on their maximum M, the gap
+is integral_M^infinity H_delta(u)du, where
+  H_delta(u)=phi(u)Phi(u+delta)-phi(u+delta)Phi(u)>0 for delta>0.
+Lowering the other means increases this gap. With all those means zero,
+Pr(M<=0)=2^(-(m-2)). For u,delta in [0,1],
+  partial_delta H_delta(u)>=phi(1)phi(2).
+Monotonicity in the j mean handles delta>=1. Therefore
+  G_i-G_j >= c_m min(sqrt(2)rho z_ij/s,1),
+  c_m=2^(-(m-2))phi(1)phi(2)=exp(-5/2)/(2^(m-1)pi).
+
+3. A global weighted-moment inequality in R^d.
+Put psi(x)=exp(||x||^2/8) and
+  w_rho(x)=min(rho min_(i<j)|e_ij.x|,1), e_ij=(v_i-v_j)/sqrt(2).
+For |h|<=1 and 0<rho<=1, a one-plane Fenchel estimate gives
+  integral |h|psi <=lambda integral |h|w_rho+B_d/(lambda rho),
+  B_d=P[2^((d-1)/2)phi(0)exp(1/4)+2^(d/2-2)].
+Indeed, split x=ue+z at |u|=1. On |u|<=1, integrating the triangular
+positive part of exp(1/8)exp(||z||^2/8)-lambda rho |u| and using
+phi(u)<=phi(0) gives the first constant divided by lambda rho.
+On |u|>1, the saturated one-plane weight is >=rho, and
+(A-B)_+<=A^2/(4B), together with E psi^2=2^(d/2), gives the second.
+Sum over all P planes. Optimization over lambda yields
+  (integral |h|psi)^2 <=(4B_d/rho) integral |h|w_rho.
+
+For h_i=f_i-g_i define D=-sum_i<h_i,G_i>. Saturation makes D>=0,
+strict unless f=g a.e., and sum_i|h_i|=2p at a reference winner.
+Consequently, with M2=8B_d/c_m,
+  sum_i (integral |h_i|psi)^2 <= M2 D/rho.
+Set A2=max(1,m/4)M2, A=sqrt(A2), z=sqrt(D/rho).
+Cauchy--Schwarz gives d0<=Az. For R>=2 and
+epsilon_R=(1+R)exp(-R^2/8), the pointwise bound
+(1+|x|)1_(|x|>R)<=epsilon_R psi implies both
+  half sum_i |E[h_i1_(|X|>R)]| <=epsilon_R Az,
+  (sum_i||E[Xh_i1_(|X|>R)]||^2)^(1/2) <=epsilon_R Az.
+No bounded-support or stationarity assumption is involved.
+
+4. The quadratic Mehler remainder in arbitrary fixed dimension.
+For |rho|<=1/16, put Lxy=|x|^2+|y|^2 and ell=log M_rho(x,y).
+The explicit Mehler formula gives
+  |ell'|<=d+Lxy, |ell''|<=2d+2Lxy, M_rho<=2^d exp(Lxy/34).
+The last exponent follows from |x.y|<=Lxy/2 and
+|rho|/[2(1+|rho|)]<=1/34. For the derivatives, the dimension terms
+are at most d and 2d respectively, and the remaining coefficients of
+Lxy are less than1 and2. These bounds hold for either sign of rho.
+Let t0=13/136 and
+  C_d=2^(d-1)[d^2+2d+(2d+2)/(2t0)+1/t0^2].
+Using e>2 in the maxima of Lxy exp(-t0 Lxy) and Lxy^2 exp(-t0 Lxy),
+Taylor's theorem proves
+  |M_rho-1-rho x.y|<=C_d rho^2 psi(x)psi(y).
+For balanced h this yields
+  0<=R_quad=sum_i sum_(k>=2)rho^k||P_k h_i||_2^2 <= C_Q rho D,
+  C_Q=C_d M2.
+The exact comparison is S_rho(f)-S_rho(g)=-2D+rho q+R_quad.
+This controls the perturbation's quadratic remainder, not the total
+difference of the two assignments' higher-chaos energies.
+
+5. Exact local repair, available for every fixed m.
+Choose R>=3. Truncate f to g outside B_R. Its mass error vector sums to
+zero; write u for half its l1 norm, so u<=d0 and u<=epsilon_R Az.
+For each excess-to-deficit label pair i,j, use the facet anchor v_i+v_j.
+At that anchor the i,j scores tie and exceed every other score by1.
+Use a tangential (d-1)-ball of radius r=1/8 and a donor-side normal slab
+of width tau<=r. All these oriented supports are disjoint off null sets,
+lie in B2, and stay in the correct reference cell: the other gaps drop
+by at most sqrt(2)*sqrt(2)r=1/4. Distinct unoriented anchors are at least
+sqrt(2) apart. Opposite orientations of one anchor have disjoint interiors.
+
+Let V_(d-1) be the unit (d-1)-ball volume and set
+  c_A=V_(d-1)8^(-(d-1))(2pi)^(-d/2)exp(-2)>0.
+Each slab has Gaussian mass at least c_A tau. Take tau=(d0+2u)/c_A.
+If d0<=c_A/24 then tau<=1/8, and the donor's available mass is at least
+c_A tau-d0=2u. Transfer the required pair mass proportionally from f_i
+to f_j there. The resulting f' is balanced, remains simplex-valued and
+equals g outside B_R. If u=0 no transfers are needed.
+
+Write b'=b(f'), e=||b'-b||_F and J'=w-sum_i<c_i,b'_i>.
+The centroid pair distance a<=1 since a^2=2w/(m-1), m>=3 and w<=1
+by Parseval. Every repair point lies in B2, hence also in B3. The same
+coarse bounds as in the four-cell proof therefore give
+  J'<=J_in+C_J epsilon_R z^2, e<=6epsilon_R Az,
+  C_J=3A2/c_A,
+where J_in is the regular linear cost of f restricted to B_R.
+
+6. Coercivity survives repair in the ORIGINAL minimizing frame.
+The distance to O is one-Lipschitz. H_m applies to f', so with r0=sqrt(q),
+  2J'=(w-||b'||^2)+||b'-c||^2 >=(1+1/K)(r0-e)_+^2.
+Young's inequality with parameter1/(2K) gives
+  q<=(2-sigma)J'+(2K+1)e^2, sigma=1/(K+1).
+Consequently
+  rho q<=(2-sigma)rho J_in+E_R D,
+  E_R=2C_J epsilon_R+36(2K+1)A2 epsilon_R^2.
+No new alignment of f' is imposed on its linear cost.
+
+7. Compact potential comparison, then a nonzero interval.
+Conicality writes G_i(x)=H_i(t x), H_i(y)=E g_i(y+Z),
+t=rho/sqrt(1-rho^2). Gaussian differentiation gives grad H_i(0)=c_i
+and every Hessian operator norm is <=sqrt(2), in any dimension.
+Thus on B_R, for rho<=1/16,
+  ||grad(G_i-1/m-rho c_i.x)||<=(1+3R)rho^2.
+The reflection swapping regular vertices i,j fixes their whole bisector
+and the other vertices. Integrating the pair remainder along the normal
+from that plane gives, in winner cell i,
+  G_i-G_j>=rho(c_i-c_j).x(1-B_R rho), B_R=2(1+3R)/a.
+Therefore rho J_in<=D/(1-B_R rho).
+
+First choose a finite R>=3 with E_R<=sigma/4; such an R exists because
+epsilon_R tends to zero. Then choose any positive rho_m satisfying
+  rho_m<=min(1/16, sigma/(16B_R), sigma/(4C_Q), c_A^2/(576L)).
+For a noise-competitive assignment Hermite positivity and Parseval give
+Delta<=(1-1/m)rho<=rho. Thus d0^2<=Lrho<=c_A^2/576, so the repair is
+available for all0<rho<=rho_m. Also 2B_Rrho<=sigma/8. Combining sections
+4,6,7 gives
+  S_rho(f)-S_rho(g)<=-sigma D/4.
+If f differs from g, D>0, contradicting competitiveness. This proves
+the full relaxed theorem in dimension d=m-1, with equality classification.
+
+8. Ambient dimensions and discrete consequence.
+For each finite ambient dimension, the balanced relaxed feasible set is
+weakly compact in L2. T_rho is compact since each Hermite degree has finite
+multiplicity and rho^k tends to zero. A maximizer exists. Any fractional
+maximizer permits a nonzero balanced opposite-pair perturbation on two
+equal-mass pieces; strict positivity of T_rho makes the average perturbed
+objective larger. Thus every maximizer is an indicator partition.
+Heilman--Tarter Theorem1.9 applies to every fixed-positive-mass maximizing
+partition and reduces it to dimension m-1. The result just proved supplies
+its value and equality cases. Lower-dimensional embeddings cannot attain
+equality because the regular centroid matrix has rank m-1.
+Isaksson--Mossel arXiv0903.3362v3 Theorem7.1 preserves the exact expectation
+vector and approximates stability at the same fixed rho. Lemma7.3 supplies
+the plurality limit. Hence the usual balanced low-influence plurality
+statement holds at each fixed rho in this interval, with additive epsilon.
+No explicit or uniform-in-rho influence threshold is supplied.
+
+What remains to use this beyond four cells
+H_m must be proved for the requested cell count, with its quantifiers over
+all balanced relaxed assignments. A numerical optimum, equal-energy signal
+theorem, or local Hessian alone is not H_m. A separate audit must inspect
+this general proof and its constants before promotion to a reusable theorem.

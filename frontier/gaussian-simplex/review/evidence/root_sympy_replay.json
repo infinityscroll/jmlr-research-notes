@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "arithmetic": "SymPy exact rational",
+  "scope": "Formal boundary-moment and simplex-chain algebra; no Gaussian PSD inference.",
+  "cases": [
+    {
+      "d": 2,
+      "edges": 3,
+      "triangles": 1,
+      "quads": 0,
+      "local_entry_checks": 3,
+      "chain_rank": 0,
+      "identity_entries": 1,
+      "exact": true,
+      "elapsed_seconds": 0.025
+    },
+    {
+      "d": 3,
+      "edges": 6,
+      "triangles": 4,
+      "quads": 1,
+      "local_entry_checks": 24,
+      "chain_rank": 1,
+      "identity_entries": 16,
+      "exact": true,
+      "elapsed_seconds": 0.009
+    },
+    {
+      "d": 4,
+      "edges": 10,
+      "triangles": 10,
+      "quads": 5,
+      "local_entry_checks": 90,
+      "chain_rank": 4,
+      "identity_entries": 100,
+      "exact": true,
+      "elapsed_seconds": 0.025
+    },
+    {
+      "d": 5,
+      "edges": 15,
+      "triangles": 20,
+      "quads": 15,
+      "local_entry_checks": 240,
+      "chain_rank": 10,
+      "identity_entries": 400,
+      "exact": true,
+      "elapsed_seconds": 0.062
+    },
+    {
+      "d": 6,
+      "edges": 21,
+      "triangles": 35,
+      "quads": 35,
+      "local_entry_checks": 525,
+      "chain_rank": 20,
+      "identity_entries": 1225,
+      "exact": true,
+      "elapsed_seconds": 0.149
+    }
+  ]
+}

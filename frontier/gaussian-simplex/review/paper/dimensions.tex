@@ -1,0 +1,104 @@
+\section{Ambient dimensions and discrete consequences}\label{sec:dimension}
+The proofs in Appendices~\ref{app:positive} and~\ref{app:negative} take place
+in $d=m-1$. We use the following two external results with different feasible
+classes.
+
+Heilman--Tarter \cite[Theorem 1.9]{HT2021} states that, for positive
+correlation and prescribed positive cell masses, every maximizing Gaussian
+partition in dimension $N\geq m-1$ depends, after a common orthogonal change
+of coordinates, on at most $m-1$ coordinates.
+Heilman \cite[Problem 7.1 and Theorem 7.9]{H2022} instead treats minimizers of
+a positive-kernel bilinear objective over two partitions whose corresponding
+masses agree but are \emph{free}. Every such minimizer has a common
+$(m-1)$-dimensional reduction. This latter result has no hyperstability
+hypothesis and is not the distinct theorem for two separately prescribed
+mass vectors.
+
+\subsection{Existence and the positive problem}
+For finite $N$, the simplex-valued feasible set with prescribed masses is
+weakly compact in $L^2(\gamma_N)^m$. The Ornstein--Uhlenbeck operator is compact:
+each Hermite degree has finite multiplicity and $|\rho|^k\to0$.
+Thus the positive quadratic objective is weakly continuous on this bounded
+set and attains its maximum.
+
+Every maximizer is an indicator partition. Otherwise two fixed labels are
+both uniformly fractional on a positive-measure set. Choose two disjoint
+subsets of equal positive measure there. Opposite label perturbations on
+those subsets preserve all masses and produce two distinct feasible
+assignments whose average is the original one. Strict positivity of $T_\rho$
+for $\rho>0$, visible from its strictly positive Hermite eigenvalues, makes
+the average of their objectives strictly larger. This contradicts maximality.
+Theorem~1.9 of \cite{HT2021} therefore applies to every relaxed maximizer.
+Appendix~\ref{app:positive} gives its value and its exact equality form.
+
+\subsection{Free matching masses and the negative problem}
+The set of pairs with free common masses is weakly compact, and compactness
+of $T_{-r}$ makes the bilinear objective jointly weakly continuous on it.
+A minimizing pair exists. Hold its attained mass vector $p$ fixed.
+With $h$ fixed, the minimizing face for the continuous linear functional in
+$f$ has an extreme point. Every extreme point of this fixed-mass
+simplex-assignment set is an indicator, by the same equal-measure opposite
+perturbation construction. Choose such an $f_1$, and then with $f_1$ fixed
+choose an indicator minimizer $h_1$. The pair has the same global minimum.
+This sequential argument does not require an incorrect general principle
+about extreme points of bilinear optimization.
+
+The competitive bounds~\eqref{eq:competitive-negative} hold in every finite
+ambient dimension, and~\eqref{eq:negative-range} makes all masses positive.
+Reflect the second partition: $B_{-r}(f_1,h_1)=B_r(f_1,h_1(-\,\cdot))$.
+The free-common-mass theorem \cite[Theorem 7.9]{H2022} now reduces this
+indicator minimizer to a common subspace of dimension at most $d$.
+Reflection back preserves that subspace. Appendix~\ref{app:negative} forces
+$f_1=h_1=g$ in one common frame.
+
+For the original fractional pair, the intermediate pair $(g,h)$ still has
+the minimum value. Its excess over $(g,g)$ is exactly $D_-(h)$.
+Strict reference ordering forces $h=g$. The original pair $(f,g)$ then
+has excess $D_-(f)$, so $f=g$. This recovers equality for the original
+fractional pair, not only for an indicator representative.
+In either sign, an assignment in $N<d$ can be embedded in dimension $d$;
+equality would require a regular centroid Gram of rank $d$, impossible for
+the embedded rank at most $N$. This completes Theorem~\ref{thm:noise}.
+
+\subsection{The precise low-influence corollary}
+On $[m]^n$ use uniform product measure and the noise channel which, in each
+coordinate, keeps a symbol with probability
+$(1+(m-1)\rho)/m$ and changes it to each particular different symbol with
+probability $(1-\rho)/m$. It exists for $-1/(m-1)\leq\rho\leq1$.
+For $f:[m]^n\to\Delta_m$ define
+\[
+ \operatorname{Inf}_k(f)=\sum_i\E\Var(f_i\mid\hbox{all coordinates except }k).
+\]
+Write $\operatorname{Stab}_\rho(f)=\sum_i\E[f_i(X)f_i(Y)]$ for this channel,
+and $p_m(\rho)=S_\rho(g)$.
+
+\begin{corollary}\label{cor:discrete}
+Fix $m\geq3$, an admissible nonzero $\rho$ in the corresponding interval of
+Theorem~\ref{thm:noise}, and $\eps>0$. There is $\tau>0$, depending on
+$m,\rho,\eps$, such that for every $n$ and every $f$ with
+$\max_k\operatorname{Inf}_k(f)\leq\tau$,
+\[
+ \operatorname{Stab}_\rho(f)\leq p_m(\rho)+\eps
+ \quad(\rho>0,\ \E f=\1/m),
+\]
+whereas
+\[
+ \operatorname{Stab}_\rho(f)\geq p_m(\rho)-\eps
+ \quad(\rho<0,\ \text{with arbitrary }\E f).
+\]
+\end{corollary}
+\begin{proof}
+Isaksson--Mossel \cite[Theorem 7.1]{IM2009} transfers a low-influence
+simplex-valued function to a Gaussian relaxed assignment with the same
+expectation vector and approximates stability at the same fixed $\rho$.
+Apply Theorem~\ref{thm:noise}, using its free-mass single-assignment consequence
+for the negative case, and allocate the approximation error below $\eps$.
+Lemma~7.3 of \cite{IM2009} identifies $p_m(\rho)$ with the limiting plurality
+stability. This gives the stated additive comparison.
+\end{proof}
+There is no uniform-in-$\rho$ influence threshold or assertion of exact
+finite-electorate optimality. Only the single-rule arbitrary-bias negative
+corollary is asserted here; no additional discrete bilinear theorem is needed.
+The near-zero Gaussian intervals do not give a full-range Standard Simplex
+theorem or a sharp MAX-$m$-CUT hardness ratio.
+

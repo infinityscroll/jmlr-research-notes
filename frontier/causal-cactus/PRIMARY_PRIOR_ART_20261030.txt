@@ -1,0 +1,94 @@
+PRIMARY-LITERATURE BOUNDARY: COUPLED CYCLE / CACTUS SUBCLASS
+Checked 30 October 2026. This is a bounded comparison, not priority clearance.
+
+Status. The new derivation gives a uniform, graph-only, exact real-fiber
+classification for its declared coupled-core class and a recursive extension.
+It does not classify arbitrary mixed graphs. Its first-moment/Gaussian sibling
+work has no bearing on priority here. Existing simple-cycle degree two is
+explicitly inherited, not claimed new.
+
+1. Drton, Foygel, Sullivant (2011), Global identifiability of linear structural
+equation models, arXiv:1003.1146v3, Section 7, Lemma 9:
+https://arxiv.org/html/1003.1146v3
+This primary result already proves the simple directed cycle has two admissible
+real parameter points generically, and at most two everywhere. Its global
+injectivity characterization concerns all parameter points, unlike generic
+whole-fiber uniqueness. Our cactus formulas exploit nonzero articulation
+coefficients; they do not contradict failure of everywhere injectivity for
+graphs containing directed cycles.
+
+2. Foygel, Draisma, Drton (2012), Half-trek criterion, arXiv:1107.5552,
+Definition 2, Problem 1, Theorem 1, Section 8:
+https://arxiv.org/html/1107.5552
+The general generic-identification graph characterization is the recognized
+problem. HTC is sufficient, with an ordering condition; its decomposition
+discussion is for acyclic mixed graphs.
+Our standalone coherent multicycle cactus is strongly connected, with every
+vertex having a parent. At the earliest vertex in any proposed HTC ordering,
+every possible nonempty source set lies in its half-trek reachable set and
+requires an earlier identified vertex. Thus ordinary HTC cannot start. This
+proves non-subsumption for the cactus family, not for every new coupled graph.
+Some partial-error-probe cycle cases may already be HTC-identifiable.
+
+3. Drton and Weihs (2016), Ancestor decomposition, arXiv:1504.02992v1,
+Theorems 2.6 and 3.3:
+https://arxiv.org/html/1504.02992v1
+Theorem 3.3 supplies identification through ancestral marginals. Tian's
+fiber-product decomposition, quoted as Theorem 2.6, assumes acyclicity.
+Our marginal calculation is consistent with the former. The new cross-error
+support filtering is not justified by the latter's product assertion. In a
+standalone strongly connected cactus there is no proper nonempty ancestral
+set, so ancestor restriction alone does not identify the cactus.
+
+4. Weihs et al. (2018), Determinantal generalizations of instrumental
+variables, arXiv:1702.03884, Theorems 3.8 and 4.1, Algorithms EID/TSID:
+https://arxiv.org/html/1702.03884
+These are valid stronger methods with cyclic examples; they must not be
+described as purely acyclic. Their descendant and half-trek reachable sets
+use nonempty paths, so a cyclic vertex can reach itself.
+Our inference from the stated rules: on a standalone strongly connected
+coherent cactus, Theorem 3.8 cannot apply because v belongs to des(v), violating
+condition (a). Theorem 4.1 cannot start with no known edges: htr(v)=V and every
+candidate y has an unidentified incoming edge, violating condition (iii).
+Consequently the EID+TSID closure from an empty seed set cannot identify a
+single edge of this cactus. This is a concrete separation from these stated
+criteria. It is not proof that all later methods fail or that the cactus
+family has never been treated elsewhere.
+
+5. Ding and Zhang, Iterative Identification Closure, arXiv:2604.09309:
+https://arxiv.org/abs/2604.09309
+The CURRENT primary record is withdrawn v2, dated 26 October 2026. The authors'
+comment is: "The manuscript contains too many errors and is not ready for
+publication yet". The accessible v1 is at:
+https://arxiv.org/html/2604.09309v1
+It is not a valid established frontier to surpass. Its written Reduced HTC
+rule has an elementary four-node obstruction, recorded in the separate
+WITHDRAWN_IIC_BOUNDARY.txt. This check receives no novelty/breakthrough credit.
+
+6. Wang et al. (2018), Time-invariant biological networks with feedback
+loops: structural equation models and structural identifiability:
+https://doi.org/10.1049/iet-syb.2018.5004
+This paper does study static SEMs with feedback and disturbance correlations;
+it should NOT be dismissed as a time-series-only or Lyapunov model. Figure 3
+explicitly concerns overlapping loops. Sections 2.2--2.3 provide a different
+equation-generation and binary identifiability-matrix pipeline. I did not
+establish equivalence or non-subsumption relative to all claims in that work.
+This is an unresolved priority lead, not evidence that our formulas are new.
+
+7. Dörfler et al. (2024), Complexity of Identifiability in Linear Structural
+Equation Models, arXiv:2407.12528v1, Sections 6--7:
+https://arxiv.org/html/2407.12528v1
+Generic identification has a PSPACE decision procedure, with cyclic models
+discussed. We claim neither a new general decision procedure nor a solution
+of the structural characterization problem.
+
+Other exclusions. Directed-tree classification (Gupta--Bläser, AAAI 2024)
+has no directed cycles; homoscedastic cyclic graph identification concerns
+equal error variances and distinguishing graphs, not our unrestricted fixed-
+graph coefficients. No cactus-specific theorem was located by the bounded
+exact-title/topic searches. Search absence is not a novelty certificate.
+
+Honest current claim: a checked subclass extension with exact real admissible
+branch counts and explicit rational cactus inversion, beyond ordinary HTC
+and the stated unseeded EID+TSID rules on a concrete infinite family. Full
+literature priority, especially other cyclic SEM methods, remains unresolved.

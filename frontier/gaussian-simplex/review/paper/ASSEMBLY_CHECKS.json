@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "compiler_status": "success",
+  "compiler": "Codex desktop built-in LaTeX compiler",
+  "label_count": 50,
+  "references_resolve": true,
+  "displayed_dependency_hashes_match": true,
+  "paper_sources": {
+    "covariance.tex": "e9c7a7f454aaff431da5b925afe129ae247f1cc1419c438a2acf86f66cc60f17",
+    "dimensions.tex": "502c898e4c5e798d16648a69299adba5b130e562973a3847d5abac5ec3672dc4",
+    "endpoint.tex": "68eda729fdacb8d8c005b6f481be0ac3cbd7da213a79ee1b8e26e1fd9e1775d2",
+    "lineage.tex": "28d7e954e8be3a3470a4060ad524c015f2b967a72a9275be89686c230bc99f4c",
+    "main.tex": "2ffc7e17fde2f6c2eb14ea48ed61988091d20d3c162b90bfcf4dffe7ceb943b5",
+    "negative.tex": "708158be756661d1fd149fc2d867544fa5a6a5291d0ce9e5f2ffa0b9d712a9bd",
+    "positive.tex": "43ca6a37098a2c37ac0fbf6e10d0ec252ae04a5144161e5ff2bb58a8b049e3f3",
+    "references.tex": "b6e0e27bc5201cd9ee2831b5219543a7f540fab0a5cfba01bea472137af61b72",
+    "statements.tex": "48de1884aba78af921b616dd372164a5bf7e95658c706a78db2314d8c312937a",
+    "transfer_common.tex": "7123ce31219fe6dc3e94480c8e9063c7f9bfc43afced84c6937544c0122b3e5b"
+  },
+  "citations_resolve": true,
+  "bibliography_entries": 6,
+  "presentation_revision": {
+    "changed_sources": [
+      "lineage.tex",
+      "references.tex",
+      "statements.tex"
+    ],
+    "mathematical_proof_sources_unchanged": true,
+    "changes": [
+      "Explicit d=m-1 noise benchmark and lower-dimensional comparison",
+      "Primary-source related-problem paragraph and exact bibliography references",
+      "Explicit AI-agent audit attribution without an external reviewer"
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+EXPLICIT GLOBAL COVARIANCE GAP AND CENTROID-ORBIT COERCIVITY
+31 October 2026. strong_signal_branch_count.
+Separate quantitative supplement; independent audit requested.
+
+Dependency and scope
+
+This note uses the proved covariance concavity and strict Hessian bound
+in ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt, frozen SHA256
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+It replaces the existential local radius in the balanced consequence by
+explicit, deliberately small constants. It is not an independent proof
+of covariance concavity and does not alter the main source.
+
+Definitions and result
+
+Fix an integer m>=3, put d=m-1 and P=I_m-11^T/m. Let Q be an m by d
+matrix with Q^T Q=I_d and QQ^T=P; identify its rows with vectors r_i in R^d.
+For C>=0 define
+  j(C)=inf_(sum h_i=0) E max_i(r_i dot X+h_i), X~N(0,C).
+The full score covariance is K=QCQ^T, and J_m(K)=j(C).
+Work on tr C=T=m(m-1), or equivalently tr K=T and K1=0. The regular point
+is C_*=mI_d, K_*=mP. Write mu_m=E max_i Z_i for iid standard Gaussians.
+Then j(C_*)=sqrt(m) mu_m.
+
+Let v_q=pi^(q/2)/Gamma(q/2+1) be the volume of the q-dimensional unit ball.
+Define the following explicit positive constants:
+
+  rho_m = 1/(2 sqrt(3m)),
+  R_m = sqrt(2m)(m-1) + 2 sqrt(m-2)/m + rho_m,
+  b_m = v_(m-2) rho_m^(m-2) (2pi)^(-(m-1)/2) exp(-R_m^2/2),
+  g_m = b_m / [8 (3m)^(3/2) sqrt((m-1)(m-2))],
+  K_m = 2 + 2/[m(m-1)g_m].                              (1)
+
+Equivalently,
+  b_m = exp(-R_m^2/2)
+        /[sqrt(2pi) Gamma(m/2) (2 sqrt(6m))^(m-2)].
+These are analytic expressions, not floating-point certified decimals.
+For computation, their logarithms should be used to avoid underflow.
+
+The global covariance gap is
+  J_m(K_*)-J_m(K) >= g_m ||K-K_*||_F^2                 (2)
+for every K>=0 with K1=0 and tr K=m(m-1).
+
+For balanced relaxed assignments f_i:R^N->[0,1], sum f_i=1 and E f_i=1/m,
+put b_i=E[X f_i(X)], W=sum_i |b_i|^2, and
+  w_m=mu_m^2/(m-1).
+When N>=m-1, let b_* be any regular reference centroid configuration with
+Gram (w_m/(m-1))P. Then
+  W<=w_m,
+  min_(O in O(N)) sum_i |b_i-(b_* O)_i|^2
+       <= K_m (w_m-W).                                (3)
+The row convention includes reflections. Permutations of regular-simplex
+labels are already realized by orthogonal transformations.
+
+1. Uniform offset and apex bounds in a specified covariance ball
+
+Assume tr C=T and ||C-mI_d||_F<=m/2. Then every eigenvalue of C is between
+m/2 and 3m/2. In whitened coordinates put y_i=C^(1/2)r_i. The score vector
+S_i=y_i dot Z, Z~N(0,I_d), has E|S|^2=tr C=T.
+
+The minimized offset objective has a minimizer: for mean-zero h its value
+is at least max_i h_i, which tends to infinity with ||h||. At its optimizer
+h, the value is at most the value at h=0, hence
+  M=max_i h_i <= j(C) <= E max_i S_i <= E|S| <= sqrt(T).
+For any mean-zero h with h_i<=M, put k_i=M-h_i>=0. Since sum k_i=mM,
+  |h|^2=sum k_i^2-mM^2 <= m(m-1)M^2 <= m(m-1)T.       (4)
+In particular range(h)<=m sqrt(T), as in the coercivity bound.
+
+There is a unique translated apex a with h_i=-y_i dot a: indeed h lies
+in 1-perp, and
+  a=-C^(-1/2)Q^T h.
+Equation (4) and lambda_min(C)>=m/2 yield
+  |a|^2 <= (2/m)|h|^2 <= 2(m-1)T,
+  |a| <= sqrt(2m)(m-1).                               (5)
+Thus the optimizer's cells are a plus the cones where y_i dot z is maximal.
+The offset stationarity makes their probabilities 1/m. No separate bound
+on cell masses is used to establish (5).
+
+2. A positive-measure ball inside every translated facet
+
+For an edge e={i,j}, let d_e=y_i-y_j, ell_e=|d_e|, and put
+  z_e=C^(-1/2)(r_i+r_j).
+The regular-row identities r_i dot r_j=delta_ij-1/m give
+  d_e dot z_e=0,
+  (y_i-y_k) dot z_e=(y_j-y_k) dot z_e=1  (k notin {i,j}).
+Also
+  |r_i+r_j|^2=2(m-2)/m,
+  |z_e|<=2 sqrt(m-2)/m,
+  |y_i-y_k|<=sqrt(3m), ell_e<=sqrt(3m).                (6)
+
+If v is tangent to d_e-perp and |v|<=rho_m, then all the displayed score
+gaps at z_e+v remain at least 1-sqrt(3m)rho_m=1/2. Consequently the entire
+(m-2)-dimensional tangent ball
+  {a+z_e+v: v dot d_e=0, |v|<=rho_m}
+lies in the relative interior of the ij facet. Every point of this ball
+has norm at most R_m by (5)--(6).
+
+Let mu_e denote the intrinsic Gaussian mass of that facet: it integrates
+the FULL d-dimensional standard Gaussian density against (d-1)-dimensional
+Hausdorff measure. Its restriction to this tangent ball gives
+  mu_e >= (2pi)^(-d/2) exp(-R_m^2/2) v_(d-1)rho_m^(d-1)
+        =b_m.                                         (7)
+No conditional-Gaussian normalization is being inserted into this mass.
+
+3. Pull back the strict covariance Hessian correctly
+
+For a symmetric direction H in the reduced covariance coordinates, let
+  S=C^(-1/2) H C^(-1/2).
+The path C+tH is represented after whitening by source covariance I+tS
+and the FIXED target sites y_i=C^(1/2)r_i. Therefore the main theorem's
+Hessian estimate at identity, applied to this target, says
+  4 D^2j(C)[H,H]
+    <= -sum_(i<j) (mu_ij/ell_ij^3)
+                    [(r_i-r_j)^T H(r_i-r_j)]^2.         (8)
+The numerator follows from d_ij^T S d_ij=(r_i-r_j)^T H(r_i-r_j).
+In particular, no extra covariance powers are missing from (8).
+
+Here is the exact edge identity needed to control every direction:
+  sum_(i<j) [(r_i-r_j)^T H(r_i-r_j)]^2
+    =m sum_i (QHQ^T)_ii^2+(tr H)^2+2||H||_F^2
+    >=2||H||_F^2.                                    (9)
+To verify it, write B=QHQ^T with B1=0 and d_i=B_ii. The three terms in
+the square (d_i+d_j-2B_ij)^2 sum to
+  (m-2)sum d_i^2+(sum d_i)^2,
+  4 sum d_i^2,
+  2||B||_F^2-2sum d_i^2,
+respectively. Use ||B||_F=||H||_F and tr B=tr H.
+
+Combining (6)--(9) gives the uniform bound throughout this covariance ball:
+  D^2j(C)[H,H] <= -kappa_m ||H||_F^2,
+  kappa_m=b_m/[2(3m)^(3/2)].                           (10)
+The minimized functional is C^2 at every PD C by the Gaussian convolution
+and invertible offset-Laplacian argument in the main proof.
+
+4. Local Taylor estimate and one fixed global contraction
+
+Permutation symmetry at C_*=mI makes the first derivative vanish on
+trace-zero directions. For completeness, in score coordinates the full
+gradient at K_* commutes with all permutations, hence is a scalar on
+1-perp. Thus trace-zero directions pair to zero with it.
+
+For tr H=0 and ||H||_F<=m/2, the whole segment C_*+tH stays in the ball.
+Taylor's integral formula and (10) imply
+  j(C_*)-j(C_*+H) >= (kappa_m/2)||H||_F^2.             (11)
+
+For any PSD C with trace T, its nonnegative eigenvalues give
+  ||C-C_*||_F^2=tr(C^2)-mT
+               <=T^2-mT=m^2(m-1)(m-2).                (12)
+Take the single constant
+  theta_m=1/[2sqrt((m-1)(m-2))],
+which lies in (0,1) for m>=3. Then
+  C_theta=(1-theta_m)C_*+theta_m C
+lies in the ball in (11), including when C is singular. Global covariance
+concavity gives
+  theta_m[j(C_*)-j(C)] >= j(C_*)-j(C_theta)
+     >=(kappa_m/2)theta_m^2||C-C_*||_F^2.
+Divide by theta_m. Since Q preserves the Frobenius norm under this
+embedding, the resulting coefficient kappa_m theta_m/2 is exactly g_m
+in (1), proving (2).
+
+5. Explicit centroid-orbit rescaling
+
+Let s=sqrt(T). If W>0, normalize the centroid rows to
+  B_i=s b_i/sqrt(W), K=BB^T.
+They sum to zero and K has trace T. The balanced score dual gives
+  s sqrt(W)<=J_m(K)<=J_m(K_*)=s sqrt(w_m).
+The left inequality follows directly by pairing the scores B_i dot X
+with f_i and using E f_i=1/m to cancel every mean-zero offset. Thus W<=w_m.
+Write delta=w_m-W. Equation (2) and the square-root identity imply
+  ||K-K_*||_F^2 <= [s/(g_m sqrt(w_m))] delta.           (13)
+
+Choose a reference B_* with B_*B_*^T=mP. When N>=m-1, orthogonal Procrustes
+and the eigenvalues lambda_j(K) on 1-perp give
+  min_O ||B-B_*O||_F^2
+    =sum_(j=1)^(m-1)(sqrt(lambda_j(K))-sqrt(m))^2
+    <=(1/m)||K-K_*||_F^2.                             (14)
+This identity includes zero eigenvalues. Rescale B by sqrt(W)/s and B_*
+by sqrt(w_m)/s, use the squared triangle inequality, and note ||B_*||^2=T:
+  dist(b,orbit(b_*))^2
+    <=[2W/(m s^2)]||K-K_*||_F^2
+        +2(sqrt(w_m)-sqrt(W))^2
+    <=[2+2sqrt(w_m)/(m s g_m)]delta.                   (15)
+Here (13), W<=w_m, and (sqrt(w_m)-sqrt(W))^2<=delta were used.
+Finally mu_m<=E|(Z_1,...,Z_m)|<=sqrt(m), so
+  sqrt(w_m)/(m s)=mu_m/[m sqrt(m)(m-1)]
+                 <=1/[m(m-1)].
+This is the stated K_m. If W=0, the left side of (3) is exactly w_m,
+while K_m>=2, so (3) also holds in that case.
+
+The coefficient is intentionally conservative. Its purpose is a valid
+explicit all-m bound; no sharp quantitative claim or improved noise
+threshold is inferred without inserting it into the separate transfer.

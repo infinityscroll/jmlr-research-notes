@@ -1,0 +1,106 @@
+\section{Statements and conventions}
+Write $\gamma_N$ for standard Gaussian measure on $\R^N$ and $\cP_2(\R^N)$
+for probability laws with finite second moment. For $\nu\in\cP_2(\R^N)$ set
+\[
+ \mathcal F_\nu(C)=\sup\{\E[X\cdot Y]:X\sim N(0,C),\ Y\sim\nu\},
+ \qquad C\geq0.
+\]
+The supremum is over all couplings. Covariance matrices are varied in their
+ordinary linear coordinates.
+
+\begin{theorem}[Covariance concavity]\label{thm:covariance}
+For every finite $N$ and $\nu\in\cP_2(\R^N)$, the function
+$C\mapsto\mathcal F_\nu(C)$ is concave on the positive semidefinite cone.
+Equivalently $C\mapsto W_2^2(N(0,C),\nu)$ is convex.
+If $\nu$ has $d+1$ affinely independent sites in $\R^d$, each of positive
+mass, then $\mathcal F_\nu$ is smooth on the positive definite cone and
+its Hessian is negative definite there.
+\end{theorem}
+
+Fix $m\geq3$, put $d=m-1$, and identify
+$H=\{x\in\R^m:\sum_i x_i=0\}$ isometrically with $\R^d$.
+Let
+\[
+ v_i=e_i-\frac1m\1,\quad
+ \mu_m=\E\max_{1\leq i\leq m}Z_i,\quad
+ \alpha=\frac{\mu_m}{m-1},\quad
+ c_i=\alpha v_i,\quad
+ w=\frac{\mu_m^2}{m-1},
+\]
+where the $Z_i$ are independent standard normals. The regular partition is
+$g_i(x)=\1_{\{v_i\cdot x=\max_j v_j\cdot x\}}$, with arbitrary choices on
+null tie hyperplanes. Symmetry gives $\E[Xg_i(X)]=c_i$:
+the centroids are multiples of $v_i$ and
+$\sum_i v_i\cdot\E[Xg_i(X)]=\mu_m$ determines the multiplier.
+In larger dimensions the partition ignores the unused coordinates.
+With the noise notation below, every benchmark $S_\rho(g)=B_\rho(g,g)$ is
+evaluated in dimension $d=m-1$ and is unchanged by adding unused Gaussian
+coordinates. When $N<d$, the comparison is with this $d$-dimensional benchmark,
+not with an assignment $g$ in $\R^N$.
+
+A \emph{relaxed assignment} is a measurable map into
+$\Delta_m=\{t\in[0,1]^m:\sum_i t_i=1\}$. It is balanced if
+$\E f_i=1/m$. Write $b_i(f)=\E[Xf_i(X)]$ and
+$W(f)=\sum_i\norm{b_i(f)}^2$. Let $\cO_m$ denote the ordered regular
+centroid orbit under orthogonal maps. Label permutations are already
+implemented by orthogonal symmetries of the simplex.
+
+\begin{theorem}[Balanced endpoint and coercivity]\label{thm:endpoint}
+For every balanced relaxed assignment in any finite dimension,
+$W(f)\leq w$. If $N\geq d$, equality holds exactly for regular simplex
+partitions, up to orthogonal maps, labels, and null changes. There is a finite
+$K_m\geq1$, depending only on $m$, such that for all $N\geq d$,
+\begin{equation}\label{eq:Hm}
+ \dist_{\HS}(b(f),\cO_m)^2\leq K_m\bigl(w-W(f)\bigr).
+\end{equation}
+For $N<d$ the endpoint benchmark is strict.
+\end{theorem}
+
+For $|\rho|<1$ let
+$T_\rho u(x)=\E u(\rho x+\sqrt{1-\rho^2}Z)$ and define
+\[
+ B_\rho(f,h)=\sum_i\ip{f_i}{T_\rho h_i}_{L^2(\gamma_N)},
+ \qquad S_\rho(f)=B_\rho(f,f).
+\]
+
+\begin{theorem}[Near independence]\label{thm:noise}
+For each fixed $m\geq3$ there are numbers $\rho_m^+>0$ and $r_m^->0$,
+independent of ambient dimension, with the following properties in every
+finite ambient dimension $N$.
+\begin{enumerate}[label=(\roman*)]
+\item If $0<\rho\leq\rho_m^+$ and $f$ is balanced, then
+$S_\rho(f)\leq S_\rho(g)$.
+\item If $0<r\leq r_m^-$ and $\E f=\E h=p$ for an arbitrary common
+probability vector $p$, then $B_{-r}(f,h)\geq B_{-r}(g,g)$.
+\end{enumerate}
+For $N\geq d$ equality in (i) has the regular-simplex classification.
+Equality in (ii) forces $p=(1/m,\ldots,1/m)$ and $f=h$ equal to one common
+regular simplex partition. For $N<d$ both benchmarks are strict.
+All statements include relaxed assignments.
+\end{theorem}
+
+In particular the negative single-assignment minimum has no imposed mass
+constraint. This is not a theorem optimizing a prescribed unequal mass vector.
+The two intervals can differ and may shrink with $m$; no numerical bound
+uniform in $m$ is claimed. The covariance proof and endpoint argument are
+given in the main text. Appendices~\ref{app:common}--\ref{app:negative} give
+the complete fixed-dimensional transfers. Section~\ref{sec:dimension} states
+the precise external dimension reductions and completes the ambient argument.
+
+\paragraph{Related problems.}
+Heilman \cite[Section 8, Conjecture 3]{H2014} asks whether balanced
+four-cell first-moment maximizers in $\R^3$ are simplicial conical partitions,
+and identifies quantitative stability as a route to larger-cell
+near-zero noise results. Theorem~\ref{thm:endpoint} supplies this structure
+and stability, and extends them to every $m\geq3$.
+The introduction following Theorem 1.3 of Heilman's 23 October 2026
+preprint \cite{H2026} still describes the four-cell and higher
+Standard Simplex cases as open. That discussion distinguishes the
+unrestricted Propeller problem, which does not prescribe cell masses,
+from the Standard Simplex problem. It also distinguishes Gaussian
+mean-width comparisons with prescribed individual variances.
+Our endpoint prescribes cell masses and permits unequal centroid lengths;
+it does not assume those variance constraints.
+These comparisons locate the related problems and do not constitute an
+exhaustive priority assessment. The full-correlation ranges remain open.
+

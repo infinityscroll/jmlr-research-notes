@@ -1,0 +1,113 @@
+ASSEMBLED MANUSCRIPT: INDEPENDENT CORE TRANSCRIPTION AND QUANTIFIER AUDIT
+31 October 2026. strong_signal_branch_count.
+
+Verdict: PASS for the covariance and endpoint mathematical core, with one
+minor benchmark-notation clarification recommended below. No mathematical
+repair identified. No manuscript file was edited by this auditor.
+
+Audited assembly
+../gaussian_covariance_simplex_review_20261031/paper/
+ASSEMBLY_CHECKS.json SHA256:
+db8e252d0faeef0130356720575506d6f48e250826994a80d431df3011c1fc89
+All ten file hashes in that manifest were independently recomputed and
+matched at the end of the source read. The primary files read in full were:
+
+main.tex
+2ffc7e17fde2f6c2eb14ea48ed61988091d20d3c162b90bfcf4dffe7ceb943b5
+statements.tex
+732cc40d3d7ca2b94fa59fa849ffe09d2dd717cb39e45284dfb40079208d2757
+covariance.tex
+e9c7a7f454aaff431da5b925afe129ae247f1cc1419c438a2acf86f66cc60f17
+endpoint.tex
+68eda729fdacb8d8c005b6f481be0ac3cbd7da213a79ee1b8e26e1fd9e1775d2
+references.tex
+55995008cdc0c14c0e0b5173b3bce28f06be1f97cc45089336e240512eaf0917
+
+dimensions.tex and lineage.tex were also read to compare abstract and
+statement scope with the assembly's application claims. This is not a new
+audit of the noise-transfer appendices or their external dimension-reduction
+theorems, which have a separate assigned assembly reviewer.
+
+Comparison sources
+ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt:
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+The earlier regular-point coercivity proof and the independently audited
+explicit-gap supplement were used to check endpoint normalization and the
+Procrustes/rescaling calculation. No finite algebra checker was rerun;
+this audit concerns the mathematical transcription and logical scope.
+
+Core checks
+
+1. The simplex dual has the correct sign for the offset penalty. Its
+coercivity, fixed-fan convolution regularity, positive complete-graph
+offset Laplacian, and positivity of all stratum masses are retained.
+
+2. Both intrinsic integration signs agree with the frozen proof. The
+triangle-height factors, N inverse, E=N T^T=T N^T, and B=N^-1 E N^-T
+are consistent. Singular covariance deficits are never inverted.
+
+3. The assembled identity is A-B=-D partial_3 diag(mu_h/(6V_h))
+partial_3^T D, with intrinsic THREE-dimensional target tetrahedron volumes.
+The off-diagonal boundary signs and the diagonal sum both match. Dimension
+two has an absent partial_3 and zero difference. The D-weighted projection
+selects a valid representative despite dependencies between tetrahedron
+boundaries. The Cauchy argument retains a single global offset vector.
+
+4. The Hessian has the factor4, the negative interior acceleration, and
+one count per unoriented facet. Its edge-dyad strictness proof covers every
+nonzero symmetric direction for simplex targets. Whitening correctly uses
+C0^(-1/2) K C0^(-1/2); it does not assume commuting covariances. The scalar
+two-site case is supplied separately.
+
+5. The covariance continuity estimate supports singular source covariances
+through conditional Gaussian lifting. Finite target lifting preserves
+the cost exactly, subsequent projection is linear in C, and P2 target
+approximation has the stated sqrt(tr C) Lipschitz constant. Neither the
+theorem nor proof incorrectly transfers strictness to arbitrary targets.
+The added F_nu^2 corollary is valid: degree-one-half homogeneity and
+nonnegativity turn the optimized alpha inequality into superadditivity
+of the square, including zero cases by endpoint limits.
+
+6. For the endpoint, v_i, alpha, c_i, w, K_*=mP, and L0=m(m-1) have
+consistent normalization. The singular score dual is justified uniformly
+in offsets. Permutation averaging, trace-tangent stationarity, local
+strict curvature, and the fixed-theta global argument preserve their
+inequality directions. The centroid Gram normalization yields
+sqrt(L0 W)<=J_m(K), and the coefficient
+2+2sqrt(w)/(m kappa_m sqrt(L0)) follows from the displayed rescaling.
+W=0, relaxed equality, rank-deficient Gram matrices, and N<m-1 strictness
+are all covered. The unquantified local radius is legitimate here; the
+separate explicit-gap supplement is not needed by this assembly.
+
+Primary analytic citation check
+
+The changed direct convex-support citation is appropriate. I opened the
+original Bobkov--Ledoux paper from the coauthor's institution:
+https://www-users.cse.umn.edu/~bobko001/papers/2000_GAFA_BL.pdf
+Proposition2.1, printedp1031, concerns a probability density e^(-V) on an
+open convex support, with V twice continuously differentiable and strictly
+convex, and gives the inverse-Hessian variance bound. A facet's relative
+interior and its intrinsic quadratic Gaussian potential meet those
+hypotheses. Linear test functions have finite Gaussian moments. The
+manuscript's author-hosted Toulouse link timed out during this audit; the
+coauthor-hosted original succeeded. This is retrieval redundancy, not a
+mathematical citation gap.
+
+Abstract and quantifiers
+
+The abstract correctly keeps strictness to nondegenerate simplex targets,
+all-target concavity separate, and cell-count-dependent intervals distinct
+from full-correlation claims. Its free-matching-mass negative formulation
+matches the stated feasible class, rather than asserting optimization for
+each prescribed unequal vector. The source calls the work a local review
+manuscript and makes no external-review or priority claim.
+
+Minor clarification recommended to root: g is defined in dimension d=m-1,
+whereas the near-independence theorem quantifies over every ambient N and
+uses S_rho(g) or B_-r(g,g) on the right. For N<d, explicitly state that this
+benchmark is evaluated in R^d (or use p_m(rho)). The subsequent strictness
+sentence already makes the intended meaning clear. This is a notation
+clarification, not a counterexample or failure of the proved bound.
+
+Any later manuscript changes require a hash update and a scoped delta
+review; this report pins the assembly above, not an uninspected future file.

@@ -1,0 +1,46 @@
+{
+  "format": 1,
+  "scope": "Verbatim copied sources and evidence; original files preserved. These hashes do not certify mathematical correctness.",
+  "files": [
+    {
+      "path": "proofs/COUPLED_CACTUS_THEOREM.txt",
+      "sha256": "b85de74435d6f4db9f5d9ae4eeb624f7ff74422c33e4ce6d7ea4af2162d9f2a7",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/coupled_cactus_blocks_20261030/COUPLED_CACTUS_THEOREM.txt"
+    },
+    {
+      "path": "proofs/RECURSIVE_BLOCK_CLASS.txt",
+      "sha256": "023c6ec4c79d1c34119fd40d8bcfac1b644a9c5a55584b1d33193a7b0c570167",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/RECURSIVE_BLOCK_CLASS.txt"
+    },
+    {
+      "path": "audits/ROOT_COUPLED_CACTUS_AUDIT_20261030.txt",
+      "sha256": "7423398da56e1eeeb55b41630d3d92a5fcc6245ace280cd81f6e3f0fb7814296",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/coupled_cactus_blocks_20261030/ROOT_COUPLED_CACTUS_AUDIT_20261030.txt"
+    },
+    {
+      "path": "evidence/ROOT_INDEPENDENT_FIXTURE_CHECK.json",
+      "sha256": "bedef49e9ab49abaa5ad9e00befe8da6a546bcf7d1f30a57b7bec6b367191903",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/coupled_cactus_blocks_20261030/ROOT_INDEPENDENT_FIXTURE_CHECK.json"
+    },
+    {
+      "path": "evidence/EXACT_COUPLING_CHECKS.json",
+      "sha256": "63e6a42548c47976e6b6152f1f6db8a14d7d48f8a549a3ac51f86c787e438667",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/coupled_cactus_blocks_20261030/EXACT_COUPLING_CHECKS.json"
+    },
+    {
+      "path": "evidence/TWO_CYCLE_LENGTH_BOUNDARY.json",
+      "sha256": "89227068bda8efe878647ec34912aa8fdfae9bc8403edff237766b67ab55f18a",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/coupled_cactus_blocks_20261030/TWO_CYCLE_LENGTH_BOUNDARY.json"
+    },
+    {
+      "path": "checks/exact_coupling_checks.py",
+      "sha256": "91a059d5f61751f1a2aae7428f1da419c15d55ae49a1ecdec8279ff7cbd7fa8f",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/coupled_cactus_blocks_20261030/exact_coupling_checks.py"
+    },
+    {
+      "path": "PRIMARY_PRIOR_ART_20261030.txt",
+      "sha256": "8ca4981bb203c764e36e98a76fece15aabce1ac3ef4054545dfd52c888302b28",
+      "original_workspace_path": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/causal/coupled_cactus_blocks_20261030/PRIMARY_PRIOR_ART_20261030.txt"
+    }
+  ]
+}

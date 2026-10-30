@@ -1,10 +1,26 @@
-# Research notes on attention, inference and identification
+# Research proofs and reproducible notes
 
-Substantial results and reproducible experiments from the week of 26 October
-2026. These are research notes with explicit assumptions and limitations,
+Substantial results and reproducible experiments through 31 October 2026.
+These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
 
-## Start here
+## New results — 31 October
+
+| Result | Scope | Review status |
+| --- | --- | --- |
+| [Gaussian covariance concavity and simplex optimality](frontier/gaussian-simplex/README.md) | A covariance theorem for every finite-dimensional target with finite second moment; balanced first-moment optimality for every cell count, both-sign near-zero noise results, and a separately audited quadratic Gaussian-bubble stability consequence. | Complete manuscript, three internal analytic audits, assembly audits and two exact checkers. Full correlation ranges remain open. |
+| [Marcus inequality for three blocks](frontier/marcus-three-blocks/README.md) | Every block size and every complex PSD Gram rank. | Complete proof, independent derivation and exact checks. The arbitrary-block conjecture remains open. |
+| [Coupled cactus causal models](frontier/causal-cactus/README.md) | Exact generic real-fiber count for the declared coherent cactus class, including cross-component error correlations. | Scoped technical note with audited proof and exact checks. Earlier-literature overlap remains unresolved. |
+| [Gaussian polynomial independence](frontier/gaussian-polynomial-independence/README.md) | A compact extremal critical-fiber obstruction allowing arbitrary degeneracy. | Scoped analytic lemma and root audit. The full U-conjecture remains open. |
+
+The new theorem packages include readable PDFs and preserve their frozen
+manuscripts, proof sources, audit records and checksums. Downloadable archives
+are in [archives/](archives/).
+All independent internal reviews are **AI-agent reviews**, not external expert
+endorsement. Publication records the work; it does not settle its novelty or
+newsworthiness.
+
+## Original six-project release — 28 October
 
 | Project | Main result | What it establishes |
 | --- | --- | --- |
@@ -30,7 +46,8 @@ python -m pip install -r requirements.txt
 python verify_release.py
 ```
 
-The default checks use saved evidence and bounded exact/numerical algebra.
+The default checks cover both the original six projects and the new theorem
+packages, using saved evidence and bounded exact/numerical algebra.
 They do not launch cloud jobs, retrain a video model, rerun a benchmark, or
 overwrite released results. Optional native PyTorch interface checks and
 training reproduction are documented in the attention package.

@@ -1,0 +1,164 @@
+INDEPENDENT AUDIT: FULL LOCAL REGULAR-SIMPLEX COVARIANCE COERCIVITY
+31 October2026. Auditor: strong_signal_prior_art.
+
+VERDICT: PASS for the complete local theorem and the explicitly
+conditional global-gap/centroid-coercivity reduction.
+
+Pinned source: ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt
+SHA2563cfd9d783cb6b1e0f6b8401d4ae945287e10fa8a31ab4740ac7838f68b9aa970.
+The entire source was read; final corrections to the Hessian premise and
+orthogonal-group notation were separately checked. No source was edited.
+Dependency: TWO_GROUP_BALANCED_ENDPOINT_20261031.txt,
+SHA2568a419147b5258fe7765647ad3096714847069de13e2651f5d7f22d230c7c179b,
+whose complete proof has already passed this agent's independent audit.
+
+1. Regularity and symmetry
+The map from an apex vector a in R^(m-1) to the offsets
+h_i=-s_i dot a is an isomorphism onto the zero-sum offset space, because
+the m fixed regular score sites are affinely independent and sum to0.
+Writing the maximum as its fixed simplex support function and translating
+the Gaussian density therefore gives a smooth function of the apex and
+the positive definite covariance. Its at-most-linear support-function
+growth is dominated by the locally uniform Gaussian tails under all
+derivatives needed here. The score covariance on the zero-sum space is
+a linear congruence of these coordinate covariances.
+
+Every pair of regular score cones shares a facet of positive Gaussian
+measure. Thus the offset Hessian is a complete weighted graph Laplacian
+with positive weights, invertible on the offset quotient. The implicit
+function theorem and envelope Schur complement give the claimed continuous
+covariance Hessian of the minimized value. This avoids any assumption
+about generic moving-diagram topology in dimension m-1.
+
+Permutation invariance is exact. For H with zero row sums and trace0,
+its average under simultaneous row/column permutations is0: the average
+diagonal is its trace divided by m, while the average off-diagonal is
+also0. Hence every invariant first derivative vanishes on that tangent
+space. This verifies stationarity without a representation-theory input.
+
+2. Classification of invariant quadratic forms
+One small implicit algebraic step can be made explicit: extend Q from
+the invariant subspace V to any quadratic form on all symmetric matrices,
+then average that extension over permutations. The average still agrees
+with Q on V. Its coefficients are constant on entry-pair orbits. There
+are exactly the seven types listed in the source, so the ensuing orbit
+calculation applies even though Q was originally defined only on V.
+
+I independently derived every reduction, with unordered pairs counted
+once. From trace0 and zero row sums,
+  sum_{i<j}d_i d_j=-D/2,
+  sum_edges(d_i+d_j)h_ij=-D,
+  sum_edges sum_{k not incident}d_k h_ij=D.
+Squaring each off-diagonal row sum and summing gives
+  sum_incident unordered edge pairs h_e h_f=D/2-O.
+Squaring the total off-diagonal sum, which is0, then gives
+  sum_disjoint unordered edge pairs h_e h_f=(O-D)/2.
+These exhaust all types, proving Q=alpha D+beta O. For m=3 the disjoint
+sum is empty and enforces O=D; no nonexistent orbit is assumed independent.
+
+3. S/T splitting and the two necessary signs
+For sum d_i=0 the displayed S(d) has row i equal to
+  d_i-[(m-1)d_i+sum_{j!=i}d_j]/(m-2)=0.
+Also sum_{i<j}(d_i+d_j)^2=(m-2)D, so O(S)=D/(m-2).
+If T has diagonal0 and row sums0, then
+  sum_{i<j}S_ij T_ij
+    =-(1/(m-2))sum_i d_i sum_{j!=i}T_ij=0.
+Consequently the source's equation(3) is exact, with no hidden mixed
+term between the diagonal component and the zero-diagonal component.
+
+For m>=4, split a=2 and b=m-2. One explicit nonzero diagonal choice is
+d_A=b, d_B=-a. It has trace0, D=abm>0, and gives an invariant S(d).
+The stated T construction has zero rows since its within-A contribution
+is -bt and its cross-group contribution is bt, and similarly for B.
+Both group sizes are at least2, all denominators are nonzero, and t!=0
+makes T nonzero. The squared-amplitude parametrization is a LINEAR
+isomorphism onto invariant zero-row-sum covariance matrices (with the
+singleton coordinate removed when needed). Therefore these perturbations
+correspond to genuine nonzero straight squared-amplitude directions.
+Their paths remain in the positive interior for sufficiently small
+positive and negative time, since K_* has eigenvalue m on1-perp.
+
+The required imported premise is the NEGATIVE DEFINITE Hessian in
+equation(7) of the two-group proof. Mere strict concavity would not imply
+a negative Hessian at a particular point. The final source explicitly
+uses the stronger, already proved premise. Applying it to S(d) and T
+gives, respectively,
+  alpha+beta/(m-2)<0, beta<0.
+For m=3, direct solution of the three zero-row equations shows T=0.
+The split2+1 supplies the nonzero S test and gives alpha+beta<0, which
+controls the whole tangent space in this case.
+
+As a quantitative algebra check, for m>=4 put
+c_S=-(alpha+beta/(m-2))>0 and c_T=-beta>0. Since
+  ||H||_F^2=[m/(m-2)]D+2O(T),
+one has
+  Q(H)<=-min((m-2)c_S/m,c_T/2)||H||_F^2.
+For m=3 the corresponding coefficient is -(alpha+beta)/3>0.
+These are formulas in the Hessian coefficients, not evaluated numerical
+constants. They verify full negative definiteness for every m>=3.
+
+4. Local gap
+The continuous Hessian remains uniformly negative in a sufficiently
+small neighborhood of K_* on the fixed trace/row-sum affine space.
+Taylor's integral formula with the vanishing first derivative proves
+the local quadratic deficit. Only m-dependent existential constants
+are claimed; no dimension-uniform numerical estimate is inferred.
+
+5. CONDITIONAL global step: direction and domain
+Assume the additional global concavity stated in the source. Let
+K_theta=(1-theta)K_*+theta K, with one fixed theta small enough to
+place EVERY such point in the local ball. This is possible because
+the trace-normalized PSD domain is compact. It is convex, and K_theta
+is positive definite on1-perp when theta<1, even if K is singular.
+
+The precise concavity direction is
+  J(K_theta)>=(1-theta)J(K_*)+theta J(K),
+so
+  theta[J(K_*)-J(K)]>=J(K_*)-J(K_theta).
+Combining this with the local lower bound gives the global quadratic
+gap g||K-K_*||_F^2 with g=c_m theta>0. Thus the source does not reverse
+the inequality or infer a global modulus from compactness alone.
+This step is CONDITIONAL on the unproved global concavity hypothesis.
+
+6. CONDITIONAL centroid normalization and rescaling
+Let L=m(m-1), w=mu_m^2/(m-1), Delta=w-W, and W>0. The normalized
+centroid Gram has trace L and zero row sums. Exact balance eliminates
+all zero-sum offsets in the pointwise score inequality, giving
+  sqrt(LW)<=J(K)<=J(K_*)=sqrt(Lw).
+Thus W<=w. Moreover
+  J(K_*)-J(K)<=sqrt(L)(sqrt(w)-sqrt(W))
+                   <=sqrt(L)/sqrt(w) Delta.
+Under the conditional global gap, this yields
+  ||K-K_*||_F^2<=A Delta, A=sqrt(L)/(g sqrt(w)).
+There is no small-W singularity in this estimate.
+
+Because K_*=mP commutes with every zero-row-sum symmetric K, the
+orthogonal Procrustes identity is exactly
+  min_{O in O(N)}||B-B_*O||_F^2
+     =sum_{j=1}^{m-1}(sqrt(lambda_j(K))-sqrt(m))^2.
+For each nonnegative lambda,
+  (sqrt(lambda)-sqrt(m))^2
+      =(lambda-m)^2/(sqrt(lambda)+sqrt(m))^2
+      <=(lambda-m)^2/m.
+This proves the stated Frobenius estimate, including rank-deficient K.
+The source now correctly uses O(N); SO(N) alone with fixed labels would
+not generally justify this exact formula when N=m-1.
+
+For an explicit check of the final scaling, write
+b=sqrt(W/L) B and c_*=sqrt(w/L) B_*, with ||B_*||_F^2=L.
+Using the minimizing O and (x+y)^2<=2x^2+2y^2 gives
+  dist(b,regular centroid orbit)^2
+    <=[2w A/(mL)+2] Delta
+     =[2+2sqrt(w)/(m g sqrt(L))] Delta.
+Here (sqrt(w)-sqrt(W))^2<=w-W was used. This supplies a concrete finite
+symbolic K_m and verifies that rescaling does not lose the deficit order.
+When W=0 the squared distance is exactly w=Delta, so the same bound
+holds. The stated N>=m-1 assumption permits embedding the regular orbit.
+
+CONCLUSION
+No substantive gap was found. The proven result is full local covariance
+coercivity at the balanced regular simplex for EVERY m>=3, without any
+symmetry condition on the perturbation. The passage to global covariance
+coercivity and then H_m is mathematically correct but expressly conditional
+on global concavity. Neither that hypothesis, the unrestricted endpoint,
+nor a new small-noise theorem for every cell count has been proved here.

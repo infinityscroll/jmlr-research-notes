@@ -1,0 +1,223 @@
+{
+  "format": 1,
+  "title": "Gaussian Covariance Concavity and Simplex Optimality near Independence",
+  "date": "2026-10-31",
+  "status": "Internally audited research manuscript; no external review or priority clearance",
+  "files": [
+    {
+      "path": "README.txt",
+      "sha256": "831b429793e73cfb4c78cce70e575fb9b31b7f8acb78307f26d17b3de01bd5dd",
+      "bytes": 5785
+    },
+    {
+      "path": "ROOT_REVIEW.txt",
+      "sha256": "3a3521aa4bfebadd2cc8ff180a6f5e9f78f3bf23c75886f67c82a8be0f0b85cc",
+      "bytes": 2009
+    },
+    {
+      "path": "SOURCE_MAP.json",
+      "sha256": "cb447d204106315e87a46f52f16deec881e6fb98585d19fc18b9a3b055a12483",
+      "bytes": 2895
+    },
+    {
+      "path": "audits/all_m_implications.txt",
+      "sha256": "bd44227d4d96eac4d86aeb977e412a2da79c785934b862a9e507dccc69ccb1a8",
+      "bytes": 3494
+    },
+    {
+      "path": "audits/assembled_core_final.txt",
+      "sha256": "810f3503c2f6d709bdea5ef329454d1ab1de03a3d02bfcfab218b8a0b6b1cb2c",
+      "bytes": 3194
+    },
+    {
+      "path": "audits/assembled_core_initial.txt",
+      "sha256": "63ab3dd135a7f0dbd947950f2dec5f0173907ae14ae7c019d4cfb584116cdf11",
+      "bytes": 5959
+    },
+    {
+      "path": "audits/assembled_transfer.txt",
+      "sha256": "77aaa992142df749226fae57000899ae0db84d4cd555ee1b3e47c4b45f343616",
+      "bytes": 6197
+    },
+    {
+      "path": "audits/assembled_transfer_pins.json",
+      "sha256": "ef31c7174dc4a1b40e182b39fc1af11c3455bf4074130857dc0a6a1af1bd1067",
+      "bytes": 1427
+    },
+    {
+      "path": "audits/covariance_and_transfer.txt",
+      "sha256": "59838e3765c2d7ee4c3948a9e028f4476586e10f0254515e5ac0d07ae2b13dfb",
+      "bytes": 14545
+    },
+    {
+      "path": "audits/covariance_branch.txt",
+      "sha256": "047efb3017b635be579fa91faef12f316ab419b33c78a2886892dd96599a78d1",
+      "bytes": 12452
+    },
+    {
+      "path": "audits/covariance_cleanroom.txt",
+      "sha256": "66569180588ea685aefa57f62d116f16e3b109d82bd02dbe48347e5d7a6ca55e",
+      "bytes": 19318
+    },
+    {
+      "path": "audits/explicit_all_m_gap.txt",
+      "sha256": "1c2e18c70e59aa41ecada00a841006ed73765abb32c2c3c47f6dc4b147c85dba",
+      "bytes": 3240
+    },
+    {
+      "path": "audits/gaussian_fitting.txt",
+      "sha256": "26a26961a28155498e0ed31785f1e65a16905606c1456e4b316f2a046258e861",
+      "bytes": 2223
+    },
+    {
+      "path": "audits/local_coercivity.txt",
+      "sha256": "7fffc2aa8623cf69dcf59fb0f2e5267c0a8add6371f4ab807e93fa236034ed72",
+      "bytes": 8431
+    },
+    {
+      "path": "audits/positive_transfer.txt",
+      "sha256": "429582e14af3c605be5f5f4dfd9a24f57a3646158848d083e4746dbc87a9f9c8",
+      "bytes": 8457
+    },
+    {
+      "path": "checks/check_chain_geometry.py",
+      "sha256": "9b93826cd8aa6562f901dc78f5c8e8ab47021f9db358f79ec28db0d1cd1dce15",
+      "bytes": 7699
+    },
+    {
+      "path": "checks/check_simplex_chain_exact.py",
+      "sha256": "b793a2f3660349ad65e56429a26a25d5781ffc82567dfac324684af1445eb8d4",
+      "bytes": 4320
+    },
+    {
+      "path": "evidence/application_scope.txt",
+      "sha256": "c89ced28ed00dc2b0058e8983241a6a9648e257e589976ddda743742d769764c",
+      "bytes": 4421
+    },
+    {
+      "path": "evidence/gaussian_fitting_priority.txt",
+      "sha256": "43e7fd61ef934824b3c7a365a1884c57ba6f4f4722d5e1baa777d6a7c5b59b0b",
+      "bytes": 3945
+    },
+    {
+      "path": "evidence/primary_scope.txt",
+      "sha256": "8f15644bae3f2ebcdc6f4669106ca463c33dedc805d8b621890af1f1246456bb",
+      "bytes": 1751
+    },
+    {
+      "path": "evidence/root_fraction_replay.json",
+      "sha256": "c954d589645dd886dfb8d00416ca4b4a176a38d448a5c0d3e924531a3e89ddf9",
+      "bytes": 6551
+    },
+    {
+      "path": "evidence/root_sympy_replay.json",
+      "sha256": "be7153b834148c52b6e3229e12327af4cb6ea51ab92b6b1dc599a54c56a6faad",
+      "bytes": 1295
+    },
+    {
+      "path": "paper/ASSEMBLY_CHECKS.json",
+      "sha256": "ddd8d2c9837f7988c69727b5d34c3069b8d021ad8df1164309a56f80f1259932",
+      "bytes": 1616
+    },
+    {
+      "path": "paper/covariance.tex",
+      "sha256": "e9c7a7f454aaff431da5b925afe129ae247f1cc1419c438a2acf86f66cc60f17",
+      "bytes": 13496
+    },
+    {
+      "path": "paper/dimensions.tex",
+      "sha256": "502c898e4c5e798d16648a69299adba5b130e562973a3847d5abac5ec3672dc4",
+      "bytes": 5623
+    },
+    {
+      "path": "paper/endpoint.tex",
+      "sha256": "68eda729fdacb8d8c005b6f481be0ac3cbd7da213a79ee1b8e26e1fd9e1775d2",
+      "bytes": 3961
+    },
+    {
+      "path": "paper/lineage.tex",
+      "sha256": "28d7e954e8be3a3470a4060ad524c015f2b967a72a9275be89686c230bc99f4c",
+      "bytes": 2877
+    },
+    {
+      "path": "paper/main.tex",
+      "sha256": "2ffc7e17fde2f6c2eb14ea48ed61988091d20d3c162b90bfcf4dffe7ceb943b5",
+      "bytes": 3213
+    },
+    {
+      "path": "paper/negative.tex",
+      "sha256": "708158be756661d1fd149fc2d867544fa5a6a5291d0ce9e5f2ffa0b9d712a9bd",
+      "bytes": 5007
+    },
+    {
+      "path": "paper/positive.tex",
+      "sha256": "43ca6a37098a2c37ac0fbf6e10d0ec252ae04a5144161e5ff2bb58a8b049e3f3",
+      "bytes": 2358
+    },
+    {
+      "path": "paper/references.tex",
+      "sha256": "b6e0e27bc5201cd9ee2831b5219543a7f540fab0a5cfba01bea472137af61b72",
+      "bytes": 1417
+    },
+    {
+      "path": "paper/statements.tex",
+      "sha256": "48de1884aba78af921b616dd372164a5bf7e95658c706a78db2314d8c312937a",
+      "bytes": 5057
+    },
+    {
+      "path": "paper/transfer_common.tex",
+      "sha256": "7123ce31219fe6dc3e94480c8e9063c7f9bfc43afced84c6937544c0122b3e5b",
+      "bytes": 10650
+    },
+    {
+      "path": "proof_sources/ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt",
+      "sha256": "3cfd9d783cb6b1e0f6b8401d4ae945287e10fa8a31ab4740ac7838f68b9aa970",
+      "bytes": 7348
+    },
+    {
+      "path": "proof_sources/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b",
+      "bytes": 17265
+    },
+    {
+      "path": "proof_sources/ALL_M_ENDPOINT_AND_SMALL_NOISE.txt",
+      "sha256": "d12e3437d3dd43e577039a90f0898a0fdb09f1f073c133ab3fc536332a84828a",
+      "bytes": 7045
+    },
+    {
+      "path": "proof_sources/EXPLICIT_ALL_M_GAP_20261031.txt",
+      "sha256": "01e6bbfa3ae80a7f19c8de9f98592441202483947b282be55a51784a0f413989",
+      "bytes": 8520
+    },
+    {
+      "path": "proof_sources/EXPLICIT_LOCALIZATION_20261031.txt",
+      "sha256": "150de07649e003ebaa1b8ef720b4ba0b831d310c683b79079e0de2c7923063d0",
+      "bytes": 3809
+    },
+    {
+      "path": "proof_sources/FINITE_CELL_COERCIVITY_TO_NOISE_TRANSFER_20261030.txt",
+      "sha256": "1d951abe62965c31d3b8ce5209099d62167ed9fc9b554f0c91d4c057b9a3dff5",
+      "bytes": 10469
+    },
+    {
+      "path": "proof_sources/FREE_COMMON_MASS_NEGATIVE_TRANSFER_AUDIT_20261031.txt",
+      "sha256": "9a6339628de87b4d0ae95526438caab8544da303bb2934c8494c204b33adc2ef",
+      "bytes": 16651
+    },
+    {
+      "path": "proof_sources/GAUSSIAN_FITTING_COROLLARY_20261031.txt",
+      "sha256": "692b6dd6d97d4a903f18c766b53ab79f52d241c499d17e93433bff202261c071",
+      "bytes": 4037
+    },
+    {
+      "path": "reproduce.py",
+      "sha256": "42288dc4402f587159e0f8c7ac343830e01d06670ee589953e57059f838b6c5f",
+      "bytes": 3109
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc",
+      "bytes": 14
+    }
+  ]
+}

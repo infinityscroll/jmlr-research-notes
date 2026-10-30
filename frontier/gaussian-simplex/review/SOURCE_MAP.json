@@ -1,0 +1,42 @@
+[
+  {
+    "package_path": "proof_sources/ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/five_cell_endpoint_20261030/ALL_CELL_REGULAR_LOCAL_COERCIVITY_20261031.txt",
+    "sha256": "3cfd9d783cb6b1e0f6b8401d4ae945287e10fa8a31ab4740ac7838f68b9aa970"
+  },
+  {
+    "package_path": "proof_sources/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+    "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b"
+  },
+  {
+    "package_path": "proof_sources/ALL_M_ENDPOINT_AND_SMALL_NOISE.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/all_dimensional_covariance_concavity_20261031/ALL_M_ENDPOINT_AND_SMALL_NOISE.txt",
+    "sha256": "d12e3437d3dd43e577039a90f0898a0fdb09f1f073c133ab3fc536332a84828a"
+  },
+  {
+    "package_path": "proof_sources/EXPLICIT_ALL_M_GAP_20261031.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/all_dimensional_covariance_concavity_20261031/EXPLICIT_ALL_M_GAP_20261031.txt",
+    "sha256": "01e6bbfa3ae80a7f19c8de9f98592441202483947b282be55a51784a0f413989"
+  },
+  {
+    "package_path": "proof_sources/EXPLICIT_LOCALIZATION_20261031.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/four_candidate_verify_4un8zpvy/scratch/negative_free_mass/EXPLICIT_LOCALIZATION_20261031.txt",
+    "sha256": "150de07649e003ebaa1b8ef720b4ba0b831d310c683b79079e0de2c7923063d0"
+  },
+  {
+    "package_path": "proof_sources/FINITE_CELL_COERCIVITY_TO_NOISE_TRANSFER_20261030.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/FINITE_CELL_COERCIVITY_TO_NOISE_TRANSFER_20261030.txt",
+    "sha256": "1d951abe62965c31d3b8ce5209099d62167ed9fc9b554f0c91d4c057b9a3dff5"
+  },
+  {
+    "package_path": "proof_sources/FREE_COMMON_MASS_NEGATIVE_TRANSFER_AUDIT_20261031.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/four_candidate_verify_4un8zpvy/scratch/negative_free_mass/FREE_COMMON_MASS_NEGATIVE_TRANSFER_AUDIT_20261031.txt",
+    "sha256": "9a6339628de87b4d0ae95526438caab8544da303bb2934c8494c204b33adc2ef"
+  },
+  {
+    "package_path": "proof_sources/GAUSSIAN_FITTING_COROLLARY_20261031.txt",
+    "original_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/all_dimensional_covariance_concavity_20261031/GAUSSIAN_FITTING_COROLLARY_20261031.txt",
+    "sha256": "692b6dd6d97d4a903f18c766b53ab79f52d241c499d17e93433bff202261c071"
+  }
+]

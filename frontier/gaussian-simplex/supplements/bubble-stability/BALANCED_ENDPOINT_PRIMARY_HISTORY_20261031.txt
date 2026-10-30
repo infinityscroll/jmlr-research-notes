@@ -1,0 +1,141 @@
+BALANCED FIRST-MOMENT PROBLEM: BOUNDED PRIMARY-HISTORY CHECK
+31 October 2026. strong_signal_branch_count.
+Requested by strong_signal_prior_art; frozen release left unchanged.
+
+Conclusion within the inspected citation chain
+
+An explicit FOUR-CELL balanced first-moment conjecture is already present
+on 30 November 2012, in Heilman1211.7138v1. Its 2014 revision makes the
+quantitative-stability consequence explicit. An explicit ALL-m>3 problem
+with prescribed masses is stated in Heilman1901.03934v1, January2019;
+its equal-mass subcase is exactly the balanced endpoint, up to a positive
+factor and an additive constant. The earlier Khot--Naor antecedents in
+that citation chain optimize over unrestricted masses. The all-m balanced
+Standard Simplex noise conjecture dates at least to Isaksson--Mossel's
+March2009 arXiv version, but is a full noise question, not a separately
+stated first-moment endpoint in the inspected passage.
+
+These are earliest VERIFIED explicit formulations in this bounded chain,
+not a claim of exhaustive historical priority or absence of earlier work.
+
+1. Explicit four-cell endpoint: November2012, not merely May2014
+
+Steven Heilman, Euclidean Partitions that Optimize an Ornstein-Uhlenbeck
+Quadratic Form, arXiv:1211.7138v1, submitted30November2012.
+https://arxiv.org/abs/1211.7138v1
+https://arxiv.org/pdf/1211.7138v1
+
+Printedp7, equation(11), identifies
+  (d/d rho)|_(rho=0) sum_i integral 1_Ai T_rho 1_Ai d gamma
+     =sum_i |integral_Ai x d gamma|^2.
+Definition2.2 on that page defines Delta_k^0 by simplex-valued assignments
+with each integral exactly1/k. Section6, printedp32, Conjecture3, sets
+k=4,n=3 and asks whether every indicator maximizer of psi_0 over this
+balanced class is simplicial conical. The conclusion there does NOT
+say regular simplicial; our regular classification is stronger.
+
+Section6 contrasts this with the unrestricted class Delta_k, for which
+the conical structural result is already known, and identifies the volume
+constraint as the difficulty. This is an explicit endpoint question, not
+an inference solely from the general Standard Simplex conjecture.
+
+The revised title is Euclidean Partitions Optimizing Noise Stability,
+arXiv:1211.7138v2,26May2014; published Electron.J.Probab.19(2014),no.71.
+https://arxiv.org/pdf/1211.7138v2
+Section8, printedp37, retains Conjecture3. Its preceding paragraph says a
+stability estimate analogous to Lemma2.8 would let the main iterative
+argument and Theorem7.2 extend to larger cell counts. The resulting old
+theorem's correlation threshold depends on ambient dimension; a usual
+dimension-independent Plurality consequence needs additional work.
+
+2. Explicit all-m prescribed-mass endpoint: January2019
+
+Steven Heilman, Stable Gaussian Minimal Bubbles, arXiv:1901.03934v1.
+Repository submission date13January2019.
+https://arxiv.org/abs/1901.03934v1
+https://arxiv.org/html/1901.03934v1#S1.SS4
+
+Section1.4, Problem1.15, fixes m>3, positive a_i summing to1 and a vector
+w from the translated regular partition in equation(1). It sets
+  w^(i)=w/a_i
+and asks to maximize, over partitions with gamma(Omega_i)=a_i,
+  sqrt(pi/2) sum_i |integral_(Omega_i)(x-w^(i)) d gamma|^2.
+Conjecture1.16 predicts translated regular simplicial cones when m-1 is
+at most the ambient dimension. This is an all-m formulation and includes
+arbitrary prescribed unequal masses, which our balanced theorem does not
+claim to settle.
+
+Exact algebraic comparison: put b_i=integral_(Omega_i)x d gamma.
+Since integral_(Omega_i)w^(i)d gamma=w and sum_i b_i=0, its objective is
+  sqrt(pi/2)[sum_i |b_i|^2+m|w|^2].
+Thus the shift changes only a constant for the prescribed mass problem.
+For a_i=1/m one can choose w=0; the objective is precisely sqrt(pi/2)
+times our balanced first-moment objective. This cancellation is an
+independent calculation, not an additional claim attributed to the paper.
+
+The opening of section1.4 expressly connects this problem to rho tending
+to0. The paper also uses it as a condition for many-cell Gaussian-bubble
+stability and associated weak small-noise bounds. Those are not, merely
+from this citation, full noise optimality or the entire unequal-mass
+Conjecture1.16. The other agent is checking the exact published stability
+theorem separately.
+
+Version caution: the supplied local cache named heilman_stable_current.pdf
+is internally dated12January2019, with48pages. The currently retrieved
+arXiv v1 PDF has49pages and an internal15January2019 date, while repository
+metadata says13January2019. Therefore the cache filename is not evidence
+that it is the13October2026 published version. Problem1.15's equation and
+Conjecture1.16 agree with the directly read arXiv HTML; the square-root
+factor is sqrt(pi/2), not sqrt(pi)/2.
+Cache PDF SHA256:
+e181ff98cffbe64787b51b8c8085b535163315ec5ebcfced350876aad5767fd4
+Cache PDF text SHA256:
+8605fa8ee10daf964c451c3f113b42ca306f892cad160b0ef8038b1bc4694dab
+
+3. Khot--Naor antecedents: unrestricted masses
+
+Khot--Naor, Approximate kernel clustering, arXiv:0807.4626,
+submitted29July2008, revised9December2008; Mathematika55(2009),129--165.
+https://arxiv.org/abs/0807.4626
+https://cs.nyu.edu/~khot/papers/kernel.pdf
+The introduction's propeller-problem paragraph and Theorem1.2, printedp5
+of the author PDF, maximize sum_i |z_i|^2 over all measurable partitions
+of R^(k-1). The maximizing conical reduction can have only m<=k active
+cells. The proposed optimizer uses three120-degree sectors and permits
+empty extra cells. It is not an equal-mass k-cell conjecture. Its stated
+consequences concern kernel-clustering approximation thresholds under UGC.
+
+Khot--Naor, Sharp kernel clustering algorithms and their associated
+Grothendieck inequalities, arXiv:0906.4816v1,25June2009;
+Random Structures & Algorithms42(2013),269--300.
+https://arxiv.org/abs/0906.4816v1
+https://arxiv.org/pdf/0906.4816v1
+The abstract and opening definition of C(B) maximize
+  sum_ij b_ij <z_i,z_j>
+over all measurable k-partitions, without prescribed cell probabilities.
+This is the other cited variant in Heilman's section1.4. It does not
+justify attributing the balanced all-m endpoint formulation to2008/2009.
+
+4. Earlier all-m noise conjecture and its consequence distinction
+
+Isaksson--Mossel, New Maximally Stable Gaussian Partitions with Discrete
+Applications, arXiv:0903.3362v1,19March2009.
+https://arxiv.org/abs/0903.3362v1
+https://arxiv.org/pdf/0903.3362v1
+Conjecture1.4, printedp3, gives the regular-simplex balanced maximum for
+all positive correlations and the unrestricted-mass minimum for negative
+correlations, for3<=q<=n+1. Section1.2 and Theorems1.7--1.8 connect this
+to Plurality is Stablest. Theorem1.10 discusses the full conjecture's
+MAX-q-CUT approximation consequence under UGC, involving an infimum over
+the full admissible correlation interval. A near-zero theorem alone
+does not supply that full-range hardness conclusion.
+
+Differentiating the positive-correlation inequality at independence would
+imply the balanced first-moment bound. That is a mathematical implication;
+the inspected source passage states the noise conjecture, rather than a
+standalone first-moment conjecture. The current PDF's internal date line
+appears inconsistent with its arXiv stamp, so the date above uses version
+metadata. No attempt was made to reconstruct unpublished earlier drafts.
+
+No generic novelty search followed these direct citation-chain checks.
+No frozen manuscript/release was changed, and no author was contacted.

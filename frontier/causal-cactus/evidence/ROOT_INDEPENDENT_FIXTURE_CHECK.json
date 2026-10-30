@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source_sha256": "b85de74435d6f4db9f5d9ae4eeb624f7ff74422c33e4ce6d7ea4af2162d9f2a7",
+  "method": "root independent Fraction matrix fixture, no imports from author checker",
+  "signed_figure_eight_reconstructed": true,
+  "dense_cycle_lengths_checked": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "scaled_orthogonal_branch_transform_checked": true
+}

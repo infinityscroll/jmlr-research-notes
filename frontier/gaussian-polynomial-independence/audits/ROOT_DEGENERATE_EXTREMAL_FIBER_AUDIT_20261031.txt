@@ -1,0 +1,63 @@
+ROOT AUDIT: DEGENERATE EXTREMAL CRITICAL-FIBER RIGIDITY
+31 October 2026.
+
+Audited source: DEGENERATE_EXTREMAL_CRITICAL_FIBER_20261031.txt
+SHA256 bc9fb1595859e9a65f6f45e48cdb135667a24b2a17fb18b20c2a3b0d84dd0232.
+
+Verdict: the stated one-sided compact-critical-fiber argument passes root
+mathematical review. No full U-conjecture or historical novelty is claimed.
+
+I checked the high-even-moment witness independently. If g is nonconstant,
+its absolute value is unbounded and every nonempty open tail event has
+positive Gaussian mass. The exponential-in-k lower bound on E g^(2k)
+therefore dominates the maximum of g^(2k) on a fixed compact neighborhood
+of K. This gives a uniform NEGATIVE sign for q-Eq near K, without requiring
+g to vary on K. All moments used in independence are finite.
+
+The entire critical set in the selected value band is K: a polynomial has
+finitely many real critical values, since its critical set has finitely
+many semialgebraic connected components, and it is constant on each.
+After removing finitely many open balls whose union contains K and whose
+closures lie in the region where chi=1, the remaining closed value band
+has no critical points. On radius-R intersections the positive gradient
+minimum is a semialgebraic function. The polynomial-growth dichotomy for
+such a function supplies a reciprocal-polynomial bound at infinity.
+Thus every fixed derivative of grad f/|grad f|^2 has polynomial growth on
+the relevant nonstationary region. Smooth cutoffs can be chosen identically
+one on the support of the outer amplitude and its derivatives; all added
+transition regions are either separated from K in a compact set or still
+satisfy the same bound. Gaussian decay absorbs every polynomial factor.
+Repeated integration by parts is legitimate, including the nonproper case.
+It proves rapid Fourier decay and hence a smooth outer pushforward density.
+
+Independence sets the complete signed pushforward to zero. Its localized
+inner portion therefore has a smooth density. Since all critical points
+at this value are local minima, compactness permits one neighborhood where
+f>=c. The localized signed measure is nonpositive and supported to the
+right of c. Smoothness forces infinite-order flatness at c, including the
+absence of an atom. The small Euclidean ball around one critical point has
+f-c<=C|x-x0|^2 and contributes at least a constant times epsilon^(n/2).
+No other contribution can cancel its sign. This contradicts flatness.
+The proof never assumes a nonsingular Hessian or a compact full level set.
+
+I separately checked the example f=(sum x_j^6)^2(1-x_1^3): the only critical
+points are 0 and ((4/5)^(1/3),0,...,0), with values 0 and 256/3125. The
+second point has x1-Hessian entry -36 x1^10, all transverse Hessian entries
+zero, and the Hessian at 0 vanishes. The zero fiber is {0} union {x1=1}.
+Near 0 the function is nonnegative, and its essential variable space is
+all R^n. Thus it is a valid degenerate, nonproper test of the theorem.
+
+The positive-measure variant shows that any such polynomial law itself
+fails to have a smooth density at c. If F=X+h(V) is independent of G, every
+pencil F+lambda G has a Gaussian factor in its characteristic function.
+All derivatives of the other factors are bounded by finite polynomial
+moments, so the product and all derivatives decay rapidly. The pencil law
+has a smooth density. It therefore cannot contain the proved kind of
+compact extremal critical fiber. This is a necessary obstruction, not a
+classification of Gaussian-divisible polynomials or a proof of unlinking
+for every graph-submersion example.
+
+Remaining gap: indefinite fibers, mixed extremal signs, noncompact critical
+sets, and everywhere-submersive pencils. The one-sided argument cannot be
+silently extended to those cases. In particular, a polynomial lower mass
+bound around a saddle is compatible with a nonzero smooth density there.

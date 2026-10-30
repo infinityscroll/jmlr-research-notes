@@ -11,14 +11,17 @@ def main():
         assert path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==expected,name
     print('PASS release integrity:',len(manifest['files']),'files',flush=True)
     env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',OPENBLAS_NUM_THREADS='1',OMP_NUM_THREADS='1',MKL_NUM_THREADS='1')
-    cases=['attention/verify.py','hierarchical/reproduce.py','bootstrap/verify.py','topics/reproduce.py','kernel/verify.py','video/verify.py']
+    cases=['attention/verify.py','hierarchical/reproduce.py','bootstrap/verify.py','topics/reproduce.py','kernel/verify.py','video/verify.py',
+           'frontier/gaussian-simplex/review/reproduce.py',
+           'frontier/marcus-three-blocks/verify.py',
+           'frontier/causal-cactus/verify.py']
     for script in cases:
         start=time.monotonic()
-        result=subprocess.run([sys.executable,str(ROOT/script)],cwd=ROOT,env=env,text=True,capture_output=True,timeout=180)
+        result=subprocess.run([sys.executable,str(ROOT/script)],cwd=ROOT,env=env,text=True,capture_output=True,timeout=600)
         if result.returncode:
             print(result.stdout);print(result.stderr,file=sys.stderr)
             raise SystemExit('FAILED '+script)
         print('PASS',script,'in',round(time.monotonic()-start,2),'seconds',flush=True)
-    print('All six bounded verification entrypoints passed. This does not formally verify the analytic proofs.')
+    print('All',len(cases),'bounded verification entrypoints passed. This does not formally verify the analytic proofs.')
 
 if __name__=='__main__':main()

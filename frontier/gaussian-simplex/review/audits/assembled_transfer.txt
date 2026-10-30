@@ -1,0 +1,101 @@
+ASSEMBLED MANUSCRIPT: TRANSFER AND APPLICATION AUDIT
+31 October 2026. strong_signal_prior_art. Verdict: PASS.
+Internal AI-agent mathematical review; no external reviewer is implied.
+
+Manuscript directory, relative to stochastic:
+  gaussian_covariance_simplex_review_20261031/paper/
+Final presentation revision is pinned by ASSEMBLY_CHECKS.json, SHA256
+ddd8d2c9837f7988c69727b5d34c3069b8d021ad8df1164309a56f80f1259932.
+Companion ASSEMBLED_TRANSFER_APPLICATION_PINS_20261031.json records fresh
+hashes of all ten TeX sources and verifies their agreement with that record.
+
+Scope: complete line reading of main.tex, statements.tex, transfer_common.tex,
+positive.tex, negative.tex, dimensions.tex, references.tex and lineage.tex.
+The covariance/endpoint source arguments were audited separately; this
+assembly audit does not substitute for branch's read of those TeX files.
+The final changes to statements, references and lineage were reread after
+the initial proof-section inspection. No manuscript edits were made.
+
+1. Statements, dimensions and endpoint dependency
+The stated H_m includes every balanced relaxed assignment, exactly as the
+source theorem requires. Constants depend on fixed m, not ambient N.
+Orthogonal frames and label symmetries are retained. The revised convention
+explicitly evaluates the regular benchmark in d=m-1 when N<d; its strict
+comparison is justified by padding and centroid rank. No regular partition
+in an insufficient ambient dimension is being silently assumed.
+
+2. Common analytic estimates
+The positive saturated and negative damped potential estimates retain their
+utility integral, sign, monotonicity and constants c_+,c_-. The negative
+damping e^{-|x|^2/32} is carried into Fenchel's estimate with the auxiliary
+e^{5|x|^2/32}; the controlled moment remains e^{|x|^2/8}. The 8B/c factors,
+max(1,m/4) label factor, and separate tail-mass/Frobenius-tail bounds agree
+with the audited notes. The Mehler derivatives, exponent1/34, Taylor1/2,
+t0=13/136 and C_d are correct for either correlation sign.
+
+3. Exact balance repair and original-frame coercivity
+Both imbalance inequalities v<=u+tail and v<=eta are present. The facet
+anchors use the unscaled scores, so their unit gaps and geometric separation
+are correct for all m. Donor capacity c_A tau-eta=2v survives arbitrary
+concentration of the original error. Proportional transfers on disjoint
+slabs preserve the simplex constraints and repair masses exactly. The
+centroid/assignment-cost estimates keep the tail factors, and the subsequent
+Young estimate is applied in the ORIGINAL nearest frame. No unjustified
+re-alignment or bounded-support assumption enters the global argument.
+
+4. Positive closure
+Competitive Hermite bounds give Delta<=rho, hence the stated mismatch
+threshold under rho<=c_A^2/(576L). The quadratic remainder is for f-g,
+not a falsely bounded difference of full Hermite tails. The choices
+E_R<=sigma/4, rho<=sigma/(16 beta_R) and rho<=sigma/(4C_Q) yield the
+displayed strict loss -sigma D/4. All defining inequalities are non-strict,
+so the closed upper correlation endpoint is valid.
+
+5. Negative localization and closure
+The weak compactness argument proves uniform localization over ALL
+competitive pairs and ANY nearest reference frame. It uses balanced limits,
+the endpoint equality case, and weak continuity of first moments, without
+assuming an unequal-mass endpoint estimate. Halving the localization cutoff
+handles the closed upper r endpoint. The mixed expansion keeps the full
+zeroth-chaos penalty ||p-U||^2. The centroid variance is subtracted with the
+correct sign, and the mixed higher remainder is controlled in absolute
+value. The repair factors72, the Young coefficient2B^2/sigma, and the final
+restriction r<=2/(m C_mass) give exactly half the mass penalty plus
+sigma D/2. Thus p becomes uniform only as a conclusion, and F=g forces
+f=h=g. No positivity of T_{-r} or its higher-chaos terms is assumed.
+
+6. Ambient reduction and fractional equality
+The OU compactness/existence arguments hold for finite ambient dimension.
+Positive integrality uses strict positivity of T_rho. Negative integrality
+uses sequential fixed-p linear minimization, followed by strict-potential
+recovery of the ORIGINAL fractional pair. The global common-mass feasible
+class matches Heilman2022 Problem7.1/Theorem7.9 after reflecting the second
+argument. This is distinct from separately prescribed masses and does not
+require hyperstability. Positive reduction matches HT2021 Theorem1.9.
+The competitive mass bound ensures positivity before applying the negative
+reduction. The common subspace and common equality frame are preserved.
+
+7. Discrete consequence
+The symbol channel is correctly restricted to rho>=-1/(m-1). The stated
+summed influence bound implies each component's low-degree bound. IM2009
+Theorem7.1 preserves expectations exactly and the same fixed rho; Lemma7.3
+identifies the plurality limit. Therefore positive balance is required,
+whereas the negative SINGLE-rule corollary allows arbitrary output means.
+No two-rule invariance theorem is needed. The additive-error, finite-n
+quantifiers and absence of a uniform-in-rho threshold are accurate.
+
+8. References, presentation delta and priority limits
+I directly reread Heilman1211.7138v2 section8, Conjecture3 and its preceding
+stability discussion, and Heilman2610.32158v1's paragraphs after Theorem1.3.
+They support the narrowly worded related-problem paragraph. It correctly
+separates prescribed cell masses from unrestricted propeller optimization
+and prescribed individual score variances. This is not an exhaustive
+priority assessment. The lineage now explicitly identifies AI-agent audits,
+keeps computational checks distinct from the uniform proof, and avoids
+external-review or public-priority claims. The scope remains near zero;
+no full-correlation or sharp multiway-cut hardness conclusion is asserted.
+
+Conclusion: the assembled transfer/application proof preserves the audited
+source arguments and their exact quantifiers. No substantive issue or repair
+was found. This audit does not rely on successful compilation as evidence of
+mathematical validity; compilation is separately recorded by the assembler.

@@ -1,0 +1,129 @@
+INDEPENDENT AUDIT: EQUAL-MASS STABLE-BUBBLES BRIDGE
+31 October 2026. strong_signal_branch_count.
+
+VERDICT: PASS at the pinned revision, with the stated scope and external
+theorem dependency. No mathematical or quantifier repair requested.
+No frozen package, bridge source, or publication destination was changed.
+
+Audited source:
+STABLE_BUBBLES_BRIDGE_20261031.txt
+SHA256 ff25e2a9eff22d3fa206d1990a3ced7108df2f52215902df7df8a1a7f853f450
+
+Primary version of record:
+Steven Heilman, Stable Gaussian minimal bubbles, Calc.Var.65,271(2026).
+https://doi.org/10.1007/s00526-026-03408-z
+https://link.springer.com/content/pdf/10.1007/s00526-026-03408-z.pdf
+Local PDF SHA256:
+a2653d0ead090c6ba4dc7ef745011f3ebcc35bc10bcee9a35d93e9d68bd7b63c
+Its rendered page4 was independently inspected, including the square-root
+bar, epsilon formula, and quantifiers of Theorems1.5--1.6. The extracted
+pages3--5,14--15,42--44 were read for the objective, perimeter conventions,
+existence/reduced-boundary setting and reference to the conditional gate.
+All eight entries in BRIDGE_SOURCE_PINS_20261031.json matched their files,
+including the unchanged frozen release ZIP. This review checks the bridge;
+it is not a new proof or full audit of Heilman's geometric theorem.
+
+1. Fixed masses, zero translation, dimensions
+
+For fixed gamma(A_i)=a_i, integral_Ai(x-w/a_i)d gamma=b_i-w and sum b_i=0.
+Thus the source's moment expression is W+m|w|^2. At equal masses the
+regular partition admits w=0. Its moment maximization is precisely the
+balanced endpoint, with the positive prefactor sqrt(pi/2). The supplied
+regular equality classification covers the requested equal-mass optimizer
+classification. No unequal-mass conclusion is smuggled into the bridge.
+
+The ambient restriction N>=m-1 is retained wherever a regular reference
+frame is needed. The endpoint, centroid orbit, pair-gap law and reference
+perimeter are unchanged under cylindrical extension. For m>=5, fixing
+a_i=1/m leaves the primary theorem's epsilon dependent on m alone; the
+theorem expressly excludes dependence on ambient dimension. For m=3,4,
+w=0 gives epsilon_3=1/300 and epsilon_4=1/400.
+
+2. Perimeter normalization and direction
+
+With the full N-dimensional density phi_N, the note counts each interface
+twice in P_gamma=sum_i integral_(partial* A_i)phi_N dH^(N-1).
+The primary density on interfaces is sqrt(2pi)phi_N; hence
+P_H=sqrt(2pi)P_gamma and its objective's interface term is P_H/2.
+The primary's Section3 explicitly uses reduced boundaries and locally
+finite-perimeter competitors. The note's finite-perimeter interpretation
+is consistent with that variational setting, rather than assuming an
+arbitrary topological boundary equals the reduced boundary.
+
+Problem1.4 and Theorem1.5 therefore give
+  P_H(A)/2+epsilon sqrt(pi/2)W(A)
+    >=P_H(g)/2+epsilon sqrt(pi/2)w_m,
+or P_H(A)-P_H(g)>=epsilon sqrt(2pi)Delta. Since our endpoint gives
+Delta>=0 and sqrt(2pi)>1, the weaker epsilon Delta used throughout is
+valid. This route does not depend on interpreting missing parentheses in
+the displayed Theorem1.6 difference or the noise-corollary coefficients.
+
+For v_i=e_i-1/m, c_i=mu_m v_i/(m-1), sum_i c_i.v_i=mu_m. Integration
+by parts makes this sqrt(2) times the interface-only P_gamma. Hence
+P_gamma(g)=sqrt(2)mu_m and P_H(g)=2sqrt(pi)mu_m, exactly as stated.
+
+3. Quadratic asymmetry estimate
+
+Choose the centroid frame supplied by the pinned global coercivity:
+q=sum|b_i-c_i|^2<=K_m Delta. Since sum|c_i|^2=w_m,
+  2J=2(w_m-sum c_i.b_i)=Delta+q.
+The pair-score difference has standard deviation
+a=sqrt(2)mu_m/(m-1). A union bound over m(m-1)/2 pairs gives
+P(Gamma<=t)<=beta_m t with the displayed beta_m. The wrong-label set
+has probability eta=half the total cell symmetric difference, and each
+such point loses at least Gamma. Layer cake yields
+J>=eta^2/(2beta_m), hence eta^2<=beta_m(1+K_m)Delta=L_m Delta.
+Because the orbit infimum delta(A)<=2eta, the correct direction is
+  Delta>=delta(A)^2/(4L_m).
+Combining with the primary perimeter bound proves (3a)--(3b).
+
+The expressions in (5) match the pinned explicit-gap source exactly.
+The optional four-cell source states the same-frame bound eta^2<=250000
+Delta. Therefore epsilon_4/(4*250000)=1/400000000 in P_H units is correct.
+This optional decimal retains its separate interval-certificate dependency;
+the analytic all-m conclusion does not require that computation. For m>=5
+epsilon remains existential, as the note explicitly says.
+
+4. Rotation-group BV quotient and heat-content constant
+
+On the Gaussian product space, V=(y,-x) has zero Gaussian divergence,
+and its flow is an orthogonal rotation. It therefore induces a strongly
+continuous L1-isometry group. For F(x,y)=1_E(x), Gaussian integration by
+parts gives a signed directional measure supported on partial*E times
+R^N, with variation sqrt(2/pi)P_gamma(E): conditional on the boundary
+normal, Y.normal is standard normal. Finite Gaussian perimeter is enough;
+compact truncations are justified by this integrable variation formula.
+
+The stated group-convolution proof works. F_epsilon=integral k_epsilon(t)
+U_t F dt is in the L1 generator domain (differentiate the smooth scalar
+kernel), and the same distributional derivative is the convolution of
+the finite derivative measure. The latter has variation at most the
+original variation because the flow preserves the Gaussian reference.
+This gives the L1 norm bound on its generator. Integrating the generator
+and passing F_epsilon to F proves the quotient upper bound. Testing the
+unsmoothed quotient against compact smooth functions gives weak derivative
+convergence; total-variation lower semicontinuity supplies the lower bound.
+No smoothness of the cell boundary or uniform-in-cell remainder is assumed.
+
+The identity ||U_theta F-F||_1=2[gamma(E)-<1_E,T_cos(theta)1_E>], together
+with sin(theta)=sqrt(1-rho^2), gives one-cell coefficient
+P_gamma(E)/sqrt(2pi). Summing and subtracting yields exactly
+  lim [S_rho(g)-S_rho(A)]/sqrt(1-rho^2)
+      =[P_H(A)-P_H(g)]/(2pi).
+The halfspace partition, P_H=2 and 1-S_rho=arccos(rho)/pi, independently
+checks that factor. Dividing the proven perimeter lower bound by2pi gives
+epsilon_m delta(A)^2/(8pi L_m), as in (7).
+
+5. Quantifier boundary
+
+For a fixed finite-perimeter competitor outside the regular orbit, delta
+is positive: the orthogonal group is compact and the regular-cell map is
+continuous in Gaussian L1. Thus its positive limiting noise deficit gives
+a competitor-dependent threshold below1. Neither the group BV limit nor
+the perimeter estimate gives a remainder uniform over moving competitors.
+The source correctly declines a uniform near-one Standard Simplex theorem.
+
+The all-m perimeter-stability statement is the substantive corollary
+supported by this bridge. Its proof uses the named published theorem and
+the pinned endpoint/coercivity; it is not an independent geometric theorem,
+an unequal-mass theorem, a full-noise optimum, or a priority certification.

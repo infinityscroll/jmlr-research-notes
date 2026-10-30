@@ -1,0 +1,63 @@
+INDEPENDENT AUDIT OF THE ROOT ALL-m IMPLICATION NOTE
+31 October 2026. strong_signal_prior_art. Verdict: PASS.
+
+Source: ALL_M_ENDPOINT_AND_SMALL_NOISE.txt
+SHA256 d12e3437d3dd43e577039a90f0898a0fdb09f1f073c133ab3fc536332a84828a.
+Main theorem dependency remains SHA256
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+
+SectionsA-C agree with the independently checked scope and constants in
+INDEPENDENT_END_TO_END_AUDIT_20261031.txt and
+ALL_CELL_ENDPOINT_AND_SMALL_NOISE_SCOPE_20261031.txt. The normalized Gram,
+global-gap interpolation and stated K_m coefficient have the correct
+directions and factors. The parameter may depend on m and is independent
+of ambient dimension. The positive and negative intervals need not agree.
+
+The negative statement genuinely allows a FREE common output mass vector.
+Its single-rule specialization sets h=f, so it imposes no output-balance
+constraint. No theorem for independently prescribed unequal masses is
+being asserted. Both negative arguments share the same regular partition
+at equality; reflection gives antipodal arguments for the equivalent
+positive-kernel bilinear formulation.
+
+For N<m-1, padding with independent coordinates preserves every objective.
+Equality in the padded theorem would force centroid rank m-1, impossible
+for the original N-dimensional assignment. Thus strictness is correct.
+For N>=m-1, unused coordinates are allowed and orthogonal transformations
+include reflections. SectionA explicitly assumes m>=3; it makes no claim
+about a one-cell problem or a new binary theorem. In the general target
+concavity theorem, a singleton target has value0 directly.
+
+Optional exposition clarification only: repeat N>=m-1 in the negative
+paragraph immediately before its attainment/uniqueness statement. Its
+following low-dimensional strictness sentence already fixes that scope.
+This is not a mathematical gap or a required change to the proof.
+
+Direct primary verification of sectionD
+I reread the primary text on31 October2026:
+https://arxiv.org/html/0903.3362v3#S7
+Isaksson--Mossel Theorem7.1 applies at each fixed rho in
+[-1/(m-1),1], produces an indicator Gaussian assignment with the EXACT
+same expectation vector, and approximates the SAME-rho stability. It
+requires no balance assumption. Lemma7.3 identifies the plurality limit
+with the regular Gaussian benchmark at that rho. Their following proof
+of Theorem1.10 explicitly distinguishes the balanced positive upper bound
+from the arbitrary-bias negative lower bound.
+
+Combining that transfer with the newly proved Gaussian comparisons gives,
+for every epsilon>0, a sufficiently small influence cutoff depending on
+m,rho,epsilon. Positive rho needs balanced means. Negative rho does not.
+Only a single discrete rule is transferred, so no two-function invariance
+statement is required. Full influence bounded by the cutoff implies the
+low-degree influence condition used in the primary theorem.
+
+The uniform m-symbol input channel exists exactly when
+  rho delta_ij+(1-rho)/m >=0 for all i,j,
+which gives -1/(m-1)<=rho<=1. The note explicitly includes this restriction.
+It makes no finite-electorate exact optimizer claim and no explicit or
+uniform-in-rho cutoff claim. All are correct distinctions.
+
+SectionE is an appropriately limited historical comparison, not an
+exhaustive priority certificate. This audit does not redo the separate
+recent-primary-status review. No public or sharp hardness claim follows
+from this application note, and none is made there.
