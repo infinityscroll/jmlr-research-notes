@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-31",
+  "scope": "Bibliographic correction only; no mathematical statement or proof changed.",
+  "file": "frontier/gaussian-simplex/supplements/bubble-stability/BALANCED_ENDPOINT_PRIMARY_HISTORY_20261031.txt",
+  "original_sha256": "c20c52d39a740deb77e541c312246b601e8b8ef88da70446b33ecba3839b0060",
+  "corrected_sha256": "0a9a38fe132cde671d116c3f16929532b74443d7da540396dd159697ffa2c861",
+  "correction": "Heilman, Euclidean partitions optimizing noise stability, EJP 19 (2014), article 99, pp. 1–37, published 15 August 2014; DOI 10.1214/EJP.v19-3083. The original note incorrectly said no. 71.",
+  "primary_source": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/view/3083.html",
+  "frozen_provenance": "BRIDGE_SOURCE_PINS_20261031.json records the original audited source and intentionally retains its historical SHA256. Frozen manuscripts, archives, release tag, PDFs and analytic audits remain unchanged."
+}

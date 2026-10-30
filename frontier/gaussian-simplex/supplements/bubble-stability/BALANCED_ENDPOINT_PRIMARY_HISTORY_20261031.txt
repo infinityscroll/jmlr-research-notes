@@ -40,7 +40,9 @@ constraint as the difficulty. This is an explicit endpoint question, not
 an inference solely from the general Standard Simplex conjecture.
 
 The revised title is Euclidean Partitions Optimizing Noise Stability,
-arXiv:1211.7138v2,26May2014; published Electron.J.Probab.19(2014),no.71.
+arXiv:1211.7138v2,26May2014; published Electron.J.Probab.19(2014),article99,pp1-37,15August2014.
+DOI:10.1214/EJP.v19-3083.
+Bibliographic correction recorded in BIBLIOGRAPHIC_CORRECTION_20261031.json.
 https://arxiv.org/pdf/1211.7138v2
 Section8, printedp37, retains Conjecture3. Its preceding paragraph says a
 stability estimate analogous to Lemma2.8 would let the main iterative

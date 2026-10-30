@@ -9,7 +9,7 @@ ambient dimension when that dimension is at least the cell count minus one.
 - [Proof, normalizations and exact scope](STABLE_BUBBLES_BRIDGE_20261031.txt)
 - [Independent internal audit](INDEPENDENT_BRANCH_BRIDGE_AUDIT_20261031.txt)
 - [Source pins](BRIDGE_SOURCE_PINS_20261031.json)
-- [Primary history](BALANCED_ENDPOINT_PRIMARY_HISTORY_20261031.txt)
+- [Primary history](BALANCED_ENDPOINT_PRIMARY_HISTORY_20261031.txt), with a [bibliographic correction and provenance](BIBLIOGRAPHIC_CORRECTION_20261031.json)
 
 The supplement also proves a quantitative limit as correlation approaches one
 for **each fixed** finite-perimeter competitor. It does not prove one common
