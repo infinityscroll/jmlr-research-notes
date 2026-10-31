@@ -1,0 +1,110 @@
+DIRECT COMPETITIVE-ASSIGNMENT PROOF: INDEPENDENT FULL SCOPE AUDIT
+31 October 2026. strong_signal_prior_art.
+
+AUDITED SOURCE
+full_standard_simplex_20261031/
+DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt
+SHA256 c33cd021f18037d3e0d9ef32c6205aad593b31b58e844ae6e7ab0e60c3cc44f8
+
+VERDICT: PASS. No repair requested.
+This audit checks the direct proof's removal of full-noise attainment and
+stationarity assumptions, with the established analytic inputs retained.
+It is an independent agent reconstruction, not outside peer review.
+
+1. Competitive localization is already universal
+I read the full statements and proofs of45e2cc45 and251c3c7c again.
+Both apply to any measurable simplex-valued assignment satisfying
+S_-r(f)<=S_-r(g), including fractional assignments. Their individual
+Gaussian rearrangement, Hermite parity and positive second-chaos bound
+use no Euler equation, pure-set geometry, or existence of a minimizer.
+The prescribed-mass value input optimizes the first-moment functional
+only. Its rank-boundary result, with the graph-limit clarification, has
+the required scope.
+
+For all sufficiently large m, uniformly in the voting interval:
+D>=delta/2>=0, D<=Cr^2/m, and |W-w|<=D/r. In particular the initially
+fixed positive mass box improves to [1/(2m),3/(2m)], because
+max_i|p_i-1/m|<=sqrt(delta)<=Cr/sqrt(m). Also W/w=1+O(r/L);
+the scale normalization is uniformly bounded away from zero.
+
+2. The row estimate extends by inspecting the proof, not its title
+I read e33c710e in full, in particular its Sections4--5. Its Theorem2
+is worded for actual minimizers, but every step proving it consists of
+the preceding localization, the universal centroid entropy bound,
+balanced-offset duality, and its universal Theorem1. There is no hidden
+stationarity step.
+
+Every assignment f is feasible for F_p(B), where B=M_f, so F_p(B)>=W.
+Using the balanced offsets as a dual competitor gives
+R<=(w-W)/2-h_U.(p-U). The global bounded-row offset certificate and
+the entropy bound yield |h_U|^2<=CL^2R. Young gives
+R<=Delta+CL^2delta<=D/r after increasing the absolute m threshold.
+The normalized one-row inequality then yields
+max_i ||Bhat_i|^2/(w/m)-1|<=C sqrt(mr/L).
+Scaling back costs only O(r/L), which is dominated by that bound.
+No coincidence or rank restriction enters this argument.
+
+3. The new proxy construction removes the older subset input
+The global summed radial estimate applies to Bhat and gives
+E_rad<=CL^2R<=CrL^2/m. This replaces the older ab9 averaged-row budget.
+
+For any fractional assignment, conditional Cauchy gives
+B^TB<=p_max I: sum_i(B_i.v)^2
+ <=p_max sum_i E[f_i(v.X)^2]=p_max|v|^2.
+The same estimate holds up to an absolute factor after normalization.
+Writing beta^2=w/m and u_i=Bhat_i/|Bhat_i|, the uniform row lower bound
+therefore implies the angular-frame operator bound C/L.
+
+The median potential Phi(c)=m^-1 sum_i |Bhat_i-c| is smooth on a
+small fixed ball of radius c0 beta. Its Hessian there is at least
+c/beta on the actual centroid span. Its initial gradient obeys
+|grad Phi(0)|<=C sqrt(m) sqrt(E_rad)/L<=C sqrt(r).
+Since r<=1/(m-1), one absolute eventual threshold makes the gradient
+small enough to force an interior minimizer. Convexity then makes
+that minimizer global.
+
+The critical equation gives exactly centered equal-length rows
+Z_i=beta(Bhat_i-c)/|Bhat_i-c|. More quantitatively,
+m|c|^2<=C E_rad/L, and
+sum_i|Z_i-Bhat_i|^2<=C(E_rad+m|c|^2)<=C E_rad.
+Together with the radial scale identity this proves
+|Z-B|^2<=CL^2R<=CL^2D/r. The construction uses the existing span
+and no unused ambient direction. It is a test matrix, not an
+asserted centroid matrix or a noise-improving deformation.
+
+4. The final two cases need no optimization property
+I reread the full local source1a489344. Its explicit hypothesis is an
+arbitrary measurable assignment whose ACTUAL first moments lie in the
+A/m score ball and whose masses lie in the stated box. Here "actual"
+identifies M_f; it does not mean a stationary or minimizing f.
+Its exact replacement formula and residual cancellation only use
+that centroid identity. Thus the interior conclusion and its endpoint
+equality argument apply directly.
+
+I also read the full frozen root assembly e05b2c1e and checked the
+exterior steps against the new premises. The covariance floor,
+equal-row common-threshold comparison, quadratic tensor test, routing
+identity, and rare-cell hypercontractivity all use only the bounds
+just obtained. They explicitly permit fractional f, unequal masses,
+singular proxies, and arbitrary routing. The lower bound
+J>=R>=c/(m^3 sqrt(L)) pays the absolute Gaussian tails and ensures
+D>0 outside the score ball. The final coefficients are uniform:
+rL^3=O(L^3/m) and r^2 m^(7/4)L^(7/2)=O(L^(7/2)/m^(1/4)).
+Thus every competitive exterior f is contradicted, while every
+competitive interior f is regular.
+
+5. Consequence and provenance
+Starting with any f with S(f)<=S(g) is enough. A hypothetical strict
+improvement contradicts the classification, and equality gives the
+regular orbit. Consequently neither a minimizing sequence nor an
+attained full-noise minimum is needed for the global theorem.
+The old existence/purity source3ff668be and subset-replacement source
+ab9f3d5b can be omitted from this direct proof. The frozen predecessor
+and its manifest remain intact.
+
+Finite N>=m-1, the sufficiently-large-m threshold, the single-rule
+negative voting interval, and the lack of a mass constraint are
+unchanged. This audit does not assert an explicit threshold, the
+remaining correlations, every finite m, or external verification.
+The companion JSON pins this source and the inspected dependencies.
+

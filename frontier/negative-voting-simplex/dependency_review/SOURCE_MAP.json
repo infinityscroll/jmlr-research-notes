@@ -1,0 +1,791 @@
+{
+  "report_date": "2026-10-31",
+  "status": "Section-level dependency closure and byte reproducibility report; not a new mathematical correctness audit or external review.",
+  "manuscript_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/negative_voting_simplex_manuscript_20261031",
+  "manuscript_source_manifest_sha256": "3f77956a75c2b9689018ccd7f96410f6282051b544b8cbf5047bdf96613fb3c8",
+  "manuscript_review_manifest_sha256": "693ae42e625724202c53b96e15979af4aca7b100f8fd93169f7b8a536b767c3f",
+  "old_checkpoint_count": 759,
+  "old_broader_count": 774,
+  "old_checkpoint_file_sha256": "502dfc2914ebde8bc28630732f3b3a1d14eabd0d81b3c100b3dc6249a12b3514",
+  "old_broader_file_sha256": "ef2f6381e1011e98b448219203646c33da0abdaebb8b26db0f8ce4444e2831db",
+  "current_broader_count": 827,
+  "current_broader_file_sha256": "f06dbf1d72ef9eddd39d7ce3b587f84b7dc9130c295dd03681b7b6c3bea420fb",
+  "master_access_scope": "Only latest_continuation.near_one_source_pins was read for current resolution; no master files copied or changed.",
+  "endpoint_replacement": "907e0360 explicitly replaces only 225 \u00a710 historical endpoint inputs; its full derivation was independently read and checked.",
+  "internal_sources": [
+    {
+      "id": "225db53f",
+      "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b",
+      "filename": "ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "review_copy": "proof_sources/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "role": "core",
+      "used_scope": "Core covariance theorem \u00a7\u00a71\u20139: duality, Hessian/cycle identity, concavity, Price gradient and PSD continuity. Historical \u00a710 endpoint import is replaced explicitly by 907e0360.",
+      "dependencies": [],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "907e0360",
+      "sha256": "907e0360c12c8f05376be54ced662b243aaf612974215755ed65b8408d20adad",
+      "filename": "BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
+      "review_copy": "proof_sources/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire source: explicit regular normalization, endpoint and tangent remainder rigidity; replacement for 225 \u00a710.",
+      "dependencies": [
+        "225db53f"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "explicit_frozen_source_or_manuscript_manifest"
+    },
+    {
+      "id": "41d649be",
+      "sha256": "41d649be507020bb178315c9ac6249aa98a6f6e9b432fd6964613ade3ae7d318",
+      "filename": "RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt",
+      "review_copy": "proof_sources/RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire bounded-row offset/value theorem, including duplicate value/offset extension and Corollary C.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "11a6959e",
+        "6d19bda9"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "11a6959e",
+      "sha256": "11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2",
+      "filename": "GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt",
+      "review_copy": "proof_sources/GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire mass-window semiconcavity/envelope proof; graph-limit wording read with 6d19bda9.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "12dc8e6e",
+        "6d19bda9"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "6d19bda9",
+      "sha256": "6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c",
+      "filename": "OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt",
+      "review_copy": "proof_sources/OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt",
+      "role": "clarification",
+      "used_scope": "Entire graph-of-optimizers clarification. It clarifies 11/12; not an independent circular theorem premise.",
+      "dependencies": [],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "12dc8e6e",
+      "sha256": "12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08",
+      "filename": "REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt",
+      "review_copy": "proof_sources/REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire pruned-graph offset certificate, including KKT, pair separation, graph-limit transfer and cycle-preserving refined Hessian.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "d2611f1d",
+        "6d19bda9"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "d2611f1d",
+      "sha256": "d2611f1d80f447cadffd503e7d29a76ef84737d991700defedc141dc7bf614fd",
+      "filename": "EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt",
+      "review_copy": "proof_sources/EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire Ehrhard/refined covariance Hessian proof with cycle cancellation; external Ehrhard input remains explicit.",
+      "dependencies": [
+        "225db53f"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "45e2cc45",
+      "sha256": "45e2cc459bee383a1317a574011c3fa2a63e64b50f7195d744a4e3a9fa0c0aea",
+      "filename": "FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt",
+      "review_copy": "proof_sources/FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire full-range competitive mass localization, including exact regular A2 and elementary Gaussian maximum asymptotics.",
+      "dependencies": [],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "251c3c7c",
+      "sha256": "251c3c7ce7e6b3e7fce8d77079d630d815e223ca59c74570940f3cc21f573ca6",
+      "filename": "POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt",
+      "review_copy": "proof_sources/POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire positive-A2/log-free competitive localization. Its opening mass/value inputs are 45 and 11+6d even when no filename appears beside them.",
+      "dependencies": [
+        "45e2cc45",
+        "11a6959e",
+        "6d19bda9"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "e33c710e",
+      "sha256": "e33c710eeda31107dbd895c17cd1fe7b1771afd2e361c5713de82b31c9e014f4",
+      "filename": "GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt",
+      "review_copy": "proof_sources/GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt",
+      "role": "core",
+      "used_scope": "Global one-row covariance estimate and geometric-median construction. Competitive scope and replacement radial budget are supplied by c33; the old ab9 actual-subset budget is NOT imported.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "47e441ee",
+        "45e2cc45",
+        "251c3c7c",
+        "11a6959e",
+        "6d19bda9",
+        "41d649be"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "47e441ee",
+      "sha256": "47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e",
+      "filename": "BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt",
+      "review_copy": "proof_sources/BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire balanced facet bootstrap/finite covariance gap; exact regular facet moments are the only uses of ec1/6c97/1f5.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "ec1edf18",
+        "6c97ff1b",
+        "1f5c1ee8",
+        "b1e2cb6f",
+        "45e2cc45"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "ec1edf18",
+      "sha256": "ec1edf184fef18a6630fe0007762943cc142d0b7a32dc61e01b83429b35ec633",
+      "filename": "ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt",
+      "review_copy": "proof_sources/ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt",
+      "role": "selected-section",
+      "used_scope": "ONLY \u00a72 regular facet covariance eigenvalues, covariance lower bound and polynomial moment estimates. No all-interface negative Hessian theorem is imported.",
+      "dependencies": [
+        "1f5c1ee8",
+        "45e2cc45"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "6c97ff1b",
+      "sha256": "6c97ff1bf8888e492312a88550ef8465cccbdb1df1060334bf0c7fa9dd336355",
+      "filename": "ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt",
+      "review_copy": "proof_sources/ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt",
+      "role": "selected-section",
+      "used_scope": "ONLY \u00a72, in particular exact 1\u2212V identity/asymptotic (4); no global L1 coercivity claim or cross-polytope example is used.",
+      "dependencies": [
+        "ec1edf18",
+        "1f5c1ee8",
+        "45e2cc45"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "1f5c1ee8",
+      "sha256": "1f5c1ee8ccb882a880813691613526c0717c54ea46a4decc12faaf7bd7dfb500",
+      "filename": "TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_ssc_instability_20261031/large_m_tracefree_shape/TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt",
+      "review_copy": "proof_sources/TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt",
+      "role": "selected-section",
+      "used_scope": "ONLY \u00a7\u00a71 and 3 regular tie law, facet moment contractions and exact identity (8), with elementary tie asymptotics. Negative-noise higher-tail theorem and numerical diagnostics are not inputs.",
+      "dependencies": [
+        "45e2cc45"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "b1e2cb6f",
+      "sha256": "b1e2cb6f0983d2ca13c388c1e07e637fd9cdfde53f4fd4d9280bc9dfbd29fa50",
+      "filename": "FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt",
+      "review_copy": "proof_sources/FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt",
+      "role": "selected-section",
+      "used_scope": "ONLY \u00a71 exact fixed-mass first-chaos dual/finite-curvature identity. The sparse-pair obstruction later in the source is not an input.",
+      "dependencies": [
+        "225db53f",
+        "907e0360"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "111ac79d",
+      "sha256": "111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7",
+      "filename": "CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt",
+      "review_copy": "proof_sources/CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire conditioned offset/near-balanced finite dual, using 11+6d, covariance dual, 47 and classical isoperimetry/coarea.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "11a6959e",
+        "6d19bda9",
+        "47e441ee",
+        "b1e2cb6f"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "3ee89046",
+      "sha256": "3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057",
+      "filename": "AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt",
+      "review_copy": "proof_sources/AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire explicit-full-rank V2 affine trace. Its normal restriction, offset cancellation and Hermite duality are proved here; 77b20 is a methodological predecessor, not an additional theorem import.",
+      "dependencies": [
+        "111ac79d"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "3b6bd981",
+      "sha256": "3b6bd981d0508f8ce9487b27659b4203473266fb7721f4acb0f8c3d74793f3a1",
+      "filename": "FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt",
+      "review_copy": "proof_sources/FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire explicit-full-rank V2 finite cap. Uses elementary conditioned degree/centroid facts; V1 is not used.",
+      "dependencies": [
+        "111ac79d",
+        "3ee89046"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "aca4da15",
+      "sha256": "aca4da1519de156b684a61425e733eb7f1f9b58621f324ded01a0df2cf8ba58a",
+      "filename": "ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt",
+      "review_copy": "proof_sources/ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire V2 all-small-amplitude cap; this supplies the tiny-amplitude part of 1a.",
+      "dependencies": [
+        "3b6bd981",
+        "3ee89046"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "f0f22a63",
+      "sha256": "f0f22a63d1b021ac51bd363622e2b36514043abf88575372727dc8ebadabba3f",
+      "filename": "SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt",
+      "review_copy": "proof_sources/SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire exact negative reference gap and radial damping; regular moment identities agree with 45.",
+      "dependencies": [
+        "45e2cc45"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "28c75e2e",
+      "sha256": "28c75e2e691e5b54c19bf3e8da1e69a3a6b84ed8aa7106dfad9d8db970ffa500",
+      "filename": "CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt",
+      "review_copy": "proof_sources/CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt",
+      "role": "core",
+      "used_scope": "\u00a7\u00a71\u20135 conditioned equal-row conical second-chaos proof, including Mulgund CDF comparison, covariance gap, density Hessian and tensor certificate. \u00a76 tests and dc6 historical predecessor are excluded.",
+      "dependencies": [
+        "225db53f",
+        "d2611f1d",
+        "907e0360"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "9abf2430",
+      "sha256": "9abf2430423c2effd05b659ec2dca9d6e5ec456911fcf1940a055fa99d2678be",
+      "filename": "BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt",
+      "review_copy": "proof_sources/BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire conditioned equal-row affine A2 proof. Sparse-pair test source 668 is not a mathematical input.",
+      "dependencies": [
+        "28c75e2e",
+        "d2611f1d"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "5f2ef775",
+      "sha256": "5f2ef775159f53f277d248995d17c138c2fbc53e27a089a2dea164aba7051432",
+      "filename": "UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt",
+      "review_copy": "proof_sources/UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire unequal-row affine A2 comparison, including coherent transport, adjoint, regular tensor cancellation, diagonal strain and near-balanced extension. Tests in manifest are not proof premises.",
+      "dependencies": [
+        "225db53f",
+        "d2611f1d",
+        "45e2cc45",
+        "28c75e2e",
+        "9abf2430",
+        "3ee89046",
+        "111ac79d",
+        "47e441ee"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "7388c948",
+      "sha256": "7388c94860fab24b1c033d4b52e1a2ed74a71622201a2abe0f0a430f3b5b764c",
+      "filename": "FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt",
+      "review_copy": "proof_sources/FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire full signed affine Hermite-tail comparison; retains coherent transport and exact mass gradient.",
+      "dependencies": [
+        "5f2ef775",
+        "3ee89046",
+        "47e441ee"
+      ],
+      "already_in_manuscript": false,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "1a489344",
+      "sha256": "1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd",
+      "filename": "OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "review_copy": "proof_sources/OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire arbitrary-measurable own-centroid score-ball theorem. Both moderate and tiny weighted-cap regimes are required.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "5f2ef775",
+        "7388c948",
+        "f0f22a63",
+        "3b6bd981",
+        "aca4da15",
+        "3ee89046",
+        "47e441ee",
+        "111ac79d"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "5edacd0c",
+      "sha256": "5edacd0c4ac2adc8dc0e0b1960ba976945ba9cbe236121e081b32a18c460cd59",
+      "filename": "GLOBAL_RANK_FREE_AFFINE_SIGNED_HIGHER_TAIL_COMPARISON_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_RANK_FREE_AFFINE_SIGNED_HIGHER_TAIL_COMPARISON_20261031.txt",
+      "review_copy": "proof_sources/GLOBAL_RANK_FREE_AFFINE_SIGNED_HIGHER_TAIL_COMPARISON_20261031.txt",
+      "role": "selected-section",
+      "used_scope": "ONLY \u00a7\u00a71\u20134: global initial covariance segment, regular routing/margin, and rare-label signed-tail continuity. \u00a75 can be read as a consequence; \u00a76 affine inside theorem and \u00a77 A2 combination are not used in the final direct proof.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "47e441ee",
+        "3b6bd981"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "05176f6e",
+      "sha256": "05176f6e3b0ecfc21d9a61074cb6d259a46fe91990ee26ce9bfd55b34193adc1",
+      "filename": "GLOBAL_EQUAL_ROW_SEPARATED_OWN_CENTROID_FULL_VOTING_RIGIDITY_V2_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_EQUAL_ROW_SEPARATED_OWN_CENTROID_FULL_VOTING_RIGIDITY_V2_20261031.txt",
+      "review_copy": "proof_sources/GLOBAL_EQUAL_ROW_SEPARATED_OWN_CENTROID_FULL_VOTING_RIGIDITY_V2_20261031.txt",
+      "role": "selected-section",
+      "used_scope": "ONLY \u00a77 paragraph after (25) and before (26): unnormalized initial covariance remainder. It invokes 5ed \u00a71 and not the preceding weak-exposure cap. Other equal-row theorem hypotheses are not transferred to the final proof.",
+      "dependencies": [
+        "225db53f",
+        "47e441ee",
+        "5edacd0c"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "774_snapshot"
+    },
+    {
+      "id": "be93031a",
+      "sha256": "be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200",
+      "filename": "CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt",
+      "review_copy": "proof_sources/CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire calibrated diagonal hazard derivative proof. Raw tie normalization and eta are independently derived; 351 is a consistency reference, not a theorem dependency.",
+      "dependencies": [
+        "225db53f",
+        "47e441ee",
+        "41d649be",
+        "45e2cc45"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "current_broader_map"
+    },
+    {
+      "id": "1eb5d9f6",
+      "sha256": "1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57",
+      "filename": "GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt",
+      "review_copy": "proof_sources/GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt",
+      "role": "core",
+      "used_scope": "Entire summed radial support proof and stated bounded-scale conversion; its geometric proxy use is read with c33.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "be93031a",
+        "e33c710e"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "current_broader_map"
+    },
+    {
+      "id": "84e1de62",
+      "sha256": "84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4",
+      "filename": "CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt",
+      "review_copy": "proof_sources/CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt",
+      "role": "assembly",
+      "used_scope": "Entire conditional proxy tensor exterior assembly, with RC supplied by 1eb and direct competitive replacement c33. No actual-minimizer-only premise survives the replacement.",
+      "dependencies": [
+        "225db53f",
+        "907e0360",
+        "41d649be",
+        "11a6959e",
+        "6d19bda9",
+        "45e2cc45",
+        "251c3c7c",
+        "e33c710e",
+        "47e441ee",
+        "05176f6e",
+        "1a489344",
+        "5edacd0c",
+        "1eb5d9f6"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "current_broader_map"
+    },
+    {
+      "id": "c33cd021",
+      "sha256": "c33cd021f18037d3e0d9ef32c6205aad593b31b58e844ae6e7ab0e60c3cc44f8",
+      "filename": "DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt",
+      "review_copy": "proof_sources/DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt",
+      "role": "assembly",
+      "used_scope": "Entire direct competitive-assignment proof; explicitly replaces the attainment/subset-budget route in e05/84.",
+      "dependencies": [
+        "45e2cc45",
+        "251c3c7c",
+        "225db53f",
+        "907e0360",
+        "41d649be",
+        "11a6959e",
+        "6d19bda9",
+        "e33c710e",
+        "47e441ee",
+        "1eb5d9f6",
+        "84e1de62",
+        "1a489344"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "current_broader_map"
+    },
+    {
+      "id": "e05b2c1e",
+      "sha256": "e05b2c1e8b2733d21f903ab76ae108c864b27487bd6f1ca9080955f1ae87445c",
+      "filename": "FULL_NEGATIVE_VOTING_STANDARD_SIMPLEX_FOR_SUFFICIENTLY_LARGE_M_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/FULL_NEGATIVE_VOTING_STANDARD_SIMPLEX_FOR_SUFFICIENTLY_LARGE_M_20261031.txt",
+      "review_copy": "proof_sources/FULL_NEGATIVE_VOTING_STANDARD_SIMPLEX_FOR_SUFFICIENTLY_LARGE_M_20261031.txt",
+      "role": "context",
+      "used_scope": "Frozen theorem statement/provenance only. The original attainment-based proof route is replaced by c33 and is not the dependency closure used here.",
+      "dependencies": [],
+      "already_in_manuscript": true,
+      "pin_evidence": "current_broader_map"
+    },
+    {
+      "id": "9482f085",
+      "sha256": "9482f0855064af8cae7ade28263e6e8256ab90cc7a27bc4e2f5f1537e9f3e1e5",
+      "filename": "LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER_20261031.txt",
+      "review_copy": "proof_sources/LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER_20261031.txt",
+      "role": "application",
+      "used_scope": "Entire discrete/UGC consequence derivation conditional on Gaussian theorem; optional simple-unweighted \u00a74 additionally needs CST Theorem13.",
+      "dependencies": [
+        "c33cd021"
+      ],
+      "already_in_manuscript": true,
+      "pin_evidence": "current_broader_map"
+    },
+    {
+      "id": "2cf2b20c",
+      "sha256": "2cf2b20c835360ce556bedc0d32e57c87cf4f6790f852717e2b6a5886dc163c3",
+      "filename": "FULL_NEGATIVE_VOTING_PRIMARY_SCOPE_AND_BOUNDED_NOVELTY_CHECK_20261031.txt",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FULL_NEGATIVE_VOTING_PRIMARY_SCOPE_AND_BOUNDED_NOVELTY_CHECK_20261031.txt",
+      "review_copy": "proof_sources/FULL_NEGATIVE_VOTING_PRIMARY_SCOPE_AND_BOUNDED_NOVELTY_CHECK_20261031.txt",
+      "role": "context",
+      "used_scope": "Bounded primary-source status/scope discussion, not a mathematical premise of the Gaussian proof.",
+      "dependencies": [],
+      "already_in_manuscript": true,
+      "pin_evidence": "current_broader_map"
+    }
+  ],
+  "excluded_references": [
+    {
+      "id": "3cfd9d78",
+      "reason": "Historical endpoint/local-coercivity import in 225 \u00a710; replaced by 907."
+    },
+    {
+      "id": "8a419147",
+      "reason": "Two-group endpoint proof reachable only through the replaced 3cfd route."
+    },
+    {
+      "id": "3ff668be",
+      "sha256": "3ff668be245c36edc588d8f054463cb8b15cb9739b5752b1926b8ce74f0a56e4",
+      "filename": "ACTUAL_SINGLE_RULE_NEGATIVE_MINIMIZERS_AND_QUANTITATIVE_ROUTING_20261031.txt",
+      "reason": "Attainment/purity route explicitly removed by c33."
+    },
+    {
+      "id": "ab9f3d5b",
+      "sha256": "ab9f3d5ba350b1691176b9fe529f840460a6c5065c71b27e5971fddd3bf1edf2",
+      "filename": "ACTUAL_MINIMIZER_SUBSET_REPLACEMENT_AND_ROW_NORM_BUDGET_20261031.txt",
+      "reason": "Old actual subset-replacement radial budget explicitly removed by c33."
+    },
+    {
+      "id": "35111062",
+      "sha256": "35111062294b3345e20600f8db8565592b4ea19ba73bd9179e24358736eb70c4",
+      "filename": "OPTIMIZED_MASS_HESSIAN_AT_THE_REGULAR_SIMPLEX_20261031.txt",
+      "reason": "Normalization agreement in be930; all required tie/eta identities are rederived in be930."
+    },
+    {
+      "id": "77b20d9a",
+      "sha256": "77b20d9ad3a40d55ad8f746ca3cb1b33ae32eea35c25e484c2e5c6f9900ce90f",
+      "filename": "WEIGHTED_HYPERCONTRACTIVE_FACET_TRACE_AND_FULL_BOUNDARY_TAIL_20261031.txt",
+      "reason": "Methodological weighted-trace predecessor; the needed affine restriction/duality proof is fully restated in 3ee V2."
+    },
+    {
+      "id": "6f5c5b38",
+      "sha256": "6f5c5b382c1da8da1a84ac1372278d06f1e2fd4fff5a829427f4db817e503769",
+      "filename": "EXACT_INTERFACE_HERMITE_REDUCTION_AND_CONSTANT_CYCLES_20261031.txt",
+      "reason": "General interface Hessian input to unused portions of ec1/1f5; no such theorem is used by 47 facet-moment extraction."
+    },
+    {
+      "id": "3128d5fc",
+      "sha256": "3128d5fc64639a9768684ab993e0bdc08499683c5a9a8b533d7af976a3c45b48",
+      "filename": "HYPERCONTRACTIVE_TAILS_AND_SHARP_NEGATIVE_LOCALIZATION_CONSTANT_20261031.txt",
+      "reason": "Sharpened tail/Gumbel-constant supplement; needed hypercontractive inequality is explicitly restated and applied in 5ed \u00a74."
+    },
+    {
+      "id": "49a09379",
+      "sha256": "49a09379a2e628e903ae6df18fd6b14fe792635a2bfc5212bf3c67d8269107ff",
+      "filename": "RANK_FREE_BALANCED_EQUAL_ROW_AFFINE_SECOND_CHAOS_20261031.txt",
+      "reason": "Rank-free equal-row A2/full-affine combination in unused 5ed \u00a77; final exterior certificate is proved directly in 84."
+    },
+    {
+      "id": "00321e2c",
+      "sha256": "00321e2cf42183ef8911607cd6dac050f636b4bc5a234122feffef8ef4818c6c",
+      "filename": "RANK_FREE_BALANCED_EQUAL_ROW_CONICAL_SECOND_CHAOS_20261031.txt",
+      "reason": "Rank-free conical predecessor to unused 49; conditioned 28c remains required through 9ab/5f2."
+    },
+    {
+      "id": "5ba88d65",
+      "sha256": "5ba88d656ffb096ec9675959a4191e390210650c2212b326dd4007d978efea37",
+      "filename": "RADIAL_EXPOSURE_ALL_AMPLITUDE_CAP_AND_UNIFORM_EL_ROUTING_20261031.txt",
+      "reason": "Weak/radial exposure cap used by unused portions of 05176, not its unnormalized covariance paragraph."
+    },
+    {
+      "id": "8c724c24",
+      "sha256": "8c724c24e55b11a5a80edc5ed48a18dc7a87a9398c0bfb35b4b835930a10901e",
+      "filename": "RADIAL_EXPOSURE_RANK_FREE_FINITE_CAP_AND_ACTUAL_ROUTING_20261031.txt",
+      "reason": "Older radial exposure route, not used in selected proof scopes."
+    },
+    {
+      "id": "64e37d47",
+      "sha256": "64e37d47bf5a1b2c9cc5e4ab0c4ad9aa93735b83462de9c9a2135532771b9464",
+      "filename": "ACTUAL_NEGATIVE_EL_CONDITIONED_OWN_SCORE_ROUTING_BOUND_20261031.txt",
+      "reason": "Actual EL conditioned routing route, not used by direct competitive proof."
+    },
+    {
+      "id": "ce1cf11e",
+      "sha256": "ce1cf11eb0ddb4bafbaf2d6a4f6c30a38bf3070fdf6110f372bd6ed9a3dd6d9c",
+      "filename": "OWN_CENTROID_LAGUERRE_ROUTING_AND_STATIONARY_FIXED_FANS_20261031.txt",
+      "reason": "Stationary own-score fixed-fan route, not needed by direct proof."
+    },
+    {
+      "id": "27728eb7",
+      "sha256": "27728eb77e498bb97c4fff8a6319f7f266d2c4f1fd7eb12319914fe81cd191ba",
+      "filename": "CROSS_POLYTOPE_MOMENT_LOCALIZATION_AND_PARTITION_DISTANCE_OBSTRUCTION_20261031.txt",
+      "reason": "Cross-polytope diagnostic in 6c97, not a proof premise."
+    },
+    {
+      "id": "c5c4ffc2",
+      "sha256": "c5c4ffc29f9e4554d2bad070b84f62c140977fff671244265c83137e7a00fc1f",
+      "filename": "PAIRED_GAUSSIAN_FANS_FIXED_ORBIT_DISTANCE_AND_SQRT_LOG_BARRIER_V2_20261031.txt",
+      "reason": "Paired-family diagnostic in 28c \u00a76."
+    },
+    {
+      "id": "b8608515",
+      "sha256": "b860851550796a5b70d1a08b0dd73a639ce79131127784687005e1ce2c3e0004",
+      "filename": "PAIRED_FAN_EXACT_SECOND_CHAOS_AND_LOGARITHMIC_RELATIVE_LOSS_20261031.txt",
+      "reason": "Paired-family A2 diagnostic in 28c \u00a76."
+    },
+    {
+      "id": "b638ccbf",
+      "sha256": "b638ccbf1c12bb9841bbc477bd543765c34de9844a1c5da3d3e7c045519ab782",
+      "filename": "REMOTE_BALANCED_FACET_OBSTRUCTION_TO_GLOBAL_SECOND_CHAOS_COMPARISON_20261031.txt",
+      "reason": "Arbitrary measurable A2 obstruction used to delimit scope, not as an affirmative proof input."
+    },
+    {
+      "id": "668f7bd6",
+      "sha256": "668f7bd6fe89c8b22918d85256278e7bf04c78357b00f85e7ecc8baeb7cc136f",
+      "filename": "SPARSE_CALIBRATED_PAIR_SECOND_CHAOS_AND_RELATIVE_LOSS_20261031.txt",
+      "reason": "Sparse calibration diagnostic in 9ab/5f2."
+    },
+    {
+      "id": "dc6dec1f",
+      "sha256": "dc6dec1fd72ea092c91dc21bf933d959de5bfe8336898dfada7b4b62eda8d7f8",
+      "filename": "EQUAL_ROW_CONICAL_SECOND_CHAOS_MAXIMUM_MOMENT_REDUCTION_20261031.txt",
+      "reason": "Earlier unfinished maximum-moment reduction; complete proof is in 28c."
+    },
+    {
+      "id": "532f6bbd",
+      "sha256": "532f6bbdc2d9ba9439029612530fe4bd8c887619467f53b0496cd396461e9b68",
+      "filename": "AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_20261031.txt",
+      "reason": "Obsolete affine trace V1; explicit full-rank V2 3ee is used."
+    },
+    {
+      "id": "aa080829",
+      "sha256": "aa080829cc559c4038c071f49a5756da8eb29e6d52a85458dde5e0dbf8996a8a",
+      "filename": "FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_20261031.txt",
+      "reason": "Obsolete finite cap V1; explicit full-rank V2 3b6 is used."
+    },
+    {
+      "id": "0551ebfb",
+      "sha256": "0551ebfb2bbafa5c4323a2c7b1636b21d9e860aada1c1d18d96755c4529ff466",
+      "filename": "ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_20261031.txt",
+      "reason": "Obsolete tiny-cap V1; V2 aca4 is used."
+    }
+  ],
+  "external_inputs": [
+    {
+      "id": "Mulgund",
+      "title": "Stochastic Domination of Gaussian Maxima: A Resolution of the Weak Simplex Conjecture, arXiv2607.14087v4",
+      "url": "https://arxiv.org/html/2607.14087v4",
+      "used_result": "Theorem2.1, equal-threshold CDF comparison; used by 28c and directly by 84.",
+      "kind": "mathematical_input",
+      "bundled": false,
+      "private_cache_sha256": "c3ea6c14fa08c70e82d0d5ae6d1161b62d5da50465c9c815ecbb645ddc5caab7",
+      "cache_basename": "MULGUND_2607_14087_v4.html"
+    },
+    {
+      "id": "Ehrhard-Latala",
+      "title": "A note on the Ehrhard inequality, Studia Mathematica118(1996),169\u2013174",
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/studia-mathematica/all/118/2/109424/a-note-on-the-ehrhard-inequality",
+      "used_result": "Convex Gaussian translation concavity; differentiated in d261. DOI10.4064/sm-118-2-169-174.",
+      "kind": "mathematical_input",
+      "bundled": false,
+      "private_cache_sha256": "75467b0fc891007985987d6380bbf3f94f809ae7894faf16df04772794af9ba5",
+      "cache_basename": "LATALA_1996_EHRHARD_PUBLISHER_20261031.html"
+    },
+    {
+      "id": "Brascamp-Lieb",
+      "title": "On extensions of the Brunn-Minkowski and Prekopa-Leindler theorems, including inequalities for log concave functions, and with an application to the diffusion equation",
+      "url": "https://doi.org/10.1016/0022-1236(76)90004-5",
+      "used_result": "Variance/covariance bound for uniformly log-concave Gaussian restrictions and tilted laws; 225,47,d261,be930,f0f.",
+      "kind": "mathematical_input",
+      "bundled": false,
+      "private_cache_sha256": null,
+      "cache_status": "No article-byte pin claimed; standard external theorem requires an ordinary bibliographic citation."
+    },
+    {
+      "id": "Gaussian-isoperimetry",
+      "title": "The Brunn-Minkowski inequality in Gauss space, Inventiones mathematicae30(1975),207\u2013216",
+      "url": "https://link.springer.com/article/10.1007/BF01425510",
+      "used_result": "Gaussian perimeter >= I(mass), used in 12dc/41/111/e33; graph Cheeger/coarea steps themselves are written in the local sources.",
+      "kind": "mathematical_input",
+      "bundled": false,
+      "private_cache_sha256": null,
+      "cache_status": "No article-byte pin claimed; standard external theorem requires an ordinary bibliographic citation."
+    },
+    {
+      "id": "Hypercontractivity",
+      "title": "Logarithmic Sobolev Inequalities, Gross, American Journal of Mathematics97(1975),1061\u20131083",
+      "url": "https://www.jstor.org/stable/2373688",
+      "used_result": "Standard Gaussian OU Lp-to-Lq hypercontractivity. Used repeatedly in cap/trace/tail arguments; theorem statement is explicit in the manuscript. DOI10.2307/2373688.",
+      "kind": "mathematical_input",
+      "bundled": false,
+      "private_cache_sha256": null,
+      "cache_status": "No article-byte pin claimed; standard external theorem requires an ordinary bibliographic citation."
+    },
+    {
+      "id": "IM",
+      "title": "Maximally Stable Gaussian Partitions with Discrete Applications, arXiv0903.3362v3",
+      "url": "https://arxiv.org/html/0903.3362v3",
+      "used_result": "Theorem7.1, Lemma7.3, AppendixA for discrete transfer and UGC reduction.",
+      "kind": "application_input",
+      "bundled": false,
+      "private_cache_sha256": "e77c03e44e57d5dac04d4028722b23c0b58849ed46cf3b049a881e4b540e4e58",
+      "cache_basename": "IM_0903_3362v3.html"
+    },
+    {
+      "id": "KKMO",
+      "title": "Optimal Inapproximability Results for MAX-CUT and Other 2-Variable CSPs?",
+      "url": "https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf",
+      "used_result": "Historical asymptotic endpoint result and low-degree-influence PCP framework; primary scope in 9482.",
+      "kind": "application_and_history",
+      "bundled": false,
+      "private_cache_sha256": "42d209e98ae861f192e815854ea52c99e893d94a7366c9074621fcf34ab8fb71",
+      "cache_basename": "KKMO_2007_max_cut_final.pdf"
+    },
+    {
+      "id": "CST",
+      "title": "Weighted-to-unweighted mixing-graph construction, Theorem13",
+      "url": "https://lucatrevisan.github.io/pubs/cst-full.pdf",
+      "used_result": "Optional simple-unweighted MAX-m-CUT consequence in 9482 \u00a74, expressly invoked by manuscript06.",
+      "kind": "optional_application_input",
+      "bundled": false,
+      "private_cache_sha256": "aedd4d581a44004c2a1e658aa73426835e1df7a122ad7c310eaa4cfc0d6524c2",
+      "cache_basename": "CST_WEIGHTED_UNWEIGHTED_PRIMARY.pdf"
+    }
+  ]
+}

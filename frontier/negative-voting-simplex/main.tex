@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.03in,headheight=15pt]{geometry}
+\usepackage{microtype,enumitem,fancyhdr,xurl,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={Negative Gaussian simplex stability for sufficiently many parts},pdfauthor={AI-assisted research manuscript},pdfsubject={Revision 2: internally audited proof candidate for independent review}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Negative Gaussian simplex stability}
+\fancyhead[R]{\small Internal proof candidate}
+\fancyfoot[C]{\thepage}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prior}[theorem]{Prior input}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\calR}{\mathcal R}
+\newcommand{\calL}{\mathcal L}
+\newcommand{\calH}{\mathcal H}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\gam}{\gamma_N}
+\newcommand{\Frob}{\mathrm F}
+\title{\bfseries Negative Gaussian simplex stability\\for sufficiently many parts}
+\author{AI-assisted research manuscript}
+\date{31 October 2026}
+\begin{document}
+\maketitle
+\begin{center}
+\fbox{\begin{minipage}{0.89\textwidth}\small
+\textbf{Internally audited proof candidate for independent review.}
+The new arguments and their assembly have undergone multiple internal
+reconstructions by AI agents. This is not peer review, external endorsement,
+or formal verification. No human authorship is asserted. The proof uses the
+precisely stated prior inputs in Section~\ref{sec:inputs}; their frozen
+source hashes and the new proof sources are recorded in Appendix~\ref{app:sources}.
+\end{minipage}}
+\end{center}
+\begin{abstract}
+We present a proof candidate for the single-assignment negative Gaussian
+simplex inequality when the number of parts is sufficiently large and the
+correlation belongs to the full negative voting interval. The argument
+reduces the remaining exterior regime to a summed radial covariance
+estimate. We prove that estimate using a calibrated diagonal supporting
+covariance, with a coordinatewise second-derivative bound that remains
+uniform when the total Frobenius perturbation is large. An exactly centered
+equal-row proxy is then used as a quadratic test, without replacing the
+original assignment. A Gaussian maximum comparison pays its second-chaos
+loss, while a dimension-free hypercontractive estimate retains the entire
+signed higher tail. The conclusion holds for all measurable simplex-valued
+assignments, with no prescribed masses, in every finite ambient dimension
+at least one less than the number of parts. The proof is relative to the
+explicitly listed previously internally audited endpoint, localization,
+and local comparison propositions. The comparison is direct for arbitrary
+competitive assignments. We also state the negative discrete plurality
+consequence and the exact UGC-conditional MAX-$m$-CUT threshold.
+\end{abstract}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\clearpage
+\input{01_statement_inputs}
+\input{02_diagonal_calibration}
+\input{03_radial_coercivity}
+\input{04_exterior_assembly}
+\input{06_discrete_consequences}
+\appendix
+\input{05_source_ledger}
+\end{document}

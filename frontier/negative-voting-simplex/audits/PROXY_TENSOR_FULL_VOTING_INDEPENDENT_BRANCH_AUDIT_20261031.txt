@@ -1,0 +1,147 @@
+PROXY-TENSOR EXTERIOR AND FULL-VOTING ASSEMBLY: INDEPENDENT BRANCH AUDIT
+31 October 2026. strong_signal_branch_count.
+
+VERDICT: PASS at the stated conditional scope, with no repair requested.
+Target CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt,
+SHA84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4.
+The additional RC premise is supplied exactly by1eb5d9f6, audited in the
+separate GLOBAL_SUMMED_ROW_COERCIVITY_INDEPENDENT_BRANCH_AUDIT_20261031.txt.
+This report reconstructs the exterior calculation, the actual-proxy
+application, the signed tail, and the local/existence handoff. It does
+not change either frozen source or promote the result in a master file.
+
+1. Localization and the essential normalization.
+Use delta=|p-U|^2, Delta=w-W, D=delta+rDelta and J=D/r. Accepted positive-
+second-chaos localization gives0<=delta<=2D and D<=Cr^2/m. Consequently
+r|Delta|=|D-delta|<=D, even if W>w. Thus W/w=1+O(r/L) is valid.
+The offset dual yields R<=Delta/2+CL sqrt(R delta); Young gives
+R<=Delta+CL^2delta<=Delta+delta/r=J once CrL^2<=1.
+The proof never uses the false normalization R<=D.
+
+2. Exterior covariance floor.
+The initial-segment covariance normal-energy bound applies to arbitrary
+PSD endpoints and to unnormalized B: R is precisely the concavity
+remainder at P after multiplication by alpha. No trace-zero premise on
+the covariance increment is used. For singular values s_i of B/alpha,
+q^2=sum(s_i-1)^2 and e^2=sum(s_i^2-1)^2, so e>=q. In the exterior
+d>1/m, q>=c/sqrt L and q<=C sqrt m. The monotone lower bound in e
+therefore gives R>=cq/m^3>=c/(m^3sqrt L). It also gives
+d^2<=C m^(3/2)L R. These are statements about R and J, not an unproved
+regular-orbit localization of the assignment.
+
+3. RC and the actual equal-row test matrix.
+The1eb normalized theorem supplies RC after squaring the fixed row-cap
+constant. Actual entropy bounds and W/w close to1 give that normalized
+cap. RC gives E_rad(Bhat)<=CL^2R, while the radial identity pays
+||B-Bhat||^2<=2R. The e33 geometric-median argument applies because
+the actual row lower bound is uniform and B^TB<=p_max I; after scaling,
+the same operator estimate holds for Bhat. Its angular-frame bound is
+O(1/L), uniformly in ambient dimension. The resulting Z is centered,
+has each norm beta, and satisfies ||Z-B||^2<=CL^2J.
+This construction is used only to define a test tensor. The argument
+does not claim Z is realizable as actual centroids, has distinct rows,
+or routes f. No such properties are required later.
+
+4. Direct primary-theorem applicability and the absolute tail.
+I read the pinned primary Mulgund2607.14087v4 Theorem2.1 directly from
+the cached HTML. Its hypotheses are a correlation matrix R0 satisfying
+R0-J_label/m>=0, and its conclusion is equal-threshold stochastic
+domination by the maximum of m independent standard Gaussians.
+For C=ZZ^T/beta^2, the transformed covariance a0 C+J_label/m has unit
+diagonal and meets that PSD condition, including singular C. The
+regular transformed covariance is I. This is an application check of
+the primary theorem, not a claimed independent proof of the whole paper.
+
+With nu=sqrt(a0)M+G/sqrt m, the mean CDF integral is sqrt(a0)epsilon_free;
+the second-moment difference is2/a0 times int tH(t)dt. The common Gaussian
+has zero cross mean and identical variance in the two second moments.
+H>=0 and the marginal union bounds give the stated truncation estimate.
+In fact the negative-t part can simply be dropped in the upper bound;
+the source's two-sided tail estimate is also valid.
+Scaling by beta gives exactly(9). No affine stochastic-order assertion
+or unequal-row maximum comparison is invoked.
+
+5. Routing and the unequal-mass quadratic numerator.
+Pointwise c_f=V-sum f_i z_i>=0. Free maximum domination gives w-EV>=0.
+The exact sum of these two deficits is
+w-<Z,B>=(Delta+||Z-B||^2)/2<=CL^2J. This remains valid when Delta<0.
+Centering of Z gives V>=0. Hence
+V^2-sum f_i z_i^2=sum f_i(V-z_i)(V+z_i)<=2V c_f.
+On the tail, c_f<=2beta max|Y_i|. The unit marginal Gaussian union
+bound gives the claimed quadratic tail. Choosing T=sqrt(32L) therefore
+produces a score-square error CL^3J/m plus beta^2 mL exp(-16L).
+
+For Q_i=E[f_i(XX^T-I)], sum Q_i=0 exactly, and
+sum_i<Q_i,Z_iZ_i^T-Z^TZ/m>
+                 =E sum_i f_i(Z_i.X)^2-sum_i p_i|Z_i|^2
+                 =E sum_i f_i(Z_i.X)^2-beta^2.
+The last equality uses only sum p_i=1 and equal TEST-row lengths.
+It does not require equal ACTUAL centroid norms or balanced masses.
+This is the key mass cancellation in the proof.
+
+The squared tensor denominator is
+m beta^4-tr((ZZ^T)^2)/m<=alpha^4(m-1)(m-2)/m,
+because trace ZZ^T=w and its rank is at most m-1. This is an upper
+bound on the denominator, in the correct direction for the lower A2
+certificate. It remains valid if the test tensor degenerates to zero.
+For the regular reference,
+T_*=alpha^2(E[(max_i Z_i)^2]-1), and A2(g)=T_*^2/(2D_*), agreeing exactly
+with the pinned regular formula. T_*/D_*<=Cm. The elementary inequality
+(T_*-e)_+^2>=T_*^2-2T_*e, e>=0, needs no small-relative-error premise.
+It yields(14). The absolute residual CL^2 exp(-16L) is paid by
+J>=c/(m^3sqrt L), since its ratio is O(m^-13 L^(5/2)). This payment
+is independent of r; it would fail without the exterior floor.
+
+6. Entire signed tail for unequal masses and arbitrary geometry.
+The regular routing identity R0=(Delta+d^2)/2 is exact for the actual
+centroids. The top-two gap bound gives epsilon<=C sqrt(mR0), also for
+fractional assignments, by pointwise charging of every nonwinner mass.
+At tau^2=1/(4L), hypercontractivity gives squared smoothed norm C/m
+for each assignment. For the difference, write e_i=E|f_i-g_i|<=C/m.
+Since |f_i-g_i|<=1,
+||T_tau(f_i-g_i)||2^2<=e_i^(2/(1+tau^2))<=C e_i/m.
+Summing gives C epsilon/m. Thus the rare-cell factor in the difference
+estimate does not assume balance of f or unweighted L2 closeness.
+
+On all degrees>=3 the exact signed multiplier factors through T_tau
+with absolute operator norm at most(r/tau^2)^3. Cauchy therefore proves
+Cr^3L^3 sqrt(epsilon)/m, retaining all higher degrees together.
+If J>=d^2, the ratio to J is at most
+Cr^3L^3 m^-3/4 J^-3/4<=Cr^3m^(3/2)L^(27/8).
+If J<d^2, insert d=alpha q and J>=cq/m^3 to obtain
+Cr^3m^(7/4)L^(13/4)q^-1/2<=Cr^3m^(7/4)L^(7/2).
+The second bound dominates the first. No coefficientwise relative A2
+bound, affine replacement, or pointwise OU evaluation estimate is used.
+
+7. Full sign, equality and existence handoff.
+The exact decomposition is D+r^2(A2(f)-A2(g))+Hdiff. With J=D/r the
+relative losses are CrL^3 and Cr^2m^(7/4)L^(7/2). They tend to zero
+uniformly over0<r<=1/(m-1); the exterior floor gives D=rJ>0. Thus every
+exterior actual minimizer contradicts competitiveness strictly.
+For d<=1/m, the source1a489344 applies with its fixed A=1 and the
+actual positive mass box; no regularity, conicality or affine routing
+of f is needed. Its retained coefficients and equality argument force
+p=U, R=0, then regularity by the balanced first-moment equality theorem.
+
+I reread3ff668be's existence section: for each finite N the OU operator
+is compact by finite Hermite multiplicities, so the relaxed feasible
+set admits a minimizer. The negative two-point Mehler determinant
+excludes a fractional local minimum. Thus the handoff covers the full
+single-assignment feasible class. It does not assume compactness when
+N tends to infinity. The estimates' m threshold is independent of the
+fixed finite N and of positive r in the voting interval.
+
+8. Scope after supplying RC.
+The conditional proof is internally valid, and1eb supplies its sole
+additional RC hypothesis at exactly the stated scope. This establishes
+the internal chain for sufficiently large m, every finite N>=m-1,
+and0<r<=1/(m-1), for the SINGLE-rule negative objective. It is not a
+positive-correlation result, an all-small-m result, an unrestricted
+bilinear transfer, external endorsement, or a completion claim for every
+formulation of the named Standard Simplex Conjecture. The relevant
+primary theorem is identified explicitly above; novelty and publication
+review are separate from this mathematical audit.
+
+All target and imported pins were verified in the companion manifest.
+No frozen source, master state, numerical experiment or external
+publication was changed.

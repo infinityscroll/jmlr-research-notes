@@ -1,0 +1,135 @@
+ROOT AUDIT: CALIBRATED HAZARD DERIVATIVES AND GLOBAL RADIAL PAYMENT
+31 October 2026. Full internal reconstruction.
+
+Derivative source:
+CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt
+SHA256 be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200.
+Global source:
+GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt
+SHA256 1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57.
+Verdict: both PASS. The second source supplies exactly hypothesis(RC)
+of the conditional exterior/full-voting assembly84e1de62.
+
+1. Whole-threshold moment estimates
+For x>=2H, all standardized thresholds lie between
+z-Cepsilon z-CH and z=(x+H)/sigma_min. The product of the other CDFs
+is bounded by Phi(z)^(m-2), while only the two density ratios require
+the exponential correction. Thus no exponent proportional to m is
+silently dropped. The analytic diagonal i=j has one inverse CDF,
+bounded by2 on this region. The lower comparison using
+y=(x-H)/sigma_max has the opposite density-ratio sign and the correct
+product lower bound. Its omitted near-zero interval is exponentially
+small compared with the regular tie weight.
+
+After s=1-Phi(z), the upper integrand is exactly controlled by
+m^p (1-s)^(m-p-2)s^(p+1-2theta)log(e/s)^((p+q+1)/2).
+The Jacobian removes one Gaussian density. Theta=O(1/L), so m^(2theta)
+is bounded. Splitting ms at1 yields the stated m^-2 power, and division
+by the exact regular weight alpha/m~sqrt(L)/m^2 gives the claimed
+L^((p+q)/2) conditional moment bound. The lower weight follows from
+the baseline second moment O(L) and Jensen with the negative tilt.
+Negative thresholds have product decay 2^-m exp(-cmx^2); the central
+short interval has a fixed CDF bound below1. Hazards grow only linearly
+there. Both are negligible, including after all fixed moment powers.
+
+2. Componentwise Laplacian inverse and continuation
+Subtracting c alpha/m from every off-diagonal weight leaves a graph
+Laplacian. Its doubly stochastic heat semigroup is L1-contracting,
+giving ||L^-1 b||1<=||b||1/(c alpha) on mean-zero labels. The individual
+row equation, degree>=c alpha, and edge upper bound C alpha/m then
+give the component estimate involving |b_i| plus its average absolute
+value. No invalid component bound is inferred from L1 contraction alone.
+
+The density transport velocity h_i'+xi_i(x-h_i)/(2v_i) gives the exact
+mass flux equation. The moment lemma and component inverse bound h_i'
+by sqrt(L)(|xi_i|+mean|xi|). Starting at h=0 closes the parameter box
+by continuation on t<=c_A/L^2; its constants are fixed before the
+bootstrap closes. Neither the offset Frobenius norm nor ||xi||2 must
+be small. Positive Gaussian densities and the mass Hessian justify
+smoothness and the implicit derivatives used here.
+
+3. The offset acceleration and full second coefficient derivative
+The log-flux derivative is Li+Lj+ai bi+aj bj-S with S=sum_k ak bk.
+I checked this directly from rho_ij=W ai aj, including the analytic
+diagonal i=j. The sum S retains every other label. The moment lemma
+controls it by m max a times mean|xi|, so there is no extra m loss.
+
+Differentiating the mass equation gives the stated mean-zero right
+side for h''. Its Pij(bi-bj) term has order L^(3/2) times the relevant
+coordinate squares and mean square. The ci derivative term is lower
+order. Applying the same component inverse proves the h'' estimate.
+
+The formula rho''=rho(Pij^2+Pij') contains h'' but no h'''. In Li',
+the h_i'' x term is at most L^2(xi_i^2+mean xi^2) in the required fixed
+conditional moments. In S', summing first and then bounding by max a
+controls all h'', Li bi, and a_i bi^2 terms by L^2 mean xi^2.
+The same estimates cover i=j. Summing the pair weights therefore gives
+|ell_i''|<=C alpha L^2(xi_i^2+mean xi^2), exactly coordinatewise.
+
+4. Exact regular derivative
+The regular tie weight is Z0=mu/[m(m-1)]=alpha/m, by integration by
+parts in the expected maximum. The calibrated velocity gives
+h_i'(0)=-E(T)xi_i/2. Direct differentiation of the reverse hazard then
+gives k(x)=[(x+a(x))(x-E T)-1]/2. The first derivatives of W and
+sum a vanish because sum xi=0. Integration by parts against x-E T
+gives -2Var(T)+(m-2)Cov(T,a(T))=-1 and hence the exact eta_m stated.
+
+The tie density has log second derivative at most-2, giving Var(T)<=1/2.
+Conditioning on the tie and its winning event affects only centered
+Gaussian coordinates, leaving the independent common mean of variance
+1/m. Thus Var(T)>=1/m. These prove eta_m in[1/4,1/2] with the exact
+factors. The variance-coordinate and standard-deviation Hessian checks
+match this computation. They are checks, not a substitute for item3.
+
+5. Global supporting inequality and its favorable sign
+For D=P diag(v)P, independent Gaussian scores realize the centered
+covariance after subtracting their common sample mean. That subtraction
+changes neither winner nor expected score value, even when the common
+mean is correlated with the centered vector. The exact offset weights
+therefore give L_D=P diag(ell)P-H_D, with H_D positive semidefinite.
+At this interior supporting covariance, the gradient is L_D/2.
+Homogeneity gives Gamma(D)=tr(L_D D), so concavity yields
+Gamma(C)<=tr[L_D(C+D)]/2 for every centered PSD target C.
+
+Both matrices C and D are PSD. The term -tr[H_D(C+D)]/2 is nonpositive
+and can be dropped in this upper bound. There is no adverse remainder
+depending on the target operator norm or rank. Continuity handles
+singular targets without taking an endpoint derivative.
+
+6. Global summed payment
+For trace-normalized C, z_i=C_ii-(m-1)/m has zero sum. Choosing
+xi=z/(1-2/m) makes diag(D_t-P)=t z and preserves trace. The target
+row cap bounds ||xi||infinity, while ||xi||2 can grow with m.
+The coefficient Taylor expansion pairs its linear part with ALL
+diagonal errors, giving kappa(1+t)||xi||2^2 exactly. The second
+derivative remainder sums to C alpha L^2t^2||xi||2^2, without an
+extra m factor. The explicit choice t=b_A/L^2 makes it smaller than
+the positive first-order term. I checked the constants in the stated
+choice: eta>=1/4 and kappa>=1/3 leave the claimed kappa t/16 reserve.
+
+Multiplying by alpha converts the resulting value deficit to R_U(B):
+sum_i(|B_i|^2-w/m)^2<=C_A L^3 R_U(B)/m^2.
+This is global in the target covariance, with no lower row or rank
+condition, and is precisely the RC hypothesis in84e1de62.
+
+7. Unnormalized and actual proxy applications
+The radial decomposition R(B)=w(s-1)^2/2+sR(B/s) is exact. With
+s in a fixed positive interval and a fixed NORMALIZED row cap,
+scaling the centered variance and adding the radial square prove the
+two unnormalized variance estimates. Dividing by beta^2 gives the
+reference-radius error <=CL^2R. The lower normalization bound is kept
+where an absolute unnormalized row cap is used; no uniform s->0 claim
+is made under that weaker premise.
+
+For actual minimizers, e33 supplies s=1+o(1), the row lower bound, and
+the conditional-Cauchy operator bound. Its median construction therefore
+gives an exactly centered equal-row test matrix at squared distance
+<=CL^2R. No noise-decreasing replacement or centroid realizability is
+inferred. Those are not needed by the separate proxy-tensor proof.
+
+Conclusion
+Both sources pass the full root audit. The global source removes the
+sole new RC premise of84e1de62 at exactly its stated scope. Completing
+the named result still requires final independent assembly audits,
+source-integrity verification, and a current scope/novelty assessment;
+this audit is not external expert review or Lean formalization.

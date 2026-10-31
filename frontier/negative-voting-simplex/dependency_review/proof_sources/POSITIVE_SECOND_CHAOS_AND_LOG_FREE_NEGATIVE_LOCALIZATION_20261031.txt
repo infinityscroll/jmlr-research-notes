@@ -1,0 +1,129 @@
+POSITIVE SECOND CHAOS AND LOG-FREE NEGATIVE-RANGE LOCALIZATION
+31 October 2026. Root proposal; independent branch derivation.
+Frozen mathematical candidate for independent audit.
+
+This is a further localization theorem for competitive SINGLE-rule
+negative-noise assignments, throughout 0<r<=1/(m-1), for all sufficiently
+large m. It retains positive degree two rather than bounding it away.
+It does not prove exact uniform masses or the Standard Simplex Conjecture.
+No finite numerical threshold for m, publication, or priority is asserted.
+
+Pinned inputs are listed in the companion JSON. In particular the accepted
+mass-window semiconcavity includes singular optimal covariance matrices
+and uses the optimizer-GRAPH compactness clarification. No varying-fiber
+continuity or full-rank hypothesis is added here.
+
+1. Notation and an assignment-independent second-chaos inequality
+Let X be standard Gaussian in R^N, and let f=(f_1,...,f_m) be measurable,
+0<=f_i<=1, sum_i f_i=1. Set
+  p_i=E f_i, b_i=E[X f_i], P=sum_i p_i^2, W=sum_i |b_i|^2,
+  A2(f)=1/2 sum_i ||E[f_i(XX^T-I)]||_F^2.
+Thus P,W,A2 are exactly the nonnegative Hermite weights in degrees0,1,2.
+For every such assignment, in every dimension,
+
+  A2(f) >= (W-P)_+^2/(2P).                              (1)
+
+Proof. Terms with p_i=0 have f_i=0 a.e. and b_i=0. For p_i>0 and b_i!=0,
+test the matrix in the direction e_i=b_i/|b_i|. Conditional Jensen gives
+  e_i^T E[f_i(XX^T-I)] e_i >= |b_i|^2/p_i-p_i.
+The Frobenius norm therefore dominates the positive part of the right
+side. The same conclusion is immediate when b_i=0. Consequently
+  2A2 >= sum_i (|b_i|^2-p_i^2)_+^2/p_i^2
+       >= [sum_i (|b_i|^2-p_i^2)_+]^2/P
+       >= (W-P)_+^2/P,
+where zero-mass summands are omitted. This proves (1).
+
+The function F(W,P)=(W-P)_+^2/(2P), P>0, is jointly convex: it is the
+perspective P*((W/P-1)_+^2/2). The positive part is essential for a global
+tangent inequality; we do not claim A2 >= (W-P)^2/(2P) when W<P.
+
+2. Tangent inequality at the balanced regular simplex
+Let g be the m-cell regular simplex partition in R^(m-1), embedded when
+N>=m-1 and used as an external benchmark when N<m-1. Put
+  M_m=max of m independent standard Gaussians, mu=E M_m,
+  w=mu^2/(m-1), L=mw-1,
+  A2g=m(E M_m^2-1)^2/[2(m-1)(m-2)],
+  F0=F(w,1/m)=L^2/(2m), Delta2=A2g-F0.
+For sufficiently large m, L>0 and L=O(log m). By (1) applied to g,
+Delta2>=0. For any assignment define
+  delta=P-1/m=|p-(1/m,...,1/m)|^2,
+  D=delta-r(W-w).
+The tangent inequality for F at (w,1/m) is
+
+  A2(f) >= F0+L(W-w)-((mw)^2-1)delta/2
+         = F0-(L/r)D+c_{m,r} delta,                    (2)
+  c_{m,r}=L[1/r-(L+2)/2].
+
+For all sufficiently large m and every 0<r<=1/(m-1), c_{m,r}>=0 and
+1-rL>=1/2. These follow from L=O(log m), uniformly in r. There is no
+assumption that W>P for the competitor in (2); convexity of the positive-
+part perspective supplies the tangent globally.
+
+3. The reference defect Delta2 is O(1/m), not O(log^2 m/m)
+Write u=mu^2-1 and v=Var(M_m). An exact algebraic identity gives
+
+ Delta2 = m*u^2/[2(m-1)^2(m-2)]
+        + m*(2uv+v^2)/[2(m-1)(m-2)]
+        - u/(m-1)^2 - 1/[2m(m-1)^2].                 (3)
+
+The previously pinned Gumbel-tail proof gives, with
+b=Phi^-1(1-1/m) and Z_m=b(M_m-b), bounded second moments of Z_m and
+mu/b ->1. In particular v=Var(Z_m)/b^2=O(b^-2), u=O(b^2), and b^2=O(log m).
+Hence uv=O(1), v^2=O(1), and u^2=O(log^2 m). Dropping the negative terms
+in (3) for large m yields
+
+  0<=Delta2=O(1/m+log^2 m/m^2)=O(1/m).                 (4)
+
+This uses the actual centered variance bound, rather than merely the two
+separate estimates E M_m^2=O(log m) and mu^2=O(log m). The exact formula
+for A2g and the second-moment uniform integrability are pinned inputs.
+
+4. Retaining positive degree two in the actual noise comparison
+Assume S_{-r}(f)<=S_{-r}(g). Hermite parity and
+sum_k a_k(f)=sum_i E f_i^2<=1 give the exact one-sided bounds
+  S_{-r}(f)>=P-rW+r^2 A2(f)-r^3,
+  S_{-r}(g)<=1/m-rw+r^2 A2g+r^4.
+Thus
+  D+r^2[A2(f)-A2g]<=r^3+r^4.
+Inserting (2) proves the sharper joint inequality
+
+ (1-rL)D+r^2 c_{m,r} delta <= r^2 Delta2+r^3+r^4.      (5)
+
+The previously accepted actual-noise localization first places p in the
+fixed box c/m<=p_i<=C0/m, with c=1/100,C0=2, for all sufficiently large m.
+The accepted mass-window bound V_m(p)<=w+A_m delta, A_m=O(log^2 m), gives
+
+ D >= (1-rA_m)delta+r[V_m(p)-W]
+   >= delta/2+r[V_m(p)-W] >=0.                        (6)
+
+Here V_m(p) is the true prescribed-mass first-moment optimum, including
+singular optimum Grams. The fixed c,C0 make all eventual constants
+absolute. Neither (5) nor (6) identifies the full-noise functional with
+its truncated part.
+
+From (4)-(6), uniformly over the entire interval 0<r<=1/(m-1),
+
+ D <= [r^2 Delta2+r^3+r^4]/(1-rL)=O(r^2/m),           (7)
+ delta=O(r^2/m),  V_m(p)-W=O(r/m),  |W-w|=O(r/m).     (8)
+
+For the last estimate, (6) gives 0<=delta<=2D, so
+|delta-D|<=D and |W-w|=|delta-D|/r<=D/r. The simplification of (7) uses
+r<=1/(m-1), hence r^3+r^4=O(r^2/m). At the largest admissible scale,
+
+ |p-U|^2=O(m^-3),
+ sum_i(mp_i-1)^2=O(m^-1),
+ max_i|mp_i-1|=O(m^-1/2),
+ V_m(p)-W=O(m^-2),  |W-w|=O(m^-2).                   (9)
+
+These estimates improve the earlier log^2 losses by paying most of the
+reference degree-two weight with the unavoidable competitor degree-two
+weight. They concern every competitive assignment, not only a stationary
+or locally smooth partition.
+
+5. Remaining limitation
+Delta2 and the uncontrolled odd-tail allowance remain positive. The bound
+(5) therefore does not force D=0 at positive r. It is not a relative
+full-chaos comparison and does not rule out a non-simplex competitor.
+No inequality comparing each higher chaos separately to D is asserted;
+far-interface deformations still obstruct such a globally unweighted route.
+The full weighted/resummed noise comparison remains a separate gate.

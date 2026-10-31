@@ -1,0 +1,142 @@
+FROZEN18-PAGE MANUSCRIPT: INDEPENDENT CONTENT AND TRANSCRIPTION AUDIT
+31 October 2026. gaussian_cleanroom_end_to_end.
+
+VERDICT: mathematical content PASS. Two minor notation repairs requested
+for the successor, recorded below. No mathematical argument repair found.
+Target PDF: negative_gaussian_simplex_stability.pdf,18pages,
+SHA cb8b20aab7de83f0b319d42ecbdc27ae9442627f44d71190c336be6ac4cd3e13.
+Target review manifest:693ae42e625724202c53b96e15979af4aca7b100f8fd93169f7b8a536b767c3f.
+All seven TeX files were read completely, as were all18pages' extracted
+mathematical text. All10 review-manifest entries verify. All20 source-
+manifest original hashes and17 bundled internal copies verify.
+No frozen manuscript, original proof source, or master state was edited.
+
+This is a content/scope/transcription review against the already audited
+mathematical inputs. Root owns visual layout QA. Prior-art separately
+owns complete transitive-dependency closure. Neither that closure nor
+independent external verification is asserted by this report.
+
+1. Statement and imported hypotheses
+The theorem has the correct quantifier order: one absolute eventual
+m0, every finite N>=m-1, every rho in[-1/(m-1),0), and every measurable
+simplex-valued single assignment. Masses are unrestricted. Equality is
+stated only up to orthogonal changes, labels, and null sets. The weaker
+m>=m0 scope, absence of a numerical m0, single-rule restriction and
+negative voting interval remain explicit throughout.
+
+The prior-input section states covariance/offset, competitive localization,
+finite one-row coercivity, global covariance remainder and actual-centroid
+local comparison separately. It does not silently identify an arbitrary
+assignment with an affine optimizer. The derivative/support argument does
+not assume its own global summed radial conclusion as an input.
+The global floor is expressly the unnormalized arbitrary-rank extension.
+The local theorem applies to arbitrary fractional f with ACTUAL centroids,
+not to f satisfying Euler-Lagrange equations only. Equality at that input
+is part of the stated previously audited result.
+
+2. Hazard derivative transcription
+The threshold moment proof retains arbitrary parameter boxes, including
+nonbalanced parameters and the analytic diagonal weights omega_ii.
+Its positive-tail substitution includes the absolute ds/phi(z) Jacobian;
+negative thresholds are controlled by the whole product, rather than by
+an invalid positive-threshold comparison. The relative moment constants
+do not depend on the Frobenius norm of xi.
+
+The component inverse uses the complete-graph lower weight plus an l1
+Markov contraction. The transport b_i, density log derivative L_i, exact
+P_ij, c_i, and calibrated mass acceleration all match be93031a. In
+particular h'' is retained. Summed-label terms use m*max(a_k) and the
+mean square M2 rather than losing a factor m. The exact eta_m formula,
+its variance bounds1/m<=Var(T)<=1/2, and the factor1/2 in Taylor's
+remainder are reproduced correctly. The distinction between analytic
+ell_i and the physical degree ell_i-omega_ii remains visible.
+
+3. Global support and median proxy
+The exact Laplacian decomposition is Pdiag(ell)P-H, with H PSD.
+Euler's factor is correct: grad Gamma=L/2 but Gamma=tr(LD), since
+Gamma has degree1/2. The discarded support term is nonpositive for
+PSD targets; no entrywise sign or small target rank is assumed.
+The constant term, kappa=1-2/m, simultaneous linear pairing and
+coordinatewise remainder agree with1eb5. The explicit choice of b_A
+indeed makes kappa/8-1/48>=kappa/16 for kappa>=1/3.
+
+The normalized/unnormalized radial identities and the mean-row error
+are exact. The proxy proof uses only the operator bound, uniform row
+lower bound and NEW E_rad<=CrL²/m. Its gradient is O(sqrt(r)); the
+median displacement satisfies m|c|²<=CE_rad/L. Therefore the old ab9
+subset-replacement bound is absent. Centering and equal row norms are
+exact, while Z is only a quadratic TEST matrix. No assignment or noise
+competitor is constructed from it.
+
+4. Exterior comparison and fractional scope
+The feasible own-score and balanced-offset argument gives R<=D/r even
+when W>w. Procrustes singular values give e>=q, and the exterior
+covariance floor is positive without endpoint-rank differentiation.
+The full-noise input permits f fractional, and all subsequent pointwise
+inequalities use only its convex label weights.
+
+The common-Gaussian maximum transform has covariance a0C+11^T/m,
+unit diagonal and the precise PSD lower bound required by Mulgund2.1.
+The expectation and second-moment normalizations are correct. Absolute
+unit-marginal tails at T=sqrt(32L) are retained, then paid ONLY by the
+exterior floor. The tensor numerator subtracts beta² for arbitrary masses;
+its denominator is bounded above by D_* by trace/rank. The positive-part
+Cauchy step remains valid even if the actual test tensor vanishes.
+
+The signed higher tail uses rare-label smoothing at tau²=1/(4L), not a
+finite-chaos truncation. The factor(r/tau²)^3 is legitimate for all voting
+r once m0 is enlarged. Both J-versus-d² cases retain the indicated powers:
+Cr³m^(3/2)L^(27/8) and Cr³m^(7/4)L^(7/2). The final energy errors are
+CrL³ and Cr²m^(7/4)L^(7/2), uniformly tending to zero at the voting
+endpoint. D=rJ>0 gives strictness outside. The interior theorem supplies
+equality. This is a direct comparison, not a hidden attainment argument.
+
+5. Discrete and hardness statements
+The voter count is k, distinct from n=m-1, and its quantifier follows
+chosen d0,tau depending only on fixed(m,rho,epsilon). Low-degree and full
+influences are distinguished. The output mean is unrestricted, including
+invariance transfer to a pure Gaussian assignment in dimension k(m-1).
+The negative endpoint and the elementary rho0 statement are correct.
+
+The FJ constant minimizes over the WHOLE negative voting interval, with
+no unsupported endpoint-minimizer claim. The positive-correlation
+Hermite calculation only removes that interval from the algorithmic
+ratio; it does not claim positive-noise simplex optimality. Weighted
+rational hardness uses the same averaged G_v in both slots. UGC is
+explicitly limited to hardness. Fixed-alphabet dependence, absence of
+uniform-in-m running-time claims, and the optional simple-unweighted
+extension are all stated at the scope of the audited transfer9482.
+The old KKMO asymptotic endpoint estimate is not confused with exact
+fixed-m hardness. All these corollaries inherit the Gaussian candidate's
+internal proof status rather than purporting to externally validate it.
+
+6. Presentation repairs sent to the author before any edits
+(a) In06_discrete_consequences.tex, equation defining the FJ constant,
+replace plain 'min' by the math operator '\min'. Its intended meaning
+is clear and the interval/formula are correct.
+(b) In04_exterior_assembly.tex, the reference tensor formula T_* uses
+max_i Z_i, but Z_i now denotes a proxy ROW VECTOR. Write max_i Z_i^iid,
+as in the preceding CDF display, or rename the iid scalar family.
+This is a notation collision, not an incorrect numerical coefficient.
+(c) Optional precision in the closing paragraph: 'No FULL-NOISE
+attainment ... is required'. Auxiliary first-moment values and optimal
+offsets remain imported; the manuscript's prior-input section already
+makes this distinction clear.
+
+The author reports a separate v2 will preserve all v1 bytes, perform
+(a),(b), and integrate the endpoint companion907e and a CST URL/hash
+reference for the optional unweighted sentence. Those future bytes are
+not covered by this v1 report; only their delta needs a further check.
+
+7. Endpoint companion read for the forthcoming delta
+I also read907e0360 directly. Its reference derivative is P/2 at
+C0=alpha²P, the nonnegative remainder follows from the global covariance
+tangent, and strictness follows because all regular pair facets have
+positive weight and the edge quadratic strains determine a centered
+symmetric matrix. Concavity preserves the strict initial tangent gap to
+a singular target by continuity. Feasible own-score duality then yields
+W<=w for balanced fractional assignments, and zero routing loss yields
+regular equality. This supplies the intended endpoint/equality input
+without invoking225's older Section10 endpoint references. It does not
+remove225's own core concavity/normal-strain proof from the dependencies.
+No issue found in this companion at the stated dependency-reduction scope.

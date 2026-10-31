@@ -1,0 +1,200 @@
+{
+  "status": "Internally audited, AI-assisted proof candidate for independent review.",
+  "files": [
+    {
+      "key": "covariance",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "bundled_path": "sources/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b",
+      "used_scope": "Interior concavity, normal strain, regular boundary identity, and PSD continuity. The manuscript derives endpoint and zero-remainder rigidity explicitly from source907e, without the old Section10 endpoint dependencies."
+    },
+    {
+      "key": "offset",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt",
+      "bundled_path": "sources/RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt",
+      "sha256": "41d649be507020bb178315c9ac6249aa98a6f6e9b432fd6964613ade3ae7d318"
+    },
+    {
+      "key": "masswindow",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt",
+      "bundled_path": "sources/GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt",
+      "sha256": "11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2"
+    },
+    {
+      "key": "graphclarification",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt",
+      "bundled_path": "sources/OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt",
+      "sha256": "6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c"
+    },
+    {
+      "key": "localization",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt",
+      "bundled_path": "sources/POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt",
+      "sha256": "251c3c7ce7e6b3e7fce8d77079d630d815e223ca59c74570940f3cc21f573ca6"
+    },
+    {
+      "key": "rowcontrol",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt",
+      "bundled_path": "sources/GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt",
+      "sha256": "e33c710eeda31107dbd895c17cd1fe7b1771afd2e361c5713de82b31c9e014f4"
+    },
+    {
+      "key": "facetbootstrap",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt",
+      "bundled_path": "sources/BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt",
+      "sha256": "47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e"
+    },
+    {
+      "key": "equalrowcap",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_EQUAL_ROW_SEPARATED_OWN_CENTROID_FULL_VOTING_RIGIDITY_V2_20261031.txt",
+      "bundled_path": "sources/GLOBAL_EQUAL_ROW_SEPARATED_OWN_CENTROID_FULL_VOTING_RIGIDITY_V2_20261031.txt",
+      "sha256": "05176f6e3b0ecfc21d9a61074cb6d259a46fe91990ee26ce9bfd55b34193adc1"
+    },
+    {
+      "key": "localscoreball",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "bundled_path": "sources/OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "sha256": "1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd"
+    },
+    {
+      "key": "globaltail",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_RANK_FREE_AFFINE_SIGNED_HIGHER_TAIL_COMPARISON_20261031.txt",
+      "bundled_path": "sources/GLOBAL_RANK_FREE_AFFINE_SIGNED_HIGHER_TAIL_COMPARISON_20261031.txt",
+      "sha256": "5edacd0c4ac2adc8dc0e0b1960ba976945ba9cbe236121e081b32a18c460cd59"
+    },
+    {
+      "key": "hazards",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt",
+      "bundled_path": "sources/CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt",
+      "sha256": "be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200"
+    },
+    {
+      "key": "radial",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt",
+      "bundled_path": "sources/GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt",
+      "sha256": "1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57"
+    },
+    {
+      "key": "assembly",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt",
+      "bundled_path": "sources/CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt",
+      "sha256": "84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4"
+    },
+    {
+      "key": "unconditional",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/FULL_NEGATIVE_VOTING_STANDARD_SIMPLEX_FOR_SUFFICIENTLY_LARGE_M_20261031.txt",
+      "bundled_path": "sources/FULL_NEGATIVE_VOTING_STANDARD_SIMPLEX_FOR_SUFFICIENTLY_LARGE_M_20261031.txt",
+      "sha256": "e05b2c1e8b2733d21f903ab76ae108c864b27487bd6f1ca9080955f1ae87445c"
+    },
+    {
+      "key": "Mulgund",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/primary_cache/GAUSSIAN_MAXIMUM_CONTEXT_20261031/MULGUND_2607_14087_v4.html",
+      "sha256": "c3ea6c14fa08c70e82d0d5ae6d1161b62d5da50465c9c815ecbb645ddc5caab7",
+      "bundled": false,
+      "url": "https://arxiv.org/html/2607.14087v4",
+      "kind": "external_primary"
+    },
+    {
+      "key": "direct",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt",
+      "sha256": "c33cd021f18037d3e0d9ef32c6205aad593b31b58e844ae6e7ab0e60c3cc44f8",
+      "bundled": true,
+      "bundled_path": "sources/DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt",
+      "kind": "internal_frozen_source"
+    },
+    {
+      "key": "transfer",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER_20261031.txt",
+      "sha256": "9482f0855064af8cae7ade28263e6e8256ab90cc7a27bc4e2f5f1537e9f3e1e5",
+      "bundled": true,
+      "bundled_path": "sources/LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER_20261031.txt",
+      "kind": "internal_frozen_source"
+    },
+    {
+      "key": "scope",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FULL_NEGATIVE_VOTING_PRIMARY_SCOPE_AND_BOUNDED_NOVELTY_CHECK_20261031.txt",
+      "sha256": "2cf2b20c835360ce556bedc0d32e57c87cf4f6790f852717e2b6a5886dc163c3",
+      "bundled": true,
+      "bundled_path": "sources/FULL_NEGATIVE_VOTING_PRIMARY_SCOPE_AND_BOUNDED_NOVELTY_CHECK_20261031.txt",
+      "kind": "internal_frozen_source"
+    },
+    {
+      "key": "IM",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/near_one_uniform_20261031/primary_cache/SSC_RANGE_MAP_20261031/IM_0903_3362v3.html",
+      "sha256": "e77c03e44e57d5dac04d4028722b23c0b58849ed46cf3b049a881e4b540e4e58",
+      "bundled": false,
+      "url": "https://arxiv.org/html/0903.3362v3",
+      "kind": "external_primary"
+    },
+    {
+      "key": "KKMO",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/near_one_uniform_20261031/primary_cache/SSC_RANGE_MAP_20261031/KKMO_2007_max_cut_final.pdf",
+      "sha256": "42d209e98ae861f192e815854ea52c99e893d94a7366c9074621fcf34ab8fb71",
+      "bundled": false,
+      "url": "https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf",
+      "kind": "external_primary"
+    },
+    {
+      "key": "endpoint",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
+      "bundled_path": "sources/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
+      "sha256": "907e0360c12c8f05376be54ced662b243aaf612974215755ed65b8408d20adad",
+      "bundled": true,
+      "kind": "internal_frozen_source"
+    },
+    {
+      "key": "CST",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/primary_cache/DISCRETE_TRANSFER_20261031/CST_WEIGHTED_UNWEIGHTED_PRIMARY.pdf",
+      "sha256": "aedd4d581a44004c2a1e658aa73426835e1df7a122ad7c310eaa4cfc0d6524c2",
+      "bundled": false,
+      "kind": "external_primary",
+      "url": "https://lucatrevisan.github.io/pubs/cst-full.pdf"
+    },
+    {
+      "key": "Latala",
+      "kind": "external_primary",
+      "bundled": false,
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/studia-mathematica/all/118/2/109424/a-note-on-the-ehrhard-inequality",
+      "sha256": "75467b0fc891007985987d6380bbf3f94f809ae7894faf16df04772794af9ba5",
+      "hash_scope": "private publisher landing-page cache",
+      "title": "A note on the Ehrhard inequality, Studia Mathematica118(1996),169\u2013174",
+      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/primary_cache/LATALA_1996_EHRHARD_PUBLISHER_20261031.html"
+    },
+    {
+      "key": "BrascampLieb",
+      "kind": "external_primary",
+      "bundled": false,
+      "url": "https://doi.org/10.1016/0022-1236(76)90004-5",
+      "sha256": null,
+      "hash_scope": "No article-byte hash claimed",
+      "title": "On extensions of the Brunn-Minkowski and Prekopa-Leindler theorems, including inequalities for log concave functions, and with an application to the diffusion equation"
+    },
+    {
+      "key": "Borell",
+      "kind": "external_primary",
+      "bundled": false,
+      "url": "https://link.springer.com/article/10.1007/BF01425510",
+      "sha256": null,
+      "hash_scope": "No article-byte hash claimed",
+      "title": "The Brunn-Minkowski inequality in Gauss space, Inventiones mathematicae30(1975),207\u2013216"
+    },
+    {
+      "key": "Gross",
+      "kind": "external_primary",
+      "bundled": false,
+      "url": "https://www.jstor.org/stable/2373688",
+      "sha256": null,
+      "hash_scope": "No article-byte hash claimed",
+      "title": "Logarithmic Sobolev Inequalities, Gross, American Journal of Mathematics97(1975),1061\u20131083"
+    }
+  ],
+  "external_primary_policy": "Primary articles remain in the private cache. The review bundle includes only URL/hash metadata, not full primary HTML/PDF copies.",
+  "revision": "v2; v1 frozen review copy preserved unchanged",
+  "dependency_capsule": {
+    "path": "dependency_review",
+    "report_sha256": "9a6abe3506e4f5f2d1a0bb5cdaf6e9d5c263451790dea38a3aec3772cb4ab0dd",
+    "source_map_sha256": "f96f4ae945ac0837b305ec727b2d91f28a763477bb8eb931f865cb2cc9041590",
+    "internal_sources": 34,
+    "snapshot": "Frozen v1 snapshot; v2 integration is explained in DEPENDENCY_REVIEW_NOTE.txt."
+  }
+}

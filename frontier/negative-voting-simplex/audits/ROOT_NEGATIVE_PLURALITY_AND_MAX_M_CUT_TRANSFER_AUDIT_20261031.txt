@@ -1,0 +1,90 @@
+ROOT AUDIT: NEGATIVE PLURALITY AND THE EXACT MAX-m-CUT THRESHOLD
+31 October 2026. Full scope and normalization reconstruction.
+
+Source audited: LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER,
+SHA9482f0855064af8cae7ade28263e6e8256ab90cc7a27bc4e2f5f1537e9f3e1e5.
+Verdict: PASS at its stated sufficiently-large-fixed-m scope. The source
+is a consequence of the internally audited Gaussian theorem e05b2c1e;
+it does not independently validate that Gaussian proof.
+
+Primary checks
+I freshly read Isaksson--Mossel0903.3362v3 Theorem7.1, the proof of1.10,
+LemmaA.4 and AppendixA.3--A.4, including formulas141--146. The transfer
+theorem has the asserted low-degree scalar influence condition and gives
+a pure Gaussian assignment in dimension n(m-1) with unchanged masses.
+The negative inequality has no balance condition. This establishes the
+claimed quantifiers after applying the Gaussian result at that finite
+dimension. Thresholds may depend on fixed m,rho,epsilon, not voter count.
+The endpoint channel is valid and no result below it is inferred.
+Primary: https://arxiv.org/html/0903.3362v3
+
+Exact constant and the positive part of the ratio
+For a pure Gaussian partition, sum of the Hermite weights is1. Thus,
+for0<=rho<1, S_rho<=P+rho(1-P), P=|p|^2. Applying this to the regular
+partition gives normalized disagreement ratio at least1, its value at0.
+The infimum is consequently the minimum over the compact negative
+voting interval. There is no unsupported endpoint-minimizer claim.
+
+For each negative rho the Gaussian theorem identifies the unrestricted
+minimum simultaneously with one regular partition. The sup-inf constant
+is therefore at most the negative inf-sup value; the regular partition
+achieves that value and has positive-rho ratios at least1. Likewise,
+testing the regular partition prevents positive rho from lowering the
+inf-sup value. This proves equality of the two constants using only the
+negative theorem. Cylinder embeddings handle every smaller dimension.
+
+Algorithm and hardness
+The SDP edge contribution is exactly (m-1)(1-rho)/m and the regular
+rounding cuts it with probability1-s_m(rho). Their quotient is the
+stated Frieze--Jerrum ratio, so its edgewise lower bound sums correctly.
+The approximation algorithm is unconditional, up to arbitrary precision
+slack, for each fixed m. The hardness assertion retains UGC explicitly.
+
+The primary verifier has two independently sampled neighbors conditional
+on its first vertex. Averaging their label indicators therefore produces
+the same simplex-valued function g_v in both noisy coordinates. I checked
+the exact agreement identity in its formulas141--142. Single-rule
+Gaussian optimality, and the resulting low-degree influence consequence,
+supply precisely the required soundness bound. No bilinear theorem or
+output-balance condition has been substituted. Completeness divided
+into soundness tends to the stated ratio; a rational correlation close
+to a minimizing one is sufficient by continuity. No numerical m0 or
+uniform algorithm in growing input alphabet m is asserted.
+
+Simple-unweighted extension
+I freshly read CST Definition12, Theorem13, and the construction in the
+proof of Theorem14, as well as the range restriction in its appendix.
+The needed object is a simple bipartite graph with two N-vertex sides,
+edge scale W in[cN,N^2], and the stated large-rectangle approximation.
+This is the exact scope used by the transfer note. CST's binary cut
+theorem is not itself being cited as an m-color theorem.
+Primary: https://lucatrevisan.github.io/pubs/cst-full.pdf
+
+The extension in the audited source checks. Normalize total rational
+edge weight, round down with total loss at most zeta, and obtain
+polynomially bounded integer weights k_e. One can take N polynomially
+larger than their maximum and choose S of order cN, so every retained
+Sk_e is in the construction range. Parallel edges may first be merged;
+loops contribute nothing. Each original edge then occupies its own
+clone-pair block, preserving simplicity of the output graph.
+
+For each pair of distinct colors, large classes satisfy the mixing
+estimate directly. A small class can be enlarged to ceil(delta N);
+the resulting upper rectangle estimate and the corresponding predicted
+count each cost O(delta W). Summing over at most m(m-1) pairs gives
+the stated epsilon+Cm^2delta additive bound. Integer rounding is absorbed
+by increasing N. Original-color clone assignments give completeness.
+Conversely the clone color fractions define a randomized original cut
+whose expected weight is precisely the predicted sum; conditional
+expectation derandomizes it. Since the optimum is at least(1-1/m)
+times total weight, all additive errors become arbitrarily small ratio
+errors for fixed m. This proves the simple-unweighted consequence too.
+
+Final scope
+The transfer establishes the entire negative-channel Plurality statement
+and the exact UGC-conditional Frieze--Jerrum threshold for each m beyond
+the same existential Gaussian threshold. It establishes neither the
+positive Plurality branch nor the finite exceptional m. The manuscript
+must preserve the input proof's internal-review status. No external
+endorsement, unconditional use of a recent UGC proof, or priority claim
+is supplied by this audit.

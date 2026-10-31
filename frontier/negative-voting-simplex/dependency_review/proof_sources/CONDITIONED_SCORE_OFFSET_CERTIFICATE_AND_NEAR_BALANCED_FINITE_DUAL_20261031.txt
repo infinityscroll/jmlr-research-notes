@@ -1,0 +1,122 @@
+CONDITIONED SCORE OFFSETS AND THE NEAR-BALANCED FINITE DUAL
+31 October 2026. Branch derivation. Independent full audit pending.
+
+SCOPE
+This supplies a deficit-relative offset bound for any centered score
+matrix whose nonzero singular values are comparable to the regular
+centroid scale alpha. It extends the new BALANCED finite score payment
+to prescribed near-uniform masses. It does not assume the score matrix
+is a covariance optimizer, and does not assert that actual competitive
+centroids are well conditioned. No full-noise comparison is inferred.
+
+Inputs (complete SHA256 pins in the companion JSON)
+[M] GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt
+[G] OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt
+6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c
+[D] FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt
+b1e2cb6f0983d2ca13c388c1e07e637fd9cdfde53f4fd4d9280bc9dfbd29fa50
+[F] BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt
+47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e
+[R] REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt
+12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08
+The elementary Gaussian centroid, isoperimetric, and weighted Cheeger
+inputs below are the same ones proved or invoked precisely in[R]. Here
+no edge pruning or covariance-optimizer KKT hypothesis is required.
+
+1. Statement and conventions
+Let b=Phi^(-1)(1-1/m), alpha=E max_i Z_i/(m-1), U_i=1/m,
+w=alpha^2(m-1), and m sufficiently large. Fix positive constants c0,C0.
+Let B be a centered m-by-N score matrix, N>=m-1, with all its m-1
+nonzero singular values in[c0 alpha,C0 alpha]. Define F_p(B), R_U(B)
+as in[D], and take mean-zero optimal balancing offsets h=h_U(B).
+There is K_m<=C_(c0,C0)(1+log m)^2 such that
+                 ||h||^2<=2K_m R_U(B),                           (1)
+and for every probability vector p,
+ F_p(B)<= (w+||B||^2)/2-R_U(B)/2+K_m||p-U||^2.                  (2)
+The final inequality is valid even outside the mass box, because it
+uses one feasible dual offset. Only the proof of(1) needs a small mass
+perturbation inside the accepted positive box.
+
+2. An offset-Laplacian spectral gap for conditioned score matrices
+Consider any masses p_i in[1/(2m),3/(2m)] and their unique Gaussian score
+fan with sites B_i and optimal offsets. Let M_i=int_(cell i) x dgamma be
+its unnormalized centroid. For physical interfaces put
+ ell_ij=|B_i-B_j|,
+ w_ij=(Gaussian facet area)/ell_ij,
+ L=the offset Laplacian with weights w_ij.
+The exact Gaussian integration-by-parts identity is
+                              M=L B.                            (3)
+All rows of L are in H. The Gaussian conditional-mean bound gives
+ ||M_i||<=p_i sqrt(2log(1/p_i))<=C b/m.
+Applying the pseudoinverse of B to(3),
+ ||L_i||<=C b/(m alpha)<=C,
+so every weighted degree L_ii is at most an absolute constant depending
+only on c0,C0. This is NOT inferred from a stationary centroid equation
+or from KKT: B need not be an optimizer of any centroid functional.
+
+For a label subset S of cardinality k, the Gaussian perimeter of the
+union of its cells is sum_(i in S,j outside S) ell_ij w_ij. Since
+ell_ij<=sqrt2 C0 alpha and Gaussian isoperimetry gives perimeter at
+least I(p(S))=phi(Phi^-1(p(S))),
+ sum_(cross S) w_ij>=c I(p(S))/alpha
+                  >=c min(k,m-k)/(m alpha)
+                  >=c min(k,m-k)/b.                             (4)
+The middle step uses I(t)>=2phi(0)min(t,1-t), plus the lower bound on
+each mass and its complement. Weighted graph Cheeger with counting
+measure and bounded maximum degree now gives
+                           lambda_2(L)>=c/b^2.                  (5)
+This estimate is uniform throughout the mass box. The score sites are
+affinely independent because B has full rank on H, so the offset dual
+is smooth and its Laplacian is positive definite on H.
+
+3. A lower mass Hessian for the score value
+The envelope derivative is grad_p F_p(B)=-h_p(B) in mean-zero gauge.
+Differentiating the mass equations gives dh/dp=L^-1. Hence(5) implies
+                         F_pp(B)=-L^-1>=-C b^2 I.                (6)
+In particular, for any mean-zero z whose segment U+t z stays in the
+mass box,
+ F_(U+z)(B)>=F_U(B)-h.z-(C b^2/2)||z||^2.                       (7)
+This is a lower Taylor estimate in the mass variable for a fixed score
+matrix. It is not a claim of joint concavity in score covariance and mass.
+
+4. Combine with the accepted global optimized-moment envelope
+The first-moment identity in[D] gives, for every p,
+ F_p(B)<= (||B||^2+V(p))/2.
+Input[M,G] supplies V(U+z)<=w+A_m||z||^2 on the accepted mass box, with
+A_m=O((1+log m)^2). Combining this upper bound with(7),
+ -h.z <= R_U(B)+(A_m+C b^2)||z||^2/2.                           (8)
+Choose K_m>=A_m+C b^2 and K_m>=b^4, with K_m<=C(1+log m)^2.
+
+The increment z=-h/K_m is admissible for large m. To see this without
+circularly using(1), each winning cell of mass1/m is contained in the
+pairwise comparison halfspace against every other label. Using this for
+both labels yields
+ |h_i-h_j|<= b ell_ij<=C alpha b.
+The mean-zero gauge then gives ||h||infinity<=C alpha b<=C b^2/m.
+Consequently ||h/K_m||infinity<=C/(m b^2)<1/(2m), and the full segment
+U-t h/K_m lies in[1/(2m),3/(2m)]. Substituting z=-h/K_m into(8) gives
+                              ||h||^2<=2K_m R_U(B),
+which is(1). Thus the certificate is deficit-relative, not just an
+absolute offset-size estimate.
+
+5. The finite score payment survives a mass displacement
+The balanced optimal offsets are a valid competitor in the dual for
+ANY p. Hence
+ F_p(B)<=F_U(B)-h.(p-U)
+ <=(w+||B||^2)/2-R_U(B)+sqrt(2K_m R_U(B))||p-U||.
+Young's inequality bounds the last term by R_U(B)/2+K_m||p-U||^2,
+proving(2).
+
+Equivalently, for the regular centroid matrix B0 and B=B0+Z,
+ sup_(E f=p){<M_f-B0,Z>-[w-<B0,M_f>]}
+ <=||Z||^2/2-R_U(B)/2+K_m||p-U||^2.                            (9)
+If the Procrustes score distance obeys d(B)<=A/m for fixed A, then the
+conditioning hypothesis holds for large m and[F] supplies
+ R_U(B)>=c_A d(B)^2/[m sqrt(log m)].
+Thus(9) retains half of that actual finite payment, at a mass cost of
+order log^2(m)||p-U||^2. It does not rely on the false uniform full-local-
+Hessian approximation diagnosed in[D].
+
+The remaining comparison is to the full resummed noise functional and
+its higher-degree couplings. This note neither proves that comparison
+nor locates an arbitrary actual optimizer inside the score radiusA/m.

@@ -1,0 +1,77 @@
+NEGATIVE VOTING MANUSCRIPT V2: INDEPENDENT DELTA AUDIT
+31 October2026. gaussian_cleanroom_end_to_end.
+
+VERDICT: PASS. No further repair requested.
+PDF: negative_gaussian_simplex_stability_v2.pdf,20pages,
+SHA f70b4a749939611cdc9e2dcdaf4012163412e3c04b6a22deaac39335a76367b2.
+Review manifest: c6d7b9e5a4d69a9318627ffde24111bb4543046a720f6cc897c768594d66a979.
+Exact source patch:6430cfa974072d19c8f6c2ef0ae4e156189f4b69e01353a2bdc58faf40349a7a.
+
+This supplements the full v1 content audit4f11fa40; it is a delta review,
+not a redundant claim to have audited the entire dependency capsule anew.
+Root retains visual layout QA. The source-map completeness review remains
+prior-art's separate report. The manuscript remains an internally audited
+AI-assisted proof candidate, not externally verified mathematics.
+
+1. Exact preservation and delta
+All10 entries of the frozen v1 review manifest still verify. All15 v2
+review entries verify. Independently regenerating the unified diffs from
+the actual files reproduces REVISION_FROM_V1.patch byte for byte across
+its seven changed files. Calibration and radial/coercivity files02/03
+are unchanged. Thus no unreported change to either critical new proof
+enters this review copy. All23 original source entries carrying byte
+hashes verify, as do the bundled internal copies. The external entries
+without article-byte hashes explicitly say so; no article hash is inferred.
+The unchanged dependency capsule's own manifest entries also verify.
+
+2. Added endpoint proof
+The added proposition matches907e0360 and the proof independently read
+in my v1 report. The covariance input supplies concavity, PSD continuity,
+local C2 regularity, and the normal-strain strictness at the reference.
+The proof uses only this covariance portion of the prior statement; the
+offset and mass theorems are not used to derive the endpoint.
+
+Reference centroids are alpha P by exchangeability and independence of
+the common Gaussian mean. The envelope derivative and C=BB^T chain rule
+therefore give grad Gamma(alpha²P)=P/2. Concavity yields the global
+nonnegative score remainder at arbitrary target rank.
+
+If every regular edge quadratic of E vanished, E_ij=(E_ii+E_jj)/2.
+Centering then gives m E_ii+tr E=0, hence tr E=0 and E=0. For a nonzero
+E the normal-strain input makes curvature strictly negative initially.
+The tangent gap is convex with initial derivative zero; once strictly
+positive, it stays positive to the target. PSD continuity handles a
+singular endpoint. This proves exactly the asserted zero set.
+
+Balanced feasibility gives W<=F_U(B)<=(w+W)/2. At equality the Gram
+matrix is regular. The final actual-centroid implication uses zero
+expected nonnegative routing loss and Gaussian-null regular ties, so it
+also covers fractional assignments without a mass assumption. The
+transcription therefore supplies the stated endpoint and equality
+facts without225's older Section10 references.
+
+3. Notation and scope corrections
+The FJ definition now uses the proper min operator. The tensor reference
+formula now uses explicitly scalar Z_i^iid rather than the proxy vectors.
+Both corrected expressions were checked in the rendered PDF's extracted
+mathematical text on pages16 and14 respectively. The final proof says
+'No full-noise attainment', correctly retaining the auxiliary first-moment
+optimization inputs. No theorem, parameter range, equality claim, or
+application quantifier changed.
+
+4. References, capsule and PDF consistency
+The optional simple-unweighted sentence now cites CST Theorem13 directly
+as well as the exact transfer proof. The added standard references name
+the separate Ehrhard, Brascamp--Lieb, Gaussian isoperimetric, and
+hypercontractive inputs with their intended roles. The source manifest
+retains explicit distinctions between article bytes, publisher metadata,
+and absent article-byte hashes. This delta review is not a fresh full
+proof read of those classical articles.
+
+The source-map companion is explicitly described as an unchanged v1
+snapshot with v2 integration explained separately. That historical scope
+is accurate; neither the bibliography nor the manuscript claims external
+peer review. The v2 PDF has20pages and no unresolved question-mark pairs
+in extracted text. The new endpoint proof on pages3-4 and the corrected
+formula locations match the TeX delta. Visual rendering review is root's
+separate task. No source, manuscript, or master file was edited by me.

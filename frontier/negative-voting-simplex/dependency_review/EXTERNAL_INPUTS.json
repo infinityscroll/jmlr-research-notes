@@ -1,0 +1,82 @@
+[
+  {
+    "id": "Mulgund",
+    "title": "Stochastic Domination of Gaussian Maxima: A Resolution of the Weak Simplex Conjecture, arXiv2607.14087v4",
+    "url": "https://arxiv.org/html/2607.14087v4",
+    "used_result": "Theorem2.1, equal-threshold CDF comparison; used by 28c and directly by 84.",
+    "kind": "mathematical_input",
+    "bundled": false,
+    "private_cache_sha256": "c3ea6c14fa08c70e82d0d5ae6d1161b62d5da50465c9c815ecbb645ddc5caab7",
+    "cache_basename": "MULGUND_2607_14087_v4.html"
+  },
+  {
+    "id": "Ehrhard-Latala",
+    "title": "A note on the Ehrhard inequality, Studia Mathematica118(1996),169\u2013174",
+    "url": "https://www.impan.pl/en/publishing-house/journals-and-series/studia-mathematica/all/118/2/109424/a-note-on-the-ehrhard-inequality",
+    "used_result": "Convex Gaussian translation concavity; differentiated in d261. DOI10.4064/sm-118-2-169-174.",
+    "kind": "mathematical_input",
+    "bundled": false,
+    "private_cache_sha256": "75467b0fc891007985987d6380bbf3f94f809ae7894faf16df04772794af9ba5",
+    "cache_basename": "LATALA_1996_EHRHARD_PUBLISHER_20261031.html"
+  },
+  {
+    "id": "Brascamp-Lieb",
+    "title": "On extensions of the Brunn-Minkowski and Prekopa-Leindler theorems, including inequalities for log concave functions, and with an application to the diffusion equation",
+    "url": "https://doi.org/10.1016/0022-1236(76)90004-5",
+    "used_result": "Variance/covariance bound for uniformly log-concave Gaussian restrictions and tilted laws; 225,47,d261,be930,f0f.",
+    "kind": "mathematical_input",
+    "bundled": false,
+    "private_cache_sha256": null,
+    "cache_status": "No article-byte pin claimed; standard external theorem requires an ordinary bibliographic citation."
+  },
+  {
+    "id": "Gaussian-isoperimetry",
+    "title": "The Brunn-Minkowski inequality in Gauss space, Inventiones mathematicae30(1975),207\u2013216",
+    "url": "https://link.springer.com/article/10.1007/BF01425510",
+    "used_result": "Gaussian perimeter >= I(mass), used in 12dc/41/111/e33; graph Cheeger/coarea steps themselves are written in the local sources.",
+    "kind": "mathematical_input",
+    "bundled": false,
+    "private_cache_sha256": null,
+    "cache_status": "No article-byte pin claimed; standard external theorem requires an ordinary bibliographic citation."
+  },
+  {
+    "id": "Hypercontractivity",
+    "title": "Logarithmic Sobolev Inequalities, Gross, American Journal of Mathematics97(1975),1061\u20131083",
+    "url": "https://www.jstor.org/stable/2373688",
+    "used_result": "Standard Gaussian OU Lp-to-Lq hypercontractivity. Used repeatedly in cap/trace/tail arguments; theorem statement is explicit in the manuscript. DOI10.2307/2373688.",
+    "kind": "mathematical_input",
+    "bundled": false,
+    "private_cache_sha256": null,
+    "cache_status": "No article-byte pin claimed; standard external theorem requires an ordinary bibliographic citation."
+  },
+  {
+    "id": "IM",
+    "title": "Maximally Stable Gaussian Partitions with Discrete Applications, arXiv0903.3362v3",
+    "url": "https://arxiv.org/html/0903.3362v3",
+    "used_result": "Theorem7.1, Lemma7.3, AppendixA for discrete transfer and UGC reduction.",
+    "kind": "application_input",
+    "bundled": false,
+    "private_cache_sha256": "e77c03e44e57d5dac04d4028722b23c0b58849ed46cf3b049a881e4b540e4e58",
+    "cache_basename": "IM_0903_3362v3.html"
+  },
+  {
+    "id": "KKMO",
+    "title": "Optimal Inapproximability Results for MAX-CUT and Other 2-Variable CSPs?",
+    "url": "https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf",
+    "used_result": "Historical asymptotic endpoint result and low-degree-influence PCP framework; primary scope in 9482.",
+    "kind": "application_and_history",
+    "bundled": false,
+    "private_cache_sha256": "42d209e98ae861f192e815854ea52c99e893d94a7366c9074621fcf34ab8fb71",
+    "cache_basename": "KKMO_2007_max_cut_final.pdf"
+  },
+  {
+    "id": "CST",
+    "title": "Weighted-to-unweighted mixing-graph construction, Theorem13",
+    "url": "https://lucatrevisan.github.io/pubs/cst-full.pdf",
+    "used_result": "Optional simple-unweighted MAX-m-CUT consequence in 9482 \u00a74, expressly invoked by manuscript06.",
+    "kind": "optional_application_input",
+    "bundled": false,
+    "private_cache_sha256": "aedd4d581a44004c2a1e658aa73426835e1df7a122ad7c310eaa4cfc0d6524c2",
+    "cache_basename": "CST_WEIGHTED_UNWEIGHTED_PRIMARY.pdf"
+  }
+]

@@ -15,7 +15,8 @@ def main():
            'frontier/gaussian-simplex/review/reproduce.py',
            'frontier/marcus-three-blocks/verify.py',
            'frontier/causal-cactus/verify.py',
-           'frontier/gaussian-simplex/supplements/quantization-landscape/verify.py']
+           'frontier/gaussian-simplex/supplements/quantization-landscape/verify.py',
+           'frontier/negative-voting-simplex/verify.py']
     for script in cases:
         start=time.monotonic()
         result=subprocess.run([sys.executable,str(ROOT/script)],cwd=ROOT,env=env,text=True,capture_output=True,timeout=600)

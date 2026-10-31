@@ -1,0 +1,134 @@
+FULL INDEPENDENT AUDIT: CONDITIONAL PROXY-TENSOR FULL-VOTING ASSEMBLY
+31 October 2026. gaussian_cleanroom_end_to_end.
+
+VERDICT: PASS CONDITIONAL ON THE EXACT GLOBAL HYPOTHESIS(RC).
+Audited source84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4.
+No repair requested. This audit does NOT prove RC or promote the final
+conjecture to an unconditional theorem. The conditional theorem covers
+all sufficiently large m, all finite N>=m-1, all voting0<r<=1/(m-1),
+and unrestricted-mass single-rule simplex-valued assignments. No actual
+equal-row, rank, affine, conical, or regular-interface premise is added.
+
+I read the complete frozen source, independently reconstructed each
+new step, verified its13 dependency hashes, reread the precise imported
+localization, covariance-bootstrap, proxy and local-theorem scopes, and
+checked the cached PRIMARY Theorem2.1 of Mulgund2607.14087v4 directly.
+The inherited proofs have the internal audits recorded in their sources;
+this report is a full audit of the assembly and its new deductions, not
+a claim that every historical dependency was newly reaudited this turn.
+
+1. Localization, actual dual, and normalization
+D=delta+r(w-W), delta<=2D imply |W-w|<=D/r, including W>w.
+The nonnegative balanced dual R is meaningful for actual unequal-mass
+centroids; feasibility gives F_p(B)>=W. Testing at balanced offsets has
+the sign R<=Delta/2-h.(p-U). The accepted offset bound, scaled from
+normalized B, gives h^2<=CL^2R. Young with one half of R yields
+R<=Delta+CL^2delta<=Delta+delta/r=D/r for voting r and large m.
+Thus J=D/r, not Delta, is the positive controlling deficit throughout.
+No unbalanced first-moment upper bound W<=w was used.
+
+The unnormalized covariance remainder is exactly its tangent remainder
+at P, so the initial normal-strain proof from47/05176 still applies
+when tr(BB^T/alpha^2) is not m-1. Spectral calculus gives e>=q=d/alpha.
+The actual norm bound supplies q<=Csqrt m. In the exterior d>1/m,
+q>=c/sqrt L, Le is large, and the initial-segment curvature produces
+R>=c q/m^3>=c/(m^3sqrt L). Its factor is the INITIAL interval length,
+not its square. No endpoint conditioning or differentiability is used.
+
+2. Precisely where the new RC premise enters
+For s=sqrt(W/w), homogeneity gives
+R(B)=w(s-1)^2/2+sR(B/s). Actual entropy gives the fixed row cap after
+this bounded scaling. RC then implies radial projection error<=CL^2R,
+because beta^2=w/m is comparable to L/m^2. The actual uniform row bound
+puts all radii near beta. Its conditional-Cauchy operator estimate gives
+average unit-direction covariance O(1/L). Thus the geometric-median
+construction in e33 applies to the NORMALIZED rows as well: its proof
+uses those geometric bounds, not realizability of the normalized rows
+as centroids. It corrects the mean without an extra coordinate and with
+squared displacement bounded by the radial error. Finally the scalar
+normalization costs<=2R. This proves the exact centered/equal-row proxy
+Z and movement^2<=CL^2J. No stronger property of Z is needed later.
+
+3. Direct primary maximum comparison, all ranks
+I checked the cached v4 HTML's Section2 definition and Theorem2.1.
+It explicitly allows singular positive-semidefinite correlation
+matrices and assumes R-J/m is PSD. For unit proxy covariance C,
+a0 C+J/m has unit diagonal and subtracting J/m leaves a0 C PSD.
+Its Gaussian maximum is sqrt(a0) M+G/sqrt m. The corresponding regular
+maximum has independent-coordinate covariance I. Therefore the CDF
+H used in the source is nonnegative at EVERY real threshold.
+
+Common Gaussian centering cancels its cross moment; hence the mean and
+second-moment identities have exactly the factors sqrt(a0) and2/a0.
+Unit marginal union bounds give H(t)<=m barPhi(t) for t>0 and
+H(t)<=Phi(t) for t<0. Thus |int_(|t|>T) t H|<=Cm exp(-T^2/2), while
+on the central interval its upper bound is T int H. This proves(8)
+without any amplitude-relative CDF theorem and without a Gram inverse.
+The zero-sum rows imply M>=0, which is used in the next step.
+
+4. Actual-routing quadratic comparison
+For ANY simplex-valued f, V=max z_i dominates its assigned score, so
+c_f=V-sum f_i z_i>=0. Free maximum deficit and routing loss are both
+nonnegative and sum exactly to
+w-<Z,B>=(Delta+||Z-B||^2)/2.
+This remains correct when Delta<0. The elementary pointwise inequality
+V^2-sum f_i z_i^2<=2V c_f is exact; it does not require f to route by Z.
+On V<=beta T it is paid by2beta T E c_f. On the complement, V and c_f
+are bounded by beta times max_i|Y_i| and twice that maximum. The Gaussian
+union second-moment tail supplies the explicit polynomial(T) factor.
+Combining free maximum and actual routing therefore yields numerator
+error C(L/m)L^2J=C L^3J/m, plus the stated absolute Gaussian tail.
+This is where the signed proxy comparison avoids the refuted arbitrary-
+assignment global second-chaos inequality near the regular reference.
+
+5. Tensor certificate and unequal masses
+For T_i=Z_i Z_i^T-Z^T Z/m, sum Q_i=0 gives
+sum<Q_i,T_i>=E sum f_i(Z_i.X)^2-sum p_i|Z_i|^2.
+The last sum is exactly beta^2, even for unequal masses. The denominator
+is m beta^4-tr((ZZ^T)^2)/m. Centering bounds the rank by m-1; trace w
+therefore makes this denominator at most D_* exactly. If it vanishes,
+Cauchy against D_* still holds directly, so no inverse denominator or
+full-rank assumption is concealed.
+
+The regular tensor identity gives A2g=T_*^2/(2D_*) and T_*/D_*<=Cm.
+The positive-part square inequality turns a nonnegative numerator error
+E into A2f-A2g>=-(T_*/D_*)E, even if T_*-E is negative. Thus the relative
+error is CL^3J. The absolute error after multiplication is CL^2e^-16L;
+the exterior floor J>=c/(m^3sqrt L) pays it. The argument never applies
+this absolute-tail payment inside the local score ball.
+
+6. Arbitrary near-balanced entire signed tail
+The regular margin proof applies to fractional f and has no balance
+requirement: its routing loss is R0=(Delta+d^2)/2>=0. It yields
+mismatch epsilon<=min(1,Csqrt(mR0)). At tau^2=1/(4L), the actual mass
+upper bound3/(2m) and reference mass1/m imply each label mismatch
+L1 norm is<=5/(2m). With exponent p=2/(1+tau^2),
+sum e_i^p<= (5/(2m))^(p-1) sum e_i<=C epsilon/m.
+This verifies the rare-label factor for near-balanced f, not merely
+for the balanced affine input. Hypercontractivity and the degree>=3
+spectral contraction then prove the FULL signed tail bound(16), uniformly
+in ambient dimension. No term from degrees0,1,2 is included in it.
+
+For J>=d^2, R0<=J gives the ratio Cr^3 L^3 m^-3/4 J^-3/4. The exterior
+floor yields Cr^3 m^3/2 L^27/8. For J<d^2, write d=alpha q and use
+J>=c q/m^3. The ratio is Cr^3 m^7/4 L^13/4 q^-1/2, hence at most
+Cr^3 m^7/4 L^7/2. These are exactly the stated exponents; the second
+bound dominates the first. This argument does not identify R with a
+partition first-moment deficit.
+
+7. Conclusion and exact remaining dependency
+The full energy difference is D+r^2 A2diff+Hdiff. The resulting relative
+errors are CrL^3 and Cr^2m^7/4L^7/2, both tending to zero uniformly for
+r<=1/(m-1). The exterior floor makes D>0 there, so the comparison is
+strict. Inside d<=1/m, the already audited own-centroid theorem1a applies
+with fixed A=1 and the obtained mass box, and its equality argument
+forces a regular partition. Fixed-finite-N existence supplies an actual
+minimizer, and the proof applies to every such minimizer. All eventual
+constants are independent of r,N.
+
+RC is the one NEW unproved input in84e1. Its required summed bound is
+global over bounded-row normalized scores, including singular/duplicate
+configurations. Replacing it by a one-row result, a local score result,
+or a bound losing a factor m would not pass this audit. The pressure
+trace identity is not used. No unconditional completion, novelty,
+external endorsement, or finite numerical m threshold is claimed here.

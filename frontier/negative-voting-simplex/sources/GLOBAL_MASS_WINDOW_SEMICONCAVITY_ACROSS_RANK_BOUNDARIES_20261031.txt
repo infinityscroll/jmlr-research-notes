@@ -1,0 +1,172 @@
+GLOBAL MASS-WINDOW SEMICONCAVITY THROUGH SINGULAR OPTIMIZED GRAMS
+31 October 2026. strong_signal_prior_art. Envelope proof independent of
+smooth active-set assumptions. Uses the separately pinned regularized graph
+and Ehrhard certificate; does not assume rank persistence.
+Complete proof candidate awaiting full independent source audit.
+
+1. Statement and the one quantitative input
+Fix constants 0<c<=1<=Cbar<infinity. On the mass window
+ P_m={p: sum p_i=1, c/m<=p_i<=Cbar/m},
+let V_m(p)=sup sum_i |integral_(A_i)x dgamma_N|^2, N>=m-1.
+For all sufficiently large m, put L_m=1+log(m/c) and
+ K0=128 Cbar^2 pi[56exp(3/2)+2]/c^2, A_m=K0 L_m^2.
+Then
+
+ V_m(p)<=w_m+A_m |p-U|^2 for every p in P_m,               (1)
+ U=(1/m,...,1/m), w_m=(E max_(i<=m)Z_i)^2/(m-1).
+
+More generally V_m is semiconcave on this convex window with upper Hessian
+bound 2A_m I, interpreted by the integrated one-dimensional
+inequality. In particular A_m=O_(c,Cbar)((log m)^2)=o(m).
+This is a first-chaos/mass statement, not a full noise-stability
+or Plurality theorem.
+
+We use the following quantitative estimate from the regularized graph source
+REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt,
+SHA12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08.
+Write P=I-11^T/m, work on H=1-perp, and set
+ g(C,p)=2F_p(C)-tr C, C>=0 on H.
+Here F_p is the maximal Gaussian-to-simplex covariance with masses p.
+For fixed m, for all sufficiently small eps>0 uniformly over p in P_m,
+let Ceps(p) maximize g subject to C>=eps I_H. For every symmetric direction
+T on H, the centered optimal score offsets satisfy
+
+ |D_C h(Ceps(p),p)[T]|^2
+       <=A_m {-D_CC F_p(Ceps(p))[T,T]},                  (2)
+ A_m=K0 L_m^2 as defined above.
+
+The cutoff eps_0 may depend on m,c,Cbar. The coefficient K0 does not depend
+on eps or m. The graph source derives (2) using actual near-optimal pair
+separation, L<=P, Gaussian isoperimetry, pruning, and the cycle-preserving
+Ehrhard identity. It does not require a true optimum to be full rank.
+The proof below explains fully why (2) passes through every active-set
+change and through eps down to0.
+
+2. Representation, attainment, and a uniform value error
+The square-completion identity gives
+ V_m(p)=max_{C>=0}g(C,p).
+The accepted covariance theorem makes F_p concave in C, strictly concave
+on the positive definite cone for the simplex target. For positive masses
+F_p is jointly smooth in (C,p) on C>0, with the offset gauge fixed by
+sum_i h_i=0. Its mass derivatives are
+
+ grad_p F_p=-h,   D_pp F_p=-L^{-1} on H,                 (3)
+
+where L is the positive complete-graph offset Hessian. Thus D_pp F_p is
+negative semidefinite, and D_Cp F_p[T,u]=-u dot D_C h[T].
+
+For every relaxed assignment the squared first-moment sum is at most1:
+its first Hermite coefficients obey
+ sum_i |integral x f_i dgamma|^2
+ <=sum_i (integral f_i^2-(integral f_i)^2)
+ <=sum_i p_i(1-p_i)<=1.
+Hence F_p(C)<=sqrt(tr C) and g(C,p)<=2sqrt(tr C)-tr C.
+This proves coercivity uniformly in p. The unconstrained maximum is
+attained and its optimizing trace is at most4, since C=0 has value0.
+For eps(m-1)<=1, the regularized maximum is at least -1 (test eps I_H),
+so every regularized optimizer has trace less than9. Strict concavity
+makes that optimizer unique.
+
+Adding independent centered Gaussian noise to any coupling proves
+ F_p(C+eps I_H)>=F_p(C).
+Testing C*+eps I_H at an unconstrained optimizer C* therefore gives the
+particularly useful uniform bound
+
+ 0<=V_m(p)-Veps(p)<=eps(m-1),                            (4)
+ Veps(p)=max_(C>=eps I_H) g(C,p).
+
+This needs no positive rank for C*. It also shows that every convergent
+sequence of regularized optimizers with eps->0 has a true optimizing limit
+at the limiting mass vector. Compactness and joint continuity consequently
+make their distance to the true optimal set tend to0 uniformly over P_m.
+
+3. KKT and local Lipschitz regularity for each fixed eps
+All covariance coordinates in this section are in H. The score Gaussian
+integration-by-parts identity gives 2D_C F_p=L, so the covariance gradient
+of g is L-I_H. The first-order optimality inequality is
+
+ <D_C g(Ceps(p),p), D-Ceps(p)> <=0
+                     for every D>=eps I_H.             (5)
+
+In particular L<=I_H and
+ (I_H-L)(Ceps-eps I_H)=0.
+If B B^T=Ceps and M=L B is its matrix of cell first moments, then
+
+ ||B-M||_F^2=eps tr[(I_H-L)^2]<=eps(m-1).                (6)
+
+These KKT statements are also part of the graph proof's input; no invertible
+true optimizer is required.
+
+For fixed eps and m, on the compact covariance set C>=eps I_H,tr C<=9 and
+mass window P_m, strict negative covariance Hessians and continuity give
+ D_CC g[T,T]<=-kappa_eps |T|_F^2 with kappa_eps>0.
+The mixed derivatives are bounded there. Applying (5) to two optimizers
+at p and q, and adding the two inequalities, gives
+
+ 0<=<D_C g(Ceps(q),q)-D_C g(Ceps(p),p), Ceps(q)-Ceps(p)>.
+
+Splitting the difference first in C then in p yields
+ kappa_eps ||Ceps(q)-Ceps(p)||_F
+       <=M_eps |q-p|.
+Thus the optimizer is Lipschitz on P_m for each fixed eps. The constants
+may diverge as eps->0; they will not enter the final semiconcavity estimate.
+All derivatives are taken in the open positive-mass simplex, so endpoints
+of the compact mass window cause no differentiability ambiguity.
+
+4. The constrained envelope bound without active-set smoothness
+Restrict to any mass segment p(t)=p0+t u in P_m. The optimizer C(t)=Ceps(p(t))
+is Lipschitz, hence differentiable for almost every t. Danskin's theorem
+here follows directly from uniqueness, continuity, and the two optimality
+comparisons at p and p+delta: Veps is differentiable in mass with
+
+ (Veps)'(t)=D_p g(C(t),p(t))[u].                         (7)
+
+The right side is Lipschitz along the segment for fixed eps. Therefore its
+second derivative exists almost everywhere, and the chain rule gives
+
+ (Veps)''(t)=D_pp g[u,u]+D_Cp g[C'(t),u].                (8)
+
+At a differentiability point, apply the preceding monotonicity inequality
+to t and t+s, divide by s^2, and let s->0. This yields
+
+ E := -D_CC g[C',C'] <= B := D_Cp g[C',u].               (9)
+
+This inequality is the entire contribution of the changing active set.
+It is not replaced by an unjustified interior Euler equality. In particular
+B>=E>=0.
+
+By (2), (3), and g=2F-tr,
+ B^2=4|u dot D_C h[C']|^2
+     <=4A_m |u|^2(-D_CC F[C',C'])
+     =2A_m |u|^2 E.
+Combining with E<=B gives B<=2A_m |u|^2 (including B=0). Since D_pp g<=0,
+(8) proves
+
+ (Veps)''(t)<=2A_m |u|^2 for almost every t.              (10)
+
+The second derivative is an actual derivative of a Lipschitz first derivative,
+so integration loses no singular positive measure. This proves uniform
+semiconcavity on every mass segment, with coefficient2A_m independent of eps.
+
+5. Passage to the singular limit and anchoring at uniform masses
+Equation(4) gives uniform convergence Veps->V. The integrated semiconcavity
+inequality therefore passes directly to V, including mass vectors whose
+optimizing Gram is singular. This conclusion did not require a uniform
+Lipschitz constant for Ceps or any differentiability of the limiting optimizer.
+
+At U, uniqueness of Ceps and permutation invariance force Ceps(U) to be a
+scalar multiple of I_H. The centered optimal offsets are then all0, so
+D_p Veps(U)[u]=0 for sum_i u_i=0. Integrating (10) from U to p yields
+ Veps(p)<=Veps(U)+A_m |p-U|^2.
+Pass eps->0 and use the accepted balanced endpoint V(U)=w_m to obtain(1).
+
+6. Exact scope
+The statement is global over the displayed fixed relative mass box, not
+over the full probability simplex. Constants may depend on its fixed lower
+and upper relative-mass bounds. The sufficiently-large-m threshold and the
+auxiliary eps_0 are not computed. Singular optimizer Grams are allowed in
+the conclusion. The only eps-uniform analytic estimate needed is(2), whose
+proof is separately pinned and must be audited with this envelope argument.
+No equality characterization, sharp mass-Hessian constant, full negative
+Standard Simplex inequality, or all-correlation Plurality result follows
+from semiconcavity alone.

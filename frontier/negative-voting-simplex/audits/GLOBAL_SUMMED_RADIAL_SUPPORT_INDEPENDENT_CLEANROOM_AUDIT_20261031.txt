@@ -1,0 +1,85 @@
+INDEPENDENT FULL AUDIT: GLOBAL SUMMED RADIAL COVARIANCE COERCIVITY
+31 October 2026. gaussian_cleanroom_end_to_end.
+
+VERDICT: PASS, no repair requested.
+Source1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57.
+This audit follows a full independent audit of the NEW derivative input
+be93031a, recorded separately at3a4fb915. All frozen hashes were checked.
+The result supplies the EXACT hypothesis RC in the already independently
+audited conditional assembly84e1. It is global in the target covariance,
+including singular targets and duplicate rows, with fixed bounded rows.
+The derivative box is imposed only on the auxiliary supporting matrix.
+
+1. Exact hazard matrix and support inequality
+For independent diagonal scores with balanced offsets, omega_ij is the
+one-dimensional winning-tie integral. Adding its analytic diagonal to
+define ell_i gives
+L_D=diag(ell)-int W aa^T=Pdiag(ell)P-H_D,
+where H_D=int W(Pa)(Pa)^T is positive semidefinite. The first matrix
+annihilates the common vector exactly; projecting does not change it.
+The true covariance gradient is L_D/2. Euler homogeneity of degree1/2
+therefore gives Gamma(D)=tr(L_D D). Concavity at the positive-definite
+supporting point yields
+Gamma(C)<=(1/2)tr[L_D(C+D)]
+for EVERY centered PSD target C. The dropped term is
+-(1/2)tr[H_D(C+D)]<=0. This is a valid sign even if the matrices do not
+commute. No target inverse or off-diagonal estimate is needed.
+Value continuity includes singular endpoints; no derivative there is used.
+
+2. All row errors are paired simultaneously
+For normalized physical B, set C=BB^T/alpha^2, z_i=C_ii-n/m,
+kappa=1-2/m and xi=z/kappa. Then sum xi=0 and ||xi||infinity is bounded
+solely by the fixed row cap. Its Euclidean norm may be order sqrt m.
+For D_t=Pdiag(1+t xi)P the diagonal is exactly n/m+t z_i, and trace n.
+The derivative theorem applies throughout0<=t<=b_A/L^2. Its Taylor
+remainder is coordinatewise xi_i^2+mean xi^2, not a shared ||xi||2 bound.
+
+The constant term in the support inequality is alpha n=mu. The exact
+linear pairing is sum xi_i(C_ii+D_ii)=kappa(1+t)||xi||2^2. It has the
+favorable sign because ell_i'(0)=-alpha eta_m xi_i. The summed error
+is at most CH(A+2)alpha L^2t^2||xi||2^2/2: averaging the mean-square
+term gives a SECOND copy of ||xi||2^2, not m copies. This is the step
+which produces a true SUMMED theorem.
+
+I checked the numerical safety constants as written. eta_m>=1/4,
+kappa>=1/3 and b_A<=1/[24CH(A+2)] make the linear coefficient at least
+alpha kappa t/8 and the error at most alpha t/48. Their difference is
+at least alpha kappa t/16. Thus
+mu-Gamma(C)>=alpha b_A||z||2^2/(16L^2).
+Multiplication by alpha gives R>=c_A alpha^2 L^-2||z||2^2.
+Since the physical centered row-square errors are alpha^2 z_i,
+V_ref<=C_A alpha^2 L^2R<=C_A L^3R/m^2, exactly as claimed.
+The source's squared-row cap A corresponds to the conditional assembly's
+row-length cap after replacing A by A^2, which merely changes a fixed
+constant. There is no discrepancy in the RC scopes.
+
+3. Unnormalized and actual-proxy corollaries
+The radial identity R(B)=w(s-1)^2/2+sR(B/s) is exact. Centered row-square
+variance scales by s^4, and the reference-radius correction is
+(W-w)^2/m. Bounded positive s makes the former<=CL^3R/m^2 and the latter
+<=CwR/m<=CLR/m^2. Dividing the total reference-square error by
+beta^2=w/m proves the radial-distance estimate E_rad<=CL^2R without
+requiring a lower bound on individual target rows.
+
+Only the final geometric proxy invokes actual-minimizer information:
+the previous uniform row lower bound and conditional-Cauchy operator
+bound enable the geometric-median construction e33. They give an exact
+centered equal-row proxy in the same span with movement^2<=CE_rad.
+The source correctly does not claim that this proxy is a centroid
+matrix of a competitor, preserves pair separation, or lowers noise.
+The later84e1 assembly uses it solely as a quadratic tensor test.
+
+4. Relation to the full proof and remaining scope
+The normalized theorem is precisely the formerly additional RC premise
+in84e1. My separate84e1 audit6243c20e checks every downstream step:
+actual R<=D/r, exact proxy construction, primary common-Gaussian maximum
+comparison, unequal-mass tensor certificate, absolute-tail payment only
+outside the score ball, complete signed higher-tail comparison, and the
+accepted local actual-centroid theorem inside. Thus this source removes
+that additional premise at the mathematical dependency level.
+
+This report does not edit any frozen theorem, master checkpoint, or
+public record. It is an internal proof audit, not an assertion of
+external validation, novelty clearance, an explicit finite m threshold,
+or the positive-correlation conjecture. The parent owns the final
+unconditional statement, scope check, and completion record.

@@ -1,0 +1,194 @@
+BALANCED FACET-DENSITY BOOTSTRAP AND A FINITE COVARIANCE GAP
+31 October 2026. Branch derivation. Independent hostile audit pending.
+
+THEOREM
+There are absolute positive constants c,c0 and m0 with the following
+property. Put b=Phi^(-1)(1-1/m), alpha=E max_(i<=m) Z_i/(m-1),
+P=I-11^T/m and w=alpha^2(m-1). For a centered m-label score matrix B in
+any finite ambient dimension N>=m-1, let
+ d(B)=inf_R ||B-alpha Q R||_F,
+where Q Q^T=P and R ranges over orthonormal embeddings of R^(m-1) into
+R^N. Define
+ F_U(B)=sup_(balanced assignments f) E sum_i f_i B_i.X,
+ R_U(B)=(w+||B||_F^2)/2-F_U(B).
+For m>=m0 and d(B)<=c0 alpha,
+ R_U(B)>= (c/m) d(B)^2 min(1,c alpha/[b^2 d(B)]).                  (1)
+The right side is interpreted as zero if d(B)=0. In particular, for each
+fixed A>0, for all sufficiently large m depending on A,
+ d(B)<=A/m  implies  R_U(B)>=c_A d(B)^2/[m sqrt(log m)].           (2)
+The constants are independent of N. The conclusion is a genuine finite
+Gaussian score-dual gap, not just a Hessian statement. It does not compare
+the full noise functional, identify D_linear with D_trunc, or put every
+competitive assignment in the required score neighborhood.
+
+INPUTS
+[C] ../all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+[H] ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt
+ec1edf184fef18a6630fe0007762943cc142d0b7a32dc61e01b83429b35ec633
+[E] ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt
+[D] FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt
+b1e2cb6f0983d2ca13c388c1e07e637fd9cdfde53f4fd4d9280bc9dfbd29fa50
+The companion pins record complete hashes. Only the exact dual identity
+in[D], not its separate obstruction, is needed. The Gaussian convex-set
+Brascamp--Lieb bound is used in the same form already justified in[C].
+
+1. Fixed score coordinates and reference facet moments
+Work on H=1-perp and let nu_e be the normalized standard Gaussian law on
+the fixed facet Sigma_ij={y_i=y_j=max_k y_k}. Its mean mu_e and covariance
+S_e, embedded as an operator on H, obey
+ |mu_e|<=C b,  ||S_e-P||_F<=C.                                    (3)
+Indeed[H](6) gives eigenvalue0 on the facet normal, eigenvalue
+2m v/(m-2) in the remaining distinguished direction, and eigenvalue V on
+the m-3 coordinate-difference directions. Here 0<=2m v/(m-2)<=1,
+1-V=O(b^2/m), and |mu_e|=O(b). These statements follow from[H] and the
+exact identity for1-V in[E]. Thus the Frobenius covariance deviation is
+bounded uniformly, since b^4/m tends zero. The law nu_e is a standard
+Gaussian restricted to a convex cone in its facet hyperplane, hence has
+Brascamp--Lieb/Poincare constant at most1.
+
+Let K=P+E be positive definite on H, epsilon=||E||_F<=1/8, and let h in H.
+Denote by gamma_(K,h) the Gaussian density with covariance K and mean h.
+The fixed-score-coordinate offset weights are
+ w_e(K,h)=(1/sqrt2) int_(Sigma_e) gamma_(K,h)(y) dH^(m-2)(y).
+At K=P,h=0 every weight equals
+ w0=mu/[m(m-1)]=alpha/m.                                        (4)
+The mass Jacobian for the shifted utilities Y_i+h_i is exactly the
+complete-graph Laplacian L with weights w_e(K,h). This follows either
+from differentiation of the Gaussian density or ordinary coarea. Notice
+that the facets in these coordinates stay fixed as K and h vary.
+
+2. A dimension-free quadratic-tilt estimate on each facet
+The density ratio on Sigma_e is exp(c+q(y)), where
+ D=P-K^-1, ell=K^-1 h,
+ q(y)=(1/2)y^T D y+ell.y,
+ c=-(1/2)log det_H K-(1/2)h^T K^-1 h.
+One has ||D||_F<=2epsilon and ||ell||<=2|h|.
+Using(3) and |tr D-log det K|<=C epsilon^2 gives
+ |c+E_nu q|<=C[epsilon b^2+b|h|+|h|^2+epsilon^2].                (5)
+Here the potentially large trace terms cancel. More explicitly,
+tr(D S_e)-tr_H D is bounded by Cepsilon, the mean quadratic term by
+Cepsilon b^2, and the linear mean term by Cb|h|. No ambient trace factor
+or factor proportional to m is left in(5).
+
+For clarity, the needed exponential moment estimate can be proved
+directly rather than importing a quadratic concentration theorem. Tilt
+nu_e by exp(t q), 0<=t<=1, and write mu_t,S_t for its mean and covariance.
+Its potential has Hessian at least(1-||D||op)I>=3I/4 on the facet, so
+ S_t<=2I,
+ Var_t(q)<=2 E_t |P_e(DY+ell)|^2
+          <=C[epsilon^2+|D mu_t+ell|^2].
+Also, by covariance Cauchy and S_t<=2I,
+ |mu_t'|<=sqrt(2 Var_t(q)).
+Consequently v_t=D mu_t+ell satisfies
+ |v_t|'<=Cepsilon(epsilon+|v_t|)
+in the upper-derivative sense. Gronwall, (3), and the bound on ell give
+ |v_t|<=C(epsilon b+|h|),
+ Var_t(q)<=C(epsilon^2 b^2+|h|^2),
+ |mu_1-mu_0|<=C(epsilon b+|h|).                                 (6)
+All differentiations are justified by Gaussian domination, because the
+tilted quadratic form remains uniformly positive definite. Convex-cone
+boundary approximation is the same one used in[C]. Integrating the
+second derivative of log E exp(tq), and using Jensen for the lower bound,
+now proves
+ exp(-A)<= w_e(K,h)/w0 <=exp(A),
+ A=C[epsilon b^2+b|h|+|h|^2+epsilon^2 b^2].                      (7)
+The conditional mean on the perturbed facet is at most
+C[b+epsilon b+|h|], by(6). The constants are uniform over every pair e.
+
+3. Balancing offsets close the bootstrap
+For the segment K_t=P+tE, let h_t in H be its unique offsets giving all
+cell masses1/m, with h_0=0. Existence, uniqueness, and smooth dependence
+hold for positive definite Gaussian score covariances: all simplex cones
+have positive mass, and the complete offset Laplacian is positive on H.
+These are the finite-target offset facts used in[C].
+
+We claim that for epsilon<=c1/b^2, with an absolute sufficiently small c1,
+ |h_t|<=C0 b epsilon t,
+ w0/2<=w_e(K_t,h_t)<=2w0,
+ |m_e(K_t,h_t)-h_t|<=C b,    0<=t<=1.                           (8)
+Here m_e is the conditional score-coordinate mean on the facet.
+
+The exact balancing ODE supplies the claim. Let a_e=e_i-e_j, orient each
+edge once, and let B_inc be the incidence matrix. Differentiation of the
+Gaussian density in K and h, followed by divergence on each fixed cone,
+gives
+ L_t h_t'=-B_inc W_t c_t,
+ (c_t)_e=(1/2)a_e^T E K_t^-1(m_e-h_t).                           (9)
+For example the covariance derivative is(1/2)div(E grad gamma); the
+outward normal of cell i on ij is -a_e/sqrt2. This produces the plus
+B_inc W c covariance contribution before imposing zero mass derivative.
+Thus there is no missing factor or unnormalized facet mean in(9).
+
+Suppose provisionally that |h_t|<=K0 b epsilon and that(7) puts the weights
+in[w0/2,2w0]. Then m w0/2<=lambda_min(L_t|H) and lambda_max(L_t)<=2m w0.
+The facet means in(6) and sum_e a_e a_e^T=mP give
+ sum_e w_e(c_t)_e^2<=C m w0 b^2 epsilon^2.
+Since ||B_inc W c||^2<=lambda_max(L) sum_e w_e c_e^2, (9) implies
+                              |h_t'|<=C0 b epsilon.             (10)
+The constant C0 can be fixed using just weights in[w0/2,2w0] and the
+absolute mean bound; it has no dependence on K0 or m once |h_t|<=1.
+
+Choose K0=2C0, then choose c1 so small that the right side of(7) has
+A<log2 whenever epsilon<=c1/b^2 and |h|<=K0 b epsilon. This is possible
+because each term in A is bounded by a fixed multiple of c1, with K0
+already fixed. It also ensures |h|<=1. Continuation from t=0 and(10)
+strictly improve the bootstrap bound, proving(8). In particular, balanced
+offset size has been PROVED here; it is not inferred merely from positive
+cell masses or from a uniform bound on an arbitrary covariance optimizer.
+
+4. Normal-strain covariance curvature on the small ball
+Write mathcal F(K)=F_U(K^(1/2)), the covariance functional for target labels
+e_i with masses1/m. The accepted all-simplex normal-strain inequality[C](18),
+transported from covariance I to K, is
+ -4 mathcal F''(K)[H,H]
+ >=sum_e w_e(K,h_K) (a_e^T H a_e)^2/(a_e^T K a_e).              (11)
+The physical facet weights mu_e/|K^(1/2)a_e| equal the score-coordinate
+weights in(4) by coarea. Thus the weights in(11) are exactly those bounded
+in(8), not a new unproved collection.
+
+For ||K-P||_F<=c1/b^2, every denominator in(11) is at most3 and every
+weight is at least w0/2. The exact edge-dyad identity on H is
+ sum_(i<j) (a_ij^T H a_ij)^2
+ =m sum_i H_ii^2+(tr H)^2+2||H||_F^2>=2||H||_F^2.
+Therefore
+                  -mathcal F''(K)[H,H]>=w0||H||^2/12.           (12)
+This uses only the normal part of the audited Hessian. No assertion is
+made that its stronger local log(m)/m shape gain persists on this ball.
+
+5. Concavity propagates a finite remainder beyond that ball
+Let K=P+E with R=||E||_F<=1/4. By covariance concavity, the function
+ phi(t)=alpha mathcal F(P+tE) is concave on[0,1]. Its tangent remainder is
+ exactly R_U(alpha K^(1/2)), because
+ phi(0)=w and phi'(0)=(alpha^2/2)tr E.
+For
+ s=min(1/2,c1/[b^2 R]),
+equation(12) applies throughout0<=t<=s and gives
+ -phi''(t)>=alpha w0 R^2/12=alpha^2 R^2/(12m).
+Elsewhere concavity still gives -phi''>=0. Integrating with weight1-t,
+ R_U(alpha K^(1/2))
+ =int_0^1(1-t)(-phi''(t))dt
+ >=c alpha^2 R^2/m *min(1,c1/[b^2 R]).                          (13)
+The linear weight is essential: the loss from leaving the small ball is
+only its relative segment length, not the square of that length.
+
+6. Rotation gauge, arbitrary ambient dimension, and the final bound
+For any centered full-row-rank score matrix B, orthogonal Procrustes gives
+ d(B)^2=|| (BB^T)^(1/2)-alpha P ||_F^2.
+Both F_U and ||B|| depend only on BB^T, so the same is true of R_U. If
+d(B)<=c0 alpha with c0 sufficiently small, every singular value is close
+to alpha; in particular B is full rank on H. Set K=BB^T/alpha^2. Spectral
+calculus then gives
+ c d(B)/alpha<=||K-P||_F<=C d(B)/alpha<=1/4.
+Apply(13) to obtain(1), with absolute constants adjusted. At d(B)<=A/m,
+alpha~b/m and b~sqrt(2log m), the minimum in(1) is at least c_A/b for
+large m. This proves(2). No unused-coordinate OU evaluation or ambient
+dimensional determinant enters this argument.
+
+7. Precise limit of this result
+Combining(1) with the exact balanced first-chaos dual[D](2) supplies a
+strict FINITE payment in that constrained Gaussian block at score radius
+order1/m. It does not yet control a mixed linear/high-chaos cap for the
+full negative-noise potential. It also does not derive that score radius
+from the accepted truncated-deficit localization. Those are separate
+remaining gates; the global named conjecture is not inferred.

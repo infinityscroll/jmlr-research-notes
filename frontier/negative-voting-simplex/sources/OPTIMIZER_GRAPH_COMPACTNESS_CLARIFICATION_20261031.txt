@@ -1,0 +1,35 @@
+OPTIMIZER-GRAPH COMPACTNESS: PRECISE INTERPRETATION
+31 October 2026. Root audit clarification, recorded by strong_signal_prior_art.
+No frozen proof source is modified. No estimate or conclusion changes.
+
+Pinned sources:
+GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt
+SHA11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2
+REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt
+SHA12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08
+
+The compactness statements in Section2 have the following exact meaning.
+If eps_n->0, p_n belongs to the fixed compact mass box, and C_n is a
+regularized optimizer, every convergent subsequence (p_n,C_n)->(p,C)
+has C in Argmax g(.,p). Equivalently the distance of (p_n,C_n) to the
+CLOSED GRAPH {(p,C):C optimizes g(.,p)} tends to0 uniformly on the compact
+mass box and bounded covariance set.
+
+This does NOT assert that dist(C_n,Argmax g(.,p_n))->0 for the optimizer
+fiber at the varying p_n. That stronger lower-hemicontinuity assertion
+can fail for parameterized optimization with nonunique limiting maxima,
+and is neither proved nor needed here.
+
+The use of compactness is only to transfer UNIFORM edge bounds valid for
+EVERY true optimizing pair (p,C) in the whole mass box. If a fixed-slack
+edge bound failed along regularized optimizers, a compact subsequence
+would converge to a true optimizer at its limiting mass p, contradicting
+that uniform bound there. Edge lengths are continuous in C. Thus the
+pair separation and upper-length transfer in Section3 of12dc is valid
+with the graph interpretation, as are all subsequent pruned-graph and
+semiconcavity conclusions. No fiber continuity or rank persistence is
+required anywhere in the argument.
+
+Root fully read11a and independently verified its constrained KKT sign,
+chain-rule factors, a.e. integration and the uniform eps(m-1) value limit.
+The present note records its sole requested precision clarification.

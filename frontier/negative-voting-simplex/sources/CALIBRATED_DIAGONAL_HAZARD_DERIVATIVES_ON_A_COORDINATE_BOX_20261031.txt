@@ -1,0 +1,288 @@
+CALIBRATED DIAGONAL HAZARD DERIVATIVES ON A COORDINATE BOX
+31 October 2026. strong_signal_branch_count. Independent audit requested.
+
+PURPOSE AND SCOPE
+This is the structured coefficient lemma for the diagonal-covariance
+support argument. The perturbation is small in coordinate maximum norm;
+its Frobenius norm may grow with m. No Frobenius Taylor remainder is used.
+This note does not itself assert a full-noise transfer or global rigidity.
+
+THEOREM
+Fix A>0. Put L=1+log m, mu=E max_(1<=i<=m)Z_i and
+alpha=mu/(m-1). Let sum_i xi_i=0 and max_i|xi_i|<=A. Set
+v_i(t)=1+t xi_i, sigma_i=sqrt(v_i), and consider independent scores
+sigma_i Z_i+h_i(t), with the unique mean-zero offsets giving every
+label mass1/m. For all sufficiently large m, on
+
+                         0<=t<=c_A/L^2,                    (1)
+
+define, as functions of the common score threshold x,
+F_i=Phi((x-h_i)/sigma_i), f_i=partial_x F_i, a_i=f_i/F_i,
+W=prod_i F_i, A_h=sum_i a_i,
+rho_ij=W a_i a_j, omega_ij=int_R rho_ij dx,
+ell_i(t)=int_R W A_h a_i dx=sum_j omega_ij.
+Here omega_ii is a useful analytic quantity; it is not a physical facet.
+For i!=j, omega_ij is exactly the physical offset weight.
+
+Write M1=m^-1sum|xi_i| and M2=m^-1sum xi_i^2. There are constants
+depending only on A such that
+
+ c alpha/m<=omega_ij<=C alpha/m, including i=j,
+ |h_i'|<=C sqrt(L)(|xi_i|+M1),
+ |h_i''|<=C L^(3/2)(xi_i^2+M2),                            (2)
+ |ell_i''(t)|<=C alpha L^2(xi_i^2+M2).                     (3)
+
+Let T have density proportional to phi(x)^2 Phi(x)^(m-2), and write
+M=E T, V=Var T. Then EXACTLY
+
+ ell_i(0)=alpha,
+ ell_i'(0)=-alpha eta_m xi_i,
+ eta_m=[m-1-mV]/[2(m-2)] in[1/4,1/2].                      (4)
+
+Consequently
+|ell_i(t)-alpha+alpha eta_m t xi_i|
+                  <=C alpha L^2 t^2(xi_i^2+M2).             (5)
+The constants and m threshold are independent of ||xi||_2. The diagonal
+support assembly is a separate argument; (5) is its explicit input.
+
+1. A whole-threshold moment lemma
+
+We first work with arbitrary parameters satisfying
+
+ max_i|v_i-1|=epsilon<=delta0/L,
+ max_i|h_i|=H<=delta0/sqrt(L),                              (6)
+
+where delta0>0 is a fixed small numerical constant. No balance is needed
+for this lemma. For every fixed pair of nonnegative integers p,q,
+
+ c alpha/m<=omega_ij<=C alpha/m,
+ E_(ij)[(m max_k a_k(x))^p(1+|x|)^q]
+                                  <=C_(p,q)L^((p+q)/2),    (7)
+
+uniformly over all i,j, including i=j. E_(ij) denotes normalization of
+rho_ij dx by omega_ij. Only finitely many fixed p,q are needed below;
+their constants and eventual m thresholds do not depend on the direction
+xi or its Frobenius norm.
+
+Here are details controlling both tails. For x>=2H set
+z=(x+H)/sigma_min>=0. Every standardized argument y_k=(x-h_k)/sigma_k
+lies between z-Cepsilon z-CH and z and is nonnegative. Gaussian density
+ratios and Phi(y_k)>=1/2 give
+
+ rho_ij(x)dx
+ <=C phi(z)^2 Phi(z)^(m-2)
+          exp[Cepsilon z^2+CHz+CH^2]dz,
+ max_k a_k(x)<=C [phi(z)/Phi(z)]
+          exp[Cepsilon z^2+CHz+CH^2].                      (8)
+
+For i=j, the extra factor1/F_i is at most2 in this region, so the same
+bound holds. For a lower weight bound use y=(x-H)/sigma_max and restrict
+to x>=2H. The corresponding lower estimate is a constant times
+phi(y)^2 Phi(y)^(m-2)exp[-Cepsilon y^2-CHy-CH^2]. The omitted interval
+near0 carries exponentially small baseline mass. Since the baseline T
+has E T^2<=CL, Jensen or a fixed central quantile interval proves the
+lower bound in(7).
+
+For completeness, the upper moment bound in(8) has no hidden exponential
+factor in m. Write u=Phi(z), s=1-u. On z>=0, Mills bounds give
+phi(z)<=C s sqrt(log(e/s)), and z^2<=2log(1/s). The factor exp(CHz)
+is bounded by exp(CHsqrt(L)/2) exp[CH z^2/(2sqrt(L))]. Thus the integrals
+in(8), after multiplying by (m max a)^p(1+|x|)^q, are bounded by a constant
+times
+
+ m^p int_0^(1/2) (1-s)^(m-p-2)
+     s^(p+1-2theta)[log(e/s)]^((p+q+1)/2)ds,
+ 0<=theta<=C_(p,q)(epsilon+H/sqrt(L))<=C_(p,q)delta0/L.
+
+Substituting y=ms and splitting y<=1 and y>1 bounds this by
+C_(p,q) m^(-2+2theta)L^((p+q+1)/2). Indeed the first interval has an
+integrable fixed power times log(1/y), and the second has an exponential
+factor e^(-y/2). Since m^(2theta) is bounded and
+
+ Z0:=int phi(x)^2 Phi(x)^(m-2)dx=alpha/m
+                                      comparable to sqrt(L)/m^2, (9)
+
+division by Z0 gives(7). Identity(9) follows by integration by parts in
+mu=m int x phi(x)Phi(x)^(m-1)dx. The Gaussian maximum estimates also
+give the displayed order and the baseline fixed moments used above.
+
+On x<=-2H, all F_i are bounded above by a Gaussian left-tail envelope;
+their product is at most 2^-m exp(-c m x^2), while each hazard is at most
+C(1+|x|). On [-2H,2H], all F_i are bounded above by a fixed number less
+than1. These regions therefore contribute at most C_(p,q)m^p c0^m to
+the unnormalized moments, with c0<1. They are negligible compared with
+Z0. This completes(7), including negative thresholds and the analytic
+diagonal omega_ii.
+
+2. Offset differentiation and a componentwise inverse
+
+For positive v, the Gaussian scores have full support modulo their
+common additive coordinate. The balanced offsets exist, are unique
+modulo constants, and vary smoothly. Equivalently the strictly convex
+offset dual has mass Hessian the complete Laplacian with weights
+omega_ij>0. These facts also follow directly from the one-dimensional
+positive integral formulas and the usual mass-offset dual. We fix sum h=0.
+
+When the weights satisfy(7), the Laplacian mathcal L has
+c alpha P<=mathcal L<=C alpha P on H=1-perp. More precisely, for any
+mean-zero b and y=mathcal L^-1 b,
+
+ |y_i|<=C/alpha (|b_i|+m^-1sum_j|b_j|).                     (10)
+
+To see the component estimate, subtract c alpha/m from every edge weight.
+The remainder is a graph Laplacian L_extra. On H,
+exp(-s mathcal L)=exp(-c alpha s)exp(-s L_extra).
+The latter semigroup is doubly stochastic and is L1-contracting, so
+||y||1<=||b||1/(c alpha). The row equation
+deg_i y_i=b_i+sum_(j!=i)omega_ij y_j, with deg_i>=c alpha and
+omega_ij<=C alpha/m, now gives(10). L1 contraction alone is not being
+mistaken for a componentwise estimate.
+
+Define the threshold velocity
+ b_i(x)=h_i'+u_i(x-h_i), u_i=xi_i/(2v_i).
+The density transport identity partial_t f_i=-partial_x(f_i b_i)
+and integration by parts in the winning-probability integral give
+
+ 0=p_i'=sum_(j!=i)int rho_ij(b_i-b_j)dx.                    (11)
+
+Solving for h' with(10) and E_(ij)|x|<=C sqrt(L) gives the first
+derivative bound in(2), as long as(6) holds.
+
+This closes the required uniform box by continuation. At t=0, h=0.
+The derivative bound implies ||h(t)||infty<=C_A t sqrt(L). Choose a
+bootstrap bound twice this size, then choose c_A sufficiently small.
+For t<=c_A/L^2 it lies strictly inside H<=delta0/sqrt(L), while
+max|v_i-1|<=At<=delta0/L. The weight constants in(7) are fixed in that
+region, independently of the bootstrap constant. The resulting strict
+improvement proves the bound over the whole interval(1). No norm
+||h||2 or ||xi||2 is required to stay small.
+
+3. Exact differentiated flux and the second offset derivative
+
+Put
+ L_i(x)=partial_t log f_i
+       =-xi_i/(2v_i)+xi_i(x-h_i)^2/(2v_i^2)
+                                      +h_i'(x-h_i)/v_i,
+ S(x)=sum_k a_k b_k,
+ P_ij=L_i+L_j+a_i b_i+a_j b_j-S.                            (12)
+Then partial_t log rho_ij=P_ij, including i=j. In particular all
+other-label contributions are retained in S; replacing it by only
+the pair terms would be incorrect.
+
+For each fixed finite k, the moment lemma and the first derivative
+bound imply
+ ||b_i||_(L^k(ij))<=C_k sqrt(L)(|xi_i|+M1),
+ ||P_ij||_(L^k(ij))<=C_k L(|xi_i|+|xi_j|+M1).               (13)
+For the summed term, use
+sum a_k(|xi_k|+M1)<=2m max_k a_k M1,
+then(7). This is why no extra m appears in(13).
+
+Write
+ c_i(x)=-xi_i^2(x-h_i)/(2v_i^2)-xi_i h_i'/(2v_i).
+Then b_i'=h_i''+c_i. Differentiating(11) gives EXACTLY
+
+ mathcal L h''=-b^(2),
+ b_i^(2)=sum_(j!=i)int rho_ij
+                    [P_ij(b_i-b_j)+c_i-c_j]dx.             (14)
+
+Hölder, (13), M1^2<=M2 and(7) yield
+ |b_i^(2)|<=C alpha L^(3/2)(xi_i^2+M2),
+ m^-1sum|b_i^(2)|<=C alpha L^(3/2)M2.
+The right side is mean zero by its pairwise antisymmetry. Applying(10)
+proves the second derivative bound in(2). This is a bound on the actual
+balanced offset acceleration, not a claim that it can be discarded.
+
+4. The structured second derivative of ell_i
+
+Differentiate rho_ij twice:
+ partial_t^2 rho_ij=rho_ij(P_ij^2+P_ij').
+All expressions are integrable by(7), so differentiation under the
+threshold integral is justified. The explicit derivative of L_i in(12)
+contains terms bounded by
+C[xi_i^2(1+x^2)+|xi_i h_i'||x|+(h_i')^2+|h_i''||x|]
+with harmless bounded-v and small-h factors. Its conditional L^k norm
+is therefore at most C_k L^2(xi_i^2+M2).
+
+Also a_i'=a_i(L_i+a_i b_i), so
+(a_i b_i)'=a_i[(L_i+a_i b_i)b_i+b_i'].
+Using(7), (2), and(13), its conditional L^k norm is bounded by the same
+C_k L^2(xi_i^2+M2). For the full summed derivative S', apply the pointwise
+max-hazard bound before summing:
+sum a_k|xi_k|^2<=m max a_k M2,
+sum a_k(|xi_k|+M1)^2<=C m max a_k M2.
+Terms with a_k^2 are bounded by a further max a_k. Equation(7) then
+gives ||S'||_(L^k(ij))<=C_k L^2 M2. In particular,
+
+ E_(ij)(P_ij^2+|P_ij'|)
+                     <=C L^2(xi_i^2+xi_j^2+M2).            (15)
+
+The same estimates hold when j=i; no physical interpretation of that
+diagonal is needed. Summing(15) with omega_ij<=C alpha/m gives
+
+ |ell_i''|<=sum_j omega_ij E_(ij)(P_ij^2+|P_ij'|)
+            <=C alpha L^2(xi_i^2+M2),
+
+which is(3). This is the required coordinatewise remainder; replacing
+it by a bound involving only ||xi||2 would lose the intended application.
+
+5. Exact coefficient at the regular point
+
+At t=0 all sigma_i=1 and h_i=0. The balanced mass equation(11), with
+sum xi=0, gives h_i'(0)=-M xi_i/2, where M=E T. Put
+a(x)=phi(x)/Phi(x). Direct differentiation gives
+
+ partial_t log a_i|0=k(x)xi_i,
+ k(x)=[(x+a(x))(x-M)-1]/2.
+
+Both partial_t W|0 and partial_t A_h|0 vanish because sum xi=0.
+Therefore ell_i'(0)=alpha E_T k(T) xi_i, while ell_i(0)=mZ0=alpha.
+
+The log derivative of the tie density is -2x+(m-2)a(x).
+Integration by parts against x-M gives
+ -2 Var T+(m-2)Cov(T,a(T))=-1.
+Consequently
+ E_T k(T)=[m Var T-m+1]/[2(m-2)]=-eta_m,
+proving(4). The density has log second derivative at most-2, so the
+one-dimensional Brascamp--Lieb variance bound gives Var T<=1/2.
+For the reverse bound Var T>=1/m, decompose independent regular scores
+into their common mean Zbar and the centered vector. Conditioning on
+Z_i=Z_j and on their being maximal depends only on the centered vector.
+Thus T=Zbar+T_H with independent Zbar of variance1/m. This yields the
+claimed eta_m interval exactly.
+
+As a normalization check, the physical degree is ell_i-omega_ii.
+At the regular point omega_ii'=-2alpha eta_m xi_i/m, so Price's formula
+gives the variance-coordinate Hessian
+
+ F_v''[xi,xi]=-alpha/4[(m-1)/m-Var T]||xi||2^2.
+
+For standard-deviation coordinates the corresponding balanced Hessian
+is alpha Var T||xi||2^2. These local identities are checks on the
+coefficient, not substitutes for the uniform remainder proved above.
+Integrating(3) twice proves(5).
+
+6. Exact support identity and its limited role here
+
+For D=P diag(v_i)P, the physical offset weights satisfy
+omega_ij=int W a_i a_j for i!=j. Hence, for every centered PSD matrix C,
+
+ tr(L_D C)=int W[A_h sum_i a_i C_ii-(Pa)^T C(Pa)]dx.         (16)
+
+This holds at arbitrary C; only the supporting covariance D is diagonal.
+The non-additive term is an exact PSD square with a minus sign. Euler
+homogeneity gives F_U(D)=tr(L_D D), and covariance concavity therefore
+implies F_U(C)<=tr[L_D(C+D)]/2. In that upper bound the square term is
+nonpositive because C+D>=0, so dropping it is permitted when forming a
+lower certificate on the tangent remainder. The coefficient bound(5)
+is designed to control the remaining diagonal part. The global
+coercivity assembly and any full-noise consequence are not asserted by
+this derivative note.
+
+SOURCES AND CONVENTIONS
+The covariance concavity, Price gradient and Euler convention are those
+of225db53f and47e441ee. The mass-offset dual is the one in41d649be.
+The raw regular tie density and common-mean variance normalization agree
+with35111062. Gaussian maximum and fixed-tail estimates use the same
+normalization as45e2cc45. Full hashes are in the companion manifest.
+No predecessor, master state, numerical search, or external publication
+was changed.

@@ -1,0 +1,158 @@
+NEGATIVE-VOTING MANUSCRIPT: MATHEMATICAL DEPENDENCY COMPLETENESS
+31 October 2026. Independent dependency/reproducibility review by strong_signal_prior_art.
+
+VERDICT
+The frozen manuscript source ledger contains 17 internal files and three external-primary metadata entries. It is not, by itself, a transitive proof-source package: 17 additional internal proof files are needed under the explicit section scopes below. All 34 internal sources are now copied byte-for-byte into this SEPARATE local review capsule, with original paths and complete SHA256 values in SOURCE_MAP.json. No branch-manuscript file or master state was edited.
+
+This is a section-level mathematical closure, not a recursive copy of every filename ever mentioned. It excludes audits, numerical diagnostics, abandoned routes, obsolete versions, and unused portions of stronger predecessor theorems. The external classical and primary theorems remain external cited inputs; their full articles are not redistributed. This report establishes availability and provenance of the proof chain. It is not a fresh full correctness audit of all 34 proofs, external peer review, or a declaration of publication readiness.
+
+SNAPSHOT AND VERIFICATION
+The original supplied snapshot had 759 checkpoint keys and 774 broader keys. All 774 resolved, with 772 distinct file hashes. During the review the broader map advanced to 827 keys while preserving the old pins. Only the designated near_one_source_pins hash map was consulted; no unrelated private metadata was read into this report. SOURCE_MAP.json records the old and current map-file hashes and manuscript snapshot hashes.
+
+The current manuscript snapshot is identified by source_manifest SHA256:
+3f77956a75c2b9689018ccd7f96410f6282051b544b8cbf5047bdf96613fb3c8
+and review_manifest SHA256:
+693ae42e625724202c53b96e15979af4aca7b100f8fd93169f7b8a536b767c3f
+Later manuscript edits require a new snapshot comparison; they do not change these frozen proof copies.
+
+READING ORDER AND EXACT LOGICAL CHAINS
+
+1. Covariance and endpoint.
+Read 225 §§1–9 for the covariance functional, Price derivative, cycle cancellation, normal-strain bound, concavity and singular continuity. Then read 907 for the balanced endpoint and strict zero remainder. This is an EXPLICIT dependency replacement: 225 §10 historically cites 3cfd and 8a, but 907 supplies exactly the needed endpoint/equality proof directly. No quantitative statement from 3cfd/8a is imported. The quantitative covariance remainder instead comes from 47.
+
+Full independent read of 907e0360: PASS. The regular centroid normalization yields grad Gamma(C0)=P/2. Complete edge quadratic forms determine centered symmetric directions, so the normal-strain term gives a strict initial tangent gap in every nonzero direction. Concavity and continuity preserve it to singular endpoints. The final pointwise routing equality applies to arbitrary simplex-valued assignments whose actual centroid Gram is regular.
+
+2. Prescribed-mass window and competitive localization.
+11 + 6d -> 12dc -> d261 -> 225, with 907 supplying endpoint/equality.
+The graph-limit clarification 6d is essential: convergence is to the GRAPH of true optimizers at limiting masses, not necessarily to the varying same-p argmax fiber. The refined d261 covariance Hessian retains the cycle subtraction and uses the external Ehrhard theorem.
+45 is the independent full-voting competitive mass localization and exact reference A2 calculation. It is missing from the manuscript's 17 internal copies but is mathematically required by 251. Then 251 + 11 + 6d give the log-free competitive localization used by c33 and the manuscript. These statements apply to competitive fractional assignments and do not require attainment or Euler--Lagrange stationarity.
+
+3. Global offsets and one-row control.
+41 uses the covariance dual, elementary Gaussian centroid estimates, Gaussian isoperimetry/coarea, and the 11+6d value envelope. Its arbitrary-rank value/offset extension must not be confused with an affine partition uniqueness claim at duplicate rows.
+e33 supplies the global one-row covariance estimate. The old actual-only subset budget ab9 is not required: c33 supplies the competitive scope and replaces the radial budget by E_rad<=C r L^2/m. Its geometric-median construction uses that revised budget and conditional Cauchy, not an assumed actual-minimizer theorem.
+
+4. Facet bootstrap and global covariance remainder.
+47 requires the exact regular facet moments in ec1 §2, 6c97 §2 and 1f5 §§1,3, plus the exact fixed-mass dual in b1e §1. Only those assertions are used. In particular, the entire negative-noise Hessian theorem in ec1 and the higher-chaos sign theorem in 1f5 are NOT inputs to 47. The conditional tie law and its moment normalization are written in the included sources; Gaussian maximum estimates are also available in 45.
+5ed §1 extends the initial covariance segment to arbitrary PSD endpoints. The unnormalized version is explicitly the paragraph in 05176 V2 §7 after (25) and before (26). It follows from the same tangent-remainder integration and does not use the equal-row, pair-gap, weak-exposure or cap hypotheses of the surrounding 05176 theorem.
+5ed §§3–4 supply the regular margin and rare-label signed-tail continuity. They do not require 5ed §6's inside-affine comparison or §7's rank-free A2 combination. The final exterior tensor estimate is independently assembled in 84 using Mulgund, so 49 and 003 are not transitive inputs of this chosen proof.
+
+5. Local arbitrary-assignment full-noise theorem: the largest missing chain.
+1a -> {5f2, 7388, f0f, 3b6 V2, aca4 V2, 3ee V2, 47, 111}.
+5f2 -> {9ab, 28c, d261, 225, 45, 3ee V2, 111, 47}.
+9ab -> {28c, d261}; 28c -> {225, d261, Mulgund Theorem2.1}.
+7388 -> {5f2, 3ee V2, 47}.
+aca4 V2 -> {3b6 V2, 3ee V2}; 3b6 V2 and 3ee V2 use 111's elementary conditioned geometry. 111 additionally uses {11,6d,47,b1e §1}.
+The moderate-amplitude and arbitrarily tiny-amplitude cap regimes are both required. The full-rank hypotheses in the V2 trace/cap sources must be preserved. The normal-fiber restriction and Hermite-duality proof is actually written in 3ee V2; its citation of 77 is methodological, so the stronger weighted-reference theorem 77 is not a missing premise. Gaussian hypercontractivity itself remains a standard external input.
+The sparse-pair, paired-fan and remote-corrugation sources cited as tests do not establish any affirmative step of this chain and are not copied.
+
+6. New diagonal support and the direct final assembly.
+be930 gives the calibrated hazard derivative proof and independently derives its tie coefficient eta. Its mention of 351 is a normalization check, not an imported optimized-mass Hessian theorem. be930 + 225 give 1eb, the summed radial support estimate. The source scopes keep the fixed row-cap constant and bounded-away-zero unnormalized scale explicit.
+84 uses the resulting radial input, proxy tensor certificate, direct full signed-tail estimate and 1a local theorem. c33 replaces the original attainment-based final route and establishes the result directly for any competitive measurable simplex-valued assignment. The historical final-theorem source e05 is retained as statement/provenance, but its 3ff attainment/purity dependency is not part of this proof closure.
+
+7. Discrete and complexity applications.
+9482 imports the Gaussian theorem and the primary Isaksson--Mossel transfer (Theorem7.1, Lemma7.3 and AppendixA). Its hypotheses and quantifiers are separate from the Gaussian proof. The manuscript's optional simple-unweighted sentence also uses CST Theorem13 through 9482 §4. That external primary is absent from the manuscript's initial three-entry external ledger and should be added as URL/hash metadata. KKMO is retained for the historical asymptotic endpoint/PCP framework. No primary article bytes are copied here.
+
+MISSING INTERNAL PROOF FILES IN THE MANUSCRIPT SNAPSHOT
+The following are the exact 17 additions. SOURCE_MAP.json gives each original absolute path, the review-relative copy, its dependencies and the section scope.
+
+1. BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt
+   SHA256 907e0360c12c8f05376be54ced662b243aaf612974215755ed65b8408d20adad
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt
+   Scope Entire source: explicit regular normalization, endpoint and tangent remainder rigidity; replacement for 225 §10.
+
+2. REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt
+   SHA256 12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt
+   Scope Entire pruned-graph offset certificate, including KKT, pair separation, graph-limit transfer and cycle-preserving refined Hessian.
+
+3. EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt
+   SHA256 d2611f1d80f447cadffd503e7d29a76ef84737d991700defedc141dc7bf614fd
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt
+   Scope Entire Ehrhard/refined covariance Hessian proof with cycle cancellation; external Ehrhard input remains explicit.
+
+4. FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt
+   SHA256 45e2cc459bee383a1317a574011c3fa2a63e64b50f7195d744a4e3a9fa0c0aea
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt
+   Scope Entire full-range competitive mass localization, including exact regular A2 and elementary Gaussian maximum asymptotics.
+
+5. ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt
+   SHA256 ec1edf184fef18a6630fe0007762943cc142d0b7a32dc61e01b83429b35ec633
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt
+   Scope ONLY §2 regular facet covariance eigenvalues, covariance lower bound and polynomial moment estimates. No all-interface negative Hessian theorem is imported.
+
+6. ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt
+   SHA256 6c97ff1bf8888e492312a88550ef8465cccbdb1df1060334bf0c7fa9dd336355
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt
+   Scope ONLY §2, in particular exact 1−V identity/asymptotic (4); no global L1 coercivity claim or cross-polytope example is used.
+
+7. TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt
+   SHA256 1f5c1ee8ccb882a880813691613526c0717c54ea46a4decc12faaf7bd7dfb500
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_ssc_instability_20261031/large_m_tracefree_shape/TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt
+   Scope ONLY §§1 and 3 regular tie law, facet moment contractions and exact identity (8), with elementary tie asymptotics. Negative-noise higher-tail theorem and numerical diagnostics are not inputs.
+
+8. FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt
+   SHA256 b1e2cb6f0983d2ca13c388c1e07e637fd9cdfde53f4fd4d9280bc9dfbd29fa50
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt
+   Scope ONLY §1 exact fixed-mass first-chaos dual/finite-curvature identity. The sparse-pair obstruction later in the source is not an input.
+
+9. CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt
+   SHA256 111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt
+   Scope Entire conditioned offset/near-balanced finite dual, using 11+6d, covariance dual, 47 and classical isoperimetry/coarea.
+
+10. AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+   SHA256 3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+   Scope Entire explicit-full-rank V2 affine trace. Its normal restriction, offset cancellation and Hermite duality are proved here; 77b20 is a methodological predecessor, not an additional theorem import.
+
+11. FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt
+   SHA256 3b6bd981d0508f8ce9487b27659b4203473266fb7721f4acb0f8c3d74793f3a1
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt
+   Scope Entire explicit-full-rank V2 finite cap. Uses elementary conditioned degree/centroid facts; V1 is not used.
+
+12. ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt
+   SHA256 aca4da1519de156b684a61425e733eb7f1f9b58621f324ded01a0df2cf8ba58a
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt
+   Scope Entire V2 all-small-amplitude cap; this supplies the tiny-amplitude part of 1a.
+
+13. SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt
+   SHA256 f0f22a63d1b021ac51bd363622e2b36514043abf88575372727dc8ebadabba3f
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt
+   Scope Entire exact negative reference gap and radial damping; regular moment identities agree with 45.
+
+14. CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt
+   SHA256 28c75e2e691e5b54c19bf3e8da1e69a3a6b84ed8aa7106dfad9d8db970ffa500
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt
+   Scope §§1–5 conditioned equal-row conical second-chaos proof, including Mulgund CDF comparison, covariance gap, density Hessian and tensor certificate. §6 tests and dc6 historical predecessor are excluded.
+
+15. BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt
+   SHA256 9abf2430423c2effd05b659ec2dca9d6e5ec456911fcf1940a055fa99d2678be
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt
+   Scope Entire conditioned equal-row affine A2 proof. Sparse-pair test source 668 is not a mathematical input.
+
+16. UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt
+   SHA256 5f2ef775159f53f277d248995d17c138c2fbc53e27a089a2dea164aba7051432
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt
+   Scope Entire unequal-row affine A2 comparison, including coherent transport, adjoint, regular tensor cancellation, diagonal strain and near-balanced extension. Tests in manifest are not proof premises.
+
+17. FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt
+   SHA256 7388c94860fab24b1c033d4b52e1a2ed74a71622201a2abe0f0a430f3b5b764c
+   Original /Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt
+   Scope Entire full signed affine Hermite-tail comparison; retains coherent transport and exact mass gradient.
+
+EXTERNAL INPUTS AND REDISTRIBUTION
+EXTERNAL_INPUTS.json records exact URLs and existing private-cache byte hashes when available. The required mathematical inputs are: Mulgund's equal-threshold comparison; the convex Ehrhard theorem via Latała; Brascamp--Lieb variance/covariance; Gaussian isoperimetry; Gaussian OU hypercontractivity. IM and CST are application inputs. The new source proofs write their applications and normalizations explicitly; the classic theorem proofs remain in the cited literature.
+
+No full Mulgund/IM/KKMO/CST/Latała HTML or PDF is in this capsule. For Brascamp--Lieb, Borell and Gross no article-byte pin is asserted here; their precise citation/DOI is supplied. A byte hash of a publisher landing page is provenance for that page, not a claim that it contains the full theorem proof. Standard primary references should be added to the manuscript bibliography where their theorems are used.
+
+NOT REQUIRED UNDER THE STATED SCOPES
+SOURCE_MAP.json lists the excluded references individually. In particular: 3cfd/8a are replaced only by 907; 3ff/ab9 are replaced only by c33; the obsolete trace/cap V1 files are replaced by their explicitly full-rank V2 files; the numerical/test/obstruction sources are scope diagnostics; 49/003 and weak-exposure cap predecessors belong to unused portions of 5ed/05176. All audit reports are evidence about checking, not mathematical proof premises, and are not included in proof_sources.
+
+These exclusions are valid only with the section-level map. Treating every copied TXT as an independently self-contained theorem in its entirety would require a larger closure of its unused examples and stronger assertions. The review capsule is complete for the manuscript's specified inputs and direct proof route, modulo the identified standard/external primary theorems; it does not make every historical paragraph into part of the current proof.
+
+REPRODUCIBILITY
+Run: python3 verify_review.py
+The verifier checks all internal copied-source hashes, original-source hashes when accessible, internal dependency IDs, graph acyclicity, and absence of copied primary HTML/PDF files. It reports the 17 mathematical additions relative to the recorded manuscript snapshot. It does not mutate any source, master or manuscript file and does not download anything.
+
+RECOMMENDED NEXT INTEGRATION
+Keep this capsule separate for independent review, or incorporate its 17 missing proof sources and section map into a successor manuscript package. Add the explicit 907 endpoint replacement and missing external bibliographic entries. Preserve the original manuscript snapshot and frozen source bytes. The mathematical dependency report is not permission to publish or contact anyone.

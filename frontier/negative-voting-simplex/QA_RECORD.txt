@@ -1,0 +1,25 @@
+REVISION 2 PDF REVIEW RECORD
+31 October 2026
+
+Final PDF: output/pdf/negative_gaussian_simplex_stability_v2.pdf
+SHA-256: f70b4a749939611cdc9e2dcdaf4012163412e3c04b6a22deaac39335a76367b2
+20 pages; US Letter; 185835 bytes.
+
+Both the desktop LaTeX compiler and bundled Tectonic export succeeded.
+No TeX warnings, overfull/underfull boxes, undefined citations or unresolved
+PDF cross-reference markers were found. All 20 final pages were rendered
+and inspected in the contact sheet. New endpoint pages3-4, repaired tensor
+page14, repaired ratio page16 and reference pages19-20 were additionally
+inspected at full rendered scale. No clipping or overlap was observed.
+
+The manifest has26 references:18 bundled internal sources and8 external
+primary references. All23 asserted hashes verified against the actual
+internal files or private primary caches; the remaining3 classic sources
+have metadata-only citations and no claimed article-byte hash. The unchanged
+companion verifier passed34 internal sources and an acyclic section-scoped
+proof map, with zero copied external articles.
+
+All10 v1 review-manifest pins were reverified unchanged, including the
+original18-page PDF. The exact v1-to-v2 source patch and delta manifest are
+provided. This is build/layout/provenance QA, not external mathematical
+validation. The manuscript remains an AI-assisted internal proof candidate.

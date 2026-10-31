@@ -1,0 +1,106 @@
+PROXY-TENSOR EXTERIOR / FULL NEGATIVE VOTING ASSEMBLY: INDEPENDENT AUDIT
+31 October 2026. strong_signal_prior_art.
+
+Verdict: PASS on a full independent read and factor reconstruction.
+Source: CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt
+SHA256 84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4.
+Its historical conditional wording is preserved. This audit verifies
+its implication from RC and the pinned inputs. The separate summed
+radial source1eb5d9f6 supplies precisely RC, with the row-cap constants
+converted by squaring A. That new source still requires its own recorded
+acceptance; no proof or source is silently rewritten here.
+
+1. Localization, normalization, and the exterior floor.
+I reconstructed R<=Delta+C L^2 delta<=D/r from the actual assignment's
+fixed-mass feasibility and the global balanced-offset certificate.
+No affinity of f is used. When Delta<0, the bound |Delta|<=D/r in(1)
+also follows for large m from W<=V(p)<=w+C L^2 delta, delta<=2D,
+and r L^2=o(1); for Delta>=0 it is immediate.
+The unnormalized covariance tangent gap is the relevant bound in(5).
+Its singular-value comparison e>=q is exact, including zero singular
+values. With q=d/alpha between c/sqrt(L) and C sqrt(m), the curvature
+bound yields R>=c q/m^3 and d^2<=C m^(3/2)L R. Thus D/r has the stated
+strict polynomial floor only in the exterior d>1/m. This floor is
+retained every time an absolute Gaussian tail is paid.
+
+2. The proxy geometry.
+The normalization scale is bounded above and away from zero, so the
+normalized row cap in RC is uniform. RC gives radial squared error
+C L^2 R. The actual row lower bound and the conditional-Cauchy operator
+bound supply exactly the hypotheses of the geometric-median proof.
+That argument is geometric and therefore applies to B/s as used here;
+it does not require B/s itself to be an actual centroid matrix.
+The radial square w(s-1)^2<=2R completes E_proxy<=C L^2 R.
+There is no claimed assignment, stationarity, separation, rank, or
+energy property of the proxy.
+
+3. Primary Gaussian maximum comparison.
+I read cached primary Mulgund2607.14087v4 Theorem2.1 directly. It states
+common-threshold stochastic domination for a correlation matrix
+R>=J/m. The proxy transformation has exactly unit diagonal and this
+PSD inequality. It is not an unequal-threshold application.
+The transformed mean and second-moment factors sqrt(a0), a0 are correct.
+The positive and negative CDF tails follow from unit marginal Gaussian
+bounds, and integrating |t| times those tails proves(8) without a
+false deficit-relative or inverse-Gram estimate. The result includes
+singular covariance through the theorem's stated PSD scope/continuity.
+
+4. Actual routing and mass-independent numerator.
+Centered proxy rows make V>=0 pointwise. Therefore
+V^2-sum f_i z_i^2<=2V(V-sum f_i z_i) for every simplex-valued f,
+including fractional assignments. The free mean deficit and routing
+loss are separately nonnegative and add exactly to
+w-<Z,B>=(Delta+||Z-B||^2)/2, even if Delta<0.
+The union bound for max absolute unit Gaussian scores pays the tail
+in(11), without ambient-dimension dependence.
+The tensor numerator in(13) subtracts beta^2 sum p_i=beta^2; it
+requires no balance. Equal proxy rows and trace w imply D_proxy<=D_*.
+One can justify the certificate even if D_proxy=0 by the linear dual
+A2(f)>=gamma_* T_f-(gamma_*^2/2)D_proxy
+       >=gamma_* T_f-(gamma_*^2/2)D_*.
+This is equivalent to the printed Cauchy/positive-part step and avoids
+any division by a possibly zero proxy denominator. The coefficient is
+O(m), yielding exactly the L^3 J loss and L^2 exp(-16L) absolute error.
+The exterior floor pays that error. No Jensen variance is added to a
+separate quadratic certificate.
+
+5. Entire signed tail for unequal masses.
+The regular routing identity R0=(Delta+d^2)/2 and the top-two margin
+bound apply to arbitrary fractional f; they do not require equal masses.
+For tau^2=1/(4L), the p-box gives the squared smoothed norms O(1/m).
+For h=f-g, |h_i|<=1, support mass<=C/m, and the L1 overlap epsilon
+supply sum ||T_tau h_i||^2<=C epsilon/m. The factor through all Hermite
+degrees>=3 is at most (r/tau^2)^3, so(16) retains the complete signed
+tail. No finite chaos truncation or spatial routing is substituted.
+I separately recomputed both exponent cases:
+J>=d^2 gives m^(3/2)L^(27/8), while J<d^2 gives
+m^(7/4)L^(13/4)q^(-1/2)<=C m^(7/4)L^(7/2).
+The latter dominates uniformly. Rotating the reference does not alter
+its noise value, so the closest-reference choice is compatible with
+the proxy certificate's orientation-independent reference constants.
+
+6. Completion of the conditional implication.
+The exact Hermite decomposition has D=delta+r(w-W), followed by
++r^2 times the A2 difference and the signed higher tail. Substitution
+gives(18) with errors bounded by L^3/m and L^(7/2)/m^(1/4), both tending
+to zero uniformly across the full voting interval. The exterior floor
+makes D positive, so this contradicts actual global minimality.
+The interior d<=1/m is handled by the already accepted unrestricted
+own-centroid full-noise theorem, including equality. Finite-N relaxed
+existence is explicitly supplied rather than inferred from geometry.
+All dimension dependence has been removed from the final threshold.
+
+7. Scope and RC mapping.
+The separate source GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt,
+SHA1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57,
+proves RC for every normalized bounded-row score matrix, all ranks and
+finite N>=m-1. Its row hypothesis |B_i|^2<=A alpha^2 is the same as
+this assembly's |B_i|<=A0 alpha after setting A=A0^2.
+No exact actual row equality, affine assignment, or conicality premise
+remains in the conditional implication. Neither this audit nor the
+historical source makes a positive-noise, all-small-m, infinite-dimensional
+attainment, external-validation, or novelty claim. Root owns the final
+accepted theorem and current primary-source status check.
+
+No mathematical repair identified. All source and listed dependency
+hashes were verified. No predecessor or master state was modified.

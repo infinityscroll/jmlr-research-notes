@@ -1,0 +1,131 @@
+\section{Discrete plurality and the fixed-alphabet cut threshold}
+\label{sec:discrete}
+This section applies the primary transfer results of Isaksson--Mossel
+\cite{IM}, with the precise negative-range and single-rule bookkeeping
+in the audited companion \cite{transfer}. Its conclusions inherit the
+proof-candidate status of Theorem~\ref{thm:main}.
+Write $s_m(\rho)=S_\rho(g)$.
+
+On $[m]^k$ use uniform product measure. The coordinate noise channel is
+\begin{equation}\label{eq:discrete-channel}
+ \Prob\{Y_j=a\mid X_j=b\}
+       =\rho\one_{\{a=b\}}+(1-\rho)/m,
+\end{equation}
+independently for $j\le k$. Its allowed range is
+$-1/(m-1)\le\rho\le1$. The stability of a simplex-valued rule is
+$\E\ip{F(X)}{F(Y)}$. With any orthonormal product Fourier basis, put
+\[
+ \operatorname{Inf}^{\le d_0}_j(F_i)
+  =\sum_{\substack{\sigma_j\ne0\\|\operatorname{supp}\sigma|\le d_0}}
+                   \widehat F_i(\sigma)^2.
+\]
+The ordinary influence is the same sum without the degree restriction.
+
+\begin{corollary}[Negative Plurality is Stablest]\label{cor:plurality}
+For every fixed $m\ge m_0$, every $\rho\in[-1/(m-1),0)$ and every
+$\varepsilon>0$, there are $d_0\ge1$ and $\tau>0$, depending only on
+$(m,\rho,\varepsilon)$, with the following property. For every voter
+count $k\ge1$ and every $F:[m]^k\to\Delta_m$ satisfying
+$\operatorname{Inf}^{\le d_0}_j(F_i)\le\tau$ for every $i,j$,
+\[
+ S_\rho(F)\ge s_m(\rho)-\varepsilon
+   =\lim_{\ell\to\infty}S_\rho(\operatorname{Plurality}_{\ell,m})
+       -\varepsilon.
+\]
+No output-balance, label-equivariance, unanimity, or purity assumption
+is imposed. The influence parameters are independent of $k$; no
+explicit or uniform-in-$m$ influence threshold is claimed.
+\end{corollary}
+\begin{proof}
+Theorem~7.1 of \cite{IM}, at the fixed parameters in the statement,
+transfers $F$ to a pure Gaussian assignment $h$ in dimension
+$k(m-1)$ with the same masses and
+$|S_\rho(h)-S_\rho(F)|\le\varepsilon$.
+This finite dimension is at least $m-1$, so Theorem~\ref{thm:main}
+applies. Its absence of a mass constraint is essential here.
+Lemma~7.3 of \cite{IM} identifies the Gaussian regular value with the
+plurality limit by the joint central limit theorem; Gaussian ties have
+measure zero, so the finite plurality tie convention does not affect
+the limit. These two statements give the displayed inequality.
+\end{proof}
+
+The stronger ordinary-influence assumption also suffices. So does a
+bound by $\tau$ on the sum of the ordinary influences of all output
+labels at each coordinate. The negative endpoint of
+\eqref{eq:discrete-channel} is included: a coordinate then changes
+uniformly to a different label. At $\rho=0$, the conclusion follows
+without any influence restriction from $S_0(F)=\norm{\E F}^2\ge1/m$.
+There is no implication here for positive noise or for a channel below
+the negative endpoint.
+
+\subsection{The exact Frieze--Jerrum constant}
+Define
+\begin{equation}\label{eq:FJ-constant}
+ \mathfrak a_m=\min_{-1/(m-1)\le\rho\le0}
+       \frac{m}{m-1}\frac{1-s_m(\rho)}{1-\rho}.
+\end{equation}
+This is an exact fixed-$m$ constant, and its minimum exists by
+continuity. We do not assert that a minimizing correlation is the left
+endpoint. The value of the ratio at zero is $1$.
+
+For $0\le\rho<1$, purity of $g$ and its nonnegative Hermite weights give
+\[
+ s_m(\rho)=\frac1m+\sum_{j\ge1}\rho^j A_j(g)
+      \le\frac1m+\rho\left(1-\frac1m\right).
+\]
+Thus the regular ratio is at least $1$ throughout the positive interval.
+Its usual Frieze--Jerrum infimum over the full channel interval is
+therefore exactly \eqref{eq:FJ-constant}. This is the negative-range
+reduction of \cite[Lemma~A.4]{IM}; no positive-noise simplex optimality
+is needed.
+
+\begin{corollary}[Sharp fixed-$m$ MAX-$m$-CUT threshold under UGC]
+\label{cor:cut}
+For every fixed integer $m\ge m_0$ and every $\varepsilon>0$, there is
+a polynomial-time algorithm for nonnegative rational edge-weighted
+MAX-$m$-CUT with approximation ratio $\mathfrak a_m-\varepsilon$.
+Assuming the Unique Games Conjecture, approximating this problem
+within $\mathfrak a_m+\varepsilon$ is NP-hard.
+The algorithm and reduction may depend on the fixed $m,\varepsilon$.
+\end{corollary}
+\begin{proof}
+An edge of the Frieze--Jerrum semidefinite relaxation has vector
+correlation $\rho\ge-1/(m-1)$ and SDP contribution
+$(m-1)(1-\rho)/m$. Regular-simplex rounding cuts it with probability
+$1-s_m(\rho)$. Equation~\eqref{eq:FJ-constant} and the positive-range
+estimate above give the edgewise ratio $\mathfrak a_m$.
+Polynomial-precision solution and rounding give arbitrary small slack,
+as in \cite[Appendix~A.3, Theorem~A.6]{IM}.
+
+For hardness, the UGC reduction in \cite[Appendix~A.4]{IM}, in its
+negative-correlation form, has completeness arbitrarily close to
+$(m-1)(1-\rho)/m$ and soundness arbitrarily close to
+$1-\Lambda_m^-(\rho)$, where $\Lambda_m^-$ is the unrestricted
+Gaussian minimum. Theorem~\ref{thm:main} identifies it with
+$s_m(\rho)$ for every negative channel correlation. Dimensions below
+$m-1$ are covered by cylindrical embedding. Choose a correlation at,
+or sufficiently close to, a minimizer of \eqref{eq:FJ-constant}, then
+choose the reduction's errors sufficiently small. Rational correlations
+suffice by continuity. The resulting hardness ratio is arbitrarily
+close to $\mathfrak a_m$ from above.
+
+The soundness calculation is genuinely single-rule. Conditional on a
+verifier vertex $v$, its independently sampled neighbors define the
+averaged simplex-valued function
+$G_v(x)=\E_w[\one_{\{F_w(\sigma_{vw}x)=i\}}]_{i=1}^m$.
+The rejection probability is exactly $\E_v S_\rho(G_v)$.
+Corollary~\ref{cor:plurality} supplies the low-degree soundness and
+decoding step for this same function in both slots. No inequality for
+two independently chosen Gaussian rules is used.
+\end{proof}
+
+The approximation statement is unconditional; UGC is needed only for
+the hardness assertion. The same sharp threshold for simple unweighted
+graphs follows from the fixed-$m$ mixing-graph reduction proved in
+\cite[Section~4]{transfer}, using the construction in
+\cite[Theorem~13]{CST}; the direct statement above uses the primary
+weighted formulation. Neither conclusion is a running-time statement
+uniform in an input alphabet size tending to infinity. The older
+asymptotic endpoint result \cite[Proposition~11.4]{KKMO} does not by
+itself identify the exact constant \eqref{eq:FJ-constant} for every
+fixed sufficiently large $m$.

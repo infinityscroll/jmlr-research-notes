@@ -1,0 +1,221 @@
+CONDITIONED EQUAL-ROW CONICAL FANS: FINITE SECOND-CHAOS COMPARISON
+31 October 2026. strong_signal_prior_art. New proof for independent audit.
+
+THEOREM AND SCOPE
+Fix kappa>0. Let m>=3, N>=m-1, and let B be a centered m-by-N score
+matrix whose rows have norm1. Assume C=BB^T>=kappa P on H=1-perp,
+and assume the conical argmax cells of B have equal mass1/m. Put
+ C_*=mP/(m-1), M_B=max_i B_i.X, M_*=max_i (B_*)_i.X,
+ B_*=sqrt(m/(m-1))P, mu=E max_i Z_i,
+ beta=mu/sqrt(m(m-1)), w=mu^2/(m-1), L=1+log m.
+There is a constant K_kappa, independent of m,N and B, such that
+
+ (E M_*^2-E M_B^2)_+
+          <=K_kappa sqrt(L)(E M_*-E M_B),                     (1)
+
+ A2(f_B)-A2(g)>=-K_kappa L R_U(beta B),                        (2)
+ R_U(beta B)=(w+||beta B||_F^2)/2-F_U(beta B)
+            =beta(E M_*-E M_B).
+
+Here F_U is the fixed-equal-mass maximal Gaussian covariance functional.
+No upper spectral bound is required: unit row norms and the lower bound
+are enough. This is a finite comparison, not a local Hessian statement.
+It includes the all-pairs family in[P]. It does NOT include arbitrary
+balanced measurable assignments, unequal row norms, or nonzero affine
+offsets at the endpoint. In particular the calibrated sparse-pair affine
+example is not silently included. No full-noise conclusion is asserted.
+
+The primary external input is Mulgund's equal-threshold stochastic
+comparison[W]. All quantitative estimates below are derived here. The
+other analytic input is the accepted covariance-concavity normal term[C].
+
+1. Polynomial lower bound on every balanced facet
+Write k0=min(kappa,1) and consider the covariance segment
+ C_s=C_*+sD, D=C-C_*, 0<=s<=1.
+Every C_s has diagonal1, annihilates1, and is >=k0 P. Realize it in H
+by score rows b_i(s). Choose mean-zero offsets h_i(s) giving masses1/m.
+These exist uniquely and smoothly on this full-rank segment by fixed-
+mass Gaussian transport. Full rank makes the score sites affinely
+independent. The argument below also proves every pair facet has
+positive intrinsic measure, so the mass Jacobian has no extra nullspace.
+
+Let ell_ij=|b_i-b_j|. Since a cell of mass1/m is contained in its
+pairwise winning halfspace, applying this to both labels gives
+
+ |h_i-h_j|/ell_ij<=b_m:=Phi^-1(1-1/m)<=sqrt(2 log m).
+
+Since ell_ij<=2 and sum h_i=0, |h_i|<=2sqrt(2L).
+Fix an ij facet, orient n=(b_i-b_j)/ell_ij, and put
+ a=-(h_i-h_j)/ell_ij. Its Gaussian normal coordinate is a.
+Let H0=max_k |h_k|, T=H0+8sqrt(L), and choose a centered score vector q:
+ q_i=T-h_i, q_j=T-h_j,
+ q_k=-(q_i+q_j)/(m-2) for k outside{i,j}.
+Then ||q||^2<=1200 L. The minimum-norm x_* with B_s x_*=q satisfies
+ ||x_*||^2<=1200 L/k0, and n.x_*=a.
+At x_*, labels i,j tie, and beat every other label by at least8sqrt(L).
+
+Write v=x_*-a n in the tangent hyperplane. If Z is standard Gaussian
+on that hyperplane, the event
+ A={max_k |b_k.Z|<=2sqrt(L)}
+has probability at least1-2m exp(-2L)>1/2, by the union bound. On v+A,
+the point a n+Z belongs to the ij facet, since the perturbations of a
+pairwise score gap have absolute value at most4sqrt(L).
+
+The elementary Gaussian shift estimate
+ gamma(A+v)>=gamma(A)^2 exp(-||v||^2)
+follows from Cauchy-Schwarz applied to the Cameron-Martin density.
+Consequently the intrinsic facet probability and Gaussian surface mass
+obey
+
+ p_ij>=one-quarter exp(-1200L/k0),
+ mu_ij=phi(a)p_ij>=c0 exp(-B0 L),
+ c0=phi(0)/4, B0=1+1200/k0.                                  (3)
+
+This lower bound is intentionally crude. Its polynomial dependence on
+m, with an exponent depending only on kappa, is all that is needed.
+There is no dimension-dependent small-ball estimate in this argument.
+
+2. A mean gap with the exact covariance-deficit amplitude
+Let F(C_s) denote fixed-mass maximal covariance. At the two endpoints,
+the zero offsets produce the balanced conical cells, so
+ F(C_*)=E M_*, F(C)=E M_B.
+At C_* permutation invariance makes F_C a multiple of P. Since
+tr D=0, F'(0)=0.
+
+The whitened covariance Hessian normal term from[C] is
+ -4F''(s)>=sum_(i<j) w_ij ell_ij^2 q_ij^2,
+ w_ij=mu_ij/ell_ij,
+ q_ij=[D_ii+D_jj-2D_ij]/ell_ij^2=-2D_ij/ell_ij^2.
+The last equality uses the zero diagonal of D. Thus
+
+ -F''(s)>=sum_(i<j) mu_ij D_ij^2/ell_ij^3
+          >=c0 exp(-B0 L)||D||_F^2/16.
+
+Integrating with weight1-s proves
+
+ epsilon:=E M_*-E M_B
+          >=c0 exp(-B0 L)||D||_F^2/32.                        (4)
+
+Only the normal-energy part was used. No cycle energy was discarded
+with the wrong sign; the accepted Hessian formula leaves its other
+part nonnegative. Formula(4) is dimension free and uniform on the
+entire stated class, although not a sharp quantitative mean-width bound.
+
+3. A covariance-amplitude bound on the CDF tails
+Set a0=(m-1)/m and R_s=a0 C_s+J/m. These are correlation matrices,
+R_0=I, and R_s>=k1 I with k1=min(1,2k0/3). Their derivative is
+E=a0 D, which has diagonal0 and E1=0.
+
+Let p_s be their m-dimensional Gaussian densities. At a fixed s put
+A=R_s^(-1/2) E R_s^(-1/2), and let Z be standard Gaussian. The exact
+second logarithmic derivative gives
+
+ p_s''/p_s = one-quarter(Z^T A Z-tr A)^2
+            -(Z^T A^2 Z-tr A^2)-one-half tr A^2.              (5)
+
+Its expectation is0. Also
+ E(Z^T A Z-tr A)^4
+      =12(tr A^2)^2+48tr A^4<=60||A||_F^4,
+so the L2(p_s) norm of(5) is at most4||A||_F^2, hence at most
+4k1^(-2)||E||_F^2. This estimate has no ambient-dimension factor.
+
+Let G_s(t)=P_{R_s}{max X_i<=t}. At s=0,
+ G'_0(t)=phi(t)^2 Phi(t)^(m-2) sum_(i<j) E_ij=0,              (6)
+because the diagonal and row sums of E vanish. For t>=0 use the
+complement event in the second derivative, whose total integral is0;
+its probability is at most m exp(-t^2/2). For t<0 the orthant event
+is contained in {X_1<=t}, with probability at most exp(-t^2/2).
+Cauchy-Schwarz and(5), followed by Taylor's formula in s, give
+
+ |G_1(t)-G_0(t)|
+   <=2k1^(-2)||D||_F^2 sqrt(m) exp(-t^2/4)                  (7)
+
+for all real t. We used ||E||<=||D||. One may replace the exponential
+bound by1 near0, but this is unnecessary for the tail argument.
+The path has strictly positive covariance, so all differentiations
+follow directly from integrable Gaussian density derivatives.
+
+4. Nonnegative CDF gap and a logarithmic threshold cutoff
+The exact primary theorem[W, Theorem2.1] says that a correlation matrix
+R with R>=J/m satisfies
+ P_R{max X_i<=t}>=Phi(t)^m for every real t.
+It applies to R_1. Therefore H(t):=G_1(t)-G_0(t)>=0 everywhere.
+Represent the corresponding maximum as
+ M_R=sqrt(a0) M_B+Z_0/sqrt(m),
+with Z_0 independent standard Gaussian; the reference uses M_*.
+Consequently
+
+ I0:=int H(t)dt=E M_Z-E M_R=sqrt(a0)epsilon,
+ 2int tH(t)dt=E M_Z^2-E M_R^2
+             =a0(E M_*^2-E M_B^2).                           (8)
+
+If D=0 the theorem is immediate. Otherwise(4) makes I0 positive.
+For any threshold T>=1, positivity and(7) yield
+
+ int |t|H(t)dt
+ <=T I0+8k1^(-2)||D||_F^2 sqrt(m) exp(-T^2/4).               (9)
+
+Choose T=K0 sqrt(L), where K0 depends only on kappa and is large
+enough that K0^2/4>B0+2 and that the fixed constants in(4),(9) are
+absorbed. Then the last term in(9) is at most I0. Thus
+ int |t|H<=K1 sqrt(L) I0.
+Combining with(8), and using a0>=2/3, proves(1).
+
+The same covariance-deficit amplitude ||D||^2 appears in both(4)
+and(7). This is the point that prevents a residual error floor as
+the fan approaches the regular one. Unquantified stochastic dominance
+or a tail bound without this amplitude would not prove(1).
+
+5. Conversion to the finite second-chaos comparison
+For completeness, define
+ Q_i=E[(XX^T-I)f_i], T_i=b_i b_i^T-(B^TB)/m.
+Then sum Q_i=0, and
+ sum <Q_i,T_i>=E M_B^2-1,
+ sum ||T_i||^2=m-tr(C^2)/m<=m(m-2)/(m-1)=D_*.
+Hence A2(f_B)>=((E M_B^2-1)_+)^2/(2D_*).
+At the regular fan equality holds: permutation symmetry and the
+conical identity tr Q_i=0 make all Q_i a common multiple of T_i.
+It follows that
+
+ A2(f_B)-A2(g)
+ >=-[E(max_i Z_i)^2-1](E M_*^2-E M_B^2)_+/(m-2).             (10)
+
+Since R_U(beta B)=beta epsilon, (1),(10) imply(2):
+E(max_i Z_i)^2=O(L), beta is of order sqrt(L)/m, and m/(m-2)
+is bounded for m>=3. Constants for the finitely many small m are
+absorbed into K_kappa.
+
+6. Tests and exclusions
+After normalizing its common row variance, the all-pairs family[P]
+satisfies the hypotheses with a fixed positive kappa. At t=1/mu,
+its second-moment/mean-gap ratio is asymptotic to2mu. Its actual
+A2 loss divided by R_U is asymptotic to4log m[Q]. Thus the logarithmic
+factor in(2) has the correct order on this class.
+
+The arbitrary remote-facet perturbations in[A] violate the conical
+linear-score assumption, and do not contradict this result. The
+mass-calibrated sparse-pair family has nonzero offsets and unequal
+centered row norms, so it remains a mandatory test for the larger
+affine statement, not a case claimed here. Neither convexity of the
+cells alone nor L1 proximity supplies the hypotheses of this theorem.
+
+DEPENDENCIES (exact files in companion JSON)
+[C] EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt
+d2611f1d80f447cadffd503e7d29a76ef84737d991700defedc141dc7bf614fd
+Its fixed-mass covariance-concavity dependency is also pinned.
+[W] Abhijeet Mulgund, arXiv:2607.14087v4, 21 August2026,
+Stochastic Domination of Gaussian Maxima: A Resolution of the Weak
+Simplex Conjecture, Theorem2.1. Primary HTML inspected31 October2026:
+https://arxiv.org/html/2607.14087v4
+Cached primary bytes are pinned. Only the nonnegative CDF-gap theorem
+is imported; no quantitative stability theorem is attributed to it.
+[P] PAIRED_GAUSSIAN_FANS_FIXED_ORBIT_DISTANCE_AND_SQRT_LOG_BARRIER_V2_20261031.txt
+c5c4ffc29f9e4554d2bad070b84f62c140977fff671244265c83137e7a00fc1f
+[Q] PAIRED_FAN_EXACT_SECOND_CHAOS_AND_LOGARITHMIC_RELATIVE_LOSS_20261031.txt
+b860851550796a5b70d1a08b0dd73a639ce79131127784687005e1ce2c3e0004
+[A] REMOTE_BALANCED_FACET_OBSTRUCTION_TO_GLOBAL_SECOND_CHAOS_COMPARISON_20261031.txt
+b638ccbf1c12bb9841bbc477bd543765c34de9844a1c5da3d3e7c045519ab782
+
+The earlier exact reduction dc6dec1f remains unchanged and accurately
+records that the scalar comparison was then unproved. This new source
+proves it under the stated uniform lower spectral bound.

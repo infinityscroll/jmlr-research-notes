@@ -1,0 +1,16 @@
+{
+  "predecessor_project": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/negative_voting_simplex_manuscript_20261031",
+  "predecessor_pdf_sha256": "cb8b20aab7de83f0b319d42ecbdc27ae9442627f44d71190c336be6ac4cd3e13",
+  "predecessor_review_manifest_sha256": "693ae42e625724202c53b96e15979af4aca7b100f8fd93169f7b8a536b767c3f",
+  "successor_pdf_sha256": "f70b4a749939611cdc9e2dcdaf4012163412e3c04b6a22deaac39335a76367b2",
+  "changes": [
+    "Proper min operator in the Frieze-Jerrum ratio.",
+    "Scalar iid Gaussian notation in the reference T_* maximum.",
+    "Explicit full-noise attainment wording.",
+    "Complete 907e endpoint and zero-remainder proof from covariance concavity.",
+    "CST and standard external bibliography, URL/hash metadata only.",
+    "Unchanged34-source transitive dependency capsule with scope note."
+  ],
+  "theorem_scope": "Unchanged; exact sufficiently-large-m negative voting interval.",
+  "v1_preserved": true
+}

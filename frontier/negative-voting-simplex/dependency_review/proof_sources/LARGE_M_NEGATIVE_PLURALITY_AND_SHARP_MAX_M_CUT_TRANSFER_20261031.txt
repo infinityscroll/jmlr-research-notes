@@ -1,0 +1,221 @@
+EXACT DISCRETE AND UGC CONSEQUENCES OF LARGE-m NEGATIVE SIMPLEX STABILITY
+31 October 2026. gaussian_cleanroom_end_to_end. Primary-source transfer audit.
+
+INPUT AND STATUS
+The Gaussian input is the completed INTERNAL proof candidate[G], SHAe05b2c1e:
+there is an absolute m0 such that for every fixed integer m>=m0, every
+finite N>=m-1, every rho in[-1/(m-1),0), and every measurable single
+simplex-valued f on Gaussian R^N, S_rho(f)>=s_m(rho), the regular-simplex
+value. No Gaussian mass condition is imposed. The transfer below is a
+mathematical consequence of exactly this input. It does not constitute
+external validation of[G], a numerical value for m0, or novelty clearance.
+
+PRIMARY LOCATORS
+[IM] Isaksson--Mossel, Maximally Stable Gaussian Partitions with Discrete
+Applications, Israel J. Math.189(2012),347-396; cached arXiv0903.3362v3.
+Use Definition1.8/Eqs15-17, Conjecture1.9, Theorems1.10 and7.1,
+Lemma7.3, and AppendixA, especially A.4-A.9.
+https://arxiv.org/html/0903.3362v3
+
+[Hei] Heilman,2608.00333v1, Section1.1, Theorems1.3-1.4. Its informal
+three-candidate transfer explicitly cites IM Theorem1.10. That1.10 is
+IM's theorem, not an additional theorem numbered1.10 in Heilman.
+https://arxiv.org/html/2608.00333v1
+
+[KKMO] Khot--Kindler--Mossel--O'Donnell, author copy dated7February2007,
+Optimal Inapproximability Results for MAX-CUT and Other2-Variable CSPs?
+Printed/PDF pp8-9 Definitions5-7; p14 Theorem11; p32 Proposition11.4;
+pp33ff low-degree-influence PCP machinery.
+https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf
+
+The cached originals at these locations were read, and the three primary
+URLs were reopened31October2026. Full hashes are pinned. The optional
+simple-unweighted extension below uses only the explicit mixing-graph
+construction in[CST, Theorem13]; its fixed-m adaptation is written here.
+https://lucatrevisan.github.io/pubs/cst-full.pdf
+
+1. Precise negative Plurality is Stablest statement
+Fix ANY m>=m0, rho in[-1/(m-1),0), and epsilon>0. There exist an integer
+d>=1 and tau>0, depending on(m,rho,epsilon) but NOT on voter count n,
+such that the following holds for EVERY n>=1 and every
+
+                 f:[m]^n -> Delta_m.
+
+The input measure is uniform product measure. Assume every input
+coordinate k and output label i satisfies
+
+                      Inf_k^(<=d)(f_i)<=tau.                 (1)
+
+Here the low-degree influence is the sum of squared product-Fourier
+coefficients whose support contains k and has size at most d. Then
+
+ S_rho(f)>=s_m(rho)-epsilon
+         =lim_(l->infinity)S_rho(Plurality_(l,m))-epsilon.     (2)
+
+No output-balance, permutation-equivariance, unanimity, deterministic
+output, or finite-n optimality assumption is imposed. In particular(2)
+holds under the stronger ordinary-influence condition
+Inf_k(f_i)=E Var_(X_k)(f_i|the other coordinates)<=tau.
+If vector influence is defined as sum_i Inf_k(f_i), its bound by tau
+also suffices. The distinctions between these conventions are explicit.
+
+The correlation channel is
+ P(Y_k=a|X_k=b)=rho*1_(a=b)+(1-rho)/m,
+independently across coordinates. The negative endpoint is included:
+at rho=-1/(m-1), a coordinate is changed uniformly to a DIFFERENT label.
+No channel exists with these probabilities below that endpoint. At rho=0,
+(2) is elementary without any influence restriction, since S_0(f)=|Ef|^2
+>=1/m. No assertion for positive rho follows here.
+
+Proof of(2). IM Theorem7.1, at exactly the fixed(m,rho,epsilon), gives a
+pure Gaussian assignment h in dimension n(m-1), with the SAME masses
+as f and |S_rho(h)-S_rho(f)|<=epsilon. This dimension is finite and at
+least m-1, so[G] applies. Its unrestricted masses are essential. IM
+Lemma7.3 identifies s_m(rho) with the limiting plurality value by a
+joint central limit theorem. Gaussian ties have measure zero, so the
+finite plurality tie convention does not affect the limit. This proves
+(2), including low-degree rather than just full influences.
+There is no uniform-in-m influence threshold or explicit tau claimed.
+
+2. Exact approximation constant and why negative correlations suffice
+Define the fixed-m Frieze--Jerrum ratio
+
+ a_m=min_(-1/(m-1)<=rho<=0)
+                  [m/(m-1)] [1-s_m(rho)]/(1-rho).            (3)
+
+The minimum exists by continuity on this compact interval. Formula(3)
+is exact, not a large-m expansion, and it makes NO claim that the
+minimizer is the left endpoint. The ratio at rho=0 is1.
+
+For any pure Gaussian partition h with masses p and0<=rho<1, its
+nonnegative Hermite coefficients give
+ S_rho(h)<=|p|^2+rho(1-|p|^2).
+In particular the regular partition has ratio at least1 for positive
+rho. Thus its usual Frieze--Jerrum infimum over the entire admissible
+interval through1 is exactly(3). Positive-noise simplex optimality is
+not needed for this restriction. This is also the mechanism of IM
+LemmaA.4; the harmless rho=1 endpoint may be interpreted by a limit.
+
+For rho<=0, [G] says that the SAME regular partition maximizes the
+Gaussian disagreement probability simultaneously for every rho. It
+follows directly that both IM's sup_partition inf_rho constant and its
+inf_rho sup_partition constant equal a_m. For the latter, positive rho
+cannot lower the value: testing just the balanced regular partition
+already gives at least1, while the negative interval includes value1
+at zero. This explicitly verifies the use of the negative part alone
+in the proof of IM TheoremA.5, whose headline assumes the full SSC.
+Finite dimensions below m-1 cause no issue: embed any such assignment
+cylindrically; the noise value is unchanged. Thus IM's dimension limit
+has the exact same value from dimension m-1 onward on the negative side.
+
+3. Sharp fixed-m MAX-m-CUT consequence under UGC
+For EVERY fixed integer m>=m0 and every epsilon>0:
+
+(a) There is a polynomial-time Frieze--Jerrum SDP rounding algorithm
+    with approximation ratio a_m-epsilon.
+(b) Assuming the Unique Games Conjecture, it is NP-hard to approximate
+    MAX-m-CUT within a_m+epsilon.
+
+The direct primary formulation is the nonnegative rational edge-weighted
+problem of IM Definition1.12. The algorithmic statement is unconditional;
+UGC is required for the hardness statement only. The constants and the
+algorithm/reduction may depend on the fixed m and epsilon. This is not
+a running-time claim uniform in an input alphabet m tending to infinity.
+
+For(a), a feasible SDP edge has vector correlation rho>=-1/(m-1),
+SDP contribution (m-1)(1-rho)/m, and regular-simplex rounding cuts it
+with probability1-s_m(rho). Equation(3), together with the positive-rho
+bound in Section2, gives the edgewise guarantee. Polynomial-precision
+SDP solution/rounding gives the stated arbitrarily small slack, as in
+IM AppendixA.3/TheoremA.6.
+
+For(b), IM AppendixA.4 gives the following promise for every admissible
+fixed rho and arbitrarily small eta,epsilon'>0: UGC-hardness of
+distinguishing cut value at least
+ (1-2eta)(m-1)(1-rho)/m
+from value at most
+ 1-Lambda_m^-(rho)+epsilon',
+where Lambda_m^- is the unrestricted Gaussian minimum. On the negative
+interval[G] gives Lambda_m^-=s_m. Choose rho at, or arbitrarily near,
+the minimum in(3), and then eta,epsilon' small. Rational rho can be
+chosen by continuity, so the finite weighted verifier needs no irrational
+probabilities. The resulting hardness ratio tends to a_m.
+
+Crucially this soundness argument does NOT need a two-rule theorem.
+The verifier queries functions at independently sampled neighbors w,w'
+of a vertex v. Conditional on v, their average is one function
+ g_v(x)=E_w[e_(f_w(sigma_vw x))] in Delta_m.
+Its rejection probability is EXACTLY E_v S_rho(g_v). The single-rule
+low-degree statement(2) therefore supplies the soundness/label-decoding
+step. No inequality for arbitrary distinct functions f and h is inserted.
+This is the concrete reason why unrestricted masses and fractional outputs
+in the transfer are useful rather than an optional strengthening.
+
+4. Optional simple-unweighted formulation: fixed-m reduction
+This paragraph records a short verification rather than assuming the
+binary statement of CST Theorem14 already has every alphabet size.
+Its Theorem13 constructs simple bipartite mixing graphs on two N-vertex
+parts, with prescribed edge scale W, and multiplicative rectangle error
+epsilon' whenever both subsets have at least delta' N vertices, for fixed
+epsilon',delta' and cN<=W<=N^2. Construction time is polynomial in N.
+
+First normalize the input's nonzero nonnegative rational edge weights
+to total1. Round them down in units1/K with K>=|E|/zeta. All cut values
+change by at most zeta. Since a random m-cut has expected value1-1/m,
+this creates only O(zeta) ratio error. The remaining integer weights
+k_e are polynomially bounded. Ignore loops, which contribute zero.
+
+Choose polynomial N and a common integer scale S so that every retained
+W_e=S k_e lies in[cN,N^2]. Replace each vertex by N clones and each edge
+by its mixing graph between the corresponding clone sets. Distinct
+original edges use distinct clone-pair blocks, so the output is simple.
+For any coloring of the clones let a_(v,i) be its color fractions. On
+each original edge, mixing implies
+
+ |cut_edges-W_e(1-sum_i a_(v,i)a_(w,i))|
+                         <=[epsilon'+C m^2 delta'] W_e.     (4)
+
+Indeed sum the rectangle estimates over the at most m(m-1) unequal
+color pairs. If one color class is smaller than delta'N, enlarge it
+(and the other class if necessary) to delta'N. The upper mixing bound
+then gives O(delta' W_e) for that rectangle, while its predicted count
+is at most delta' W_e. Take N large enough to absorb integer rounding.
+Large color pairs together cost at most epsilon'W_e.
+
+Assigning every clone the original optimal color proves completeness
+at least(1-epsilon')S OPT. Conversely independently drawing each original
+vertex's color from its clone fractions has expected original weighted
+cut equal to the prediction in(4), summed and divided by S. Conditional
+expectation derandomizes this choice in polynomial time. Since the
+original optimum is at least(1-1/m) times total edge weight, the additive
+error in(4) is an O(epsilon'+m^2delta') multiplicative error. For fixed m,
+choose these constants arbitrarily small. Hence an improved approximation
+on simple-unweighted graphs would improve the weighted ratio as well.
+This proves the same sharp threshold for simple-unweighted MAX-m-CUT,
+using only CST's explicit mixing construction plus the argument above.
+No randomized reduction or stronger complexity conjecture is needed.
+
+5. Historical normalization and exact limits of the consequence
+The formal negative statement used here is IM Conjecture1.9/Eq19 and
+its proved transfer, not an unqualified reading of KKMO's older informal
+page9 display. That display writes an upper inequality over a range
+which includes negative rho; the sign-separated IM statement is the
+reliable locator. KKMO's ACTUAL negative Proposition11.4 on p32 is a
+lower bound, with the large-m error C log log(m)/m^2. Its Theorem11
+therefore supplied asymptotic hardness, not the exact fixed-m simplex
+constant in(3). This note neither changes nor relies on the informal
+negative-sign display. All noise quantities here use agreement
+probability/Euclidean simplex inner product, with no Boolean-spin factor.
+
+Heilman's1.3 is an informal m=3 application of IM1.10; its1.4 gives
+sharp MAX-3-CUT using additional m=3 information. We do not import its
+endpoint-minimization fact into general m. The present consequence is:
+negative Plurality is Stablest and the exact UGC/FJ threshold for EVERY
+SUFFICIENTLY LARGE fixed m, rather than merely an asymptotic error as
+m grows. It does not supply the intervening finite m, positive Plurality,
+Gaussian correlations below-1/(m-1), two-rule inequalities, an explicit
+m0, unconditional hardness at a_m, or quantum-CUT consequences.
+
+All predecessor/master files were preserved. The input Gaussian proof
+remains an internally audited research candidate; the logical transfer
+above is not an external endorsement or publication/priority claim.

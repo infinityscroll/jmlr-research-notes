@@ -1,0 +1,257 @@
+\section{The exterior comparison and the full signed objective}
+\label{sec:assembly}
+We prove the exterior calculation of \cite{assembly}, with its radial
+premise supplied by Theorem~\ref{thm:radial}, using the direct competitive
+argument \cite{direct}. Let $f$ be any measurable assignment satisfying
+$S_{-r}(f)\le S_{-r}(g)$, and put $\rho=-r$. Use the notation of Prior input
+\ref{prior:localization}, and write $R=\calR(B)$ and $d=d(B)$.
+If $d\le1/m$, \eqref{eq:local-noise} proves the desired conclusion.
+Throughout this section assume
+\begin{equation}\label{eq:exterior}
+                              d>1/m.
+\end{equation}
+
+\subsection{The normalized cost and its exterior floor}
+From $0\le\delta\le2D$, one has
+$r\abs{\Delta}=\abs{D-\delta}\le D$; therefore
+$W/w=1+O(r/L)$, including when $W>w$.
+Since $f$ is admissible for $F_p(B)$, $F_p(B)\ge W$.
+The balanced optimal offsets are a dual test at $p$, so
+\[
+ R\le\frac{w-W}{2}-h_U\cdot(p-U)
+       \le\frac\Delta2+CL\sqrt{R\delta}.
+\]
+Here \eqref{eq:offset-input} is scaled using
+\eqref{eq:radial-identity}, and the entropy bound gives the required
+fixed row cap. Young's inequality implies, for large $m$,
+\begin{equation}\label{eq:Rpaid}
+              0\le R\le\Delta+CL^2\delta
+                   \le\Delta+\delta/r=D/r=:J.
+\end{equation}
+The division by $r$ is indispensable.
+
+Let $q=d/\alpha$ and $e=\norm{BB^T/\alpha^2-P}_{\Frob}$.
+If $s_i$ are the singular values of $B/\alpha$ on $\one^\perp$,
+including zeros, Procrustes minimization gives
+$q^2=\sum_i(s_i-1)^2$ and $e^2=\sum_i(s_i^2-1)^2$; hence $e\ge q$.
+Also $c/\sqrt L\le q\le C\sqrt m$ by \eqref{eq:exterior} and
+$W\asymp w$. Equation~\eqref{eq:global-covariance-floor} gives
+\begin{equation}\label{eq:exteriorfloor}
+ J\ge R\ge\frac{cq}{m^3}\ge\frac{c}{m^3\sqrt L},
+                   \qquad d^2\le C m^{3/2}L R.
+\end{equation}
+These estimates concern the score remainder, not a replacement of the
+actual assignment by an affine one.
+
+Put $s=\sqrt{W/w}$ and $\widehat B=B/s$. By
+Corollary~\ref{cor:unnormalized},
+$E_{\rm rad}(\widehat B)\le CL^2R\le CrL^2/m\le CL^2/m^2$.
+The radial identity gives $\calR(\widehat B)\le CR$, and
+\eqref{eq:one-row} yields
+\[
+ \max_i\left|\frac{\abs{\widehat B_i}^2}{\beta^2}-1\right|
+           \le C\sqrt{\frac{m^2R}{L}}
+           \le C\sqrt{\frac{mr}{L}}=o(1).
+\]
+The universal operator bound \eqref{eq:actual-operator} scales to
+$\norm{\widehat B}_{\rm op}^2\le C/m$. Thus every hypothesis of
+Lemma~\ref{lem:proxy} is proved for this arbitrary competitive assignment.
+It gives an exactly centered equal-row matrix $Z$, with median gradient
+at most $C\sqrt r$.
+Since $\norm{B-\widehat B}^2=w(s-1)^2\le2R$,
+\begin{equation}\label{eq:proxyerror}
+              E_Z:=\norm{Z-B}^2\le CL^2R\le CL^2J.
+\end{equation}
+
+\subsection{A maximum comparison with an explicit absolute tail}
+Write $Y_i=Z_i\cdot X/\beta$, $M=\max_iY_i$, and let $M_*$ be the
+regular unit-row maximum. Centering gives $M\ge0$ pointwise.
+Set $a_0=(m-1)/m$ and let
+$\nu=\sqrt{a_0}M+G/\sqrt m$, with $G$ independent standard Gaussian.
+The underlying Gaussian score covariance is
+$a_0C+\one\one^T/m$, where $C=ZZ^T/\beta^2$.
+It has unit diagonal and dominates $\one\one^T/m$. The regular version
+has covariance $I_m$. Prior input~\ref{prior:max} therefore gives
+\[
+ H(t):=\Prob\{\nu\le t\}-\Prob\{\max_iZ_i^{\rm iid}\le t\}\ge0.
+\]
+Set $\varepsilon_{\rm free}=\E M_*-\E M\ge0$. Integration of the CDFs
+and cancellation of the independent common Gaussian yield
+\[
+ \int H=\sqrt{a_0}\varepsilon_{\rm free},\qquad
+ \E M_*^2-\E M^2=\frac2{a_0}\int tH(t)\dd t.
+\]
+For $t\ge T$, $H(t)\le m\overline\Phi(t)$; for $t\le-T$,
+$H(t)\le\Phi(t)$. Splitting the integral and using $H\ge0$ gives,
+for $T\ge1$,
+\begin{equation}\label{eq:maxsecond}
+       (\E M_*^2-\E M^2)_+
+           \le CT\varepsilon_{\rm free}+Cm e^{-T^2/2}.
+\end{equation}
+No deficit-relative tail estimate is assumed.
+With $V=\beta M=\max_i Z_i\cdot X$ and $V_*=\beta M_*$,
+$\E V_*=w$ and \eqref{eq:maxsecond} becomes
+\begin{equation}\label{eq:scaledmax}
+ (\E V_*^2-\E V^2)_+
+       \le C\beta T(w-\E V)+C\beta^2m e^{-T^2/2}.
+\end{equation}
+In particular $\E V\le w$.
+
+\subsection{The actual assignment pays its test-score error}
+Write $z_i(X)=Z_i\cdot X$ and
+$c_f(X)=V-\sum_i f_i z_i\ge0$. Both $\E c_f$ and $w-\E V$ are
+nonnegative, and their sum is exactly
+\begin{equation}\label{eq:routingproxy}
+ w-\ip ZB=\frac{\Delta+E_Z}{2}\le CL^2J.
+\end{equation}
+Here and below $\ip ZB=\sum_iZ_i\cdot B_i$.
+This identity is valid even if $\Delta<0$ and the masses are unequal.
+Pointwise, $z_i\le V$ and $V\ge0$, so
+\[
+ V^2-\sum_i f_i z_i^2
+      =\sum_i f_i(V-z_i)(V+z_i)\le2Vc_f.
+\]
+If $A_X=\max_i\abs{Y_i}$, then $c_f\le2\beta A_X$ and
+$V\le\beta A_X$. Unit marginal Gaussian tails imply
+\[
+ \E[A_X^2\one_{\{A_X>T\}}]
+                  \le Cm(T^2+1)e^{-T^2/2}.
+\]
+Splitting according to $V\le\beta T$ gives
+\begin{equation}\label{eq:assignmentsquare}
+ \E V^2-\E\sum_i f_i z_i^2
+       \le2\beta T\E c_f+C\beta^2m(T^2+1)e^{-T^2/2}.
+\end{equation}
+Take $T=\sqrt{32L}$. Combining
+\eqref{eq:scaledmax}--\eqref{eq:assignmentsquare} and
+$\beta T\le CL/m$ gives
+\begin{equation}\label{eq:score-square}
+ \E\sum_i f_i z_i^2
+       \ge\E V_*^2-\frac{CL^3J}{m}-C\beta^2mL e^{-16L}.
+\end{equation}
+
+\subsection{A quadratic certificate with unequal actual masses}
+Define
+\[
+ Q_i=\E[f_i(XX^T-I)],\qquad
+ T_i=Z_iZ_i^T-\frac{Z^TZ}{m}.
+\]
+Since $\sum_iQ_i=0$, every test row has squared norm $\beta^2$, and
+$\sum_i p_i=1$, the numerator is
+\begin{equation}\label{eq:tensor-numerator}
+ T_f:=\sum_i\ip{Q_i}{T_i}_{\Frob}
+       =\E\sum_i f_i z_i^2-\sum_i p_i\abs{Z_i}^2
+       =\E\sum_i f_i z_i^2-\beta^2.
+\end{equation}
+Thus exact balance is not required. The denominator satisfies
+\begin{equation}\label{eq:tensor-denominator}
+ \sum_i\norm{T_i}_{\Frob}^2
+ =m\beta^4-\frac{\tr((ZZ^T)^2)}m
+ \le D_*:=\frac{\alpha^4(m-1)(m-2)}m,
+\end{equation}
+because $\tr(ZZ^T)=w$ and $\rank(ZZ^T)\le m-1$.
+Consequently $A_2(f)=\frac12\sum_i\norm{Q_i}_{\Frob}^2
+\ge(T_f)_+^2/(2D_*)$ by Cauchy's inequality. This remains true if
+the actual test tensor vanishes.
+
+For the regular reference,
+\[
+ T_*:=\E V_*^2-\beta^2
+      =\alpha^2\{\E[(\max_i Z_i^{\rm iid})^2]-1\}>0,
+ \qquad A_2(g)=\frac{T_*^2}{2D_*},\qquad T_*/D_*\le Cm.
+\]
+For any $e\ge0$, $(T_*-e)_+^2\ge T_*^2-2T_*e$; hence
+\eqref{eq:score-square}--\eqref{eq:tensor-denominator} imply
+\[
+ A_2(f)-A_2(g)\ge-CL^3J-CL^2e^{-16L}.
+\]
+The exterior floor \eqref{eq:exteriorfloor} pays the absolute error:
+$L^2e^{-16L}/J\le C m^{-13}L^{5/2}=o(1)$. Therefore
+\begin{equation}\label{eq:exteriorA2}
+                         A_2(f)-A_2(g)\ge-CL^3J.
+\end{equation}
+This is an exterior estimate for the localized assignment. It is not a
+global relative second-chaos inequality near the regular partition.
+
+\subsection{The entire signed higher tail}
+Define $\calH_r(f)=\sum_{k\ge3}(-r)^kA_k(f)$, and let $g_0$ be the
+regular assignment associated with a closest regular centroid $B_0$.
+Its linear routing loss is
+\[
+ R_0=w-\ip{B_0}B=\frac{\Delta+d^2}{2}\ge0.
+\]
+Let $\varepsilon=\frac12\norm{f-g_0}_{L^1}$.
+On each point the total mass sent away from the regular winning label
+pays at least the top-two gap. Equation~\eqref{eq:regular-margin},
+followed by the elementary bathtub estimate, gives
+\begin{equation}\label{eq:epsilon-routing}
+                  \varepsilon\le\min\{1,C\sqrt{mR_0}\}.
+\end{equation}
+This holds for fractional assignments too.
+
+Put $\tau^2=1/(4L)$. Hypercontractivity and $p_i\le3/(2m)$ give
+\[
+ \norm{T_\tau f}_2^2+\norm{T_\tau g_0}_2^2\le C/m.
+\]
+For the difference, write $e_i=\E\abs{f_i-g_{0,i}}\le C/m$.
+Since $\abs{f_i-g_{0,i}}\le1$,
+\[
+ \norm{T_\tau(f_i-g_{0,i})}_2^2
+    \le e_i^{2/(1+\tau^2)}\le Ce_i/m.
+\]
+Summation yields $\norm{T_\tau(f-g_0)}_2^2\le C\varepsilon/m$.
+On degrees at least three, factor the exact signed multiplier through
+$T_\tau$; the residual operator has norm at most $(r/\tau^2)^3$.
+Cauchy's inequality therefore gives
+\begin{equation}\label{eq:HC-tail}
+       \abs{\calH_r(f)-\calH_r(g_0)}
+                         \le Cr^3L^3\frac{\sqrt\varepsilon}{m}.
+\end{equation}
+All higher degrees remain in this estimate, with their signs; no finite
+chaos truncation is substituted.
+
+If $J\ge d^2$, then $R_0\le J$, and
+\eqref{eq:epsilon-routing}--\eqref{eq:HC-tail} and the exterior floor give
+\[
+ \frac{\abs{\calH_r(f)-\calH_r(g_0)}}J
+ \le\frac{Cr^3L^3}{m^{3/4}J^{3/4}}
+ \le Cr^3m^{3/2}L^{27/8}.
+\]
+If $J<d^2$, then $R_0\le d^2$. Use $d=\alpha q$, $J\ge cq/m^3$,
+and $q\ge c/\sqrt L$ to obtain
+\[
+ \frac{\abs{\calH_r(f)-\calH_r(g_0)}}J
+ \le Cr^3m^{7/4}L^{13/4}q^{-1/2}
+ \le Cr^3m^{7/4}L^{7/2}.
+\]
+The latter also dominates the first case. Rotation invariance of the
+regular Hermite weights gives
+\begin{equation}\label{eq:tail-final}
+ \abs{\calH_r(f)-\calH_r(g)}
+                       \le Cr^3m^{7/4}L^{7/2}J.
+\end{equation}
+
+\subsection{Completion of the proof}
+Hermite orthogonality gives exactly
+\[
+ S_{-r}(f)-S_{-r}(g)
+       =D+r^2\{A_2(f)-A_2(g)\}+\calH_r(f)-\calH_r(g).
+\]
+Equations~\eqref{eq:exteriorA2} and \eqref{eq:tail-final}, with $J=D/r$,
+therefore imply
+\begin{equation}\label{eq:strict-exterior}
+ S_{-r}(f)-S_{-r}(g)
+   \ge D\{1-CrL^3-Cr^2m^{7/4}L^{7/2}\}\ge D/2>0
+\end{equation}
+for sufficiently large $m$, uniformly in $0<r\le1/(m-1)$.
+The two endpoint errors are $O(L^3/m)$ and
+$O(L^{7/2}/m^{1/4})$. Strictness follows from $D=rJ>0$ in the exterior.
+This contradicts competitiveness. Consequently every competitive assignment
+lies inside $d\le1/m$, where Prior input~\ref{prior:local-global} forces
+the regular assignment. Noncompetitive assignments already have strictly
+larger noise value. This proves both the inequality and its equality
+classification in Theorem~\ref{thm:main}, directly for all measurable
+simplex-valued assignments. No full-noise attainment, purity, stationarity, interface
+regularity, or limiting optimization argument is required. All thresholds
+are independent of finite $N$ and of positive $r$ in the voting interval.
+\qed

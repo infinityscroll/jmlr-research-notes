@@ -8,13 +8,16 @@ not accepted papers or claims of author endorsement.
 
 | Result | Scope | Review status |
 | --- | --- | --- |
-| [Gaussian covariance concavity and simplex optimality](frontier/gaussian-simplex/README.md) | A covariance theorem for every finite-dimensional target with finite second moment; balanced first-moment optimality for every cell count, both-sign near-zero noise results, and a separately audited quadratic Gaussian-bubble stability consequence. | Complete manuscript, three internal analytic audits, assembly audits and two exact checkers. Full correlation ranges remain open. |
+| [Negative Plurality and Gaussian simplex stability](frontier/negative-voting-simplex/PUBLICATION_NOTE.txt) | Exact negative-voting-range simplex optimality without mass constraints for every sufficiently large number of parts; negative Plurality is Stablest and the exact Frieze–Jerrum MAX-m-CUT threshold under UGC. | Complete internally audited proof candidate: 20-page manuscript, 34-source dependency companion, separate proof/content reviews. Existential m0; external verification and exhaustive priority clearance remain outstanding. |
+| [Gaussian covariance concavity and simplex optimality](frontier/gaussian-simplex/README.md) | A covariance theorem for every finite-dimensional target with finite second moment; balanced first-moment optimality for every cell count, both-sign near-zero noise results, and a separately audited quadratic Gaussian-bubble stability consequence. | Complete manuscript, three internal analytic audits, assembly audits and two exact checkers. The full positive range and the remaining cases outside the new large-m negative-voting result remain open. |
 | [Gaussian quantization landscape](frontier/gaussian-simplex/supplements/quantization-landscape/README.md) | For arbitrary prescribed positive masses and `N >= m - 1`, every local minimum is global; every distinct nonglobal stationary configuration is a strict saddle. | Audited corollary of covariance concavity, with an exact lower-dimensional counterexample. No Lloyd convergence or empirical-data claim. |
 | [Marcus inequality for three blocks](frontier/marcus-three-blocks/README.md) | Every block size and every complex PSD Gram rank. | Complete proof, independent derivation and exact checks. The arbitrary-block conjecture remains open. |
 | [Coupled cactus causal models](frontier/causal-cactus/README.md) | Exact generic real-fiber count for the declared coherent cactus class, including cross-component error correlations. | Scoped technical note with audited proof and exact checks. Earlier-literature overlap remains unresolved. |
 | [Gaussian polynomial independence](frontier/gaussian-polynomial-independence/README.md) | A compact extremal critical-fiber obstruction allowing arbitrary degeneracy. | Scoped analytic lemma and root audit. The full U-conjecture remains open. |
 
-The Gaussian covariance and Marcus packages include readable PDFs and preserve
+The new negative-voting candidate is available as a [20-page manuscript](frontier/negative-voting-simplex/output/pdf/negative_gaussian_simplex_stability_v2.pdf) and a [complete review archive](archives/negative-voting-simplex-review-2026-10-31.zip).
+
+The Gaussian covariance, negative-voting simplex, and Marcus packages include readable PDFs and preserve
 their frozen manuscripts, proof sources, audit records and checksums. Downloadable archives
 are in [archives/](archives/).
 All independent internal reviews are **AI-agent reviews**, not external expert

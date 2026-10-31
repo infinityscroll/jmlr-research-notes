@@ -1,0 +1,114 @@
+INDEPENDENT FULL AUDIT: CALIBRATED DIAGONAL HAZARD DERIVATIVES
+31 October 2026. gaussian_cleanroom_end_to_end.
+
+VERDICT: PASS, no repair requested.
+Exact source be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200.
+Six source/input pins freshly verified. I read the full frozen source and
+independently reconstructed every section. This is an internal independent
+agent audit, not external review or a publication claim.
+
+The statement is a structured directional derivative estimate on a
+COORDINATE box. The direction satisfies sum xi=0 and ||xi||infinity<=A;
+its Euclidean norm need not be small. The following checks specifically
+track the absence of an extra m or ||xi||2 in a coordinate remainder.
+
+1. Whole-threshold arbitrary-parameter estimate
+For x>=2H all standardized arguments are nonnegative. The upper
+coordinate z=(x+H)/sigma_min bounds each argument from above, and all
+arguments are at least z-Cepsilon z-CH. In rho_ij for i!=j, cancellation
+of the two denominators leaves only two Gaussian densities to compare;
+the other m-2 factors are bounded monotonically by Phi(z). Thus there
+is NO product of m density-ratio errors. For i=j the remaining1/F_i
+is at most2. The lower comparison with y=(x-H)/sigma_max works by the
+opposite monotonicity; on the diagonal the extra Phi(y) costs at most
+factor2 because y>=0.
+
+Multiplying by (m max a)^p(1+|x|)^q and setting s=1-Phi(z) gives exactly
+m^p times the integral of
+(1-s)^(m-p-2) s^(p+1-2theta) log(e/s)^((p+q+1)/2).
+The power p+1 results from the Jacobian1/phi(z). The bound on H z uses
+2zsqrt L<=z^2+L. For each fixed p,q, theta<=C_(p,q)delta0/L, and the
+change s=y/m yields m^-2+2theta times the stated logarithmic power.
+The factor m^(2theta) stays bounded. The y<=1 singularity remains an
+integrable fixed power for sufficiently large m; y>1 has exponential
+decay. The exact normalization is Z0=mu/[m(m-1)]=alpha/m.
+Division by Z0 gives precisely L^((p+q)/2).
+
+The lower normalization follows on a fixed positive central quantile
+range of the baseline tie variable; its second moment O(L) follows
+from the same unperturbed Mills integral. The omitted bounded threshold
+interval has exponentially small mass. On x<=-2H, all standardized
+arguments are at most-c|x|, so the product bound2^-m exp(-cmx^2)
+absorbs every fixed polynomial factor and m^p. On[-2H,2H], the product
+is bounded by c0^m with c0<1. Thus the proof genuinely covers the entire
+real line and arbitrary parameters in(6), without using balance first.
+
+2. Component inverse and first-offset continuation
+Subtracting a complete-graph weight c alpha/m gives a nonnegative
+remaining graph Laplacian. Its Markov semigroup is doubly stochastic,
+so integrating the exponential complete-graph factor proves an L1
+inverse bound. The individual row equation, with degree>=c alpha and
+weights<=C alpha/m, then gives
+|y_i|<=C alpha^-1(|b_i|+mean|b|).
+The source does not mistake L1 contraction alone for this pointwise bound.
+
+The density transport identity has b_i=h_i'+xi_i(x-h_i)/(2v_i).
+Differentiating the winning-probability integral and integrating its
+own density derivative gives sum_j int rho_ij(b_i-b_j)=0, with the
+source's sign. Its variance-forcing row is bounded by
+C alpha sqrt L(|xi_i|+M1). Applying the component inverse proves the
+claimed h_i' bound. Integrating in t keeps h infinity inside the
+arbitrary-parameter moment box on t<=c_A/L^2. This continuation uses
+neither ||h||2 nor ||xi||2. Positive variances ensure smooth unique
+balanced offsets modulo constants throughout.
+
+3. Exact second mass derivative
+The logarithmic derivative is P_ij=L_i+L_j+a_i b_i+a_j b_j-S,
+S=sum_k a_k b_k. I rederived this from W'/W=-S and
+(log a_i)'=L_i+a_i b_i; the formula also holds at i=j.
+The conditional norms of b_i and P_ij have exactly the powers sqrt L
+and L in(13). For S the pointwise estimate uses
+sum a_k(|xi_k|+M1)<=2m max a_k M1.
+This is why the other-label contribution is controlled without an m loss.
+
+At fixed threshold b_i'=h_i''-xi_i^2(x-h_i)/(2v_i^2)
+-xi_i h_i'/(2v_i). Differentiating the ZERO mass derivative therefore
+gives(14) with the full balanced h'' retained. Pairwise antisymmetry
+makes its forcing centered. Holder, M1^2<=M2 and the weight upper bound
+give row forcing C alpha L^(3/2)(xi_i^2+M2), with average bounded by
+C alpha L^(3/2)M2. The component inverse proves the second-offset bound.
+
+4. Coordinate second derivative of ell
+The derivative of L_i consists of xi_i^2(1+x^2), xi_i h_i' x,
+(h_i')^2 and h_i'' x, up to bounded parameter factors. Its conditional
+norm is at most CL^2(xi_i^2+M2). In S', use
+(a_i b_i)'=a_i[(L_i+a_i b_i)b_i+b_i'].
+Terms linear in a_i are summed with m max a and averaged xi squares;
+terms quadratic in a_i have one additional max a. The moment lemma
+therefore gives ||S'||<=CL^2M2. The h'' term is included in this estimate.
+It follows that E(P_ij^2+|P_ij'|)<=CL^2(xi_i^2+xi_j^2+M2).
+Summing against omega_ij<=C alpha/m proves the exact coordinate bound
+|ell_i''|<=C alpha L^2(xi_i^2+M2), including the analytic diagonal.
+These integrable bounds also justify all differentiations under the
+threshold integrals. No omitted endpoint at infinity remains.
+
+5. Exact linear coefficient and normalization
+At t=0, the mass equation gives h_i'=-M xi_i/2. Since sum xi=0, W'
+and(sum a_i)' vanish pointwise. Thus ell_i'=alpha E_T k(T)xi_i with
+k=[(x+a)(x-M)-1]/2. Integration by parts against the tie density gives
+-2Var T+(m-2)Cov(T,a(T))=-1 and hence E k=-eta_m exactly.
+The tie density has log second derivative<=-2, yielding Var T<=1/2.
+The independent common sample mean survives conditioning on a maximal
+tie and has variance1/m, yielding Var T>=1/m. These produce the exact
+interval1/4<=eta_m<=1/2. The diagonal derivative is
+omega_ii'=-2alpha eta_m xi_i/m; subtracting it from ell_i' reproduces
+the Price Hessian and the standard-deviation Hessian in the source.
+
+6. Covariance support convention
+The identity tr(L_D C)=int W[(sum a)sum a_i C_ii-(Pa)^T C(Pa)]
+follows by expanding the Laplacian over unordered off-diagonal pairs.
+Euler for the degree-one-half covariance value gives F(D)=tr(L_D D),
+while its covariance gradient is L_D/2. Thus the factor1/2 in the
+support bound is correct, and dropping the PSD square has the asserted
+sign. The theorem itself stops at the derivative lemma; its global
+support application is audited separately.

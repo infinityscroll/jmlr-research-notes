@@ -1,0 +1,408 @@
+UNEQUAL-ROW AFFINE SECOND CHAOS: HONEST HESSIAN AND FINITE COMPARISON
+31 October 2026. strong_signal_prior_art. Independent hostile audit requested.
+
+THEOREM AND SCOPE
+Write L=1+log m, alpha=E max_(i<=m)Z_i/(m-1), P=I-J/m, and let B0 be
+any regular centroid score matrix, B0 B0^T=alpha^2 P. For each fixed
+A>0 and all sufficiently large m depending on A, let B be centered,
+N>=m-1, and have Procrustes distance d(B)<=A/m from the regular orbit.
+Let g_(B,p) be its affine Gaussian winning allocation with prescribed
+masses p. Put U_i=1/m and
+ R(B)=(w+||B||_F^2)/2-F_U(B), w=alpha^2(m-1).
+There are constants C_A, independent of N,m and B, such that
+
+ A2(g_(B,U))-A2(g)>=-C_A sqrt(m)L^13 R(B),                     (1)
+
+ A2(g_(B,p))-A2(g)
+ >=-C_A sqrt(m)L^13 R(B)-C_A m L^7||p-U||^2                  (2)
+
+whenever every p_i lies in[1/(2m),3/(2m)]. The logarithmic exponents are
+deliberately loose. In particular the coefficient of R in(1) is o(m).
+The proof allows unequal row norms and NONZERO balancing offsets.
+
+The key analytic lemma proved below is an honest balanced-affine
+Hessian estimate in SCORE units. In a fixed aligned ball ||B-B0||<=A/m,
+for every centered score velocity Z,
+
+ |D_B^2 A2(g_(B,U))[Z,Z]|<=C_A L^10||Z||_F^2.                 (3)
+
+Offset acceleration is canceled by a mass-Laplacian adjoint, not omitted.
+The estimate(3) alone would be too weak in the shape directions; it is
+combined with the accepted equal-row estimate[E] and the extra factor m
+on diagonal inhomogeneity in covariance normal energy.
+
+This is a finite SECOND-CHAOS comparison on an explicit score ball. It
+does not place arbitrary actual centroids in that ball, prove full-noise
+monotonicity, or resolve the global Standard Simplex/Plurality statement.
+At negative voting r<=1/(m-1), r*sqrt(m)L^13 and r^2*mL^7 tend to0;
+thus the coefficients have the required affordable orders if the other
+full-noise and entry estimates are supplied. They are not supplied here.
+
+1. Uniform geometry and polynomial trace bounds
+After alignment, ||B-B0||<=A/m. Since alpha is comparable to sqrt(L)/m,
+all singular values of B on1-perp lie in[alpha/2,2alpha] for large m.
+The same holds on every fixed enlargement of this ball. Throughout this
+section masses may range over[1/(2m),3/(2m)]. Define
+ ell_e=|B_i-B_j|, mu_e=Gaussian surface mass on facet e=ij,
+ w_e=mu_e/ell_e, mathcal L=the weighted offset Laplacian,
+ nu_e=normalized Gaussian law on the facet.
+Constants below are uniform in m,N and in this conditioned family.
+
+The accepted identity M=mathcal L B and Gaussian centroid bound imply
+max_i sum_j w_ij<=C. Union Gaussian isoperimetry and weighted Cheeger,
+exactly as proved in[O, Section2], give
+
+ ||mathcal L||op<=C,             mathcal L|_(1-perp)>=c/L.     (4)
+
+We also need conditional polynomial moments, not only mean estimates.
+Every intrinsic facet probability is >=m^(-C), and its normal coordinate
+has absolute value <=C sqrt(L). Here is a direct justification. Normalize
+scores and offsets by alpha. Pairwise winning halfspaces and the lower
+mass1/(2m) bound give normalized offset differences <=C sqrt(L). In the
+mean-zero gauge every normalized offset is bounded by C sqrt(L).
+For a fixed pair prescribe equal winning utilities of height C1 sqrt(L),
+with the other centered utilities equal and lower by at least C2 sqrt(L).
+The minimum-norm inverse score map has norm bounded by an absolute
+constant, so the prescribed point has squared norm <=C L. On its tangent
+hyperplane, the event that all m normalized scores have absolute value
+<=C3 sqrt(L) has probability >=1/2 by a union bound. A Cameron--Martin
+shift, with gamma(E+v)>=gamma(E)^2 exp(-|v|^2), puts this event inside
+the facet. This proves the claimed polynomial probability bound. This
+is the construction in[E]'s predecessor28c75 with bounded row norms
+in place of unit row norms; neither ambient dimension nor a small ball
+probability appears.
+
+Consequently, for any fixed polynomial degree d and fixed finite q,
+
+ ||Q||_(L^q(nu_e))<=C_(d,q) L^(d/2)||Q||_(L^2(gamma_N)).       (5)
+
+To verify(5), decompose Q into normal Hermite polynomials and tangential
+coefficients. A normal Hermite polynomial of degree j, evaluated at a
+normal coordinate of size O(sqrt L), costs at most C L^(j/2).
+Tangential hypercontractivity at exponent C4 L costs L^((d-j)/2).
+Holder restriction to a set of probability >=m^(-C) costs a bounded
+factor at that exponent. Orthogonality and the finitely many degrees
+give(5). In particular a conditional linear form has norm at most
+C(sqrt(L)|z|+|k|), with the same assertion for each fixed q.
+
+The accepted affine polynomial trace[T] supplies another useful estimate:
+for any vector of polynomials of degree at most d,
+
+ sum_e w_e E_(nu_e)(Q_i-Q_j)^2
+                      <=C_d L^d sum_i||Q_i||_2^2.             (6)
+
+Indeed use its OU trace at t^2=1/Lambda, Lambda=O(L), and apply T_t^(-1)
+to the finite polynomial vector. Its L2 norm grows at most t^(-d).
+This proves(6), including constants and mixed Hermite degrees. The
+explicit full-rank hypothesis of[T, V2] holds here.
+
+2. Balanced first derivatives, including offsets
+At B choose a centered velocity Z, and let k=h'_B[Z] be the derivative
+of its mean-zero balancing offsets. On a facet put
+ l_e=(Z_i-Z_j).X+k_i-k_j.
+Differentiated balance says div(w E_nu l)=0. Thus k minimizes the
+nonnegative quadratic sum of l_e^2 over all constant offset velocities.
+Using(4), the conditional linear moments from(5), and comparing with k=0,
+
+ N_l:=sum_e w_e E l_e^2<=C L||Z||_F^2,
+ k^T mathcal L k<=C L||Z||_F^2,
+ ||k||^2<=C L^2||Z||_F^2.                                    (7)
+
+The same upper bound C L||Z||^2 holds for
+sum_e w_e ||l_e||_(L^q(nu_e))^2 for each fixed finite q. Indeed the
+nonconstant terms are bounded by C L sum_e w_e|Z_i-Z_j|^2, while the
+constant terms have precisely the offset energy bounded in(7).
+
+Let Q_i(B)=E[(XX^T-I)g_(B,U),i] and write ||Q|| for the product
+Frobenius norm. The facet first derivative, Cauchy with N_l, and(6)
+with degree2 prove
+
+ ||Q'_B[Z]||^2<=C L^3||Z||_F^2.                              (8)
+
+Integrating on the aligned segment from B0 to B, and similarly using(7),
+gives, with d=||B-B0||,
+
+ ||Delta Q||<=C L^(3/2)d,       ||h_B||<=C L d,                (9)
+ Delta Q=Q(B)-Q(B0).
+
+All these are fixed-mass derivatives, not derivatives with offsets held
+fixed. They are dimension free. For future use put
+ delta l_e=(B_i-B0_i-B_j+B0_j).X+h_i-h_j.
+At the current fan, (4),(5),(9) imply for every fixed q
+
+ sum_e w_e||delta l_e||_(L^q(nu_e))^2<=C L^2 d^2.             (10)
+
+3. The adjoint eliminates the whole offset acceleration
+At the fixed base point B set q_i(X)=Q_i(B):(XX^T-I). Let c in1-perp
+solve
+
+ mathcal L c=div(w r),       r_e=E_(nu_e)(q_i-q_j).            (11)
+
+This is solvable by(4). Set u_i=q_i-c_i. Then
+div(w E u_e)=0, with u_e=u_i-u_j. Along the actual twice differentiated
+balanced path, the coefficient of h'' in sum_i E[u_i f_i''] is
+sum_e w_e E u_e (h_i''-h_j'')=0. Also subtracting c does not change
+sum_i E[q_i f_i''], because every mass has zero second derivative.
+Thus h'' is removed EXACTLY; no bound for it is asserted or needed.
+
+The adjoint has a stronger bound than the crude inverse spectral norm
+applied to arbitrary quadratic tensors. Write r_i=B0_i/alpha and
+X_i=r_i.X. At the regular fan
+ Q_i(B0)=gamma(r_i r_i^T-P_span/m),
+ gamma=m[E(max_i Z_i)^2-1]/[(m-1)(m-2)]=O(L/m).
+Hence q_i^0-q_j^0=gamma(X_i-X_j)(X_i+X_j). On every CURRENT facet,
+
+ alpha(X_i-X_j)=-delta l_e,
+ q_e^0=-(gamma/alpha)delta l_e(X_i+X_j),
+ gamma/alpha<=C sqrt(L).                                    (12)
+
+Conditional Holder, (5), and(10) bound sum_e w_e E(q_e^0)^2 by C L^4 d^2.
+For the remainder Delta q use(6),(9), obtaining C L^5 d^2. Therefore
+sum_e w_e r_e^2<=C L^5 d^2. Multiplying(11) by c and applying Cauchy
+gives c^T mathcal L c<=sum_e w_e r_e^2. By(4),
+
+ ||c||^2<=C L^6 d^2,
+ sum_i||Delta q_i-c_i||_2^2<=C L^6 d^2.                      (13)
+
+The regular quadratic's facet zero is the essential extra factor in
+(12). Without it, (13) would contain a term of order A2(g), and the
+generic transport estimate would lose a power of m.
+
+4. Exact coherent affine-transport formula
+For the linear score and offset variation Z,k, define the GLOBAL affine
+velocity field
+
+ V(X)=-B^+(ZX+k)=H X+v,
+ K:=||H||_F+|v|<=C L||Z||_F/alpha.                           (14)
+
+Here B^+ is the Moore--Penrose inverse. Since B B^+=P and the scores,
+offsets and their velocities are centered, B V=-(ZX+k). It follows
+that this single field moves all interfaces and all their intersections
+coherently. Its normal velocity on e is -l_e/ell_e in the inward-normal
+convention n_e=(B_i-B_j)/ell_e.
+
+For fixed polynomial label tests u_i, differentiate their assigned
+Gaussian integral twice along LINEAR B+sZ,h+sk. With div_gamma V=
+tr H-X.(H X+v), the result is
+
+ I''=sum_e w_e E_nu[ l_e grad u_e.V
+                   +u_e (Z_i-Z_j).V
+                   +u_e l_e div_gamma V ].                  (15)
+
+One verification starts from I'=sum_e int u_e l_e/ell_e dgamma_facet.
+Its material derivative has div_Sigma V-X.V and the derivative of
+1/ell_e. These combine to div_gamma V, since
+n_e.DV.n_e=-(ell_e'/ell_e). The derivative of l_e contributes Z_e.V.
+Junction boundary terms cancel when summed: the global field is the
+same on every incident face and the cyclic sum of label differences
+u_i-u_j is zero. Equivalently apply the bulk Gaussian transport formula
+to every cell under this global affine flow, then integrate by parts
+once and sum the cell boundaries; this gives the same expression with
+no independent junction term. Gaussian polynomial tails justify all
+derivatives and boundary limits for fixed m,N.
+
+For the ACTUAL balanced path the only additional term is its offset
+acceleration, canceled in Section3. Since A2=||Q||^2/2, the exact formula
+to estimate is therefore
+
+ D_B^2 A2[Z,Z]=||Q'_B[Z]||^2+I'',                            (16)
+
+with u_i=q_i-c_i in(15). The dependence of q and c on B produces no
+further term: differentiating ||Q||^2/2 already gives the displayed
+||Q'||^2, and c is frozen at the evaluation point to remove the mass
+second derivative. No derivative of c is taken in this identity.
+
+5. Every term in the Hessian is paid
+We give the bounds to make explicit that(15) is not estimated by an
+uncontrolled affine-flow dimension factor. The Gaussian L2 norm of
+div_gamma V is <=C K: tr H cancels the mean of X.HX. Products of fixed
+degree polynomials obey dimension-free Gaussian hypercontractive
+L2 product estimates. Thus for z_i=Delta q_i-c_i,
+ sum_i||z_i div_gamma V||_2^2<=C K^2 sum_i||z_i||_2^2,
+ sum_i||grad z_i.V||_2^2<=C K^2||Delta Q||^2.
+Also sum_i||Z_i.V||_2^2<=C K^2||Z||^2.
+
+Apply(6) at degrees4,2,1 respectively, and Cauchy on the weighted facets,
+using(7),(9),(13). The three remainder contributions in(15) are bounded
+in absolute value by, respectively,
+ C L^3 K d||Z||,  C L^(9/2)K d||Z||,  C L^(11/2)K d||Z||.
+Enlarging powers, their sum is at most
+
+                 C L^7 (d/alpha)||Z||^2.                    (17)
+
+For the REGULAR part q^0, use(12) before taking absolute values. Put
+S_e=X_i+X_j, delta B=B-B0. Its material derivative satisfies exactly
+
+ grad q_e^0.V
+ =-(gamma/alpha)[ S_e l_e+S_e delta B_e.V
+                         +delta l_e(r_i+r_j).V ].            (18)
+
+This follows from B_e.V=-l_e and
+alpha(r_i-r_j).V=-l_e-delta B_e.V. Every term except S_e l_e
+in(18) carries delta B or delta l. For clarity the bounds needed after
+conditional Holder are
+ sum_e w_e||Z_e||^2<=C||Z||^2,
+ sum_e w_e||delta B_e||^2<=C d^2,
+ ||S_e||_(L^q(nu_e))<=C sqrt(L),
+ ||div_gamma V||_(L^q(nu_e))<=C L K,
+ ||z.V||_(L^q(nu_e))<=C sqrt(L)|z|K.
+The last two follow from(5); z is any fixed vector.
+
+Consequently the term S_e l_e^2 from(18) costs at most C L^2||Z||^2.
+The other terms of l_e grad q_e^0.V cost at most C L^3 Kd||Z||.
+The term q_e^0 Z_e.V costs at most C L^(5/2)Kd||Z||, and
+q_e^0 l_e div_gamma V costs at most C L^(7/2)Kd||Z||.
+Here the two edge-local linear factors are summed using(7),(10), so
+there is no spurious factor sqrt(sum_e w_e), which would be sqrt(m).
+Using(14), all regular contributions are bounded by
+
+                 C L^5(1+d/alpha)||Z||^2.                   (19)
+
+Equations(8),(16)-(19) prove
+ |D_B^2 A2[Z,Z]|<=C L^8(1+d/alpha)||Z||^2.
+For d<=A/m and alpha comparable to sqrt(L)/m this implies(3), with the
+stated looser exponent10. This proves the generic Hessian estimate,
+including its negative signed transport term and offset acceleration.
+
+6. Covariance derivatives and an honest upper bound for the mean gap
+It is convenient to work with normalized covariance K near P and score
+B(K)=alpha K^(1/2), embedded in the fixed H=1-perp. Rotation invariance
+makes both A2 and R functions of K. Put J(K)=A2(g_(B(K),U)).
+
+The square-root differential U solves K^(1/2)U+U K^(1/2)=H0. The second
+derivative W in the same direction solves
+ K^(1/2)W+W K^(1/2)=-2U^2.
+Since all eigenvalues on H stay in a fixed positive interval,
+ ||U||_F<=C||H0||_F and ||W||_*<=C||H0||_F^2,                 (20)
+where the second norm is nuclear. These follow also by the positive
+integral formula for the inverse Lyapunov operator; it is bounded on
+both Frobenius and nuclear norms.
+
+Let mathcal F(K)=F_U(alpha K^(1/2)). The score Hessian is N_l, so(7)
+bounds its quadratic part by C alpha^2 L||H0||^2. For its acceleration,
+use M=mathcal L B and (4):
+ |<M,alpha W>|=alpha^2|tr(K^(1/2)mathcal L W)|
+                              <=C alpha^2||W||_*.
+Thus covariance concavity and(20) give
+
+       0<=D_K^2 R[H0,H0]<=C alpha^2 L||H0||^2.              (21)
+
+This step uses the nuclear norm and the operator bound on mathcal L;
+bounding ||M||_F||W||_F instead would unnecessarily lose sqrt(m).
+At K=P the gradient of R vanishes, since B0 is its own centroid matrix.
+The gradient of J also vanishes there: every regular q_i^0-q_j^0 is
+zero on its facet. Using(3), integration from P, and(20) therefore gives
+on every fixed enlargement of the score ball
+
+              |D_K^2 J[H0,H0]|<=C_A alpha^2 L^10||H0||^2.   (22)
+
+Indeed the score-gradient acceleration is bounded by
+C_A L^10||B(K)-B0|| alpha||W||_F, which is absorbed into(22).
+No differentiability across a rank boundary is used: these balls have
+full rank for sufficiently large m.
+
+7. Strong diagonal coercivity and the equal-diagonal projection
+First normalize the scale so ||B||^2=w. If B=t Btilde, with this
+normalization, then the affine allocation is unchanged after scaling
+its offsets, and
+
+ R(B)=w(t-1)^2/2+t R(Btilde).                                (23)
+
+In our ball t is bounded away from0 and Btilde remains in a fixed
+enlargement of it. Thus R(Btilde)<=2R(B). Work with Btilde below.
+Write K=P+E, tr E=0, E1=0. Let z=diag E and decompose orthogonally
+
+ E_d=m/(m-2) P diag(z)P,          E_s=E-E_d.
+
+Then diag E_s=0, tr E_s=0, and
+ ||E_d||_F^2=m/(m-2)||z||^2. Denote a=||E_d||_F, b=||E_s||_F.
+All K=P+s E_s+t E_d in the unit rectangle remain positive definite and
+in a score ball C_A/m, because ||E||<=C_A/sqrt(L).
+
+Retain the stronger diagonal term in[F]'s normal-energy proof. The
+EXACT centered identity is
+ sum_(i<j)(H_ii+H_jj-2H_ij)^2
+            =m sum_i H_ii^2+2||H||_F^2+(tr H)^2.
+On the initial segment of length c_A/sqrt(L), the facet bootstrap[F]
+has weights comparable to their regular values alpha/m. Integrating
+the nonnegative covariance Hessian remainder, with its linear weight,
+therefore yields
+
+ R(Btilde)>=c_A alpha^2/(m sqrt(L))*(m a^2+b^2).              (24)
+
+This is precisely[F, Sections4-5] with the diagonal summand retained.
+Its proof uses only the initial segment; it does not assert that the
+larger endpoint has comparable individual facet weights.
+
+Put R_s=R(alpha(P+E_s)^(1/2)). By(21) and grad R(P)=0,
+
+ R_s<=R(Btilde)+C alpha^2 L*a(a+b).                          (25)
+
+Similarly(22) and grad J(P)=0 give
+ J(P+E)>=J(P+E_s)-C_A alpha^2 L^10*a(a+b).                   (26)
+These are integral rectangle estimates, not a claim that the orthogonal
+projection decreases a general convex function.
+
+The matrix P+E_s has constant diagonal(m-1)/m and a uniform lower
+spectral bound. Its balanced affine fan therefore falls exactly under
+the audited equal-row theorem[E], after the common normalization:
+
+ J(P+E_s)>=J(P)-C L R_s.                                    (27)
+
+Finally,
+ a^2<= (m a^2+b^2)/m,
+ ab<= (m a^2+b^2)/(2sqrt(m)).
+Combining(24)-(27) pays every projection term by
+C_A sqrt(m)L^(21/2)R(Btilde). Enlarge to L^13 and use(23).
+This proves(1). In particular the factor m on diagonal inhomogeneity is
+essential: without it, the same rectangle estimates would cost m times
+a logarithmic factor and would not be affordable at voting correlation.
+
+8. A compatible near-balanced extension
+Fix B and let p_s=U+s z, z=p-U, with its segment in the stated mass box.
+The mass derivative of the offsets is k=mathcal L^(-1)z, so
+ ||k||<=C L||z||,
+ N_l=z^T mathcal L^(-1)z<=C L||z||^2.
+The trace proof of(8) therefore gives ||Q'_s||<=C L^(3/2)||z||.
+Together with(9), throughout this mass path
+ ||Q(B,p_s)-Q(B0,U)||<=C L^(3/2)(d+||z||),
+ ||h(B,p_s)||<=C L(d+||z||).
+
+Repeat the exact adjoint construction(11)-(13), using these bounds.
+Its conclusion is ||c(B,p_s)||<=C L^3(d+||z||). The mass gradient of A2
+is EXACTLY c: for an offset velocity k, dA2=c.mathcal L k=c.p'. Hence
+
+ |A2(g_(B,p))-A2(g_(B,U))|
+                <=C L^3[d||z||+||z||^2].                    (28)
+
+The already accepted finite gap[F] gives
+d^2<=C_A m sqrt(L)R(B). Young's inequality in(28) pays the mixed term
+by R(B)+C_A m L^7||z||^2. Combining with(1) gives(2).
+Pair masses are not silently held uniform in this step; the path and
+its mass derivative have been accounted for explicitly.
+
+TESTS AND LIMITS
+The sparse negatively correlated calibrated pair and the all-pairs
+examples have A2 loss of order log(m) times R. They are consistent with
+(1)-(2); the weaker sqrt(m)log^13 coefficient is chosen for robustness,
+not sharpness. The remote balanced corrugation obstruction[b638] does
+not lie in the affine-score family and does not satisfy the coherent
+transport/factorization used in(12),(15),(18).
+
+The theorem still assumes the explicit regular-score ball d<=A/m.
+Unconditional actual-to-affine routing does not by itself prove this
+assumption. Singular covariances are not covered by this affine theorem;
+the separate rank-free CONICAL equal-row result has a different scope.
+All prior sources remain unchanged.
+
+PINNED INPUTS
+[E] BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt
+9abf2430423c2effd05b659ec2dca9d6e5ec456911fcf1940a055fa99d2678be
+[T] AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057
+[O] CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt
+111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7
+[F] BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt
+47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e
+The covariance-concavity, refined normal Hessian, exact regular Q tensor,
+and two mandatory test sources are included in the companion manifest.

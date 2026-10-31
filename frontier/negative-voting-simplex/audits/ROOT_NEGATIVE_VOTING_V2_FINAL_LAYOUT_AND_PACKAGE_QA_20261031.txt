@@ -1,0 +1,11 @@
+ROOT FINAL MANUSCRIPT AND PACKAGE QA
+31 October 2026
+
+PDF: negative_gaussian_simplex_stability_v2.pdf, 20 pages.
+SHA-256: f70b4a749939611cdc9e2dcdaf4012163412e3c04b6a22deaac39335a76367b2
+
+Root inspected the contact sheet for all 20 pages and full-size pages 3, 4, 14, 16 and 20 after the revision. The endpoint proof, scalar iid Gaussian notation, min operator, discrete statement and final references render correctly. No clipping, overlapping text, unresolved references or missing mathematical glyphs were found in these inspections. The earlier full-manuscript content audit and the independent exact v1-to-v2 delta audit remain separate from this visual check.
+
+All 15 v2 review-manifest entries verify. The portable public wrapper verifies the exact bundled source copies, separate AI-agent audit records and the 34-source section-level dependency capsule. The public archive also passed from a fresh temporary extraction without access to private source locations. The capsule contains no full external articles; those inputs have public reference metadata. This checks packaging, provenance and layout, not mathematical truth.
+
+The manuscript remains an internally audited proof candidate for all sufficiently large m over the negative voting interval. The threshold is existential. External expert verification, formal verification and exhaustive priority clearance have not been obtained.

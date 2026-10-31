@@ -1,0 +1,239 @@
+GLOBAL SINGLE-ROW COVARIANCE COERCIVITY AND ACTUAL ROW LOWER BOUNDS
+31 October 2026. gaussian_cleanroom_end_to_end. Candidate for full audit.
+
+This closes a uniform short-row exclusion, not exact row symmetry or the
+full negative Standard Simplex conjecture. The first theorem is a global
+finite balanced-score inequality. Its actual-minimizer corollary DOES NOT
+assume balanced masses, a conical/affine partition, full centroid rank,
+or unused coordinates. It uses the accepted mass/deficit localization.
+
+NOTATION
+m>=3, n=m-1, H=1-perp in R^m, P=I-11^T/m,
+mu_m=E max_(i<=m) Z_i, alpha=mu_m/(m-1), w=alpha^2(m-1),
+beta=sqrt(w/m), L=1+log m, U_i=1/m.
+I(p)=phi(Phi^(-1)(p)) is the Gaussian isoperimetric profile.
+For a centered score matrix B in R^(m by N), N>=m-1, set
+F_p(B)=sup_(mass p allocations f) E sum_i f_i B_i.X,
+R_U(B)=(w+||B||_F^2)/2-F_U(B).
+The value depends only on BB^T; write mathcal F(K)=F_U(K^(1/2)) on H.
+The covariance theorem[C] supplies concavity and continuity on the PSD
+cone, its regular tangent, and the all-simplex normal-strain bound.
+Gaussian isoperimetry P_gamma(E)>=I(gamma(E)) is used in its classical
+form. Only convex polyhedral positive-mass cells occur when invoking it.
+
+THEOREM 1: EXACT GLOBAL ONE-ROW PAYMENT
+For ANY centered score matrix with ||B||_F^2=w, put
+                    a_i=|B_i|^2/beta^2.
+Then0<=a_i<=m-1, and for each label i separately,
+
+ R_U(B) >= [alpha I(1/m)/(2 sqrt(2))]
+                         [sqrt(1+a_i)-sqrt(2)]^2.               (1)
+
+No row cap, separation, rank, or individual facet lower bound is assumed.
+In particular, on a fixed bounded interval0<=a_i<=A,
+
+ R_U(B)>=c_A [L/m^2](a_i-1)^2                                (2)
+
+for all sufficiently large m. This is a maximum-over-rows statement;
+no sum of(1) over labels without an extra factor is asserted.
+
+1. Symmetrize only the other labels
+Set K=BB^T/alpha^2, so K>=0, K1=0, tr K=n. Fix i, put
+u=Pe_i/sqrt(n/m), and average K over the finite permutation group
+fixing i. Denote the average Kbar. Covariance concavity and permutation
+invariance give
+mathcal F(Kbar)>=mathcal F(K).
+The diagonal entry K_ii is unchanged. The invariant decomposition is
+
+ Kbar=K_a=a uu^T+b(P-uu^T),
+ a=m K_ii/n=a_i, b=(n-a)/(n-1).                              (3)
+
+Indeed the fixed-label standard subspace is span(u), the remaining
+standard representation has dimension n-1, and trace is n. Positivity
+gives0<=a<=n. Consequently
+
+ R_U(B)>=w-alpha mathcal F(K_a).                             (4)
+
+This averages COVARIANCES, not allocations or centroid rows. It makes
+no assertion that a symmetrized allocation is an actual minimizer.
+
+2. The exact strain and the Gaussian perimeter payment
+For0<a<n the covariance K_a is positive definite on H. Its balanced
+affine allocation has positive-mass convex polyhedral cells C_j(a).
+Let lambda_ij be the Gaussian surface measure of its ij facet and
+ell_ij=|K_a^(1/2)(e_i-e_j)|. Its physical offset weight is
+w_ij=lambda_ij/ell_ij. These are the exact weights in[C]'s covariance
+normal-strain inequality, as checked by coarea in[F, Section4].
+
+Let E=dK_a/da=uu^T-(P-uu^T)/(n-1). For every j!=i,
+(e_i-e_j).u=sqrt(m/n), hence EXACTLY
+
+ (e_i-e_j)^T E(e_i-e_j)=1,
+ (e_i-e_j)^T K_a(e_i-e_j)=a+1.                              (5)
+
+All facets incident to i therefore have the SAME physical edge length
+sqrt(a+1). The normal-strain inequality reads
+
+ -4 mathcal F''(K_a)[E,E]
+ >=sum_(e=jk) w_jk [(e_j-e_k)^T E(e_j-e_k)]^2
+                                  /[(e_j-e_k)^T K_a(e_j-e_k)].
+
+Discarding the nonnegative edges not incident to i and using(5),
+
+ -4 mathcal F''(K_a)[E,E]
+ >= [sum_(j!=i)lambda_ij]/(a+1)^(3/2)
+ =P_gamma(C_i(a))/(a+1)^(3/2)
+ >=I(1/m)/(a+1)^(3/2).                                    (6)
+
+The facet sum is the once-counted boundary of the i-th cell. Junctions
+have Gaussian surface measure zero. There is no factor2 from counting
+all cells, and no double counting of oriented edges. No lower bound on
+any particular incident facet is needed.
+
+3. Integrate the curvature with its tangent term
+Let phi(a)=alpha mathcal F(K_a). At a=1, K_a=P,
+phi(1)=alpha mu_m=w. The regular covariance gradient is a scalar
+multiple of P; equivalently[C] gives
+phi'(1)=(alpha^2/2)tr E=0.
+Thus(6) can be integrated on either side of1. The function
+
+ G(a)=sqrt(2)(a+3)-4sqrt(a+1)
+     =sqrt(2)[sqrt(a+1)-sqrt(2)]^2
+
+satisfies G(1)=G'(1)=0 and G''(a)=(a+1)^(-3/2). Therefore
+w-phi(a)>=alpha I(1/m) G(a)/4.
+Together with(4) this is(1). At a=0 or n, pass to the one-sided limit
+using covariance-value continuity; no endpoint differentiability or
+convergence of individual duplicate-label cells is required.
+The classical Gaussian maximum and Mills bounds give
+alpha I(1/m) asymptotic to2 log(m)/m^2. On a bounded interval, rationalize
+the square in(1) to obtain(2). Only the order comparison is used below.
+
+THEOREM 2: ACTUAL MINIMIZERS HAVE NO SHORT ROWS
+For all sufficiently large m, let f be an UNRESTRICTED global minimizer
+of the single-rule negative noise objective at0<r<=1/(m-1), in ANY finite
+N>=m-1. Let p be its masses and B its ACTUAL centroid matrix. Then
+
+ max_i abs(|B_i|^2/(w/m)-1) <= C sqrt(m r/L).                  (7)
+
+In particular all rows have length beta[1+O(L^(-1/2))], uniformly over
+the entire voting interval. The constants and m threshold are absolute.
+This does not imply equality of row norms, full rank, radial exposure
+between every pair, or conicality. It is stronger than an averaged
+row-variance estimate: no exceptional short label remains.
+
+4. Actual own-score deficit is O(r/m), without exact balance
+Write delta=||p-U||^2, W=||B||^2, and D=delta-r(W-w).
+The accepted mass-window/positive-second-chaos localization[M,A] gives
+
+ p_i in[1/(2m),3/(2m)], delta<=C r^2/m,
+ D<=C r^2/m, and W>=w-C r/m.                                (8)
+
+The global mass-value semiconcavity[V] gives
+W<=V(p)<=w+C L^2 delta.
+Hence W/w stays between fixed positive constants, and more precisely
+
+ abs(W/w-1)<=C(r/L+r^2 L)<=C r/L                             (9)
+
+for sufficiently large m uniformly on voting r.
+
+Let h_U(B) be its balanced optimal offsets in the mean-zero gauge.
+Normalize Bhat=B/s with s=sqrt(W/w). Positive score scaling gives
+
+ R_U(B)=w(1-s)^2/2+s R_U(Bhat), h_U(B)=s h_U(Bhat).
+
+The rank-free offset certificate[O], using the actual entropy row cap
+|B_i|<=p_i sqrt(2log(1/p_i))<=C alpha, gives
+||h_U(B)||^2<=C L^2 R_U(B), since s is bounded.
+The ACTUAL assignment is admissible in F_p(B), so F_p(B)>=W.
+The balanced optimal offsets are an admissible dual competitor at p,
+thus F_p(B)<=F_U(B)-h_U(B).(p-U). Therefore
+
+ R_U(B)<= (w-W)/2-h_U(B).(p-U)
+        <= (w-W)/2+C L sqrt(R_U(B)) sqrt(delta).
+
+Young and(8) yield
+
+ R_U(B)<=w-W+C L^2 delta<=C r/m.                            (10)
+
+This uses exact duality, not a false inference that f itself is affine.
+Nonnegativity of R_U follows from the balanced endpoint theorem even
+though f is not balanced. The normalized deficit obeys
+R_U(Bhat)<=R_U(B)/s<=C r/m.
+
+5. Apply the finite one-row certificate
+The actual entropy row cap and bounded s ensure
+ahat_i=|Bhat_i|^2/beta^2<=A0 for an absolute A0. Equations(2),(10) give
+
+ max_i |ahat_i-1|^2<=C (m^2/L) R_U(Bhat)<=C m r/L.
+
+Finally |B_i|^2/beta^2=s^2 ahat_i and(9) give(7), after increasing C.
+The small correction r/L is dominated by sqrt(mr/L). No assumption on
+centroid rank or on a separate Gaussian coordinate is involved.
+
+6. Quantitative exact equal-row proxy: geometry only
+The following optional consequence records what the improved row bound
+adds to the earlier averaged budget; it is NOT an energy transfer.
+Let beta=sqrt(w/m), E_rad=sum_i(|B_i|-beta)^2. Source[S] gives
+E_rad<=C/(mL). Also Cauchy with the actual assignments gives the exact
+operator estimate
+
+ B^T B<=p_max I<=C I/m.                                    (11)
+
+Indeed (B_i.v)^2<=[int f_i][int f_i(v.X)^2], and summing proves it.
+By(7), all |B_i|/beta tend1 uniformly. Thus, writing u_i=B_i/|B_i|,
+
+ ||m^(-1)sum_i u_i u_i^T||op<=C/L.
+
+Let Phi(c)=m^(-1)sum_i |B_i-c| on the centroid span. It is convex.
+For |c|<=beta/4, all distances are comparable to beta, and
+m^(-1)sum_i [(B_i-c)/|B_i-c|][(B_i-c)/|B_i-c|]^T
+ <=C/L+C |c|^2/beta^2 in operator norm (absolute constants).
+Choose instead a fixed sufficiently small ball |c|<=c0 beta. The
+Hessian of Phi there is at least c/beta times the identity, for large m.
+Its gradient at0 has magnitude |g0|, where
+
+ g0=m^(-1)sum_i u_i
+   =m^(-1)B^T (1/|B_i|-1/beta)_i,
+ |g0|<=C ||B||op sqrt(E_rad)/(m beta^2).                     (12)
+
+This tends0. Strong convexity on that ball and outward positivity of
+the radial derivative give an interior minimizer c, with
+|c|<=C beta |g0| and sum_i(B_i-c)/|B_i-c|=0. Convexity makes it a global
+minimizer; no point B_i lies in the small ball, so the derivative is
+ordinary. Define
+
+                   Btilde_i=beta (B_i-c)/|B_i-c|.
+
+Then Btilde is EXACTLY centered with EXACTLY equal row norms beta,
+and
+
+ m|c|^2<=C E_rad/L,
+ ||Btilde-B||_F^2<=C E_rad,
+ ||Btilde||op^2<=C/m.                                     (13)
+
+For the middle bound, compare first to beta u_i, then use the Lipschitz
+bound of radial projection away from0 and the first bound in(13).
+For the last, write Btilde=diag(beta/|B_i-c|)(B-1 c^T) and use(11).
+The construction preserves the centroid span: c lies in that span;
+if v annihilates all Btilde_i, then v.B_i=v.c for every i, and sum B_i=0
+forces v.c=0 and v.B_i=0. It does not add independent coordinates.
+
+This geometric proxy is not asserted to consist of actual centroids of
+a competitive assignment, nor to decrease noise or the score remainder.
+Its distance scale is still much larger than A/m in general. A signed,
+deficit-relative transfer remains necessary before using it to invoke
+the equal-actual-row rigidity theorem.
+
+PINNED INPUTS
+[C] ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt,225db53f...
+[F] BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt,47e441ee...
+[O] RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt,41d649be...
+[M] FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt,45e2cc45...
+[A] POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt,251c3c7c...
+[V] GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt,11a6959e...,
+    with OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt,6d19bda9...
+[S] ACTUAL_MINIMIZER_SUBSET_REPLACEMENT_AND_ROW_NORM_BUDGET_20261031.txt,ab9f3d5b...
+The accompanying JSON records exact source and input hashes. No frozen
+predecessor, master state, external publication, or numerical search was
+changed. The actual equal-row condition remains an open structural gate.

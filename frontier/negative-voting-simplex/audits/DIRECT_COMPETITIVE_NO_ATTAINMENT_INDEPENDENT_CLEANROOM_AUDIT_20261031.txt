@@ -1,0 +1,112 @@
+DIRECT COMPETITIVE-ASSIGNMENT PROOF: INDEPENDENT SCOPE AUDIT
+31 October 2026. gaussian_cleanroom_end_to_end.
+
+VERDICT: PASS, no source repair required.
+Target: DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt,
+SHA c33cd021 (full hash and all inputs in companion manifest).
+This audits the new extension from an attained global minimizer to EVERY
+competitive measurable simplex-valued assignment. The already audited
+proxy-tensor and signed-tail comparison84e1 is not presented as a newly
+reproved theorem here. No frozen source or master state was modified.
+
+1. Localization is not an optimization statement
+I read45e2cc45 and251c3c7c again at their theorem and proof scopes. Their
+hypotheses are only0<=f_i<=1, sum f_i=1, and S_-r(f)<=S_-r(g), in finite
+dimension. Individual Gaussian rearrangement applies to fractional
+labels; Hermite parity uses sum_k A_k(f)<=1, not purity. Their initial
+mass box precedes application of the mass-window value theorem11a+6d.
+The positive-part second-chaos tangent is global. They therefore give
+D>=0, delta<=2D, D<=Cr²/m, the improved positive mass box, and
+|W-w|=|delta-D|/r<=D/r for this arbitrary competitive f.
+In particular W/w=1+O(r/L) is uniform, with no hidden lower-r cutoff.
+
+2. Uniform nonzero rows require only feasible own scores
+For any such f, centering sum B_i=0 is exact, and f is feasible for
+F_p(B), so F_p(B)>=W. Balanced optimal offsets give
+F_p(B)<=F_U(B)-h_U.(p-U). Nonnegativity of R_U(B) comes from the balanced
+first-moment endpoint inequality and Cauchy, not from f being balanced.
+The fractional entropy estimate |B_i|<=p_i sqrt(2log(1/p_i)) and the
+bounded normalization scale give the fixed row cap required by41.
+Its offset estimate and Young imply
+R_U(B)<=Delta+CL²delta<=Delta+delta/r=D/r,
+after one uniform enlargement of m0. This retains the possibility W>w.
+
+The finite, normalized one-row theorem e33 Theorem1 has no minimizer
+hypothesis. Apply it to Bhat=B/s, s=sqrt(W/w). Its quadratic consequence
+R_U(Bhat)>=c L/m² times each squared relative row error gives
+max_i abs(|Bhat_i|²/beta²-1)<=C sqrt(mr/L).
+The scale correction O(r/L) is dominated by this displayed bound.
+All rows are therefore uniformly nonzero for sufficiently large m.
+This is not an appeal to e33's more narrowly worded actual-minimizer
+corollary. The tolerated proof9f3 previously verified the same distinction.
+
+3. RC replaces the old subset-replacement input completely
+The global normalized theorem1eb and its radial corollary give
+E_rad=sum_i(|Bhat_i|-beta)²<=CL²R_U(B)<=CrL²/m.
+They require only the established fixed cap and norm normalization.
+For every fractional f, conditional Cauchy gives
+(B_i.v)²<=p_i E[f_i(v.X)²], and summation yields B^TB<=p_max I.
+Consequently ||Bhat||op²<=C/m and the uniform row lower bound yields
+||m^-1 sum_i u_i u_i^T||op<=C/L, u_i=Bhat_i/|Bhat_i|.
+
+The exact centering identity gives
+sum_i u_i=Bhat^T(1/|Bhat_i|-1/beta)_i.
+Thus for Phi(c)=m^-1sum_i|Bhat_i-c|,
+
+ |grad Phi(0)|<=C ||Bhat||op sqrt(E_rad)/(m beta²)
+              <=C sqrt(m) sqrt(E_rad)/L<=C sqrt(r).
+
+This tends to zero uniformly throughout0<r<=1/(m-1). It replaces the
+old bound supplied by ab9; ab9 is not being silently imported through
+the phrase 'the proof in e33 Section6 applies'. On a fixed small ball
+|c|<=c0 beta, the exact Hessian is
+m^-1sum_i [I-u_i(c)u_i(c)^T]/|Bhat_i-c|.
+The frame estimate and a sufficiently small absolute c0 bound it below
+by c/beta on the centroid span. Its radial derivative is positive on
+the ball boundary for large m. Convexity therefore gives an interior
+median c with |c|<=C beta |grad Phi(0)| and ordinary gradient zero.
+No row meets this ball, so no nonsmooth median calculus is used.
+
+Z_i=beta(Bhat_i-c)/|Bhat_i-c| is exactly centered and exactly equal-row.
+The quantitative displacement is checked rather than inferred:
+m|c|²<=C m beta² |grad Phi(0)|²<=C E_rad/L.
+Radial projection away from zero then gives ||Z-Bhat||²<=CE_rad.
+The normalization error is exactly
+||Bhat-B||²=w(s-1)²<=2R_U(B).
+Hence ||Z-B||²<=CL²R_U(B)<=CL²D/r. No purity, unused coordinate,
+full rank, pair separation, noise monotonicity, or centroid realizability
+of Z is required. The construction uses only the existing centroid span.
+
+4. The finishing branches have the exact needed assignment scope
+I rechecked1a489344's theorem, replacement statement, and equality
+argument. It explicitly concerns ANY measurable simplex-valued f with
+its ACTUAL first moments in the A/m score ball and a positive mass box.
+'Actual' is an identity B=M_f, not Euler-Lagrange stationarity. Thus its
+interior application in c33 is literal, including fractional assignments.
+Its equality argument uses balanced endpoint equality and the regular
+argmax's almost-sure uniqueness, not an assumption that f was pure.
+
+For the exterior branch, the previously audited84e1/e05 comparison
+requires only localization, the feasible own-score dual inequality,
+the global covariance floor, and the equal-row TEST proxy. All are now
+established for f. Its tensor pointwise inequality is valid for convex
+label weights; its signed higher-tail estimate uses rare-label bounds
+and fractional mismatch. Neither is an interface or minimizer statement.
+The floor R>=c/(m³sqrt L)>0 forces D>0; the two relative error
+coefficients tend to zero uniformly in voting r, giving the strict
+contradiction S(f)-S(g)>=D/2>0. No new absolute-tail payment is introduced.
+
+5. Logical conclusion and exact scope
+Assume an arbitrary f is competitive. The exterior case is impossible;
+the interior theorem forces a regular partition. This alone proves both
+the global inequality and its equality classification: no global
+full-noise minimizer, optimizing sequence, purity theorem, or analytic
+interface theorem must be selected. The ambient requirement N>=m-1
+and the single-rule, eventually-large-m negative voting range remain.
+
+Here 'without attainment' means without attaining the FULL-NOISE
+minimum. The imported balanced/prescribed-mass FIRST-MOMENT value and
+optimal-offset theorems remain in use, as c33 Section1 explicitly says.
+The audit does not claim every form of auxiliary optimization disappears.
+Constants remain independent of finite N and of r in its whole range.
+No new theorem scope, publication, or external verification is asserted.

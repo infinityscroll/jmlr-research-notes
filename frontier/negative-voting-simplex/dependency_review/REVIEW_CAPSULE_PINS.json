@@ -1,0 +1,165 @@
+{
+  "status": "frozen dependency capsule; no source correctness claim beyond report scope",
+  "files": [
+    {
+      "path": "DEPENDENCY_COMPLETENESS_REPORT.txt",
+      "sha256": "9a6abe3506e4f5f2d1a0bb5cdaf6e9d5c263451790dea38a3aec3772cb4ab0dd"
+    },
+    {
+      "path": "EXTERNAL_INPUTS.json",
+      "sha256": "593f5451ce7c34d52376d54e6c859ead582f87e84df9a5102bfc5dba9daff168"
+    },
+    {
+      "path": "MANUSCRIPT_SOURCE_MANIFEST_SNAPSHOT.json",
+      "sha256": "3f77956a75c2b9689018ccd7f96410f6282051b544b8cbf5047bdf96613fb3c8"
+    },
+    {
+      "path": "README.txt",
+      "sha256": "970bb3b4dee970b06e3562ca63bab314ae837cd7db37c8d1cfb8d73763b209a6"
+    },
+    {
+      "path": "SOURCE_MAP.json",
+      "sha256": "f96f4ae945ac0837b305ec727b2d91f28a763477bb8eb931f865cb2cc9041590"
+    },
+    {
+      "path": "proof_sources/AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt",
+      "sha256": "3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057"
+    },
+    {
+      "path": "proof_sources/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+      "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b"
+    },
+    {
+      "path": "proof_sources/ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt",
+      "sha256": "ec1edf184fef18a6630fe0007762943cc142d0b7a32dc61e01b83429b35ec633"
+    },
+    {
+      "path": "proof_sources/ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt",
+      "sha256": "aca4da1519de156b684a61425e733eb7f1f9b58621f324ded01a0df2cf8ba58a"
+    },
+    {
+      "path": "proof_sources/BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt",
+      "sha256": "9abf2430423c2effd05b659ec2dca9d6e5ec456911fcf1940a055fa99d2678be"
+    },
+    {
+      "path": "proof_sources/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
+      "sha256": "907e0360c12c8f05376be54ced662b243aaf612974215755ed65b8408d20adad"
+    },
+    {
+      "path": "proof_sources/BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt",
+      "sha256": "47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e"
+    },
+    {
+      "path": "proof_sources/CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt",
+      "sha256": "be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200"
+    },
+    {
+      "path": "proof_sources/CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt",
+      "sha256": "84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4"
+    },
+    {
+      "path": "proof_sources/CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt",
+      "sha256": "28c75e2e691e5b54c19bf3e8da1e69a3a6b84ed8aa7106dfad9d8db970ffa500"
+    },
+    {
+      "path": "proof_sources/CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt",
+      "sha256": "111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7"
+    },
+    {
+      "path": "proof_sources/DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt",
+      "sha256": "c33cd021f18037d3e0d9ef32c6205aad593b31b58e844ae6e7ab0e60c3cc44f8"
+    },
+    {
+      "path": "proof_sources/EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt",
+      "sha256": "d2611f1d80f447cadffd503e7d29a76ef84737d991700defedc141dc7bf614fd"
+    },
+    {
+      "path": "proof_sources/ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt",
+      "sha256": "6c97ff1bf8888e492312a88550ef8465cccbdb1df1060334bf0c7fa9dd336355"
+    },
+    {
+      "path": "proof_sources/FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt",
+      "sha256": "3b6bd981d0508f8ce9487b27659b4203473266fb7721f4acb0f8c3d74793f3a1"
+    },
+    {
+      "path": "proof_sources/FIXED_MASS_FIRST_CHAOS_DUAL_AND_FINITE_CURVATURE_LIMIT_20261031.txt",
+      "sha256": "b1e2cb6f0983d2ca13c388c1e07e637fd9cdfde53f4fd4d9280bc9dfbd29fa50"
+    },
+    {
+      "path": "proof_sources/FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt",
+      "sha256": "45e2cc459bee383a1317a574011c3fa2a63e64b50f7195d744a4e3a9fa0c0aea"
+    },
+    {
+      "path": "proof_sources/FULL_NEGATIVE_VOTING_PRIMARY_SCOPE_AND_BOUNDED_NOVELTY_CHECK_20261031.txt",
+      "sha256": "2cf2b20c835360ce556bedc0d32e57c87cf4f6790f852717e2b6a5886dc163c3"
+    },
+    {
+      "path": "proof_sources/FULL_NEGATIVE_VOTING_STANDARD_SIMPLEX_FOR_SUFFICIENTLY_LARGE_M_20261031.txt",
+      "sha256": "e05b2c1e8b2733d21f903ab76ae108c864b27487bd6f1ca9080955f1ae87445c"
+    },
+    {
+      "path": "proof_sources/FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt",
+      "sha256": "7388c94860fab24b1c033d4b52e1a2ed74a71622201a2abe0f0a430f3b5b764c"
+    },
+    {
+      "path": "proof_sources/GLOBAL_EQUAL_ROW_SEPARATED_OWN_CENTROID_FULL_VOTING_RIGIDITY_V2_20261031.txt",
+      "sha256": "05176f6e3b0ecfc21d9a61074cb6d259a46fe91990ee26ce9bfd55b34193adc1"
+    },
+    {
+      "path": "proof_sources/GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt",
+      "sha256": "11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2"
+    },
+    {
+      "path": "proof_sources/GLOBAL_RANK_FREE_AFFINE_SIGNED_HIGHER_TAIL_COMPARISON_20261031.txt",
+      "sha256": "5edacd0c4ac2adc8dc0e0b1960ba976945ba9cbe236121e081b32a18c460cd59"
+    },
+    {
+      "path": "proof_sources/GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt",
+      "sha256": "e33c710eeda31107dbd895c17cd1fe7b1771afd2e361c5713de82b31c9e014f4"
+    },
+    {
+      "path": "proof_sources/GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt",
+      "sha256": "1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57"
+    },
+    {
+      "path": "proof_sources/LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER_20261031.txt",
+      "sha256": "9482f0855064af8cae7ade28263e6e8256ab90cc7a27bc4e2f5f1537e9f3e1e5"
+    },
+    {
+      "path": "proof_sources/OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt",
+      "sha256": "6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c"
+    },
+    {
+      "path": "proof_sources/OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "sha256": "1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd"
+    },
+    {
+      "path": "proof_sources/POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt",
+      "sha256": "251c3c7ce7e6b3e7fce8d77079d630d815e223ca59c74570940f3cc21f573ca6"
+    },
+    {
+      "path": "proof_sources/RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt",
+      "sha256": "41d649be507020bb178315c9ac6249aa98a6f6e9b432fd6964613ade3ae7d318"
+    },
+    {
+      "path": "proof_sources/REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt",
+      "sha256": "12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08"
+    },
+    {
+      "path": "proof_sources/SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt",
+      "sha256": "f0f22a63d1b021ac51bd363622e2b36514043abf88575372727dc8ebadabba3f"
+    },
+    {
+      "path": "proof_sources/TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt",
+      "sha256": "1f5c1ee8ccb882a880813691613526c0717c54ea46a4decc12faaf7bd7dfb500"
+    },
+    {
+      "path": "proof_sources/UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt",
+      "sha256": "5f2ef775159f53f277d248995d17c138c2fbc53e27a089a2dea164aba7051432"
+    },
+    {
+      "path": "verify_review.py",
+      "sha256": "307d629669acff8a8fa5bc9b1b49ff2e3c6af498366ddb15041d65592bedd065"
+    }
+  ]
+}

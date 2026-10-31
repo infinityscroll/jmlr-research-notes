@@ -1,0 +1,260 @@
+\section{Statement and conventions}
+Let $\gamma_N$ be standard Gaussian measure on $\RR^N$ and define
+\[
+ T_\rho u(x)=\E u\bigl(\rho x+\sqrt{1-\rho^2}\,Y\bigr),
+ \qquad Y\sim\gamma_N,\quad -1<\rho<1.
+\]
+An assignment is a measurable map $f=(f_1,\ldots,f_m)$ into
+$\Delta_m=\{a\in[0,1]^m:\sum_i a_i=1\}$. Its noise stability is
+$S_\rho(f)=\sum_i\ip{f_i}{T_\rho f_i}_{L^2(\gamma_N)}$.
+This is a single-assignment functional; two independently chosen rules
+are not permitted in its definition.
+
+Let $P=I_m-\one\one^T/m$. Choose vectors $b_i^0\in\RR^N$ whose Gram
+matrix is $\alpha^2P$, where
+\begin{equation}\label{eq:scales}
+ n=m-1,\quad L=1+\log m,\quad
+ \mu_m=\E\max_{i\le m}Z_i,\quad
+ \alpha=\frac{\mu_m}{m-1},\quad w=\alpha^2(m-1),\quad
+ \beta=\sqrt{w/m}.
+\end{equation}
+Here the $Z_i$ are independent standard Gaussians. The regular assignment
+$g$ chooses the largest $b_i^0\cdot x$. Ties are Gaussian null. Its
+centroid matrix is $B_0=(b_i^0)_i$, and its cells have mass $1/m$.
+The construction exists for every finite $N\ge m-1$ and extends
+cylindrically when $N>m-1$.
+
+\begin{theorem}\label{thm:main}
+There is an absolute integer $m_0$ such that, for every $m\ge m_0$,
+every finite $N\ge m-1$, every $\rho\in[-1/(m-1),0)$, and every
+measurable assignment $f:\RR^N\to\Delta_m$,
+\[
+                         S_\rho(f)\ge S_\rho(g).
+\]
+Equality holds precisely for the indicator assignments of regular
+Gaussian simplex partitions, up to orthogonal transformations,
+relabeling, and Gaussian null sets. No mass constraint is imposed on $f$.
+The threshold $m_0$ is independent of $\rho$ and of finite $N$.
+\end{theorem}
+
+This manuscript provides no numerical value of $m_0$. It does not claim
+the positive-correlation conjecture, the remaining small values of $m$,
+all negative Gaussian correlations, or a bilinear theorem. Section~\ref{sec:discrete}
+gives the exact negative Plurality is Stablest consequence and the
+UGC-conditional Frieze--Jerrum threshold. These are fixed-$m$ consequences,
+with no assertion that the ratio is minimized at the negative endpoint.
+
+The original negative Standard Simplex formulation has no mass constraint
+\cite[Conjecture~1.4]{IM}. The older large-$m$ endpoint estimate in
+\cite[Proposition~11.4]{KKMO}, recalled in \cite[equation~(20)]{IM}, is
+asymptotic, with an additive error of order $\log\log(m)/m^2$.
+Theorem~\ref{thm:main} instead asserts exact optimality for each fixed
+sufficiently large $m$ on an entire interval. The bounded primary-source
+check \cite{scope} is not an exhaustive priority or novelty determination.
+
+For an assignment write
+\begin{equation}\label{eq:assignment-data}
+ p_i=\E f_i,\qquad B_i=\E[Xf_i],\qquad
+ W=\norm{B}_{\Frob}^2,\qquad U=m^{-1}\one.
+\end{equation}
+Always $B^T\one=0$. For a centered score matrix $B$ define
+\begin{align}
+ F_p(B)&=\sup\left\{\E\sum_i f_i B_i\cdot X:
+                  f:\RR^N\to\Delta_m,\ \E f=p\right\},\label{eq:dual-value}\\
+ \calR(B)&=\frac{w+\norm{B}_{\Frob}^2}{2}-F_U(B).\label{eq:R-def}
+\end{align}
+Its value depends only on $BB^T$. Let
+$\Gamma(C)=F_U(C^{1/2})$ for a centered positive semidefinite matrix
+$C$; all square-root realizations are equivalent by Gaussian invariance.
+The regular orbit distance is
+$d(B)=\inf_{B_0}\norm{B-B_0}_{\Frob}$, over regular centroid matrices
+in the same ambient space. Constants denoted $c,C$ may change from line
+to line. A subscript records fixed parameter dependence. All estimates
+called uniform below are independent of finite $N$ and of the correlation
+in the stated interval.
+
+\section{Precisely stated prior inputs}\label{sec:inputs}
+The following propositions are the previously internally audited inputs
+to the new proofs in Sections~\ref{sec:calibration}--\ref{sec:assembly}.
+They are stated with the exact hypotheses used. Their proofs are in the
+frozen sources listed in Appendix~\ref{app:sources}; they are not replaced
+here by informal appeals to optimizer geometry. The new radial estimate
+is \emph{not} assumed in this section.
+
+\begin{prior}[Covariance value, normal strain, and offsets]
+\label{prior:value}
+The functional $\Gamma$ is concave and
+continuous on centered positive semidefinite matrices. At a positive
+definite matrix on $\one^\perp$, its derivative is $\calL/2$, where
+$\calL$ is the mass-offset Laplacian. In particular
+$\Gamma(P)=\mu_m$. It is $C^2$ locally in the positive cone. At
+$C_0=\alpha^2P$, the normal-strain estimate implies
+\begin{equation}\label{eq:reference-normal-strain}
+ D^2\Gamma(C_0)[E,E]<0
+ \quad\text{if some }(e_i-e_j)^TE(e_i-e_j)\ne0,
+\end{equation}
+for a centered symmetric $E$. Every regular facet has positive Gaussian
+measure, so this strictness criterion applies to each pair.
+
+If $\norm{B}_{\Frob}^2=w$, $\max_i\abs{B_i}\le A\alpha$, and $h_U$
+is a mean-zero balanced optimal offset, then
+\begin{equation}\label{eq:offset-input}
+                         \norm{h_U}^2\le C_A L^2\calR(B).
+\end{equation}
+This is a value/offset statement at arbitrary rank, including coincident
+sites by continuity. Positive scaling gives
+\begin{equation}\label{eq:radial-identity}
+ \calR(sB)=\tfrac12 w(s-1)^2+s\calR(B),\qquad
+ h_U(sB)=s h_U(B)\quad(s>0,\ \norm{B}^2=w).
+\end{equation}
+In the mass box $p_i\in[1/(2m),3/(2m)]$, the optimum first-moment value
+$V(p)=\sup_{\E f=p}\norm{M_f}^2$ satisfies
+$V(p)\le w+CL^2\norm{p-U}^2$.
+\end{prior}
+These are the covariance, offset, and rank-boundary envelope results
+\cite{covariance,offset,masswindow,graphclarification}.
+
+\begin{proposition}[Endpoint and zero-remainder rigidity]\label{prop:endpoint}
+For every centered $B$, $\calR(B)\ge0$, with equality precisely when
+$BB^T=\alpha^2P$. Every balanced measurable assignment has $W\le w$;
+equality forces the regular assignment. More generally, if an arbitrary
+assignment's actual centroids have $\calR(B)=0$, it is regular.
+\end{proposition}
+\begin{proof}
+We give the direct covariance proof \cite{endpoint}. For iid Gaussian
+coordinates, the expected winning coordinate is $\mu_m$. Label symmetry
+gives diagonal centroid entry $\mu_m/m$. The common coordinate mean is
+independent of the winning label and has mean zero. The off-diagonal
+entries are equal by symmetry, and centering makes the centroid matrix
+exactly $B_0=\alpha P$ on $\one^\perp$. Its masses are $1/m$ and
+$F_U(B_0)=\alpha\mu_m=w$.
+
+The reference winner is unique off Gaussian-null hyperplanes. Hence the
+score-value envelope is differentiable there and has derivative $B_0$.
+Differentiating $C=BB^T$ at $B_0$, which is invertible on $\one^\perp$,
+gives $\nabla\Gamma(C_0)=P/2$. Concavity therefore yields
+\[
+ \Gamma(C)\le w+\tfrac12(\tr C-w)
+\]
+for every centered positive semidefinite $C$, proving nonnegativity.
+If $C\ne C_0$, put $E=C-C_0$. If every edge quadratic in
+\eqref{eq:reference-normal-strain} vanished, writing $d_i=E_{ii}$
+would give $E_{ij}=(d_i+d_j)/2$. The row sums then imply
+$md_i+\tr E=0$ for each $i$, and summing forces $\tr E=0$ and $E=0$,
+a contradiction. Thus the path $C_0+tE$ has strictly negative second
+derivative at zero, and by local $C^2$ regularity on a short initial
+interval. Its positive gap below the reference tangent is thereafter
+nondecreasing by concavity. Continuity handles a singular endpoint at
+$t=1$. This proves $\calR(B)>0$ unless $BB^T=C_0$.
+
+For balanced $f$ with actual centroids $B$, feasibility gives
+$W\le F_U(B)\le(w+W)/2$, hence $W\le w$. Equality implies
+$BB^T=C_0$. For any assignment with this actual Gram matrix,
+$W=w=\E\max_i B_i\cdot X$. Its nonnegative routing loss
+$\max_i B_i\cdot X-\sum_i f_i B_i\cdot X$ has expectation zero.
+The regular rows have Gaussian-null ties, so $f$ is their regular
+winning assignment. This final implication needs no mass assumption.
+\end{proof}
+
+\begin{prior}[Competitive localization]
+\label{prior:localization}
+For all sufficiently large $m$ and $0<r\le1/(m-1)$, an assignment with
+$S_{-r}(f)\le S_{-r}(g)$ has $p_i\in[1/(2m),3/(2m)]$. Put
+\[
+ \delta=\norm{p-U}^2,\quad \Delta=w-W,\quad D=\delta+r\Delta.
+\]
+Then
+\begin{equation}\label{eq:localization}
+              0\le\delta\le2D,\qquad 0\le D\le Cr^2/m.
+\end{equation}
+\end{prior}
+This is \cite{localization}, with the universal competitive-assignment
+scope explicitly reconstructed in \cite{direct}. For every assignment,
+conditional Cauchy gives
+$(B_i\cdot v)^2\le p_i\E[f_i(X)(v\cdot X)^2]$. Summation shows
+\begin{equation}\label{eq:actual-operator}
+                              B^TB\preceq p_{\max}I.
+\end{equation}
+Conditional Jensen in $\E e^{t v\cdot X}$ similarly gives
+\begin{equation}\label{eq:entropy-centroid}
+                 \abs{B_i}\le p_i\sqrt{2\log(1/p_i)}.
+\end{equation}
+Neither estimate requires stationarity or purity.
+
+\begin{prior}[Global one-row covariance coercivity]\label{prior:one-row}
+For every fixed $A$, every centered score matrix with
+$\norm{B}^2=w$ and $\max_i\abs{B_i}\le A\alpha$ satisfies
+\begin{equation}\label{eq:one-row}
+ \max_i\left|\frac{\abs{B_i}^2}{\beta^2}-1\right|^2
+                         \le C_A\frac{m^2}{L}\calR(B).
+\end{equation}
+No rank, assignment-realizability, or minimization hypothesis is imposed.
+\end{prior}
+This is the global single-row estimate of \cite[Theorem~1]{rowcontrol}.
+It will be applied directly to a normalized actual centroid matrix;
+no actual-minimizer row theorem is assumed.
+
+\begin{prior}[Global covariance remainder and local full-noise comparison]
+\label{prior:local-global}
+For centered $B$, put $C=BB^T/\alpha^2$ and $e=\norm{C-P}_{\Frob}$.
+The initial-segment covariance bound is
+\begin{equation}\label{eq:global-covariance-floor}
+ \calR(B)\ge \frac{c\alpha^2e^2}{m}
+                   \min\left\{1,\frac{c}{Le}\right\}.
+\end{equation}
+It holds at arbitrary endpoint rank and does not require
+$\norm{B}^2=w$; the value at $e=0$ is interpreted by continuity.
+
+For every fixed $A$, sufficiently large $m$, and every measurable
+assignment whose \emph{actual} centroids obey $d(B)\le A/m$ and whose
+masses lie in $[1/(2m),3/(2m)]$,
+\begin{equation}\label{eq:local-noise}
+ S_{-r}(f)-S_{-r}(g)\ge \tfrac12\norm{p-U}^2+r\calR(B),
+                   \qquad0<r\le1/(m-1).
+\end{equation}
+Competitiveness in this statement forces a regular assignment.
+\end{prior}
+The covariance estimate follows from \cite{facetbootstrap} and its
+unnormalized extension in \cite{equalrowcap}; the local theorem is
+\cite{localscoreball}. The local theorem concerns arbitrary measurable
+assignments, not only affine fans.
+
+\begin{prior}[Regular normalization and margin]
+\label{prior:regular}
+Let $\Pi_k$ denote the orthogonal Hermite projection of degree $k$ and
+$A_k(f)=\sum_i\norm{\Pi_k f_i}_2^2$. Then
+\begin{equation}\label{eq:A2-reference}
+ A_2(g)=\frac{m\{\E[(\max_i Z_i)^2]-1\}^2}{2(m-1)(m-2)},
+ \qquad \alpha^2\asymp L/m^2.
+\end{equation}
+For a regular score matrix $B_0$, let $G(X)$ be its largest score minus
+its second largest score. Then
+\begin{equation}\label{eq:regular-margin}
+                        \Prob\{G\le t\}\le Cmt\quad(t\ge0).
+\end{equation}
+\end{prior}
+The exact second-chaos identity is in \cite{localization}; the margin
+and its fractional routing consequence are in \cite{globaltail}.
+We also use the standard dimension-free Gaussian hypercontractivity
+$\norm{T_tu}_2\le\norm{u}_{1+t^2}$ \cite{Gross}, and the one-dimensional variance
+bound $\Var_\nu x\le1/c$ when the density of $\nu$ has logarithmic
+second derivative at most $-c$ \cite{BrascampLieb}. The transitive proofs
+of the offset and mass-window inputs also use Gaussian isoperimetry
+\cite{Borell} and the convex Ehrhard inequality \cite{Latala}; their
+precise uses are recorded in the companion section-level source map.
+
+\begin{prior}[Equal-threshold Gaussian maximum comparison]
+\label{prior:max}
+If $K$ is an $m\times m$ correlation matrix and
+$K-\one\one^T/m\succeq0$, then for $Y\sim N(0,K)$ and independent
+standard Gaussians $Z_i$,
+\[
+                 \Prob\{\max_iY_i\le t\}\ge\Phi(t)^m
+                 \qquad(t\in\RR).
+\]
+The statement includes singular $K$.
+\end{prior}
+This is Theorem~2.1 of the pinned primary source \cite{Mulgund}. Only
+equal thresholds are used. We do not infer a general rectangular
+comparison or a comparison for unequal marginal variances.
+

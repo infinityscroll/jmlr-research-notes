@@ -1,0 +1,350 @@
+--- v1/01_statement_inputs.tex
++++ v2/01_statement_inputs.tex
+@@ -81,14 +81,20 @@
+ here by informal appeals to optimizer geometry. The new radial estimate
+ is \emph{not} assumed in this section.
+ 
+-\begin{prior}[Balanced endpoint, covariance value, and offsets]
++\begin{prior}[Covariance value, normal strain, and offsets]
+ \label{prior:value}
+-For balanced assignments in finite $N\ge m-1$, $W\le w$, with equality
+-only for a regular assignment. The functional $\Gamma$ is concave and
++The functional $\Gamma$ is concave and
+ continuous on centered positive semidefinite matrices. At a positive
+ definite matrix on $\one^\perp$, its derivative is $\calL/2$, where
+ $\calL$ is the mass-offset Laplacian. In particular
+-$\Gamma(P)=\mu_m$ and $\calR(B)\ge0$ for every centered $B$.
++$\Gamma(P)=\mu_m$. It is $C^2$ locally in the positive cone. At
++$C_0=\alpha^2P$, the normal-strain estimate implies
++\begin{equation}\label{eq:reference-normal-strain}
++ D^2\Gamma(C_0)[E,E]<0
++ \quad\text{if some }(e_i-e_j)^TE(e_i-e_j)\ne0,
++\end{equation}
++for a centered symmetric $E$. Every regular facet has positive Gaussian
++measure, so this strictness criterion applies to each pair.
+ 
+ If $\norm{B}_{\Frob}^2=w$, $\max_i\abs{B_i}\le A\alpha$, and $h_U$
+ is a mean-zero balanced optimal offset, then
+@@ -107,6 +113,48 @@
+ \end{prior}
+ These are the covariance, offset, and rank-boundary envelope results
+ \cite{covariance,offset,masswindow,graphclarification}.
++
++\begin{proposition}[Endpoint and zero-remainder rigidity]\label{prop:endpoint}
++For every centered $B$, $\calR(B)\ge0$, with equality precisely when
++$BB^T=\alpha^2P$. Every balanced measurable assignment has $W\le w$;
++equality forces the regular assignment. More generally, if an arbitrary
++assignment's actual centroids have $\calR(B)=0$, it is regular.
++\end{proposition}
++\begin{proof}
++We give the direct covariance proof \cite{endpoint}. For iid Gaussian
++coordinates, the expected winning coordinate is $\mu_m$. Label symmetry
++gives diagonal centroid entry $\mu_m/m$. The common coordinate mean is
++independent of the winning label and has mean zero. The off-diagonal
++entries are equal by symmetry, and centering makes the centroid matrix
++exactly $B_0=\alpha P$ on $\one^\perp$. Its masses are $1/m$ and
++$F_U(B_0)=\alpha\mu_m=w$.
++
++The reference winner is unique off Gaussian-null hyperplanes. Hence the
++score-value envelope is differentiable there and has derivative $B_0$.
++Differentiating $C=BB^T$ at $B_0$, which is invertible on $\one^\perp$,
++gives $\nabla\Gamma(C_0)=P/2$. Concavity therefore yields
++\[
++ \Gamma(C)\le w+\tfrac12(\tr C-w)
++\]
++for every centered positive semidefinite $C$, proving nonnegativity.
++If $C\ne C_0$, put $E=C-C_0$. If every edge quadratic in
++\eqref{eq:reference-normal-strain} vanished, writing $d_i=E_{ii}$
++would give $E_{ij}=(d_i+d_j)/2$. The row sums then imply
++$md_i+\tr E=0$ for each $i$, and summing forces $\tr E=0$ and $E=0$,
++a contradiction. Thus the path $C_0+tE$ has strictly negative second
++derivative at zero, and by local $C^2$ regularity on a short initial
++interval. Its positive gap below the reference tangent is thereafter
++nondecreasing by concavity. Continuity handles a singular endpoint at
++$t=1$. This proves $\calR(B)>0$ unless $BB^T=C_0$.
++
++For balanced $f$ with actual centroids $B$, feasibility gives
++$W\le F_U(B)\le(w+W)/2$, hence $W\le w$. Equality implies
++$BB^T=C_0$. For any assignment with this actual Gram matrix,
++$W=w=\E\max_i B_i\cdot X$. Its nonnegative routing loss
++$\max_i B_i\cdot X-\sum_i f_i B_i\cdot X$ has expectation zero.
++The regular rows have Gaussian-null ties, so $f$ is their regular
++winning assignment. This final implication needs no mass assumption.
++\end{proof}
+ 
+ \begin{prior}[Competitive localization]
+ \label{prior:localization}
+@@ -188,9 +236,12 @@
+ The exact second-chaos identity is in \cite{localization}; the margin
+ and its fractional routing consequence are in \cite{globaltail}.
+ We also use the standard dimension-free Gaussian hypercontractivity
+-$\norm{T_tu}_2\le\norm{u}_{1+t^2}$, and the one-dimensional variance
++$\norm{T_tu}_2\le\norm{u}_{1+t^2}$ \cite{Gross}, and the one-dimensional variance
+ bound $\Var_\nu x\le1/c$ when the density of $\nu$ has logarithmic
+-second derivative at most $-c$.
++second derivative at most $-c$ \cite{BrascampLieb}. The transitive proofs
++of the offset and mass-window inputs also use Gaussian isoperimetry
++\cite{Borell} and the convex Ehrhard inequality \cite{Latala}; their
++precise uses are recorded in the companion section-level source map.
+ 
+ \begin{prior}[Equal-threshold Gaussian maximum comparison]
+ \label{prior:max}
+--- v1/04_exterior_assembly.tex
++++ v2/04_exterior_assembly.tex
+@@ -157,7 +157,7 @@
+ For the regular reference,
+ \[
+  T_*:=\E V_*^2-\beta^2
+-      =\alpha^2\{\E[(\max_iZ_i)^2]-1\}>0,
++      =\alpha^2\{\E[(\max_i Z_i^{\rm iid})^2]-1\}>0,
+  \qquad A_2(g)=\frac{T_*^2}{2D_*},\qquad T_*/D_*\le Cm.
+ \]
+ For any $e\ge0$, $(T_*-e)_+^2\ge T_*^2-2T_*e$; hence
+@@ -251,7 +251,7 @@
+ the regular assignment. Noncompetitive assignments already have strictly
+ larger noise value. This proves both the inequality and its equality
+ classification in Theorem~\ref{thm:main}, directly for all measurable
+-simplex-valued assignments. No attainment, purity, stationarity, interface
++simplex-valued assignments. No full-noise attainment, purity, stationarity, interface
+ regularity, or limiting optimization argument is required. All thresholds
+ are independent of finite $N$ and of positive $r$ in the voting interval.
+ \qed
+--- v1/05_source_ledger.tex
++++ v2/05_source_ledger.tex
+@@ -1,9 +1,19 @@
+ \section{Frozen sources and proof provenance}\label{app:sources}
+ 
+-The authoritative internal theorem statement is \cite{unconditional}, with the direct competitive proof \cite{direct}. The new proofs in this manuscript correspond to \cite{hazards,radial,assembly}; the radial premise left conditional in the last of these is proved here in Theorem~\ref{thm:radial}.
++The authoritative internal theorem statement is \cite{unconditional}, with the direct competitive proof \cite{direct}. The endpoint and remainder equality facts are proved explicitly from covariance concavity in Proposition~\ref{prop:endpoint}, following \cite{endpoint}; the older endpoint references in Section~10 of \cite{covariance} are not used. The new proofs in this manuscript correspond to \cite{hazards,radial,assembly}; the radial premise left conditional in the last of these is proved here in Theorem~\ref{thm:radial}.
+ 
+ The entries below identify the exact bytes used. Internal review is not a substitute for independent mathematical review of these sources and their dependencies. Copies of the internal frozen sources and a machine-readable hash manifest accompany the editable manuscript. Copyright primary articles are not bundled; their external URLs and private-cache hashes are recorded instead. No attribution of human authorship is made for internal source files.
+ 
++The unchanged companion \path{dependency_review/} supplies the
++section-level transitive proof closure: 34 internal sources, their exact
++used sections, and an external-input ledger. Its report is a provenance
++and completeness check against the frozen first-edition snapshot, not a
++new external correctness audit. This edition incorporates its endpoint
++replacement and external-reference corrections explicitly.
++
++\noindent\path{dependency_review/SOURCE_MAP.json}\par
++\noindent{\scriptsize SHA-256: \path{f96f4ae945ac0837b305ec727b2d91f28a763477bb8eb931f865cb2cc9041590}}
++
+ \begingroup\small\sloppy
+ 
+ \begin{thebibliography}{99}
+@@ -169,6 +179,53 @@
+ 
+ \par\noindent{\scriptsize SHA-256: \path{42d209e98ae861f192e815854ea52c99e893d94a7366c9074621fcf34ab8fb71}}
+ 
++
++\bibitem{endpoint}
++Internal frozen proof source. \emph{Balanced endpoint and remainder rigidity from covariance concavity}. 31 October 2026.
++\par\noindent{\scriptsize\path{BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt}}
++\par\noindent{\scriptsize SHA-256: \path{907e0360c12c8f05376be54ced662b243aaf612974215755ed65b8408d20adad}}
++
++\bibitem{CST}
++Pierluigi Crescenzi, Riccardo Silvestri and Luca Trevisan.
++\emph{On Weighted vs Unweighted Versions of Combinatorial Optimization Problems}.
++Theorem~13. \url{https://lucatrevisan.github.io/pubs/cst-full.pdf}.
++External primary; not bundled. The fixed-$m$ transfer used here is proved
++in \cite[Section~4]{transfer} from that mixing construction.
++\par\noindent{\scriptsize\path{CST_WEIGHTED_UNWEIGHTED_PRIMARY.pdf}}
++\par\noindent{\scriptsize SHA-256: \path{aedd4d581a44004c2a1e658aa73426835e1df7a122ad7c310eaa4cfc0d6524c2}}
++
++
++\bibitem{Latala}
++Rafa\l{} Lata\l{}a. \emph{A note on the Ehrhard inequality}.
++Studia Mathematica 118 (1996), 169--174.
++\url{https://doi.org/10.4064/sm-118-2-169-174}.
++External primary; not bundled. The convex Gaussian translation form is
++used in the cycle-preserving covariance refinement.
++
++\bibitem{BrascampLieb}
++Herm Jan Brascamp and Elliott H. Lieb.
++\emph{On extensions of the Brunn--Minkowski and Pr\'ekopa--Leindler
++ theorems, including inequalities for log concave functions, and with
++ an application to the diffusion equation}.
++Journal of Functional Analysis 22 (1976), 366--389.
++\url{https://doi.org/10.1016/0022-1236(76)90004-5}.
++External primary; not bundled. Variance and covariance bounds are used
++for log-concave restrictions and tilted laws.
++
++\bibitem{Borell}
++Christer Borell. \emph{The Brunn--Minkowski inequality in Gauss space}.
++Inventiones mathematicae 30 (1975), 207--216.
++\url{https://doi.org/10.1007/BF01425510}.
++External primary; not bundled. Gaussian isoperimetry is used in the
++mass/offset graph estimates.
++
++\bibitem{Gross}
++Leonard Gross. \emph{Logarithmic Sobolev Inequalities}.
++American Journal of Mathematics 97 (1975), 1061--1083.
++\url{https://doi.org/10.2307/2373688}.
++External primary; not bundled. The Gaussian hypercontractive estimate
++is stated in Section~\ref{sec:inputs} with the normalization used here.
++
+ \end{thebibliography}
+ 
+ \endgroup
+--- v1/06_discrete_consequences.tex
++++ v2/06_discrete_consequences.tex
+@@ -61,7 +61,7 @@
+ \subsection{The exact Frieze--Jerrum constant}
+ Define
+ \begin{equation}\label{eq:FJ-constant}
+- \mathfrak a_m=min_{-1/(m-1)\le\rho\le0}
++ \mathfrak a_m=\min_{-1/(m-1)\le\rho\le0}
+        \frac{m}{m-1}\frac{1-s_m(\rho)}{1-\rho}.
+ \end{equation}
+ This is an exact fixed-$m$ constant, and its minimum exists by
+@@ -122,7 +122,8 @@
+ The approximation statement is unconditional; UGC is needed only for
+ the hardness assertion. The same sharp threshold for simple unweighted
+ graphs follows from the fixed-$m$ mixing-graph reduction proved in
+-\cite[Section~4]{transfer}; the direct statement above uses the primary
++\cite[Section~4]{transfer}, using the construction in
++\cite[Theorem~13]{CST}; the direct statement above uses the primary
+ weighted formulation. Neither conclusion is a running-time statement
+ uniform in an input alphabet size tending to infinity. The older
+ asymptotic endpoint result \cite[Proposition~11.4]{KKMO} does not by
+--- v1/main.tex
++++ v2/main.tex
+@@ -4,7 +4,7 @@
+ \usepackage[margin=1.03in,headheight=15pt]{geometry}
+ \usepackage{microtype,enumitem,fancyhdr,xurl,xcolor}
+ \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+-\hypersetup{pdftitle={Negative Gaussian simplex stability for sufficiently many parts},pdfauthor={AI-assisted research manuscript},pdfsubject={Internally audited proof candidate for independent review}}
++\hypersetup{pdftitle={Negative Gaussian simplex stability for sufficiently many parts},pdfauthor={AI-assisted research manuscript},pdfsubject={Revision 2: internally audited proof candidate for independent review}}
+ \pagestyle{fancy}
+ \fancyhf{}
+ \fancyhead[L]{\small Negative Gaussian simplex stability}
+--- v1/source_manifest.json
++++ v2/source_manifest.json
+@@ -5,7 +5,8 @@
+       "key": "covariance",
+       "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+       "bundled_path": "sources/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt",
+-      "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b"
++      "sha256": "225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b",
++      "used_scope": "Interior concavity, normal strain, regular boundary identity, and PSD continuity. The manuscript derives endpoint and zero-remainder rigidity explicitly from source907e, without the old Section10 endpoint dependencies."
+     },
+     {
+       "key": "offset",
+@@ -132,7 +133,68 @@
+       "bundled": false,
+       "url": "https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf",
+       "kind": "external_primary"
++    },
++    {
++      "key": "endpoint",
++      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
++      "bundled_path": "sources/BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt",
++      "sha256": "907e0360c12c8f05376be54ced662b243aaf612974215755ed65b8408d20adad",
++      "bundled": true,
++      "kind": "internal_frozen_source"
++    },
++    {
++      "key": "CST",
++      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/primary_cache/DISCRETE_TRANSFER_20261031/CST_WEIGHTED_UNWEIGHTED_PRIMARY.pdf",
++      "sha256": "aedd4d581a44004c2a1e658aa73426835e1df7a122ad7c310eaa4cfc0d6524c2",
++      "bundled": false,
++      "kind": "external_primary",
++      "url": "https://lucatrevisan.github.io/pubs/cst-full.pdf"
++    },
++    {
++      "key": "Latala",
++      "kind": "external_primary",
++      "bundled": false,
++      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/studia-mathematica/all/118/2/109424/a-note-on-the-ehrhard-inequality",
++      "sha256": "75467b0fc891007985987d6380bbf3f94f809ae7894faf16df04772794af9ba5",
++      "hash_scope": "private publisher landing-page cache",
++      "title": "A note on the Ehrhard inequality, Studia Mathematica118(1996),169\u2013174",
++      "original_path": "/Users/sanjana/Documents/Codex/2026-08-15/cr/work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_correlation_bridge_20261031/primary_cache/LATALA_1996_EHRHARD_PUBLISHER_20261031.html"
++    },
++    {
++      "key": "BrascampLieb",
++      "kind": "external_primary",
++      "bundled": false,
++      "url": "https://doi.org/10.1016/0022-1236(76)90004-5",
++      "sha256": null,
++      "hash_scope": "No article-byte hash claimed",
++      "title": "On extensions of the Brunn-Minkowski and Prekopa-Leindler theorems, including inequalities for log concave functions, and with an application to the diffusion equation"
++    },
++    {
++      "key": "Borell",
++      "kind": "external_primary",
++      "bundled": false,
++      "url": "https://link.springer.com/article/10.1007/BF01425510",
++      "sha256": null,
++      "hash_scope": "No article-byte hash claimed",
++      "title": "The Brunn-Minkowski inequality in Gauss space, Inventiones mathematicae30(1975),207\u2013216"
++    },
++    {
++      "key": "Gross",
++      "kind": "external_primary",
++      "bundled": false,
++      "url": "https://www.jstor.org/stable/2373688",
++      "sha256": null,
++      "hash_scope": "No article-byte hash claimed",
++      "title": "Logarithmic Sobolev Inequalities, Gross, American Journal of Mathematics97(1975),1061\u20131083"
+     }
+   ],
+-  "external_primary_policy": "Primary articles remain in the private cache. The review bundle includes only URL/hash metadata, not full primary HTML/PDF copies."
++  "external_primary_policy": "Primary articles remain in the private cache. The review bundle includes only URL/hash metadata, not full primary HTML/PDF copies.",
++  "revision": "v2; v1 frozen review copy preserved unchanged",
++  "dependency_capsule": {
++    "path": "dependency_review",
++    "report_sha256": "9a6abe3506e4f5f2d1a0bb5cdaf6e9d5c263451790dea38a3aec3772cb4ab0dd",
++    "source_map_sha256": "f96f4ae945ac0837b305ec727b2d91f28a763477bb8eb931f865cb2cc9041590",
++    "internal_sources": 34,
++    "snapshot": "Frozen v1 snapshot; v2 integration is explained in DEPENDENCY_REVIEW_NOTE.txt."
++  }
+ }
+--- v1/README.txt
++++ v2/README.txt
+@@ -1,5 +1,7 @@
+ NEGATIVE GAUSSIAN SIMPLEX STABILITY FOR SUFFICIENTLY MANY PARTS
+-AI-assisted manuscript, 31 October 2026.
++AI-assisted manuscript, 31 October 2026. Revision 2.
++The original 18-page manuscript and its review manifest remain unchanged
++in the sibling negative_voting_simplex_manuscript_20261031 folder.
+ 
+ STATUS
+ Internally audited proof candidate for independent review. No external
+@@ -15,11 +17,13 @@
+ assembly, discrete applications, and source ledger. The PDF is exported under output/pdf/.
+ 
+ The new arguments correspond to frozen sources be93031a,1eb5d9f6 and
+-84e1de62. The authoritative theorem statement is e05b2c1e. Earlier
++84e1de62. Revision 2 additionally proves the endpoint and zero-remainder
++facts explicitly from covariance concavity using 907e0360, repairing
++two notation issues (the min operator and the scalar iid maximum). The authoritative theorem statement is e05b2c1e. Earlier
+ endpoint, localization and local comparison results are stated precisely
+-as prior inputs rather than claimed to be reproved here. The 17 exact internal
++as prior inputs rather than claimed to be reproved here. The 18 exact internal
+ source copies and their complete SHA-256 hashes are in sources/ and
+-source_manifest.json. Three external primary references are represented
++source_manifest.json. Eight external primary references are represented
+ by URL/hash metadata only; their full articles are not bundled. Existing sources and master files were not edited.
+ 
+ BUILD
+@@ -29,7 +33,7 @@
+ /Applications/ChatGPT.app/Contents/Resources/tectonic/tectonic --keep-logs -o output/pdf main.tex
+ 
+ The engine writes output/pdf/main.pdf; rename this output to
+-negative_gaussian_simplex_stability.pdf after a successful build.
++negative_gaussian_simplex_stability_v2.pdf after a successful build.
+ 
+ REVIEW
+ The source ledger contains human-readable references and full hashes.
+@@ -42,3 +46,10 @@
+ the exact Frieze--Jerrum MAX-m-CUT ratio, with UGC explicitly required
+ for hardness. The optional simple-unweighted proof is cited to its
+ audited companion rather than reproduced.
++
++TRANSITIVE REVIEW COMPANION
++The unchanged dependency_review/ capsule supplies 34 internal sources
++with precise section scopes, external-input metadata and a verifier.
++Its old snapshot is documented in DEPENDENCY_REVIEW_NOTE.txt. The source
++ledger now includes the standard BL, Ehrhard, isoperimetric and Gaussian
++hypercontractive primary references. Only public metadata is included.

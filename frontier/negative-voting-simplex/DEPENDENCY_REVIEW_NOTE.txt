@@ -1,0 +1,13 @@
+V2 DEPENDENCY COMPANION
+
+The dependency_review directory is an unchanged copy of the independently
+prepared 34-source capsule. Its report compares against the frozen v1
+manifest; that historical snapshot remains correct. This v2 manuscript
+adds the 907e endpoint proof and CST reference explicitly, and includes
+the capsule so the remaining transitive prior-input proofs are available.
+Only the sections specified in SOURCE_MAP.json are mathematical inputs.
+No full copyrighted primary article is redistributed. The capsule is an
+internal provenance/completeness review, not external verification.
+
+Report SHA-256: 9a6abe3506e4f5f2d1a0bb5cdaf6e9d5c263451790dea38a3aec3772cb4ab0dd
+Map SHA-256: f96f4ae945ac0837b305ec727b2d91f28a763477bb8eb931f865cb2cc9041590

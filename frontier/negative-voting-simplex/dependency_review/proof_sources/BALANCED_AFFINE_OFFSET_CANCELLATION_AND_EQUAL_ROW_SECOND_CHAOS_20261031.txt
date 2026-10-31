@@ -1,0 +1,171 @@
+BALANCED AFFINE OFFSETS: EXACT CANCELLATION AND FINITE SECOND CHAOS
+31 October 2026. strong_signal_prior_art. Independent audit requested.
+
+THEOREM
+Fix kappa>0. Let B be centered, with m>=3 unit-norm rows, and let
+C=BB^T>=kappa P on1-perp. Let h be the mean-zero offsets for which
+f_i=1_{B_i.X+h_i=max_j(B_j.X+h_j)} has masses1/m. With the regular
+reference g and beta=mu_m/sqrt(m(m-1)),
+
+        A2(f)-A2(g)>=-K_kappa(1+log m) R_U(beta B).             (1)
+
+R_U is the exact fixed-mass covariance remainder; the offsets for
+beta B are beta h. Constants are independent of the ambient dimension.
+This extends the accepted equal-row result[Q] to NONZERO balancing
+offsets. No stochastic order for the affine maximum is assumed.
+Unequal row norms and rank loss remain outside this theorem. The
+calibrated sparse pair source[S] has slightly unequal centered rows,
+so it is not silently included despite being consistent with(1).
+
+1. Two distinct mean deficits
+Write L=1+log m, C_*=mP/(m-1), D=C-C_*, and let M_* be the regular
+unit-row maximum. Define
+ M_s=max_i(B_i.X+s h_i), F_s=E M_s, G_s=E M_s^2, 0<=s<=1.
+Let F_U(C)=F_1 be the balanced fixed-mass value. Thus
+
+ epsilon_bal=E M_*-F_1,
+ epsilon_free=E M_*-F_0,
+ delta=F_0-F_1,
+ epsilon_bal=epsilon_free+delta.                              (2)
+
+Both summands are nonnegative. Delta is the convex offset minimization
+gain, since F'_1=sum h_i/m=0. The free conical mean comparison follows
+from the primary Mulgund theorem used in[Q], regardless of whether the
+zero-offset conical cells have equal masses.
+
+The polynomial balanced covariance gap from[Q, Sections1-2] remains
+valid here:
+
+ epsilon_bal>=c_kappa exp(-B_kappa L)||D||_F^2.                (3)
+
+Indeed along C_u=C_*+uD one always chooses the BALANCED offsets.
+The proof of every intermediate facet lower bound uses these masses,
+not zero offsets. The covariance normal term gives(3), and at the
+endpoint the value is F_U(C)=F_1. No equality with the free value F_0
+is required. The derivative at C_* is still zero because tr D=0.
+
+2. The free maximum's second moment is paid by the balanced deficit
+Apply the transformed-CDF argument of[Q] to the zero-offset maximum
+M_0. The transformed covariance is R=(m-1)C/m+J/m. Its CDF gap H
+against the independent maximum is nonnegative by Mulgund's theorem,
+and the density-Hessian calculation gives
+
+ |H(t)|<=C_kappa sqrt(m)||D||_F^2 exp(-t^2/4).
+
+Its integral is sqrt((m-1)/m) epsilon_free. Split the first absolute
+threshold moment at T=K_kappa sqrt(L). The central part is at most
+T sqrt((m-1)/m) epsilon_free<=T epsilon_bal. The tail is paid by(3),
+with the same covariance-deficit amplitude. Consequently
+
+               (E M_*^2-G_0)_+<=C_kappa sqrt(L)epsilon_bal.    (4)
+
+This does not claim the sharper version with epsilon_free on the
+right. The balanced value deficit is precisely what is needed below.
+It also avoids asserting any CDF sign for M_1.
+
+3. The exact offset derivatives
+Let p_i(s) be the masses along the straight offset path, and let an
+ij facet have surface Gaussian mass mu_e(s), edge length ell_e,
+weight w_e(s)=mu_e(s)/ell_e, and Gaussian conditional mean m_e(s).
+Write h_e=h_i-h_j. The full-rank sites are affinely independent;
+the offsets give translated polyhedral fans. The ordinary Gaussian
+facet differentiation formulas are therefore valid. Gaussian tails
+justify their integration; lower-dimensional junctions have no surface
+contribution. Direct differentiation gives
+
+ F'_s=sum_i p_i(s)h_i,
+ F''_s=sum_e w_e(s)h_e^2,
+ G'_s=2sum_i h_i E[M_s f_i(s)],
+ G''_s=2sum_i p_i(s)h_i^2
+                  +2sum_e w_e(s)h_e^2 E[M_s|Gamma_e(s)].      (5)
+
+Also, if A_s=sum_i p_i(s)h_i^2, then
+
+                 A'_s=sum_e w_e(s)h_e^2(h_i+h_j).             (6)
+
+These are exact identities. In particular no terminal G'_1 is set
+to zero merely because the masses at1 are balanced. Balance only
+gives F'_1=0 and hence
+
+                    delta=int_0^1 s F''_s ds.                (7)
+
+4. Cancellation inside the quadratic certificate
+Put Q_i=E[(XX^T-I)f_i(1)] and
+T_i=B_i B_i^T-(B^TB)/m. Since sum Q_i=0 and the rows have norm1,
+the numerator in the quadratic certificate is
+
+ T:=sum_i<Q_i,T_i>
+   =E[(B_winner.X)^2]-1
+   =G_1-G'_1+A_1-1.                                         (8)
+
+Now integrate G'' and A' exactly:
+ G_1-G'_1=G_0-int_0^1 sG''_s ds,
+ A_1-2int_0^1 sA_s ds=int_0^1 s^2 A'_s ds.
+On an ij facet,
+ 2M_s-s(h_i+h_j)=(B_i+B_j).X.
+Combining(5),(6),(8) gives the cancellation identity
+
+ T=G_0-1-int_0^1 s sum_e w_e(s)h_e^2
+                                  (B_i+B_j).m_e(s) ds.       (9)
+
+The problematic terminal derivative cancels with the mixed affine
+terms of the exact quadratic certificate. Neither term was bounded
+separately. Equation(9) is valid before any estimate or sign claim.
+
+5. Paying the entire offset correction
+The endpoint mass condition implies
+ |h_i-h_j|/ell_e<=Phi^-1(1-1/m)<=sqrt(2log m),
+and therefore |h_i|<=2sqrt(2L) in the mean-zero gauge. Along s h these
+bounds only improve. The explicit facet shift construction of[Q,
+Section1] applies with the SAME fixed score matrix B at every s,
+whether or not the intermediate masses are equal: the endpoint offset
+bound is all that construction needs. Thus each tangent facet section
+has probability at least c exp(-B L), and its normal coordinate is
+bounded by sqrt(2L).
+
+A Gaussian set of probability p has conditional mean of norm at most
+sqrt(2log(1/p)), by the Gaussian entropy/centroid bound. Apply this in
+the facet tangent space, then restore its fixed normal coordinate.
+It follows that ||m_e(s)||<=C_kappa sqrt(L), uniformly over e,s.
+Since ||B_i+B_j||<=2, equations(7),(9) yield
+
+                   |T-(G_0-1)|<=C_kappa sqrt(L)delta.          (10)
+
+Combining(2),(4),(10),
+          T>=E M_*^2-1-C_kappa sqrt(L)epsilon_bal.             (11)
+
+6. The denominator and conversion to R_U
+Exactly as in[Q],
+ D_B:=sum_i||T_i||_F^2=m-tr(C^2)/m<=m(m-2)/(m-1)=D_*.
+Hence A2(f)>=T_+^2/(2D_*). The regular reference attains equality,
+with numerator E M_*^2-1. The elementary squared-positive-part
+comparison and(11) give
+
+ A2(f)-A2(g)
+ >=-[E M_*^2-1] C_kappa sqrt(L)epsilon_bal/D_*.
+
+Finally ||beta B||^2=w and F_U(beta B)=beta F_1, so
+ R_U(beta B)=beta epsilon_bal. Since beta is of order sqrt(L)/m,
+E M_*^2-1=O(L), and D_* is of order m, this is exactly(1).
+If D=0 the balanced offsets are0 and all deficits vanish; no division
+by a vanishing deficit is needed.
+
+What remains
+The exact offset identity(9) removes the missing CDF sign for balanced
+AFFINE endpoints when rows are equal. It does not remove unequal row
+norms: they alter both the trace subtraction and the quadratic-test
+denominator, and the free maximum no longer fits the primary
+equal-variance comparison. A common circumsphere translation creates
+additional mean and mixed affine terms; none is discarded here.
+There is no claim that actual optimizers have equal row norms or
+the lower covariance bound. No new full-noise or global conclusion.
+
+PINNED INPUTS
+[Q] CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt
+28c75e2e691e5b54c19bf3e8da1e69a3a6b84ed8aa7106dfad9d8db970ffa500
+[C] EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt
+d2611f1d80f447cadffd503e7d29a76ef84737d991700defedc141dc7bf614fd
+[S] SPARSE_CALIBRATED_PAIR_SECOND_CHAOS_AND_RELATIVE_LOSS_20261031.txt
+668f7bd6fe89c8b22918d85256278e7bf04c78357b00f85e7ecc8baeb7cc136f
+The fixed-mass covariance source and primary Mulgund bytes from[Q]
+are also pinned in the companion JSON. All prior files are unchanged.

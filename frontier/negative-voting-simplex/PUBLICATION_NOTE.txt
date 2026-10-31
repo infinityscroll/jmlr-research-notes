@@ -1,0 +1,9 @@
+PUBLIC REVIEW COPY — 31 OCTOBER 2026
+
+This package contains an internally audited proof candidate, not an externally verified result. The exact scope is every sufficiently large fixed number m of parts, all finite ambient dimensions N>=m-1, and the entire negative voting interval [-1/(m-1),0), without a mass constraint. Its discrete consequence is negative Plurality is Stablest; the exact Frieze–Jerrum MAX-m-CUT hardness consequence retains UGC. No numerical threshold m0 is provided.
+
+Read output/pdf/negative_gaussian_simplex_stability_v2.pdf first. The dependency_review/ companion contains the complete section-scoped chain of 34 internal proof sources. It preserves the historical first-edition snapshot; its missing-from-snapshot count is not a claim that those sources are missing from this package. They are all present here.
+
+Run python3 verify.py to check hashes, the audit record and the dependency map. These checks do not establish mathematical correctness. External primary articles are cited by URL, with byte hashes where available; no full third-party articles are distributed. Absolute original paths in frozen provenance records are historical metadata and are not needed to run the portable verifier.
+
+Separate AI-agent audits checked the new derivative lemma, summed radial bound, full signed assembly, direct competitive scope and manuscript transcription. Root checked the transfer to discrete voting/complexity and rendered layout. Expert mathematical scrutiny and stronger priority review remain outstanding.

@@ -1,0 +1,61 @@
+{
+  "status": "Independent AI-agent reconstructions and root checks; no external review or formal verification.",
+  "files": [
+    {
+      "path": "audits/CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_INDEPENDENT_PRIOR_ART_AUDIT_20261031.txt",
+      "sha256": "975e99321cc652dee0e33d5308cca84da65fce7b4a53d475e445cd559365778d"
+    },
+    {
+      "path": "audits/CALIBRATED_DIAGONAL_HAZARD_INDEPENDENT_CLEANROOM_AUDIT_20261031.txt",
+      "sha256": "3a4fb91570367f7ad250df11fe03c0e61ea72d1cd335719dbcec2d004e2e11a2"
+    },
+    {
+      "path": "audits/GLOBAL_SUMMED_RADIAL_SUPPORT_INDEPENDENT_CLEANROOM_AUDIT_20261031.txt",
+      "sha256": "b01e001b66655fac29d8cbe76e662c219ba8c2d4d5fa195c544b4c3a902d546e"
+    },
+    {
+      "path": "audits/GLOBAL_SUMMED_ROW_COERCIVITY_INDEPENDENT_BRANCH_AUDIT_20261031.txt",
+      "sha256": "6e8b0177fd4058476ed3cd8e4fa9ab4121a96242c92232747e0ee7c6666f86b4"
+    },
+    {
+      "path": "audits/CONDITIONAL_PROXY_TENSOR_FULL_VOTING_INDEPENDENT_CLEANROOM_AUDIT_20261031.txt",
+      "sha256": "6243c20ed365ee6ea8b71f6882c3b88e9e5cdb8efa1c61d91ae622e9bb1d20b1"
+    },
+    {
+      "path": "audits/CONDITIONAL_PROXY_TENSOR_FULL_VOTING_INDEPENDENT_PRIOR_ART_AUDIT_20261031.txt",
+      "sha256": "0fbf4af7306a9effa69000592db06f6a60c98cc892504db897b3200b7ea79945"
+    },
+    {
+      "path": "audits/PROXY_TENSOR_FULL_VOTING_INDEPENDENT_BRANCH_AUDIT_20261031.txt",
+      "sha256": "95d34374e423b0c89eaa9d4c0671cbe9a045a1cd9c1c5879967f12c574797134"
+    },
+    {
+      "path": "audits/DIRECT_COMPETITIVE_ASSIGNMENT_INDEPENDENT_PRIOR_ART_AUDIT_20261031.txt",
+      "sha256": "76312960fae685e5dec7ece33568861023505ca05c1d5f934bcb722b75084ef1"
+    },
+    {
+      "path": "audits/DIRECT_COMPETITIVE_NO_ATTAINMENT_INDEPENDENT_CLEANROOM_AUDIT_20261031.txt",
+      "sha256": "5d4b61342487efab263d7bcb4750f8d289fcec4c3679025873c3052289ea2f2e"
+    },
+    {
+      "path": "audits/ROOT_CALIBRATED_HAZARD_AND_GLOBAL_SUMMED_RADIAL_COERCIVITY_AUDIT_20261031.txt",
+      "sha256": "b7b15543402998e86e86239ba21019f3b1c585e8dd28c99a119c1dca72c399d5"
+    },
+    {
+      "path": "audits/ROOT_NEGATIVE_PLURALITY_AND_MAX_M_CUT_TRANSFER_AUDIT_20261031.txt",
+      "sha256": "cf23931424c82e2f3cd24910405549bdb5bebd9de5e3bce16c84524297402a12"
+    },
+    {
+      "path": "audits/NEGATIVE_VOTING_MANUSCRIPT_V1_CONTENT_AUDIT_20261031.txt",
+      "sha256": "4f11fa404b5f1c5c2f247907736ab6895f9c7d0f8ffe43eb6ad7e3e37de579e1"
+    },
+    {
+      "path": "audits/NEGATIVE_VOTING_MANUSCRIPT_V2_DELTA_AUDIT_20261031.txt",
+      "sha256": "1dc801ea00df0b9003b3708e10b0f7f8d3ddfba7f507d118f162d2ef339e3346"
+    },
+    {
+      "path": "audits/ROOT_NEGATIVE_VOTING_V2_FINAL_LAYOUT_AND_PACKAGE_QA_20261031.txt",
+      "sha256": "5ecd6b70d2a43d34db641d2ad0a0c5eda9597a05e132c2bd11d3daa63926746a"
+    }
+  ]
+}

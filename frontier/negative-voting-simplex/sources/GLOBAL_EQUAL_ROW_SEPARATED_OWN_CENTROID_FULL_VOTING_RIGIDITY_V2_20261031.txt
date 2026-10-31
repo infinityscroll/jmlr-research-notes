@@ -1,0 +1,394 @@
+GLOBAL EQUAL-ROW, SEPARATED OWN-CENTROID FULL-VOTING RIGIDITY
+31 October 2026. strong_signal_prior_art. Candidate for full hostile audit.
+
+THEOREM
+Fix c_sep>0. For sufficiently large m depending only on c_sep, let
+N>=m-1 and let f be ANY measurable simplex-valued balanced assignment
+in Gaussian R^N. Write B_i=E[X f_i] for its ACTUAL centroid rows.
+Assume
+ |B_i| is the same for every i,
+ |B_i-B_j|>=c_sep/m for every i!=j.                           (1)
+No affine, conical, rank, interface, or score-neighborhood hypothesis
+on f is made. With alpha=mu_m/(m-1), w=alpha^2(m-1), L=1+log m,
+and R(B)=(w+||B||_F^2)/2-F_U(B), uniformly for0<r<=1/(m-1),
+
+                    S_-r(f)-S_-r(g)>=r R(B).                (2)
+
+In particular competitiveness forces a regular-simplex assignment.
+The two centroid hypotheses in(1) remain EXPLICIT. Existing actual
+pair-separation theorems do not supply equality of row norms or exact
+balance. This is not the unrestricted named conjecture.
+
+The proof extends the structured weighted cap of[L] to weak radial
+exposure of order m^-2, paying only logarithmic losses. It retains the
+positive centroid-residual term, so it does not assume a generic global
+conversion of an affine score deficit into a partition moment deficit.
+The new rank-free offset input[O] is used at its exact stated scope.
+
+1. Reductions and exact deficit conventions
+Put a=||B||_F, and align a regular centroid matrix B0 so that
+d=||B-B0||_F is the Procrustes distance. Balance implies sum B_i=0.
+The balanced first-moment theorem[C] gives a^2=W(f)<=w.
+Let f0 be the balanced affine optimizer of B, with mean-zero offsets h,
+and let M be its centroid matrix. Sites are distinct by(1), so the
+assignment is pure except on Gaussian-null hyperplanes, even if its
+affine span has deficient dimension. Let
+ L_route=F_U(B)-a^2=<B,M-B> >=0.
+Then
+
+ R=(w-a^2)/2-L_route>=0,
+ 2R=w-||M||_F^2+||M-B||_F^2.                                (3)
+
+Nonnegativity is the accepted balanced endpoint dual, not an Euler
+equation for f. Comparing F_U(B) with the regular assignment also gives
+ R<=d^2/2. The usual centroid entropy bound yields |B_i|<=C alpha.
+
+If d<=1/m, theorem[L] with its fixed A=1 already gives(2). Its stronger
+large-m coefficients may be used for the equality discussion. Hence
+the new proof concerns d>1/m.
+
+If a^2<w/4, a direct parity comparison suffices. Rare-cell
+hypercontractivity gives an adverse odd tail at most C r^3 L^3/m for
+f, while A2(g)<=C L^2/m and its even tail>=4 is at most C r^4 L^4/m.
+Consequently
+ S(f)-S(g)>=r(w-a^2)-C[r^2L^2+r^3L^3+r^4L^4]/m
+           >=(3/4-o(1))r w.
+But R<= (w-a^2)/2<=w/2. Thus(2) holds, strictly beyond its coefficient
+for large m. We may henceforth assume
+
+                 sqrt(w)/2<=a<=sqrt(w), d>1/m.               (4)
+
+Normalize only when applying a theorem that requires it:
+Bhat=(sqrt(w)/a)B and hhat=(sqrt(w)/a)h. The assignment f0 is unchanged.
+The exact relation is
+ R(B)=(a-sqrt(w))^2/2+(a/sqrt(w))R(Bhat).
+Thus R(Bhat)<=2R(B). The row cap for Bhat is still C alpha.
+The global offset certificate[O] gives
+
+             ||h||^2<=C L^2 R(B), hence ||h||<=C Ld.          (5)
+
+The first inequality follows by scaling its normalized conclusion:
+R(Bhat)/(sqrt(w)/a)^2<=R(B)/(sqrt(w)/a)<=R(B).
+
+2. Weak exposure supplies rank-free polynomial geometry
+Equal row norms imply the exact weak-exposure identity
+
+ B_i.(B_i-B_j)=|B_i-B_j|^2/2>=c_sep^2/(2m^2).               (6)
+
+This is weaker than the fixed-alpha^2 exposure hypothesis in[E]. We
+therefore derive every changed bound, rather than importing that theorem
+with a parameter that secretly depends on m.
+
+For any affine diagram of these sites, Gaussian integration by parts
+gives M'_i=sum_j w_ij(B_i-B_j), w_ij=mu_ij/ell_ij. If its i-th cell has
+mass at most C'/m, its centroid norm is at most C sqrt(L)/m. Dot with
+B_i and use(6). This gives
+
+ deg_i=sum_j w_ij<=C L,  sum_j mu_ij<=C alpha L,
+ c_sep/m<=ell_ij<=C alpha.                                  (7)
+
+For a one-label offset INCREASE STARTING FROM THE BALANCED f0,
+consider the path only until p_i reaches2/m. Along this path
+1/m<=p_i<=2/m, so the centroid entropy bound is
+|M'_i|<=p_i sqrt(2log(1/p_i))<=C sqrt(L)p_i. Equation(6) therefore
+gives the relative bound p_i'<=C m L p_i. Gronwall on an interval
+of length c/(mL), with c sufficiently small, prevents reaching2/m.
+An offset DECREASE FROM THE SAME BALANCED f0 only reduces its mass;
+the absolute degree bound(7) remains valid. Thus the degree bound
+holds on both short one-label offset intervals based at f0.
+No relative ODE bound is asserted for an arbitrary diagram with
+arbitrarily tiny initial p_i, where sqrt(log(e/p_i)) must be retained.
+Exact entry/exit set identities at the balanced f0 then give
+
+ gamma(c_i^-<=s, old cell i),
+ gamma(c_j^+<=s, outside old cell j) <=C Ls,
+                                      0<s<=c/(mL).          (8)
+
+Every triple has a polynomial lower altitude. Choose its longest side
+and the opposite vertex B_i; its perpendicular projection Q lies on
+the segment joining the other two vertices. Equation(6) gives
+B_i.(B_i-Q)>=c_sep^2/(2m^2). Since |B_i|<=C alpha, the smallest altitude
+is at least
+
+                             c/(m sqrt L).                  (9)
+
+In particular no triple is collinear. This argument is the one in[E],
+with the weak exposure tracked explicitly. Full label rank is not used.
+The positive balanced endpoint masses also give, for every pair plane,
+
+                |h_i-h_j|/ell_ij<=sqrt(2log m).              (10)
+
+All pair distances, triple altitudes, and offsets entering the finite
+normal-fiber estimates are therefore bounded by fixed powers of m.
+
+3. Weighted plane summation with no minimum facet probability
+For q0=C0 L, the incident effective weights satisfy
+ sum_j mu_ij^(1-1/q0)/ell_ij
+ <=(m/c_sep)m^(1/q0)(C alpha L)^(1-1/q0)
+ <=C L^(3/2).                                               (11)
+This is just Holder over at most m-1 incident labels and(7).
+
+On a pair hyperplane at normal coordinate b, the standard Gaussian
+surface law is phi(b) times its tangent Gaussian law. Holder therefore
+gives, for any label field P_i,
+ int_(facet ij) |P_i|^2 dgamma_surface
+ <=mu_ij^(1-1/q0)phi(b)^(1/q0)
+                     ||P_i||_(L^(2q0)(whole pair plane))^2. (12)
+The factor phi(b)^(1/q0) is bounded above. Equations(11)-(12) sum
+whole-plane estimates with a loss of at most C L^(3/2).
+
+For smoothed L2 fields, the exact one-normal-coordinate OU row and
+tangent hypercontractivity bound their whole-plane L^(2q0) norms by
+C times the input L2 norm at time t=c0/sqrt L, with c0 sufficiently
+small. Here(10) bounds b^2 by C L. Equivalently one may use the exact
+offset cancellation in[T]. For products below, choose c0 smaller once
+to accommodate the finitely many fixed multiples of q0 in Holder.
+No intrinsic facet probability, inverse Gram matrix, or ambient
+Gaussian determinant enters this estimate.
+
+4. Exact signed energy and the reference gap
+Set v=f-f0, q0=T_-r Pi_(>=2)g, qB=T_-r Pi_(>=2)f0, and
+u=T_sqrt(r)Pi_(odd>=3)v. Then ||u||<=sqrt2 r^(3/2). Precisely as in[L],
+Hermite orthogonality and retaining the odd square give
+
+ S(f)-S(f0)>=r||M-B||^2+||u||^2
+                         +2[r L_route+<v,q0+A>],
+ A=qB-q0-T_sqrt(r)u.                                        (13)
+
+Only the nonnegative even square has been dropped. The positive
+r||M-B||^2 term will be used, not absorbed into an error.
+
+Let i be the old affine winner. Write
+c_ij=(B_i-B_j).X+h_i-h_j>=0 and delta l_i=(B_i-B0_i).X+h_i.
+The exact regular Mehler gap[R] provides positive k_ij with
+(T_-r g)_j-(T_-r g)_i=r k_ij(B0_i-B0_j).X. Thus
+
+ r c_ij+q0_j-q0_i
+           =r k_ij c_ij+r(1-k_ij)(delta l_i-delta l_j).       (14)
+
+This identity applies even when i is not the regular winner. Swapping
+the two labels gives the same positive ratio on the other side of a
+regular face, and its divided-difference extension handles that face.
+
+Use exactly the common damping and smooth range majorant of[L]:
+ M0=[E(max Z_i)^2-1]/mu_m=O(sqrt L),
+ eta=4(M0^2+1)r^2/(1-r^2),
+ kappa=exp(-1-eta|P0 X|^2)<=1,
+ Wrange=log(sum exp X_i)+log(sum exp(-X_i)), X_i=B0_i.X/alpha,
+ e_r=C[r^2+r sqrt(L)Wrange+r^2 Wrange^2]
+                     exp(C[r sqrt(L)Wrange+r^2 Wrange^2]).
+Then k_ij>=kappa and |k_ij-1|<=e_r. Define
+
+                psi_i=kappa^(-1)[e_r|delta l_i|+|A_i|/r].    (15)
+
+For j!=i, the cost in(14) including A is bounded below by
+r kappa(c_ij-psi_i-psi_j). The same-label j=i term stays exactly0;
+it is excluded from the rewards. Since kappa<=1, summing against f
+gives
+
+ r L_route+<v,q0+A> >=-r Bcap(psi),
+ Bcap(psi)=int max(0,max_(j!=i(X))[psi_i+psi_j-c_ij]).         (16)
+
+5. Whole-plane forcing bounds, including all radial moments
+All moment exponents in this section are fixed multiples of q0=C0 L.
+They do not depend on the amplitude of f-f0 or on r. On the full
+Gaussian space and on every pair plane, with normal shifts |s|<=1,
+
+          ||kappa^(-1)||_q<=C, ||e_r/r||_q<=C L^(3/2).        (17)
+
+The same quantities and their first two normal derivatives have fixed
+polynomial m bounds when only fixed moments such as L32 are required.
+To verify these statements, Wrange has L^q norm at most C(L+sqrt q):
+its coordinate means on a plane are O(sqrt L), variances at most1,
+and the Gaussian maximum union bound applies. Its gradient norm is
+at most2 and its Hessian operator and Frobenius norms at most2.
+The explicit exponent above is integrable at the chosen q since
+r L^(3/2)->0 and q r^2->0 uniformly on voting r.
+
+For the radial factor, a Gaussian on a plane has mean of norm O(sqrt L)
+and covariance at most I. The auxiliary Gaussian integral gives
+ E exp(b|P0Y|^2)<=(1-2b)^(-m/2)
+                  exp[b|P0 E Y|^2/(1-2b)].
+Apply this at b=q eta. The bound q eta m=O(L^2/m) makes it uniform.
+Normal derivatives add only fixed-degree polynomials with eta or eta^2
+coefficients. This proves(17) and the needed normal bounds without
+conditioning on a possibly tiny facet. Restricting to actual facets
+will instead use(11)-(12).
+
+Let epsilon0=(1/2)||f0-g||_1. The global routing argument[G, Sections2-3]
+uses only optimality of f0 at B and W(f0)<=w, not ||B||^2=w. Thus
+
+                     epsilon0<=min(1,C sqrt(m)d).            (18)
+
+Indeed its regular routing loss is at most2d^2 by the same Cauchy
+argument. At t=c0/sqrt L, rare-cell hypercontractivity also gives
+||T_t(f0-g)||^2<=C epsilon0/m, as in[G, Section4]. Exact factorization
+therefore yields
+
+ qB-q0=T_t v_D, ||v_D||<=C r^2 L^2 sqrt(epsilon0/m),
+ T_sqrt(r)u=T_t v_u, ||v_u||<=C r^(3/2)L^(3/2)||u||.          (19)
+
+The first identity uses v_D=T_(-r/t^2)Pi_(>=2)T_t(f0-g).
+All times have absolute value at most1 for large m. This replaces the
+conditioned score-path estimate in[L]; no score-rank assumption is used.
+
+From(5), whole-plane linear norms give
+ (sum_i||delta l_i||_q^2)^(1/2)<=C Ld.
+Combining with(17)-(19),
+ (sum_i||psi_i||_q^2)^(1/2)
+ <=C[r L^(5/2)d+r L^2 sqrt(epsilon0/m)
+                                     +sqrt(r)L^(3/2)||u||]. (20)
+The same labelwise estimates hold on every whole pair plane, with
+the right label's coefficient/input norm. Equations(11)-(12), using
+fixed extra Holder factors for kappa and e_r, then give
+
+ sum_(e=ij)ell_e^-1 int_(facet e)(psi_i^2+psi_j^2)
+ <=C[r^2L^7 d^2+r^2L^6 epsilon0/m+rL^5||u||^2].              (21)
+
+For example the reference part costs L^(3/2) from(11) times
+r^2L^3 sum_i[L|delta B_i|^2+h_i^2], at most Cr^2L^(13/2)d^2.
+The other terms cost L^(3/2) times ||v_D||^2/r^2 or ||v_u||^2/r^2.
+The displayed integer powers safely bound these quantities.
+
+6. A structured cap at every amplitude under weak exposure
+Set
+ theta=C1 L^6[r(d+sqrt(epsilon0/m))+sqrt(r)||u||].             (22)
+If theta=0 the forcing is zero. Otherwise v_i^*=psi_i/theta has
+bounded vector L^q norm by(20), and its summed facet squares are
+bounded by(21). Since d<=2sqrt w, epsilon0<=1 and
+||u||<=sqrt2r^(3/2),
+ theta<=C L^(13/2)/m^(3/2)<=m^(-5/4)
+for large m. We prove
+
+                         Bcap(psi)<=C L theta^2.             (23)
+
+For theta>=m^(-B_*) use the source/target margin split
+(a+b-c)_+<=[(2a-c)_++(2b-c)_+]/2. Equation(8) and the elementary
+L^q bathtub proof in[V] give
+ C[(CL)^((q-1)/(q+1))m^(1/(q+1))
+       theta^(2q/(q+1))+a_* (Ctheta/a_*)^q],
+ a_*=c/(mL).
+At the FIXED exponent q=C0 L and polynomial amplitude interval
+m^(-B_*)<=theta<=m^(-5/4), this is at most C_(B_*) L theta^2.
+The second term is smaller because theta/a_*<=C L m^(-1/4).
+
+For arbitrarily smaller theta, the complete fiber proof of[S] applies
+with the following explicit substitutions. Pair lengths are at least
+c/m, triple altitudes at least c/(m sqrt L), and normal offsets at most
+C sqrt L by(7),(9),(10). These are polynomial geometry bounds, so all
+slab widths and third-label strip estimates in that proof cost only a
+fixed power of m. In particular a positive reward on a good normal
+fiber has width at most C m theta H, where H is its normal-sup cutoff;
+off-facet projections lie in third-label strips of polynomially bounded
+width. No inverse full Gram matrix or label rank is involved.
+
+On each entire pair plane and normal shifts |s|<=1, the normalized
+fields v_i^* have L32 normal-sup and normal-Lipschitz bounds at most
+m^K, with fixed K. Here are the amplitude checks. For the reference
+part use e_r/r, (17), and r d/theta<=C L^-6. For smoothed inputs use
+ ||v_D||/(r theta)<=C r L^2 sqrt(epsilon0/m)/theta<=C,
+ ||v_u||/(r theta)<=C sqrt(r)L^(3/2)||u||/theta<=C.
+The one-dimensional OU row, its first two normal derivatives, and
+tangent hypercontractivity control these inputs on every whole plane.
+Products with kappa^(-1) are paid by(17). The absolute values in(15)
+are locally Lipschitz; their first derivative is bounded by that of
+the analytic underlying factor. Analytic second derivatives control
+the first-derivative normal supremum. Thus no reciprocal r or vanishing
+label amplitude remains. Full-space L32 bounds hold as well.
+
+Choose H=theta^(-1/8). The good-fiber Taylor and off-facet strip errors
+are at most m^K theta^3 H^3; bad projected points cost at most
+m^K theta H^-31; normal distances beyond1 cost at most m^K theta^32.
+These are the exact types of errors in[S] and[L], now using the above
+polynomial pair and triple bounds in place of conditioning. The main
+term is at most C theta^2 times the summed INDIVIDUAL facet squares
+of v_i^*, as in[L]'s positive-forcing proof. Equation(21) pays it.
+Hence, below a fixed polynomial threshold,
+ Bcap(psi)<=C theta^2+C m^K theta^(21/8).
+Choose B_* larger than that threshold exponent and8K/5. The remainder
+is quadratic for every theta<=m^(-B_*). This meets the preceding
+moderate regime and proves(23) for all amplitudes.
+
+The Holder exponents and radial-moment exponents remain fixed functions
+of m throughout. There is no log(1/theta) exponent and no lower
+amplitude floor. Equations(22)-(23), with harmless larger integer
+powers, imply
+
+ Bcap(psi)<=C[r^2L^16(d^2+epsilon0/m)+rL^16||u||^2].         (24)
+
+7. The global relative actual-to-affine transfer
+Insert(24) into(13),(16). Since Cr^2L^16 tends to zero uniformly on
+voting r, the positive ||u||^2 absorbs its error, leaving
+
+ S(f)-S(f0)>=r||M-B||^2-Cr^3L^16(d^2+epsilon0/m).            (25)
+
+The global covariance bootstrap[G, Section1] also applies to the
+UNNORMALIZED own-centroid B. Indeed K=BB^T/alpha^2 need not have
+trace m-1: its tangent derivative at P is(alpha^2/2)tr(K-P), and
+R(B) is exactly that tangent remainder. The same initial curvature
+integration therefore gives
+ R>=c alpha^2 e^2/m min(1,c/[L e]),
+ e=||K-P||_F>=q:=||K^(1/2)-P||_F=d/alpha.
+Since d>1/m, it again yields R>=c q/m^3. Also a<=sqrt w gives
+q<=2sqrt(m-1). Consequently
+
+ d^2<=C m^(3/2)L R,
+ epsilon0/m<=C m^(3/2)sqrt(L)R,                              (26)
+
+the second using(18). Thus(25) becomes
+
+ S(f)-S(f0)>=r||M-B||^2-Cr^3m^(3/2)L^17R.                   (27)
+
+This is relative to the exact own-score remainder. An additive
+rare-cell tail was not substituted for it.
+
+8. Full signed comparison and residual cancellation
+The normalized Bhat has equal rows and balanced affine target f0.
+Combine[A] with the GLOBAL entire-tail theorem[G] to obtain
+ S(f0)-S(g)>=r[w-||M||^2]
+                  -C[r^2L+r^3 C_m]R(Bhat),
+ C_m=mL^11+m^(7/4)L^(7/2).
+By(4), R(Bhat)<=2R. Add(27) and use the EXACT identity(3):
+
+ S(f)-S(g)
+ >=[2-CrL-Cr^2(C_m+m^(3/2)L^17)] r R.                       (28)
+
+All error coefficients tend to zero uniformly for0<r<=1/(m-1).
+For large m depending only on c_sep, the coefficient is at least3/2.
+Together with the easy low-norm case and the accepted inside-ball
+theorem[L], this proves(2). Equality/competitiveness at the reference
+energy forces R=0. Equation(3) and the balanced endpoint theorem then
+force M=B to be a regular centroid matrix. Since B is also the actual
+centroid matrix of f, endpoint equality forces f itself to be regular,
+including for initially fractional assignments.
+
+SCOPE
+The result removes global affine geometry, rank and score proximity
+from the OWN-centroid comparison, under exact balance, equal actual
+row norms, and the displayed pair gap. Those remaining hypotheses
+are not supplied by an assertion that an affine comparison is an
+optimizer. No generic R-versus-Delta conversion has been used.
+The unrestricted mass/equal-row reduction remains separate. All
+predecessor files are unchanged.
+
+PINNED INPUTS
+[L] OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt
+1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd
+[O] RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt
+41d649be507020bb178315c9ac6249aa98a6f6e9b432fd6964613ade3ae7d318
+[G] GLOBAL_RANK_FREE_AFFINE_SIGNED_HIGHER_TAIL_COMPARISON_20261031.txt
+5edacd0c4ac2adc8dc0e0b1960ba976945ba9cbe236121e081b32a18c460cd59
+[A] RANK_FREE_BALANCED_EQUAL_ROW_AFFINE_SECOND_CHAOS_20261031.txt
+49a09379a2e628e903ae6df18fd6b14fe792635a2bfc5212bf3c67d8269107ff
+[R] SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt
+f0f22a63d1b021ac51bd363622e2b36514043abf88575372727dc8ebadabba3f
+[V] FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt
+3b6bd981d0508f8ce9487b27659b4203473266fb7721f4acb0f8c3d74793f3a1
+[S] ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt
+aca4da1519de156b684a61425e733eb7f1f9b58621f324ded01a0df2cf8ba58a
+[T] AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057
+[E] RADIAL_EXPOSURE_ALL_AMPLITUDE_CAP_AND_UNIFORM_EL_ROUTING_20261031.txt
+5ba88d656ffb096ec9675959a4191e390210650c2212b326dd4007d978efea37
+[C] ../all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b

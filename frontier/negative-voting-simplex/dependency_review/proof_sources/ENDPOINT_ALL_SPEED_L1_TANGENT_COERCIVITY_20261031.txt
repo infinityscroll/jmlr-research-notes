@@ -1,0 +1,154 @@
+BALANCED ENDPOINT: THE ALL-SPEED L1 TANGENT SCALE
+31 October 2026. strong_signal_prior_art. A local reduction, not global stability.
+
+SCOPE
+For all sufficiently large m and every finite N>=m-1, the first-moment
+functional W(A)=sum_i |int_Ai x dgamma|^2 has, at the regular simplex,
+an explicit positive spectral gap on balanced interface velocities modulo
+ambient rotations. Its conversion to the first-order partition L1 metric
+has order m^2/log m. This verifies the proposed GLOBAL coercivity scale
+at the full tangent space. It does not provide a nonlinear neighborhood
+uniform in m or a global deficit barrier.
+
+PINNED INPUTS
+[A] ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt
+ec1edf184fef18a6630fe0007762943cc142d0b7a32dc61e01b83429b35ec633
+[S] ../full_ssc_instability_20261031/large_m_tracefree_shape/TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt
+1f5c1ee8ccb882a880813691613526c0717c54ea46a4decc12faaf7bd7dfb500
+[C] CROSS_POLYTOPE_MOMENT_LOCALIZATION_AND_PARTITION_DISTANCE_OBSTRUCTION_20261031.txt
+27728eb77e498bb97c4fff8a6319f7f266d2c4f1fd7eb12319914fe81cd191ba
+[E] ../all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+The decomposition below is independently reconstructed from the exact
+facet moments in[A, Sections2,4,5] and[S, Sections1-3]. No negative-noise
+finite-change assertion is used.
+
+1. Reference form
+Put H=1-perp in R^m, v_i=P e_i, P=I-11^T/m, and
+ g_i={x in H:x_i=max_j x_j}, alpha=mu_m/(m-1), b_i=alpha v_i,
+ ell=sqrt2 alpha, s=ell/m,
+ lambda_e=gamma_H dH^(m-2)|Sigma_e.
+Unused ambient coordinates carry independent standard Gaussian measure.
+Let f_e be consistently oriented normal velocities with finite
+ sum_e int f_e^2 dlambda_e. Set
+ N(f)=ell sum_e int f_e^2 dlambda_e,
+ A_0(f)=sum_i |sum_e B_ie int f_e dlambda_e|^2,
+ A_1(f)=sum_i |sum_e B_ie int x f_e dlambda_e|^2,
+ Q(f)=N(f)-A_1(f).
+Here B is the complete-graph incidence matrix, and x includes all ambient
+coordinates. Balanced first variations are exactly A_0(f)=0. The exact
+endpoint half-Hessian is
+                         -W''(0)/2=Q(f).                         (1)
+This follows by differentiating the first moments: the quadratic term is
+A_1, and the reference normal derivative of (b_i-b_j).x is ell. The
+reference first variation vanishes on every interface, so acceleration
+contributes no missing term. For actual balanced paths, second-order mass
+repair also leaves(1) unchanged.
+
+2. Complete intrinsic spectrum relevant to the gap
+Let T have density proportional to phi(t)^2 Phi(t)^(m-2), and write
+ M=ET, v=Var(T)-1/m,
+ V=E[1-T phi(T)/Phi(T)-(phi(T)/Phi(T))^2].
+In the first two moment representer space, the intrinsic velocities split
+orthogonally in N into rotations, a two-copy standard space, and the
+symmetric shape space. Explicitly the standard velocities are
+ (u_i-u_j)+(z_i-z_j)(x_i-M), u,z in H, on Sigma_ij;
+the shapes are (T_i-T_j).x/sqrt2 with T=T^T,T1=0,T_ii=0.
+To verify completeness, split a centered score matrix into skew and
+symmetric parts, discard its scalar P part (zero speed), remove the
+diagonal by P diag(z)P, and leave the symmetric zero-diagonal matrix.
+Constant speeds supply the other standard copy. The N-orthogonal
+complement has A_0=A_1=0, so Q=N there.
+
+Mass tangency kills u in the standard block. Exact facet moments then give
+ N_std=m^2s^2 v|z|^2,
+ A_1,std=m^2s^2 [m/(m-2)]v^2|z|^2,
+ Q_std/N_std=1-mv/(m-2)>=1/2.                                    (2)
+The inequality uses Var(T)<=1/2, a consequence of the tie density's
+potential having second derivative at least2. Degenerate zero vectors
+are simply omitted from the quotient.
+
+The exact shape contractions in[S] give
+ N_sh=m(m-1)s^2 V ||T||_F^2/2,
+ A_1,sh=(m-1)^2s^2 V^2 ||T||_F^2/2,
+ Q_sh/N_sh=kappa_m:=[m-(m-1)V]/m.                                (3)
+Rotations have Q=0 and annihilate the bilinear form. Orthogonality of
+standard and symmetric zero-diagonal shapes follows either by expanding
+the index contractions or by the permutation-invariant tensor argument
+in[A, Section4]. It is not inferred merely from quadratic vanishing.
+
+For m>3 the tie integration-by-parts identity is
+ 1-V=m(2ET^2-1)/[(m-2)(m-3)].
+Since ET^2~2log m, this yields
+                  kappa_m~4log(m)/m.                            (4)
+Consequently kappa_m<1/2 for all sufficiently large m, and the exact
+smallest positive intrinsic eigenvalue is kappa_m. The shape space is
+nonzero for m>=4.
+
+3. Unused ambient coordinates
+Expand velocities in Hermites of the unused coordinates. In external
+degree0 the preceding calculation applies. In degree1, only the constant
+intrinsic moment contributes to A_1. The constant cut space has Q=0:
+these are precisely rotations mixing H and that extra coordinate.
+On its N-orthogonal complement the complete-graph identity BB^T=mP and
+s=ell/m give A_1=0, hence Q=N. All external degrees>=2 have A_1=0 as well.
+This is the direct endpoint argument; it does not take a nonuniform
+weighted-space limit as negative correlation tends0.
+
+If R is the finite-dimensional space of all nonzero ambient rotation
+velocities and f_perp is the N-orthogonal projection off R, then
+              Q(f)>=kappa_m N(f_perp), A_0(f)=0.                 (5)
+The nullspace is exactly R. Smooth compact regular-patch velocities are
+dense in this L2 form domain, with the finite mass constraints repaired
+by compact cut-space tests. Thus the form statement extends to all such
+L2 velocities.
+
+4. Direct first-order L1 estimate
+The sum of the unoriented facet Gaussian masses is binom(m,2)s. Hence
+for any velocity h, Cauchy gives
+ [2 sum_e int |h_e| dlambda_e]^2 <=2(m-1)N(h).
+Choosing h=f_perp, and then allowing the better L1 choice of rotation,
+ D_1(f):=inf_(r in R) 2 sum_e int |f_e-r_e| dlambda_e
+ satisfies
+ D_1(f)^2 <=[2(m-1)/kappa_m]Q(f)
+            ~[m^2/(2log m)]Q(f).                                (6)
+For an actual smooth balanced path with this initial velocity, rotating
+the reference at the selected first-order rotation gives
+ limsup_(t->0) dist_L1(A(t),regular)^2/t^2 <=D_1(f)^2.
+Together with w-W(A(t))=Q(f)t^2+o(t^2), this proves the desired order of
+coercivity along every nonrotation tangent direction. For a pure rotation
+velocity, both displayed quadratic terms vanish and no claim about their
+higher-order ratio is made.
+
+5. Exact global transport split and what is still missing
+For an arbitrary balanced assignment f, let B be its centroid matrix,
+W=||B||_F^2, and F_B the maximal linear score E sum_i g_i B_i.X among
+balanced assignments. Let g_B be an optimizer with centroid matrix M.
+Define R_B=F_B-W and G_B=w-[2F_B-W]. Then
+ R_B>=0, G_B>=0,
+                  w-W=G_B+2R_B,
+                  ||M-B||_F^2<=G_B.                            (7)
+Indeed W(M)=W+2R_B+||M-B||^2<=w. The global endpoint theorem gives the
+last bound; existence of the linear transport optimizer is the standard
+finite-target Gaussian transport problem. Coincident score sites may
+have nonunique allocations; no unique fan is assumed in that case.
+
+Equation(7) separates routing loss and score-shape loss without a factor
+of log m. The unresolved step is a finite, coupled control of partition
+distance by these two losses at scale m^2/log m. Applying a worst-case
+centroid estimate and a separate regular-score margin bound loses that
+logarithm. Equation(6) does not repair this globally: its neighborhood may
+shrink with m, and first-moment localization does not place a partition
+inside any proved uniform nonlinear neighborhood.
+
+A sufficient weaker GLOBAL gate for BALANCED competitors at the improved
+actual-noise deficit scale is a fixed-distance barrier: for every eta>0,
+ liminf_(m->infinity) [m^2/log m]
+ inf{w-W(f): f balanced, dist_L1(f,regular)>=eta}>0.                (8)
+Then a balanced deficit O(m^-2) would imply L1 convergence. The actual
+negative-noise competitors are only near balanced; applying this route
+to them also requires a compatible near-balanced extension or a mass
+repair whose deficit cost is controlled at this scale. Neither that
+extension, (8), nor its quantitative eta^2 strengthening is proved here.
+The cross-polytope source[C] is consistent with both and shows why the
+older O(log m/m^2) localization alone cannot establish convergence.

@@ -1,0 +1,80 @@
+CALIBRATED DIAGONAL HAZARD DERIVATIVES: INDEPENDENT FULL AUDIT
+31 October 2026. strong_signal_prior_art.
+
+PASS at the exact coordinate-box scope stated. Full source:
+CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt
+SHA256 be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200.
+All six manifest pins verified. No source edits.
+
+I independently reconstructed the following points.
+
+1. The threshold integrals. For i!=j, W a_i a_j equals the exact
+Gaussian offset-facet weight integrand. The i=j integral is an auxiliary
+quantity, not a physical facet. In the nonnegative region, comparison
+with the largest standardized threshold gives the upper integrand in
+(8), including the analytic diagonal's bounded extra reciprocal CDF.
+Using the smallest standardized threshold gives the lower bound. For
+that lower bound one may restrict to a fixed central quantile interval
+of the reference tie density; its squared threshold is O(L), and the
+coordinate perturbation exponent is bounded. This avoids needing any
+uniform pointwise lower comparison in the extreme tails.
+
+2. Uniform moments. After u=Phi(z), the numerator is bounded by
+m^p times the Beta-type integral with power s^(p+1-2theta), exactly as
+printed. The factor m^(2theta) is bounded because theta=O(1/L), with
+fixed p,q. Dividing by Z0 comparable to sqrt(L)/m^2 yields the claimed
+L^((p+q)/2). Negative thresholds have a product CDF bounded by an
+exponentially small factor in m times a Gaussian in sqrt(m)x; the
+hazards there grow only linearly. The middle interval near zero is
+also exponentially small. These estimates apply to every fixed moment
+used later, including repeated indices, with no hidden Frobenius factor.
+
+3. The inverse and continuation. Subtracting a complete graph of weights
+c alpha/m gives an L1-contracting remainder heat semigroup. Integrating
+it proves the inverse L1 estimate, and the row equation with bounded
+weights gives the stated component estimate. Both steps are necessary.
+The first offset bound then closes the small coordinate box for
+0<=t<=c_A/L^2: |h|infinity sqrt(L) and |v-1|infinity L remain uniformly
+small. Full positivity of the independent Gaussian facet integrals
+supplies the ordinary smooth mass-offset implicit function throughout.
+
+4. Both derivatives retain all labels. The density velocity identity
+partial_t f_i=-partial_x(f_i b_i) gives the zero mass-flux equation.
+The logarithmic derivative of rho_ij is exactly
+L_i+L_j+a_i b_i+a_j b_j-sum_k a_k b_k, including i=j.
+The acceleration is b_i'=h_i''+c_i with c_i exactly as printed.
+Consequently (14) includes every weight and offset-acceleration term.
+Hölder and the whole-threshold moments give the componentwise bound
+alpha L^(3/2)(xi_i^2+mean xi^2), whose average has the same mean-square
+scale. The inverse estimate preserves that structure.
+
+5. The second coefficient derivative. Differentiating rho_ij once more
+produces rho_ij(P_ij^2+P_ij'), with no missing term. Derivatives of the
+full hazard sum are bounded before summing by m max(a_k) times mean
+xi^2. Thus they do not produce an additional factor m. Summing the
+pair bound against omega_ij<=C alpha/m proves the precise
+alpha L^2(xi_i^2+mean xi^2) bound for ell_i''. This is stronger than a
+generic Frobenius remainder and is exactly what the global support
+assembly requires.
+
+6. The exact regular coefficient. The balanced first offset derivative
+is -E(T)xi_i/2. Both W' and (sum a)' vanish at the reference. Integrating
+the derivative of the tie log density against T-E(T) gives
+(m-2)Cov(T,a(T))=2Var(T)-1, hence the printed eta_m. The common-mean
+Gaussian decomposition gives Var(T)>=1/m, while strong log concavity
+gives Var(T)<=1/2. Therefore eta_m lies in[1/4,1/2]. The variance- and
+standard-deviation-coordinate normalization checks agree with direct
+chain rules; they are not used to replace the uniform estimates.
+
+7. The support identity. The exact Laplacian is
+P diag(ell_i) P - integral W(Pa)(Pa)^T.
+The second matrix is PSD. At a positive definite diagonal supporting
+covariance D, Price differentiation gives gradient F=L_D/2 and Euler
+gives F(D)=tr(L_D D). Hence concavity implies
+F(C)<=tr[L_D(C+D)]/2 for every centered PSD target C, including singular
+ones. The PSD-square term has the favorable sign in this upper bound.
+No differentiability at the arbitrary target is required.
+
+No repair identified. This audit accepts the derivative lemma, not a
+full noise theorem. The global diagonal-support assembly and any
+subsequent proxy/noise comparison remain distinct proof steps.
