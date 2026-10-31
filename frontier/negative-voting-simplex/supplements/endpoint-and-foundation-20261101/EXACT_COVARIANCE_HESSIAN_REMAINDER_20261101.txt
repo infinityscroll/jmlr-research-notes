@@ -1,0 +1,62 @@
+EXACT SQUARE REMAINDER FOR THE COVARIANCE HESSIAN
+1 November 2026 IST / 31 October 2026 UTC
+Source: independently derived in the fresh covariance cleanroom audit;
+root reconstruction below. This is a supplementary identity, not a new
+claim to a separately solved conjecture. Originals remain unchanged.
+
+Use the notation and proved geometric identities of sections1--8 of
+ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt (SHA225db53f). In particular,
+G maps cell offsets b to edge differences b_i-b_j, W=diag(w_e)>0,
+Q=partial_2, R=partial_3, and D is the positive triangle diagonal.
+The identities ker(G^T)=im(Q), ker(Q)=im(R), and
+  A-B=-D R diag(c_h) R^T D
+are the complete-simplex chain identities and the Gaussian stratum
+factorization. On a facet's tangent space,
+  E_e=w_e(P_e-Cov_e X)>=0,
+  T_e=E_e N_e^(-T),
+  B_e=N_e^(-1) E_e N_e^(-T).
+No inverse of E_e is assumed.
+
+For arbitrary cell vectors z_i put z_e=z_i-z_j and c_e=z_e.m_e.
+Choose b_* minimizing (c+Gb)^T W(c+Gb), set r=c+Gb_*,
+j=Wr and J=r^T W r. Normal equations imply G^T j=0.
+Choose the representative lambda with Q lambda=j and R^T D lambda=0.
+It exists by minimizing lambda^T D lambda in its affine gauge class.
+For every facet e set eta_(e,g)=Q_(e,g)lambda_g and
+  s_e=N_e^(-T)eta_e.
+The chain factorization and triangle cancellation give respectively
+  sum_e s_e^T E_e s_e = lambda^T B lambda
+                      = j^T W^(-1)j = J,
+  sum_e z_e^T E_e s_e = j.c = J.
+In the second equality j.Gb_*=0; differences z_i-z_j telescope around
+every triangle. Subtracting twice the latter identity from the former
+proves exactly
+  sum_e z_e^T E_e z_e - min_b (c+Gb)^T W(c+Gb)
+   = sum_e (z_e-s_e)^T E_e(z_e-s_e) >=0.                 (A)
+If j=0, choose lambda=0. Singular facet deficits cause no problem.
+
+Now fix a symmetric covariance direction H and put z_i=H y_i.
+The optimized moving-interface Hessian identity from the source is
+  4 F''(I)[H,H]
+   = min_b sum_e w_e E[(d_e.HX+b_i-b_j)^2 | facet e]
+      - sum_e w_e |H d_e|^2.
+Splitting conditional second moments into covariance and means, then
+using E_e=w_e(P_e-Cov_e X) and (A), yields
+  4 F''(I)[H,H]
+   = -sum_e w_e (d_e^T H d_e)^2/ell_e^2
+     -sum_e (H d_e-s_e)^T E_e(H d_e-s_e).               (B)
+Every term is nonpositive. The second term is the full remainder
+omitted from the source's upper bound (18); it need not vanish.
+Neither s_e nor lambda is a freely optimized slice offset: they are
+fixed by the one global least-squares residual and its weighted gauge.
+
+Since the target is a full simplex, its edge quadratic forms determine
+a symmetric H. All w_e are positive. Thus nonzero H makes the first
+sum strictly positive, recovering strict covariance concavity without
+any strict Brascamp--Lieb covariance-deficit assumption. General positive
+C is reduced to I by the same congruence as in the source.
+
+This derivation strengthens transparency of an already used proof step.
+It does not independently replace the Gaussian boundary identities,
+Brascamp--Lieb input, smoothness argument, or arbitrary-target lifting.
+It carries no priority or novelty claim for covariance concavity.

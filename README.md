@@ -17,6 +17,8 @@ not accepted papers or claims of author endorsement.
 
 The new negative-voting candidate is available as a [20-page manuscript](frontier/negative-voting-simplex/output/pdf/negative_gaussian_simplex_stability_v2.pdf) and a [complete review archive](archives/negative-voting-simplex-review-2026-10-31.zip).
 
+A [1 November supplement](frontier/negative-voting-simplex/supplements/endpoint-and-foundation-20261101/README.txt) credits the known FJ endpoint formula and supplies an exact covariance-Hessian remainder. The theorem remains a candidate for sufficiently large alphabets; the full named conjectures are not claimed solved.
+
 The Gaussian covariance, negative-voting simplex, and Marcus packages include readable PDFs and preserve
 their frozen manuscripts, proof sources, audit records and checksums. Downloadable archives
 are in [archives/](archives/).

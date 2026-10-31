@@ -1,0 +1,210 @@
+INDEPENDENT CHECK OF THE TWO NEW ROOT SUPPLEMENTS
+1 November 2026 (Asia/Kolkata)
+
+VERDICT: CONDITIONAL PASS FOR BOTH SUPPLEMENTS.
+
+No mathematical issue was found in the endpoint normalization, endpoint
+cancellation, quantified consequence, bivariate integral/tail enclosure,
+or exact covariance-Hessian square remainder. The underlying Gaussian
+theorem, its discrete/UGC transfer, Gaussian boundary identities, and
+covariance factorization remain cited premises, not re-audited theorems.
+
+FILES CHECKED (ORIGINALS UNCHANGED)
+
+[E] ENDPOINT_FORM_OF_LARGE_ALPHABET_MAX_CUT_CANDIDATE_20261101.txt
+SHA256 37b03086530293878b0143ceacd56cbb19404d51356bca82a49f968fc672c5a8
+
+[R] EXACT_COVARIANCE_HESSIAN_REMAINDER_20261101.txt
+SHA256 a8f458d1594ea9e4064bbc13b95b523c1a026d669685de0a9519408f40e65bc4
+
+For normalization only, I checked the definitions and stated corollary in
+the frozen v2 manuscript. For matrix notation only, I checked the source
+definitions of A, B, N_e and T_e and its stated Hessian formula. This is
+not a renewed audit of their underlying geometric factorization.
+The cached primary article text was checked at Theorem 4.8, Theorem 4.9,
+and its Section 7 discussion of the distinct hardness consequence. Its
+cached PDF has the stated SHA256:
+fdc75bbe5fb58bf62840a1c7382bed37cb79bf8feb226762120a57048edd90c1.
+No prior audit conclusion was used as evidence.
+
+1. P_m(rho)=s_m(rho) HAS THE CORRECT NORMALIZATION
+
+Let U be an m by (m-1) matrix with orthonormal columns spanning 1-perp,
+so UU^T=P. For the m independent correlated Gaussian pairs, the vectors
+U^T X and U^T Y have covariance I and cross-covariance rho I. Subtracting
+the coordinate mean is exactly X -> PX=UU^T X and similarly for Y.
+Every coordinate difference is unchanged. Thus the winning labels are
+the regular-simplex partition labels in (m-1)-dimensional standard
+Gaussian space, with the same rho.
+
+The regular sites U^T e_i have Gram matrix P. Multiplying all of them
+by the manuscript's positive common scale alpha changes no winner.
+The manuscript defines S_rho(g) as the SUM over labels of equal-label
+joint probabilities, not the stability of one individual cell. Hence
+
+  s_m(rho)=sum_i P(g(X)=i,g(Y)=i)=P_m(rho).
+
+There is no missing m, no extra 1/m, and no correlation rescaling.
+
+2. ENDPOINT CANCELLATION AND SOURCE SCOPE
+
+The external Theorem 4.8 uses
+
+  A_m(rho)=m(1-P_m(rho))/[(m-1)(1-rho)],
+  rho in [-1/(m-1),1), m>=3,
+
+and places its minimum at a=-1/(m-1). In particular that same endpoint
+minimizes the restriction to [a,0]. At a,
+
+  1-a=m/(m-1),
+  A_m(a)=1-P_m(a)=1-s_m(a).
+
+The external source's upper endpoint is half-open at 1; this has no
+effect on [a,0]. Its Theorem 4.9 concerns its specified rounding
+algorithm. Neither theorem alone gives all-algorithm UGC hardness.
+[E] correctly credits the endpoint result separately and conditions
+the hardness conclusion on the manuscript's Gaussian/transfer premises.
+
+3. QUANTIFIERS AND LIMITS
+
+The valid order remains:
+
+  there exists m0; for every fixed integer m>=m0; for every fixed
+  epsilon>0; the algorithm/reduction may depend on m and epsilon.
+
+No uniform algorithmic complexity in a growing alphabet is asserted.
+No effective numerical m0, chosen small alphabet, positive-noise
+Gaussian theorem, or two-independent-rule soundness conclusion follows
+from the endpoint rewrite. UGC remains a hypothesis only for hardness.
+The nontrivial hardness range is 0<epsilon<1-a_m, as usual; larger
+requested maximization ratios already exceed 1.
+
+No illicit interchange of the fixed-m, approximation-error, or endpoint
+limits is necessary. Even if a version of the transfer is phrased only
+at interior negative correlations, choose rho>a tending to a at this
+fixed m. Continuity of P_m gives A_m(rho)->A_m(a). Then choose the
+reduction errors small enough for the prescribed epsilon. Completeness
+c_rho=(m-1)(1-rho)/m is bounded below by (m-1)/m>=2/3 on [a,0], so
+passing from additive completeness/soundness errors to their ratio
+does not create a small-denominator problem. Taking the endpoint is
+therefore compatible with arbitrary fixed approximation slack.
+
+The weighted rational graph statement and optional simple-unweighted
+statement retain the separate transfer hypotheses exactly as [E] says.
+Those transfer proofs are outside this check.
+
+4. BIVARIATE REPRESENTATION AND CERTIFIED INTERVAL
+
+Given (X_1,Y_1)=(x,y), each other independent pair lies coordinatewise
+below it with probability Phi_rho(x,y). Thus label 1 wins both scores
+with conditional probability Phi_rho(x,y)^(m-1). Summing the m disjoint
+winning-label events gives
+
+  P_m(rho)=m integral phi_rho(x,y)Phi_rho(x,y)^(m-1) dx dy.
+
+Ties have probability zero. At rho=-1/(m-1), m>=3, one has |rho|<1,
+so the bivariate density is nonsingular. The finite-window integral I_T
+includes the factor m. Since 0<=Phi_rho^(m-1)<=1,
+
+  0<=P_m-I_T
+    <=m P(|X_1|>T or |Y_1|>T)
+    <=4m barPhi(T)
+    <=4m exp(-T^2/2)/(T sqrt(2 pi)).
+
+This bound uses only the standard-normal marginals and is valid at
+negative correlation. It is deliberately coarse but rigorous. If
+l<=I_T<=u is a rigorous enclosure, then
+
+  l<=P_m<=u+4m barPhi(T),
+
+and taking 1-P_m and intersecting with [0,1] gives exactly the interval
+in [E]. Any numerical implementation must use a certified upper bound
+for the tail; the displayed Mills bound already provides one. The note
+claims an enclosure procedure, not an executed numerical certificate.
+
+5. RESIDUAL AND WEIGHTED CYCLE GAUGE
+
+Use the source notation A=Q^T W^(-1)Q and
+lambda^T B lambda=sum_e eta_e^T B_e eta_e. Let b_* minimize
+(c+Gb)^T W(c+Gb), put r=c+Gb_*, j=Wr, and J=r^TWr.
+The residual r is unique even though b_* is defined modulo constants.
+Its normal equation gives G^T j=0. Hence j belongs to im(Q).
+
+The representing set {lambda:Q lambda=j} is an affine translate of
+ker(Q)=im(R). The positive D inner product has a unique minimum-norm
+representative in that affine set. Its first-order condition is
+R^T D lambda=0. Redundant columns of R do not affect existence or this
+condition. The cited factorization therefore gives
+
+  lambda^T B lambda=lambda^T A lambda=j^T W^(-1)j=J.
+
+For s_e=N_e^(-T)eta_e this is exactly
+
+  sum_e s_e^T E_e s_e=J.
+
+No inverse of E_e appears; its possible singularity is harmless.
+
+6. THE CROSS TERM IS J, NOT MERELY BOUNDED BY J
+
+The source definition has T_e columns m_e-m_g, and T_e=E_e N_e^(-T).
+Consequently
+
+  sum_e z_e^T E_e s_e
+   =sum_{e,g} Q_(e,g)lambda_g z_e dot(m_e-m_g)
+   =j dot c-sum_g lambda_g m_g dot(sum_e Q_(e,g)z_e)
+   =j dot c.
+
+The last sum vanishes because z_e=z_i-z_j telescopes around each
+oriented triangle. Finally,
+
+  j dot c=j dot(r-Gb_*)=r^TWr-(G^Tj) dot b_*=J.
+
+Expanding the square now proves exactly
+
+  sum_e (z_e-s_e)^T E_e(z_e-s_e)
+   =sum_e z_e^T E_e z_e-2J+J
+   =sum_e z_e^T E_e z_e-min_b(c+Gb)^T W(c+Gb).
+
+This verifies identity (A), including its sign and its normalization.
+For j=0 the choice lambda=0 gives s_e=0 and the same identity directly.
+The construction uses one global residual and one weighted gauge, not
+independent facet offsets or an additional optimization over s_e.
+
+7. EXACT HESSIAN IDENTITY AND STRICTNESS
+
+For symmetric H, set z_i=Hy_i, so z_e=Hd_e and c_e=z_e dot m_e.
+The cited optimized Hessian formula splits into
+
+  4F''(I)[H,H]
+   =J+sum_e w_e z_e^T Cov_e(X)z_e-sum_e w_e|z_e|^2
+   =J-sum_e z_e^T E_e z_e
+      -sum_e w_e|(I-P_e)z_e|^2.
+
+Insert (A). As the facet normal is d_e/ell_e,
+
+  |(I-P_e)Hd_e|^2=(d_e^T H d_e)^2/ell_e^2.
+
+This gives (B) with the exact factor 4, exact normal-square coefficient,
+and the full nonnegative second square subtracted. There is no omitted
+mixed term.
+
+For a full simplex in its ambient span, choose one vertex as origin and
+write its edge basis b_i. If every edge quadratic form vanishes, then
+b_i^T H b_i=0 and (b_i-b_j)^T H(b_i-b_j)=0, forcing all b_i^T H b_j=0.
+Therefore H=0. Since every w_e>0, any nonzero symmetric H makes the
+first sum positive. Strictness requires no positive definiteness of
+the facet deficits E_e. It is not a strictness claim for arbitrary
+target laws after lifting or limits.
+
+At general positive C0, the cited congruence transforms both the sites
+and the direction: y_i becomes C0^(1/2)y_i and H becomes
+C0^(-1/2)K C0^(-1/2). The identity is applied with the corresponding
+transformed facet data, not the old weights reused without change.
+
+CONCLUSION
+
+Both supplements are mathematically consistent consequences of their
+stated premises. No corrections to their formulas are required by this
+check. This verdict does not promote the cited premises, the underlying
+large-m theorem, or the public candidate into an independently proved
+result. No original, master, publication artifact, or outreach was changed.

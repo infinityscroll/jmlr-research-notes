@@ -1,0 +1,81 @@
+ENDPOINT FORM OF THE LARGE-ALPHABET MAX-m-CUT CANDIDATE
+1 November 2026 IST / 31 October 2026 UTC
+Status: a consequence of the existing proof candidate, with a newly checked
+external input. This is not a new proof of endpoint minimization.
+
+1. CREDITED EXTERNAL INPUT
+Garcia-Soriano and Miyauchi, arXiv:2609.35453v1 (28 September 2026),
+Theorem 4.8 proves, for every m>=3, that the Frieze--Jerrum ratio is
+minimized at a=-1/(m-1). Theorem 4.9 establishes tightness for their
+specified rounding algorithm. Section 7 separately identifies the
+negative-simplex endpoint inequality as the missing ingredient for
+matching UGC hardness. Those distinctions are essential here.
+https://arxiv.org/abs/2609.35453
+Primary PDF SHA256:
+fdc75bbe5fb58bf62840a1c7382bed37cb79bf8feb226762120a57048edd90c1
+The full external article is not part of any publication package.
+
+2. IDENTIFICATION OF THE COLLISION PROBABILITY
+Let (X_i,Y_i), i=1,...,m, be independent standard bivariate normal pairs
+with correlation rho. Write
+  P_m(rho)=P(argmax_i X_i = argmax_i Y_i).
+Subtracting each vector's common coordinate mean leaves its argmax
+unchanged. On the subspace perpendicular to the all-ones vector, the
+centered score vectors are standard jointly rho-correlated Gaussians.
+The regions argmax_i x_i are precisely the regular-simplex cones.
+Consequently P_m(rho)=s_m(rho) in the manuscript's notation; no rescaling
+of rho or dimension-dependent normalization is involved.
+
+3. THE SHARP CONSTANT IN ENDPOINT FORM
+The manuscript's Corollary 7.2 and frozen transfer source9482f085 state,
+conditional on the internally audited Gaussian theorem, that for every
+sufficiently large fixed m the exact UGC approximation threshold is
+  a_m = min_{-1/(m-1)<=rho<=0}
+        [m/(m-1)] [1-s_m(rho)]/(1-rho).
+The credited endpoint theorem applies on the larger interval ending
+at 1, and hence on this interval. Since 1-a=m/(m-1), it gives
+  a_m = 1-s_m(-1/(m-1)) = 1-P_m(-1/(m-1)).               (1)
+Thus, for each such fixed m and every epsilon>0, the candidate yields
+a polynomial-time (a_m-epsilon)-approximation for nonnegative rational
+edge-weighted MAX-m-CUT, and, assuming UGC, NP-hardness of an
+(a_m+epsilon)-approximation. The optional simple-unweighted transfer
+retains exactly the separate hypotheses and proof in9482f085.
+
+No endpoint-minimizer discovery is claimed here. The potential new
+content is the unrestricted Gaussian inequality and its matching
+all-algorithm hardness consequence in the sufficiently-large-m regime.
+The manuscript's previous sentence declining to assert endpoint
+minimization was conservative; equation (1) now cites the published
+source rather than assigning that result to this project.
+
+4. A DIRECT INTEGRAL AND AN EXPLICIT TAIL ERROR
+For -1<rho<1 let phi_rho and Phi_rho denote the bivariate standard
+normal density and joint distribution function. Conditioning on
+(X_1,Y_1)=(x,y), the other m-1 independent pairs must each lie below
+(x,y) for label1 to win both coordinates. Summing the m disjoint
+winning-label events gives the exact representation
+  P_m(rho)=m integral_R^2 phi_rho(x,y)Phi_rho(x,y)^(m-1) dx dy. (2)
+Ties have probability zero. This applies at the voting endpoint for
+all m>=3. It is an integral representation, not an elementary closed
+form or a numerical evaluation.
+
+Let I_T denote the same integral over [-T,T]^2, including the factor m.
+The integrand is nonnegative and Phi_rho^(m-1)<=1. The union bound on
+the two standard-normal marginals therefore proves, for T>0,
+  0 <= P_m(rho)-I_T <= 4m barPhi(T)
+     <= [4m/(T sqrt(2*pi))] exp(-T^2/2).                  (3)
+If a rigorous finite-domain integration encloses I_T in [l,u], then
+(1)--(3) give the certified constant interval
+  a_m in [max(0,1-u-4m barPhi(T)), min(1,1-l)].           (4)
+This statement specifies how numerical bounds would be certified;
+no numerical integration or advertised numerical alphabet is asserted.
+
+5. LIMITS OF THE CONSEQUENCE
+All threshold/hardness conclusions retain the original existential m0.
+Computing (1) for m=4, or any other chosen number, does not prove that
+m>=m0. The Gaussian and discrete conclusions retain their original
+single-rule scope. Positive correlations and all smaller alphabets are
+not supplied by this note. The candidate still awaits external scrutiny
+and a stronger assessment of competing work. No new algorithmic ratio,
+full named-conjecture resolution, or goal completion is inferred merely
+from rewriting the same constant in endpoint form.
