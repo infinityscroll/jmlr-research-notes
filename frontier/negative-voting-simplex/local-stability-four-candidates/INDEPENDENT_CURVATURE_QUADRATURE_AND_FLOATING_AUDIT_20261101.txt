@@ -1,0 +1,332 @@
+INDEPENDENT CURVATURE, TRIANGLE QUADRATURE, AND FLOATING AUDIT
+2026-11-01. covariance_adversarial_cleanroom. New source; originals preserved.
+
+RESULT AND SCOPE
+
+I independently checked the actual integrand, positive moment contractions,
+quadrature degrees, curvature error, arithmetic error, and analytic tails in
+certify_facet_moment_hs.py and arb_facet_diagonal.py. The resulting certificate
+supports
+
+  ||A||_HS^2 < 30.375,
+  delta < .027458,
+  sqrt(||A||_HS^2-30) + (3-sqrt(||A||_HS^2-30))*delta < .677770.
+
+These are statements about the normalized tetrahedral facet operator and its
+mass-representer angle. They certify the corresponding second-variation
+operator bounds. They do NOT prove the arbitrary-pair endpoint inequality,
+nonlinear local minimality, or a dimension reduction for a self-minimizer.
+
+The numerical proof uses Arb enclosures for analytic quantities followed by
+binary64 polynomial arithmetic with an explicit error bound. Its usual
+computational premise is correctly rounded elementary binary64 operations
+and standard floating dot products, permitting fused multiply-add and any
+positive summation order. It is not an assertion that every NumPy result is
+automatically an interval. The argument establishing the needed envelope is
+given below. Even flushing subnormal intermediates to zero fits the stated
+absolute-underflow budget.
+
+1. ACTUAL NORMAL DERIVATIVE AND LOG-CURVATURE
+
+Let rho=-1/3, r=1/3, sigma^2=8/9. Let n be the unit normal from C_i to C_j,
+and x belong to their tie plane n.x=0. Reflection in this plane swaps the
+two tetrahedral cells. Differentiating the conditional Gaussian and then
+reflecting the C_j integral gives exactly
+
+ d(x) = partial_n T_rho(1_Ci-1_Cj)(x)
+      = (2r/sigma^2) int_Ci (-n.y) phi_sigma(y-rho*x) dy.        (1)
+
+Here C_i lies in n.y<=0. The integrand is jointly log-concave: the cone is
+convex, the logarithm of its nonnegative linear weight is concave, and the
+Gaussian has a negative squared affine norm. The Prékopa marginal theorem
+therefore proves concavity of log d on the tie plane. Boundary zeros cause
+no difficulty for nonnegative log-concave functions. The integral is strictly
+positive and smooth at every finite x.
+
+For an independent check of the lower curvature bound, normalize the positive
+measure in (1) to a probability nu_x. Differentiation under its Gaussian
+integral yields, in tie-plane directions,
+
+ Hess log d = -rho^2/sigma^2 I + rho^2/sigma^4 Cov_nu_x(Y)
+            = -I/8 + (9/64) Cov_nu_x(Y).                     (2)
+
+The covariance is positive semidefinite. Thus
+
+                    -I/8 <= Hess log d <= 0.               (3)
+
+Equation (1), and hence equality with the actual normal derivative, is only
+asserted on the tie plane. Extending its positive integral off the plane does
+not identify that extension with the actual normal derivative there.
+
+These formulas independently verify the mechanism in
+LOG_DIAGONAL_CURVATURE_AND_EXECUTABLE_QUADRATURE_20261101.txt, lines17-42.
+An alternative upper-bound proof uses the Brascamp-Lieb covariance inequality
+for the sigma^-2-strongly log-concave density in (1); it is unnecessary here.
+
+2. THE CENTER-TANGENT QUADRATURE LEMMA
+
+Use physical coordinates x=(q,w,-w) on one facet. Its half-sector is
+q>=w>=0. Reflection w->-w supplies the other half. Intrinsic area is
+sqrt(2) dq dw. Accordingly the full-facet prefactor is exactly
+
+       2sqrt(2)/(2pi)^(3/2) = pi^(-3/2).                    (4)
+
+The retained moments are m_p,n=int q^p z^n dmu, where z=sqrt(2)w,
+n is even, p+n<=60, and dmu=exp(-|x|^2/8)d lambda/d(x).
+There are 961 such moments. Their half-sector coordinate density is
+
+ pi^(-3/2) q^p (sqrt(2)w)^n exp[-5(q^2+2w^2)/8]/d(q,w).
+
+Let a cell have side h=1/8 and bounding-box center c. A diagonal triangular
+cell uses the same center, which lies on its boundary but still on the full
+tie plane, where (3) holds. Write xi=q-qc, eta=w-wc and g=log d. Then
+
+ g(c)+g_q(c)xi+g_w(c)eta-(xi^2+2eta^2)/16
+       <= g(x) <= g(c)+g_q(c)xi+g_w(c)eta.                  (5)
+
+Since |xi|,|eta|<=h/2, replacing g by its tangent makes the reciprocal-weight
+model a pointwise lower bound, and actual/model lies in [1,exp(E)], where
+
+                       E=3h^2/64=3/4096.                 (6)
+
+Its exponential factor separates into exp(f_q)exp(f_w), with
+
+ f_q=-(5qc/4+g_q)xi-5xi^2/8,
+ f_w=-(5wc/2+g_w)eta-5eta^2/4.                             (7)
+
+For U=int d d lambda, replace (7) by
+ f_q=-(qc-g_q)xi-xi^2/2, f_w=-(2wc-g_w)eta-eta^2.
+Here actual/model lies in [exp(-E),1].
+For V=int d^-1 d lambda, use plus g instead of minus g in those coefficients;
+actual/model lies in [1,exp(E)]. These one-sided directions matter.
+
+A direct derivative bound verifies a strict uniform |f|<3. The positive
+boundary-Laplace representation gives
+ grad log d=-x/8-(3/8) E(Y). In its two-dimensional cone measure, radial
+integration by parts gives
+ (9/8) E|Y|^2=2-(3/8)x.E(Y).
+Therefore E|Y|<=(s+sqrt(s^2+64))/6, and
+ |grad log d|<=(3s+sqrt(s^2+64))/16<=s/4+1/2.
+On 0<=w<=q<=14, s<=14sqrt(3), so |g_q|<7 and |g_w|<10.
+The largest coefficient in (7) has magnitude <45. Thus |f_w| is at most
+45/16+5/1024<2.818; all other factors have smaller bounds. This also leaves
+a substantial margin for conversion and arithmetic error.
+
+Let P_18(t)=sum_{j=0}^18 t^j/j!. On |t|<=3,
+
+ |P_18(t)/exp(t)-1| <= eta_18=exp(6)*3^19/19!
+                              <3.854576e-6.               (8)
+
+In particular P_18 is positive. The product of the two polynomial factors
+lies between (1-eta_18)^2 and (1+eta_18)^2 times the exponential model.
+The two errors must both be included; a single-factor allowance is wrong.
+
+For ANY nonnegative monomial in the retained list, suppose the polynomial
+quadrature Q is evaluated with relative error at most f=10^-6, and an
+absolute allowance a=2^-600. Then the actual moment lies between
+
+ (Q-a)/[(1+f)(1+eta_18)^2],
+ exp(E)(Q+a)/[(1-f)(1-eta_18)^2].                          (9)
+
+For U the lower expression receives exp(-E), while its upper expression
+omits exp(E). For V the factors in (9) apply. Formula (9) is valid because
+all monomials, quadrature weights, and polynomial factors are nonnegative;
+there is no moment-wise cancellation.
+
+3. EXACT RECTANGLE AND TRIANGLE DEGREES
+
+The domain 0<=w<=q<=14 consists of 6216 full h-squares and 112 diagonal
+triangles. A degree18 exponential polynomial of a quadratic has degree36.
+On a rectangle each coordinate degree is at most60+36=96, so Gauss49 in
+each coordinate is exact (degree97). Separation reduces the work to one-
+dimensional moment sums and their outer products.
+
+For the diagonal triangle use
+        q=a+h*u, w=a+h*u*v, 0<=u,v<=1,
+with Jacobian h^2*u. The q-polynomial factor has u-degree36, while the
+w-polynomial factor has degrees36 in both u and v. Including a monomial
+of total degree<=60 and the Jacobian gives
+                    degree_u<=133, degree_v<=96.
+Gauss67 in u and Gauss49 in v are therefore exact. No comparison of two
+quadrature orders is being substituted for an error theorem.
+
+4. ACTUAL ARB FORMULA AND CODE CHECK
+
+arb_facet_diagonal.py lines19-37 uses independent unit-variance utility
+variables with means
+ (-q/(4sqrt2),-q/(4sqrt2),(q/2-w)/(2sqrt2),(q/2+w)/(2sqrt2)).
+These equal rho*y_i.x/sigma for the tetrahedral sites y_i=(+,+,+)/2 etc.
+For a tied pair of utilities the common conditional value has variance1/2.
+Its two comparisons with the other utilities have variance3/2 and
+correlation1/3. Hence the pair weight is exactly
+
+ W_ij=exp[-(mu_i-mu_j)^2/4]/(2sqrt(pi))
+       *Phi_2(sqrt(2/3)(avg-mu_k),sqrt(2/3)(avg-mu_l);1/3).
+
+On the selected tie plane, differentiation along the physical unit normal
+gives d=(2W_12+W_13+W_14)/2. This agrees with line35, including the factor
+1/2. The two derivatives in lines30-36 are ordinary chain-rule derivatives
+of this expression. The bivariate CDF uses the integral of its correlation
+derivative from0 to1/3 plus the product of univariate CDFs (lines10-15).
+Arb encloses this integral. The code subsequently tests positivity and
+enclosure widths, so a non-finite or overly broad integral does not silently
+become a certificate.
+
+The code maps Gauss nodes to [0,1] in Arb before converting to binary64.
+This avoids the relative-error loss from subtracting nearly equal doubles
+at a node close to zero. Each node and weight is compared with its Arb
+enclosure, relative discrepancy <2^-48. Center constants are tested to
+relative discrepancy <10^-12 and log-gradients to absolute discrepancy
+<10^-12. The inspected successor also forms powers of2 from exact integer
+shifts, and checks coefficient conversions and the binary64 format.
+
+5. EXPLICIT FLOATING ERROR AUDIT
+
+This is the part that cannot be justified merely by observing convergence.
+The following conservative estimates cover the actual operations.
+
+(a) Node and input errors. Physical q,w use nonnegative additions and
+multiplications of the unit nodes and exact dyadic a,h. Their relative
+perturbations are <2^-45. Thus every retained monomial changes relatively
+by <2e-12. The centered coordinates can cancel, but their ABSOLUTE errors
+are <2^-47. Using |g_q|<7, |g_w|<10, q,w<=14 and the tested 10^-12 gradient
+uncertainty, every computed polynomial argument differs from its exact
+argument by <10^-11. This bound includes arithmetic in its short quadratic
+formula. Centers and h themselves are exact dyadic numbers.
+
+(b) Horner conditioning. For |t|<=3, both
+ sum |t|^j/j! / P_18(t) and |P_18'(t)|/P_18(t) are <404.
+Indeed the numerator is <=exp(3), the denominator >=(1-eta_18)exp(-3),
+and exp(6)/(1-eta_18)<404. Thus negative-argument cancellation is explicitly
+covered. Two argument perturbations contribute less than 810*10^-11
+relatively, allowing for products and a negligible second-order term.
+
+(c) Positive arithmetic after the polynomial values. Integer powers are
+computed by repeated multiplication. Rectangle moment sums are positive
+dot products followed by a positive outer product. Triangle inner sums,
+matrix products, and cell accumulation are also positive. Each dot product
+has length<=67, integer powers have length<=60, and there are6328 cell
+contributions. Counting product branches additively and sum branches by
+their longest path gives error depth<20000. The looser allowance of
+2,000,000 is therefore ample, including the short polynomial evaluation
+paths. With unit roundoff u=2^-53 and gamma_n=nu/(1-nu), the deliberately
+overcounted total bound
+
+             404 gamma_2000000 + 1000*10^-11 + 10^-10
+                        <9.981e-8 <10^-6                 (10)
+
+covers operation rounding, both argument perturbations, center constants,
+node/weight perturbations, monomial perturbations, and coefficient rounding.
+The small data terms not multiplied by404 fit well inside 10^-10. The use
+of404 on the entire operation allowance overcounts the actual Horner cost.
+Fused multiply-add or another order of positive summation cannot worsen
+this gross bound. No floating exp, log, trigonometric function, or fractional
+power is used in the retained numerical integration stage.
+
+(d) Underflow. The first diagonal triangle can contain w so small that
+w^60 underflows. A relative-only proof would therefore be incomplete.
+The inspected successor explicitly inserts an absolute 2^-600 allowance
+in every retained moment. Here is a conservative independent proof that
+this suffices. There are fewer than2^34 elementary operations in the entire
+run. Even with flush-to-zero, a local underflow error is <2^-1022. Its later
+amplification is <2^300: q^60,w^60<2^240, the orthonormal scaling is <=2^30,
+the cell constant can be bounded by2^20 using the compact-sector bound,
+and the two polynomial factors by2^10. (Only one remaining high power is
+needed along a retained-moment path.) Consequently all propagated errors
+sum to less than2^(-1022+300+34)=2^-688<2^-600.
+
+For a separate positivity check, integrate on1<=q<=9/8,1/2<=w<=5/8.
+Here d<1/2, pi^-3/2>1/8, exp(-5|x|^2/8)>1/9 and the area is1/64.
+Thus every retained orthonormal-z moment is >2^-42. A raw-w moment before
+the factor2^(n/2) is only guaranteed >2^-72; confusing those statements
+would be an error, although it has no effect on the absolute allowance.
+
+The final rational arithmetic and tail budgets are checked by
+covariance_audit_rational_quadrature_bounds.py. The source certificate
+does not need to trust the exploratory decimal value of any coefficient.
+
+6. CONTRACTIONS AND TAILS
+
+The moments in orthonormal(q,z) coordinates have odd-z entries zero. For
+the full tensor-moment expansion, with b=3/4,
+
+ H=sigma^-6 sum_k (-b)^k A_k/k!,
+ A_k=||sum_e c_e tensor c_e tensor int x^tensor k dmu_e||^2.
+
+There are six self-facet terms with incidence-square4 and24 ordered
+adjacent-facet terms with incidence-square1. Opposite incidences are
+orthogonal. The common coefficient is therefore24 times the sum of the
+self and adjacent contractions. For adjacent facets the frame Gram matrix
+is [[0,1/sqrt2],[1/sqrt2,1/2]]. The resulting coefficient is
+
+ k!/[l!m!n! 2^((l+m)/2+n)],  l+m+n=k,
+
+and its moments are m_(l,m+n) m_(m,l+n). A term survives precisely when
+l,m,n have the same parity; then the power of2 is integral and positive.
+The actual loops implement this condition and coefficient. The same-facet
+sum is sum_j binom(k,j)m_(k-j,j)^2. No hidden subtraction occurs until the
+outer alternating series. The upper bound uses upper even terms and lower
+odd terms; the lower bound reverses them.
+
+The independent global moment-tail proof is in
+TENSOR_MOMENT_EXPANSION_AND_EXACT_ABSOLUTE_TAIL_20261101.txt. I rechecked
+the implementation's recurrence J_(n+2)=(8/9)(n+1)J_n with upper initial
+values J_0=32/27,J_1=8/9, prefactor3456, and two-step ratio
+q_k=(4/9)(k+4)^2/((k+1)(k+2)). The tail after60 is <.008217978.
+The same bound applies to truncated positive moments. The q<=14 cutoff
+is invariant under the facet symmetries used in the contractions.
+
+Outside that cutoff one has |x|>14. The existing compact-sector estimate
+gives, with a=3/16,
+ H_tail <=432 exp(15/8)(2 I_0 I_14-I_14^2), I_0<28,
+ I_R <=exp(-aR^2)[(R+1)^2/(2a)+1/(2a^2)+1/(2a^2 R)].
+My independent rational bound is H_tail<1.355e-8<10^-7, so the source's
+10^-7 allowance is valid. For U, d<1/2 gives a tail<3.599e-42<10^-40.
+For V, the compact-sector lower diagonal gives the one-facet bound
+3 sigma^3 exp(15/16) int_14^infinity s(1+s)^2 exp(-7s^2/16) ds;
+my rational bound is <7.603e-34<10^-30. The U and V allowances in the
+source therefore also suffice. These are not inferred from a numerical
+tail fit.
+
+As an additional requested check, at R=9sqrt(2) the exact rational bound is
+ 2*432*(121/18)*28*(51393334/99225)*(60/163)^30*(8/11)
+ <5.836e-6<6e-6. This uses7/5<sqrt2<99/70, e>163/60,
+exp(3/8)>11/8 and exp(15/8)<121/18. It is optional for the actual q14 run.
+
+7. INDEPENDENT EXECUTION AND IMPLICATION GAP
+
+I imported the actual certificate source into a fresh Python process and
+changed ONLY its output directory to covariance_independent_certificate_rerun/.
+It completed and reproduced all enclosed values, including
+
+ H upper 30.3747954612809456239736752336042410,
+ delta upper .027457964461348916209996888455771963,
+ constrained Rayleigh upper .67776938680706827088649959876966008.
+
+The interval finite absolute coefficient sum was <88.772835. It was computed
+from enclosed positive moments, not borrowed from an exploratory run.
+The source was subsequently strengthened with exact integer powers of2,
+explicit coefficient/format assertions, and exact rational tail assertions;
+these do not change the mathematical integrals or numerical values. A final
+audit execution and file fingerprints are recorded alongside this note.
+
+The final source also checks H<30+3/8 and delta<11/400 directly in Arb.
+Since 3*389^2<8*239^2, h=sqrt(H-30)<239/389. Hence
+ h+(3-h)delta <(389/400)(239/389)+33/400=17/25.
+Also h<5/8 because3/8<25/64. Thus the common channel off rotations has
+gap>3/8, and the constrained contrast channel has gap>8/25. These exact
+rational deductions are included in the independent arithmetic checker.
+
+The final frozen-text rerun is implemented by
+covariance_rerun_final_facet_certificate.py. It records hashes before
+execution, executes that exact source text, verifies that both audited source
+files are unchanged afterward, and writes the final acceptance receipt to
+covariance_frozen_certificate_audit_receipt.json. Its output directory is
+covariance_frozen_certificate_rerun/. Original outputs are preserved.
+
+The mass-angle formula uses the actual weighted representers c_e,i/d_e,
+not an invalid deletion of translations from the mass-zero subspace.
+The verified H and delta are enough for the previously derived operator
+lemma. They supply a local second-variation conclusion only. No coercive
+bound for a Hessian at one configuration controls the nonlinear noise gap
+of all measurable matched-mass pairs without a separate global argument.

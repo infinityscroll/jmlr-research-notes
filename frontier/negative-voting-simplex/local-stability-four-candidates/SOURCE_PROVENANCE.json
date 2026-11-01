@@ -1,0 +1,130 @@
+{
+  "unchanged_research_sources": {
+    "PAIRED_BOUNDARY_FORM_AND_NUMERICAL_DIAGNOSTIC_20261101.txt": {
+      "sha256": "adaa719c7212cbcfd72f54b8c853ac01f2ff817c34d587f6cab2266e7004915b",
+      "public_path": "PAIRED_BOUNDARY_FORM_AND_NUMERICAL_DIAGNOSTIC_20261101.txt"
+    },
+    "COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt": {
+      "sha256": "73e8cb49aa0f24b810c8019239bf7c6aa76101f6929305972e87a6d6d251351e",
+      "public_path": "COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt"
+    },
+    "INDEPENDENT_AUDIT_OF_HILBERT_SCHMIDT_LOCAL_CERTIFICATE_ROUTE_20261101.txt": {
+      "sha256": "3c7340f3c6bf9b28455f90995fb105317a1b138c3719a00077ec9ee8f0eb85ff",
+      "public_path": "INDEPENDENT_AUDIT_OF_HILBERT_SCHMIDT_LOCAL_CERTIFICATE_ROUTE_20261101.txt"
+    },
+    "TENSOR_MOMENT_EXPANSION_AND_EXACT_ABSOLUTE_TAIL_20261101.txt": {
+      "sha256": "9f4d6cb0b9817907da89f201025d7cef67741426645d8e5750b19d0f1ce4b6ea",
+      "public_path": "TENSOR_MOMENT_EXPANSION_AND_EXACT_ABSOLUTE_TAIL_20261101.txt"
+    },
+    "LOG_DIAGONAL_CURVATURE_AND_EXECUTABLE_QUADRATURE_20261101.txt": {
+      "sha256": "336154f66106192f61c0fe2b3e846c5eee574e76b99ef1f5000d80e92c3d5a40",
+      "public_path": "LOG_DIAGONAL_CURVATURE_AND_EXECUTABLE_QUADRATURE_20261101.txt"
+    },
+    "INFINITE_DIMENSIONAL_LOCAL_CONTRAST_HS_CERTIFICATE_20261101.txt": {
+      "sha256": "b0cdd7df02493298fab587eb956b40402ace84c17968bfda7d67921f172c7a73",
+      "public_path": "INFINITE_DIMENSIONAL_LOCAL_CONTRAST_HS_CERTIFICATE_20261101.txt"
+    },
+    "INDEPENDENT_CURVATURE_QUADRATURE_AND_FLOATING_AUDIT_20261101.txt": {
+      "sha256": "0c7df77e98927425445af84087e02ed249e7f2dfe66b4cfcad89608f8b619639",
+      "public_path": "INDEPENDENT_CURVATURE_QUADRATURE_AND_FLOATING_AUDIT_20261101.txt"
+    },
+    "END_TO_END_PAIRED_HESSIAN_AND_ALL_DIMENSION_AUDIT_20261101.txt": {
+      "sha256": "c5edc32b88471b3acd72fbef31ac8b2759c9108e5d6d1d176d5aecfd074da42f",
+      "public_path": "END_TO_END_PAIRED_HESSIAN_AND_ALL_DIMENSION_AUDIT_20261101.txt"
+    },
+    "TETRAHEDRAL_PAIRED_LOCAL_STABILITY_PRIMARY_AUDIT_20261101.txt": {
+      "sha256": "96385995e06f79974d30b6aa11a85728d0e74af2b2b9252bfce6de2615d3001e",
+      "public_path": "TETRAHEDRAL_PAIRED_LOCAL_STABILITY_PRIMARY_AUDIT_20261101.txt"
+    },
+    "COMMON_MASS_LOCALIZATION_20261101.txt": {
+      "sha256": "6a7888481d59435e9f6216d6227a255a395fe8b874b71caed218e0c53c6cb24f",
+      "public_path": "COMMON_MASS_LOCALIZATION_20261101.txt"
+    },
+    "COMMON_MASS_CERTIFICATE_AUDIT_RECEIPT_20261101.txt": {
+      "sha256": "420b420c5722c56e48b240ce88bba31fc311bb56052a75c4824358ebae633d88",
+      "public_path": "COMMON_MASS_CERTIFICATE_AUDIT_RECEIPT_20261101.txt"
+    },
+    "COMMON_MASS_BOX_RATIONAL_CERTIFICATE_20261101.txt": {
+      "sha256": "b415acb836c6b8403b7ac6e973d7e266cb6a06e9345c8d6440bdf4735ae92815",
+      "public_path": "COMMON_MASS_BOX_RATIONAL_CERTIFICATE_20261101.txt"
+    },
+    "certify_common_mass_box_rational_20261101.py": {
+      "sha256": "e55060487f44fcad659a53a940ca2ff397986670f7b6f346b18675a6812c2d4a",
+      "public_path": "certify_common_mass_box_rational_20261101.py"
+    },
+    "certify_operator_tail_rational_20261101.py": {
+      "sha256": "00a7f96dfa8aec911acf7f9b9bcd0156edd0cd8a8ac5af561e62d585cf6c0c12",
+      "public_path": "certify_operator_tail_rational_20261101.py"
+    },
+    "certify_tensor_moment_tail_rational_20261101.py": {
+      "sha256": "49dc373f97a0dc6e682b815757653a222ab2869edcf4cd3c8aa3ca0cdd699577",
+      "public_path": "certify_tensor_moment_tail_rational_20261101.py"
+    },
+    "covariance_audit_rational_quadrature_bounds.py": {
+      "sha256": "fa8e77e9880a77c201c9d309b02051ea8a32af0dd061c21c6f41473c1cbe3ccd",
+      "public_path": "covariance_audit_rational_quadrature_bounds.py"
+    },
+    "arb_facet_diagonal.py": {
+      "sha256": "6fb8c8e4016aaed6090edf20d0ca1bca9314f5eb19cb84369662625e023f9b5b",
+      "public_path": "arb_facet_diagonal.py"
+    },
+    "facet_moment_certificate.json": {
+      "sha256": "47c6aba2f1367ff3ce1858ed4a8ad47d35990c6a555d964272e8b74d692542f0",
+      "public_path": "facet_moment_certificate.json"
+    },
+    "facet_moment_certificate_raw.npz": {
+      "sha256": "eee09cb6f130da9bdce75bdcc4cb8c3b874dc344575c50863ad16beb476d5657",
+      "public_path": "facet_moment_certificate_raw.npz"
+    },
+    "facet_moment_certificate_cells.json": {
+      "sha256": "e6ebc2c3dc1d4553acf318e79b1b62338902c9179f76a3436303032b61d31733",
+      "public_path": "facet_moment_certificate_cells.json"
+    },
+    "covariance_frozen_certificate_audit_receipt.json": {
+      "sha256": "1191fb40c1c62fbd77be9e210d8ba0ee400431d8636a3e591755de99a9b42a8e",
+      "public_path": "covariance_frozen_certificate_audit_receipt.json"
+    },
+    "certify_facet_moment_hs.py": {
+      "sha256": "37e58d4f07fd53a2284c404a390157f07c07a9e945117f71ca9d15d5f387b3a8",
+      "public_path": "frozen_source/certify_facet_moment_hs.py"
+    },
+    "covariance_rerun_final_facet_certificate.py": {
+      "sha256": "c866319354f16a7937571b5347dc642f3f103e39bd5cac93efff34d26d58521e",
+      "public_path": "frozen_source/covariance_rerun_final_facet_certificate.py"
+    },
+    "THEOREM_AND_PROOF_20261101.txt": {
+      "sha256": "7562476c222bf0d164b8cf169ed42c07f6fbc71f5cd3d2c6a399d98747074ea6",
+      "public_path": "THEOREM_AND_PROOF_20261101.txt"
+    },
+    "THEOREM_AND_PROOF_ACCEPTED_20261101.txt": {
+      "sha256": "72b9952b32df019adbcb40e4cc49747a31402813bcbd7e5e862d461ae1e5406f",
+      "public_path": "THEOREM_AND_PROOF_ACCEPTED_20261101.txt"
+    },
+    "STRONGER_EIGHT_OVER_TWENTYFIVE_ALL_DIMENSION_SUCCESSOR_AUDIT_20261101.txt": {
+      "sha256": "9a1824187448983e8f69a612c565104ed2df70be1b8acd363ccc515b4544d88f",
+      "public_path": "STRONGER_EIGHT_OVER_TWENTYFIVE_ALL_DIMENSION_SUCCESSOR_AUDIT_20261101.txt"
+    },
+    "certified_log_diagonal_quadrature_20261101.py": {
+      "sha256": "b7559ef20a6358f469292e85d67faddf9e6b962b38973d42bf2f0a0d4f2378d7",
+      "public_path": "certified_log_diagonal_quadrature_20261101.py"
+    },
+    "LOG_DIAGONAL_QUADRATURE_EXECUTION_RECEIPT_20261101.txt": {
+      "sha256": "8ab8057c701e97a94e0d01b9fb913489a0c7a376095aac5444337d5642d68b17",
+      "public_path": "LOG_DIAGONAL_QUADRATURE_EXECUTION_RECEIPT_20261101.txt"
+    },
+    "paired_boundary_scan.py": {
+      "sha256": "4e105fc59959fa85b5da88d199bf8d43194078ae90b9ef2006f0b7d66a849d68",
+      "public_path": "paired_boundary_scan.py"
+    },
+    "paired_boundary_scan.json": {
+      "sha256": "fc0547eb62c02753290d6565953653bb2fa92f45fa4ce95825bc83127bc698e4",
+      "public_path": "paired_boundary_scan.json"
+    },
+    "covariance_frozen_certificate_rerun/facet_moment_certificate.json": {
+      "sha256": "7652e378b2a17d1d8895d0d237cea3c6004dfb59a5f1640aa67c8575cc14936e",
+      "public_path": "covariance_frozen_certificate_rerun/facet_moment_certificate.json"
+    }
+  },
+  "portable_change": "The executable main script removes exactly two workspace-specific dependency-search lines. All mathematical operations are byte-for-byte unchanged. Its audited original is in frozen_source/.",
+  "scope": "No private correspondence, third-party articles, or dependency installations are included."
+}

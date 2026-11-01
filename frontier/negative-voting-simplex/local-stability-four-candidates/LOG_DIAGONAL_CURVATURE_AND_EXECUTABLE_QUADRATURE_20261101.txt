@@ -1,0 +1,153 @@
+ACTUAL TETRAHEDRAL DIAGONAL: LOG CURVATURE AND CERTIFIED QUADRATURE
+2026-11-01. Independent derivation with radial-agent coordination.
+
+RESULT
+On the entire tie plane of a tetrahedral facet at rho=-1/3,
+                 -I/8 <= Hess(log d) <= 0.                 (1)
+Consequently, certified values of d at a modest grid of points suffice for
+rigorous integration of its reciprocal. Interpolating log d gives a uniform
+relative error. The interpolated reciprocal times the Gaussian density is
+an exponential of a quadratic polynomial; a completely explicit tensor
+Gauss error bound is given below and implemented in the companion Python
+file. No convergence-only quadrature claim or zero-free conjecture is used.
+
+1. NORMALIZATION AND THE REFLECTION IDENTITY
+Use the parent's actual diagonal d_e and lambda_e from
+COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt.
+Let e=(i,j), n point from C_i into C_j, r=1/3, rho=-r, sigma^2=8/9.
+The reflection R across n-perp swaps C_i,C_j. For x in that tie plane,
+the Gaussian density phi_sigma(y-rho*x) is invariant under y->Ry. Thus
+
+ d_e(x) = partial_n T_rho(1_Ci-1_Cj)(x)
+        = (2r/sigma^2) int_Ci (-n.y) phi_sigma(y-rho*x) dy. (2)
+
+Indeed differentiating the conditional density gives
+rho*(n.y-rho*n.x)/sigma^2, n.x=0, and the reflected C_j integral doubles
+the C_i contribution. On C_i, -n.y>=0.
+
+The nonnegative integrand in (2) is jointly log-concave in (x,y): the cone
+C_i is convex, log(-n.y) is concave on its positive half-space, and the
+negative squared affine norm is concave. Prékopa's marginal theorem therefore
+makes d_e log-concave on n-perp. This proves the upper half of (1).
+Zeros of the linear weight on a boundary cause no problem; log-concavity
+uses its continuous nonnegative extension. The integral is positive and
+smooth for every finite real x in the plane.
+
+Independently, the exact positive boundary formula is
+ d_e(x)=r[2 I_e(x)+(1/2)sum_adjacent I_f(x)],
+ I_f(x)=(9/8)^(3/2)(2pi)^(-3/2) exp(-|x|^2/16)
+          *int_Sigma_f exp(-9|y|^2/16-(3/8)x.y) dH^2(y).
+Therefore exp(|x|^2/16)d_e(x) is a positive Laplace transform.
+The Hessian of its logarithm is a covariance matrix and is positive
+semidefinite. Subtracting Hess(|x|^2/16)=I/8 proves the lower half of (1).
+
+The reflection/log-concavity idea was supplied by radial_coercivity_cleanroom;
+the direct Prékopa proof, interpolation mechanism, constants below, and
+executable error bound were derived and checked here independently.
+
+2. EXACT ORIGIN CONSTANTS AND A GLOBAL LOWER BOUND
+Put L=acos(-1/3). In orthonormal facet coordinates
+ x=(q,z/sqrt(2),-z/sqrt(2)), q along the facet bisector, one obtains
+ d(0)=L/(2*pi^(3/2)),
+ grad(log d)(0)=(-kappa,0), kappa=sqrt(2*pi/3)/(4L).       (3)
+
+For verification, the sector Gaussian integral at zero is 8L/9, and the
+sum of the five positive weights in the bracket defining d is 4. A sector's
+mean radial coordinate under density exp(-9t^2/16)t dt is 2sqrt(pi)/3;
+its mean angular unit vector is (2sin(L/2)/L) times its bisector. The four
+adjacent facet bisectors cancel. The same facet receives weight2 out of4.
+Multiplication by the Laplace coefficient -3/8 yields (3).
+
+Integrating (1) along the segment from zero gives, globally on the tie plane,
+ log d(0)-kappa*q-|x|^2/16 <= log d(x) <= log d(0)-kappa*q. (4)
+In particular, the lower bound suggested by the root's log-mgf approach is
+explicit. It is stronger for this purpose than the compact-sector bound.
+
+3. BILINEAR INTERPOLATION: NONORTHOGONAL RAY COORDINATES INCLUDED
+Let a,b be the two unit boundary rays of a facet; a.b=-1/3. Write
+ x=u*a+v*b, u,v>=0,
+ q=(u+v)/sqrt(3), z=sqrt(2/3)(v-u),
+ |x|^2=u^2+v^2-(2/3)uv, dH^2=(2sqrt(2)/3)du dv.
+Although these coordinates are not orthogonal, each coordinate direction
+has unit Euclidean length. Hence (1) implies separately
+ -1/8<=g_uu<=0 and -1/8<=g_vv<=0, where g=log d.
+
+On a rectangle [u0,u1]x[v0,v1], let g_I be its bilinear corner interpolant.
+Successive one-dimensional interpolation, whose error for -1/8<=f''<=0
+lies between 0 and (t-a)(b-t)/16, proves
+ 0<=g-g_I<=[(u-u0)(u1-u)+(v-v0)(v1-v)]/16
+          <=epsilon=(h_u^2+h_v^2)/64.                    (5)
+No bound on the mixed derivative is needed for (5). This explicitly checks
+the nonorthogonal-coordinate issue.
+Thus, pointwise,
+ exp(-epsilon)*exp(-g_I)<=1/d<=exp(-g_I).                 (6)
+It follows for EVERY nonnegative moment integrand that its exact integral
+is between exp(-epsilon) and 1 times the interpolated model integral.
+Arb corner-log balls can be propagated through the same bilinear formula;
+their uncertainty is separate from, and additional to, (5).
+
+4. EXPLICIT CERTIFIED TENSOR GAUSS ERROR FOR THE MODEL
+The desired even-z moment has the model density
+ F(u,v)=J*(2pi)^(-3/2) q^p z^k
+           exp[-5|x|^2/8-g_I(u,v)], k even, p>=0, J=2sqrt(2)/3.
+This function extends to an entire function of two complex coordinates.
+At the cell center write its exponent as
+ E0+Eu*xi+Ev*eta+Euu*xi^2+Euv*xi*eta+Evv*eta^2.
+Take complex polydisc radii R_u=2h_u, R_v=2h_v. A valid supremum M is
+
+ J*(2pi)^(-3/2)
+ *[|q_center|+(R_u+R_v)/sqrt(3)]^p
+ *[|z_center|+sqrt(2/3)*(R_u+R_v)]^k
+ *exp[E0+|Eu|R_u+|Ev|R_v+|Euu|R_u^2
+                  +|Euv|R_u R_v+|Evv|R_v^2].             (7)
+
+Use upper bounds for every factor when coefficients are interval-valued.
+The n-node tensor Gauss-Legendre rule Q then satisfies
+ |int_cell F-Q| <= (16/3)*h_u*h_v*M*16^(-n).              (8)
+
+Proof: in one variable the radius ratio is tau=(h/2)/(2h)=1/4.
+Truncating its Taylor series at degree2n-1 leaves a uniform remainder at
+most M*tau^(2n)/(1-tau). Both the exact integral and the positive Gauss
+rule have norm h and agree on that polynomial. The error is thus at most
+2h times this remainder. Telescope the two tensor factors; positivity of
+the other rule gives (8). This is an a priori remainder bound, not a
+comparison between consecutive quadrature orders.
+
+Combining (6),(8), if the evaluated model quadrature is the ball [Qlo,Qhi]
+and E is the upward-rounded right side of (8), then a valid actual moment
+enclosure is
+ [max(0,exp(-epsilon)*(Qlo-E)), Qhi+E].                   (9)
+
+The companion certified_log_diagonal_quadrature_20261101.py implements
+(7)-(9), obtaining Gauss nodes AND weights as Arb enclosures from
+arb.legendre_p_root. Its executable demo integrates four actual moments on
+the cell [0,3/20]^2, using (4) to enclose the genuine corner logs. It does
+not pretend that those coarse corner bounds suffice on the whole window.
+The radial agent supplies sharper certified corner values there.
+
+5. FEASIBLE WINDOW AND ERROR BUDGET
+The ray square [0,27/2]^2 lies within the radius16 disk (its maximal radius
+is 9sqrt(3)<16) and contains the facet disk of radius9sqrt(2). Thus the
+parent's compact-radius series bound at16 remains applicable; the omitted
+operator tail may be bounded by the disk tail at9sqrt(2), not incorrectly
+by the smaller radius16 tail. The covariance agent independently obtained
+the exact rational upper bound
+ 2*432*(121/18)*28*(51393334/99225)*(60/163)^30*(8/11)
+ < 6e-6.
+It uses 7/5<sqrt(2)<99/70, I_0<28, exp(15/8)<121/18,
+e>163/60, and exp(3/8)>11/8 in the parent's analytic tail formula.
+
+A 90x90 grid of side3/20 requires only91^2 denominator corner evaluations.
+It has epsilon=9/12800=.000703125. If the finite signed two-moment contraction
+has certified absolute coefficient contraction C_abs, denominator
+interpolation contributes at most (exp(2epsilon)-1)*C_abs to its absolute
+error. Using the exploratory C_abs about88.66 gives about.125, which fits
+the working H<30.6 budget. That decimal is planning evidence; C_abs and the
+Gauss remainder sum must be enclosed in the final certificate.
+
+SCOPE
+This note proves the diagonal inequalities and supplies an executable local
+integration enclosure. It does not certify the entire compact HS integral,
+the common-mass angle, the global endpoint inequality, or nonlinear local
+minimality. It replaces the missing reciprocal-quadrature error mechanism
+with explicit formulas that can be incorporated into the active certificate.

@@ -1,0 +1,119 @@
+ACTUAL TETRAHEDRAL BOUNDARY OPERATOR: A GLOBAL DIAGONAL LOWER BOUND
+AND A RIGOROUS FINITE-RADIUS REDUCTION
+1 November 2026. Root derivation; independently checked by both boundary agents.
+
+This is an analytic lemma for the actual endpoint second-variation operator.
+It does not prove its remaining finite-region norm bound, nonlinear local
+optimality, or global tetrahedral optimality. No frozen large-m damping is used.
+
+1. Normalization
+
+Take four centered regular sites Y_i in R^3 with Y_i.Y_j=delta_ij-1/4.
+Let C_i be their winning cones. For e=(i,j), i<j, let Sigma_e be their common
+two-dimensional facet, n_e=(Y_j-Y_i)/sqrt(2) its outward normal from C_i,
+and c_e=e_i-e_j its label incidence vector. Each facet is a planar sector
+of angle L=acos(-1/3). Write
+  d lambda_e(x)=(2pi)^(-3/2) exp(-|x|^2/2) dH^2(x).
+The correlation is rho=-r=-1/3, sigma^2=1-r^2=8/9. Relative to the two
+ambient Gaussian densities the Mehler kernel is
+  K(x,y)=sigma^(-3) exp[-(|x|^2+|y|^2)/16-(3/8)x.y].        (1)
+Put I_f(x)=int_Sigma_f K(x,y)d lambda_f(y).
+
+The actual positive diagonal in the second variation is
+  d_e(x)=partial_n_e T_-r(1_Ci-1_Cj)(x)
+        =r[2 I_e(x)+(1/2)sum_{f adjacent to e} I_f(x)].       (2)
+There are four adjacent facets. To check (2), distributionally differentiate
+1_Ci-1_Cj in direction n_e. The common facet has coefficient -2; each of
+the four adjacent facets has coefficient -1/2. The semigroup derivative
+multiplies this signed boundary measure by rho=-r. All terms in (2) are
+therefore positive. In particular d_e>=2r I_e.
+
+Let H be the direct sum of L2(Sigma_e,d_e d lambda_e). Its self-adjoint
+boundary operator A is defined by
+  <u,A v>_H=sum_{e,f}(c_e.c_f) int int u_e(x)K(x,y)v_f(y)
+                                      d lambda_e(x)d lambda_f(y).
+Consequently
+  ||A||_HS^2=sum_{e,f}(c_e.c_f)^2 int int K(x,y)^2/[d_e(x)d_f(y)]
+                                      d lambda_e(x)d lambda_f(y).     (3)
+These are surface Gaussian measures, not normalized planar probabilities.
+
+2. Compact-sector lower bound, valid for every x
+
+For s=|x|, restrict I_e(x) to the same sector with 0<=|y|<=R_s=1/(1+s).
+The combined y-density and kernel exponent is
+  -s^2/16-9|y|^2/16-(3/8)x.y >= -s^2/16-15/16,
+because |y|<=1 and s|y|<=1. The sector's Euclidean area is L R_s^2/2.
+The factor 2r in (2) cancels that denominator2. Thus
+  d_e(x)>=c0 exp(-s^2/16)/(1+s)^2,                        (4)
+  c0=r L sigma^(-3)(2pi)^(-3/2) exp(-15/16)>0.
+This global lower bound uses the actual normal derivative. In particular,
+an inverse-weight divergence from a different, coarser damping does not
+apply to this operator.
+
+3. Explicit Hilbert--Schmidt tail
+
+After inserting (4), the exponent in the integrand of (3), including both
+surface densities, is at most
+  -9(s^2+t^2)/16-(3/4)x.y <= -3(s^2+t^2)/16.               (5)
+The remaining radial factors are s(1+s)^2 t(1+t)^2. The constant before
+angular integrations is exp(15/8)/(r^2 L^2). Each sector has angular
+length L. The ordered incidence-square sum is
+  sum_{e,f}(c_e.c_f)^2=6*4+24*1+6*0=48.
+Set a=3/16 and
+  I_R=int_R^infinity s(1+s)^2 exp(-a s^2)ds.
+If A_R retains the kernel only when both |x|,|y|<=R, then
+  ||A-A_R||_HS^2
+    <=432 exp(15/8) [2 I_0 I_R-I_R^2].                    (6)
+This proves, in particular, that the entire operator is Hilbert--Schmidt.
+
+Elementary Gaussian integration gives
+  I_0=1/(2a)+1/(2a^2)+sqrt(pi)/(2a^(3/2)),
+  I_R=exp(-aR^2)[(R+1)^2/(2a)+1/(2a^2)]
+       +sqrt(pi)/(2a^(3/2)) erfc(sqrt(a)R).
+For R>0, the elementary one-step Gaussian tail bound gives
+  I_R<=exp(-aR^2)[(R+1)^2/(2a)+1/(2a^2)+1/(2a^2 R)].      (7)
+
+At R=16, aR^2=48 and the bracket in (7) is 7072/9. Also I_0<28 and
+exp(15/8)<8. For the first inequality, pi<22/7 implies
+sqrt(pi/3)<25/24; substitution gives I_0<28. For the second, exp(15/8)
+<e^2<8. The elementary series bounds 8/3<e<11/4 suffice for all these
+exponential comparisons. Hence
+  ||A-A_16||_HS^2
+    <(193536*7072/9)(3/8)^48 < 10^(-12).                  (8)
+The final comparison is exact integer arithmetic in the companion checker.
+In particular the operator-norm truncation error is less than10^(-6).
+No quadrature convergence assertion enters (4)--(8).
+
+4. Exact matching-mass constraints and their tails
+
+The common-mass condition for opposite variations is M u=0, where
+  (M u)_i=sum_e c_e,i int_Sigma_e u_e d lambda_e.
+Its Hilbert-space representers are q_i,e(x)=c_e,i/d_e(x). They are square
+integrable by (4). The same estimate gives
+  sum_i ||1_{|x|>R}q_i||_H^2
+    <=36 sigma^3 exp(15/16) int_R^infinity s(1+s)^2 exp(-7s^2/16)ds.
+At R=16 this is strictly less than
+  (108*16320/49)(3/8)^112 <10^(-42).                      (9)
+Again, the final assertion is verified with rational arithmetic.
+
+By tetrahedral symmetry, if V=int_Sigma_e (1/d_e)d lambda_e,
+  Q*Q=4 V P,  P=I_4-11^T/4,
+where Q has columns q_i. Thus the exact orthogonal constraint projection
+is I-Q(4 V P)^dagger Q*. It is NOT, in general, projection off translations.
+The varying weight d_e prevents that shortcut.
+
+5. Scope of the finite computation still required
+
+The exact translation and rotation eigenvalues are3 and-1, respectively.
+Their finite-rank spectral deductions, including the correct translation
+angle correction, are proved in the separate independent operator audit.
+Estimates (8)--(9) rigorously control the omitted radii and constraint
+representers. A quadrature rule or sampled matrix on radius<=16 still
+requires its OWN error enclosure before giving a norm certificate.
+Even a completed local second-variation certificate is not a proof of the
+global paired endpoint. No such completion is claimed here.
+
+Reproduce the exact final arithmetic with:
+  python3 certify_operator_tail_rational_20261101.py
+The checker verifies the rational endpoints of the analytic derivation;
+it is not a formal proof assistant and does not verify the derivation itself.

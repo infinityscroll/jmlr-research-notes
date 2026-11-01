@@ -1,0 +1,20 @@
+EXACT RATIONAL CERTIFICATE: COMMON MASS BOX
+Uniform Plackett-integral panels: 512
+Every assertion uses Python arbitrary-precision integers and Fraction.
+Pi: Machin formula with alternating arctangent remainders.
+Quantiles: one-sided integrated Gaussian Taylor bounds.
+Integral upper bounds: rectangle bounds and degree-20 exponential Taylor bounds.
+Square roots: exact integer-isqrt lower bounds, denominator 10^24.
+w in [0.353204552849016, 0.353204552849017]
+Tetra Hermite upper U < 0.147170888757608
+p=1/8, z_lower=1150349/1000000, certified (1-p)-Phi(z_lower) > 0.000000078301761; J(p) > 0.004646253363269
+p=7/24, z_lower=274261/500000, certified (1-p)-Phi(z_lower) > 0.000000097028304; J(p) > 0.047545066408525
+p=3/8, z_lower=318639/1000000, certified (1-p)-Phi(z_lower) > 0.000000138013567; J(p) > 0.092823843378997
+p=5/24, z_lower=812217/1000000, certified (1-p)-Phi(z_lower) > 0.000000229912264; J(p) > 0.019082534302748
+F(1/8) > 0.147281452588844 > 147281/1000000
+F(3/8) > 0.150071446287242 > 150071/1000000
+U < 147171/1000000
+F(1/8)-U > 0.000110563831236 > 110/1000000
+F(3/8)-U > 0.002900557529635 > 2900/1000000
+PASS: any matched-mass pair with agreement <= tetra agreement has 1/8 < p_i < 3/8.
+This certifies localization only, not tetrahedral optimality.

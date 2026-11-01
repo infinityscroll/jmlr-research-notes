@@ -1,0 +1,128 @@
+COMMON-MASS LOCALIZATION FOR FOUR LABELS AT CORRELATION 1/3
+2026-11-01. Proven localization lemma, with exact rational certificate.
+
+THEOREM. Let A=(A_i) and B=(B_i) be measurable four-cell Gaussian partitions in any finite dimension, with common masses
+  gamma(A_i)=gamma(B_i)=p_i, sum_i p_i=1.
+Put
+  Q(A,B)=sum_i <1_Ai,T_{1/3}1_Bi>_gamma.
+Let S_tet=Q(C,-C) be the regular tetrahedral benchmark in R^3.
+If Q(A,B)<=S_tet, then
+                         1/8 < p_i < 3/8
+for every i.
+
+In fact, if any common mass lies outside this open box, then
+                         Q(A,B)-S_tet > 11/100000.
+Thus the same box holds whenever Q(A,B)<=S_tet+1/10000. The theorem also applies to simplex-valued assignments with common coordinate expectations. It neither assumes nor proves tetrahedral optimality.
+
+The benchmark is bounded analytically; its approximately 0.142512 numerical value is not used. All numerical assertions below are certified using exact rational arithmetic in the accompanying script.
+
+1. Borell applies to the independent pair
+
+Write J_r(p,q)=P(X<=Phi^{-1}(p),Y<=Phi^{-1}(q)), with scalar standard Gaussians of correlation r, and J(p)=J_{-1/3}(p,p).
+
+Mossel–Neeman, Robust Optimality of Gaussian Noise Stability, Theorem1.1, explicitly states Borell's inequality for TWO arbitrary measurable sets of prescribed masses. Theorem1.2 supplies the functional version. This is not a one-set-only statement.
+Primary text: https://arxiv.org/html/1210.4126v2
+Journal: https://ems.press/journals/jems/articles/11976
+
+Apply its positive-correlation upper bound to A_i and B_i^c:
+  P_{1/3}(X in A_i,Y in B_i)
+    =p_i-P_{1/3}(X in A_i,Y in B_i^c)
+    >=p_i-J_{1/3}(p_i,1-p_i)
+    =J_{-1/3}(p_i,p_i).
+The last identity reflects the second scalar Gaussian variable. Consequently
+                         Q(A,B)>=sum_i J(p_i).             (1)
+
+For bounded coordinates f_i,g_i, the same conclusion follows from the functional theorem: J_r(u,v)>=uv for r>0, so E_r[f_i(1-g_i)]<=J_r(p_i,1-p_i). This proves (1) for simplex-valued assignments as well.
+
+2. Convexity reduces the mass exclusion to two scalar tests
+
+Put z=Phi^{-1}(p). Differentiating the diagonal bivariate CDF gives
+  J'(p)=2 Phi(sqrt(2) z),
+  J''(p)=2sqrt(2) exp(-z^2/2)>0, 0<p<1.                     (2)
+The endpoint values extend continuously.
+
+Fix one mass p. Jensen applied to the other three masses yields
+  sum_i J(p_i)>=F(p):=J(p)+3J((1-p)/3).                     (3)
+Moreover
+  F'(p)=J'(p)-J'((1-p)/3).
+Thus F is strictly decreasing on (0,1/4) and strictly increasing on (1/4,1). To exclude p<=1/8 and p>=3/8 it is enough to certify that both F(1/8) and F(3/8) exceed S_tet.
+
+3. An analytic upper bound for S_tet
+
+Let A_k be the total degree-k Hermite energy of the four tetrahedral indicators, normalized so that their noise agreement is sum_{k>=0}rho^k A_k. Then A_k>=0 and Parseval gives sum_k A_k=1. For the tetrahedron,
+  A_0=1/4,
+  A_1=w=3L^2/pi^3,  L=acos(-1/3),
+  A_2=1/pi^2.
+Dropping the negative odd-degree terms and bounding every remaining even degree >=4 by 1/81 gives
+  S_tet <= U
+    :=1/4-w/3+A_2/9+(1-1/4-w-A_2)/81
+     =7/27-(28/81)w+8/(81pi^2)
+     <147171/1000000.                                     (4)
+The certificate encloses U below 0.147170888757608.
+
+For completeness, the Hermite constants can be obtained directly. With unit tetrahedron vertices v_i and L as above, the spherical triangle C_i intersect S^2 has first moment
+  int omega dmu = [sqrt(6)L/(8pi)] v_i.
+Multiplying by E chi_3=2sqrt(2/pi) and summing the squared Gaussian first moments gives A_1=3L^2/pi^3.
+
+For A_2, write M_i=E[(XX^T-I)1_Ci]. Tetrahedral symmetry gives
+  M_i=[sqrt(3)/(2pi)](v_i v_i^T-I/3).
+One direct calculation uses q(omega)=(omega.v_i)^2-1/3, with Delta_{S^2}q=-6q. Each boundary edge has length L, inward conormal n_ij=(v_i-v_j)/sqrt(8/3), v_i.n_ij=sqrt(2/3), and
+  int_edge omega.v_i ds=2sqrt(2)/3.
+Integration by parts gives int_Ci^S q dmu=1/(3sqrt(3)pi), which gives the stated M_i after multiplication by E chi_3^2=3. Finally,
+  A_2=(1/2)sum_i ||M_i||_F^2=1/pi^2.
+Thus (4) requires no numerical integration of the tetrahedral probability.
+
+4. Exact finite certificate for the boundary tests
+
+The covariance derivative of the bivariate Gaussian CDF is its joint density at the two thresholds. Integrating that derivative from correlation0 to -1/3 gives, for z=-Phi^{-1}(p)>0,
+  J(p)=p^2-(1/(2pi)) int_0^{1/3}
+                 exp[-z^2/(1-t)]/sqrt(1-t^2) dt.           (5)
+
+All four p used below are less than1/2. The script certifies the following one-sided quantile bounds:
+  p=1/8:   z>1150349/1000000,
+  p=7/24:  z> 548522/1000000,
+  p=3/8:   z> 318639/1000000,
+  p=5/24:  z> 812217/1000000.
+For each rational z0 it proves Phi(z0)<1-p using the degree16 integrated Gaussian Taylor upper bound and an outward bound for 1/sqrt(2pi).
+
+Partition [0,1/3] into exactly512 rational intervals [t_k,t_{k+1}]. On each interval,
+  exp[-z^2/(1-t)]/sqrt(1-t^2)
+    <=exp[-z0^2/(1-t_k)]/sqrt(1-t_{k+1}^2).                (6)
+The exponential is bounded above by its degree20 Taylor polynomial for exp(-x); the even truncation has a negative remainder. All arguments x are certified to lie in[0,2]. Square-root lower bounds use exact integer square roots at scale10^24. Each upper integrand is rounded UP to that rational grid before summation.
+
+Pi is enclosed by Machin's formula with alternating arctangent remainder bounds. The arcsin(1/3) needed for L=pi/2+arcsin(1/3) is enclosed by its positive Taylor series, whose subsequent term ratios are bounded by1/9. The script uses only Python integers and Fraction. No binary floating-point values enter any asserted inequality.
+
+The resulting finite bounds are
+  F(1/8)>0.147281452588844 >147281/1000000,
+  F(3/8)>0.150071446287242 >150071/1000000,
+  U      <0.147170888757608 <147171/1000000.               (7)
+These are one-sided enclosures, not convergence estimates.
+
+Combining monotonicity, (1), (3), (4), and (7), any mass outside (1/8,3/8) gives
+  Q(A,B)-S_tet >=F(p)-U >110/1000000=11/100000,
+as claimed.
+
+Reproduce with:
+  python3 certify_common_mass_box_rational_20261101.py
+Output:
+  COMMON_MASS_BOX_RATIONAL_CERTIFICATE_20261101.txt
+The run completed successfully. The script contains exact assertions for the displayed rational bounds and both separation gaps.
+
+5. Carry forward the already closed balanced angular first mode
+
+This successor corrects the status of (M) in the earlier angular attack note, which is preserved unchanged. Within the accepted proof dependencies, the balanced spherical first-moment bound is ALREADY established.
+
+The accepted balanced Gaussian first-moment theorem is derived in Section3 of the sibling source
+  ../BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt.
+For a balanced partition E_i of S^2, extend it conically to R^3. Its Gaussian centroid equals E chi_3 times its spherical centroid. Since (E chi_3)^2=8/pi and w_4=3L^2/pi^3, that theorem implies
+  sum_i |int_Ei omega dmu|^2
+       <=w_4/(8/pi)=3L^2/(8pi^2)=4c^2,
+  c=sqrt(6)L/(8pi).
+Cauchy–Schwarz therefore gives, for two balanced spherical partitions E,F,
+  sum_i (int_Ei omega dmu).(int_Fi eta dmu)>=-4c^2.
+This closes the balanced paired first angular mode. It is not a new unresolved gate. Higher angular modes and their coupling remain to be controlled.
+
+The localization proved in Sections1–4 does not depend on that accepted balanced theorem. It concerns GLOBAL Gaussian masses p_i, not the angular masses on each radius. It must not be applied pointwise to p_i(t) or q_i(t), which can vary outside the box.
+
+This is a localization tool for the remaining paired endpoint argument. No four-label optimality, external validation, publication, or master-manuscript change is asserted.
+

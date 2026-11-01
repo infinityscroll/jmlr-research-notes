@@ -1,0 +1,29 @@
+{
+  "verdict": "Accepted for the stated facet operator bounds under the audited binary64 arithmetic model; no global endpoint claim.",
+  "source_sha256": {
+    "certify_facet_moment_hs.py": "37e58d4f07fd53a2284c404a390157f07c07a9e945117f71ca9d15d5f387b3a8",
+    "arb_facet_diagonal.py": "6fb8c8e4016aaed6090edf20d0ca1bca9314f5eb19cb84369662625e023f9b5b"
+  },
+  "audit_sha256": {
+    "INDEPENDENT_CURVATURE_QUADRATURE_AND_FLOATING_AUDIT_20261101.txt": "0c7df77e98927425445af84087e02ed249e7f2dfe66b4cfcad89608f8b619639",
+    "covariance_audit_rational_quadrature_bounds.py": "fa8e77e9880a77c201c9d309b02051ea8a32af0dd061c21c6f41473c1cbe3ccd",
+    "covariance_rerun_final_facet_certificate.py": "c866319354f16a7937571b5347dc642f3f103e39bd5cac93efff34d26d58521e"
+  },
+  "source_unchanged_during_run": true,
+  "numpy_version": "1.26.4",
+  "float_rounds": 1,
+  "float_epsilon": 2.220446049250313e-16,
+  "independent_output": "covariance_frozen_certificate_rerun/facet_moment_certificate.json",
+  "total_HS_upper": "[30.3747954612809456239736752336042410 +/- 1.65e-35]",
+  "delta_upper": "[0.027457964461348916209996888455771963 +/- 2.57e-37]",
+  "mass_constrained_Rayleigh_upper": "[0.67776938680706827088649959876966008 +/- 9.92e-36]",
+  "claims_verified_by_interval_comparison": {
+    "HS_below_30_6": true,
+    "delta_below_005": true,
+    "Rayleigh_below_1": true,
+    "HS_below_30_plus_3_over_8": true,
+    "delta_below_11_over_400": true,
+    "Rayleigh_below_17_over_25": true,
+    "rational_square_comparison": true
+  }
+}

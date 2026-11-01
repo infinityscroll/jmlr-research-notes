@@ -1,0 +1,62 @@
+COMMON-MASS CERTIFICATE: FRESH EXECUTION AND SIGN AUDIT
+Date: 2026-11-01
+Scope: localization of the common Gaussian masses of a four-label pair.
+
+RESULT
+The checker was run once during this audit with system python3. It exited 0.
+All assertions passed. The source was reread, including the rounding and
+remainder directions. No floating-point arithmetic enters any assertion.
+
+Source: certify_common_mass_box_rational_20261101.py
+SHA256: e55060487f44fcad659a53a940ca2ff397986670f7b6f346b18675a6812c2d4a
+Output: COMMON_MASS_BOX_RATIONAL_CERTIFICATE_20261101.txt
+Proof: COMMON_MASS_LOCALIZATION_20261101.txt
+All three files are in this directory. The checker writes its output file;
+the fresh execution did not edit its source or the mathematical proof note.
+
+AUDIT POINTS
+1. Machin's formula uses valid alternating arctangent enclosures, with the
+   subtraction of the second arctangent reversing its endpoints correctly.
+   The asin(1/3) series has positive terms and subsequent ratios below 1/9;
+   the tail bound 9/8 times the next term is valid.
+2. The integer-isqrt routine proves both inequalities for its rational root
+   enclosure. It always returns the lower endpoint used in denominators.
+3. Even-degree Taylor polynomials upper-bound exp(-x) for nonnegative x by
+   the integral remainder formula. Every asserted exponential argument lies
+   in [0,2]. Integrating the even Gaussian Taylor polynomial also gives the
+   stated upper bound for Phi. Hence each rational z is strictly below the
+   needed positive quantile -Phi^{-1}(p).
+4. In each Plackett-integral panel, the exponential factor is bounded above
+   at the left endpoint, and the reciprocal square root at the right
+   endpoint. Decreasing z increases the exponential. Each additional grid
+   rounding is upward. Subtracting the resulting integral upper bound with
+   pi_lower gives a lower bound for J(p).
+5. The Hermite upper bound drops negative odd terms and bounds positive even
+   degrees >=4 by 1/81. Its algebra is
+   U=7/27-(28/81)w+8/(81*pi^2).
+   Using w_lower and pi_lower gives an upper bound, as required.
+6. The paired Borell step is legitimate. Applying the two-set positive-rho
+   upper bound to A_i and B_i^c yields
+   P_{1/3}(A_i,B_i) >= p_i-J_{1/3}(p_i,1-p_i)
+                          = J_{-1/3}(p_i,p_i).
+   Jensen then gives sum_i J(p_i)>=F(p_j) for every j, with
+   F(p)=J(p)+3J((1-p)/3). Strict convexity makes F decrease to 1/4 and
+   increase thereafter. No equality-of-all-four-masses assumption enters.
+
+NUMERICAL ENCLOSURES, ALL CERTIFIED WITH RATIONAL ARITHMETIC
+U < 0.147170888757608.
+F(1/8) > 0.147281452588844.
+F(3/8) > 0.150071446287242.
+F(1/8)-U > 0.000110563831236 > 11/100000.
+F(3/8)-U > 0.002900557529635.
+
+Thus a pair with matched common masses and agreement <= the tetrahedral
+benchmark has 1/8<p_i<3/8 for every i. The same follows for agreement at most
+the benchmark plus 1/10000. This is a statement about global Gaussian masses,
+not masses on each sphere, local Hessians, or global tetrahedral optimality.
+
+PRIMARY SOURCE FOR THE TWO-SET BORELL STEP
+Mossel and Neeman, Robust Optimality of Gaussian Noise Stability,
+Theorem 1.1 (arbitrary two sets), Theorem 1.2 (functional formulation):
+https://arxiv.org/html/1210.4126v2
+Published paper: https://ems.press/journals/jems/articles/11976

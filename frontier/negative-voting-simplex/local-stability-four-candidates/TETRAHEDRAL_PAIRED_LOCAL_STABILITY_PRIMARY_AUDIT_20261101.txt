@@ -1,0 +1,129 @@
+TETRAHEDRAL PAIRED ENDPOINT HESSIAN: PRIMARY-LITERATURE SCOPE AUDIT
+Date: 2026-11-01
+
+FINDING
+I did not locate a primary theorem proving the precise requested result:
+at (C,-C) in R^3 and r=1/3, the second variation of
+Q_r(A,B)=sum_i <1_{A_i},T_r 1_{B_i}> is positive for every admissible pair
+of boundary speeds with matched Gaussian masses, apart from the common
+rotation directions. The closest checked results give variational identities,
+dimension reduction, or a classification conditional on hyperstability.
+None of those results supplies the proposed all-speed spectral certificate.
+This is a bounded literature finding, not an exhaustive priority claim.
+
+The relevant constraint allows the common mass vector to vary: along the
+variation gamma(A_i(s))=gamma(B_i(s)), but these quantities need not stay 1/4.
+Restricting to self-pairs B=-A, to fixed individual masses, to simplicial
+deformations, or to positive-correlation self-maximizers would change the
+question. In particular, a self-rule result would test fewer directions.
+
+1. HEILMAN, HYPERSTABLE SETS WITH VOTING AND ALGORITHMIC HARDNESS APPLICATIONS
+https://arxiv.org/html/2209.11216v1
+https://arxiv.org/abs/2209.11216
+
+Problem 7.1 is precisely positive-correlation paired minimization subject to
+gamma(Omega_i)=gamma(Omega'_i), with the common masses free. Lemma 7.6,
+equations (47)-(48), gives the paired second-variation expression in the
+optimizer setting: cross-boundary integral terms plus positive weighted
+squares of normal speeds. Lemma 7.7, equation (50), identifies translation
+speeds as almost eigenfunctions with factor -1/rho before reflection and
+normalization. These identities do not bound the operator on all other modes.
+
+Theorem 7.9 reduces paired minimizers to a common (m-1)-dimensional space.
+Theorem 8.5: if m<=4 and partitions minimize Problem 7.1 AND are hyperstable,
+then they are congruent regular simplicial cones. This is conditional
+classification of optimizers; it is not a converse stability theorem for
+the displayed tetrahedral pair. Definition 1.3 includes a second-variation
+sign condition and an extra mixed variation/correlation derivative condition.
+Using hyperstability as evidence that the candidate Hessian is positive would
+assume part of the desired conclusion. No rotations-only kernel or positive
+gap for all matched-mass boundary speeds is established by these statements.
+
+2. HEILMAN--TARTER, THREE CANDIDATE PLURALITY IS STABLEST FOR SMALL CORRELATIONS
+https://arxiv.org/html/2011.05583v2
+https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/three-candidate-plurality-is-stablest-for-small-correlations/2C2143844EB4F92A49B36C33002F4631
+
+Theorem 1.9 concerns dimension reduction for positive-correlation maximizers.
+Section 7 develops a two-partition minimization problem with prescribed mass
+vectors; Lemma 7.6 gives its second variation, Lemma 7.7 its translation
+identity, and Theorem 7.9 a common dimension bound 2m-2. The later 2022 paper
+above treats the equal-common-mass constraint and obtains m-1 instead.
+Neither dimension statement proves a spectral gap at a specific candidate.
+Nor do the general formulas identify every null vector of its Hessian.
+
+3. HEILMAN, STABLE GAUSSIAN MINIMAL BUBBLES
+https://link.springer.com/article/10.1007/s00526-026-03408-z
+Author manuscript: https://www.stevenheilman.org/~heilman/papers/stable.pdf
+
+Theorem 1.5 classifies minimizers of a Gaussian-perimeter functional with a
+centroid penalty. Its m<=4 case has an explicit permitted penalty. Theorem
+1.6 is a perimeter stability inequality and, as printed, assumes Conjecture
+1.16 for m>3. Corollary 1.11 is a weak self-noise comparison for 1/2<rho<1,
+with an o(sqrt(1-rho^2)) term as rho tends to 1. These are not finite negative
+correlation or independent-pair Hessian results. The small-noise comparison
+cannot simply be differentiated in a perturbation to obtain the requested
+endpoint Hessian: it supplies neither that parameter nor a suitable uniform
+remainder estimate. Theorem 9.1 is a general second-variation identity, not
+the required tetrahedral spectral estimate.
+
+Published PDF checked from the existing cache:
+../../stable_bubbles_bridge_20261031/heilman_published.pdf
+with extracted text at the same stem .txt; Theorems 1.5-1.6 are on PDF p4,
+Corollary 1.11 on PDF p6, and its proof is in Section 12.
+
+4. HEILMAN--MOSSEL--NEEMAN, STANDARD SIMPLICES AND PLURALITIES ARE NOT THE
+   MOST NOISE STABLE
+https://arxiv.org/html/1403.0885v3
+
+Theorem 2.6: a shifted flat partition into n+1 parts with nonuniform prescribed
+Gaussian volumes is not optimal, for either sign of nonzero correlation;
+positive correlations admit a larger self-stability, negative ones a smaller
+self-stability, with the same volumes. The proof uses first variations.
+This excludes an unbalanced shifted-simplex extension. It neither proves nor
+disproves the full Hessian statement at the centered balanced tetrahedral
+pair. In particular, its unbalanced competitors cannot be read as a negative
+second-variation direction at the balanced candidate.
+
+5. HEILMAN, EUCLIDEAN PARTITIONS OPTIMIZING NOISE STABILITY
+https://arxiv.org/html/1211.7138v2
+
+Theorem 1.2 proves the standard simplex statement for three sets at sufficiently
+small positive correlation, with the permitted range depending on dimension.
+It does not give four-label negative-endpoint local stability. The discussion
+immediately following that theorem explicitly distinguishes the negative
+correlation case and refers to Theorem 7.4 for failure of that proof strategy.
+
+6. HEILMAN, SHARP HARDNESS FOR MAX-3-CUT AND QUANTUM MAX-CUT (2026)
+https://arxiv.org/html/2608.00333v1
+
+Theorem 1.2 addresses three labels. Section 1.4 says that the corresponding
+four-or-more-set and four-or-more-candidate problems remain largely open and
+identifies spherical triangle rearrangement as an obstruction. It points to
+the hyperstable approach as an alternative. The same section says that stronger
+quantitative stability estimates were not pursued. None of this is an
+assertion that no local theorem exists, but it supplies no four-label,
+all-speed Hessian theorem or rotations-only nullspace result.
+
+CONDITIONAL ARITHMETIC CHECK OF THE CURRENT CERTIFICATE TARGET
+Assume, separately from the literature, that the operator normalization,
+constraint compression, translation/rotation eigenspaces, and residual
+Hilbert--Schmidt argument in the working reduction have all been justified.
+If H<30.6 and delta<.05, then h=sqrt(H-30)<sqrt(.6)<.8 and
+  h+(3-h)delta = (1-delta)h+3delta < .8+2.2*.05 = .91 < 1.
+Thus these targets give a comfortable strict margin in the stated reduction.
+This arithmetic check is not certification of H, delta, the operator model,
+the treatment of boundary junctions, or density of the allowed speeds.
+
+Once the full reduction and numerical enclosures are certified, the justified
+claim is coercivity of the constrained second variation modulo common
+rotations in its stated weighted boundary space. A nonlinear local-minimizer
+claim still needs a topology, admissible deformation theory, and uniform
+remainder control. A global paired inequality, the full negative simplex
+conjecture, and MAX-4-CUT sharp hardness do not follow from this Hessian result.
+
+SEARCH SCOPE
+The papers above and their directly relevant variation/structure statements
+were checked. Searches combined regular simplex, tetrahedral, negative
+correlation, Gaussian noise stability, local stability/minimum/maximum, and
+second variation. Only primary papers were used for the finding. No private
+correspondence is included in this note.

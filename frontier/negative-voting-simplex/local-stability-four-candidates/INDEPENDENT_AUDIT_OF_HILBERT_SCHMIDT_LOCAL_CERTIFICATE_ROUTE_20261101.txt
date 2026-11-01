@@ -1,0 +1,237 @@
+INDEPENDENT AUDIT: A FINITE CERTIFICATE ROUTE TO PAIRED LOCAL STABILITY
+1 November 2026. covariance_adversarial_cleanroom.
+
+STATUS AND SCOPE
+
+This note independently verifies the root's compact-sector diagonal bound,
+the resulting Hilbert--Schmidt tail, and the correct treatment of the
+common-mass constraint. It also proves an explicit two-scalar sufficient
+criterion for BOTH paired local Hessian channels. No numerical integral
+is certified here. A separate numerical agent's converged decimal estimates
+are recorded only as evidence that the criterion has useful slack.
+
+Even a completed certificate of this criterion would establish local
+second-variation stability of the regular paired endpoint, NOT global
+minimality, finite-change minimality, or the requested paired inequality
+for all measurable assignments. This limitation is essential.
+
+1. NORMALIZATION
+
+Use the tetrahedral facets, measures lambda_e, full kernel K_rho, and
+actual normal derivative d_e from the companion
+PAIRED_BOUNDARY_FORM_AND_NUMERICAL_DIAGNOSTIC_20261101.txt.
+Here rho=-1/3, r=1/3, sigma^2=8/9, and the facet opening angle is
+  L=arccos(-1/3).
+The boundary forms are
+  D(u)=sum_e int d_e u_e^2 d lambda_e,
+  K(u,v)=sum_(e,f)(b_e.b_f) int int u_e(x)v_f(y)
+                          K_rho(x,y)d lambda_e(x)d lambda_f(y).
+Let the normalized Hilbert space be the direct sum of L2(lambda_e), and
+put U_e=sqrt(d_e)u_e. The normalized operator A has kernel
+  A_ef(x,y)=(b_e.b_f)K_rho(x,y)/sqrt(d_e(x)d_f(y)).          (1)
+Then K(u,v)=<U,A V> and D(u)=||U||^2.
+
+2. THE ROOT'S SAME-FACET DIAGONAL BOUND: FACTORS CHECKED
+
+Let I_f(x)=int_{Sigma_f}K_rho(x,y)d lambda_f(y).
+Distributional differentiation in the outward normal n_e on e=(i,j) gives
+  partial_{n_e}(Theta_i-Theta_j)
+        =-2 lambda_e-(1/2)sum_(four adjacent f)lambda_f.
+The factor2 comes from the two opposite jumps on e. Each adjacent normal
+has scalar product +1/2 or -1/2 with n_e, and the label jump sign turns
+all four contributions negative. Disjoint facets contribute zero.
+Since grad T_rho=rho T_rho grad,
+  d_e(x)=r[2I_e(x)+(1/2)sum_adjacent I_f(x)]>=2r I_e(x).   (2)
+This identity is valid without a far-field approximation.
+
+Write s=|x| and t=|y|. At this endpoint,
+  K_rho(x,y)=(9/8)^(3/2)
+                exp(-(s^2+t^2)/16-(3/8)x.y).
+On the same facet, integrate only over 0<=t<=1/(1+s), the full sector
+of angle L. Multiplying by the Gaussian surface density gives exponent
+  -s^2/16-9t^2/16-(3/8)x.y
+        >=-s^2/16-15/16,
+because t<=1 and x.y<=s t<=1. The sector area is L/[2(1+s)^2].
+Multiplication by 2r in (2) cancels that denominator2. Therefore
+  d_e(x)>=c0 exp(-s^2/16)/(1+s)^2,                         (3)
+  c0=r L (9/8)^(3/2)(2pi)^(-3/2) exp(-15/16).
+The normal derivative, kernel, intrinsic density, sector area, and factor2
+in this formula have all been independently checked.
+
+In particular the ACTUAL inverse diagonal is integrable against every
+fixed polynomial times lambda_e. The earlier frozen coarser damping with
+coefficient greater than1/2 does not imply failure of the actual weight.
+
+3. HILBERT--SCHMIDT INTEGRABILITY AND EXPLICIT OUTSIDE-DISK TAIL
+
+Squaring (1), multiplying by both Gaussian surface densities, and applying
+(3), the exponential part is bounded by
+  exp[-9(s^2+t^2)/16-(3/4)x.y]
+    <=exp[-3(s^2+t^2)/16],
+using x.y>=-s t and 2s t<=s^2+t^2. The remaining factors are
+s t(1+s)^2(1+t)^2 in polar coordinates.
+
+Before angular integration the constant is
+  (9/8)^3(2pi)^(-3)c0^(-2)
+       =9 exp(15/8)/L^2.
+Every facet has angle L. The sum over ordered edge pairs of incidence
+squares is
+  sum_(e,f)(b_e.b_f)^2=6*4+24*1=48.
+Thus A is Hilbert--Schmidt and, writing
+  I_R=int_R^infinity s(1+s)^2 exp(-3s^2/16)ds,
+the portion of ||A||_HS^2 where max(|x|,|y|)>R satisfies
+  Tail_HS(R)<=432 exp(15/8)[2 I_0 I_R-I_R^2].              (4)
+The expression in brackets is the union-of-tails identity, not the tail
+where both radii exceed R. All constants match independently.
+
+For a=3/16, a closed expression is
+  I_R=exp(-aR^2)[(R+1)^2/(2a)+1/(2a^2)]
+          +sqrt(pi)erfc(sqrt(a)R)/(2a^(3/2)).             (5)
+Uncertified decimal evaluations of the bound, for planning only:
+  R=10: .381223
+  R=12: .000137219
+  R=14: 1.056e-8
+  R=16: 1.755e-13.
+A formal certificate must evaluate its selected bound with rigorous
+rounding/enclosures. Formula(4) itself is an exact proved inequality.
+
+4. COMMON MASSES ARE NOT D-ORTHOGONALITY TO TRANSLATIONS
+
+Let c range over label space 1-perp and define constraint representers in
+the normalized Hilbert space by
+  G_c,e(x)=(b_e.c)/sqrt(d_e(x)).                           (6)
+Then the common-mass tangent condition M u=0 is precisely U orthogonal
+to span{G_c}. These representers belong to the Hilbert space by(3).
+They are not proportional to the translation eigenfunctions, which have
+the opposite square-root weight.
+
+The exact translation eigenfunctions are
+  T_v,e(x)=sqrt(d_e(x))(n_e.v), A T_v=3T_v.
+The exact rotation eigenfunctions have the form
+  R_Q,e(x)=sqrt(d_e(x)) n_e.(Qx), Q^T=-Q,
+  A R_Q=-R_Q.
+The second identity follows directly because the infinitesimal rotation
+operator commutes with the isotropic Gaussian channel. On a facet,
+T_rho of the rotation boundary derivative equals minus the tangential
+rotation derivative of the reference potential, hence -d_e n_e.Qx.
+Both eigenspaces have dimension3 and are mutually orthogonal. Rotations
+preserve the individual masses and belong to the common-mass constraint
+space. Nonzero translations do not.
+
+It would be INVALID to enforce common masses merely by subtracting the
+translation eigenvalue contribution27 from ||A||_HS^2. Mass-zero vectors
+can contain translation components compensated by other modes. The
+following angle calculation accounts for that effect exactly.
+
+5. EXACT TRANSLATION/CONSTRAINT ANGLE
+
+By tetrahedral symmetry these scalar integrals are the same on every facet:
+  s0=int d lambda_e=L/(2pi)^(3/2),
+  a0=int d_e d lambda_e,
+  b0=int d_e^(-1)d lambda_e.
+All are finite and strictly positive. Let Y be the 4x3 matrix of tetrahedral
+rows. It is an isometry from spatial R3 to label 1-perp. For c=Yv,
+  b_e.c=-sqrt2 n_e.v,
+and sum_e n_e n_e^T=2I3. Directly,
+  <T_v,T_w>=2a0 v.w,
+  <G_Yv,G_Yw>=4b0 v.w,
+  <G_Yv,T_w>=-2sqrt2 s0 v.w.
+Hence all three principal angles between the translation space T and
+constraint-representer space G have squared cosine s0^2/(a0 b0).
+Put
+  delta=1-s0^2/(a0 b0) in[0,1).                          (7)
+The lower bound delta>=0 is Cauchy--Schwarz. The projection norm is exactly
+  ||P_T|_(G-perp)||^2=delta.                              (8)
+This supplies the correction missing from an unweighted deletion of
+translations.
+
+6. A TWO-SCALAR SUFFICIENT LOCAL CERTIFICATE
+
+Let H=||A||_HS^2. Remove the six exact eigenvectors by defining
+  E=A-3P_T+P_rot.
+Since A is self-adjoint and the exact eigenspaces are orthogonal,
+  E P_T=E P_rot=0,
+  ||E||_HS^2=H-27-3=H-30.
+Write h=sqrt(H-30); then ||E||op<=h.
+
+If h<1, the COMMON paired channel obeys A>=-1 on the whole space, with
+eigenvalue-1 only on rotations. Therefore D+K is nonnegative and its
+nullspace is exactly the rotation speeds.
+
+For a unit U in G-perp, use(8):
+  <U,A U>
+    =3||P_T U||^2-||P_rot U||^2+<U,E U>
+    <=h+(3-h)||P_T U||^2-(1+h)||P_rot U||^2
+    <=h+(3-h)delta.                                      (9)
+Thus the two scalar strict inequalities
+  h<1,  h+(3-h)delta<1                                  (10)
+prove the OPPOSITE paired channel D-K is strictly positive on all
+common-mass tangent speeds, while the common channel is nonnegative.
+The full paired Hessian decomposition then supplies local stability.
+
+For example, rigorous enclosures
+  H<30.4, delta<.04                                     (11)
+would already be more than sufficient: h<sqrt(.4)<.633 and the second
+quantity in(10) is less than .728. These are deliberately loose targets.
+They leave room for a simple finite integration certificate.
+
+This is a proved SUFFICIENT CRITERION. The bounds in(11) are NOT certified
+by this note. It must not be reported as a completed local-stability theorem
+until rigorous integration bounds establish them.
+
+7. AN ALTERNATIVE EXACT MASS-COMPRESSION FORMULA
+
+For direct compression, let G denote any three-column basis of(6),
+C=G*G, and P=I-G C^(-1)G*. Then
+  ||P A P||_HS^2
+     =H-2tr[C^(-1)G* A^2 G]
+             +tr[(C^(-1)G* A G)^2].                      (12)
+This follows by expanding tr(A P A P). Because rotations lie in G-perp
+and have eigenvalue-1, subtracting their contribution3 afterward is valid.
+If the resulting residual HS square is less than1, that proves the
+opposite-channel upper bound. It does not by itself handle the common
+channel; criterion(10) handles both.
+
+The direct formula(12) is correct but introduces A^2 acting on the mass
+representers. The scalar-angle route needs only H and the two one-facet
+moments a0,b0, making it simpler to certify.
+
+8. NUMERICAL EVIDENCE AND REQUIRED CERTIFICATION STEPS
+
+The separate radial_coercivity_cleanroom agent reports, from direct smooth
+radial quadrature of the full kernel, the exploratory values
+  H approximately30.2837768908004,
+  delta approximately.02673068380818,
+  ||P A P||_HS^2-3 approximately.3015174418228.
+The reported files are facet_hilbert_schmidt_explore.py/.json in this
+same attack directory. These values were communicated by that agent and
+are NOT independently interval-verified here. My separate polynomial
+Galerkin scan gave lower finite-subspace evidence consistent with them.
+
+A complete local certificate still needs:
+  * rigorous enclosure of the compact-radius full-kernel HS integral;
+  * rigorous evaluation of the actual d_e values or integrals inside it;
+  * rigorous enclosures for a0 and b0, and their outside-disk tails;
+  * combination with(4), using exact-mode normalization as above.
+The large numerical slack means sharp decimals are unnecessary; proving
+(11) suffices. Smooth quadrature convergence alone does not establish it.
+No uncontrolled polynomial-subspace remainder can replace the full-kernel
+integral and its tail.
+
+9. GLOBAL LIMITATION
+
+Even after(10) is certified, arbitrary pure pairs from the moment-preserving
+purification lemma need not lie in a local neighborhood of the regular
+reference. The even contrast obstruction to reflection averaging and the
+failure of the scalar impurity bridge remain valid. A local certificate
+would advance the endpoint problem but would not close the global paired
+inequality or the full negative-voting statement.
+
+PROVENANCE
+
+The same-facet compact-sector bound and tail constant were proposed by the
+root and independently checked here line by line. The mass-projection
+warning, principal-angle correction, and sufficient criterion are explicit
+independent derivations. The radial agent is responsible for the stated
+exploratory full-kernel decimal values. No original source was changed.
+No publication, outreach, master-state edit, paid job, or new agent was used.

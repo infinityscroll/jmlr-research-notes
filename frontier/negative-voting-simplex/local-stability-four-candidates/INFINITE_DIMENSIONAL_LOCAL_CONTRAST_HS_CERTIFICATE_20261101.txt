@@ -1,0 +1,372 @@
+TETRAHEDRAL ENDPOINT: AN ALL-BOUNDARY-SPEED LOCAL CONTRAST CERTIFICATE
+1 November 2026
+
+RESULT AND SCOPE
+
+For the actual tetrahedral facet operator at Gaussian correlation -1/3,
+the enclosed calculation gives
+
+  total Hilbert-Schmidt square H < 30.374796,
+  translation/constraint angle parameter delta < 0.027458,
+  max_{M u=0} K(u,u)/D(u,u) < 0.677770 < 1.                (1)
+
+The operator estimates concern the full weighted L2 space on all six
+facets, not a finite polynomial subspace. The calculation uses Arb balls,
+exact polynomial cubature with controlled exponential remainders, an
+explicit binary64 forward-error allowance, exact rational series tails,
+and an exact rational Gaussian spatial-tail check. Its implementation
+and arithmetic model are exposed below for independent verification.
+
+This is a second-variation result. It does NOT prove the global paired
+inequality, the four-label Standard Simplex conjecture, or a nonlinear
+neighborhood theorem without a separate justified remainder argument.
+The moving-boundary Hessian convention is the one derived in
+PAIRED_BOUNDARY_FORM_AND_NUMERICAL_DIAGNOSTIC_20261101.txt.
+
+1. OPERATOR, MEASURE, AND NORMALIZATION
+
+Use regular sites y_i=(+/-1,+/-1,+/-1)/2 with sign product positive.
+For e=(i,j), i<j, put n_e=(y_j-y_i)/sqrt(2), and let Sigma_e be the
+facet between cells i,j. Let b_e in R4 have entries +1 at i, -1 at j.
+The surface Gaussian measure is
+
+  d lambda_e(x)=(2pi)^(-3/2) exp(-|x|^2/2) dH^2(x).
+
+Let d_e(x)>0 be the OUTWARD normal derivative of
+T_{-1/3}(1_Theta_i-1_Theta_j) on this facet. Then
+
+  D(u,u)=sum_e integral d_e u_e^2 d lambda_e,
+  K(u,v)=sum_{e,f}(b_e.b_f) integral integral
+             u_e(x)v_f(y) k(x,y)d lambda_e(x)d lambda_f(y),
+
+  k(x,y)=(9/8)^(3/2)
+           exp[-(|x|^2+|y|^2)/16-(3/8)x.y].
+
+The normalized self-adjoint operator A on the Hilbert space with norm D
+has Hilbert-Schmidt square
+
+  H=sum_{e,f}(b_e.b_f)^2 integral integral
+             k(x,y)^2/[d_e(x)d_f(y)]d lambda_e d lambda_f. (2)
+
+Same-edge incidence square is 4, adjacent-edge incidence square is 1,
+and opposite edges contribute zero. Their total ordered sum is 48.
+Equivalently H=24 times a same-edge integral plus 24 times one adjacent
+integral. No artificial facet diagonal, node self-loop, or empirical
+mass constraint is introduced.
+
+2. EXACT MODES AND THE MASS-CONSTRAINT DISTINCTION
+
+Translations t_e(x)=n_e.v have exact eigenvalue 3, with multiplicity 3.
+Rotations r_e(x)=n_e.(Omega x), Omega antisymmetric, have exact eigenvalue
+-1, with multiplicity 3. These identities follow from the actual normal
+derivative and Gaussian invariances; they are not fitted numerical modes.
+Distinct eigenspaces are D-orthogonal.
+
+Write their projections as P_T,P_R. With
+
+  E=A-3P_T+P_R,
+
+one has E P_T=E P_R=0 and
+
+  ||E||_HS^2=H-27-3=H-30.                                (3)
+
+But M u=0 does NOT mean P_T u=0. The mass derivative is
+
+  (M u)_i=sum_e (b_e)_i integral u_e d lambda_e.
+
+Its D-inner-product representers contain 1/d_e(x), whereas translation
+speeds are constant on each facet. Merely deleting the three translation
+eigenvalues from the constrained problem would be invalid.
+
+The required correction reduces to three scalar facet quantities:
+
+  s=integral d lambda_e=acos(-1/3)/(2pi)^(3/2),
+  U=integral d_e d lambda_e,
+  V=integral d_e^(-1) d lambda_e.
+
+Tetrahedral symmetry and sum_e n_e n_e^T=2I give the translation Gram
+2U I, the mass-representer Gram 2V I, and their cross Gram 2s I.
+Thus all three principal-angle squared cosines equal s^2/(UV). Put
+
+  delta=1-s^2/(UV).
+
+For every u with M u=0,
+
+  ||P_Tu||_D^2 <= delta ||u||_D^2.                         (4)
+
+Let h=sqrt(H-30). If h<1, the exact spectral decomposition gives
+
+  <u,Au>_D
+   <=h||u||_D^2+(3-h)||P_Tu||_D^2-(1+h)||P_Ru||_D^2.
+
+Combining with (4) yields max K/D<=h+(3-h)delta. This is the bound
+certified in (1). It avoids certifying a triple integral for A^2 acting
+on the mass representers.
+
+The same decomposition gives A>=-I on the entire space when h<1.
+Its -1 eigenspace is exactly the rotation space. Consequently the
+common-direction form D+K is nonnegative modulo common rotations,
+while the matched-mass contrast form D-K has the strict gap in (1).
+
+3. DIAGONAL EVALUATION AND A UNIFORM CURVATURE LEMMA
+
+On the prototype facet use x=(q,w,-w), q>=|w|. The independent utility
+means are mu_i=-(x.y_i)/(2sqrt(2)). Put
+
+  W_ij=integral phi(t-mu_i)phi(t-mu_j)
+                   product_{k not i,j}Phi(t-mu_k)dt.
+
+Then exactly d=(2W_01+W_02+W_03)/2. These integrals have a closed
+bivariate-CDF expression. If delta_mu=mu_i-mu_j, avg=(mu_i+mu_j)/2,
+u=sqrt(2/3)(avg-mu_k), v=sqrt(2/3)(avg-mu_l), then
+
+  W_ij=exp(-delta_mu^2/4)/(2sqrt(pi)) Phi_{1/3}(u,v).
+
+arb_facet_diagonal.py evaluates Phi_{1/3} by the exact Plackett integral
+from correlation 0 to 1/3 using Arb's validated complex integration.
+The square-root analytic flag is forwarded correctly. The derivatives
+use the exact identities
+
+  partial_u Phi_c(u,v)=phi(u)Phi((v-cu)/sqrt(1-c^2)),
+
+and its v counterpart. Thus the cell constants and log gradients are
+balls enclosing the ACTUAL d, not a numerical surrogate.
+
+There is a particularly useful uniform curvature bound. Reflection in
+the tie plane exchanges cells i,j. At a point of that plane,
+
+  d(x)=(2r/(1-r^2)) integral_{Theta_i}(-n_e.y)
+                      phi_{sqrt(1-r^2)}(y+r x)dy, r=1/3.
+
+The positive factor (-n_e.y) is log-concave on its supporting halfspace,
+and the cell is convex. The integrand is jointly log-concave in x,y,
+so its integral is log-concave by Prekopa. Conversely, after removing
+exp(-|x|^2/16), d is a positive Laplace transform. Therefore, in
+orthonormal tangent coordinates,
+
+  -I/8 <= Hess(log d) <= 0.                                (5)
+
+This lemma was independently checked during the collaboration. It can
+also be obtained from the covariance bound for the strongly log-concave
+tilted measure. No strict covariance-deficit assumption is needed.
+
+At a cell center c=(q_c,w_c), let g=log d and use its tangent plane.
+For delta_q=q-q_c, delta_w=w-w_c, (5) gives
+
+  g(c)+grad g(c).delta-(delta_q^2+2delta_w^2)/16
+       <=g(q,w)<=g(c)+grad g(c).delta.                     (6)
+
+4. POSITIVE MOMENTS AND THEIR EXACT SERIES
+
+In orthonormal facet coordinates (q,z), z=sqrt(2)w, let
+
+  M_{p,n}=integral q^p z^n exp(-|x|^2/8)d lambda_e(x)/d_e(x).
+
+Odd n vanish by reflection symmetry. All required even-n moments are
+nonnegative. The contraction formulas and a rational global absolute
+tail are independently derived in
+TENSOR_MOMENT_EXPANSION_AND_EXACT_ABSOLUTE_TAIL_20261101.txt.
+
+For completeness, with mu denoting the above positive facet measure,
+the same-edge degree-k contraction is
+
+  S_k=sum_{j=0}^k binom(k,j) M_{k-j,j}^2.
+
+For adjacent facets, a choice of bisector frames has cross Gram
+[[0,1/sqrt(2)],[1/sqrt(2),1/2]]. The contraction is
+
+  A_k=sum_{l+m+n=k} k!/(l!m!n!)
+            2^(-(l+m)/2-n) M_{l,m+n} M_{m,l+n}.
+
+Only l,m,n of the same parity survive. Their coefficients are rational
+and every surviving term is positive. Consequently
+
+  H=(9/8)^3 sum_{k>=0}(-3/4)^k/k! *24(S_k+A_k).             (7)
+
+For an upper enclosure, even-k terms take upper moment products and
+odd-k terms take lower moment products. This preserves the cancellation
+without assuming uncertain numerical signs inside a coefficient.
+
+The present calculation uses k<=60. The certified absolute series tail
+is less than 0.008217977378. Its checker uses only rational recurrences:
+J0<32/27, J1=8/9, J_{n+2}=(8/9)(n+1)J_n, and the two-step coefficient
+ratio bound (4/9)(k+4)^2/[(k+1)(k+2)]. The positive partial coefficient
+sum is itself enclosed above by 88.772835; no floated absolute-sum value
+is used in the error certificate.
+
+5. COMPACT CUBATURE AND ANALYTIC ERROR
+
+The compact region is 0<=w<=q<=14, reflected to negative w. It contains
+the entire radius-14 facet disk. Its half-facet measure prefactor is
+2sqrt(2)/(2pi)^(3/2), accounting for both signs and dH^2=sqrt(2)dqdw.
+
+Use h=1/8, 6,216 complete squares and 112 diagonal triangles. The
+bounding-square center is used even for a triangle. The squared tangent
+distance is at most 3h^2/4. Hence (6) puts the actual reciprocal density
+between its tangent model and exp(epsilon) times that model, where
+
+  epsilon=3h^2/64=0.000732421875.
+
+After extracting its Arb-enclosed central constant, the model weight
+factors as exp(f_q)exp(f_w), with
+
+  f_q=-(5q_c/4+g_q)delta_q-(5/8)delta_q^2,
+  f_w=-(5w_c/2+g_w)delta_w-(5/4)delta_w^2.
+
+Every exact argument has absolute value less than 3. For example the
+proved bound |grad log d|<=|x|/4+1/2, |x|<=14sqrt(3)<25, and
+|delta_q|,|delta_w|<=1/16 give a bound below 2.88. The implementation
+also checks every computed argument is below 2.9. The actual maximum
+is recorded in the output.
+
+Replace each exponential by its Taylor polynomial P18. The relative
+remainder obeys
+
+  eta=exp(6)3^19/19! < 0.000003854572.
+
+Each polynomial remains positive on this range. On squares, Gauss49
+in each coordinate integrates every required monomial times the two
+Taylor polynomials exactly: coordinate degree is at most 60+36=96.
+The separable square integrals are accumulated as positive outer products.
+
+On a diagonal triangle, q=a+hu, w=a+huv, 0<=u,v<=1, with Jacobian h^2u.
+The exact polynomial degrees are at most 133 in u and 96 in v. Thus
+Gauss67 by Gauss49 is exact. All monomial evaluations are nonnegative.
+No high-degree Gaussian quadrature derivative heuristic is used.
+
+The same construction encloses U and V, with Gaussian exponent 1/2
+instead of 5/8. For U the tangent density is an upper model and receives
+the lower correction exp(-epsilon); V has the same one-sided correction
+as the moments.
+
+6. ARITHMETIC ACCOUNTING
+
+The cell constants and log gradients are validated Arb values. Converting
+them to binary64 is permitted only after code assertions check relative
+constant error <1e-12 and absolute gradient error <1e-12. Gauss nodes
+are first mapped to the positive unit interval in Arb; their binary64
+relative errors and weight errors are asserted <2^-48. Positive
+barycentric coordinate formulas avoid cancellation near the origin.
+Taylor coefficients are independently asserted within relative 2^-48.
+Powers of two use exact integer shifts, and powers of coordinates use
+multiplication rather than a floating transcendental routine.
+
+The arithmetic model is IEEE binary64 round-to-nearest, checked for the
+Python/NumPy scalar environment. Fused multiplication/addition only
+reduces the usual gamma_n error bounds. No floating exp, erf, sqrt, or
+trigonometric routine occurs in the positive accumulation stage.
+
+A deliberately loose 1e-6 relative forward-error allowance covers:
+
+  * true versus evaluated Taylor arguments, bounded by 1e-11;
+  * the condition number of P18 for |t|<3, less than 404;
+  * Horner roundoff, with fewer than 40 operations per polynomial;
+  * monomial power propagation through degree60 and unit-node conversion;
+  * positive dot products, outer products, and sums over all cells.
+
+One may use a gross operation-path bound of two million per moment;
+gamma_2000000<2.23e-10. The Horner/argument sensitivities enter before
+the positive sums, not exponentially once for every cell. Bounding
+these contributions as in the independent implementation audit gives
+404 gamma_2000000+1000*1e-11+1e-10 <9.981e-8. The code checks this
+last budget inequality in exact Fraction arithmetic; 1e-6 leaves a
+substantial margin. The exact operation structure is visible in code.
+
+Underflow is treated as an absolute error, not silently ignored. Even
+allowing flush-to-zero below 2^-1022, fewer than 2^34 local operations
+and subsequent amplification below 2^300 give less than 2^-688 total
+error in every needed raw moment. The code adds the larger absolute
+radius 2^-600 before applying relative factors. A fixed subrectangle
+q in[1,9/8], w in[1/2,5/8] gives every needed z-moment a positive lower
+bound 2^-42; thus the absolute allowance is negligible. This also
+addresses the very small w^60 values in the first Duffy triangle.
+
+If F is the computed positive moment, the implemented enclosure is
+
+  lower=(F-2^-600)/[(1+1e-6)(1+eta)^2],
+  upper=(F+2^-600)exp(epsilon)/[(1-1e-6)(1-eta)^2].
+
+Both exponential factors are accounted for. All signed series assembly
+after these positive moment enclosures is performed in Arb.
+
+7. GLOBAL TAILS AND CERTIFICATE OUTPUT
+
+The compact-sector estimate gives, with L=acos(-1/3),
+
+  d_e(x)>=c0 exp(-|x|^2/16)/(1+|x|)^2,
+  c0=(L/3)(9/8)^(3/2)(2pi)^(-3/2)exp(-15/16).
+
+It follows that the total HS tail outside radius R is bounded by
+
+  432exp(15/8)[2I0 I_R-I_R^2],
+  I_R=integral_R^infinity t(1+t)^2 exp(-3t^2/16)dt.
+
+The implementation independently verifies a rational upper bound below
+1e-7 at R=14, using exp(-147/4)<(3/8)^36. Since q>14 implies |x|>14,
+this covers the omitted part of the compact region used in (7).
+
+Similarly, d<=1/(2sqrt(pi)) gives the U tail below 1e-40, and the lower
+bound on d gives the V tail below 1e-30. These two statements are checked
+with exact Fraction inequalities using exponent bounds (3/8)^98 and
+(3/8)^85 and elementary Gaussian integration-by-parts tail formulas.
+
+The run, including its numerical enclosure widths, gives:
+
+  partial H in [30.2335462872720, 30.3665773839034],
+  total H in [30.2253283098944, 30.3747954612810],
+  U in [0.0163003691258882, 0.0163125963809709],
+  V in [0.9269534551839465, 0.9276487827718453],
+  delta <0.0274579644614,
+  h <0.6122054077522,
+  h+(3-h)delta <0.6777693868071.
+
+Displayed decimals are rounded outward from the saved Arb enclosures.
+The interval comparisons against H<30.6, delta<0.05, and the final
+Rayleigh bound<1 are all true in the saved run.
+
+There is also a clean rational conclusion. The output verifies
+H<30+3/8 and delta<11/400. Since
+3*389^2=453963<456968=8*239^2, one has sqrt(3/8)<239/389.
+Substituting into h+(3-h)delta proves the strict bound 17/25 without
+depending on a displayed decimal rounding. These stronger comparisons
+are included in the saved output as well.
+
+8. LOCAL CONSEQUENCE, AND WHAT IS STILL NOT PROVED
+
+For every finite-D-energy boundary speed u satisfying exact first-order
+common-mass matching M u=0,
+
+  (D-K)(u,u) > 0.322230 D(u,u)
+
+unless u=0. On the entire speed space D+K>=0, with common rotations as
+its kernel. Thus the full local paired Hessian split
+
+  B''=2[(D+K)(u_+)+(D-K)(u_-)]
+
+has no negative direction under M u_-=0. This controls arbitrary speed
+functions in the Hilbert space; the degree3 spectral scan was merely an
+initial diagnostic and is not used as evidence for unsampled modes.
+
+In rational terms, D-K>8D/25 on the mass-zero contrast space, and
+D+K>3D/8 on the D-orthogonal complement of common rotations. Thus
+B'' is at least (3/4)D(u_+ minus its rotation projection)+(16/25)D(u_-).
+
+The unrestricted, finite-change paired inequality remains open in this
+work. Positive second variation, even with this contrast gap, does not
+by itself justify nonlinear regularity, a uniform Taylor remainder,
+compactness, or global optimality. No such implication is claimed.
+
+FILES AND REPRODUCTION
+
+  certify_facet_moment_hs.py       main certificate computation
+  arb_facet_diagonal.py           validated actual d and log gradients
+  facet_moment_certificate.json   complete enclosure output
+  facet_moment_certificate_raw.npz positive accumulated moments and U,V
+  facet_moment_certificate_cells.json  Arb cell denominator/gradient balls
+  facet_hilbert_schmidt_explore.py/.json  independent full-kernel diagnostics
+
+Run the main script using this directory's isolated hs_cert_venv/bin/python.
+It uses python-flint0.6.0, installed from official PyPI with root approval,
+and reads NumPy1.26.4 from the existing local SciPy environment. The
+certificate itself does not require SciPy. No existing runtime, master,
+publication artifact, or external communication was changed.

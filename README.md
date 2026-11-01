@@ -1,8 +1,16 @@
 # Research proofs and reproducible notes
 
-Substantial results and reproducible experiments through 31 October 2026.
+Substantial results and reproducible experiments through 1 November 2026.
 These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
+
+## 1 November — tetrahedral second variation
+
+[The tetrahedral endpoint package](frontier/negative-voting-simplex/local-stability-four-candidates/README.txt) proves **strict paired second-variation stability in every finite dimension N >= 3**, at correlation 1/3 with matching cell masses. The Hessian has a quantitative gap of 8/25 modulo simultaneous rotations. The complete boundary operator is controlled by an audited computational certificate, beyond the exploratory polynomial scans.
+
+[Accepted theorem and proof](frontier/negative-voting-simplex/local-stability-four-candidates/THEOREM_AND_PROOF_ACCEPTED_20261101.txt) · [Numerical proof and error bounds](frontier/negative-voting-simplex/local-stability-four-candidates/INDEPENDENT_CURVATURE_QUADRATURE_AND_FLOATING_AUDIT_20261101.txt)
+
+This proves a second-variation result. Global four-label simplex optimality and a uniform nonlinear neighborhood theorem are not claimed. Reviews are internal; novelty and external verification remain open.
 
 ## New results — 31 October
 
@@ -45,7 +53,7 @@ actual selected-query comparator from stronger auxiliary margin definitions.
 
 ## Verification
 
-Python 3.11 or later is recommended. Install the small CPU dependencies:
+Python 3.12 is used for reproducible verification. Install the CPU dependencies:
 
 ```sh
 python -m pip install -r requirements.txt

@@ -1,0 +1,197 @@
+STRONGER 8/25 ALL-DIMENSION COERCIVITY: SUCCESSOR AUDIT
+1 November 2026. covariance_adversarial_cleanroom.
+This new file preserves THEOREM_AND_PROOF_20261101.txt and all frozen code.
+
+DECISION
+
+The frozen computational certificate is accepted under the explicit
+binary64 arithmetic premises in its independent audit. Its final receipt
+already exists; I checked the receipt and rehashed the current files rather
+than restarting completed work. All source and audit hashes match.
+
+The stronger all-finite-dimensional conclusion is valid:
+
+ B_N(u,v) >= (8/25) dist_{H_N x H_N}((u,v),N_N)^2,          (A)
+
+for N>=3 and M_N(u-v)=0, with the definitions in the standalone theorem.
+Its exact neutral normal-speed space remains the simultaneous rotations,
+of dimension3N-6. This successor proves the upgrade from the standalone
+draft's9/100 to8/25; the draft itself still states9/100 and pending review.
+Those are stale weaker statements, not mathematical counterexamples.
+
+This is a second-variation theorem at the cylindrical tetrahedral pair.
+It does not establish the global matched-mass inequality or a uniform
+nonlinear neighborhood theorem.
+
+1. FROZEN COMPUTATIONAL ACCEPTANCE
+
+Receipt: covariance_frozen_certificate_audit_receipt.json.
+The exact source fingerprints are
+
+ certify_facet_moment_hs.py
+ 37e58d4f07fd53a2284c404a390157f07c07a9e945117f71ca9d15d5f387b3a8
+
+ arb_facet_diagonal.py
+ 6fb8c8e4016aaed6090edf20d0ca1bca9314f5eb19cb84369662625e023f9b5b
+
+The receipt confirms that both source files were unchanged during the
+frozen-text execution. Its independent output is
+covariance_frozen_certificate_rerun/facet_moment_certificate.json.
+The enclosures are
+
+ H upper30.3747954612809456239736752336042410,
+ delta upper.027457964461348916209996888455771963,
+ constrained Rayleigh upper.67776938680706827088649959876966008.
+
+The decisive statements are interval comparisons, not rounded decimals:
+
+                   H < 30+3/8,  delta < 11/400.           (B)
+
+Both are true in the saved output, as are the direct Rayleigh<17/25 and
+the exact integer-square comparison. The independent arithmetic checker
+also verifies the rational deductions below. The mathematical/numerical
+audit is INDEPENDENT_CURVATURE_QUADRATURE_AND_FLOATING_AUDIT_20261101.txt.
+This acceptance concerns the specified integrals and operator bounds;
+it does not claim formal proof-assistant verification or external review.
+
+2. THREE-DIMENSIONAL UPGRADE
+
+The standalone draft's definitions and operator identities at lines15-107
+are correctly normalized. In particular the paired Hessian is
+
+ B_3(u,v)=||u||_D^2+||v||_D^2+2<u,A_3v>_D
+        =2[<u_+,(I+A_3)u_+>_D+<u_-,(I-A_3)u_->_D],       (C)
+
+where u_+=(u+v)/2, u_-=(u-v)/2, M_3u_-=0, and u_+ is unrestricted.
+There is no fixed-common-volume assumption. The vanishing potential
+difference on every tie plane removes acceleration and curvature terms
+from the pure second derivatives, as explained in draft lines81-94.
+
+The exact translation and rotation eigenvalues are3 and-1, respectively,
+each with multiplicity3 in the identified geometric subspaces T and R.
+The identities and their normalizations in draft lines113-135 check.
+The actual mass representers are (b_e.c)/d_e; they are not constant
+translations. Their principal angle with T gives
+
+ ||P_Tw||_D^2 <= delta ||w||_D^2 for w in ker M_3.         (D)
+
+Let E=A_3-3P_T+P_R and h=sqrt(H-30). Orthogonality and self-adjointness
+give E P_T=E P_R=0 and ||E||<=||E||_HS=h. From (B),
+
+ h<sqrt(3/8)<5/8,
+ h<239/389, since3*389^2=453963<456968=8*239^2.             (E)
+
+On the common channel,
+
+ <w,(I+A_3)w>_D
+ >=4||P_Tw||_D^2+(1-h)||P_{(T+R)-perp}w||_D^2
+ >=(3/8)||P_{R-perp}w||_D^2.                              (F)
+
+For unit w in ker M_3, (D) gives
+
+ <w,A_3w>_D
+ <=h+(3-h)delta-(1+h)||P_Rw||_D^2
+ <(389/400)(239/389)+33/400
+ =272/400=17/25.                                         (G)
+
+The expression h+(3-h)delta is increasing in h and delta in the ranges
+used here, so substituting both upper bounds is legitimate. Thus
+
+ <w,(I-A_3)w>_D >=(8/25)||w||_D^2 on ker M_3.              (H)
+
+The common channel has kernel exactly R, since the translation coefficient
+is4 and1-h>0. The contrast channel has no nonzero kernel. Equations(F)-(H)
+replace draft lines139-157, where the older thresholds153/5 and1/20 give
+only the weaker published-in-draft constants.
+
+3. ALL FINITE N: NO DIMENSION REDUCTION ASSUMPTION
+
+Put d=N-3. At the cylindrical reference, the weighted surface measure
+factors as d_e d lambda_e,3 tensor gamma_d. The normal derivative d_e
+depends only on the first three coordinates. Consequently
+
+ H_N=H_3 tensor L^2(gamma_d),
+ A_N=A_3 tensor T_{-1/3}^{(d)}.                            (I)
+
+The formula uses the relative Gaussian kernel and the actual weighted
+Hilbert space; no extra Gaussian density or square root is missing.
+Mass representers are q_c tensor1, so only extra-coordinate Hermite
+degree0 is constrained by M_Nw=0. On degree k, A_N=(-1/3)^k A_3.
+
+Degree0: (F) and (H) apply.
+
+Degree1: A_N=-A_3/3. Its only eigenvalue-1 modes are T tensor the linear
+Hermite functions, because the only eigenvalue3 modes of A_3 are T.
+Off this neutral subspace, the largest eigenvalue of A_3 is at most h
+(the rotation eigenvalue-1 is smaller). Therefore the common-channel
+gap is at least1-h/3>19/24>3/8. The contrast channel is I+A_3/3 and has
+gap at least2/3 because A_3>=-I.
+
+Degree k>=2: ||A_N||<=3(1/3)^k<=1/3. Both channel gaps are at least2/3.
+These estimates are uniform over every extra-coordinate Hermite component
+and sum by orthogonality. They do not require A_N to have the same
+Hilbert-Schmidt norm as A_3. Only the tensor operator-norm bounds are used.
+
+The full common neutral space is therefore
+ R_N=(R tensor1) direct_sum(T tensor linear functions).
+A skew ambient matrix has blocks[[Q,B],[-B^T,Q_extra]], with normal speed
+n_e.(Qx+Bz). The Q_extra block gives zero normal speed. The other blocks
+span exactly the stated neutral space, of dimension3+3d=3N-6. This verifies
+draft lines159-180 with the stronger bound h<5/8 replacing4/5.
+
+4. PRODUCT NORM, FACTOR TWO, AND KERNEL
+
+The all-N forms satisfy
+
+ B_N(u,v)
+ >=(3/4)||P_{R_N-perp}u_+||_D^2+(16/25)||u_-||_D^2.        (J)
+
+For N_N={(r,r):r in R_N}, orthogonal minimization gives exactly
+
+ dist((u,v),N_N)^2
+ =2||P_{R_N-perp}u_+||_D^2+2||u_-||_D^2.                 (K)
+
+Since3/4>=16/25, combining(J),(K) proves(A). This checks the potential
+factor-of-two issue:8/25 is the coefficient on the PRODUCT-space distance,
+not on the unnormalized sum of common and contrast squared norms.
+Equality at zero occurs precisely when u_-=0 and u_+ belongs to R_N.
+
+5. ADMISSIBLE SPEEDS AND ACTUAL PATHS
+
+Draft lines221-236 correctly separate the continuous quadratic form from
+classical moving interfaces. Smooth compactly supported speeds away from
+junctions are dense in H_N; the junction sets have surface measure zero,
+and the weight is positive and smooth in each open facet. Such finitely
+supported facet speeds extend to ambient smooth fields in disjoint facet
+neighborhoods. The mass map is continuous because its representers have
+finite weighted norms, including the extra Gaussian coordinates.
+
+Three fixed nonnegative facet bumps on a spanning tree have independent
+mass images. They therefore correct a vanishing residual mass derivative
+without disrupting density. For a smooth pair with first-order matching
+masses, the same rank-three map and the implicit-function theorem impose
+exact matching along the path. The correction has zero first derivative
+and starts at order s^2. Since the unconstrained reference first variation
+is zero, this correction does not change(C). All statements about an
+actual second derivative retain the draft's condition that the requisite
+moving-boundary differentiation is justified.
+
+No further conclusion follows merely from density. In particular a
+uniform nonlinear neighborhood result requires a deformation chart and
+uniform control of junctions, tails, and the higher-order remainder.
+The limitations in draft lines238-248 are accurate and should survive
+any presentation of the stronger constant.
+
+6. PRECISE STATUS OF THE STANDALONE DRAFT
+
+THEOREM_AND_PROOF_20261101.txt remains an intact weaker draft. Its lines5-11,
+54, and217-219 contain a computational-pending condition now discharged by
+the frozen receipt. Its lines58,139-155,169-175,182-184 use the earlier
+9/100 conclusion and corresponding weaker intermediate constants. Those
+lines have not been silently relabeled as an8/25 theorem. This successor
+contains the exact stronger implication, with the additional accepted
+inputs and every changed constant displayed.
+
+No publication, outreach, master-state change, or external endorsement was
+performed in this audit. The original code, theorem draft, and outputs
+were preserved.

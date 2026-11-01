@@ -1,0 +1,268 @@
+FULL ENDPOINT HILBERT--SCHMIDT NORM VIA TWO-DIMENSIONAL MOMENTS
+WITH AN EXACT ABSOLUTE SERIES TAIL
+1 November 2026. Independent derivation and normalization audit.
+
+RESULT
+
+The proposed tensor expansion is correct, with the constant
+432 exp(15/8) INCLUDING the Gaussian-kernel normalization, angular factors,
+and ordered label-incidence sum. An explicit two-parity ratio bound proves
+an absolute tail below .008218 after degree60, below4.56e-6 after degree80,
+and below2.23e-9 after degree100. These bounds have an exact rational checker.
+The tetrahedral symmetries reduce every finite coefficient to positive
+contractions of moments on ONE two-dimensional facet. Surviving contraction
+coefficients are rational, despite the square roots in adjacent facet frames.
+
+This genuinely replaces the finite four-dimensional double integral by
+finitely many two-dimensional moments. It does not itself certify those
+moment integrals. The last section quantifies the remaining accuracy and
+explains why first-derivative quadrature estimates alone are not sufficient.
+No local or global endpoint theorem is claimed here.
+
+1. OPERATOR AND MEASURE NORMALIZATION
+
+Use the root's COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt:
+  rho=-1/3, sigma^2=8/9, b=3/4,
+  c_e=e_i-e_j,
+  d lambda_e=(2pi)^(-3/2)exp(-|x|^2/2)dH2 on facet Sigma_e,
+  d_e=partial_n T_rho(Theta_i-Theta_j)>0.
+The squared Hilbert--Schmidt norm is
+  H=sigma^(-6) sum_(e,f)(c_e.c_f)^2
+       int int exp[-(|x|^2+|y|^2)/8-b x.y]
+                      d lambda_e(x)d lambda_f(y)/(d_e(x)d_f(y)).
+Define the finite positive facet measure
+  d mu_e(x)=exp(-|x|^2/8)d lambda_e(x)/d_e(x).       (1)
+Then
+  H=sigma^(-6) sum_(e,f)(c_e.c_f)^2
+                     int int exp(-b x.y)d mu_e(x)d mu_f(y). (2)
+
+The compact-sector estimate supplies
+  d_e(x)>=c0 exp(-|x|^2/16)/(1+|x|)^2,
+  c0=(1/3)L sigma^(-3)(2pi)^(-3/2)exp(-15/16),
+  L=arccos(-1/3).
+Consequently, in facet polar coordinates s,theta,
+  d mu_e <= c0^(-1)(2pi)^(-3/2)
+              (1+s)^2 exp(-9s^2/16)s ds dtheta,
+  0<=theta<=L.                                    (3)
+The exponent is -1/8-1/2+1/16=-9/16. No ambient-Gaussian density or
+surface factor is missing.
+
+2. EXACT TENSOR SERIES, WITH JUSTIFIED INTERCHANGE
+
+Let M_e^(k)=int x^tensor k d mu_e(x), and put
+  A_k=||sum_e c_e tensor c_e tensor M_e^(k)||^2>=0. (4)
+All tensor spaces carry their ordinary Euclidean inner products. The identity
+  <x^tensor k,y^tensor k>=(x.y)^k
+and the analogous label identity give
+  A_k=sum_(e,f)(c_e.c_f)^2 int int (x.y)^k d mu_e d mu_f.
+Therefore
+  H=sigma^(-6) sum_(k>=0) (-b)^k A_k/k!.           (5)
+The coefficient A_k is nonnegative even for odd k. Positivity follows from
+the assembled tensor square, not from asserting (x.y)^k>=0 pointwise.
+
+To justify termwise integration, bound the absolute exponential series by
+exp(b|x.y|)<=exp(bst). The envelope in(3) then has exponent
+  -(9/16)(s^2+t^2)+(3/4)st
+       <=-(3/16)(s^2+t^2).
+This is integrable with the polynomial radial factors. Tonelli and dominated
+convergence prove absolute convergence and the interchange in(5).
+
+3. AN EXPLICIT ABSOLUTE COEFFICIENT MAJORANT
+
+Set a=9/16 and
+  I_k=int_0^infinity s^(k+1)(1+s)^2 exp(-a s^2)ds.
+Since sum_(e,f)(c_e.c_f)^2=48 and every facet angle is L, (3) implies
+  sigma^(-6) b^k A_k/k! <= T_k,
+  T_k=C b^k I_k^2/k!, C=432 exp(15/8).              (6)
+Indeed the constant is
+  48 sigma^(-6)[c0^(-1)(2pi)^(-3/2)L]^2
+       =48*(1/3)^(-2)exp(15/8)=432exp(15/8).
+Thus C already contains all label/angular/kernel factors. Multiplying it
+by another48 or24 would double-count those factors.
+
+4. EXACT RECURRENCE AND GEOMETRIC TAIL
+
+Let
+  J_n=int_0^infinity s^n exp(-a s^2)ds.
+Then
+  J0=(2/3)sqrt(pi), J1=8/9,
+  J_(n+2)=(8/9)(n+1)J_n,
+  I_k=J_(k+1)+2J_(k+2)+J_(k+3).                   (7)
+The recurrence follows by one integration by parts, with vanishing boundary
+terms. It gives
+  I_(k+2)
+   =(8/9)[(k+2)J_(k+1)+2(k+3)J_(k+2)+(k+4)J_(k+3)]
+   <=(8/9)(k+4)I_k.
+Consequently
+  T_(k+2)/T_k <= q_k,
+  q_k=(4/9)(k+4)^2/[(k+1)(k+2)].                 (8)
+Here q4=128/135<1 and
+  q_k-q_(k+1)=(4/9)(5k+23)/[(k+1)(k+2)(k+3)]>0.
+Separating the two parities gives, for N>=3,
+  sum_(k>N) T_k
+      <=T_(N+1)/(1-q_(N+1))+T_(N+2)/(1-q_(N+2)). (9)
+The limiting two-step ratio is4/9, corresponding to a one-step rate2/3.
+
+There is also a simple one-step majorant. The exact positive moment sequence
+I_k is log-convex by Cauchy--Schwarz:
+  I_(k+1)^2<=I_k I_(k+2).
+Thus
+  T_(k+1)/T_k <= p_k=(2/3)(k+4)/(k+1),             (10)
+which decreases to2/3 and is less than1 for k>=6. Formula(9) is slightly
+tighter and is the one used in the exact checker.
+
+5. FULLY RATIONAL FINAL CERTIFICATES
+
+Use pi<22/7<(16/9)^2 and exp(15/8)<e^2<8. Define a rational upper sequence
+  Jbar0=32/27, Jbar1=8/9,
+  Jbar_(n+2)=(8/9)(n+1)Jbar_n,
+  Ibar_k=Jbar_(k+1)+2Jbar_(k+2)+Jbar_(k+3),
+  Tbar_k=3456(3/4)^k Ibar_k^2/k!.
+All entries are exact rationals and dominate the exact quantities in(6).
+The same two-step inequality follows algebraically from their positive
+recurrence. Formula(9) with Tbar therefore certifies an upper bound for
+the entire omitted series.
+
+The companion certify_tensor_moment_tail_rational_20261101.py verifies:
+  degree60  tail < .008218,
+  degree80  tail < .00000456,
+  degree100 tail < .00000000223,
+  degree120 tail < 1.005e-12,
+  degree140 tail < 4.28e-16,
+  degree160 tail < 1.74e-19,
+  degree200 tail < 2.63e-26.
+Every asserted comparison uses Python Fraction and integer factorials;
+there are no floating-point assertions or numerical quadratures. As with
+the root's tail checker, this certifies the final arithmetic conditional
+on the analytic derivation, not a formal verification of the prose proof.
+
+6. ONE FACET, POSITIVE RATIONAL CONTRACTIONS
+
+Use bisector coordinates (q,z) on the reference facet12:
+  x=q(1,1,-1,-1)/2+z(0,0,1,-1)/sqrt2,
+  q>=0, |z|<=sqrt2 q.
+The measure mu is invariant under z -> -z. Define
+  m_(p,j)=int q^p z^j d mu.
+Odd-j moments vanish exactly; all even-j moments are positive.
+The same formulas apply if every measure is restricted to the same radial
+cutoff, which preserves tetrahedral symmetry and this reflection.
+
+For two copies of the same facet, the frame Gram matrix is I2, giving
+  S_k=sum_(j=0)^k binom(k,j)m_(k-j,j)^2,             (11)
+with only even j surviving.
+For an adjacent facet choose its bisector frame so the cross Gram is
+  [[0,1/sqrt2],[1/sqrt2,1/2]].
+Then
+  Adj_k=sum_(ell+m+n=k) [k!/(ell!m!n!)]
+       2^(-(ell+m)/2-n) m_(ell,m+n) m_(m,ell+n).   (12)
+A term survives only when m+n and ell+n are both even, which is equivalent
+to ell,m,n all having the same parity. In particular ell+m is even, so
+EVERY surviving coefficient in(12) is rational. Its moments are positive.
+There is no cancellation inside either(11) or(12).
+
+All six same-facet contributions have incidence square4; the24 ordered
+adjacent pairs have incidence square1; disjoint pairs have zero incidence.
+Thus
+  A_k=24[S_k+Adj_k].                               (13)
+The alternating sum in(5) is the only remaining cancellation. No full
+3^k tensor needs to be constructed, and no square-root interval enters
+the contraction coefficients.
+
+Through even degreeN=2m, the number of nonzero one-facet scalar moments
+m_(p,2j) with p+2j<=N is exactly(m+1)^2. Thus degree60 uses961 moments;
+degree80 uses1681; degree100 uses2601.
+
+7. USING ONLY COMPACT-RADIUS MOMENTS
+
+Let mu_e^R be the restriction of(1) to |x|<=R. Its moments substituted into
+(4)--(5) give exactly H_R=||A_R||_HS^2, where A_R retains only pairs with
+both radii at mostR. They obey the SAME absolute coefficient majorants,
+since mu_e^R is bounded by(3). Therefore one may:
+  * enclose finitely many moments on radius<=16;
+  * contract them by(11)--(13), with correct alternating signs;
+  * add the series tail from(9);
+  * add the root's certified radial HS-square tail less than1e-12.
+This avoids separately estimating thousands of high-degree moment tails.
+It also avoids confusing a tail of H with an operator-norm tail: here
+H-H_R is precisely the nonnegative omitted part of the HS-square integral.
+
+8. CONDITIONING AND WHAT STILL REQUIRES A REAL CERTIFICATE
+
+The exact rational checker also proves the conservative aggregate bound
+  sum_(k>=0) T_k < 1551114.                        (14)
+Suppose the finitely many positive moments have approximate values with
+relative error at most epsilon. Every product/square in(11)--(12) then has
+relative error at most2epsilon+epsilon^2, and positivity propagates this
+bound to each A_k. Hence the error in the alternating finite sum is at most
+  (2epsilon+epsilon^2)*1551114.                    (15)
+At epsilon=1e-8 this is rigorously less than .0311. Degree60's tail is less
+than .008218. Those conservative budgets already fit comfortably inside
+the exploratory gap between H approximately30.283777 and the sufficient
+local target H<30.4. The exploratory value is not an input to the proofs
+above, and a certified finite sum is still required.
+
+One-sided interval evaluation is straightforward: positive contractions
+are monotone in the positive moments. For an upper bound on H, use upper
+coefficient bounds for even k and lower bounds for odd k, then add the
+absolute tail. Do not substitute upper bounds for every alternating term.
+
+What remains hard is rigorous enclosure of the2D moment integrals,
+including their actual reciprocal diagonal d_e. Merely running high-order
+quadrature twice or using high-precision floating arithmetic is not an
+error proof. A bound on only the first derivative of log d_e makes naive
+first-order interval meshes prohibitively fine at the1e-8 relative target.
+A practical certificate needs high-order interval quadrature, an analytic
+interpolation remainder, or another explicit integration error bound.
+
+For reference, the proposed first-derivative bound was independently checked.
+The diagonal is a positive combination of cone Gaussian integrals with
+  grad log d_e(x)=-x/8-(3/8)E Y.
+Intrinsic radial integration by parts on each two-dimensional cone gives
+  (9/8)E|Y|^2=2-(3/8)x.EY.
+The formula survives positive mixing of the cones. For m=E|Y|,
+  9m^2-3|x|m-16<=0,
+  m<=(|x|+sqrt(|x|^2+64))/6.
+It follows that
+  |grad log d_e(x)|<=(3|x|+sqrt(|x|^2+64))/16
+                         <=|x|/4+1/2.             (16)
+This is a correct local-enclosure ingredient, but is not by itself the
+high-order quadrature certificate needed above.
+
+9. AUDIT OF THE ROOT'S NEW COMPACT-SECTOR SOURCE AND CHECKER
+
+I read the newly saved
+  COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt
+and
+  certify_operator_tail_rational_20261101.py
+and independently ran the checker successfully. No missing sign, factor2,
+normalization, or rational-bound error was found.
+
+Specific checks beyond the earlier derivation:
+  * Source lines69--74: the erfc expression and one-step Gaussian-tail
+    upper bound give exactly bracket7072/9 at radius16 for a=3/16.
+  * Source lines76--82: I0<28 follows from sqrt(pi/3)<25/24;
+    e<11/4 is justified by sum through degree4 plus tail<1/100;
+    e>8/3 follows strictly from the next positive series terms.
+    The resulting squared-HS tail is below1e-12 by exact integers.
+  * Source lines87--97: the mass-representer exponent is -7s^2/16;
+    at radius16 its exponential is e^-112 and bracket is16320/49.
+    Using sigma^3<1 and e^(15/16)<3 gives the factor108 in the script.
+    The summed squared mass-representer tail is below1e-42.
+  * Source lines99--103: Q*Q=4V P and the warning against substituting
+    translation orthogonality for the true mass projection are correct.
+
+The original files were preserved. This successor supplies the separate
+moment-series tail and contraction reduction; it does not replace the
+root's valid radial tail or claim to certify the remaining finite integral.
+
+REPRODUCIBILITY AND SCOPE
+
+Run:
+  python3 certify_tensor_moment_tail_rational_20261101.py
+inside this directory. It uses only the Python standard library.
+The related local sufficient criterion remains the one proved in
+INDEPENDENT_AUDIT_OF_HILBERT_SCHMIDT_LOCAL_CERTIFICATE_ROUTE_20261101.txt.
+Even completing its two scalar bounds proves local second variation only,
+not global paired or single-rule endpoint optimality.
+
+No master-state edit, publication, outreach, paid job, or new agent was used.

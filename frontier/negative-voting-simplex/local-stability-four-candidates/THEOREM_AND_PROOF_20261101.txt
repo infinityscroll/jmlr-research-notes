@@ -1,0 +1,248 @@
+TETRAHEDRAL PAIRED GAUSSIAN SECOND-VARIATION COERCIVITY
+An operator proof with a computational certificate
+1 November 2026
+
+REVIEW STATUS
+This standalone review draft proves the implication from two explicit
+three-dimensional integral bounds. The certificate and its independent
+internal review report bounds below the required thresholds. Acceptance of
+the computation remains pending the final hardened-source execution and
+fingerprint receipt. A separate acceptance receipt may close that condition
+without replacing this draft or its source files.
+
+1. STATEMENT AND CONVENTIONS
+
+Let gamma_N be standard Gaussian measure on R^N. For -1<rho<1, set
+ T_rho f(x)=E[f(rho*x+sqrt(1-rho^2)Z)], Z~gamma_N,
+and define paired agreement
+ J_rho(P,Q)=sum_(i=1)^4 int 1_(P_i) T_rho 1_(Q_i) d gamma_N.
+
+In R^3 take the four score vectors
+ Y_1=(1,1,1)/2, Y_2=(1,-1,-1)/2,
+ Y_3=(-1,1,-1)/2, Y_4=(-1,-1,1)/2,
+and C_i={x:Y_i.x=max_j Y_j.x}. For finite N>=3 write C_i^N=C_i x R^(N-3).
+We study J_(-1/3) at (C^N,C^N). Equivalently, reflecting the second
+partition studies J_(1/3) at (C^N,-C^N).
+
+For e=(i,j), i<j, let Sigma_e^N be the common facet, n_e=(Y_j-Y_i)/sqrt2
+(padded with zero coordinates), and b_e=e_i-e_j in R^4. Thus n_e points
+from cell i into cell j. Put
+ d lambda_e,N=gamma_N(x)dH^(N-1)(x) on Sigma_e^N,
+ d_e(x)=partial_n_e T_(-1/3)(1_(C_i^N)-1_(C_j^N))(x)>0.
+The function d_e depends only on the first three coordinates.
+
+The boundary-speed Hilbert space and its norm are
+ H_N=direct_sum_e L^2(Sigma_e^N,d_e d lambda_e,N),
+ ||u||_D^2=sum_e int d_e u_e^2 d lambda_e,N.
+Speeds are scalar outward normal velocities; tangential reparametrizations
+have no separate representation in this space. Define the mass derivative
+ M_N u=sum_e b_e int u_e d lambda_e,N.
+
+Consider two partition variations whose masses match label by label:
+ gamma_N(P_i(s))=gamma_N(Q_i(s)) for all i and s. Their COMMON mass vector
+may vary with s; it is not required to stay (1/4,1/4,1/4,1/4). If u,v are
+their initial normal speeds at (C^N,C^N), the tangent constraint is
+                         M_N(u-v)=0.                    (1)
+For the positive-correlation formulation, v denotes the speed after
+reflecting the second partition back to C^N.
+
+Let R_N consist of the rotation speeds
+ r_Omega,e(x)=n_e.(Omega x), Omega^T=-Omega,
+and let N_N={(r,r):r in R_N} in H_N x H_N. Distances in the product use
+||(u,v)||^2=||u||_D^2+||v||_D^2.
+
+THEOREM (subject to the computational acceptance stated above).
+For every finite N>=3, the continuous quadratic form B_N extending the
+paired second variation at (C^N,C^N), rho=-1/3, satisfies
+
+ B_N(u,v) >= (9/100) dist_(H_N x H_N)((u,v),N_N)^2        (2)
+
+whenever (1) holds. Its kernel on that constrained space is exactly N_N.
+The neutral speed space R_N has dimension3N-6. Consequently simultaneous
+rotations are the only nonzero neutral normal-speed directions.
+
+The same conclusion holds for positive correlation1/3 at (C^N,-C^N).
+For every admissible smooth variation to which moving-boundary
+differentiation applies, B_N is the actual second derivative of agreement.
+The extension to H_N is a quadratic-form statement, not a claim that every
+L^2 speed integrates to a classical smooth deformation.
+
+2. EXACT HESSIAN AND OPERATOR
+
+Write rho=-1/3. The Gaussian kernel relative to gamma_N(x)gamma_N(y) is
+ k_N(x,y)=(1-rho^2)^(-N/2)
+ exp[(2rho*x.y-rho^2(|x|^2+|y|^2))/(2(1-rho^2))].
+Define
+ K_N(u,v)=sum_(e,f)(b_e.b_f) int int u_e(x)v_f(y)k_N(x,y)
+                                     d lambda_e,N(x)d lambda_f,N(y).
+The self-adjoint boundary operator A_N is specified by
+                  <u,A_N v>_D=K_N(u,v).                 (3)
+
+Reflection interchanging vertices i,j fixes their tie plane. Isotropy of
+T_rho therefore gives T_rho(1_Ci-1_Cj)=0 on that plane. The reference
+first variation vanishes without mass multipliers. Moving-boundary
+differentiation gives
+ B_N(u,v)=||u||_D^2+||v||_D^2+2K_N(u,v).                 (4)
+Indeed each pure second derivative is the normal derivative of the
+vanishing potential difference times the square of its boundary speed;
+curvature and acceleration multiply the zero potential difference. The
+two first boundary derivatives produce the mixed term2K_N.
+
+For u_+=(u+v)/2 and u_-=(u-v)/2, equations (1),(4) become
+ M_N u_-=0,
+ B_N(u,v)=2[<u_+,(I+A_N)u_+>_D+<u_-,(I-A_N)u_->_D].     (5)
+There is no mass constraint on u_+.
+
+Here are analytic bounds making the three-dimensional operator well-defined.
+With L=acos(-1/3),
+ k_3=(9/8)^(3/2)exp[-(|x|^2+|y|^2)/16-(3/8)x.y],
+ I_f(x)=int_(Sigma_f) k_3(x,y)d lambda_f(y),
+ d_e=(1/3)[2I_e+(1/2)sum_four_adjacent I_f].              (6)
+All terms in (6) are positive. Restricting the same-facet integral to
+|y|<=1/(1+|x|) gives
+ d_e(x)>=c0 exp(-|x|^2/16)/(1+|x|)^2,
+ c0=(L/3)(9/8)^(3/2)(2pi)^(-3/2)exp(-15/16).             (7)
+Thus mass derivatives are continuous on H_3. The squared normalized kernel
+is integrable: after (7), its exponential part is at most
+exp[-3(|x|^2+|y|^2)/16], times a polynomial. Hence A_3 is Hilbert--Schmidt.
+The proof and explicit spatial tails appear in
+COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt.
+
+3. THE THREE-DIMENSIONAL SPECTRAL REDUCTION
+
+Let T be the span of translations t_w,e=n_e.w. The indicator's translation
+derivative is -w.grad1_Ci, and grad T_rho=rho T_rho grad. Consequently
+                         A_3 t_w=3t_w.                 (8)
+For r_Q,e=n_e.(Qx), Q skew, angular differentiation commutes with T_rho;
+the same potential calculation gives
+                         A_3 r_Q=-r_Q.                 (9)
+Both spaces have dimension3. The normals span R^3; a skew Q giving zero
+speed on each open facet must annihilate all normals and hence vanish.
+The spaces T,R are orthogonal because their eigenvalues differ.
+
+Use the full-space scalar integrals, independent of e by symmetry,
+ s0=int d lambda_e=L/(2pi)^(3/2),
+ a0=int d_e d lambda_e, b0=int d_e^(-1)d lambda_e.
+The mass representers in H_3 are q_c,e=(b_e.c)/d_e for c perpendicular to1.
+Let G be their three-dimensional span; ker M_3=G-perp. Since
+sum_e n_e n_e^T=2I_3 and b_e.Yw=-sqrt2 n_e.w,
+ <t_v,t_w>_D=2a0 v.w,
+ <q_Yv,q_Yw>_D=4b0 v.w,
+ <q_Yv,t_w>_D=-2sqrt2 s0 v.w.
+Thus, with
+                    delta=1-s0^2/(a0b0),
+every u in ker M_3 satisfies
+                 ||P_Tu||_D^2<=delta||u||_D^2.           (10)
+This angle correction is necessary: mass-zero speeds need not be
+orthogonal to translations.
+
+The computational inputs are exactly
+
+ H=||A_3||_HS^2
+  =sum_(e,f)(b_e.b_f)^2 int int k_3(x,y)^2/[d_e(x)d_f(y)]
+                                         d lambda_e(x)d lambda_f(y)
+                         <153/5,
+                         delta<1/20.                   (11)
+
+Let E=A_3-3P_T+P_R. Equations (8),(9) and self-adjointness imply
+ E P_T=E P_R=0, ||E||_HS^2=H-30.
+Put h=sqrt(H-30). From (11), h<sqrt(3/5)<4/5. For all u,
+ <u,(I+A_3)u>_D>=4||P_Tu||_D^2+(1-h)||P_(T+R)-perp u||_D^2
+                    >=(1/5)||P_(R-perp)u||_D^2.          (12)
+For a unit u in ker M_3, (10) gives
+ <u,A_3u>_D<=h+(3-h)delta-(1+h)||P_Ru||_D^2<91/100.
+Therefore
+ <u,(I-A_3)u>_D>=(9/100)||u||_D^2 on ker M_3.            (13)
+The common channel's kernel is exactly R, and the contrast channel is
+strictly positive.
+
+4. ALL FINITE DIMENSIONS
+
+Write d=N-3. At the cylindrical reference,
+ lambda_e,N=lambda_e,3 tensor gamma_d and d_e,N=d_e,3.
+Consequently
+ H_N=H_3 tensor L^2(gamma_d), A_N=A_3 tensor T_(-1/3)^(d). (14)
+Mass representers are q_c tensor1. On extra-coordinate Hermite degree k,
+the operator in (14) equals (-1/3)^k A_3. Only degree0 has a mass
+constraint; every higher degree automatically has zero mass derivative.
+
+Equations (8)-(13) put the spectrum of A_3 in[-1,3], with only T at3,
+only R at-1, and remaining spectrum of absolute value below4/5.
+Degree0 therefore has the gaps (12),(13). At degree1, the only eigen-1
+modes are T tensor linear functions; away from them the common-channel
+gap exceeds1-(4/5)/3, and the contrast-channel gap is at least2/3.
+At degree k>=2, the operator norm is at most3(1/3)^k<=1/3, so both
+channel gaps are at least2/3. Thus (12),(13) hold in H_N with R replaced
+by R_N.
+
+A skew ambient matrix has blocks [[Q,B],[-B^T,Q_extra]]. Its normal
+speed is n_e.(Qx+Bz), exactly R tensor1 plus T tensor linear functions.
+The Q_extra block has zero normal speed. Hence dim R_N=3+3d=3N-6.
+Finally (5) yields
+ B_N>=(2/5)||P_(R_N-perp)u_+||_D^2+(9/50)||u_-||_D^2.
+Since the squared distance in (2) is
+2||P_(R_N-perp)u_+||_D^2+2||u_-||_D^2, this proves (2) and its exact
+kernel. This argument concerns the reference operator; it uses no global
+dimension-reduction statement about unknown minimizers.
+
+5. COMPUTATIONAL INPUT AND REVIEW RECORD
+
+The companion proof note is
+INFINITE_DIMENSIONAL_LOCAL_CONTRAST_HS_CERTIFICATE_20261101.txt.
+The main implementation and its actual-diagonal evaluator are
+certify_facet_moment_hs.py and arb_facet_diagonal.py; output is stored in
+facet_moment_certificate.json, facet_moment_certificate_cells.json, and
+facet_moment_certificate_raw.npz.
+
+The calculation encloses d and its log gradients with Arb, uses the proved
+curvature bound -I/8<=Hess(log d)<=0 to control cellwise replacement,
+integrates positive Taylor polynomials by cubature exact to the required
+degrees, and includes explicit binary64 forward-error and absolute
+underflow allowances. The alternating moment expansion is assembled in
+Arb with rational series-tail and Gaussian spatial-tail bounds. The
+reported upper bounds H<30.374796 and delta<0.027458 are stronger than
+(11). The computational premise includes ordinary IEEE binary64
+elementary arithmetic and standard dot products; this is not a formal
+proof-assistant verification or an assertion that arbitrary NumPy output
+is automatically an interval.
+
+The detailed numerical review is
+INDEPENDENT_CURVATURE_QUADRATURE_AND_FLOATING_AUDIT_20261101.txt.
+The structural and all-dimension review is
+END_TO_END_PAIRED_HESSIAN_AND_ALL_DIMENSION_AUDIT_20261101.txt.
+The curvature mechanism is detailed in
+LOG_DIAGONAL_CURVATURE_AND_EXECUTABLE_QUADRATURE_20261101.txt;
+the moment-tail proof is
+TENSOR_MOMENT_EXPANSION_AND_EXACT_ABSOLUTE_TAIL_20261101.txt.
+These filenames are relative to this document's directory. Final
+computational acceptance must be read together with its execution and
+fingerprint receipt, as stated at the beginning of this draft.
+
+6. ADMISSIBLE VARIATIONS AND LIMITS OF THE CONCLUSION
+
+Smooth compactly supported facet speeds away from junctions form a dense
+core in H_N and are realizable by ambient smooth vector fields supported
+in disjoint facet neighborhoods. To approximate a mass-zero speed within
+that core, correct the residual mass derivative using three fixed bump
+speeds on a spanning tree of the four labels. Their mass images are three
+independent incidence vectors, and continuity of M makes the corrections
+tend to zero. Thus the constrained core is dense in ker M.
+
+For smooth initial velocities satisfying (1), the same rank-three correction
+and the implicit-function theorem restore exact matching masses along
+the pair's paths. Corrections start at order s^2 and do not alter (4),
+because the reference first variation vanishes without multipliers.
+The all-Hilbert-space bounds therefore control realizable smooth tests
+without asserting that every rough speed has a classical deformation.
+
+For a fixed twice-differentiable admissible path with non-rotation first
+velocity and a justified second-order expansion, the theorem gives a
+strict increase for sufficiently small nonzero parameter. A uniform
+nonlinear neighborhood theorem requires a deformation chart, treatment
+of junctions and tails, and uniform remainder control. None is supplied
+by the Hessian bound alone. No global paired inequality, global simplex
+conjecture, or sharp MAX-4-CUT hardness conclusion is claimed here.
+
+The reviews cited above were performed by collaborating AI agents within
+the same project. They are internal checks, not external peer review or
+endorsement. This document makes no novelty or priority claim.

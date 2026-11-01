@@ -1,0 +1,252 @@
+END-TO-END AUDIT: PAIRED TETRAHEDRAL HESSIAN AND ALL-DIMENSION EXTENSION
+2026-11-01. Independent structural audit by negative_simplex_stature_audit.
+
+STATUS
+The theorem below is CONDITIONAL on rigorous, audited numerical enclosures
+H<153/5=30.6 and delta<1/20. The radial agent has reported candidate
+certificate bounds below these thresholds. This note does not replace the
+independent numerical-code audit assigned to covariance_adversarial_cleanroom
+and does not declare those computations accepted. The analytic implication,
+normalizations, admissible tangent space, and cylindrical extension are
+audited here from the definitions.
+
+CONDITIONAL THEOREM
+Let C be the regular four-way conical partition in R^3. At the pair (C,-C)
+with positive correlation1/3 and freely varying matched Gaussian masses,
+suppose the two scalar bounds above hold for the actual boundary operator
+defined below. Then the continuous quadratic form extending the paired
+second variation is nonnegative for every finite-energy boundary-speed
+pair satisfying the linearized common-mass constraint. Its kernel consists
+exactly of simultaneous rotation speeds.
+
+This conclusion holds at (C x R^(N-3), -C x R^(N-3)) for EVERY finite N>=3.
+The neutral boundary-speed space has dimension3N-6. In the normalized
+product Hilbert norm, the Hessian is at least9/100 times the squared
+distance from that neutral space. No global minimizer dimension-reduction
+theorem is used in this extension.
+
+1. DEFINITIONS AND THE REFLECTION CONVENTION
+Use rows Y_1=(1,1,1)/2, Y_2=(1,-1,-1)/2,
+Y_3=(-1,1,-1)/2, Y_4=(-1,-1,1)/2; Y^T Y=I_3.
+Set C_i={x:Y_i.x=max_j Y_j.x}. For each edge e=(i,j), i<j,
+ b_e=e_i-e_j, n_e=(Y_j-Y_i)/sqrt2,
+ Sigma_e=the common planar facet of C_i,C_j,
+ d lambda_e=(2pi)^(-3/2)exp(-|x|^2/2)dH^2 on Sigma_e.
+
+For the original positive-correlation pair (A,B), reflect its second rule:
+H=-B. Then Q_(1/3)(A,B)=Q_rho(A,H), rho=-1/3, and the reference becomes
+(C,C). Reflection preserves each label mass. A boundary scalar speed of B
+on -Sigma becomes the same scalar speed of H at the reflected point.
+
+Let G_i=T_rho1_Ci. Reflection symmetry exchanging i,j gives G_i-G_j=0
+on the whole tie plane and hence on Sigma_e. Set
+ d_e=partial_n_e(G_i-G_j)>0,
+ D(u,v)=sum_e int d_e u_e v_e d lambda_e.
+Positivity follows, independently of minimization, from the actual formula
+ d_e=(1/3)[2I_e+(1/2)sum_four_adjacent I_f],
+ I_f=int_Sigma_f K_rho(x,y)d lambda_f(y)>0,
+where
+ K_rho=(9/8)^(3/2)exp[-(|x|^2+|y|^2)/16-(3/8)x.y].
+No fixed-damping approximation is substituted for d_e.
+
+Define the signed first boundary variation h_i[u]=sum_e(b_e)_i u_e lambda_e
+and the symmetric bilinear form
+ K(u,v)=sum_(e,f)(b_e.b_f)int int u_e(x)v_f(y)K_rho(x,y)
+                                         d lambda_e(x)d lambda_f(y).
+Write the normalized space H_3=direct_sum_e L^2(lambda_e), U_e=sqrt(d_e)u_e.
+The normalized operator A has kernel
+ A_ef(x,y)=(b_e.b_f)K_rho(x,y)/sqrt(d_e(x)d_f(y)).
+Thus D(u,v)=<U,V> and K(u,v)=<U,A V>. The previously proved analytic
+tail estimate makes A Hilbert--Schmidt and self-adjoint, so these forms
+extend continuously to all of H_3.
+
+2. THE HESSIAN FACTORS AND CONSTRAINT
+For two smooth variations with boundary velocities u,v at (C,C),
+ J''(0)=D(u,u)+D(v,v)+2K(u,v).                            (1)
+To verify the diagonal factor, vary only the first argument. Its first
+variation is sum_e int_(Sigma_e(s))(G_i-G_j)u_e d lambda_e.
+At s=0 the potential difference vanishes. Differentiating leaves exactly
+partial_n(G_i-G_j)u_e^2. Curvature, acceleration, and variation of the
+surface density multiply the vanishing potential difference. Differentiating
+the two first boundary measures gives the mixed term2K. In particular the
+self variation u=v gives2(D+K), an independent factor check.
+
+Put u_+=(u+v)/2, u_-=(u-v)/2, and U_+,U_- likewise. Then
+ J''(0)=2[<U_+,(I+A)U_+>+<U_-,(I-A)U_->].              (2)
+The derivative of the label mass vector is
+ M u=sum_e b_e int u_e d lambda_e.
+Equal common masses impose M(u-v)=0, equivalently M u_-=0. There is NO
+condition M u_+=0: the common mass vector itself is allowed to move.
+
+For c in label space1-perp, the normalized mass representer is
+ G_c,e=(b_e.c)/sqrt(d_e), so M u=0 iff U is orthogonal to
+G=span{G_c:c perpendicular to1}. The lower bound on d_e makes these
+representers square-integrable. Hence M is continuous on the weighted
+speed space and G has dimension3.
+
+3. EXACT EIGENMODES, INCLUDING SIGNS
+For a translation w in R^3, t_e(w)=n_e.w and T_w=sqrt(d_e)t_e(w).
+The indicator derivative is -w.grad1_Ci, while
+grad T_rho=rho T_rho grad. Therefore on Sigma_e,
+ T_rho(h_i[t]-h_j[t])=-(1/rho)w.grad(G_i-G_j)
+                    =3d_e(n_e.w),
+and A T_w=3T_w. The translations span a three-dimensional eigenspace T.
+More explicitly, M t(w)=-2sqrt2*s0*Yw, so no nonzero translation obeys
+the contrast-channel mass constraint.
+
+For a skew-symmetric matrix Q, let r_Q,e=n_e.(Qx) and R_Q=sqrt(d_e)r_Q,e.
+The angular derivative (Qx).grad commutes with the isotropic OU operator.
+The boundary derivative is -(Qx).grad1_Ci, so on Sigma_e its transformed
+potential difference is -d_e n_e.(Qx). Hence A R_Q=-R_Q. These speeds
+span a three-dimensional eigenspace R. This proves the eigenvalue, rather
+than inferring a kernel solely from constancy along a rotation curve.
+
+The two eigenspaces are orthogonal because A is self-adjoint and their
+eigenvalues differ. Their dimensions are exactly3: the normals span R^3;
+if n_e.Qx vanishes on each open facet, skew symmetry forces Qn_e=0 for
+every e and therefore Q=0. Both eigenspaces belong to H_3. Indeed the
+one-dimensional Gaussian derivative formula bounds d_e by
+(|rho|/sqrt(1-rho^2))*E|Z|=1/(2sqrt(pi)), and the Gaussian facet measure
+integrates constants and quadratic polynomials. Rotation speeds lie in
+G-perp, since rotations preserve every label mass.
+
+4. THE EXACT MASS/TRANSLATION ANGLE
+By tetrahedral symmetry, the following scalars do not depend on the facet:
+ s0=int d lambda_e=L/(2pi)^(3/2), L=acos(-1/3),
+ a0=int d_e d lambda_e, b0=int d_e^(-1)d lambda_e.
+All are finite and positive. Since sum_e n_e n_e^T=2I_3 and
+b_e.Yw=-sqrt2 n_e.w, direct integration gives
+ <T_v,T_w>=2a0 v.w,
+ <G_Yv,G_Yw>=4b0 v.w,
+ <G_Yv,T_w>=-2sqrt2 s0 v.w.
+Consequently all three principal-angle squared cosines equal s0^2/(a0b0).
+For delta=1-s0^2/(a0b0), Cauchy--Schwarz gives0<=delta<1 and
+              ||P_T restricted_to G-perp||^2=delta.      (3)
+For example, normalize the two three-column frames: their cross-Gram
+matrix is -s0/sqrt(a0b0) timesI_3. Then
+||P_(G-perp) P_T||^2=delta; taking adjoints gives (3).
+The mass constraint therefore is NOT orthogonality to translations.
+
+5. HILBERT--SCHMIDT REMAINDER AND EXPLICIT RATIONAL GAPS
+Let H=||A||_HS^2. Define E=A-3P_T+P_R. Exact eigenmode orthogonality gives
+ E P_T=E P_R=0,
+ ||E||_HS^2=H-3*3^2-3*1^2=H-30.
+In particular H>=30, a useful consistency check on numerical enclosures.
+If H<153/5, then h=sqrt(H-30)<sqrt(3/5)<4/5 and ||E||op<=h.
+
+For every U in H_3,
+ <U,(I+A)U>
+   >=4||P_T U||^2+(1-h)||P_(T+R)-perp U||^2
+   >=(1/5)||P_(R-perp)U||^2.                            (4)
+The common channel has kernel exactly R; the positive gap on its
+orthogonal complement rules out any other null direction.
+
+For unit U in G-perp, use (3) and the residual decomposition:
+ <U,A U>
+   <=h+(3-h)||P_TU||^2-(1+h)||P_RU||^2
+   <=h+(3-h)delta <4/5+(11/5)(1/20)=91/100.
+Thus, on the entire constrained space,
+              <U,(I-A)U> >=(9/100)||U||^2.              (5)
+The strict hypotheses give strict inequalities for nonzero vectors at the
+corresponding endpoints; the weak rational inequalities are convenient
+uniform coercivity statements.
+
+Combining (2),(4),(5),
+ J''(0)>=(2/5)||P_(R-perp)U_+||^2+(9/50)||U_-||^2.       (6)
+The product-space distance from N_3={(R,R):R in R} is
+ dist((U,V),N_3)^2=2||P_(R-perp)U_+||^2+2||U_-||^2.
+Hence J''(0)>=(9/100)dist((U,V),N_3)^2. Its kernel is precisely N_3.
+
+6. CYLINDRICAL EXTENSION TO EVERY FINITE N>=3
+Let d=N-3 and use C_i^N=C_i x R^d. The facet measure factorizes as
+lambda_e,N=lambda_e,3 tensor gamma_d, while the normal derivative d_e
+depends only on the first three coordinates. Therefore, exactly,
+ H_N=H_3 tensor L^2(gamma_d), A_N=A_3 tensor T_rho^(d).    (7)
+The mass representers are G_c tensor1. Expand the extra-coordinate factor
+in orthogonal Hermite chaoses of degree k. On degree k, A_N is rho^k A_3.
+Only k=0 sees the mass constraint; every degree k>=1 is automatically
+mass-zero. This is an operator identity at the reference, not a claim that
+unknown global minimizers are cylindrical.
+
+The accepted scalar hypotheses would give spectrum(A_3) in[-1,3], with
+eigen3 only on T, eigen-1 only on R, and all remaining eigenvalues of
+absolute value below4/5. Therefore:
+ * k=0 has exactly the bounds (4)-(5).
+ * k=1 multiplies eigenvalues by-1/3. Its only common-channel null modes
+   are T tensor degree1; all other common-channel eigenvalues are at
+   least1-(4/5)/3>1/5. Its contrast-channel eigenvalues are at least2/3.
+ * k>=2 has |rho^k A_3|_op<=3*(1/3)^k<=1/3, so BOTH channels have
+   gap at least2/3 there.
+Thus the same rational gaps1/5 and9/100 hold in every finite N.
+
+The common nullspace is R tensor1 plus T tensor linear extra-coordinate
+functions. A full ambient skew matrix has block form
+ [[Q,B],[-B^T,Q_extra]] and normal speed
+ n_e.(Qx+Bz). These are exactly those modes. Q_extra contributes zero
+boundary speed because it acts inside the cylindrical factors. The actual
+neutral space has dimension3+3d=3N-6, not dim SO(N). In the original
+positive-correlation variables these are simultaneous rotations of both
+partitions. The product-distance bound following (6) holds with this
+larger neutral space N_N.
+
+7. ALL HILBERT SPEEDS VERSUS REALIZABLE SMOOTH VARIATIONS
+The inequalities above hold on the full weighted L^2 spaces, once the
+scalar certificate is accepted. They therefore include every smooth
+admissible speed for which the second-variation formula is defined.
+They do not assert that every individual L^2 vector integrates to a
+classical smooth deformation of a partition.
+
+There is nevertheless a concrete dense admissible core. On each facet take
+smooth compactly supported normal speeds away from the multiple-junction
+strata. The facet boundary has surface measure zero; since d_e is smooth
+and positive, truncation and mollification make this core dense in H_N.
+Each finite collection is realizable by smooth ambient vector fields in
+disjoint tubular neighborhoods of the chosen facet patches.
+
+For the mass-zero core, fix three such bump speeds on edges of a spanning
+tree of the four labels, each normalized to have integral1 against lambda.
+Their mass images are the three independent incidence vectors b_e.
+Approximate any ker M vector by core vectors and correct their residual
+mass images using these three fixed bumps. Continuity of M makes the
+corrections tend to zero, proving density in ker M.
+
+The same rank-three correction gives exact matched-mass smooth pair
+families by the implicit-function theorem. If the initial velocities obey
+M(u-v)=0, the required correction parameters begin at order s^2. Such
+corrections do not change (1): the reference first variation vanishes for
+every speed, without a nonzero mass multiplier. Thus the tangent condition
+used in the theorem is not an artificial relaxation of the smooth local
+problem. Junction contributions vanish in this core; more general paths
+require their own justified shape differentiation, not an unsupported
+extension of a smooth-boundary formula through singular strata.
+
+8. WHAT THE THEOREM WOULD AND WOULD NOT ESTABLISH
+An accepted certificate proves a strict constrained SECOND-VARIATION gap
+modulo rotations. For each fixed C^2 admissible path with a non-rotation
+first velocity and a valid second-order expansion, its cost is strictly
+larger for sufficiently small nonzero parameter. The neighborhood may
+depend on that path. A fixed finite-dimensional smooth family with an
+immersed tangent space transverse to rotations also admits the ordinary
+finite-dimensional local-minimum conclusion.
+
+A uniform nonlinear local-minimum theorem over arbitrary nearby partitions
+requires additional work: a deformation topology and chart, treatment of
+junctions and tails, removal of the rotation freedom, and a uniform
+Taylor remainder smaller than the coercive quadratic term in that chart.
+None follows merely from Hilbert--Schmidt control of the Hessian. Paths
+with zero first velocity and arbitrary nonsmooth finite changes are not
+settled by the first-velocity statement.
+
+Even a nonlinear local-minimum theorem would not prove the global paired
+inequality, the unrestricted four-label negative simplex conjecture,
+negative Plurality is Stablest, or sharp MAX-4-CUT hardness. The user's
+original recognized-problem objective remains unresolved by this work.
+
+SOURCE FILES AUDITED
+PAIRED_BOUNDARY_FORM_AND_NUMERICAL_DIAGNOSTIC_20261101.txt
+INDEPENDENT_AUDIT_OF_HILBERT_SCHMIDT_LOCAL_CERTIFICATE_ROUTE_20261101.txt
+COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt
+LOG_DIAGONAL_CURVATURE_AND_EXECUTABLE_QUADRATURE_20261101.txt
+All are in this directory. The all-dimension tensor observation was supplied
+by root and independently verified here. No numerical code review is
+claimed in this file; that task is assigned separately.

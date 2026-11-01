@@ -1,0 +1,36 @@
+EXECUTION RECEIPT: CERTIFIED LOCAL FACET MOMENTS
+2026-11-01
+
+Command:
+  hs_cert_venv/bin/python certified_log_diagonal_quadrature_20261101.py
+Run from this directory. Python-flint 0.6.0, Arb precision160 bits.
+Final execution exit0; all assertions passed.
+
+The input corner logs were rigorously enclosed by the proved origin-tangent
+and curvature bounds for the ACTUAL tetrahedral diagonal. They were not
+floating-point sampled diagonal values.
+
+Domain: unit-ray coordinate square 0<=u,v<=3/20.
+Moment: q^p z^k exp(-|x|^2/8) d(lambda)(x)/d(x),
+q=(u+v)/sqrt3, z=sqrt(2/3)(v-u).
+
+Safely outward-rounded decimal enclosures from the Arb output:
+M_0,0 in [0.00791329563405824, 0.00793992228361053].
+M_2,0 in [0.0000693855031314768, 0.0000696233134214957].
+M_0,2 in [0.0000197457439846242, 0.0000198207099810145].
+M_4,2 in [0.00000000157397709357241, 0.00000000158002119035615].
+
+The respective certified Gauss-rule remainder bounds were below
+1.197e-11, 2.244e-12, 2.873e-12, and 1.010e-13.
+The separate exact logarithmic interpolation allowance is9/12800.
+The final interval widths also include the deliberately coarse corner-log
+enclosures; the displayed Gauss remainder alone is not the total error.
+
+Implementation issue found and corrected during the run:
+python-flint0.6.0 may return NaN for a zero-containing Arb ball raised with
+the ** operator even when the exponent is the integer2. The helper instead
+uses repeated multiplication for nonnegative integer powers of signed balls.
+After this fix the four actual moment enclosures passed.
+
+This receipt certifies the executable local integration mechanism. It does
+not assert that the full square, HS norm, or common-mass angle was integrated.

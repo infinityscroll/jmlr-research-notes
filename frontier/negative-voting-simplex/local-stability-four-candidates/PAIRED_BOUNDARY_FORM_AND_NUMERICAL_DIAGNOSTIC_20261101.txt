@@ -1,0 +1,192 @@
+EXACT PAIRED BOUNDARY FORM AT FOUR LABELS, WITH A NUMERICAL DIAGNOSTIC
+1 November 2026. Companion to MOMENT_PRESERVING_PURIFICATION_AND_EXACT_PAIRED_CONTRAST.
+
+STATUS
+
+The variational identities in sections1--3 are exact. Section4 is an
+uncertified floating-point quadrature scan, not a proof of local stability,
+not an all-speed estimate, and not a global paired inequality. The purpose
+is to identify the actual paired operator and test for a concrete local
+obstruction without assuming that either unknown optimizer has affine cells.
+
+1. REFERENCE AND FULL KERNEL
+
+Work in R3 with tetrahedral score rows
+  y1=(1,1,1)/2, y2=(1,-1,-1)/2,
+  y3=(-1,1,-1)/2, y4=(-1,-1,1)/2.
+Their Gram matrix is I4-11^T/4. The regular cells are
+  Theta_i={y_i.x=max_j y_j.x}.
+For an edge e=(i,j), i<j, let
+  Sigma_e={y_i.x=y_j.x=max_k y_k.x},
+  n_e=(y_j-y_i)/sqrt2,
+  d lambda_e=gamma_3 dH2 restricted to Sigma_e,
+so n_e points out of cell i. Set rho=-1/3 and G_i=T_rho Theta_i.
+The reference is stationary without a mass multiplier: G_i=G_j on Sigma_e.
+Define its ACTUAL positive normal derivative
+  d_e(x)=partial_{n_e}(G_i-G_j)(x)>0.
+For scalar interface speeds u=(u_e), write
+  D(u,v)=sum_e int d_e(x)u_e(x)v_e(x)d lambda_e(x).
+This D is a boundary quadratic form; it is not the degree-0/1 deficit of
+an assignment used in the earlier endpoint obstruction note.
+
+With b_e=e_i-e_j in label space, define the signed boundary distribution
+  h_i[u]=sum_e (b_e)_i u_e lambda_e.
+The full Gaussian kernel relative to gamma_3(x)gamma_3(y) is
+  K_rho(x,y)=(1-rho^2)^(-3/2)
+       exp((2rho x.y-rho^2(|x|^2+|y|^2))/(2(1-rho^2))).
+Then
+  K(u,v)=sum_(e,f)(b_e.b_f)
+     int_Sigma_e int_Sigma_f
+          u_e(x)v_f(y)K_rho(x,y)d lambda_f(y)d lambda_e(x).    (1)
+This is precisely sum_i<h_i[u],T_rho h_i[v]>. It includes every chaos.
+
+2. THE TWO PAIRED CHANNELS AND THE CORRECT MASS CONSTRAINT
+
+Reflect the second original rule, so paired cost is <f,T_rho h> with
+rho=-1/3. At (Theta,Theta), let their two interface velocities be u,v.
+The first variations vanish. Differentiating twice gives
+  J''=D(u,u)+D(v,v)+2K(u,v).                       (2)
+The diagonal terms come from normal differentiation of G_i-G_j, and the
+mixed term comes from the two first boundary derivatives. Curvature and
+acceleration terms multiply the zero reference potential difference.
+For compact smooth speeds away from multiple junctions this is ordinary
+moving-boundary differentiation. The reference's Gaussian smoothing makes
+all potential derivatives smooth. The formula extends to any weighted
+closure on which the displayed forms are finite and continuous; that
+extension is not assumed without its analytic estimates.
+
+Let u_+=(u+v)/2 and u_-=(u-v)/2. Then exactly
+  J''=2[(D+K)(u_+,u_+)+(D-K)(u_-,u_-)].           (3)
+The derivative of the label mass vector is
+  M u=sum_e b_e int u_e d lambda_e.
+Equal common masses for the two rules impose
+  M u_-=0.                                       (4)
+They do not impose M u_+=0, because the common mass vector itself is free.
+This distinction is essential. The paired local problem therefore asks
+for D+K on common speeds and D-K on zero-mass opposite speeds.
+
+For realizable compact test speeds satisfying (4), second-order equality
+of the two mass vectors can be restored by offset adjustments of order
+O(t^2): the regular offset Laplacian has rank3. Such corrections do not
+change (2), because reference potential differences are zero. This justifies
+using (4) as the tangent constraint in a necessary local stability test.
+
+3. EXACT NORMALIZATION CHECKS
+
+Translations. Let t_e(w)=n_e.w. Translation of the whole partition has
+boundary derivative h[t]=-w.grad Theta. The identity
+  grad T_rho= rho T_rho grad
+implies, on each interface,
+  (T_rho h_i[t]-T_rho h_j[t])
+    =-(1/rho) w.grad(G_i-G_j)
+    =-(1/rho)d_e t_e(w).
+Consequently
+  K(t,v)=-(1/rho)D(t,v)=3D(t,v)                   (5)
+for every admissible test v. Thus translations are exact generalized
+eigenvectors of K relative to D with eigenvalue3. They would make D-K
+negative. However
+  M t(w)=-B0 w,
+where B0 is the regular centroid matrix of spatial rank3. No nonzero
+translation satisfies (4). Their exclusion is a common-mass fact, not a
+single-rule dimension-reduction theorem. The constraint is M u=0; it
+must not silently be replaced by D-orthogonality to translations.
+
+Rotations. Every common rotation of the reference pair stays stationary
+and has unchanged cost. Differentiating stationarity along a rotation
+shows that its speed t_rot satisfies
+  (D+K)(t_rot,v)=0,
+so K=-D on the rotation subspace. These give exact eigenvalue-1 and are
+null directions of the common channel, as expected.
+
+Actual diagonal formula. Put sigma=sqrt(1-rho^2), a_i=rho y_i.x/sigma.
+For Gaussian utilities Z_i+a_i, let
+  w_ij(a)=int phi(t-a_i)phi(t-a_j)
+                       product_(k!=i,j)Phi(t-a_k)dt.
+At x in Sigma_ij, a_i=a_j and symmetry gives w_ik=w_jk. Differentiating
+by swapping utility means yields
+  d_e(x)=(-rho sqrt2/sigma)
+                   [2w_ij(a)+sum_(k!=i,j)w_ik(a)].          (6)
+Every term is positive. The code computes this full expression, not its
+rho=0 value or an asymptotic estimate.
+
+4. REPRODUCIBLE NUMERICAL SCAN (NOT CERTIFIED)
+
+Files:
+  paired_boundary_scan.py
+  paired_boundary_scan.json
+Run from the repository root with:
+  tmp/astro_3i_audit_venv/bin/python \
+    work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/\
+    stochastic/full_standard_simplex_20261031/four_label_paired_attack_20261101/\
+    paired_boundary_scan.py
+
+Each facet is the wedge generated by -y_k,-y_l for the two outside labels.
+Its opening angle is arccos(-1/3). In polar coordinates on the facet,
+  d lambda=(2pi)^(-3/2) exp(-R^2/2) R dR dtheta.
+The program uses Gauss--Laguerre quadrature with s=R^2/2 and Gauss--Legendre
+quadrature in theta. Utility weights in (6) use 64-node Gauss--Hermite
+quadrature after completing the square in the two Gaussian densities.
+
+On each of the six facets independently, the speed space consists of
+all monomials in two orthonormal facet coordinates up to total degree2
+(6 per facet, 36 total) or degree3 (10 per facet, 60 total). This is larger
+than the affine-score variation space. The common-mass matrix M is built
+from the same direct integrals; its numerical rank is3. No covariance
+Hessian identity is used to manufacture D or K.
+
+Representative refined outputs:
+
+  Degree2, 24 radial x28 angular nodes per facet:
+    min eigenvalue K/D                         -1.0000102377884914
+    largest three eigenvalues K/D               2.99922953884770 (triple)
+    max eigenvalue K/D on ker M                  .19941155078105813
+    min normalized opposite Hessian 1-max        .8005884492189419
+    translation identity relative residual      .001058687844377547
+
+  Degree3, 22 radial x28 angular nodes per facet:
+    min eigenvalue K/D                         -1.0000127627630244
+    largest three eigenvalues K/D               2.99912172277541 (triple)
+    max eigenvalue K/D on ker M                  .19965423365085905
+    min normalized opposite Hessian 1-max        .8003457663491409
+    translation identity relative residual      .0014042421926536498
+
+The slight excursion below -1 is a numerical error around the exact
+rotation eigenvalue, not evidence of instability. Its size decreases as
+quadrature is refined. The translation identity (5) supplies an independent
+normalization/convergence check and shows the present quadrature is not
+an interval certificate.
+
+The code also computes the even boundary channel
+  K_even=(K_rho+K_-rho)/2.
+On ker M its largest tested K_even/D eigenvalue was approximately .613922
+in the refined degree3 run. This suggests a potentially stronger weighted
+even-channel estimate, but no inequality for the full function space is
+inferred. Higher polynomial degrees, unbounded weighted speeds, finite
+changes, and global geometry remain untreated by this scan.
+
+5. IMPLICATION GAP
+
+A proof that D-K>=0 on every zero-mass speed would establish the opposite
+paired LOCAL condition, not global minimality. Even the combination of
+both local conditions cannot classify arbitrary pure pairs from Lemma A
+without another global argument. Conversely, a certified negative value
+on a realizable constrained speed would be a genuine local counterexample;
+none was found in the tested space.
+
+The numerical evidence supports investigating the actual diagonal-weighted
+operator (1),(6), rather than a constant first-chaos replacement. It does
+not license the false reflection-averaging step or scalar impurity bridge
+refuted in the companion theory note.
+
+REFERENCE/PROVENANCE CHECK
+
+The frozen internal source
+../negative_voting_simplex_manuscript_v2_20261031/dependency_review/proof_sources/
+ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt,
+lines32--52, writes the self half-Hessian as A_-r+rN_r, with D=rN_r and
+K=A_-r in the present notation. Lines251--256 provide a compatible Jacobi
+normalization. Its sufficiently-large-m bounds were not imported here.
+Equations(2)--(6) were derived afresh for the paired endpoint.
+
+No publication, outreach, master-state edit, paid job, or new agent was used.
+All original files remain unchanged.
