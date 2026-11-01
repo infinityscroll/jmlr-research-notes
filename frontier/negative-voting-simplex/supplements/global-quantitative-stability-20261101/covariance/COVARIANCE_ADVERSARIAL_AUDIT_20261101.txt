@@ -1,0 +1,452 @@
+COVARIANCE, DIAGONAL SUPPORT, AND SUMMED-ROW COERCIVITY
+Independent adversarial audit, 1 November 2026
+
+VERDICT AND SCOPE
+
+I found no falsification of the normalized summed-row theorem under its
+stated fixed-row-cap hypothesis. I independently reconstructed the
+covariance Hessian/cycle cancellation, the coordinatewise hazard
+derivatives, the support argument, and the singular-endpoint passage.
+The conclusion here is deliberately restricted to that chain. It is not
+an audit certificate for the negative-noise theorem, its mass localization,
+its full-noise comparison, or its discrete applications.
+
+There is an explicit falsification of the cap-free/A-uniform extension:
+rank-one matrices supported on two labels violate it by an unbounded
+factor. See EXACT_COMPUTATIONS_20261101.txt, calculation 1. Thus the
+quantifier is essential: for each fixed A there are c_A>0 and m_A,
+uniform in m>=m_A and ambient dimension N. It cannot be replaced by
+one universal positive c that works for row caps increasing with m.
+The manuscript keeps the correct quantifier. A downstream use must
+establish an absolute normalized row cap, not merely a cap for each m.
+
+I also checked the parent's requested unnormalized global covariance
+remainder. It does give
+
+  d(B)^2 <= C m^(3/2) L R_U(B)
+
+whenever d(B)/alpha <= C0 sqrt(m), including arbitrarily small d(B),
+radial changes of scale, and singular target covariance. The initial
+curvature argument must retain the trace term; the written sources do.
+Its derivation appears in Section 7 below.
+
+No pre-existing source, manuscript, numerical file, or master state was
+edited. Only this new covariance audit directory was created/written.
+
+1. EXACT SOURCES AND DEPENDENCY REDUCTION
+
+Base directory for packaged sources:
+  negative_voting_simplex_manuscript_v2_20261031/
+  dependency_review/proof_sources/
+
+The following SHA-256 pins were recomputed from the packaged copies;
+each copy also agreed byte-for-byte with SOURCE_MAP.json's original path:
+
+  225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+    ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+  907e0360c12c8f05376be54ced662b243aaf612974215755ed65b8408d20adad
+    BALANCED_ENDPOINT_AND_REMAINDER_RIGIDITY_FROM_COVARIANCE_CONCAVITY_20261031.txt
+  be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200
+    CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt
+  1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57
+    GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt
+  e33c710eeda31107dbd895c17cd1fe7b1771afd2e361c5713de82b31c9e014f4
+    GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt
+  47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e
+    BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt
+
+The declared internal dependency graph in SOURCE_MAP.json has no cycle.
+This check is bookkeeping, not proof of logical independence. The actual
+minimal mathematical route for the normalized summed theorem is smaller:
+
+  convex Gaussian variance bound + simplex dual/coarea/linear algebra
+       -> covariance concavity and PSD-value continuity (225, Sections 1-9)
+  Gaussian tail estimates + independent-score dual + 1D variance bound
+       -> coordinatewise hazard theorem (be930, Sections 1-5)
+  those two conclusions + Gaussian maximum normalization
+       -> summed support theorem (1eb, Theorem 1).
+
+The normalized summed theorem does not need minimizer attainment, the
+mass-window theorem, Mulgund's maximum comparison, full-noise rigidity,
+an equal-row proxy, or e33's actual-minimizer theorem. In be930, the
+balancing offsets needed in the derivative proof exist directly by the
+strictly convex independent-score dual. Its final support discussion is
+not used to prove its derivative estimates. Consequently no circular
+use of the summed theorem was found there.
+
+The package correctly replaces 225's historical Section 10 endpoint
+references by the self-contained normalization and tangent argument in
+907. The old actual-subset replacement budget in e33 Section 6 is not
+needed for the normalized theorem, and the manuscript supplies its own
+radial budget when making its geometric-median proxy.
+
+2. INDEPENDENT COVARIANCE HESSIAN RECONSTRUCTION
+
+Let y_0,...,y_d be an affinely independent target in R^d with positive
+masses. At a positive source covariance the optimized offsets are smooth:
+their Hessian is the complete facet Laplacian, whose edge weights are
+strictly positive. Every offset vector is a translated simplex fan,
+because h_i=c-y_i.a. This geometry is special and essential to this proof.
+
+At covariance I, for a facet e={i,j}, put d_e=y_i-y_j,
+l_e=|d_e|, w_e=mu_e/l_e and let P_e project onto its tangent space.
+Let m_e and Sigma_e denote its conditional mean and covariance. Intrinsic
+Gaussian integration by parts, with the OUTWARD normal equal to minus
+the inward projected score difference, gives
+
+  w_e(P_e-Sigma_e) = N_e T_e^T = T_e N_e^T,
+
+where N_e has columns (mu_(e+k)/l_e)n_(e,k), and T_e has columns
+m_e-m_(e+k). This transpose equality uses symmetry of the covariance
+deficit. The convex Gaussian variance inequality gives the PSD sign.
+
+For global barycentric vectors v_k=-grad lambda_k,
+
+  v_k.(y_i-y_j)=delta_kj-delta_ki,  sum_k v_k=0.
+
+If g=e+k is a triangle, D_g=2 area(g)/mu_g. Its altitude identity gives
+row_g(N_e^-1)=D_g v_k^T. Consequently
+
+  B_e=N_e^-1 [w_e(P_e-Sigma_e)] N_e^-T >= 0,
+  (B_e)_(g,g')=1/w_e-D_g v_k.m_(g').
+
+This inversion is on the (d-1)-dimensional tangent space. No covariance
+deficit is inverted. In particular a singular deficit creates no gap.
+
+Let partial_2 and partial_3 be the oriented complete-simplex boundary
+matrices. Set A=partial_2^T W^-1 partial_2 and assemble B from the B_e.
+For distinct triangles sharing e, g=e+k and g'=e+l, put h=e+k+l.
+The stratum IBP for g' gives
+
+  v_k.m_(g') = mu_h area(g')/(3 vol_3(h) mu_(g')).
+
+Only the boundary adding k survives: v_k annihilates the other projected
+gap vectors. The same formula summed over k outside g gives the diagonal
+entries. Keeping the orientation signs yields exactly
+
+  A-B = -D partial_3 diag(mu_h/(6 vol_3(h))) partial_3^T D.
+
+The minus sign is important. This does not say B<=A on all triangle
+coordinates. Instead choose, for a fixed edge cycle j, the representative
+lambda with partial_2 lambda=j minimizing lambda^T D lambda. Its Euler
+equation is partial_3^T D lambda=0, so lambda^T B lambda=j^T W^-1 j.
+The representative exists without injectivity of partial_3. Changing it
+changes only cycle coordinates; it does not change any optimizing offset.
+
+For arbitrary cell vectors z_i, telescope z_i-z_j around each triangle.
+PSD Cauchy-Schwarz then proves
+
+  min_b sum_e w_e[(z_i-z_j).m_e+b_i-b_j]^2
+    <= sum_e w_e[|P_e(z_i-z_j)|^2
+                          -Var_e((z_i-z_j).X)].             (C1)
+
+The minimum on the left uses one global vector b. This is exactly the
+weighted edge-cycle duality, not independently chosen facet offsets.
+
+For C(t)=I+tH, the score square root has derivatives H/2 and -H^2/4.
+The interface term is the optimized square, and the interior derivative
+is obtained from Gaussian IBP. Therefore
+
+  4 F''(I)[H,H]
+   = min_b sum_e w_e E_e[(d_e.HX+b_i-b_j)^2]
+                                 -sum_e w_e |H d_e|^2.
+
+Here E_e denotes conditional expectation only in this display. Apply
+(C1) with z_i=H y_i. The remaining normal component gives
+
+  4 F''(I)[H,H] <= -sum_e w_e (d_e^T H d_e)^2/|d_e|^2.      (C2)
+
+All edge quadratic forms vanishing forces H=0: use the basis y_i-y_0
+and polarize its pair differences. Whitening proves the same conclusion
+at every positive covariance. This establishes the advertised interior
+concavity without a dimension-dependent inequality constant.
+
+PSD continuity follows from coupling both Gaussian sources through a
+common standard G, using conditional randomization in any null directions:
+
+  |F_nu(C)-F_nu(C')|
+   <= (E|Y|^2)^(1/2) ||C^(1/2)-C'^(1/2)||_F.
+
+This is sufficient for all singular targets used in the summed proof.
+The arbitrary-finite-target extension in 225 also checks out: lift sites
+to (y_i,epsilon e_i), restrict diag(C,0) to their difference span, and
+apply the simplex theorem on that span. Translation of target sites
+does not change the value because the Gaussian has zero mean. General
+P2 targets follow from the stated W2-continuity estimate. No quantitative
+strictness for such arbitrary limits is needed or inferred here.
+
+3. HAZARD DERIVATIVES: WHERE M-UNIFORMITY IS ACTUALLY PROVED
+
+Let v_i=1+t xi_i, sum xi_i=0, ||xi||_infinity<=A1. The offsets h(t)
+are chosen to give every label mass 1/m. Define F_i, f_i, a_i=f_i/F_i,
+W=product F_i and rho_ij=W a_i a_j, including the analytic diagonal.
+
+The whole-threshold moment bound is the crucial analytic estimate. In
+the box epsilon=max|v_i-1|<=delta/L, H=max|h_i|<=delta/sqrt(L), change
+variables on x>=2H to z=(x+H)/sigma_min, then s=1-Phi(z). For any of
+the finitely many fixed exponents needed below the resulting integral is
+bounded by a constant times
+
+  m^p integral_0^(1/2) (1-s)^(m-p-2) s^(p+1-2theta)
+                        log(e/s)^((p+q+1)/2) ds,
+  theta <= C_(p,q)(epsilon+H/sqrt(L)) <= C_(p,q)delta/L.
+
+Substitute u=ms. Its size is
+O(m^(-2+2theta) L^((p+q+1)/2)); m^(2theta) is uniformly bounded.
+Divide by Z0=integral phi^2 Phi^(m-2)=alpha/m asymptotic to sqrt(L)/m^2.
+This proves the needed conditional moments of m max a_k and |x|.
+The left and middle threshold regions are exponentially small in m;
+their hazards grow only linearly in |x|. For i=j, the reciprocal F_i
+is bounded on the right region and the same direct hazard bound handles
+the left region. The analytic diagonal has not been silently omitted.
+
+The balancing Laplacian has c alpha/m<=omega_ij<=C alpha/m. Its
+componentwise inverse is proved by subtracting a complete-graph
+Laplacian, using the remaining doubly stochastic semigroup to bound the
+l1 norm, and then using one row equation. Explicitly
+
+  |(L^-1 b)_i| <= C/alpha (|b_i|+mean_j |b_j|).
+
+Neither its spectral bound alone nor an l1 bound alone would prove this
+componentwise conclusion. The source uses both required steps.
+
+With b_i(x)=h_i'+xi_i(x-h_i)/(2v_i), density transport yields
+
+  0=p_i'=sum_(j!=i) integral rho_ij(b_i-b_j).
+
+It follows that |h_i'|<=C sqrt(L)(|xi_i|+M1). Integrating closes the
+coordinate box for 0<=t<=c_A1/L^2. The constants are fixed on a larger
+box before choosing the short time, so this is a legitimate continuation
+argument and does not assume small ||xi||_2.
+
+Writing L_i=partial_t log f_i and S=sum a_k b_k gives exactly
+
+  partial_t log rho_ij=L_i+L_j+a_i b_i+a_j b_j-S=:P_ij.
+
+The summed term S is indispensable. Its estimate uses
+sum a_k(|xi_k|+M1)<=2m max a_k M1, not a separate uniform bound for each
+of m terms. The second mass derivative then gives
+
+  |h_i''|<=C L^(3/2)(xi_i^2+M2).
+
+The explicit identity
+
+  L_i'=xi_i^2/(2v_i^2)-xi_i^2(x-h_i)^2/v_i^3
+       -2xi_i h_i'(x-h_i)/v_i^2+h_i''(x-h_i)/v_i-(h_i')^2/v_i
+
+has conditional norm O(L^2(xi_i^2+M2)). Apply the same moment estimates
+to (a_i b_i)' and sum S' using mean xi_i^2=M2. This proves
+
+  E_ij(P_ij^2+|P_ij'|)<=C L^2(xi_i^2+xi_j^2+M2),
+  |ell_i''|<=C alpha L^2(xi_i^2+M2).                      (H1)
+
+All moment exponents here are fixed; none grows with m, the perturbation
+amplitude, or ambient dimension. Summing omega_ij=O(alpha/m) is what
+preserves M2 instead of ||xi||_2^2 in each coordinate estimate.
+
+At t=0 the mass equation gives h_i'=-M xi_i/2, where T has density
+proportional to phi^2 Phi^(m-2) and M=ET. Direct logarithmic differentiation
+gives
+
+  ell_i'(0)=-alpha eta_m xi_i,
+  eta_m=(m-1-m Var(T))/(2(m-2)).
+
+The 1D log-density has curvature at most -2, hence Var(T)<=1/2.
+For the reverse inequality, condition regular independent scores on the
+pair tie and on that pair being maximal. The common Gaussian mean is
+independent of all these centered conditions. It contributes variance
+1/m to the raw tie threshold, so Var(T)>=1/m. Therefore exactly
+1/4<=eta_m<=1/2. This raw-threshold/common-mean normalization is correct.
+
+4. SUPPORT CERTIFICATE AND SINGULAR TARGETS
+
+At a positive independent-score covariance D=P diag(v)P, put
+
+  H_D=integral W(Pa)(Pa)^T dx >= 0.
+
+The ordinary offset Laplacian is diag(ell)-integral W aa^T and kills 1.
+Projecting gives exactly
+
+  L_D=P diag(ell)P-H_D.
+
+The covariance gradient is L_D/2; degree-1/2 homogeneity gives
+Gamma(D)=tr(L_D D). Interior concavity therefore yields
+
+  Gamma(C)<=tr[L_D(C+D)]/2
+           <=sum_i ell_i(C_ii+D_ii)/2                    (S1)
+
+for EVERY centered PSD C. The discarded quantity is
+-tr[H_D(C+D)]/2<=0, because the trace of a product of PSD matrices is
+nonnegative. An entrywise sign assertion is neither true nor needed.
+
+For a singular C, apply the first inequality to C+epsilon P and pass
+to the limit. Its supporting point D stays positive and fixed. No
+derivative, facet convergence, offset convergence, or rank persistence
+is required at C. This point removes the main potential endpoint trap.
+
+5. THE SUM, THE ROW CAP, AND THE CONSTANT
+
+Normalize tr C=n=m-1. Set z_i=C_ii-n/m, kappa=1-2/m,
+xi_i=z_i/kappa. If C_ii<=A with fixed A, ||xi||_infinity<=3(A+1).
+The supporting path satisfies exactly
+
+  D_t=P+tP diag(xi)P, tr D_t=n,
+  (D_t)_ii=n/m+t z_i.
+
+For t=b_A/L^2 inside (H1)'s interval,
+
+  ell_i(t)=alpha-alpha eta_m t xi_i+e_i,
+  |e_i|<=C_H alpha L^2 t^2(xi_i^2+mean xi^2)/2.
+
+Insert this into (S1). The constant term is alpha n=mu. The first
+derivative term is not estimated in absolute value:
+
+  sum_i xi_i[C_ii+(D_t)_ii]=kappa(1+t)sum_i xi_i^2.
+
+The error is at most C_H(A+2)alpha L^2 t^2 sum xi_i^2/2. Choose
+
+  b_A<=min(c_H,1,1/(2A1),1/(24 C_H(A+2))).
+
+Then eta_m>=1/4 and kappa>=1/3 give
+
+  mu-Gamma(C)>=alpha kappa t sum xi_i^2/16
+             >=alpha b_A sum z_i^2/(16 L^2).
+
+Since R_U(B)=alpha[mu-Gamma(C)] for C=BB^T/alpha^2 with ||B||^2=w,
+the stated normalized summed theorem follows. All constants can depend
+on A, but not on m, N, target rank, off-diagonal operator norm, or
+||C-P||_F. In particular ||C||op may grow with m under a fixed row cap;
+it is never estimated in this proof.
+
+6. UNNORMALIZED CONVERSION AND THE GEOMETRIC PROXY
+
+For B=s Bhat with ||Bhat||^2=w, positive homogeneity gives exactly
+
+  R_U(B)=w(s-1)^2/2+s R_U(Bhat).
+
+The row-variance vector scales by s^2. Its squared norm is therefore
+bounded by C s^3 alpha^2 L^2 R_U(B). The reference-radius correction is
+
+  (||B||^2-w)^2/m
+    =w^2(s+1)^2(s-1)^2/m
+    <=2w(s+1)^2 R_U(B)/m.
+
+Dividing the squared row-length errors by beta^2=w/m is valid even
+when a row vanishes: (r-beta)^2<=(r^2-beta^2)^2/beta^2. This proves
+the two displayed unnormalized conclusions at their stated scales.
+With an explicit normalized cap the estimates only need an upper
+bound for s>0; the stated lower bound is useful when deriving that
+normalized cap from an absolute unnormalized one. No objection arises
+from retaining this stronger hypothesis in the source.
+
+The geometric-median construction likewise has a direct dimension-free
+proof once the stated actual-centroid operator bound and uniform row
+lower bound are available. The operator bound gives
+||m^-1 sum u_i u_i^T||op=O(1/L); the Hessian of the average distance
+function is then uniformly positive on a sufficiently small beta-ball.
+Its gradient at zero satisfies
+
+  |g0|<=C ||B||op sqrt(E_rad)/(m beta^2).
+
+The new radial budget makes g0=o(1), locates an interior median c, and
+gives m|c|^2<=C E_rad/L. Radial projection about c produces exactly
+centered equal-length rows at cost O(E_rad), without increasing the
+row span. These are geometric statements only. They do not identify
+the proxy as actual centroids and do not compare noise energies.
+
+7. UNNORMALIZED GLOBAL COVARIANCE FLOOR, INCLUDING TINY/RADIAL ERRORS
+
+The local facet bootstrap 47 has the following relevant output:
+for ||K-P||_F<=c/L,
+
+  -Gamma''(K)[E,E]>=c (alpha/m)||E||_F^2.                 (G1)
+
+Its dimension-free ingredient is the cancellation of the Gaussian
+determinant trace against the facet quadratic mean. At a regular facet
+the mean is O(sqrt L), while ||Sigma_e-P||_F=O(1). The latter follows
+from one missing normal eigenvalue, one distinguished eigenvalue in
+[0,1], and m-3 eigenvalues differing from 1 by O(L/m). The quadratic
+tilt has Hessian uniformly bounded below. Gaussian Poincare plus a
+Gronwall estimate controls its mean drift. The balancing ODE then
+keeps all physical facet weights comparable to alpha/m on this ball.
+Finally the exact identity
+
+  sum_(i<j)((e_i-e_j)^T E(e_i-e_j))^2
+       =m sum_i E_ii^2+(tr E)^2+2||E||_F^2
+
+and (C2) prove (G1). No trace-free assumption is used in that identity.
+
+For arbitrary centered PSD C, let E=C-P and e=||E||_F, and put
+phi(t)=alpha Gamma(P+tE). The exact initial data are
+
+  phi(0)=w,  phi'(0)=alpha^2 tr E/2,
+  R_U(alpha C^(1/2))=phi(0)+phi'(0)-phi(1).
+
+Thus the remainder already includes radial/trace errors. On
+0<=t<=s=min(1/2,c/(Le)), (G1) gives
+-phi''(t)>=c alpha^2 e^2/m. Concavity supplies the correct sign after
+that interval. Integrating with weight 1-t, then passing by continuity
+if C is singular, proves
+
+  R_U(B)>=c alpha^2 e^2/m min(1,c/(Le)).                 (G2)
+
+There is no lower cutoff for e. If q=||C^(1/2)-P||_F=d(B)/alpha,
+then q<=e because |sqrt(lambda)-1|<=|lambda-1| for lambda>=0.
+The function x^2 min(1,c/(Lx)) is increasing. If q<=C0 sqrt(m),
+(G2) therefore yields
+
+  R_U(B)>=c alpha^2 q^2/(m^(3/2)L)
+         =c d(B)^2/(m^(3/2)L).
+
+For q<=c/L the actual lower estimate is stronger, of order d(B)^2/m.
+As a separate exact check, B=s B0 gives R_U(B)=d(B)^2/2. Therefore the
+small-q and radial cases are fully included, not exceptional regimes.
+The assumption q<=C0 sqrt(m) follows, for example, from ||B||<=C sqrt(w)
+by Procrustes and triangle inequality. No rank assumption is required.
+
+8. PRIMARY-LITERATURE CHECK AND REVIEW LIMITS
+
+Brascamp--Lieb: publisher metadata confirms the original 1976 JFA paper
+and DOI 10.1016/0022-1236(76)90004-5. The article body returned HTTP 403.
+I instead inspected the author-hosted original research paper by Bobkov
+and Ledoux, GAFA 10 (2000), 1028-1052, Proposition 2.1, which states and
+proves exactly the variance inequality used here on a convex domain:
+  https://www.math.univ-toulouse.fr/~ledoux/BrunnMinkowski.pdf
+Taking linear functions and quadratic potential gives Cov<=I; applying
+it after a small quadratic tilt gives the corresponding inverse-Hessian
+bound. The use on an affine facet is after intrinsic coordinates.
+
+Ehrhard/Latała: the primary IMPAN publisher page explicitly gives the
+inequality for two Borel sets when one is convex. Only convex translates
+are used in the optional refined Hessian source d261:
+  https://www.impan.pl/en/publishing-house/journals-and-series/studia-mathematica/all/118/2/109424/a-note-on-the-ehrhard-inequality
+The linked full-text download returned HTTP 403. I independently
+differentiated translation concavity and obtained
+I-Sigma >= [1+Phi^-1(p) p/phi(Phi^-1(p))] mu mu^T,
+with the same sign and coefficient. This refinement is not required
+for the normalized summed theorem audited above.
+
+Gaussian isoperimetry: Borell's primary publisher record confirms
+Inventiones 30 (1975), 207-216, DOI 10.1007/BF01425510:
+  https://link.springer.com/article/10.1007/BF01425510
+The full original text is not accessible there. The author-hosted
+Latała article, arXiv:math/0304343, Sections 2-3, records the exact
+perimeter form and gives its deduction from Ehrhard; this is useful
+as a statement and derivation cross-check, not a claim that the 1975
+article's complete proof was inspected:
+  https://arxiv.org/pdf/math/0304343
+
+I checked e33's single-row use algebraically: at the symmetrized K_a,
+every edge incident to the distinguished label has squared length a+1
+and covariance derivative 1. Summing its physical facets is exactly
+that cell's Gaussian perimeter, counted once. The integrated curvature
+is alpha I(1/m)/(2 sqrt(2)) [sqrt(1+a)-sqrt(2)]^2. Singular endpoints
+a=0,n are value limits. This verifies its covariance part; it does not
+independently verify e33's separate actual-minimizer localization inputs.
+
+Final scope: the scoped covariance/support/coercivity chain withstands
+this audit. The explicit cap-free counterexample prevents overreading
+its quantifiers. No actual counterexample to the fixed-A statement or
+unresolved singular-target/ambient-dimension gap was found. The full
+negative-noise theorem must still stand on its separate mass and signed
+full-noise arguments; this report makes no inference about those gates.

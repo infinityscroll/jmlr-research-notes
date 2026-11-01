@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-01",
+  "scope": "Proof and three independent internal reconstruction branches; not a machine proof.",
+  "files": [
+    {
+      "path": "GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt",
+      "original_sha256": "d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508",
+      "published_sha256": "d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508",
+      "change": "none"
+    },
+    {
+      "path": "covariance/AUDIT_MANIFEST_20261101.json",
+      "original_sha256": "9ad0d77bd08dc7b5f9be4286242dd84f131300bf81922b269d33e1b6117f5670",
+      "published_sha256": "9ad0d77bd08dc7b5f9be4286242dd84f131300bf81922b269d33e1b6117f5670",
+      "change": "none"
+    },
+    {
+      "path": "covariance/COVARIANCE_ADVERSARIAL_AUDIT_20261101.txt",
+      "original_sha256": "6ea7a7b1c55c90c854ad73106d39d26766a9b37a6e501a1cc632b38574402337",
+      "published_sha256": "6ea7a7b1c55c90c854ad73106d39d26766a9b37a6e501a1cc632b38574402337",
+      "change": "none"
+    },
+    {
+      "path": "covariance/EXACT_COMPUTATIONS_20261101.txt",
+      "original_sha256": "6cdfab2daf5908c962a68ae44d39fcd0d320b4a0a0f144bbb902219b3edf163a",
+      "published_sha256": "6cdfab2daf5908c962a68ae44d39fcd0d320b4a0a0f144bbb902219b3edf163a",
+      "change": "none"
+    },
+    {
+      "path": "covariance/ROOT_QUANTITATIVE_SECTION3_REVIEW_20261101.txt",
+      "original_sha256": "27c6608f37d08048284cdb54bfaffb90e13225a4b5c7b3cb474994534c4e7eca",
+      "published_sha256": "27c6608f37d08048284cdb54bfaffb90e13225a4b5c7b3cb474994534c4e7eca",
+      "change": "none"
+    },
+    {
+      "path": "covariance/cap_free_counterexample.py",
+      "original_sha256": "1bd05ef00cc7cf6e52ef6d8fbc906416f81e288250ffc2113aaa18aaa9b134fa",
+      "published_sha256": "1bd05ef00cc7cf6e52ef6d8fbc906416f81e288250ffc2113aaa18aaa9b134fa",
+      "change": "none"
+    },
+    {
+      "path": "covariance/cap_free_counterexample_output.txt",
+      "original_sha256": "618554498179a430d63226c7ffc165384a1a6ba2e47c19450248e2d083ffc5cf",
+      "published_sha256": "618554498179a430d63226c7ffc165384a1a6ba2e47c19450248e2d083ffc5cf",
+      "change": "none"
+    },
+    {
+      "path": "local/INDEPENDENT_LOCAL_WEIGHTED_CAP_AND_SIGNED_TAIL_AUDIT_20261101.txt",
+      "original_sha256": "e5ba68dd360069b52ab75bd5ca144f0734ba12875a11685f82325bb8862dbaca",
+      "published_sha256": "e5ba68dd360069b52ab75bd5ca144f0734ba12875a11685f82325bb8862dbaca",
+      "change": "none"
+    },
+    {
+      "path": "local/LOCAL_AUDITED_SOURCE_PINS_20261101.json",
+      "original_sha256": "ede569422ee945ba39e8200ced5d786a337dac034c63de64dad931e90fc9ae14",
+      "published_sha256": "ede569422ee945ba39e8200ced5d786a337dac034c63de64dad931e90fc9ae14",
+      "change": "none"
+    },
+    {
+      "path": "local/LOCAL_AUDIT_OUTPUT_SHA256_20261101.json",
+      "original_sha256": "f5e51ca5074ddab3de219e0865ea7be9614052a555bd80ade19ce7b25951a5b4",
+      "published_sha256": "f5e51ca5074ddab3de219e0865ea7be9614052a555bd80ade19ce7b25951a5b4",
+      "change": "none"
+    },
+    {
+      "path": "local/QUANTITATIVE_STABILITY_DRAFT_INDEPENDENT_LOCAL_AUDIT_20261101.txt",
+      "original_sha256": "e8d65095925d2c23bb13b3c4b424767e51cced451dc0402a0fa21e1e2e08b5bb",
+      "published_sha256": "e8d65095925d2c23bb13b3c4b424767e51cced451dc0402a0fa21e1e2e08b5bb",
+      "change": "none"
+    },
+    {
+      "path": "mass/MASS_LOCALIZATION_ADVERSARIAL_AUDIT_20261101.txt",
+      "original_sha256": "5ffb3295577bfd9432fde381be91873e41599fb610bfe249e602ff6ec00ce4fe",
+      "published_sha256": "5ffb3295577bfd9432fde381be91873e41599fb610bfe249e602ff6ec00ce4fe",
+      "change": "none"
+    },
+    {
+      "path": "mass/QUANTITATIVE_SUCCESSOR_MASS_REVIEW_20261101.txt",
+      "original_sha256": "ec3ba6c9a2a6b7ecfbf56943eb0aa0e137395026917ccd46aeb54955a9c18a34",
+      "published_sha256": "ec3ba6c9a2a6b7ecfbf56943eb0aa0e137395026917ccd46aeb54955a9c18a34",
+      "change": "none"
+    },
+    {
+      "path": "mass/SMALL_POSITIVE_EXCESS_LOCALIZATION_SUCCESSOR_20261101.txt",
+      "original_sha256": "49e1f0293fe5cfee53c935b46e2ad10296c894956d6375cfdc63c25483bc7a58",
+      "published_sha256": "49e1f0293fe5cfee53c935b46e2ad10296c894956d6375cfdc63c25483bc7a58",
+      "change": "none"
+    },
+    {
+      "path": "mass/audit_artifact_manifest.json",
+      "original_sha256": "690733216c8d4a2cb41f8131166fb408eeb0c66a5937f54ed829b903076fc888",
+      "published_sha256": "86c7a92ff460b06c7f9a6610022414b361bbee326e377f088a9e1213998d7b54",
+      "change": "Portable source paths, or corresponding manifest hash/byte update; mathematical source text unchanged."
+    },
+    {
+      "path": "mass/source_manifest.json",
+      "original_sha256": "bead36e5422aaa66e76392a3228316ce11b421566ae4ea12bf00d06bbd2aa414",
+      "published_sha256": "f58ab84acdfd21adf41d2b8aeef019b38b5c29f260258ea4ded4bf876346b87c",
+      "change": "Portable source paths, or corresponding manifest hash/byte update; mathematical source text unchanged."
+    },
+    {
+      "path": "mass/stress_mass_constants.json",
+      "original_sha256": "ad8df74dfdeeeb050f16b1ea7e236646cb44feeb7e5958c7b633812a76305300",
+      "published_sha256": "ad8df74dfdeeeb050f16b1ea7e236646cb44feeb7e5958c7b633812a76305300",
+      "change": "none"
+    },
+    {
+      "path": "mass/stress_mass_constants.py",
+      "original_sha256": "dea413c9500724e1ba0aa6a9d557fca84012077499072b3d28b61d4acce78a5e",
+      "published_sha256": "dea413c9500724e1ba0aa6a9d557fca84012077499072b3d28b61d4acce78a5e",
+      "change": "none"
+    }
+  ]
+}

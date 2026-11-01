@@ -1,0 +1,206 @@
+GLOBAL QUANTITATIVE STABILITY IN THE EVENTUAL-LARGE-m NEGATIVE VOTING RANGE
+1 November 2026. New root theorem, submitted for independent reconstruction.
+
+STATUS AND SCOPE
+
+This is a quantitative strengthening of the preserved full-noise proof
+candidate. It uses that proof's analytic inputs, whose external validation
+remains outstanding. It neither settles the remaining small alphabets nor
+provides a numerical m0. The result concerns one rule, including fractional
+rules, with arbitrary masses. Constants do not depend on the finite ambient
+dimension or on the correlation within the stated interval.
+
+THEOREM
+
+There are absolute c>0 and m1 such that the following holds. Let m>=m1,
+N>=m-1 be finite, 0<r<=1/(m-1), and f:R^N->Delta_m be measurable. Put
+  L=1+log m,
+  E(f)=S_-r(f)-S_-r(g),
+  p=E_gamma f, U=(1/m,...,1/m), delta=||p-U||^2,
+  d1(f)=inf_Q integral sum_i |f_i-g_i^Q| dgamma_N,
+where g^Q ranges over regular simplex assignments in R^N, including label
+permutations. Then
+
+  E(f) >= c min { r^2/m,
+                 delta + r d1(f)^4/[m^(5/2) L^2] }.          (T)
+
+More specifically, whenever E(f)<=r^2/m, its actual centroid matrix
+B_i=E_gamma[X f_i] satisfies
+
+  E(f)>=(delta+r R_U(B))/6,                                (S1)
+  d1(f)^4<=C m^(5/2) L^2 R_U(B),                          (S2)
+  delta<=6E(f),
+  d1(f)<=C [m^(5/2)L^2 E(f)/r]^(1/4).                     (S3)
+
+Here alpha=mu/(m-1), mu=E max_{i<=m} G_i for independent standard normals,
+w=alpha^2(m-1), and R_U(B)=(w+||B||_F^2)/2-F_U(B), where F_U is the
+balanced linear-assignment support functional. A closest regular centroid
+embedding exists by compactness of the finite-dimensional Stiefel manifold;
+no full-noise optimizer or stationary interface is used.
+
+The exponent four is a proved, possibly non-sharp modulus. A numerical
+constant or optimal stability exponent is not claimed. The proof below
+does not assume E(f)>=0; (T) also recovers the global inequality.
+
+1. CARRY AN ADDITIVE ENERGY SLACK THROUGH LOCALIZATION
+
+Write W=||B||_F^2, Delta=w-W, D=delta+r Delta. In the coarse mass-localization
+source45e2cc45, the sole use of competitiveness is the energy comparison.
+For an arbitrary f it gives, with that source's explicit F_m,B_m,A2_m,
+
+ delta <= [E(f)+r(F_m-w)+r^2 A2_m+r^3+r^4]/(1-r B_m).       (1)
+
+If E(f)<=r^2/m, its added contribution to m^2 delta is at most
+  m r^2/(1-r B_m)=O(1/m)
+uniformly on the voting interval. The original bound tends to
+2-2 gamma<1. Thus the same fixed mass box
+  1/(100m)<=p_i<=2/m
+holds for all sufficiently large m. This implication remains valid if E
+is negative: only its stated upper bound is used.
+
+The positive-degree-two tangent comparison251c3c7c similarly becomes
+
+ (1-r ell)D+r^2 c_{m,r} delta
+   <=E(f)+r^2 Delta2+r^3+r^4,                             (2)
+
+where ell=mw-1, c_{m,r}=ell[1/r-(ell+2)/2]>=0,
+1-r ell>=1/2, and 0<=Delta2<=C/m for large m. The prescribed-mass
+first-moment bound11a6959e, with graph clarification6d19bda9, is independent
+of competitiveness and gives
+
+ D>=(1-r A_m)delta+r[V_m(p)-W]
+   >=delta/2+r[V_m(p)-W]>=0, A_m<=C L^2.                  (3)
+
+Combining (2)-(3) and E(f)<=r^2/m proves
+  D<=C r^2/m, delta<=2D, |W-w|<=D/r, W/w=1+O(r/L).        (4)
+In particular p_i in[1/(2m),3/(2m)] for large m. Constants remain absolute.
+
+V_m(p) here is the first-moment optimum. Its fixed-m attainment and
+dimension reduction are legitimate inputs; the statement that no
+FULL-NOISE attainment is needed must not be shortened to 'no attainment
+anywhere.' Fractional competitors are included in V_m(p), or equivalently
+covered by finite-moment purification.
+
+2. THE LOCAL AND EXTERIOR ESTIMATES HOLD ON THIS LARGER CLASS
+
+Let d be the Frobenius distance of B from the regular centroid orbit,
+R=R_U(B), and J=D/r. The balanced offset proof uses only the actual
+feasibility F_p(B)>=W, the fixed mass window, the entropy row cap, and (4).
+It therefore gives exactly as before
+
+  0<=R<=J.                                               (5)
+
+The one-row bound, summed-row bound, and geometric median construction
+also use only these quantitative facts, not the sign E<=0. In particular
+the normalized row cap is a fixed absolute constant, independent of m.
+One must not drop that hypothesis from the summed-row theorem.
+
+If d<=1/m, the own-actual-centroid local theorem1a489344 applies to every
+measurable assignment with these centroids and masses. It gives
+
+  E(f)>=delta/2+rR.                                      (6)
+
+If d>1/m, the proof in84e1de62/e05b2c1e applies without alteration through
+its final inequality, since (4)-(5) supply exactly its localization. The
+second-chaos certificate and entire signed-tail estimates yield
+
+ E(f)>=D[1-CrL^3-Cr^2 m^(7/4)L^(7/2)]>=D/2.              (7)
+
+The errors tend to zero uniformly at the largest allowed r. The exterior
+floor for R is used only to pay its absolute Gaussian tails. No inequality
+E<=0 is used in constructing the equal-row proxy, paying its routing loss,
+or estimating the signed Hermite tail.
+
+In (7), delta+rR<=3D by (3),(5). Hence (6)-(7) imply (S1) with the stated
+coefficient1/6 for every f satisfying E(f)<=r^2/m. In particular E(f)>=0
+on this class, even though nonnegativity was not an initial assumption.
+
+3. THE COVARIANCE REMAINDER CONTROLS EVERY CENTROID DISTANCE
+
+This step includes arbitrarily small d, rather than borrowing an exterior
+statement under d>1/m. Let P=I-11^T/m,
+  C=BB^T/alpha^2, e=||C-P||_F, q=d/alpha.
+The unnormalized remainder is the exact tangent remainder at P of the
+balanced covariance functional. Initial curvature47e441ee and global
+covariance concavity give for every centered PSD target
+
+ R>=c alpha^2 e^2/m min(1,c/(Le)).                         (8)
+
+Indeed integrate the curvature only on the initial segment of length
+min(1/2,c/(Le)); later curvature is nonnegative. The factor1-t in the
+tangent-remainder integral is bounded below on that initial segment.
+No trace normalization is required, and singular endpoints follow by
+continuity. At e=0 the inequality is interpreted by continuity.
+
+Orthogonal Procrustes gives q=||C^(1/2)-P||_F and e>=q. The function
+t^2 min(1,c/(Lt)) is increasing. Equation (4) gives q<=C sqrt(m), since
+d<=||B||+sqrt(w). Consequently (8) implies
+
+  d^2<=C m^(3/2) L R                                    (9)
+
+at every distance, including radial changes and dimension-opening ones.
+For the radial check B=sB0, R=w(s-1)^2/2=d^2/2 exactly.
+
+4. AN EXACT REGULAR TOP-TWO MARGIN BOUND
+
+Let G be the gap between the largest and second largest of m independent
+standard normals. Its density at t>=0 is
+  h_m(t)=m(m-1) integral phi(x+t)phi(x)Phi(x)^(m-2) dx.
+Integration by parts gives h_m(0)=mu. Let T have density proportional to
+phi(x)^2 Phi(x)^(m-2). Then
+  h_m(t)=mu E exp(-tT-t^2/2).
+
+This one-dimensional law has potential curvature at least2, including
+after every linear tilt. Brascamp--Lieb therefore gives variance at most
+1/2 under every such tilt. If K(t)=log E exp(-tT), then K''<=1/2 and
+K'(0)=-ET<=0; ET>=0 follows from symmetry of phi^2 and monotonicity of
+Phi^(m-2). Hence K(t)<=t^2/4 and
+
+  h_m(t)<=mu exp(-t^2/4)<=mu.                             (10)
+
+The gap between the two leading regular centroid scores is alpha G.
+Its density is therefore at most mu/alpha=m-1. For any measurable
+0<=h<=1 with E h=epsilon, layer cake gives
+
+  E[h alpha G]>=epsilon^2/[2(m-1)].                       (11)
+
+The weight h may depend on every ambient coordinate. Only the scalar
+cost distribution is used; independence of h and G is not assumed.
+
+5. FROM ACTUAL CENTROIDS TO DISTANCE OF THE FULL RULE
+
+Choose a closest regular centroid matrix B0 and its regular winner g0.
+Let epsilon=E[1-f_{g0(X)}]=||f-g0||_1/2. Every wrong-label fraction pays
+at least the top-two regular score gap. The exact routing loss is
+
+ R0=E[max_i B0_i.X-sum_i f_i B0_i.X]
+   =w-<B0,B> >= epsilon^2/[2(m-1)].                       (12)
+
+Also R0=-<B0,B-B0><=sqrt(w)d by Cauchy--Schwarz. Thus
+
+ ||f-g0||_1^4<=64(m-1)^2 w d^2<=C m L d^2.              (13)
+
+Combine (9),(13) and d1(f)<=||f-g0||_1 to obtain (S2). This controls
+the actual rule, not just its first moments. It requires neither purity
+nor equal masses nor stationarity nor regularity of interfaces.
+
+6. GLOBAL ASSEMBLY
+
+If E(f)<=r^2/m, combine (S1)-(S2) to obtain
+  E(f)>=c[delta+r d1(f)^4/(m^(5/2)L^2)].
+If E(f)>r^2/m, inequality (T) is immediate after reducing c to at most1.
+This proves (T), and (S3) follows directly from the small-excess case.
+
+At E=0, the orbit distance vanishes. The orbit of regular assignments
+is compact in Gaussian L1 in each fixed finite dimension: convergent
+orthogonal embeddings give pointwise convergence away from Gaussian-null
+tie planes and hence L1 convergence. Thus f is an actual regular rule.
+
+VERIFICATION LIMITS
+
+This is a genuine additional quantitative conclusion of the preserved
+proof chain. It is not independent evidence that every foundational input
+is correct. The proposed theorem remains subject to external mathematical
+review, and the exact threshold m1 is existential. No small-m or two-rule
+conclusion follows. No new empirical search, machine proof, or publicity
+claim is used to justify any displayed inequality.

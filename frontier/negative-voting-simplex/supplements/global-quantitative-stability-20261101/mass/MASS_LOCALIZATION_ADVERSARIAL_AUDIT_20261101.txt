@@ -1,0 +1,283 @@
+INDEPENDENT MASS-LOCALIZATION AUDIT AND FRACTIONAL-SCOPE SUPPLEMENT
+1 November 2026. New successor record; no frozen source edited.
+
+Verdict within this branch: no fatal gap found in the mass-window,
+optimizer-graph, or arbitrary-mass localization chain. The graph limit does
+not require m-uniform compactness. W>w is explicitly covered. This is an
+independent reconstruction of this branch, not an external endorsement or
+a certification of the remaining full-noise arguments.
+
+Material clarification: the direct proof eliminates attainment of the
+FULL-NOISE minimum. It does not eliminate attainment of the prescribed-
+mass FIRST-MOMENT maximum V(p). The latter is used legitimately, at fixed
+m in dimension m-1. Thus the sentence 'No optimizing sequence or attainment
+is needed anywhere' in DIRECT Section4 should read 'No optimizing sequence
+or attainment for the full-noise functional is needed.' That is a wording
+repair, not a new assumption. The explicit relaxed-scope argument below
+also makes the pure-partition definition of V compatible with every
+fractional competitor without invoking an unstated purification theorem.
+
+Sources actually read are pinned in source_manifest.json. SHA prefixes
+below identify full files there, not audit labels. Primary classical
+hypotheses checked on 1 November 2026 are recorded at the end.
+
+1. THE FRACTIONAL VALUE AND DIMENSION REDUCTION, EXPLICITLY
+Fix m>=3 and d=m-1. For a prescribed positive p, define V_rel,N(p) as
+supremum of sum_i |E[X f_i]|^2 over simplex-valued f with masses p.
+The feasible set in (L-infinity(gamma_d))^m is weak-star compact: it is a
+bounded weak-star closed set, with the mass constraints and pointwise
+simplex constraints weak-star closed. Each first-moment coordinate is a
+weak-star continuous functional because x_j is integrable. Consequently
+V_rel,d is attained. This is finite first-moment attainment only.
+
+For ANY f in R^N its rows b_i sum to zero, hence span a subspace S of
+dimension k<=m-1. Condition f on the projection of X onto S. The masses
+are unchanged and its first-moment rows are precisely the original b_i.
+The resulting k-dimensional fractional assignment can be embedded in
+R^d, and any d-dimensional assignment embeds in R^N when N>=d. Therefore
+V_rel,N(p)=V_rel,d(p), uniformly in finite N>=d. No norm bound involving N
+or infinite-dimensional compactness enters this reduction.
+
+Here is a direct proof that V_rel,d is also attained by a pure assignment.
+It simultaneously validates the pair-separation step in12dc for fractional
+maximizers. Let f be a relaxed maximizer, b_i its rows, fix i!=j, and put
+q=f_i+f_j, a=p_i, b=p_j. Choose a unit e perpendicular to b_i+b_j;
+d>=2 makes this possible. Under the weighted measure q(x)dgamma_d(x),
+the one-dimensional variable t=e.x has total mass a+b, zero unnormalized
+first moment, and density bounded by M=phi(0), since 0<=q<=1.
+Reassign all q to label i on its upper a-tail and to j on its lower
+b-tail. The threshold has no atom. If it is s, the density bound gives
+
+  int_upper(t-s)q dgamma >= a^2/(2M),
+  int_lower(s-t)q dgamma >= b^2/(2M).
+
+The two conditional means thus differ by at least(a+b)/(2M). Because
+their combined moment is zero, the difference of their unnormalized
+moments is at least ab/M. Other labels and the vector sum b_i+b_j are
+unchanged. Since |b_i|^2+|b_j|^2=(|b_i+b_j|^2+|b_i-b_j|^2)/2,
+maximality forces
+
+  |b_i-b_j| >= ab/M = sqrt(2pi) p_i p_j.
+
+This comparison is feasible even when q is fractional; no purity premise
+was used. In particular every pair of maximizing rows is distinct.
+
+A relaxed first-moment maximizer also maximizes its own linear score:
+if a mass-p assignment h had sum_i b_i.E[X h_i]>sum_i|b_i|^2, then
+sum_i|E[X h_i]|^2 >= 2sum_i b_i.E[X h_i]-sum_i|b_i|^2 would exceed V_rel.
+The finite offset dual for the linear score has a minimizer: its objective
+is at least max_i h_i-sum_i p_i h_i, which controls the offset range by
+p_min. Distinct rows imply that every pairwise affine tie has Gaussian
+measure zero. The dual minimizer therefore has a unique winning label
+a.e., and differentiation of offsets yields exactly the masses p.
+Every maximizing coupling must route entirely to that unique winner.
+Thus the relaxed maximizer is pure. In particular
+
+  V_pure,N(p)=V_rel,N(p)=V_rel,d(p)  (N>=m-1).
+
+This supplies the omitted elementary bridge in11a Section2/12dc Section2.
+It is not necessary to assume stationarity or purity of the full-noise f.
+
+2. COVARIANCE REPRESENTATION AND WHAT COMPACTNESS REALLY DOES
+Square completion with centered score rows B gives
+
+  sup_f ||M_f||^2 = sup_B [2 F_p(B)-||B||^2]
+                 = max_(C>=0 on 1-perp) [2F_p(C)-tr C].
+
+The factor dimension is d; F_p(C) depends only on the centered Gaussian
+score covariance. Coercivity F_p(C)<=sqrt(tr C) follows from ||M_f||<=1.
+At a true optimizing C=BB^T, any maximizing coupling satisfies B=M_f by
+square completion. The previous pair-replacement bound therefore applies
+to every true optimizer, including rank-deficient ones.
+
+For regularized C>=eps I on H, testing C*+eps I gives
+0<=V-V_eps<=eps(m-1). The test is valid because an optimal coupling can be
+extended by independent mean-zero Gaussian noise, leaving its score
+expectation unchanged; the new supremum cannot decrease. Together with
+coercivity and joint continuity this proves CLOSED-GRAPH convergence:
+if eps_n->0 and(p_n,C_n)->(p,C), then C optimizes at p.
+
+This does NOT assert convergence to the optimizer fiber at the varying
+p_n. The clarification6d19 states the correct weaker assertion. It is
+sufficient: if a regularized edge bound with fixed slack failed for
+arbitrarily small eps at some p in the compact mass box, a subsequence
+would converge to a true optimizer violating the continuous edge bound.
+
+The quantifiers are
+  for every sufficiently large m, there exists eps0(m,c,C0)>0,
+  for all p in the m-dimensional mass box and 0<eps<=eps0, ... .
+All subsequent estimates have coefficient K(c,C0)L_m^2 independent of
+eps and m. Taking eps->0 separately for EACH m preserves that coefficient.
+There is no assertion of a compact parameter space across all m and no
+need for an m-independent eps0. This is why graph compactness does not
+secretly destroy the sufficiently-large-m conclusion.
+
+3. QUANTITATIVE GRAPH INPUT, CHECKED WITHOUT ASSUMING CONNECTEDNESS
+On c/m<=p_i<=C0/m, the preceding pair bound and entropy cap transfer to
+regularized optimizers with
+
+  sqrt(2pi)c^2/(2m^2) <= ell_ij <=4C0 sqrt(2L_m)/m,
+  L_m=1+log(m/c).
+
+At positive regularized covariance the sites are affinely independent,
+so the translated simplex fan has all pair facets. Their Gaussian masses
+are positive. Price differentiation yields F_C=L/2, and the KKT sign is
+L<=I_H, not the reverse. Hence weighted degrees are <=1. No stationarity
+of the arbitrary competitor f is used; these are optimized V_eps scores.
+
+For a label subset S with k=min(|S|,m-|S|), the Gaussian perimeter of its
+finite polyhedral union is sum_cut mu_ij. Gaussian isoperimetry and the
+mass lower bound give sum_cut mu_ij>=2phi(0)ck/m. Dividing by ell_max
+produces sum_cut w_ij>=h0 k with h0=c/[4C0 sqrt(pi L_m)]. Deleting edges
+of weight below m^-4 loses at most k m^-3 across any cut, hence for large m
+the retained graph has conductance at least h0/2. Its connectedness is a
+CONCLUSION of this inequality. Counting-measure Cheeger, with dmax<=1,
+gives exactly
+
+  lambda_2(L_str)>=c^2/[128 C0^2 pi L_m].
+
+Both cells lie in opposite winning halfspaces, so |h_ij/ell_ij|^2<=2L_m.
+On a retained edge its intrinsic tangential probability is
+pi_ij=mu_ij/phi(h_ij/ell_ij)>=pi c^2/m^6. This is not confused with a
+cell mass. The Ehrhard coefficient a(p)=1+Phi^-1(p)p/phi(Phi^-1(p)) obeys
+1/a(p)<=8exp(3/2)[1+log(1/p)]. Thus on retained edges
+1/a(pi_ij)<=56exp(3/2)L_m. All m-dependence is explicit here.
+
+The exact cycle-corrected Hessian inequality ofd261 is
+
+ -4F_CC[A,A] >= sum_e w_e{x_e^2+a(pi_e)(2h'_e-q_e x_e)^2}.
+
+It cannot be replaced by the raw covariance deficit before cycle
+subtraction. I checked the stated residual algebra: choose the weighted
+cycle representative with partial_3^T D lambda=0, put
+r_e=z_e-N_e^(-T)eta_e, and expand. The two cross terms give -2 CYC,
+the final quadratic term gives+CYC, leaving exactly K=sum r_e^T E_e r_e.
+The facet identity N_e 1=w_e P_e m_e then gives
+r_e.P_e m_e=-(b_i-b_j)-z_e.(I-P_e)m_e. Applying Ehrhard to these corrected
+vectors produces the offset term with the displayed factor2. This
+retains one global offset derivative and introduces no edgewise freedom.
+
+On each retained edge, elementary weighted Cauchy yields
+4(h'_e)^2 <=(a(pi_e)^-1+q_e^2)[x_e^2+a(pi_e)(2h'_e-q_e x_e)^2].
+After summing and applying the retained spectral gap this gives
+
+ ||D_C h[A]||^2 <= K(c,C0)L_m^2[-F_CC[A,A]],
+ K=128 C0^2 pi[56exp(3/2)+2]/c^2.
+
+No unused ambient coordinate, full-rank true optimizer, or unproved
+uniform graph weight lower bound is present.
+
+For the underlying concavity225d, I separately checked the chain algebra
+needed by this branch: the off-diagonal triangle entries arise only when
+they share an edge; the barycentric vector of the outside vertex annihilates
+all other boundary normals. Its reciprocal target height gives the
+D_g D_g' mu_h/(6V_h) coefficient. The diagonal follows by sum_k v_k=0.
+Thus A-B=-D partial_3 diag(mu_h/(6V_h))partial_3^T D, and weighted gauge
+eliminates it. The remaining normal edge-square term is strictly positive
+for nonzero symmetric covariance directions because the simplex edge
+quadratic forms span all symmetric forms. This confirms the fixed-eps
+strict Hessian used below. It is a reconstruction of this proof, not a
+claim that all unrelated uses of the general target theorem were audited.
+
+4. CONSTRAINED ENVELOPE AND THE ACTIVE-SET ISSUE
+For fixed m,eps>0, strict covariance Hessian plus compactness gives a
+strong-concavity constant kappa_(m,eps)>0 on the bounded optimizer set.
+It may tend to zero with m or eps. It is used ONLY to obtain Lipschitz
+regularity of C_eps(p), not in the final semiconcavity coefficient.
+
+On a mass segment p(t)=p0+tu, the unique optimizer is Lipschitz. The
+mass derivative of V_eps is g_p, and is itself Lipschitz for fixed eps.
+At an a.e. differentiability point the two constrained variational
+inequalities yield
+  E0=-g_CC[C',C'] <= B0=g_Cp[C',u].
+No interior Euler equation is substituted. In particular B0>=E0>=0.
+Since g=2F-tr, the quantitative graph bound gives
+  B0^2<=2K L_m^2 |u|^2 E0.
+Hence B0<=2K L_m^2|u|^2, while g_pp=-2L^-1 is negative semidefinite.
+Therefore V_eps''<=2K L_m^2|u|^2 a.e. The first derivative is Lipschitz,
+so integration cannot hide a positive singular second-derivative measure.
+
+Uniform convergence0<=V-V_eps<=eps(m-1) passes the integrated inequality
+to V without differentiability of a singular optimizer. At U, permutation
+symmetry and uniqueness of the regularized optimizer give centered offsets
+zero. Integrating from U, then taking eps->0 and using balanced V(U)=w,
+gives V(p)<=w+A_m|p-U|^2 with A_m=K L_m^2. This is precisely the bound
+needed. No fiber continuity, rank persistence, or uniform optimizer
+Lipschitz constant has been smuggled into the limiting step.
+
+5. EVERY COMPETITIVE FRACTIONAL ASSIGNMENT, INCLUDING W>w
+The initial45e proof uses only scalar Gaussian rearrangement and Hermite
+parity. Its scalar Bregman bound includes p_i=0 or1. Its limit
+m^2 delta<=2-2gamma+o(1)<1 therefore places EVERY competitive assignment
+inside the fixed window c=.01,C0=2, for all sufficiently large m.
+The second-chaos inequality251 is also universal: conditional Jensen
+and weighted Cauchy give A2(f)>=(W-P)_+^2/(2P). The positive part is
+essential, and its convex perspective supplies the tangent even for W<P.
+The algebraic formula for Delta2=A2(g)-(mw-1)^2/(2m) was checked, including
+its two negative terms. The centered maximum variance O(1/log m) makes
+Delta2=O(1/m), rather than O(log^2 m/m).
+
+For delta=|p-U|^2 and D=delta+r(w-W), the value bound gives
+
+  D=delta+r(w-V)+r(V-W)
+   >=(1-rA_m)delta+r(V-W)
+   >=delta/2+r(V-W)>=0
+
+once rA_m<=1/2. This requires only r<=1/(m-1) and a sufficiently large
+m, since A_m=O(log^2 m). It is valid regardless of the sign of w-W.
+Retaining degree two then gives D<=C r^2/m and delta<=2D. If W>w,
+then delta>D and W-w=(delta-D)/r lies between0 and D/r. If W<=w,
+then0<=w-W=(D-delta)/r<=D/r. Thus |W-w|<=D/r in BOTH cases.
+The fractional value bridge in Section1 proves V-W>=0 for the actual f.
+There is no additional minimizing, stationarity, or interface premise.
+
+6. STRESS CALCULATION AND WHAT IT DOES NOT PROVE
+stress_mass_constants.py is stdlib-only deterministic quadrature of the
+one-dimensional maximum distribution. It uses stable survival functions
+and independently computes F_m, w, A2(g), the coarse finite-m certificate,
+and m Delta2. It is floating-point evidence, not interval certification.
+Examples from stress_mass_constants.json:
+
+  m         coarse m^2-delta certificate      m Delta2
+  100       1.0339349934                      1.1141751690
+  1,000     0.8813726102                      1.2206972732
+  10,000    0.8446606996                      1.2927393771
+  1,000,000 0.8384847666                      1.3951095185
+  10^12     0.8418737741                      1.5150675376
+
+The certificate need not approach its0.8455686702 limit monotonically.
+No monotonicity is used in the proof. The displayed K(.01,2) is about
+4.069084708e9. The isolated sufficient gate
+K(1+log(m/.01))^2/(m-1)<=1/2 first holds near m=1.02953917007e13.
+This is NOT a threshold for the full theorem, whose other constants remain
+unspecified. It confirms that this proof's explicit constants are far too
+large to support a practical moderate-m claim. It does not undermine the
+existential absolute-m0 quantifier.
+
+7. PRIMARY CLASSICAL INPUTS READ AND EXACT HYPOTHESES
+Rafal Latala, A note on the Ehrhard inequality, Studia Mathematica118
+(1996),169-174, DOI10.4064/sm-118-2-169-174. Publisher statement read:
+https://www.impan.pl/en/publishing-house/journals-and-series/studia-mathematica/all/118/2/109424/a-note-on-the-ehrhard-inequality
+Hypothesis used: two Borel subsets of Euclidean space, one convex, and
+lambda in[0,1]. The asserted Phi-inverse concavity applies to their
+Minkowski mixture. Here both sets are translates of the SAME convex
+intrinsic facet set K with0<gamma(K)<1. Differentiating its Gaussian
+translation probability is justified by Gaussian domination and yields
+I-Cov(X|K)>=[1+q p/phi(q)] E[X|K]E[X|K]^T. In particular it also yields
+the weaker conditional covariance bound needed in225d, so this audit
+need not rely on an inaccessible Brascamp--Lieb PDF. The attempted DOI
+fetch for the latter returned403; I make no claim to have read that PDF.
+
+Christer Borell, The Brunn-Minkowski Inequality in Gauss Space,
+Inventiones Mathematicae30(1975),207-216, Theorem3.1, pp208-209.
+Original scan read at:
+https://dornsife.usc.edu/sergey-lototsky/wp-content/uploads/sites/211/2023/06/Borell-Subspace-original.pdf
+Hypothesis used: standard finite-dimensional Gaussian measure, measurable
+A with gamma(A)=Phi(alpha), and Euclidean enlargement radius t>0.
+Conclusion gamma_*(A+tB)>=Phi(alpha+t). Differentiating at t=0 for the
+finite polyhedral unions in this audit gives Gaussian perimeter at least
+I(gamma(A)); higher-codimension intersections contribute no first-order
+surface term. No connectedness or convexity of the union A is required.
+
+The numerical experiment is not used to prove either classical input,
+the covariance Hessian identity, semiconcavity, or full-noise stability.

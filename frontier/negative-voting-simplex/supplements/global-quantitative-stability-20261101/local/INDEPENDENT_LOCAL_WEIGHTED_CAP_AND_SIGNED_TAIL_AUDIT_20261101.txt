@@ -1,0 +1,424 @@
+INDEPENDENT LOCAL OWN-ACTUAL-CENTROID AUDIT
+1 November 2026. New audit; no predecessor or manuscript edits.
+
+Scope and verdict
+-----------------
+The target is source 1a489344, OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_
+WITH_WEIGHTED_CAP_20261031.txt, and specifically its exact cancellation,
+all-amplitude cap, and the full signed affine tail input 7388c948. Fresh
+byte hashes of the eight sources actually inspected are in the adjacent
+LOCAL_AUDITED_SOURCE_PINS_20261101.json. Prior audit labels were not used
+as evidence.
+
+No counterexample or fatal quantitative failure was found in these local
+steps. The cancellation is exact. The small-amplitude cap has a sufficient
+positive power beyond the quadratic main term, with no integrability
+exponent depending on log(1/amplitude). The signed-tail factors and adjoint
+calculus have the claimed orders. Full-rank local geometry is sufficient
+for every extra ambient dimension and for unequal masses in the stated box.
+
+This is not an independent proof of the global theorem. The conversion
+from d(B)^2 to the score remainder, the balanced first-moment endpoint and
+its equality case, the equal-row second-chaos comparison, and the global
+optimized mass envelope remain distinct inputs. In particular, the
+deficit-relative offset certificate 111ac79d uses the latter envelope;
+calling it an offset estimate does not remove that dependency.
+
+One terse geometric construction in 5f2ef775 should be clarified. Bounds
+on every normalized offset do not bound the Euclidean norm of the whole
+offset vector by O(sqrt(log m)); prescribing all other utilities to be
+equal could cost sqrt(m). A sparse tangent score shift proves the needed
+facet-probability statement without that issue. An explicit repair is
+given below. It is a proof-presentation repair, not a new premise.
+
+1. Exact cancellation, independently derived
+--------------------------------------------
+Write p=E f, B_i=E[X f_i], let f0 be the affine maximizer for score B
+with prescribed masses p, and write M_i=E[X f0_i], v=f-f0. Then
+
+ E v=0,
+ E[X v]=B-M,
+ Lroute=F_p(B)-||B||^2=<B,M-B> >= 0.
+
+The last inequality follows because f is a feasible competitor in F_p(B).
+It uses no stationarity and no purity of f. The source's string
+"=<B,M-B>>=0" denotes the equality followed by >=0, not Lroute=0.
+
+For rho=-r, qB=T_{-r} Pi_{>=2} f0, and
+u=T_{sqrt(r)} Pi_{odd>=3} v, Hermite orthogonality gives
+
+ S(f)-S(f0)
+ =r[2Lroute+||M-B||^2]+2<v,qB>
+   +||T_{sqrt(r)} Pi_{even>=2}v||^2-||u||^2.
+
+Because <v,T_{sqrt(r)}u>=||u||^2, dropping only the displayed
+nonnegative even square gives
+
+ S(f)-S(f0)
+ >=r||M-B||^2+||u||^2
+   +2[r Lroute+<v,qB-T_{sqrt(r)}u>].                 (A1)
+
+The masses really must match here; they do by definition of f0. The
+bounded-simplex assumption gives sum_i v_i^2<=2 pointwise, hence
+||u||<=sqrt(2) r^(3/2), independently of dimension or label masses.
+
+Let B0 be the aligned regular centroid matrix, q0=T_{-r}Pi_{>=2}g,
+and a=qB-q0-T_{sqrt(r)}u. At a point with old affine winner i, set
+c_ij=(B_i-B_j).x+h_i-h_j, and delta_l_i=(B_i-B0_i).x+h_i.
+The exact regular potential difference is
+
+ (T_{-r}g)_j-(T_{-r}g)_i
+ =r k_ij (B0_i-B0_j).x.
+
+Its first chaos contributes r(B0_i-B0_j).x, so
+
+ r c_ij+q0_j-q0_i
+ =r k_ij c_ij+r(1-k_ij)(delta_l_i-delta_l_j).         (A2)
+
+This identity uses the difference of any two utilities, and does not
+require i to win the regular diagram. Swapping the pair in the exact
+utility integral proves the same positive divided-difference bounds on
+either side of the tie. Thus using it on the current affine cells is valid.
+
+For k_ij>=kappa, |k_ij-1|<=e, and
+psi_i=kappa^{-1}[e |delta_l_i|+|a_i|/r], (A2) gives
+
+ r c_ij+(q0+a)_j-(q0+a)_i
+ >=r kappa(c_ij-psi_i-psi_j).
+
+Keep j=i exactly zero. Sum against arbitrary probabilities f_j(x), then
+bound negative contributions using kappa<=1. Since
+E sum_j f_j c_ij=Lroute, this proves
+
+ r Lroute+<v,q0+a> >=-r E max(0,max_{j!=i}(psi_i+psi_j-c_ij)).
+
+No indicator-valued f, interface, differentiability, or local topology
+of f occurs in this argument. This checks the most important scope claim.
+
+2. The damping moments do not hide an ambient determinant
+--------------------------------------------------------
+The relevant projection P0 has rank m-1 even when N is arbitrarily large.
+For eta=O(r^2 L), kappa^{-1}=exp(1+eta|P0 X|^2). Under any convex
+Gaussian facet restriction, the linear-tilt variance bound implies
+
+ E exp(t.Y)<=exp(t.EY+|t|^2/2).
+
+Integrating an independent standard Gaussian auxiliary vector in the
+range of P0 yields, for 0<b<1/2,
+
+ E exp(b|P0Y|^2)
+ <=(1-2b)^(-(m-1)/2)
+   exp(b|P0 EY|^2/(1-2b)).                         (A3)
+
+With q=C1 L and b=q eta, b*m=O(L^2/m) on r<=1/(m-1). Thus all fixed
+multiples of q needed in Holder have uniformly bounded damping moments,
+once m is sufficiently large. No factor involving N appears.
+
+For W=log sum exp X_i+log sum exp(-X_i), each X_i has bounded variance.
+On a containing hyperplane at normal offset O(sqrt L), its mean is
+O(sqrt L). Union Gaussian tails give ||W||_q<=C(L+sqrt q). Restricting
+to a facet of probability at least m^{-C} costs a constant at exponent
+C' L. Therefore e/r, with the explicit e of source 1a489344, has q-norm
+O(L^(3/2)); its exponential has bounded moments because r L^(3/2)->0.
+The normal derivatives introduce only fixed-degree polynomials and the
+same exponential. Their fixed L32 norms are polynomial in m.
+
+3. Explicit repair of the facet-probability construction
+-------------------------------------------------------
+Normalize C=B/alpha and a=h/alpha. Conditioned singular values and the
+positive mass box give |a_i-a_j|<=C sqrt L, hence |a_i|<=C sqrt L in
+mean-zero gauge. Fix ij and its containing hyperplane. Let x*=d n be
+its closest point to zero, with |d|<=C sqrt L, and Y a standard Gaussian
+on n-perp. The normalized scores C_k Y all have bounded variances.
+
+Set z=T P(e_i+e_j), v=C^+ z, where T=C_* sqrt L. Then
+
+ C v=z,    (C_i-C_j).v=0,    |v|<=C T.
+
+Thus v is tangent to the pair hyperplane. It raises the i and j utilities
+equally, by T relative to every other label, regardless of all the other
+offsets. The event E={max_k |C_k Y|<=C_3 sqrt L} has probability >=1/2
+by a union bound. For C_* large, x*+v+E lies in the actual ij facet,
+because every pre-shift utility difference at x* is O(sqrt L).
+
+Gaussian Cauchy--Schwarz/Cameron--Martin gives
+
+ gamma_{n-perp}(E+v)>=gamma_{n-perp}(E)^2 exp(-|v|^2)>=m^{-C}.
+
+This proves the needed intrinsic probability, including for every pair
+and every extra ambient dimension. It avoids any claim that ||a|| is
+O(sqrt L), and supplies the explicit missing construction behind the
+terse paragraph in 5f2ef775, Section 1.
+
+4. Smoothed forcing estimates and uniformity as r decreases to zero
+------------------------------------------------------------------
+Take t=c/sqrt L. The boundary trace at smoothing time s=r/t has degree-k
+gain (s^2 Lambda)^(k/2), Lambda=O(L). The balanced score path has integrated
+velocity norm <=C sqrt L d; the prescribed-mass path has norm
+<=C sqrt L ||p-U||. With lower cutoff 2 this gives, for D=d+||p-U||,
+
+ qB-q0=T_t vD,       ||vD||<=C r^2 L^(5/2)D.          (A4)
+
+Because u starts in degree 3,
+
+ T_{sqrt(r)}u=T_t vu,
+ ||vu||<=(sqrt(r)/t)^3||u||<=C r^(3/2)L^(3/2)||u||.   (A5)
+
+Combining (A3)--(A5), Holder at fixed multiples of q=C1L, and the offset
+bound ||h||<=CLD gives
+
+ (sum_i ||psi_i||_q^2)^(1/2)
+ <=C[r L^(5/2)D+sqrt(r)L^(3/2)||u||].
+
+The facet estimate sums label norms with the graph degrees, not with m
+unweighted facet probabilities. Conditional OU restriction gives
+
+ sum_{e=ij} w_e E_e(psi_i^2+psi_j^2)
+ <=C[r^2L^5D^2+rL^3||u||^2].                        (A6)
+
+For theta=C2 L^4(rD+sqrt(r)||u||), the normalized forcing v_i=psi_i/theta
+therefore has vector Lq norm <=1 and bounded weighted facet square sum.
+Its normal derivatives have only polynomial-in-m fixed moments:
+
+ ||vD||/(r theta)<=C L^(-3/2),
+ ||vu||/(r theta)<=C L^(-5/2).
+
+These bounds follow separately from the two nonnegative summands in
+theta. There is no unbalanced inverse r left when r is arbitrarily
+small, and no division by the size of an individual label input.
+
+5. Independent all-amplitude cap lemma
+-------------------------------------
+For a conditioned affine fan, suppose a nonnegative forcing theta*v has:
+(i) sum_i||v_i||_q^2<=1 for q=C1L;
+(ii) sum_e w_e E_e(v_i^2+v_j^2)<=C;
+(iii) on every pair plane and normal shifts |s|<=1, the normal supremum
+of |v_i|+|partial_n v_i| has L32 norm <=m^K; and full-space L32 norms
+are polynomial in m.
+The structured forcing above satisfies these conditions. The absolute
+values in it are harmless: a.e. derivatives are bounded by derivatives
+of the underlying analytic factors, and their normal suprema follow
+from the first two derivatives of those factors.
+
+For moderate theta in [m^{-B},m^{-5/4}], separate source and target
+rewards using (a+b-c)_+<=[(2a-c)_++(2b-c)_+]/2. A one-label offset
+shift has exact entry or exit measure <=Cs for s<=c/m. This follows
+from the bounded weighted degree along that offset interval; the
+Gaussian translation changes the rare mass by a bounded factor.
+
+For a nonnegative cost with measure{c<=s}<=Cs, a reward of Lq norm V
+has capped integral <=C V^(2q/(q+1))+V^q/(c/m)^(q-1). Summing labels
+with the vector Lq norm gives
+
+ C m^(1/(q+1)) theta^(2q/(q+1))
+   +(c/m)(C theta m/c)^q.                            (A7)
+
+The first term divided by theta^2 is <=exp((1+2B)/C1) up to an absolute
+constant; the second is negligible uniformly on theta<=m^{-5/4}.
+The constant can depend on the fixed B. It need not tend to one.
+
+For theta<=m^{-B}, put M=theta^{-1/8}. On good projected points, a
+positive pair reward has width at most C theta M/alpha. Taylor expansion
+and the one-dimensional Gaussian density ratio give an error at most
+m^K theta^3 M^3. A projection outside the actual facet but inside a
+source cell after displacement lies in one of at most m third-label
+strips. Conditioned score rank gives the tangential altitudes >=c alpha,
+so those strips have measure at most m^K theta M. Their contribution
+has the same m^K theta^3 M^3 bound. This accounts for junctions.
+
+Bad projected points contribute at most
+m^K theta E[W 1_{W>M}]<=m^K theta M^{-31}; remote normal distances >1
+contribute at most m^K theta^32. The good main term is bounded by
+C theta^2 sum_e w_e E_e(v_i^2+v_j^2). The use of sums, rather than
+differences, is correct for the two nonnegative source/target rewards.
+
+The exponents are
+
+ theta^3 M^3=theta^(21/8),
+ theta M^(-31)=theta^(39/8),
+ theta^32=theta^32.
+
+Therefore the complete cap is <=C theta^2+C m^K theta^(21/8).
+Choosing fixed B>8K/5 absorbs the remainder below m^{-B}; (A7) covers
+the remainder of the allowed amplitude interval. The choice of B is
+not a lower amplitude restriction. In particular, theta=e^{-m^100}
+is easier in the small-amplitude estimate than theta=m^{-B}.
+
+This identifies why the usual rare/tall measurable forcing objection
+does not falsify this cap: it is not an L2-only cap. The normal smoothing,
+fixed L32 bounds, and the facet quadratic norm are all being used.
+
+6. Full signed affine tail: independent checks of the delicate factors
+--------------------------------------------------------------------
+The normal Mehler row satisfies exactly
+
+ ||M_t(a,.)||_2^2=(1-t^4)^(-1/2) exp(t^2 a^2/(1+t^2)).
+
+Tangential L2-to-LQ hypercontractivity with Q=C1L and t=c/sqrt L,
+followed by polynomial-probability restriction, gives a dimension-free
+facet norm. Composing with a contraction in any one fixed normal
+direction changes only a two-dimensional normal calculation. For
+derivatives use the exact commutation identity
+
+ nabla^j T_t v=(2t)^j T_{2t}(nabla^j T_{1/2}v), j=1,2.
+
+Hermite orthogonality bounds the L2 norm on the right before T_{2t},
+because sup_k (k)_j 4^{-k}<infinity. Thus the derivative gain is t^j,
+with Hilbert--Schmidt tensor norms and no ambient-dimension loss.
+
+For q_i^0=T_{-r}Pi_{>=3}g_i, the exact three-factor representation is
+
+ q_i^0=T_t v_i^0,
+ v_i^0=T_{-r/t^2}Pi_{>=3}T_tg_i.
+
+Since ||T_tg_i||_2<=m^{-1/(1+t^2)}<=C/m,
+||v_i^0||_2<=C(rL)^3/m. This preserves the rare-label factor 1/m.
+Permutation oddness in the ij normal coordinate gives
+
+ q_i^0-q_j^0=(X_i-X_j)P_e,
+ ||P_e||_{Lq(facet)}<=C r^3 L^(5/2)/m,
+ ||nabla P_e||_{Lq(facet)}<=C r^3 L^2/m.             (A8)
+
+On the current facet, alpha(X_i-X_j)=-delta_l_e. Differentiating the
+original quotient, rather than a facet-only identity, gives exactly
+
+ grad(q_i^0-q_j^0).V
+ =-[P_e l_e+P_e delta_B_e.V+delta_l_e grad(P_e).V]/alpha.
+
+This is the cancellation that saves an otherwise non-small reference
+term. The relative current-potential change is
+q-q0=T_t v, ||v||<=C r^3 L^(7/2)d, by the same trace calculation as
+(A4) with cutoff 3. On the mass path replace d by d+||p-U||.
+
+Choose c by L_graph c=div(w E(q_i-q_j)) and set u=q-c. Then
+div(w E u_e)=0, cancelling the entire coefficient of the balancing
+offset acceleration. Energy Cauchy plus the gap c/L gives
+||c||<=C r^3L^4d on the balanced path.
+
+For the coherent field V=-B^+(ZX+k), the second derivative is
+
+ 2<f',T_{-r}Pi_{>=3}f'>
+ +2 sum_e w_e E[l_e grad u_e.V+u_e Z_e.V
+                         +u_e l_e div_gamma V].
+
+The material derivative of 1/ell_e cancels the normal component of
+surface divergence, since n_e.DV.n_e=-ell_e'/ell_e. The single global
+affine field transports every junction coherently; cyclic label test
+differences cancel the junction terms. Extra coordinates in Z are allowed
+in this field and are integrated, not fixed at a point.
+
+The boundary quadratic term has absolute value <=C(rL)^3 N_l
+<=C r^3L^4||Z||^2. Conditional fixed-degree moments give
+||V||_q<=C sqrt L K, ||div_gamma V||_q<=CL K,
+K<=CL||Z||/alpha. Together with (A8), the weighted Cauchy sums charge
+the remaining terms by C r^3 L^8(1+d/alpha)||Z||^2; the printed L^10
+is safe. No sqrt(sum_e w_e)=sqrt(m) factor is required.
+
+Finite Hermite cutoffs preserve all symmetries and the quotient. Replacing
+cutoff 3 by cutoff k gives geometric factors (r/t^2)^k and (rL)^k.
+They are <1 for sufficiently large m. This justifies uniform convergence
+of the potential, its first two parameter derivatives, and the adjoint,
+so the full signed tail is controlled, not merely a finite expansion.
+
+7. Final local combination and its dependencies
+------------------------------------------------
+The cap inserted in (A1) gives
+
+ S(f)-S(f0)>=r||M-B||^2-C r^3L^8(d^2+||p-U||^2),
+
+because Cr^2L^8<1/2 absorbs the odd square uniformly on the voting
+interval. The affine comparison supplies the term r[w-||M||^2]. Their
+sum is exactly
+
+ r[w-||M||^2]+r||M-B||^2
+ =r[w-||B||^2-2Lroute]=2r R_p(B).
+
+Using R_p>=R_U+h_U.(p-U), ||h_U||^2<=CL^2R_U, and the separately
+supplied finite gap d^2<=C_A m sqrt L R_U leaves
+
+ [1-C_A(rL^2+r^2mL^7+r^3L^10)]||p-U||^2
+ +[3/2-C_A(r sqrt(m)L^13+r^2mL^11)]r R_U.
+
+Each error decreases with r and vanishes at its largest allowed value
+as m tends to infinity. This yields delta/2+rR_U for sufficiently large
+m. No positive lower bound on r is needed.
+
+Equality uses the balanced endpoint equality case, not the cap alone.
+Once p=U and R_U=0, the endpoint and
+2R_U=w-||M||^2+||M-B||^2 force regular M=B. The regular linear argmax
+is unique almost surely; a fractional f attaining its first-moment
+value must put full probability on that winner. This is the required
+argument extending equality to arbitrary measurable fractional f.
+
+8. Explicit admissible stress families
+--------------------------------------
+(a) Unequal-mass fractional contamination. Let f=(1-epsilon)g+epsilon e_1,
+0<epsilon<=1/[2(m-1)]. Then p is in the mass box, B=(1-epsilon)B0,
+and d=epsilon sqrt(w), which is inside A/m for large m. Write
+Q=1/m-S_{-r}(g)>0. Direct bilinear expansion gives
+
+ S(f)-S(g)=(2epsilon-epsilon^2)Q+epsilon^2(1-1/m).
+
+The mass term is exactly delta=epsilon^2(1-1/m). This family produces
+no small-r or unequal-mass failure. Its exact R_U is w epsilon^2/2.
+
+(b) Arbitrarily rare and remote pure/fractional routing. Add an independent
+Gaussian coordinate Y. Let A be any measurable event in Y, e.g. Y>T,
+and let Pi transpose two labels. Put h=Pi g-g and
+f=g+epsilon 1_A(Y)h, 0<=epsilon<=1. Every f is simplex-valued and balanced.
+Its extra-coordinate centroids vanish, because E_X h=0. In the regular
+span its centroid matrix is B=B0+epsilon a(Pi B0-B0), where a=P(A).
+Thus d<=2epsilon a sqrt(w), arbitrarily small as T increases.
+
+Let b=P(A(Y) and A(Y')) for the rho-correlated extra coordinates, and
+Dpi=<Pi g,T_{-r}g>-S_{-r}(g)>0. Exact tensor-product expansion gives
+
+ S(f)-S(g)=2Dpi epsilon(a-epsilon b)>=0,             (A9)
+
+since b<=a. For epsilon=1 this is a pure partition with an arbitrarily
+remote exceptional set; 0<epsilon<1 gives fractional routing. The event
+can have arbitrary measurable geometry. The positivity of Dpi follows
+pointwise from the exact reversed ordering of the regular negative-noise
+potentials on the two swapped cells. For a nontrivial event and |rho|<1,
+b<a, so the gap is strict. This directly defeats a natural rare/tall
+counterexample attempt without invoking the theorem being audited.
+
+(c) Dimension-opening score paths. For N>m-1, B(s)=[B0,s a] with a in
+1-perp has full row rank m-1 for small s; its Gram matrix is
+alpha^2 P+s^2 a a^T. Such a path rotates the row span at first order and
+changes covariance at second order. The local arguments use B^+ and
+Frobenius/HS norms and cover it. Since a centered m-row matrix has rank
+at most m-1, there is no additional rank-opening singularity inside this
+regular score ball. Rank-boundary objections belong to the exterior
+arguments, not this local calculation.
+
+9. Regular top-two margin, requested stability cross-check
+--------------------------------------------------------
+Let G be the gap between the largest and second largest of m independent
+standard normals, mu=E max_i Z_i, alpha=mu/(m-1). Its exact density is
+
+ f_G(t)=m(m-1) int phi(x+t)phi(x)Phi(x)^(m-2) dx
+       =mu E exp(-t T-t^2/2), t>=0,
+
+where T has density phi(x)^2Phi(x)^(m-2)/w0, w0=mu/[m(m-1)].
+The tilted variance is <=1/2, and E T>=0 by reflection. Hence
+E exp(-tT)<=exp(-t E T+t^2/4), proving f_G(t)<=mu for all t>=0.
+The regular SCORE gap alpha G consequently has density <=m-1.
+
+For any measurable simplex-valued f in any finite ambient dimension,
+let i(X) be the regular winner, a(X)=1-f_{i(X)}(X), and epsilon=E a,
+which is half the L1 distance to that regular assignment. The routing
+loss obeys
+
+ R0=E sum_j f_j(B0_i-B0_j).X >= E[a alpha G]
+    >=epsilon^2/[2(m-1)].                         (A10)
+
+The last step is the bathtub/layer-cake bound using 0<=a<=1 and the
+score-gap sublevel estimate. It allows a to depend on every additional
+coordinate and to be fractional. Equation (A10) is exact with the stated
+constant and supplies the regular routing estimate needed by a possible
+global quantitative stability successor. If that successor instead uses
+the full L1 distance, replace epsilon by one-half that distance.
+
+End of audit. No publication, email, installation, or original-source
+mutation was performed.

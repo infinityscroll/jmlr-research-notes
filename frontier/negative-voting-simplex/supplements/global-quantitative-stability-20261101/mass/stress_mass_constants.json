@@ -1,0 +1,62 @@
+{
+  "disclaimer": "Floating-point numerical stress test only; not a proof or full theorem m0.",
+  "euler_gamma_limit": 0.8455686701969343,
+  "explicit_K_c001_C2": 4069084707.9109254,
+  "first_integer_for_displayed_half_coefficient_gate": 10295391700696,
+  "rows": [
+    {
+      "m": 100,
+      "mean": 2.5075936364417046,
+      "second": 6.472430659108667,
+      "variance": 0.18440481358573546,
+      "m_individual_minus_w": 0.7518255822295428,
+      "mass_certificate": 1.033934993386849,
+      "m_reference_degree2_defect": 1.1141751689918156
+    },
+    {
+      "m": 1000,
+      "mean": 3.241435769133455,
+      "second": 10.630361262511633,
+      "variance": 0.12345541709383845,
+      "m_individual_minus_w": 0.8198723183763454,
+      "mass_certificate": 0.8813726102481135,
+      "m_reference_degree2_defect": 1.2206972731671761
+    },
+    {
+      "m": 10000,
+      "mean": 3.8516158170666963,
+      "second": 14.927455403470173,
+      "variance": 0.09251100119181821,
+      "m_individual_minus_w": 0.8331332337145527,
+      "mass_certificate": 0.8446606996171104,
+      "m_reference_degree2_defect": 1.292739377095429
+    },
+    {
+      "m": 1000000,
+      "mean": 4.862897486196388,
+      "second": 23.709278232668726,
+      "variance": 0.0615062714135739,
+      "m_individual_minus_w": 0.8382010647474333,
+      "mass_certificate": 0.8384847666006077,
+      "m_reference_degree2_defect": 1.3951095184931337
+    },
+    {
+      "m": 1000000000,
+      "mean": 6.087684584446046,
+      "second": 37.100753653365416,
+      "variance": 0.040850053663390895,
+      "m_individual_minus_w": 0.840646149161298,
+      "mass_certificate": 0.8406468383166973,
+      "m_reference_degree2_defect": 1.4738839791066949
+    },
+    {
+      "m": 1000000000000,
+      "mean": 7.112463684767498,
+      "second": 50.61768389839433,
+      "variance": 0.03054423125787764,
+      "m_individual_minus_w": 0.8418737728092966,
+      "mass_certificate": 0.8418737740894614,
+      "m_reference_degree2_defect": 1.5150675376257683
+    }
+  ]
+}

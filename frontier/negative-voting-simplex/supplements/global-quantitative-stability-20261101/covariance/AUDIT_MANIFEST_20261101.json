@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-01",
+  "scope": "Covariance concavity/support, coordinate hazard derivatives, summed-row coercivity, and root quantitative Sections 3-5",
+  "verdict": "No falsification found within stated fixed-A hypotheses; explicit counterexample to cap-free/A-uniform extension. Not a verdict on full negative-noise proof.",
+  "reviewed_root_sha256": "d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508",
+  "artifacts": {
+    "COVARIANCE_ADVERSARIAL_AUDIT_20261101.txt": "6ea7a7b1c55c90c854ad73106d39d26766a9b37a6e501a1cc632b38574402337",
+    "EXACT_COMPUTATIONS_20261101.txt": "6cdfab2daf5908c962a68ae44d39fcd0d320b4a0a0f144bbb902219b3edf163a",
+    "ROOT_QUANTITATIVE_SECTION3_REVIEW_20261101.txt": "27c6608f37d08048284cdb54bfaffb90e13225a4b5c7b3cb474994534c4e7eca",
+    "cap_free_counterexample.py": "1bd05ef00cc7cf6e52ef6d8fbc906416f81e288250ffc2113aaa18aaa9b134fa",
+    "cap_free_counterexample_output.txt": "618554498179a430d63226c7ffc165384a1a6ba2e47c19450248e2d083ffc5cf"
+  }
+}

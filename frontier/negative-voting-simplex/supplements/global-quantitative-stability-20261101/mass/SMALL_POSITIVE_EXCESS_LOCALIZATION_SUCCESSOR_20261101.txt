@@ -1,0 +1,130 @@
+SMALL POSITIVE EXCESS: UNIVERSAL LOCALIZATION SUCCESSOR
+1 November 2026. Independent extension requested by root during audit.
+This new record preserves all frozen proof sources.
+
+Statement. For all sufficiently large m, finite N>=m-1 and
+0<r<=1/(m-1), let f be ANY measurable simplex-valued assignment and put
+
+ E=S_-r(f)-S_-r(g), p_i=E_gamma f_i, B_i=E_gamma[X f_i],
+ P=sum_i p_i^2, W=||B||_F^2, U=(1/m,...,1/m),
+ delta=P-1/m=|p-U|^2, w=(E max_(i<=m)G_i)^2/(m-1),
+ D=delta+r(w-W).
+
+Assume only E<=r^2/m. In particular E is not assumed nonpositive.
+Then the entire localization used by DIRECTc33cd021 holds:
+
+ p_i in[1/(2m),3/(2m)], 0<=D<=C r^2/m,
+ delta<=2D, |W-w|<=D/r, W/w=1+O(r/(1+log m)).
+
+The constants and threshold are independent of r and finite N.
+The prescribed-mass function below includes fractional assignments by the
+explicit dimension-reduction/relaxed-maximizer argument in the companion
+MASS_LOCALIZATION_ADVERSARIAL_AUDIT_20261101.txt. It requires fixed-m
+first-moment attainment only, not full-noise attainment.
+
+1. THE COARSE MASS BOX WITH THE EXACT ADDITIVE EXCESS
+Use the notation of45e2cc45:
+ F_m=m I(1/m)^2, I(t)=phi(Phi^-1(t)),
+ B_m=max(2log m+1,6),
+ A2g=m(E M_m^2-1)^2/[2(m-1)(m-2)].
+Its rearrangement and parity estimates are assignment inequalities, so
+
+ E >= delta-r(W-w)-r^2 A2g-r^3-r^4,
+ W<=F_m+B_m delta.
+
+Consequently, once m-1>B_m,
+
+ delta <= [E+r(F_m-w)+r^2 A2g+r^3+r^4]/(1-rB_m).       (S1)
+
+Every coefficient in the old numerator is nonnegative. Denote the old
+endpoint certificate from45e equation(2) by mathcalL_m. For E<=r^2/m,
+
+ m^2 delta <= mathcalL_m
+      + m r^2/(1-B_m/(m-1))
+ <= mathcalL_m + m/[(m-1)^2(1-B_m/(m-1))].             (S2)
+
+The additional term is O(1/m), uniformly in the full interval. This uses
+an upper bound on E, so it remains valid when E<0. Since
+mathcalL_m->2-2gamma<1, exactly the same fixed positive relative-mass box
+c/m<=p_i<=C0/m holds for all sufficiently large m. The constants
+c=1/100,C0=2 suffice. No full-noise minimizer was selected.
+
+2. RETAINED DEGREE TWO: SIGNS DO NOT CHANGE
+Let ell=mw-1, and set
+ F0=ell^2/(2m), Delta2=A2g-F0=O(1/m),
+ c_(m,r)=ell[1/r-(ell+2)/2].
+For large m, ell>0, c_(m,r)>=0 and1-r ell>=1/2 uniformly in r.
+The universal positive-part tangent from251c3c7c is
+
+ A2(f)>=F0-(ell/r)D+c_(m,r)delta.                      (S3)
+
+The exact energy definition and the one-sided parity bounds give
+
+ D+r^2[A2(f)-A2g] <= E+r^3+r^4.
+
+Thus the retained tangent comparison becomes exactly
+
+ (1-r ell)D+r^2 c_(m,r)delta
+       <=E+r^2 Delta2+r^3+r^4.                       (S4)
+
+No term changes sign when E is positive. No assertion W>P is needed:
+the positive-part perspective underlying(S3) makes it a global tangent.
+
+3. THE VALUE BOUND SUPPLIES D>=0, WITHOUT COMPETITIVENESS
+The already obtained mass window permits11a6959e with6d19bda9:
+ V(p)<=w+A_m delta, A_m=O(log^2 m).
+The actual fractional f is feasible for V(p). Hence, for large m,
+
+ D=delta+r(w-V)+r(V-W)
+  >=(1-rA_m)delta+r(V-W)
+  >=delta/2+r(V-W)>=0.                               (S5)
+
+This is independent of E. Dropping the nonnegative second term on the
+left of(S4), and using E<=r^2/m, gives
+
+ 0<=D<=2[E+r^2 Delta2+r^3+r^4]<=C r^2/m.              (S6)
+
+The middle expression must be nonnegative for any actual f in the class;
+we do not assume that fact independently. Since delta<=2D,
+|delta-D|<=D and therefore|W-w|=|delta-D|/r<=D/r.
+Also w is of order(1+log m)/m, so W/w=1+O(r/(1+log m)).
+Finally,
+
+ max_i|m p_i-1| <=m sqrt(delta)<=C sqrt(m)r<=C/sqrt(m),
+
+giving the sharper displayed[1/(2m),3/(2m)] box. These are exactly the
+localization outputs used in the direct proof. Every possible W>w
+competitor is retained in this reasoning.
+
+4. WHAT THE SAME INTERIOR/EXTERIOR CERTIFICATES WOULD THEN IMPLY
+This paragraph is an assembly consequence, conditional on the validity
+of the local and exterior certificates themselves; their full analytic
+proofs are outside the present mass branch. Their scopes are sufficient:
+1a489344 explicitly assumes any measurable assignment with its actual
+centroid in the A/m ball and the mass box, not E<=0.
+
+Let R=R_U(B), d=dist_F(B,regular centroid orbit), J=D/r.
+The score-dual calculation uses only feasibility and the bounds proved
+above, so R<=J. The direct uniform-row/proxy construction and exterior
+estimates likewise use the localization bounds, not the sign of E.
+
+If d<=1/m, the local certificate gives E>=delta/2+rR.
+If d>1/m, the existing exterior certificate gives E>=D/2, while(S5)
+and R<=D/r give delta+rR<=3D. Therefore throughout E<=r^2/m,
+
+ E >=(delta+rR)/6.                                    (S7)
+
+For E>r^2/m the trivial strict bound gives the unconditional truncated
+consequence, with the same qualifications about the certificates:
+
+ E >=(1/6) min{delta+rR_U(B), r^2/m}.                   (S8)
+
+Thus the assumption E<=0 is unnecessary both for localization and for
+the proposed near-optimal stability statement. A hypothetical negative-E
+assignment lies in the near class and contradicts(S7). The equality
+classification still uses the established zero-remainder rigidity;
+it is not inferred from mass localization alone.
+
+This successor adds no explicit numerical m0. The only new hypothesis
+is the fixed small-excess ceiling E<=r^2/m; its O(1/m) contribution to
+the coarse mass certificate was retained explicitly in(S2).

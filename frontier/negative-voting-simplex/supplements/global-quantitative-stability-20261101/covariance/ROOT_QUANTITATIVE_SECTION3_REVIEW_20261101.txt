@@ -1,0 +1,49 @@
+INDEPENDENT REVIEW OF THE ROOT QUANTITATIVE COVARIANCE STEP
+1 November 2026
+
+Reviewed source:
+  ../GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt
+SHA-256:
+  d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508
+
+Scope: theorem statement, Section 2's fixed row-cap assertion, all of
+Section 3, and the elementary margin/routing calculations in Sections
+4-5. This is not an independent review of the slack-localization or
+signed full-noise transfer in Sections 1-2.
+
+Section 3 is valid conditional on the audited covariance and facet
+bootstrap inputs, with no restriction d>1/m. Its exact tangent remainder
+must be written using phi(t)=alpha Gamma(P+t(C-P)):
+
+  phi(0)+phi'(0)-phi(1)
+   =w+alpha^2 tr(C-P)/2-alpha Gamma(C)
+   =(w+||B||^2)/2-F_U(B)=R_U(B).
+
+This identity includes the trace/radial component. Initial curvature on
+t<=min(1/2,c/(Le)) proves (8) at every centered PSD C, with singular
+endpoints obtained by value continuity. Procrustes and spectral calculus
+give q=d/alpha=||sqrt(C)-P||_F<=e. The scalar function
+x^2 min(1,c/(Lx)) is increasing; q<=C sqrt(m) then proves (9). This
+argument also covers q arbitrarily close to zero. At q<=c/L it proves
+the stronger R>=c d^2/m. B=sB0 provides the exact radial test R=d^2/2.
+
+Section 2 explicitly preserves a fixed absolute normalized row cap from
+the actual assignment's entropy bound. That correctly avoids the
+cap-free counterexample recorded in EXACT_COMPUTATIONS_20261101.txt.
+The covariance audit does not independently establish the mass-window
+and norm hypotheses that Section 1 uses to normalize this cap.
+
+The new top-two margin calculation also checks out. The tied threshold
+law has log-density curvature at most -2, including under linear tilts,
+so K''(t)<=1/2. Its mean is nonnegative. Thus h_m(t)<=mu exp(-t^2/4).
+The score gap alpha G consequently has density at most m-1. A layer-cake
+argument gives E[h alpha G]>=epsilon^2/[2(m-1)] for arbitrary 0<=h<=1,
+without independence between h and the gap. Combining that with the
+exact actual-centroid routing identity and Cauchy-Schwarz gives precisely
+
+  ||f-g0||_1^4<=64(m-1)^2 w d^2.
+
+Together with (9), this yields the stated m^(5/2)L^2 covariance-to-rule
+modulus. There is no missing ambient-dimension constant or small-distance
+cutoff in these reviewed steps. This does not validate the full root
+theorem independently of its localization and full-noise inputs.

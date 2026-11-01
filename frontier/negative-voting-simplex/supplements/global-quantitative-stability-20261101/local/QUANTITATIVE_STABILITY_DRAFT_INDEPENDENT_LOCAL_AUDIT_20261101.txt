@@ -1,0 +1,124 @@
+INDEPENDENT ADDENDUM: QUANTITATIVE GLOBAL STABILITY DRAFT
+1 November 2026. Read-only audit of the new root draft.
+
+Audited target:
+  ../GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt
+Fresh SHA256:
+  d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508
+
+Verdict
+-------
+No correction found in the full draft's assembly or its exact regular-gap
+and L1 calculations. The quantitative conclusion is a valid consequence
+of the displayed localization, exterior comparison, and initial covariance
+curvature premises. Those premises retain the dependency status stated in
+the draft; this addendum does not replace their separate proof audits.
+
+The companion 424-line local audit independently derives the own-centroid
+cancellation, all-amplitude cap, and signed affine tail factors used for
+the local branch. It also gives an explicit repair of the terse facet-
+probability construction; no additional geometric hypothesis is needed.
+
+1. Regular top-two constant
+--------------------------
+For G=max Z_i-secondmax Z_i, the density is
+
+ h_m(t)=m(m-1) int phi(x+t)phi(x)Phi(x)^(m-2) dx
+       =mu E exp(-tT-t^2/2), t>=0,
+
+where T has density proportional to phi^2 Phi^(m-2). Integration by
+parts gives h_m(0)=mu. Its tilted potential has curvature >=2. Hence
+K(t)=log E exp(-tT) has K''<=1/2; reflection gives ET>=0 and therefore
+K'(0)<=0. It follows that
+
+ h_m(t)<=mu exp(-t^2/4)<=mu.
+
+Thus the score gap alpha G has density <=mu/alpha=m-1, uniformly over
+its entire range, not just near zero. This calculation matches the draft
+with no missing factor of m, two, or alpha.
+
+2. Fractional and extra-coordinate routing
+-----------------------------------------
+For a regular winner i(X), put a(X)=1-f_i(X), epsilon=E a. Then
+0<=a<=1 and epsilon=||f-g||_1/2 exactly, even for fractional f. The
+inequality a<=1 is the only admissibility restriction used in the
+layer-cake step. For every t>=0,
+
+ E[a 1_{alpha G>t}]>=epsilon-P(alpha G<=t)
+                         >=epsilon-(m-1)t.
+
+Integrating the positive part over t proves
+
+ E[a alpha G]>=epsilon^2/[2(m-1)].
+
+No independence of a and G is asserted. The weight can depend arbitrarily
+on all coordinates outside the regular span. Thus the finite-N and
+measurable/fractional scope is correct.
+
+3. Fourth-power conversion, constants included
+-----------------------------------------------
+Let B be the actual centroid matrix, B0 a closest regular centroid, and
+d=||B-B0||. Its routing cost is exactly
+
+ R0=E[max_i B0_i.X-sum_i f_i B0_i.X]=w-<B0,B>.
+
+Combining the gap estimate with Cauchy gives
+
+ epsilon^2<=2(m-1)R0<=2(m-1)sqrt(w)d.
+
+Consequently
+
+ ||f-g0||_1^4=16epsilon^4<=64(m-1)^2 w d^2.
+
+Since w=mu^2/(m-1)=O(L/m), this is <=C mL d^2. Taking the orbit infimum
+can only reduce the left side. The draft's numerical coefficient 64 is
+correct. A coefficient 4 would instead correspond to half the L1 norm.
+
+4. Covariance-to-score conversion
+---------------------------------
+For C=BB^T/alpha^2 on 1-perp and q=d/alpha, orthogonal Procrustes gives
+q^2=sum_{j=1}^{m-1}(sqrt(lambda_j(C))-1)^2, including zero eigenvalues.
+Meanwhile e^2=||C-P||_F^2=sum_j(lambda_j(C)-1)^2, so e>=q because
+sqrt(lambda)+1>=1. This includes singular endpoints.
+
+The function F(x)=x^2 min(1,c/(Lx)) is increasing for x>=0. Conditional
+on the displayed initial-curvature estimate (8), replacing e by q is
+therefore legitimate. The localized bound W/w=1+O(r/L) gives q<=C sqrt m.
+It follows that
+
+ R>=c alpha^2 q^2/(m^(3/2)L),
+ d^2<=C m^(3/2)L R.
+
+The radial check R=d^2/2 is exact. Extra-column score perturbations are
+covered by Procrustes and do not add ambient-dimension factors.
+
+5. Energy assembly and small r
+-------------------------------
+On the small-excess class E<=r^2/m, the local branch gives
+E>=delta/2+rR. The exterior branch gives E>=D/2 and delta+rR<=3D.
+Thus both imply E>=(delta+rR)/6. This also proves E>=0 on that class,
+without assuming it at the start. If E>r^2/m, the saturated lower bound
+in (T) follows by taking its absolute constant at most one.
+
+Combining the preceding score/L1 conversion yields the proposed
+
+ E>=c min{r^2/m, delta+r d1^4/(m^(5/2)L^2)}.
+
+The three claimed small-excess consequences (S1), (S2), and (S3) follow
+with absolute constants. Dividing by r in (S3) is allowed because the
+theorem excludes r=0; every antecedent estimate is uniform for r>0.
+
+The equality argument uses compactness only of the regular orbit in each
+fixed finite dimension. It does not invoke existence of a full-noise
+optimizer. Pointwise convergence of regular partitions away from tie
+hyperplanes and dominated convergence prove Gaussian L1 compactness.
+
+6. Dependency boundaries
+------------------------
+This audit read the entire draft. The independent detailed reconstruction
+is strongest for its local input, Sections 4--6, and the algebra of the
+covariance conversion in Section 3. The added-slack mass localization and
+the initial curvature inequality (8) should retain their separate audits.
+The draft accurately acknowledges dependence on the original analytic
+proof chain and does not present this consequence as independent external
+validation of that chain. No change to its theorem or proof is requested.

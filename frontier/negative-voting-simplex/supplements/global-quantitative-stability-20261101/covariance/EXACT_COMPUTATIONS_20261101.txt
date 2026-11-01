@@ -1,0 +1,119 @@
+EXPLICIT ADVERSARIAL COMPUTATIONS — 1 NOVEMBER 2026
+
+1. A RIGOROUS COUNTEREXAMPLE TO REMOVING THE FIXED ROW CAP
+
+Let n=m-1, v=(e1-e2)/sqrt(2), C=n vv^T, and realize B with
+BB^T=alpha^2 C in any N>=m-1 by zero padding. Then
+
+  C>=0, C1=0, tr C=n, rank C=1,
+  C11=C22=n/2, Cii=0 for i>=3.
+
+Thus the centered diagonal squared error is exactly
+
+  Q=sum_i(Cii-n/m)^2
+   =2[n/2-n/m]^2+(m-2)(n/m)^2
+   =n^2(m-2)/(2m).
+
+The balanced score value is exactly
+
+  Gamma(C)=sqrt(2n) I(1/m),
+  I(p)=phi(Phi^-1(p)).
+
+Proof: only the first two scores are nonzero: aZ and -aZ, a=sqrt(n/2).
+For label 1's mass 1/m, the largest possible integral of Z f1 is I(1/m),
+attained on the upper Gaussian tail. Label 2 attains the analogous
+negative-tail bound. These tails are disjoint. Split their complement
+among the m-2 zero-score labels with mass 1/m each. This realizes both
+upper bounds simultaneously, including with fractional assignments.
+
+Now R_U(B)=alpha[mu-Gamma(C)]<=alpha mu=alpha^2 n. If one asserted the
+summed theorem with a universal positive c and NO fixed row cap, it would
+require
+
+  c <= R_U(B)/(alpha^2 L^-2 Q)
+    <= n L^2/Q = 2m(1+log m)^2/[(m-1)(m-2)] -> 0.
+
+This contradiction is analytic and does not depend on quadrature,
+Monte Carlo, fitting, or any claimed covariance theorem. Gamma(C)>=0
+alone suffices for the upper bound. The exact value above additionally
+shows the full support value at this singular covariance.
+
+The actual theorem excludes this sequence because its row cap A must
+be at least (m-1)/2. Its A-dependence therefore cannot be suppressed.
+
+2. A SINGULAR FAMILY THAT DOES OBEY A FIXED ROW CAP
+
+Fix q in (0,1) rational and take m with k=qm integer, l=m-k.
+Let a^2=n l/(km) and b^2=n k/(lm). Let v have k entries a and l entries
+-b and set C=vv^T. Then
+
+  sum v_i=0, tr C=n, rank C=1,
+  max_i Cii <= max((1-q)/q,q/(1-q)), independently of m.
+
+The balanced problem reduces to choosing the upper Gaussian q-tail
+for the positive-score group. Its exact value is
+
+  Gamma(C)=(a+b)I(q)=sqrt[n/(m q(1-q))] I(q).
+
+The target can therefore have rank one, many duplicate rows, and
+operator norm n while satisfying a fixed row cap. Those facts do not
+invalidate the support proof: the target appears only through its PSD
+sign and diagonal entries. For q=1/2, every diagonal equals n/m, the
+summed-row right side vanishes, and this theorem says nothing about
+the large nonradial covariance deficit. That loss of information is
+intentional; a radial certificate is not full covariance rigidity.
+
+3. ALL-M DIAGONAL AND RADIUS IDENTITIES
+
+For P=I-11^T/m and sum xi_i=0,
+
+  (P diag(xi) P)ii=(1-2/m)xi_i,
+  tr(P diag(xi)P)=(1-1/m)sum xi_i=0.
+
+Consequently z_i=Cii-n/m, xi_i=z_i/(1-2/m) gives D_t diagonals
+n/m+t z_i and
+
+  sum_i xi_i(Cii+Dtii)=(1-2/m)(1+t)sum_i xi_i^2.
+
+The exact signed linear pairing is the source of the sum. Replacing
+it by a sum of absolute values would lose the desired certificate.
+
+For any radial multiple B=s B0 of a regular centroid matrix,
+
+  ||B||^2=s^2 w, F_U(B)=s w,
+  R_U(B)=w(s-1)^2/2,
+  d(B)^2=w(s-1)^2,
+  e=|s^2-1|sqrt(n), q=|s-1|sqrt(n).
+
+This explicitly verifies radial coercivity and the trace term in the
+global initial-segment remainder, including s=0.
+
+4. EXACT m=3 REGULAR HAZARD NORMALIZATION
+
+For m=3, the tied-maximum density is proportional to phi(x)^2 Phi(x).
+Symmetry and one integration by parts give
+
+  Z0=1/(4 sqrt(pi)),
+  ET=1/sqrt(3 pi),
+  ET^2=1/2,
+  Var(T)=1/2-1/(3 pi),
+  mu_3=3/(2 sqrt(pi)), alpha_3=3/(4 sqrt(pi)),
+  eta_3=1/4+1/(2 pi).
+
+These values satisfy Z0=alpha_3/3 and eta_3 in [1/4,1/2]. The
+common-mean contribution 1/3 is part of Var(T), not subtracted from it
+before using the eta formula. This is an exact low-dimensional check
+of the normalization, not evidence for a uniform large-m bound.
+
+5. WHY THE GLOBAL DISTANCE BOUND ALSO HOLDS INSIDE THE SCORE BALL
+
+For q=d/alpha>=0 and q<=C0 sqrt(m), monotonicity gives
+
+  e^2 min(1,c/(Le)) >= q^2 min(1,c/(Lq))
+                   >= c' q^2/(L sqrt(m)),
+
+where the expressions at zero are defined by continuity. Multiplying
+by c alpha^2/m proves R>=c d^2/(m^(3/2)L), with no assumption d>1/m.
+In the tiny regime q<=c/L the stronger term is R>=c d^2/m.
+
+No numerical experiment is used to justify any of these conclusions.

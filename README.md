@@ -4,6 +4,14 @@ Substantial results and reproducible experiments through 1 November 2026.
 These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
 
+## 1 November — global stability for large alphabets
+
+[A quantitative stability supplement](frontier/negative-voting-simplex/supplements/global-quantitative-stability-20261101/README.txt) strengthens the negative-voting candidate: for every sufficiently large alphabet, a nearly optimal measurable rule must be close to a regular simplex, with constants independent of ambient dimension. The proof permits unequal winning probabilities and fractional rules.
+
+[Theorem and proof](frontier/negative-voting-simplex/supplements/global-quantitative-stability-20261101/GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt) · [Mass/slack review](frontier/negative-voting-simplex/supplements/global-quantitative-stability-20261101/mass/QUANTITATIVE_SUCCESSOR_MASS_REVIEW_20261101.txt) · [Covariance review](frontier/negative-voting-simplex/supplements/global-quantitative-stability-20261101/covariance/ROOT_QUANTITATIVE_SECTION3_REVIEW_20261101.txt) · [Full stability review](frontier/negative-voting-simplex/supplements/global-quantitative-stability-20261101/local/QUANTITATIVE_STABILITY_DRAFT_INDEPENDENT_LOCAL_AUDIT_20261101.txt)
+
+The fourth-power Gaussian-L1 bound has passed three internal reconstructions and inherits the main proof's dependencies. Its alphabet threshold is existential. **External mathematical validation and priority remain open.** The original manuscript and archive are preserved; the supplement includes two proof clarifications and an explicit obstruction to removing the row cap.
+
 ## 1 November — tetrahedral local stability
 
 [The tetrahedral endpoint package](frontier/negative-voting-simplex/local-stability-four-candidates/NONLINEAR_LOCAL_THEOREM_READING_GUIDE_20261101.txt) proves **local Gaussian-L1 quadratic stability for arbitrary measurable matched-mass pairs in every fixed finite dimension N >= 3**. At correlation -1/3, the objective exceeds the tetrahedral value by at least the squared distance to its common orthogonal orbit divided by 1000, in a sufficiently small neighborhood. The common mass vector may vary. Reflection gives the equivalent correlation 1/3 statement near opposite tetrahedral partitions.

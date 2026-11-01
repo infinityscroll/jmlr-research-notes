@@ -1,0 +1,35 @@
+{
+  "frozen_sources_unchanged": true,
+  "artifacts": [
+    {
+      "file": "MASS_LOCALIZATION_ADVERSARIAL_AUDIT_20261101.txt",
+      "sha256": "5ffb3295577bfd9432fde381be91873e41599fb610bfe249e602ff6ec00ce4fe",
+      "bytes": 15523
+    },
+    {
+      "file": "QUANTITATIVE_SUCCESSOR_MASS_REVIEW_20261101.txt",
+      "sha256": "ec3ba6c9a2a6b7ecfbf56943eb0aa0e137395026917ccd46aeb54955a9c18a34",
+      "bytes": 3189
+    },
+    {
+      "file": "SMALL_POSITIVE_EXCESS_LOCALIZATION_SUCCESSOR_20261101.txt",
+      "sha256": "49e1f0293fe5cfee53c935b46e2ad10296c894956d6375cfdc63c25483bc7a58",
+      "bytes": 5338
+    },
+    {
+      "file": "source_manifest.json",
+      "sha256": "f58ab84acdfd21adf41d2b8aeef019b38b5c29f260258ea4ded4bf876346b87c",
+      "bytes": 2929
+    },
+    {
+      "file": "stress_mass_constants.json",
+      "sha256": "ad8df74dfdeeeb050f16b1ea7e236646cb44feeb7e5958c7b633812a76305300",
+      "bytes": 2020
+    },
+    {
+      "file": "stress_mass_constants.py",
+      "sha256": "dea413c9500724e1ba0aa6a9d557fca84012077499072b3d28b61d4acce78a5e",
+      "bytes": 2638
+    }
+  ]
+}

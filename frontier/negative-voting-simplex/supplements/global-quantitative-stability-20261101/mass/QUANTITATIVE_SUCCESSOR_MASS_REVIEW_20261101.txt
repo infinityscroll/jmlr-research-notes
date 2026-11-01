@@ -1,0 +1,52 @@
+INDEPENDENT MASS-LOCALIZATION REVIEW OF QUANTITATIVE ROOT SUCCESSOR
+1 November 2026. Frozen input reviewed:
+GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt
+SHA256 d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508
+
+Scope: independent verification of Sections1,2,6 and their exact constants,
+using the mass audit and slack-localization successor in this directory.
+This review does not certify all analytic inputs of the local or exterior
+noise bounds. Their scope and algebraic use are checked here.
+
+Section1 is correct. Equation(1) adds E with coefficient1, and the upper
+bound E<=r^2/m contributes at most m r^2/(1-rB_m)=O(1/m) to m^2 delta.
+For negative E the same upper bound remains valid. Thus the fixed window
+survives before V(p) is used, avoiding circularity. Equation(2) retains
+nonnegative c_(m,r) and1-r ell>=1/2. Equation(3) is independent of E and
+supplies D>=0. It then follows that D=O(r^2/m), delta<=2D and
+|W-w|=|delta-D|/r<=D/r, including W>w. The sharper mass box follows from
+m sqrt(delta)<=C sqrt(m)r<=C/sqrt(m). All constants remain dimension free.
+
+The first-moment-attainment clarification in Section1 is necessary and
+correct. The direct predecessor's unqualified 'no attainment anywhere'
+wording is too broad. First-moment attainment at fixed m,d=m-1 remains
+legitimate; full-noise attainment is never used. Rather than depending on
+a separate purification theorem, the companion audit gives an explicit
+relaxed-maximizer argument: weak-star attainment, fractional two-label
+re-splitting forcing distinct centroid rows, then the own-score dual
+forcing a pure maximizer. This proves V_rel=V_pure for finite N>=m-1.
+
+Section2 is correct as an assembly of the stated analytic inputs. The
+balanced offset, normalized-row and proxy constructions use only the
+localization bounds, and the exterior proof uses the exterior floor and
+J=D/r without ever using E<=0. The local theorem1a489344 explicitly covers
+arbitrary measurable assignments under its mass and actual-centroid-ball
+hypotheses. Its conclusion is E>=delta/2+rR. In the exterior, after
+increasing the absolute m-threshold, the bracket in(7) is at least1/2.
+Since delta<=2D and rR<=D, one has delta+rR<=3D; therefore
+E>=D/2>=(delta+rR)/6. The coefficient1/6 in(S1) is exact for this argument.
+No nonnegativity of E was assumed: it is deduced from these two cases.
+
+Section6 is correct conditional on(S2), which this mass branch did not
+independently certify. If d1^4<=C2 m^(5/2)L^2R, then with
+c=min(1,1/(6 max(1,C2))) the small-excess case gives the stated lower bound
+in(T). If E>r^2/m, that bound is immediate. Equation(S3) follows from(S1)
+and(S2), with delta<=6E and an absolute fourth-root coefficient. At E=0,
+(T) implies d1=0 because r>0 and r^2/m>0. For fixed finite N, the compact
+orthogonal embedding orbit is continuous in Gaussian L1 by a.e.
+convergence outside tie hyperplanes, so zero distance is attained.
+
+No fatal gap, extra sign assumption, loss of m-uniformity or loss of
+finite-N-uniformity was found in these reviewed sections. The broad
+quantitative theorem retains exactly the same unresolved external-review
+status as its full-noise analytic dependencies.
