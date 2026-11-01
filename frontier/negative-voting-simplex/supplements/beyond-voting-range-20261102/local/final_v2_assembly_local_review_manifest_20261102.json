@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-02",
+  "verdict": "No further correction requested for V2, conditional on stated analytic inputs",
+  "files": {
+    "final_root": {
+      "path": "../QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_V2_20261102.txt",
+      "sha256": "f48bc037dc690c6a1c8650533e8909a41c58b1d3d2d7bb2b2375183b639a9b98"
+    },
+    "preserved_root": {
+      "path": "../QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_20261101.txt",
+      "sha256": "7fdae77b578be86c36547a586aec8b24fce2202f0f5d7abcf695059f726e7ba1"
+    },
+    "extended_local": {
+      "path": "OWN_CENTROID_LOCAL_COMPARISON_BEYOND_VOTING_20261101.txt",
+      "sha256": "5945a7c65fb51f71ad22081f014564d6b7169fea9633d35119185cb0caa529b0"
+    },
+    "proxy": {
+      "path": "../proxy/GLOBAL_EQUAL_ROW_PROXY_WITHOUT_INDIVIDUAL_ROW_LOWER_BOUND_20261101.txt",
+      "sha256": "fa3f466aa056153362531a0d9ef5f0551cc7c6259b9d61edbd2bf270d41a3532"
+    },
+    "exterior": {
+      "path": "../proxy/EXTERIOR_COMPARISON_BEYOND_VOTING_USING_AGGREGATE_RADIAL_DEFECT_20261101.txt",
+      "sha256": "3bbd0c9e26747c5098e51c92e6a3d388e16745e994a9dca9f08af5e746fac564"
+    },
+    "predecessor_review": {
+      "path": "FULL_WIDER_RANGE_ASSEMBLY_LOCAL_SCOPE_AND_L1_REVIEW_20261102.txt",
+      "sha256": "14f6576a7bab2cf75cca5c4cddcaa2d7595de029bc4a8e6c63267817c644010e"
+    },
+    "final_review": {
+      "path": "FINAL_V2_WIDER_RANGE_LOCAL_SCOPE_AND_L1_REVIEW_20261102.txt",
+      "sha256": "2065745bcca3be2db205b0075f60abdec9d6b52dc964f3d45f8a8efb6360c889"
+    }
+  }
+}

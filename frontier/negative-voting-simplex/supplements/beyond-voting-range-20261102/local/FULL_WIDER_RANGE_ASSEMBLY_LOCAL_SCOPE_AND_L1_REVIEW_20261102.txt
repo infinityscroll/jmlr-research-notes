@@ -1,0 +1,278 @@
+FULL WIDER-RANGE ASSEMBLY: INDEPENDENT LOCAL-SCOPE AND L1 REVIEW
+2 November 2026. New review; all prior sources and audits unchanged.
+
+AUDITED ROOT SOURCE
+ ../QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_20261101.txt
+ SHA256 7fdae77b578be86c36547a586aec8b24fce2202f0f5d7abcf695059f726e7ba1
+
+LOCAL EXTENSION ACTUALLY USED
+ OWN_CENTROID_LOCAL_COMPARISON_BEYOND_VOTING_20261101.txt
+ SHA256 5945a7c65fb51f71ad22081f014564d6b7169fea9633d35119185cb0caa529b0
+
+VERDICT
+Read and independently reconstructed the full 217-line root assembly.
+No substantive correction found. The enlarged local theorem has precisely
+the full mass-box and correlation scope needed by Section 5. The new
+mass bootstrap and aggregate-radial proxy supply the required interface
+between localization and the interior/exterior split. The final L1
+conversion, the min-form estimate, and the equality conclusion are valid
+consequences of the stated analytic inputs.
+
+There is one citation-scope distinction to preserve. The standalone new
+exterior theorem is printed with D<=C r^2/m. The root quantitative draft
+instead has D<=C(r/m^2+r^2/m), which need not imply that bound when r is
+arbitrarily small. The root draft reuses the exterior PROOF after proving
+its own proxy estimate, rather than applying the narrower theorem as a
+black box. The proof checks below justify that extension. It would be
+incorrect to replace this reasoning by an unqualified citation to the
+narrower theorem. No additional premise or change to the present draft
+is required.
+
+This review does not turn the foundational internal proof chain into an
+externally validated theorem. The covariance/support, fixed-window mass
+value, summed-radial, rank-free offset, and common-threshold inputs retain
+their stated dependency status. No empirical test is treated as a proof.
+
+1. INITIAL SCOPE AND THE BROAD MASS REDUCTION
+
+For every measurable simplex-valued assignment, sum_i B_i=0, all its
+centroids exist, and sum_i||f_i||_2^2<=1. Neither purity nor regularity
+of its fibers is needed. The finite ambient assumption N>=m-1 realizes
+the regular reference and all later regular embeddings in the same space.
+
+In the root mass reduction, retained labels have 1/(2m)<=p_j<=2/m.
+If h bad labels have total mass M, the stated bounds h<=4m^2delta and
+M<=4m delta follow by charging each discarded label's mass and count
+to (p_i-1/m)^2. With the chosen small epsilon0, k=m-h>=7m/8 and M<=1/8.
+The renormalized retained masses q_j=p_j/(1-M) lie inside [1/(4k),3/k].
+
+To check delta_q, put x_j=p_j-1/m on retained labels and
+a=sum_good x_j=h/m-M. Then exactly
+
+ q_j-1/k=(x_j-a/k)/(1-M).
+
+Thus delta_q<=delta/(1-M)^2<=2delta. The merged functions
+g_j=f_j+q_j F_bad are nonnegative, sum pointwise to one, and have these
+prescribed masses. This remains true for arbitrary fractional f and for
+empty discarded labels.
+
+Let b=E[X F_bad] and v=sum_good(q_j-1/k)B_j. Since sum_good B_j=-b,
+expanding the merged centroids B_j+q_j b gives exactly
+
+ W_good=W(g)-2b.v+|b|^2/k-delta_q|b|^2.
+
+Conditional Cauchy for the retained labels gives ||B_good||op^2<=2/m.
+Hence |v|<=sqrt(2delta_q/m). Individual rearrangement gives
+W_bad<=CL delta. If a bad label exists, delta>=1/(4m^2); combining this
+with M<=4m delta and the entropy bound for F_bad gives
+|b|^2<=Cm^2delta^2L. The positive errors are consequently <=CLdelta:
+|b|^2/k<=Cm delta^2L and 2|b||v|<=C sqrt(m)delta^(3/2)sqrt L.
+Both are paid using delta<=epsilon0/m.
+
+The one-step inequality
+w_j-w_{j+1}<=mu_j^2/[j(j-1)]
+uses only mu_{j+1}>=mu_j. It does not assume w_j itself is monotone.
+Telescoping from k to m pays w_k-w_m by ChL/m^2. Thus the printed
+broad-L2 reduction to the existing fixed-window bound is consistent.
+
+2. THE TWO LOCALIZATION STAGES ARE UNIFORM DOWN TO r=0
+
+The first energy comparison is used only for assignments with E<=r/m^2.
+It remains valid for negative E. At R_m=m^(-7/8)L^(-2), the conditions
+rL=o(1), rL^2=o(1), and mr^2=o(1) hold. The coarse numerator terms
+are therefore all bounded by Cr/m:
+
+ E<=r/m^2,
+ r(F_m-w)=O(r/m),
+ r^2 A2(g)=O(r^2L^2/m),
+ r^3+r^4=O(r/m),
+
+where the last assertion uses mr^2=o(1). This enters the broad-L2
+mass-value neighborhood. The latter yields D>=delta/2+r(V_m(p)-W)>=0
+once CrL^2<=1/2.
+
+The tangent comparison's positivity conditions are r ell<=1/2 and
+ell[1/r-(ell+2)/2]>=0; ell=O(L) is positive for large m. These follow
+from rL=o(1), not from rm<=1. Its initial residual allowances give
+
+ m^2D<=C(r+mr^2+m^2r^3).
+
+At R_m the three powers are respectively
+m^(-7/8)L^(-2), m^(-3/4)L^(-4), and m^(-5/8)L^(-6).
+They tend to zero. Thus delta<=2D=o(m^-2), giving the full coordinate
+mass box [1/(2m),3/(2m)] uniformly over the enlarged interval.
+
+For the second stage, t^2=1/(4L) and 4rL<=1 permit exact Hermite
+factorization through T_t. Fractional rare labels obey
+||T_t f_i||_2^2<=p_i^{2/(1+t^2)}, so summing gives C/m. The odd tail
+starting at degree3 and the reference even tail starting at degree4 are
+therefore at most Cr^3L^3/m and Cr^4L^4/m. At the requested endpoint,
+rL^3=m^(-7/8)L and r^2L^4=m^(-7/4) also tend to zero. This justifies
+
+ D<=C(r/m^2+r^2/m),
+ J<=C(1/m^2+r/m),
+ |W-w|<=J,
+ W/w=1+O((1/m+r)/L).
+
+The estimate |W-w|<=J follows because delta is between zero and2D.
+Every smallness condition above is monotone in positive r; no lower
+bound on r is introduced.
+
+3. ACTUAL-CENTROID AND AGGREGATE PROXY HYPOTHESES
+
+The actual-centroid operator estimate B^TB<=p_max I follows directly
+from conditional Cauchy and sum_i f_i=1. It is valid for fractional
+assignments and arbitrary extra coordinates. The refined mass cap,
+entropy row bound, and W/w bounded above and below supply a fixed
+normalized upper row cap and ||Bhat||op^2<=C/m.
+
+The offset/feasibility calculation gives R<=Delta+CL^2delta<=J because
+CrL^2<=1. The normalized radial theorem is used with its upper-row-cap
+hypothesis retained. Thus E_rad<=CL^2R and
+
+ kappa=||Bhat||op^2/w<=C/L,
+ eta=E_rad/w<=C(L/m+rL).
+
+Both tend uniformly to zero. The finite geometric proxy theorem needs
+only kappa<=1/128 and eta<=1/1024; its corollary's narrower condition
+R<=Cr/m is not needed here. The root draft correctly applies the finite
+theorem to these two quantities directly.
+
+For completeness, the direction-frame calculation is valid even for
+zero rows. Rows shorter than beta/2 occupy at most4eta of all indices;
+the others contribute at most4kappa to the direction-frame operator.
+Centering gives |m^-1sum u_i|<=sqrt eta. The unit-direction median lies
+inside |a|<=1/8, where the explicit Hessian lower bound is >=I/2, and
+has |a_*|<=2sqrt eta. Recentring and renormalizing gives
+
+ ||Z-Bhat||<= (39/7)sqrt(E_rad),
+
+whose square is below32 E_rad and hence below the printed64 E_rad.
+The exact radial identity adds ||B-Bhat||^2<=2R. The resulting proxy
+error <=CL^2R does not require any individual positive row lower bound.
+
+4. THE LOCAL THEOREM MATCHES THE ROOT'S ACTUAL SCOPE
+
+The local source with hash5945a7c6 proves
+
+ E>=delta/2+rR
+
+for every d(B)<=A/m, full mass box [1/(2m),3/(2m)], and
+0<r<=m^(-7/8)L^(-2). It assumes the actual centroids, which the root uses.
+It needs no delta<=Cr^2/m premise and no competitive E<=0 premise.
+Thus the root's interior case applies with A=1 exactly as written.
+
+This is stronger than checking the final monomials alone. The local
+source explicitly establishes the two-copy Gaussian utility law for
+every r<1, the common damping moments for r^2mL^2=o(1), and the full
+signed affine tail under rL<=c. It also re-proves the normal-moment cap
+instead of applying the old s^2<=1/(m-1) cap theorem outside its range.
+Even the full mass box gives
+
+ theta<=C L^4(r/sqrt m+r^2)
+       <=C[m^(-11/8)L^2+m^(-7/4)]=o(m^(-5/4)).
+
+Consequently the root's actual larger small-excess class is covered,
+including arbitrarily small r and rare/tall exceptional sets.
+
+5. EXTERIOR PROOF UNDER THE ROOT'S WIDER D-BUDGET
+
+The standalone exterior theorem's printed hypothesis D<=Cr^2/m cannot
+be directly deduced from the positive-excess bound. Nevertheless, after
+the root proves its proxy estimate, every remaining exterior calculation
+is valid with its displayed (3)--(6). Here is the direct check.
+
+From W<=Cw, Procrustes gives q=d/alpha<=C sqrt m. In the exterior,
+q>=c/sqrt L. The unnormalized covariance remainder gives
+
+ R>=c q/m^3>=c/(m^3sqrt L), J>=R>0.
+
+This uses neither an upper bound J<=Cr/m nor a lower row norm. The
+proxy maximum defect and actual routing loss are both nonnegative,
+and their sum is exactly (Delta+||Z-B||^2)/2<=CL^2J. The second-moment
+test uses only this budget, equal row lengths, centering, and the
+absolute tail paid by the exterior floor. The denominator bound and
+mass correction require only sum_i p_i=1. Hence the A2 bound has the
+same -CL^3J form under the root's wider budget.
+
+For the signed tail, put epsilon=||f-g0||_1/2 for a closest regular
+reference. The exact routing identity is
+R0=(Delta+d^2)/2, with epsilon<=C sqrt(mR0). The rare-label cap and
+0<=f_i,g0_i<=1 give
+
+ ||T_t(f-g0)||_2^2<=C epsilon/m,
+ ||T_t f||_2^2+||T_t g0||_2^2<=C/m.
+
+The complete signed multiplier above degree2 has operator norm
+at most(r/t^2)^3. Therefore
+
+ |H_r(f)-H_r(g0)|<=Cr^3L^3 sqrt(epsilon)/m.
+
+If J>=d^2, then R0<=J and the exterior floor yields
+|Hdiff|/J<=Cr^3m^(3/2)L^(27/8). If J<d^2, use R0<=d^2,
+d=alpha q, and J>=cq/m^3 to get
+
+ |Hdiff|/J<=Cr^3m^(7/4)L^(13/4)q^(-1/2)
+           <=Cr^3m^(7/4)L^(7/2).
+
+These two cases use Delta<=J, the exterior floor, W<=Cw, and the rare
+mass cap. Neither uses the old upper ceiling J<=Cr/m. This establishes
+the extension of the exterior proof needed by the quantitative draft.
+
+At the requested endpoint, the two relative energy errors are exactly
+
+ rL^3=m^(-7/8)L,
+ r^2m^(7/4)L^(7/2)=L^(-1/2).
+
+Both vanish. Thus E>=D/2 throughout the exterior branch for one
+sufficiently large absolute m0. Since delta+rR<=3D, this combines with
+the local branch to prove E>=(delta+rR)/6 on E<=r/m^2.
+
+6. EXACT L1 CONVERSION AND THE FINAL QUANTIFIERS
+
+The covariance estimate at every distance uses only W<=Cw and gives
+d^2<=Cm^(3/2)L R. It is independent of r, including at singular Gram
+matrices and for dimension-opening variations.
+
+For the nearest regular centroid B0, its score gap between first and
+second place is alpha G, where G is the top-two gap of independent
+standard normals. Its density is at most mu_m/alpha=m-1 over the whole
+nonnegative line. If a(X)=1-f_{g0(X)}(X) and epsilon=E a, then 0<=a<=1
+and epsilon=||f-g0||_1/2. Layer cake, allowing a to depend on every
+ambient coordinate, gives
+
+ epsilon^2/[2(m-1)]<=E[a alpha G]
+ <=w-<B0,B><=sqrt(w)d.
+
+Squaring proves exactly
+
+ ||f-g0||_1^4<=64(m-1)^2 w d^2.
+
+Taking the regular-orbit infimum preserves this upper bound, and
+w=O(L/m) yields d1(f)^4<=Cm^(5/2)L^2R. The coefficient64 corresponds
+to FULL Gaussian L1 distance; there is no hidden factor-of-two convention.
+
+On E<=r/m^2, the preceding energy and L1 bounds give the unsaturated
+term in (T). On E>r/m^2, the min-form assertion follows after taking
+c<=1. A negative E is necessarily in the first branch and is contradicted
+by its nonnegative lower bound; nonnegativity was not assumed at entry.
+
+At E=0, delta=0 and d1=0. In each fixed finite ambient dimension, the
+regular embedding orbit is compact. Converging embeddings give pointwise
+convergence of winner labels away from null tie hyperplanes and hence
+Gaussian-L1 convergence. Thus zero orbit distance is attained and forces
+f to be a deterministic regular assignment almost surely. This covers
+fractional f and proves the stated equality classification.
+
+Finally R_m/(1/(m-1))=(m-1)m^(-7/8)L^(-2) tends to infinity. Choosing
+one larger absolute m0 ensures the wider range includes the voting
+interval. The Gaussian two-copy law remains defined because R_m<1.
+No extension of the discrete m-symbol channel beyond its original
+nonnegative transition-probability interval is used in this proof.
+
+CONCLUSION
+No theorem or proof correction is requested for the pinned root draft.
+Preserve the distinction between applying a theorem within its stated
+scope and reusing its proof under newly checked hypotheses, particularly
+for the positive-excess exterior budget. The present draft supplies that
+reasoning, and the local range/mass assumptions and L1 conclusion match.

@@ -1,0 +1,265 @@
+WHOLE-ASSEMBLY REVIEW OF THE WIDER-RANGE QUANTITATIVE CANDIDATE
+2 November 2026. Covariance/proxy branch, independent reconstruction.
+
+EXACT REVIEWED TARGET
+
+  ../QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_20261101.txt
+  SHA-256 7fdae77b578be86c36547a586aec8b24fce2202f0f5d7abcf695059f726e7ba1
+
+VERDICT
+
+No blocking change was found in this whole assembly. In particular,
+positive excess E<=r/m^2 changes the normalized deficit ceiling to
+J<=C(m^-2+r/m), but every proxy and exterior estimate still follows.
+The additional L/m in E_rad/w is uniformly small. Sections 4-6 retain
+the fixed row cap, rank-independent covariance floor, and exact signed
+error accounting needed for the conclusion.
+
+This review checked the complete root text, independently reconstructed
+the new broad-mass redistribution algebra and both localization budgets,
+checked that the local extension's stated hypotheses match the root use,
+and rederived all proxy/exterior/quantitative steps. It does not claim an
+independent re-proof of every foundational local-cap, prescribed-mass,
+or external maximum-comparison theorem. Those remain the analytic inputs
+identified in the root draft and their separate audits.
+
+There is one important scope qualification, already handled correctly by
+the reviewed draft: the previously written conditional exterior theorem
+in this directory has the competitive hypothesis D<=Cr^2/m. That theorem
+must NOT be invoked verbatim for arbitrary positive E<=r/m^2. Its proof
+extends because its actual geometric and tail hypotheses are the weaker
+ones verified below. The root text explicitly uses these estimates with
+(3)-(6), so no further change is required to resolve this qualification.
+
+1. BROAD MASS REDISTRIBUTION — ALGEBRA AND EDGE CASES
+
+Let A be the labels outside [1/(2m),2/m], h=|A|, k=m-h, and M=sum_A p_i.
+With delta<=1/(32m), the exact elementary estimates give
+
+  h<=4m^2 delta<=m/8,
+  M<=2m delta<=1/16,
+
+so the root's weaker M<=4m delta<=1/8 is valid. The second inequality
+follows from t<=2(t-1)^2 outside [1/2,2] with t=mp_i. Thus k>=7m/8,
+and q_j=p_j/(1-M) belongs to [1/(4k),3/k]. Centering around the mean on
+the retained coordinates gives delta_q<=2delta.
+
+The fractional reassignment g_j=f_j+q_j F_bad is a simplex assignment:
+it is nonnegative and its coordinates sum pointwise to one. Its centroids
+are c_j=B_j+q_j b, where b=E[X F_bad]. Define
+v=sum_good(q_j-1/k)B_j. Since sum_good B_j=-b, expansion gives exactly
+
+  W_good=W(g)-2b.v+|b|^2/k-delta_q|b|^2.
+
+The sign of the final term is correct; the cross term is bounded in
+absolute value. Conditional Cauchy gives ||B_good||op^2<=2/m, so
+|v|<=sqrt(2delta_q/m). Entropy bounds on bad labels give
+W_bad<=CL delta, including zero labels by continuity.
+
+If A is nonempty, delta>=1/(4m^2). The function x^2 log(1/x) is
+increasing on (0,1/8], so M<=4m delta and 4m delta>=1/m yield
+|b|^2<=C m^2 delta^2 L. This does not assume that M is bounded below:
+arbitrarily tiny positive M and M=0 are both covered. Consequently
+2|b||v| and |b|^2/k are each at most CL delta.
+
+Finally, monotonicity of mu_j, rather than any unproved monotonicity of
+w_j, gives w_j-w_(j+1)<=mu_j^2/[j(j-1)]. Telescoping over h discarded
+labels costs at most C hL/m^2<=CL delta. The existing fixed-window
+k-label first-moment theorem therefore yields W<=w+CL^2delta.
+Its dimensional hypothesis is met because N>=m-1>=k-1. Taking the
+supremum gives the same bound for V_m(p); no new optimizer attainment
+argument is needed for this deduction.
+
+2. THE TWO MASS BOOTSTRAPS WITH POSITIVE EXCESS
+
+Assume E<=r/m^2 and r<=R_m=m^(-7/8)/L^2. The coarse inequality has
+numerator at most
+
+  C[r/m+r^2L^2/m+r^3],
+
+and denominator bounded away from zero. Here E<=r/m^2 is absorbed by
+r/m, r^4 by r^3, r^2L^2/m by r/m because rL^2=o(1), and r^3 by r/m
+because mr^2=o(1). Thus delta<=Cr/m<=epsilon0/m uniformly, unlocking
+the broad mass-value bound before any coordinatewise mass lower bound.
+
+That bound gives the sign and coercivity
+
+  D>=delta/2+r[V_m(p)-W]>=0.
+
+The positive-part degree-two tangent has the displayed coefficients
+ell=mw-1 and c_(m,r)=ell[1/r-(ell+2)/2]. They have the required signs
+because rL=o(1). Its preliminary parity bound gives
+
+  D<=C[r/m^2+r^2/m+r^3].
+
+Multiplication by m^2 yields the endpoint terms
+
+  r <=m^(-7/8)L^-2,
+  mr^2 <=m^(-3/4)L^-4,
+  m^2r^3 <=m^(-5/8)L^-6.
+
+All tend to zero uniformly in r. Since delta<=2D, this proves
+|p_i-1/m|<=sqrt(delta)=o(1/m), which is enough to enter the fixed
+mass box [1/(2m),3/(2m)] for every label.
+
+Rare-label hypercontractivity at t^2=1/(4L) then bounds the complete odd
+and even tails by Cr^3L^3/m and Cr^4L^4/m. Its factorization is permitted
+because 4rL=o(1). Retaining the same positive degree-two tangent gives
+
+  D<=C[E+r^2/m+r^3L^3/m+r^4L^4/m]
+    <=C[r/m^2+r^2/m].
+
+The final simplification uses rL^3=o(1) and r^2L^4=o(1), both valid at
+R_m. Therefore the root's positive-excess localization is exactly
+
+  J=D/r<=C(m^-2+r/m),
+  delta<=2D, |W-w|<=J,
+  W/w=1+O((1/m+r)/L).
+
+Negative E is allowed throughout: its upper bound is the only entry
+condition, and D>=0 is independently supplied by the broad mass bound.
+
+3. BALANCED OFFSETS, NORMALIZED CAP, AND THE CHANGED PROXY BUDGET
+
+The refined mass box and entropy rearrangement give |B_i|<=C alpha.
+The preceding scale estimate keeps s=sqrt(W/w) bounded above and below,
+so the row cap for Bhat=B/s is a fixed absolute constant. It does not
+depend on r, m, or N. This is the correct hypothesis for the summed-row
+theorem; its cap-free variant is false.
+
+Feasibility F_p(B)>=W and the balanced offset certificate yield
+
+  R<=Delta/2+CL sqrt(R delta)
+   <=Delta+CL^2delta<=Delta+delta/r=J,
+
+after Young's inequality and CrL^2<=1. The exact radial identity gives
+R_U(Bhat)<=C R, and summed radial coercivity yields
+E_rad<=CL^2R. Actual-centroid Cauchy gives ||Bhat||op^2<=C/m.
+Thus the two finite-proxy parameters satisfy
+
+  kappa=||Bhat||op^2/w<=C/L,
+  eta=E_rad/w<=C(L/m+rL)
+                   <=C[L/m+m^(-7/8)/L].
+
+Both vanish uniformly in the entire correlation interval. For all
+sufficiently large m they obey kappa<=1/128 and eta<=1/1024, so the
+explicit finite proxy theorem applies. Its treatment of zero rows,
+unit-direction median, and same-span conclusion is valid at this scale.
+It gives
+
+  ||Z-Bhat||^2<=64E_rad,
+  ||Z-B||^2<=CL^2R<=CL^2J.
+
+The extra m^-2 in J changes eta by L/m only. It causes no singular-r
+failure as r tends to zero and requires no row-lower-bound theorem.
+
+4. LOCAL-EXTENSION HYPOTHESIS MATCHING
+
+The new local source states its theorem for arbitrary measurable
+assignments with actual-centroid distance d<=A/m and masses in the fixed
+box, throughout 0<r<=R_m. It does not require E<=0, delta<=Cr^2/m, or
+individual row lower bounds. The root uses A=1, after its mass bootstrap,
+so those stated hypotheses are met even with positive excess.
+
+I checked the new correlation-dependent exponents against the root use.
+The source replaces the old voting-range invocations by a regular
+potential calculation valid for r<1, an affine-tail range rL<=c_*, and
+an all-amplitude cap proved from moment/fiber estimates. Its damping
+condition r^2mL^2=o(1) and full-mass-box forcing ceiling both hold at
+R_m. In particular the actual full-box ceiling is
+
+  theta<=CL^4(r/sqrt(m)+r^2),
+  m^(5/4)theta<=C[m^(-1/8)L^2+m^(-1/2)] ->0.
+
+Thus no inappropriate stronger mass-localization rate is needed for
+the local invocation. The displayed local error coefficients reduce to
+
+  rL^2=m^(-7/8),
+  r^2mL^7=m^(-3/4)L^3,
+  r^3L^10=m^(-21/8)L^4,
+  r sqrt(m)L^13=m^(-3/8)L^11,
+  r^2mL^11=m^(-3/4)L^7.
+
+They tend to zero; the root's endpoint and uniformity claims match that
+source. This is hypothesis/exponent verification against the new local
+derivation, not a replacement for its full foundational cap audit.
+
+5. EXTERIOR COMPARISON WITH THE WEAKER POSITIVE-EXCESS CEILING
+
+For d>1/m, let q=d/alpha and e=||BB^T/alpha^2-P||_F. The scale bound
+gives q<=C sqrt(m), while exteriority gives q>=c/sqrt(L). The independent
+global covariance remainder therefore supplies
+
+  J>=R>=c q/m^3>=c/(m^3 sqrt(L)),
+  d^2<=C m^(3/2)L R.
+
+Every subsequent exterior input is one of:
+  (i) the fixed actual mass cap;
+  (ii) Delta<=J;
+  (iii) the deficit-relative proxy cost ||Z-B||^2<=CL^2J;
+  (iv) this exterior covariance floor;
+  (v) 4rL<=1 for signed Hermite factorization.
+
+All five have just been proved. No step after the proxy needs the old
+upper bound J<=Cr/m or D<=Cr^2/m. In the quadratic certificate,
+
+  w-<Z,B>=(Delta+||Z-B||^2)/2<=CL^2J
+
+pays both the free-maximum defect and the actual routing error. The
+positive-part tensor square converts them into -CL^3J. Its absolute
+tail CL^2 exp(-16L) is paid by the exterior floor, independently of r.
+The resulting A2 inequality therefore holds at positive excess.
+
+For the entire signed higher tail, the two cases J>=d^2 and J<d^2
+use only Delta<=J, the regular routing identity, and the same floor.
+They give respectively
+
+  |Hdiff|/J<=Cr^3m^(3/2)L^(27/8),
+  |Hdiff|/J<=Cr^3m^(7/4)L^(7/2).
+
+The second dominates the first. Inserting these estimates into the
+exact signed objective gives the root's exterior comparison
+
+  E>=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)]>=D/2.
+
+At R_m its two relative errors are m^(-7/8)L and L^(-1/2). Their
+decay is uniform for all smaller positive r. Since delta+rR<=3D,
+this and the local inequality establish E>=(delta+rR)/6 in the
+whole small-excess class. No assumption E>=0 was used to reach it.
+
+6. QUANTITATIVE ASSEMBLY AND EQUALITY
+
+The all-distance covariance estimate is used within the small-excess
+class, where W<=Cw has been established. Procrustes and monotonicity of
+e^2 min(1,c/(Le)) give d^2<=Cm^(3/2)L R at every distance, including
+the tiny interior and radial cases. The exact regular top-two margin
+argument is independent of r and of the original masses, and gives
+
+  d1(f)^4<=64(m-1)^2 w d^2<=C m^(5/2)L^2R.
+
+Combining this with E>=(delta+rR)/6 proves the claimed lower bound
+when E<=r/m^2. For E>r/m^2, the minimum formulation is immediate after
+reducing its absolute constant to at most one. This dichotomy includes
+all measurable fractional rules.
+
+At E=0, the positive threshold r/m^2 forces delta=d1=0. The orthogonal
+embedding manifold is compact in each finite N, and convergent regular
+scores converge pointwise off Gaussian-null tie hyperplanes. Dominated
+convergence gives compactness of the regular assignment orbit in L1.
+Thus distance zero identifies an actual regular rule up to null sets.
+
+The ratio R_m/(1/(m-1)) is asymptotic to m^(1/8)/L^2 and tends to
+infinity, so the stated range extension is correct. The separate warning
+that the more negative m-symbol channel is inadmissible beyond the
+original voting interval is also correct; no wider discrete consequence
+is being smuggled into this Gaussian conclusion.
+
+CONCLUSION AND PRESERVATION
+
+The exact hash-pinned root assembly is consistent with the new mass,
+zero-row proxy, and local-extension statements. I found no additional
+sign, rank, normalization, positive-excess, or uniform-r error requiring
+a change before treating it as a completed internal proof candidate.
+This conclusion does not confer external mathematical validation on its
+foundational inputs. The original manuscripts, prior quantitative proofs,
+and prior source files were preserved. Only this new review was written.

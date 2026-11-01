@@ -1,0 +1,176 @@
+{
+  "method": "Exact rational exponent substitution; analytic lemmas are not machine-verified.",
+  "endpoint": "r=m^(-7/8)*(1+log(m))^(-2)",
+  "script_sha256": "3903eb1597a9e7e7747236eb2fc76d3553d4fce49718910b4cf9ab18690a9a48",
+  "conditions": [
+    {
+      "condition": "trace_and_factorization_rL",
+      "before": {
+        "r": "1",
+        "m": "0",
+        "L": "1"
+      },
+      "after": {
+        "m": "-7/8",
+        "L": "-1"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "boundary_trace_at_r_over_t",
+      "before": {
+        "r": "2",
+        "m": "0",
+        "L": "2"
+      },
+      "after": {
+        "m": "-7/4",
+        "L": "-2"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "range_exponential",
+      "before": {
+        "r": "1",
+        "m": "0",
+        "L": "3/2"
+      },
+      "after": {
+        "m": "-7/8",
+        "L": "-1/2"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "damping_q_eta_rank",
+      "before": {
+        "r": "2",
+        "m": "1",
+        "L": "2"
+      },
+      "after": {
+        "m": "-3/4",
+        "L": "-2"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "odd_square_absorption",
+      "before": {
+        "r": "2",
+        "m": "0",
+        "L": "8"
+      },
+      "after": {
+        "m": "-7/4",
+        "L": "4"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "mass_offset",
+      "before": {
+        "r": "1",
+        "m": "0",
+        "L": "2"
+      },
+      "after": {
+        "m": "-7/8",
+        "L": "0"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "mass_second_chaos",
+      "before": {
+        "r": "2",
+        "m": "1",
+        "L": "7"
+      },
+      "after": {
+        "m": "-3/4",
+        "L": "3"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "mass_signed_tail",
+      "before": {
+        "r": "3",
+        "m": "0",
+        "L": "10"
+      },
+      "after": {
+        "m": "-21/8",
+        "L": "4"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "remainder_second_chaos",
+      "before": {
+        "r": "1",
+        "m": "1/2",
+        "L": "13"
+      },
+      "after": {
+        "m": "-3/8",
+        "L": "11"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "remainder_signed_tail",
+      "before": {
+        "r": "2",
+        "m": "1",
+        "L": "11"
+      },
+      "after": {
+        "m": "-3/4",
+        "L": "7"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "cap_ceiling_full_mass_box",
+      "before": {
+        "r": "1",
+        "m": "3/4",
+        "L": "4"
+      },
+      "after": {
+        "m": "-1/8",
+        "L": "2"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "cap_ceiling_odd_forcing",
+      "before": {
+        "r": "2",
+        "m": "5/4",
+        "L": "4"
+      },
+      "after": {
+        "m": "-1/2",
+        "L": "0"
+      },
+      "tends_to_zero": true
+    },
+    {
+      "condition": "cap_ceiling_score_radius",
+      "before": {
+        "r": "1",
+        "m": "1/4",
+        "L": "4"
+      },
+      "after": {
+        "m": "-5/8",
+        "L": "2"
+      },
+      "tends_to_zero": true
+    }
+  ]
+}

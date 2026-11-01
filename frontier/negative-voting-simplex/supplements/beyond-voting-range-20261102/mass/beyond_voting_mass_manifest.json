@@ -1,0 +1,51 @@
+{
+  "status": "New analytical sources; larger-range full-noise theorem still requires independent geometry and local-noise work.",
+  "inputs": [
+    {
+      "path": "../../../dependency_review/proof_sources/GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt",
+      "sha256": "11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt",
+      "sha256": "6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt",
+      "sha256": "45e2cc459bee383a1317a574011c3fa2a63e64b50f7195d744a4e3a9fa0c0aea"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt",
+      "sha256": "251c3c7ce7e6b3e7fce8d77079d630d815e223ca59c74570940f3cc21f573ca6"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/GLOBAL_SINGLE_ROW_COVARIANCE_COERCIVITY_AND_ACTUAL_ROW_LOWER_BOUND_20261031.txt",
+      "sha256": "e33c710eeda31107dbd895c17cd1fe7b1771afd2e361c5713de82b31c9e014f4"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt",
+      "sha256": "41d649be507020bb178315c9ac6249aa98a6f6e9b432fd6964613ade3ae7d318"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt",
+      "sha256": "1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57"
+    },
+    {
+      "path": "../additional_dependencies/HYPERCONTRACTIVE_TAILS_AND_SHARP_NEGATIVE_LOCALIZATION_CONSTANT_20261031.txt",
+      "sha256": "3128d5fc64639a9768684ab993e0bdc08499683c5a9a8b533d7af976a3c45b48"
+    },
+    {
+      "path": "../../global-quantitative-stability-20261101/mass/MASS_LOCALIZATION_ADVERSARIAL_AUDIT_20261101.txt",
+      "sha256": "5ffb3295577bfd9432fde381be91873e41599fb610bfe249e602ff6ec00ce4fe"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "BEYOND_VOTING_COMPETITIVE_MASS_LOCALIZATION_20261101.txt",
+      "sha256": "849b68f8b7c2f89457a02d2743e8ebd58535bca0b9e9a1b0a3cfed00069f7328"
+    },
+    {
+      "file": "BROAD_L2_MASS_VALUE_BOUND_WITH_ZERO_LABELS_20261101.txt",
+      "sha256": "f8647e60a086105091e2fceb94974276369dac423a2c7dbc28ec73ad7075b2ce"
+    }
+  ]
+}

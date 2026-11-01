@@ -1,8 +1,16 @@
 # Research proofs and reproducible notes
 
-Substantial results and reproducible experiments through 1 November 2026.
+Substantial results and reproducible experiments through 2 November 2026.
 These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
+
+## 2 November — Gaussian stability beyond the voting range
+
+[The new candidate theorem](frontier/negative-voting-simplex/supplements/beyond-voting-range-20261102/README.txt) extends the negative Gaussian interval to magnitude at most m^(-7/8)/(1+log m)^2 for every sufficiently large alphabet. This eventually exceeds the voting cutoff 1/(m-1) by a factor tending to infinity. It retains a quantitative bound on Gaussian-L1 distance to the regular simplex and allows arbitrary measurable fractional rules and unequal masses.
+
+[Final proof](frontier/negative-voting-simplex/supplements/beyond-voting-range-20261102/QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_V2_20261102.txt) · [Mass review](frontier/negative-voting-simplex/supplements/beyond-voting-range-20261102/mass/WIDER_V2_FINAL_MASS_ASSEMBLY_REVIEW_20261102.txt) · [Proxy/exterior review](frontier/negative-voting-simplex/supplements/beyond-voting-range-20261102/proxy/WHOLE_WIDER_RANGE_V2_REVIEW_AND_SIGN_CORRECTION_20261102.txt) · [Local/L1 review](frontier/negative-voting-simplex/supplements/beyond-voting-range-20261102/local/FINAL_V2_WIDER_RANGE_LOCAL_SCOPE_AND_L1_REVIEW_20261102.txt)
+
+Three internal reviews support the revised assembly. Its new ingredients handle empty labels, construct the equal-row comparison without individual row lower bounds, and extend the local proof to the larger range. **External mathematical validation and priority remain open.** The threshold is existential, the full conjecture remains open, and the discrete voting channel retains its original cutoff.
 
 ## 1 November — global stability for large alphabets
 

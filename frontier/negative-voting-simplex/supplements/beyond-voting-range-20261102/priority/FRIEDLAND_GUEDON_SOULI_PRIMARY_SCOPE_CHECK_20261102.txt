@@ -1,0 +1,32 @@
+BOUNDED PRIMARY-SOURCE SCOPE CHECK — 2 NOVEMBER 2026
+
+Read Friedland–Guédon–Souli, On partition functions of Gaussian random
+variables, arXiv:2609.38904v1 (submitted30 September2026), full text:
+https://arxiv.org/pdf/2609.38904v1
+Metadata: https://arxiv.org/abs/2609.38904v1
+
+Actual scope (pp3–5): Theorem1.1 compares generalized means of
+Z_beta(X)=sum_i exp(beta X_i) over centered Gaussian vectors with
+unit-diagonal PSD covariance. The regular simplex maximizes for q<1
+and minimizes for q>1. Theorems1.2–1.3 give strong covariance convexity
+and centroid/Gram-shape stability for E[Z_beta(X)^q], requiring q>1
+and beta!=0. Theorem1.4 treats positive log-concave scalar profiles;
+Corollary1.5 adds R−11^T/N>=0. Its identical-profile case includes
+common-threshold indicators; Remark1.6 explicitly identifies the
+extension of Mulgund’s comparison.
+
+Overlap beyond Gaussian maxima: finite-temperature partition functions,
+quantitative covariance stability, and general log-concave-profile
+comparison. These deserve acknowledgment where relevant.
+
+Comparison target: wider-range V2,
+SHA f48bc037dc690c6a1c8650533e8909a41c58b1d3d2d7bb2b2375183b639a9b98.
+I found no stated theorem implying its arbitrary-mass, fractional-rule
+OU noise-stability inequality or Gaussian-L1 modulus. The paper’s q and
+beta are moment/temperature parameters, not the noise correlation r.
+Its stability controls a different functional and optimization domain;
+no conversion to the V2 claim is supplied here.
+
+This is a single-paper overlap check, not an exhaustive literature
+review, priority determination, correctness endorsement, or proof that
+no further implication exists. No authors were contacted.

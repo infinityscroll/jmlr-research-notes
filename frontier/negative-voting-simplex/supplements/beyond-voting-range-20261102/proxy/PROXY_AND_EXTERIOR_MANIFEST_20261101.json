@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-01",
+  "scope": "New exact equal-row same-span proxy without individual row lower bounds, plus conditional exterior extension to r<=m^(-7/8)/(1+log m)^2",
+  "verdict": "Finite geometric theorem proved with explicit constants. Exterior extension proved conditional on mass localization and existing analytic inputs. No claim that the enlarged-range mass or local full-noise gates are settled.",
+  "files": {
+    "EXTERIOR_COMPARISON_BEYOND_VOTING_USING_AGGREGATE_RADIAL_DEFECT_20261101.txt": "3bbd0c9e26747c5098e51c92e6a3d388e16745e994a9dca9f08af5e746fac564",
+    "GLOBAL_EQUAL_ROW_PROXY_WITHOUT_INDIVIDUAL_ROW_LOWER_BOUND_20261101.txt": "fa3f466aa056153362531a0d9ef5f0551cc7c6259b9d61edbd2bf270d41a3532"
+  }
+}

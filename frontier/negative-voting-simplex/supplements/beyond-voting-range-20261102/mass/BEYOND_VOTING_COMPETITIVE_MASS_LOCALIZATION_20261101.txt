@@ -1,0 +1,196 @@
+COMPETITIVE MASS LOCALIZATION BEYOND THE VOTING INTERVAL
+1 November 2026. New derived theorem; no frozen source changed.
+This establishes localization only, not the full wider-range simplex theorem.
+
+THEOREM
+Put L=1+log m and r_max=m^(-7/8)/L^2. There are absolute C,m0 such that,
+for every m>=m0, finite N>=m-1,0<r<=r_max, and every measurable
+simplex-valued f with S_-r(f)<=S_-r(g),
+
+ p_i in[1/(2m),3/(2m)],
+ 0<=D<=C r^2/m, delta<=2D,
+ 0<=V_m(p)-W<=D/r, |W-w_m|<=D/r,
+ W/w_m=1+O(r/L),                                     (L1)
+
+where p_i=E f_i, B_i=E[X f_i], W=sum_i|B_i|^2,
+delta=sum_i(p_i-1/m)^2 and D=delta+r(w_m-W).
+All constants and the threshold are uniform in r and finite N.
+
+The mass-value input is the new broad L2 lemma
+BROAD_L2_MASS_VALUE_BOUND_WITH_ZERO_LABELS_20261101.txt,
+SHAf8647e60a086105091e2fceb94974276369dac423a2c7dbc28ec73ad7075b2ce,
+which gives W<=V_m(p)<=w_m+C L^2delta whenever delta<=epsilon0/m,
+with epsilon0=1/32 and NO coordinatewise mass bounds.
+
+The predecessor45e2cc45 and251c3c7c are stated on the voting interval.
+They are NOT invoked outside their stated hypotheses. Their elementary
+algebraic ingredients are rederived below for the new range.
+
+1. COARSE LOCALIZATION INTO THE BROAD L2 MASS BALL
+For any0<r<1, let a_j(f)>=0 be the summed degree-j Hermite weights.
+Then a_0=P=sum p_i^2, a_1=W, and sum_j a_j(f)=sum_i E f_i^2<=1.
+Parity therefore gives
+
+ S_-r(f)>=P-rW-r^3,
+ S_-r(g)<=1/m-rw_m+r^2 A2g+r^4.
+
+Competitiveness implies
+
+ delta-r(W-w_m)<=r^2 A2g+r^3+r^4.                      (L2)
+
+The scalar Bregman/rearrangement calculation of45e2cc45 is independent
+of r and gives W<=F_m+B_m delta, where
+F_m=m I(1/m)^2 and B_m=max(2log m+1,6). Its Gaussian maximum asymptotics
+also give F_m-w_m=O(1/m), A2g=O(L^2/m). Thus, whenever rB_m<=1/2,
+
+ delta<=C[r/m+r^2 L^2/m+r^3].                         (L3)
+
+For r<=r_max the denominator condition holds for large m and
+
+ m delta<=C[r+r^2 L^2+mr^3]=o(1)
+
+uniformly over the interval. Hence delta<=epsilon0/m eventually, so the
+new broad mass-value bound applies. It yields
+
+ D>= (1-CrL^2)delta+r[V_m(p)-W]
+   >=delta/2+r[V_m(p)-W]>=0.                          (L4)
+
+Here rL^2<=m^(-7/8)->0. This step is established without first assuming
+that all masses are positive or comparable with1/m.
+
+2. RETAIN DEGREE TWO TO REACH A FIXED RELATIVE MASS BOX
+The universal conditional-Jensen inequality is
+
+ A2(f)>=(W-P)_+^2/(2P).
+
+It applies in every dimension to every fractional assignment. The positive
+part makes its convex-perspective tangent valid even for W<=P. Put
+ell=mw_m-1, F0=ell^2/(2m), Delta2=A2g-F0. The reference maximum variance
+calculation of251c3c7c gives0<=Delta2<=C/m independently of r.
+For every r>0 the exact tangent identity is
+
+ A2(f)>=F0-(ell/r)D+c_(m,r)delta,
+ c_(m,r)=ell[1/r-(ell+2)/2].                           (L5)
+
+For0<r<=r_max and large m, ell>0,c_(m,r)>=0 and1-r ell>=1/2.
+Retaining degree two in the same parity estimates yields
+
+ (1-r ell)D+r^2 c_(m,r)delta
+       <=r^2 Delta2+r^3+r^4.
+
+Together with(L4), this gives the preliminary estimate
+
+ D<=C(r^2/m+r^3), delta<=2D.                           (L6)
+
+At the new upper endpoint,
+
+ m^2(r^2/m+r^3)
+ <=m^(-3/4)L^(-4)+m^(-5/8)L^(-6)=o(1).
+
+Consequently m sqrt(delta)=o(1), and every mass satisfies
+p_i in[1/(2m),3/(2m)] for all sufficiently large m. This preliminary
+bootstrap is sufficient to unlock rare-label smoothing. It does not yet
+claim the stronger D=O(r^2/m), since r^3 may dominate r^2/m here.
+
+3. RARE-LABEL SMOOTHING PAYS THE ENTIRE ODD AND EVEN TAILS
+Use classical dimension-free Gaussian hypercontractivity in correlation
+coordinates: ||T_theta h||_q<=||h||_p for1<p<=q and
+0<=theta<=sqrt((p-1)/(q-1)). The exact normalization and the primary
+source read are recorded below.
+
+Let t^2=1/(4L), and put q0=1+t^2. For any simplex assignment with
+p_i<=3/(2m), boundedness0<=f_i<=1 gives
+
+ sum_i||T_t f_i||_2^2
+ <=sum_i||f_i||_(q0)^2
+ <=sum_i p_i^(2/q0)
+ <=m(3/(2m))^(2/q0)<=C/m.                              (L7)
+
+The last constant is absolute because m^(2t^2/(1+t^2))<=exp(1/2).
+The same bound holds for g. For r<=t^2, nonnegative Hermite weights imply,
+for each integer K>=0,
+
+ sum_(j>=K) r^j a_j(f)
+ <=(r/t^2)^K sum_j t^(2j)a_j(f)
+ <=C(4Lr)^K/m.                                        (L8)
+
+The new range satisfies r<=t^2 for large m. In particular
+
+ sum_(odd j>=3) r^j a_j(f)<=C r^3 L^3/m,
+ sum_(even j>=4) r^j a_j(g)<=C r^4 L^4/m.              (L9)
+
+These are bounds on the entire tails, not finite-chaos truncations.
+Substitute them for the earlier r^3,r^4 allowances while retaining
+the same tangent(L5). The result is
+
+ (1-r ell)D+r^2 c_(m,r)delta
+ <=r^2 Delta2+C r^3 L^3/m+C r^4 L^4/m.
+
+Since rL^3<=m^(-7/8)L->0 and r^2L^4<=m^(-7/4)->0,
+(L4) now gives
+
+ 0<=D<=C r^2/m.                                       (L10)
+
+Therefore delta<=2D, V_m(p)-W<=D/r, and
+|W-w_m|=|delta-D|/r<=D/r. Since w_m is comparable with L/m,
+W/w_m=1+O(r/L). This proves every assertion of(L1).
+
+4. EXACT OUTPUT FOR THE NEXT GEOMETRIC STEP, AND A REAL OBSTRUCTION
+The actual entropy row cap and bounded scale let the rank-free balanced
+offset argument give
+
+ R_U(B)<=w_m-W+C L^2delta<=D/r=:J<=C r/m.
+
+The global summed-row theorem then yields, after normalizing Bhat to norm
+sqrt(w_m),
+
+ E_rad=sum_i(|Bhat_i|-sqrt(w_m/m))^2<=C L^2 R_U(B),
+ E_rad/w_m<=C rL=o(1).
+
+These are legitimate downstream outputs. They do NOT imply the old
+uniform individual row lower bound at the new endpoint. The existing
+one-row estimate gives only
+
+ max_i| |Bhat_i|^2/(w_m/m)-1|<=C sqrt(mr/L).
+
+At r=r_max its upper bound equals C m^(1/16)/L^(3/2), which eventually
+diverges. It cannot prove that every row is bounded away from zero.
+Consequently the old direct geometric-median argument, which normalizes
+every row using a uniform lower bound, must not be imported verbatim.
+The broad mass theorem and this localization theorem do not by themselves
+prove a larger-range full-noise result. A separate replacement proxy
+construction must handle small or zero rows. At this source's writing,
+that replacement is being developed independently; it is not assumed
+proved here and no unverified source is cited as an input.
+
+5. INPUT PROVENANCE AND PRECISE CLASSICAL HYPOTHESIS
+45e2cc459bee383a1317a574011c3fa2a63e64b50f7195d744a4e3a9fa0c0aea:
+FULL_ADMISSIBLE_NEGATIVE_RANGE_MASS_LOCALIZATION_20261031.txt,
+only its scalar Bregman/rearrangement bound, reference A2 formula and
+Gaussian maximum asymptotics, all independent of the old r interval.
+
+251c3c7ce7e6b3e7fce8d77079d630d815e223ca59c74570940f3cc21f573ca6:
+POSITIVE_SECOND_CHAOS_AND_LOG_FREE_NEGATIVE_LOCALIZATION_20261031.txt,
+only its universal positive-part inequality/tangent and Delta2=O(1/m).
+
+3128d5fc64639a9768684ab993e0bdc08499683c5a9a8b533d7af976a3c45b48:
+HYPERCONTRACTIVE_TAILS_AND_SHARP_NEGATIVE_LOCALIZATION_CONSTANT_20261031.txt,
+read for the rare-label mechanism. The new admissibility r<=1/(4L) is
+checked explicitly above rather than inherited from its voting scope.
+
+Classical hypercontractivity is the Gaussian theorem of Nelson. Its
+precise real correlation statement was read on1 November2026 in the
+primary research paper P. Ivanisvili and F. Nazarov, On Weissler's
+conjecture on the Hamming cube I, arXiv:1907.11359v3, Section1.2, page2:
+https://arxiv.org/pdf/1907.11359
+It states dimension-independent Gaussian Lp-to-Lq contractivity when
+1<=p<=q<infinity and |theta|<=sqrt((p-1)/(q-1)). Here p=1+t^2>1,q=2,
+theta=t, so the condition holds at equality. Only real nonnegative
+Gaussian correlation is used. This is not an application of an unproved
+complex Hamming-cube conjecture. The original Nelson paper is identified
+there as The free Markoff field, JFA12(1973),211-227; its full text was
+not separately read in this audit.
+
+All new estimates are deterministic analytic arguments. No numerical
+experiment, full-noise existence, purity, stationarity, or interface
+regularity assumption enters the proof.

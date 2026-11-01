@@ -1,0 +1,9 @@
+{
+  "note": "FRIEDLAND_GUEDON_SOULI_PRIMARY_SCOPE_CHECK_20261102.txt",
+  "sha256": "0e7b83edf5f5d486ed0022017b6a9143c42eaad03d68030fc9d72cc7766c14bf",
+  "primary_version": "arXiv:2609.38904v1",
+  "primary_full_text": "https://arxiv.org/pdf/2609.38904v1",
+  "primary_metadata": "https://arxiv.org/abs/2609.38904v1",
+  "compared_source_sha256": "f48bc037dc690c6a1c8650533e8909a41c58b1d3d2d7bb2b2375183b639a9b98",
+  "scope": "One-paper primary-source check; explicitly non-exhaustive."
+}

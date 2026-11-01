@@ -17,7 +17,8 @@ def main():
            'frontier/causal-cactus/verify.py',
            'frontier/gaussian-simplex/supplements/quantization-landscape/verify.py',
            'frontier/negative-voting-simplex/verify.py',
-           'frontier/negative-voting-simplex/local-stability-four-candidates/verify.py']
+           'frontier/negative-voting-simplex/local-stability-four-candidates/verify.py',
+           'frontier/negative-voting-simplex/supplements/beyond-voting-range-20261102/local/check_extended_local_exponents_20261101.py']
     for script in cases:
         start=time.monotonic()
         result=subprocess.run([sys.executable,str(ROOT/script)],cwd=ROOT,env=env,text=True,capture_output=True,timeout=600)

@@ -1,0 +1,221 @@
+EXTERIOR COMPARISON AT r<=m^(-7/8)/(1+log m)^2
+1 November 2026. Scoped proof audit and conditional extension.
+
+VERDICT
+
+The exterior comparison extends to the displayed range once its
+localization hypotheses are supplied. The old individual row-lower-bound
+input can be removed from the proxy step by the accompanying elementary
+unit-direction median theorem. Both final error coefficients tend to
+zero at the proposed endpoint. No step of the exterior tensor or signed
+tail calculation intrinsically requires r<=1/(m-1).
+
+This is NOT a proof that all competitive assignments satisfy the required
+localization in that larger range, and NOT an extension of the separate
+local full-noise theorem. Those are independent gates. In particular the
+old coarse mass-window proof cannot be imported merely because the
+exterior estimates close. The theorem here states its actual premises.
+
+CONDITIONAL EXTERIOR THEOREM
+
+Let L=1+log m, r_max=m^(-7/8)/L^2, and 0<r<=r_max. For all sufficiently
+large m, finite N>=m-1, let f:R^N->Delta_m be any measurable assignment.
+Write p=Ef, B_i=E[X f_i], W=||B||^2, U_i=1/m,
+delta=||p-U||^2, Delta=w-W, D=delta+r Delta, J=D/r,
+R=R_U(B), and d=dist(B,regular centroid orbit). Assume
+
+  p_i in[1/(2m),3/(2m)],
+  0<=D<=C0 r^2/m, delta<=2D, |W-w|<=D/r, d>1/m.          (A)
+
+Retain the previously proved covariance/offset/summed-row inputs and
+the external equal-threshold Gaussian maximum comparison used in the
+frozen exterior proof. Then, with constants depending only on C0 and
+the fixed absolute input constants,
+
+  S_-r(f)-S_-r(g)
+    >=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)]>=D/2>0.             (B)
+
+The conclusion concerns actual measurable assignments, including
+fractional ones and unequal masses. No rank, interface, purity,
+stationarity, pair separation, or minimizer existence premise is used.
+
+1. NORMALIZED ROW CAP AND REMAINDER BUDGET
+
+Assumptions (A) imply W/w=1+O(r/L), uniformly up to r_max. Thus
+s=sqrt(W/w) is bounded above and below. The actual centroid entropy
+bound yields |B_i|<=C alpha, hence a fixed normalized row cap for
+Bhat=B/s. Conditional Cauchy, valid also for fractional f, gives
+
+  B^T B<=p_max I, ||Bhat||op^2<=C/m.                      (1)
+
+The balanced dual offset certificate and feasibility F_p(B)>=W give
+
+  R<=Delta/2+CL sqrt(R delta)
+   <=Delta+C L^2 delta<=Delta+delta/r=J.                  (2)
+
+The last step needs CrL^2<=1, which holds uniformly in the proposed
+range since r_max L^2=m^(-7/8). There is no individual row-lower-bound
+input here. Nonnegativity of R is the covariance tangent theorem.
+
+Normalize only in the summed-row theorem. The exact radial identity
+gives R_U(Bhat)<=C R, and the fixed cap yields
+
+  E_rad=sum_i(|Bhat_i|-beta)^2<=C L^2 R<=C rL^2/m,
+  E_rad/w<=C rL<=C m^(-7/8)/L=o(1).                     (3)
+
+Also ||Bhat||op^2/w<=C/L=o(1). Apply the accompanying theorem
+GLOBAL_EQUAL_ROW_PROXY_WITHOUT_INDIVIDUAL_ROW_LOWER_BOUND_20261101.txt.
+It gives, in exactly the same row span,
+
+  sum_i Z_i=0, |Z_i|=beta,
+  ||Z-Bhat||^2<=C E_rad.
+
+Adding ||B-Bhat||^2<=2R produces the sole proxy estimate needed below:
+
+  E_Z:=||Z-B||^2<=C L^2 R<=C L^2 J.                      (4)
+
+The old one-row certificate would only give a worst-row error of order
+sqrt(mr/L), which need not vanish at r_max. It is not used. Aggregate
+radial smallness and the actual-centroid operator bound replace it.
+
+2. EXTERIOR COVARIANCE FLOOR
+
+Set q=d/alpha and e=||BB^T/alpha^2-P||_F. Procrustes and (A) give
+e>=q and c/sqrt(L)<=q<=C sqrt(m). The global unnormalized covariance
+remainder gives
+
+  R>=c alpha^2 e^2/m min(1,c/(Le))
+   >=c q/m^3>=c/(m^3 sqrt(L)),
+  J>=R>0.                                                (5)
+
+Neither the rank of B nor a row lower bound enters this argument.
+In particular the absolute Gaussian errors below remain payable even
+as r tends to zero within the proposed range.
+
+3. SECOND-CHAOS TEST AT AN EQUAL-ROW PROXY
+
+The existing common-threshold maximum comparison applies to the centered
+equal-row matrix Z, whether or not it is singular or has duplicates.
+For V=max_i Z_i.X and regular V_*, it yields EV<=w and
+
+  (EV_*^2-EV^2)_+
+   <=C beta T(w-EV)+C beta^2 m exp(-T^2/2), T>=1.         (6)
+
+This comparison is entirely independent of the noise correlation r.
+For c_f=V-sum_i f_i Z_i.X>=0, its two nonnegative mean defects satisfy
+
+  Ec_f+(w-EV)=w-<Z,B>
+             =(Delta+E_Z)/2<=C L^2 J.                   (7)
+
+The pointwise quadratic estimate and the unit-marginal Gaussian union
+bound give
+
+  EV^2-E sum_i f_i(Z_i.X)^2
+   <=2beta T Ec_f+C beta^2 m(T^2+1)exp(-T^2/2).            (8)
+
+At T=sqrt(32L), the score-square loss is at most
+C L^3 J/m+C beta^2 mL exp(-16L). The direct tensor test has numerator
+
+  sum_i <E[f_i(XX^T-I)], Z_i Z_i^T-Z^TZ/m>
+    =E sum_i f_i(Z_i.X)^2-beta^2,
+
+using only sum_i p_i=1, and denominator at most
+D_*=alpha^4(m-1)(m-2)/m. Its regular coefficient is at most Cm.
+Cauchy and the positive-part-square inequality therefore give
+
+  A2(f)-A2(g)>=-C L^3 J-C L^2 exp(-16L)
+             >=-C L^3 J.                                (9)
+
+The final absorption uses (5). No dependence on the voting endpoint
+or on individual row lengths occurs anywhere in (6)-(9).
+
+4. ENTIRE SIGNED HIGHER TAIL
+
+For a closest regular centroid B0 and its rule g0, let
+epsilon=||f-g0||_1/2. The actual first moments give exactly
+
+  R0=w-<B0,B>=(Delta+d^2)/2>=0,
+  epsilon<=min(1,C sqrt(m R0)).                            (10)
+
+Take tau^2=1/(4L). The mass cap in (A) and rare-label hypercontractivity
+give
+
+  ||T_tau f||^2+||T_tau g0||^2<=C/m,
+  ||T_tau(f-g0)||^2<=C epsilon/m.
+
+Factoring all signed Hermite multipliers of degree at least three through
+T_tau is valid whenever r/tau^2=4rL<=1. Here
+4r_max L=4m^(-7/8)/L tends to zero, so this condition is satisfied uniformly.
+It yields
+
+  |H_r(f)-H_r(g0)|<=C r^3 L^3 sqrt(epsilon)/m.             (11)
+
+If J>=d^2, then Delta<=J gives R0<=J; (5) yields
+
+  |Hdiff|/J<=C r^3 L^3 m^(-3/4)J^(-3/4)
+            <=C r^3m^(3/2)L^(27/8).
+
+If J<d^2, then R0<=d^2. Write d=alpha q and use J>=cq/m^3,
+q>=c/sqrt(L). This yields
+
+  |Hdiff|/J<=C r^3m^(7/4)L^(13/4)q^(-1/2)
+            <=C r^3m^(7/4)L^(7/2).
+
+The second bound dominates the first. Hence
+
+  |H_r(f)-H_r(g)|<=C r^3m^(7/4)L^(7/2)J.                 (12)
+
+No individual proxy-row lower bound, full-rank score path, or old
+upper bound r<=1/(m-1) is used in these two cases.
+
+5. ENDPOINT ARITHMETIC AND EXACT ASSEMBLY
+
+The exact signed decomposition is
+
+  S_-r(f)-S_-r(g)=D+r^2[A2(f)-A2(g)]+H_r(f)-H_r(g).
+
+Using (9), (12), and J=D/r proves the first inequality in (B).
+At r=r_max the two relative errors satisfy exactly
+
+  rL^3 <=m^(-7/8)L ->0,
+  r^2m^(7/4)L^(7/2) <=L^(-1/2) ->0.                      (13)
+
+Thus the coefficient is at least 1/2 for all sufficiently large m,
+uniformly in 0<r<=r_max. The strict sign comes from D=rJ>0 in (5).
+The bound is existential in m; no numerical threshold is claimed.
+
+6. WHAT HAS AND HAS NOT BEEN REMOVED
+
+Removed from the exterior proxy route:
+  - uniform individual lower bounds on actual or normalized row norms;
+  - the one-row covariance coercivity theorem used to obtain them;
+  - the need to apply the original median construction to possibly tiny
+    or zero unnormalized rows.
+
+Retained:
+  - the fixed mass window and localized D-budget (A);
+  - the fixed normalized row cap needed by summed-row coercivity;
+  - actual-centroid operator control;
+  - global balanced covariance concavity, offset and summed-row estimates;
+  - the external equal-threshold Gaussian maximum theorem;
+  - Gaussian hypercontractivity and the regular margin estimate.
+
+For a full theorem beyond the voting interval one must separately prove
+(A) for every competitive assignment and recheck the local full-noise
+case d<=1/m at this same enlarged r-range. This report makes no assertion
+that those tasks follow from (13). It establishes an actual proof of
+the new geometry and of the conditional exterior extension.
+
+FROZEN SOURCE PROVENANCE
+
+The exterior identities were rederived against:
+  CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt
+  SHA 84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4;
+  DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt
+  SHA c33cd021f18037d3e0d9ef32c6205aad593b31b58e844ae6e7ab0e60c3cc44f8;
+  negative_voting_simplex_manuscript_v2_20261031/04_exterior_assembly.tex
+  SHA da41b720a695d6dee535bf4e0399a4984c332d728b4cc8b70f05cde2933253d5.
+
+All those sources are preserved. Only new files under beyond_voting_20261101/
+proxy were written. No numerical search, package installation, paid work,
+outreach, or publication was used to justify the extension.

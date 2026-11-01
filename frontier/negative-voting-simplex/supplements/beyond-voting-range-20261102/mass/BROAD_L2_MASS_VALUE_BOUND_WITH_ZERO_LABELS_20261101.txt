@@ -1,0 +1,167 @@
+BROAD L2 MASS VALUE BOUND, INCLUDING ZERO AND LARGE LABELS
+1 November 2026. New proof from the fixed-relative-window value theorem.
+No original or frozen source is edited. This is a mathematical candidate
+with an explicit proof, not external validation or publication.
+
+THEOREM
+There are absolute epsilon0>0,C<infinity,m0 such that for every m>=m0,
+every finite N>=m-1, and every measurable simplex-valued assignment f
+with masses p_i and delta=sum_i(p_i-1/m)^2<=epsilon0/m,
+
+ W(f):=sum_i|E[X f_i]|^2 <= w_m+C(1+log m)^2 delta,
+ w_m=(E max_(i<=m)G_i)^2/(m-1).                          (B1)
+
+There is NO coordinate lower or upper bound on p. In particular p_i=0
+is allowed. The same bound holds for the prescribed-mass supremum V_m(p)
+over fractional assignments. One may take epsilon0=1/32; the absolute
+C and eventual threshold depend on the fixed-window input below.
+
+INPUT
+GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt,
+SHA11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2,
+read with OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt,
+SHA6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c.
+Use it with fixed relative constants c=1/4,Cbar=3, so for sufficiently
+large k and q_j in[1/(4k),3/k],
+
+ V_k(q)<=w_k+C(1+log k)^2 sum_j(q_j-1/k)^2.               (B2)
+
+Fractional scope and finite-N dimension reduction were proved explicitly
+in completion_audit_20261101/mass/MASS_LOCALIZATION_ADVERSARIAL_AUDIT_20261101.txt,
+SHA5ffb3295577bfd9432fde381be91873e41599fb610bfe249e602ff6ec00ce4fe.
+The present argument applies directly to every f and does not assume it
+is any kind of optimizer.
+
+1. REMOVE ONLY LABELS OUTSIDE A FIXED RELATIVE WINDOW
+Let A={i:p_i<1/(2m) or p_i>2/m}, h=|A|, G its complement, k=m-h,
+M=sum_(i in A)p_i. Each bad label has |p_i-1/m|>=1/(2m), hence
+
+ h<=4m^2 delta<=m/8, k>=7m/8.                            (B3)
+
+For t=mp_i outside[1/2,2], the elementary inequality
+ t<=2(t-1)^2
+holds. Thus p_i<=2m(p_i-1/m)^2 on A and
+
+ M<=2m delta<=1/16.                                    (B4)
+
+The weaker M<=1/8 will suffice. If A is empty, the fixed-window theorem
+already gives(B1). Hence assume A is nonempty. Then
+
+ delta>=1/(4m^2).                                      (B5)
+
+For j in G put q_j=p_j/(1-M). These sum to1. Equations(B3)-(B4) imply
+
+ 1/(4k)<=q_j<=3/k.
+
+Indeed q_j>=1/(2m)>=1/(4k), while q_j<=16/(7m)<=3/k.
+Let delta_q=sum_G(q_j-1/k)^2. Since subtracting the mean minimizes a
+sum of squares,
+
+ delta_q=(1-M)^(-2)sum_G[p_j-(1-M)/k]^2
+         <=(1-M)^(-2)sum_G(p_j-1/m)^2<=2delta.           (B6)
+
+2. REASSIGN THE BAD MASS FRACTIONALLY, WITH ITS FIRST MOMENT RETAINED
+Put f_A=sum_A f_i, b=E[X f_A], b_i=E[X f_i], and for j in G set
+
+ g_j=f_j+q_j f_A.
+
+The functions g_j are nonnegative and sum to1 pointwise, so they are a
+k-label simplex assignment. Its j-th mass is p_j+q_jM=q_j, and its
+centroid is c_j=b_j+q_jb. Since sum_G b_j=-b, define
+
+ v=sum_G(q_j-1/k)b_j,
+ W_G=sum_G|b_j|^2, W_A=sum_A|b_i|^2.
+
+Expansion gives the EXACT identity
+
+ W_G=W(g)-2b.v+|b|^2/k-delta_q|b|^2.                    (B7)
+
+The last term is nonpositive and may safely be discarded in an upper
+bound. The sign of b.v is not assumed.
+
+3. ALL REASSIGNMENT ERRORS COST AT MOST C L delta
+Write L=1+log m. Gaussian exponential Jensen gives for every bounded
+weight0<=a<=1 of mass u the dimension-free entropy estimate
+
+ |E[X a]|<=u sqrt(2log(1/u)),                           (B8)
+
+with the value0 at u=0. This follows by projecting in the first-moment
+direction, applying Jensen to the probability density a/u, and minimizing
+the exponential parameter. It applies to f_A as well as to each f_i.
+
+For a bad low mass put t=mp_i<=1/2. Then
+p_i^2 log(1/p_i)/(p_i-1/m)^2
+=t^2[log m+log(1/t)]/(1-t)^2<=log m+log2<=L.
+The term involving log(1/t) is bounded by log2 because
+ t^2 log(1/t)<=log2/4 and (1-t)^2>=1/4.
+For a bad high mass p_i>=2/m, p_i/(p_i-1/m)<=2 and
+log(1/p_i)<=log m. Therefore(B8) gives
+
+ W_A<=8L delta.                                        (B9)
+
+If M=0 then b=0. Otherwise x^2 log(1/x) is increasing on0<x<=1/8.
+Use the weaker bound M<=4m delta<=1/8 and(B5), which imply
+1/m<=4m delta<=1/8. Then(B8) gives
+
+ |b|^2<=2(4m delta)^2 log[1/(4m delta)]
+       <=32m^2 delta^2 L.                              (B10)
+
+This handles arbitrarily small M without incorrectly replacing log(1/M)
+by log m before multiplying by M^2.
+
+For every unit direction u, conditional Cauchy and p_j<=2/m on G give
+
+ sum_G(b_j.u)^2<=sum_G p_j E[f_j(u.X)^2]
+               <=(2/m)E[(sum_G f_j)(u.X)^2]<=2/m.
+
+Consequently the retained centroid matrix has operator norm at most
+sqrt(2/m), and
+
+ |v|<=sqrt(2delta_q/m)<=2sqrt(delta/m).                  (B11)
+
+Combining(B10)-(B11), m delta<=epsilon0, and k>=7m/8,
+
+ 2|b.v|<=C sqrt(m delta)sqrt(L)delta<=C L delta,
+ |b|^2/k<=C m delta^2 L<=C L delta.                     (B12)
+
+All constants are independent of dimension and of the individual masses.
+
+4. PAY FOR THE CHANGE IN THE NUMBER OF LABELS
+The means mu_j=E max_(i<=j)G_i are nonnegative and increasing for j>=2,
+and mu_j^2<=2log j. Hence
+
+ w_j-w_(j+1)
+ =mu_j^2/(j-1)-mu_(j+1)^2/j
+ <=mu_j^2/[j(j-1)].
+
+No monotonicity assertion about w_j itself is needed. Telescoping from
+k to m and using k>=7m/8 gives
+
+ w_k-w_m<=C hL/m^2<=C L delta.                         (B13)
+
+Apply(B2) to g, use(B6), and combine(B7),(B9),(B12),(B13):
+
+ W(f)=W_G+W_A
+ <=W(g)+2|b.v|+|b|^2/k+W_A
+ <=w_k+C L^2 delta_q+C L delta
+ <=w_m+C L^2 delta.
+
+This proves(B1). Since it holds for every feasible f, it also proves the
+same bound for V_m(p) by taking the supremum. No new attainment argument
+or regularity of the original f is involved.
+
+5. EDGE-CASE STRESS CHECKS AND LIMITS
+If h labels have mass0 and the remaining k labels have mass1/k, then
+M=0,b=0,delta=h/(mk),q is uniform, and the construction leaves the
+remaining assignment unchanged. Thus the proof covers genuine deleted
+labels; its sole cost there is w_k-w_m, paid by(B13).
+
+If a bad mass is positive but arbitrarily tiny, its entropy logarithm
+can diverge. Equation(B10) controls the product M^2 log(1/M), which is
+monotone on the required interval. No false lower bound on M is used.
+The lower bound(B5) is on delta, not on M.
+
+The result is global on the displayed L2 mass ball, not on the entire
+probability simplex. It supplies no individual centroid-row lower bound
+and no full-noise inequality by itself. Its only substantial imported
+analytic ingredient is the fixed-window first-moment bound(B2).

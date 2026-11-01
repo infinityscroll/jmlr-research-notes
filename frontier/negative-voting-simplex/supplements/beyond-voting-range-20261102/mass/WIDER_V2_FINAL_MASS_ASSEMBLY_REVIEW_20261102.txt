@@ -1,0 +1,55 @@
+FINAL MASS/ASSEMBLY REVIEW OF THE WIDER-RANGE V2 SOURCE
+2 November 2026. New hash-pinned review; original records unchanged.
+
+Reviewed source:
+QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_V2_20261102.txt
+SHA256 f48bc037dc690c6a1c8650533e8909a41c58b1d3d2d7bb2b2375183b639a9b98.
+
+Compared byte-for-byte against the original source
+7fdae77b578be86c36547a586aec8b24fce2202f0f5d7abcf695059f726e7ba1,
+and checked the precise changes against the previous independent review
+f67830b6c0cd908b58e62ca5250809a048e0e3eccf1b8fe97d0e9511c0fce8c2.
+Both original hashes remain unchanged.
+
+VERDICT WITHIN THIS BRANCH'S SCOPE: CLEAN.
+The sole sign-sensitive display issue in the original draft is repaired.
+No outstanding mass-localization, positive-excess, finite-proxy-scope,
+or final-assembly defect was found in V2. The complete analytic local
+weighted-cap proof and foundational external inputs retain their separate
+review obligations; this is not an assertion of external verification.
+
+1. EXACT SIGN REPAIR VERIFIED
+Section3 now retains
+ (1-r ell)D<=E+C[r^2/m+r^3L^3/m+r^4L^4/m]
+and divides by the positive1-r ell before substituting E<=r/m^2.
+Only after this upper substitution are positive constants enlarged.
+This is valid whether E is positive, zero, or negative. Since D>=0,
+the actual numerator is nonnegative; no implicit E>=0 assumption remains.
+The unchanged conclusion is
+ D<=C[r/m^2+r^2/m],
+ J<=C[1/m^2+r/m],
+ W/w=1+O((1/m+r)/L).
+The proof's eventual inference E>=0 therefore remains noncircular.
+
+2. EXACT EXTERIOR-SCOPE CLARIFICATION VERIFIED
+Section5 now explicitly distinguishes the narrower printed conditional
+exterior theorem, which assumed J<=Cr/m, from its proof after the proxy
+step. V2 has separately established the finite proxy under
+kappa<=C/L and eta<=C[L/m+rL]. The downstream tensor and entire-tail
+arguments require that proxy, the mass cap, bounded W/w,R<=J,the
+exterior covariance floor,and rL=o(1). They require no further upper
+bound J<=Cr/m. The new wording accurately matches the actual reused
+proof and covers the positive-excess allowance.
+
+3. CARRIED-FORWARD CHECKED CONCLUSIONS
+The detailed earlier review applies unchanged: the broad mass-value
+lemma covers empty labels and fractional assignments; both bootstrap
+stages survive E<=r/m^2; the unit-direction proxy handles zero rows and
+preserves the centroid span; the final exterior errors vanish at
+r=m^(-7/8)/L^2; the interior/exterior combination has coefficient1/6;
+and the global quantitative and equality assembly has the stated
+finite-N and r-uniform scope. No old individual row lower bound is used.
+
+The title/date and explanatory text are the only other changes. No new
+threshold, stronger logarithmic factor, discrete-channel extension, or
+unreviewed mathematical step was introduced in V2.

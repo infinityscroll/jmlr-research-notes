@@ -1,0 +1,144 @@
+FINAL V2: WIDER-RANGE LOCAL-SCOPE AND L1 ASSEMBLY REVIEW
+2 November 2026. New review; no original or preceding audit was edited.
+
+REVIEWED FINAL SOURCE
+ ../QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_V2_20261102.txt
+ SHA256 f48bc037dc690c6a1c8650533e8909a41c58b1d3d2d7bb2b2375183b639a9b98
+
+PRESERVED PREDECESSOR
+ ../QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_20261101.txt
+ SHA256 7fdae77b578be86c36547a586aec8b24fce2202f0f5d7abcf695059f726e7ba1
+
+PRESERVED DETAILED REVIEW OF THAT PREDECESSOR
+ FULL_WIDER_RANGE_ASSEMBLY_LOCAL_SCOPE_AND_L1_REVIEW_20261102.txt
+ SHA256 14f6576a7bab2cf75cca5c4cddcaa2d7595de029bc4a8e6c63267817c644010e
+
+VERDICT
+The complete predecessor assembly was independently reconstructed in
+the detailed review. The full V1-to-V2 diff was then inspected, the new
+signed-energy step was re-derived, and the final source hash verified.
+No further correction is requested for V2. Its larger Gaussian range,
+actual full mass-box local application, final min-form L1 estimate, and
+equality classification are valid consequences of the stated analytic
+proof chain.
+
+V2 makes two changes material to rigorous presentation. It preserves the
+exact coefficient of the possibly negative energy excess E during the
+second localization, and it explicitly applies the exterior PROOF under
+newly checked hypotheses instead of invoking its narrower printed theorem.
+Both changes are correct. The theorem's conclusions and its local/L1
+calculations need no change.
+
+1. CORRECTION TO MY PREDECESSOR REVIEW: SIGNED ENERGY
+
+The prior draft wrote D<=C[E+positive terms] while E had not been shown
+nonnegative. My earlier review accepted the recoverable localization
+conclusion without flagging that compression. A mass reviewer correctly
+identified the need to retain E's coefficient. The earlier blanket
+assessment of this particular display is superseded here; its remaining
+independent calculations remain unchanged.
+
+Let a=1-r ell, where 1/2<=a<=1, and write P for the sum of the nonnegative
+rare-label allowances. The refined tangent estimate has the form
+
+ aD+r^2 c_{m,r}delta<=E+P, with D>=0 and c_{m,r}delta>=0.
+
+Dropping the nonnegative term gives exactly
+
+ D<=(E+P)/a.
+
+It is not legitimate in general to replace this by C(E+P') merely by
+absorbing coefficients while the sign of E is unknown. V2 instead keeps
+the denominator and then substitutes E<=r/m^2:
+
+ D<=[E+C(r^2/m+r^3L^3/m+r^4L^4/m)]/(1-r ell)
+  <=C'[r/m^2+r^2/m].
+
+The second line now bounds a sum of positive upper allowances and uses
+a>=1/2. This is valid for positive, zero, or negative E. The needed
+rL^3=o(1) and r^2L^4=o(1) hold uniformly at the proposed endpoint.
+The initial coarse localization also retains the exact E coefficient,
+and the first tangent estimate substitutes its upper bound before
+enlarging constants. No further signed-E absorption was found in V2.
+
+2. THE EXTENDED EXTERIOR SCOPE IS NOW EXPLICIT
+
+The separate exterior theorem assumes D<=Cr^2/m, equivalently an upper
+ceiling J<=Cr/m. V2 obtains instead
+
+ J<=C(1/m^2+r/m).
+
+For very small r these are different hypotheses. V2's Section 4 directly
+constructs the equal-row proxy from
+
+ kappa<=C/L, eta<=C(L/m+rL), ||Z-B||^2<=CL^2R.
+
+Both kappa and eta tend to zero uniformly, so the finite aggregate-radial
+proxy theorem applies without its narrower Gaussian corollary. After
+this independent proxy construction, the exterior calculations use:
+
+ - the mass cap and W<=Cw;
+ - R<=J and Delta<=J;
+ - ||Z-B||^2<=CL^2J;
+ - the floor J>=R>=c/(m^3sqrt L);
+ - the general-time hypercontractive condition 4rL<=1.
+
+Neither the quadratic test nor either signed-tail case uses a further
+upper ceiling on J. The detailed predecessor review explicitly derives
+those two cases. V2 now correctly describes this as a reuse of the proof
+under the verified hypotheses, not a verbatim application of the narrower
+theorem. This resolves the earlier citation-scope caution.
+
+3. EXACT MATCH TO THE ENLARGED LOCAL THEOREM
+
+The local extension source has SHA256
+5945a7c65fb51f71ad22081f014564d6b7169fea9633d35119185cb0caa529b0.
+It proves E>=delta/2+rR_U(B) for ALL masses in [1/(2m),3/(2m)], actual
+centroids with d(B)<=A/m, and 0<r<=m^(-7/8)L^(-2).
+
+The root bootstrap supplies that mass box before the local/exterior
+split. Its interior branch has A=1, so the local theorem applies exactly.
+It does not need delta<=Cr^2/m, competitiveness, purity, or regularity
+of interfaces. Its complete tail and all-amplitude cap arguments were
+re-derived beyond the voting interval, rather than extended by a citation
+outside their printed range. Arbitrarily small r and all finite N>=m-1
+are included.
+
+4. L1 AND GLOBAL ASSEMBLY REMAIN UNCHANGED AND CORRECT
+
+The all-distance covariance estimate and exact regular top-two margin
+have no noise-correlation restriction. They give
+
+ d^2<=Cm^(3/2)L R,
+ ||f-g0||_1^4<=64(m-1)^2w d^2,
+ d1(f)^4<=Cm^(5/2)L^2R.
+
+The factor64 is for full Gaussian L1 distance. The layer-cake weight is
+1-f_{g0(X)}, so arbitrary fractional assignments and dependence on
+coordinates outside the regular span are covered without independence.
+
+The local branch gives E>=delta/2+rR; the exterior gives E>=D/2 with
+delta+rR<=3D. Therefore on E<=r/m^2,
+
+ E>=(delta+rR)/6>=c[delta+r d1^4/(m^(5/2)L^2)].
+
+For E>r/m^2 the saturated min-form lower bound follows with c<=1.
+An initially negative E lies in the first branch and is thereby excluded.
+At E=0, delta=d1=0; compactness of the regular embedding orbit in every
+fixed finite dimension turns zero L1 orbit distance into equality almost
+everywhere with an actual regular assignment. The conclusion includes
+fractional f without an extra purity assumption.
+
+5. DEPENDENCY STATUS AND PRESERVATION
+
+The reviewed statement is a new internal proof candidate. This review
+does not independently validate every foundational covariance/support,
+fixed-window mass-value, summed-radial, rank-free offset, or external
+common-threshold theorem. Their hypotheses and external-review limits
+remain part of the candidate's status.
+
+The companion manifest freshly pins V2, the preserved original root
+draft, the enlarged local source, both new geometric/exterior sources,
+the detailed predecessor review, and this final review. No prior proof,
+audit, or output was modified. No outreach, publication, installation,
+or paid computation was performed.

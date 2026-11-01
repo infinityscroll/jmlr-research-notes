@@ -1,0 +1,136 @@
+WIDER-RANGE QUANTITATIVE ASSEMBLY: INDEPENDENT MASS REVIEW
+2 November 2026. New review; no original source edited.
+
+Reviewed actual source:
+QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_20261101.txt
+SHA2567fdae77b578be86c36547a586aec8b24fce2202f0f5d7abcf695059f726e7ba1.
+
+Supporting new inputs checked:
+BROAD_L2_MASS_VALUE_BOUND_WITH_ZERO_LABELS_20261101.txt,
+f8647e60a086105091e2fceb94974276369dac423a2c7dbc28ec73ad7075b2ce;
+BEYOND_VOTING_COMPETITIVE_MASS_LOCALIZATION_20261101.txt,
+849b68f8b7c2f89457a02d2743e8ebd58535bca0b9e9a1b0a3cfed00069f7328;
+GLOBAL_EQUAL_ROW_PROXY_WITHOUT_INDIVIDUAL_ROW_LOWER_BOUND_20261101.txt,
+fa3f466aa056153362531a0d9ef5f0551cc7c6259b9d61edbd2bf270d41a3532;
+EXTERIOR_COMPARISON_BEYOND_VOTING_USING_AGGREGATE_RADIAL_DEFECT_20261101.txt,
+3bbd0c9e26747c5098e51c92e6a3d388e16745e994a9dca9f08af5e746fac564.
+The local extension's theorem statement and hypotheses were read at
+5945a7c65fb51f71ad22081f014564d6b7169fea9633d35119185cb0caa529b0;
+this branch does not independently certify its complete weighted-cap proof.
+
+VERDICT
+The mass, positive-allowance bootstrap, aggregate-proxy use and final
+assembly are sound after one sign-sensitive display is written correctly.
+The required correction is local and does not change any conclusion.
+It should be recorded in a successor or clarification; this review does
+not silently treat the printed expression as established.
+
+REQUIRED SIGN CLARIFICATION IN SECTION3
+The source prints
+ D<=C[E+r^2/m+r^3L^3/m+r^4L^4/m].
+E is expressly allowed to be negative. An enlarged common constant must
+not be pulled in front of an unknown-sign E. The exact tangent gives
+ (1-r ell)D<=E+T,
+ T=r^2 Delta2+C3 r^3L^3/m+C4 r^4L^4/m.
+Since D>=0, E+T>=0. Hence the valid estimate is
+ D<=(E+T)/(1-r ell)<=2E+2T
+  <=2E+C[r^2/m+r^3L^3/m+r^4L^4/m].
+Using E<=r/m^2 now gives the source's desired conclusion
+ D<=C[r/m^2+r^2/m].
+Equivalently one could write an upper bound with E_+ inside the common
+C bracket. This is a proof-display repair, not a counterexample to the
+claimed theorem or a new analytic gap. It prevents an illicit implicit
+assumption E>=0 at the one place where a negative slack is still allowed.
+
+SECTION1: BROAD MASS VALUE
+The root reduction agrees with the full standalone proof f8647e60. In
+particular it permits zero labels, the centroid expansion has the correct
+negative delta_q|b|^2 term, and both reassignment errors are paid by
+CLdelta. The entropy bound on b is a bound on M^2 log(1/M): one must use
+its monotonicity, as the full source does, rather than assuming M>=1/m.
+No such lower bound is required. The telescoped w_k-w_m bound uses only
+monotonicity of mu_j, not monotonicity of w_j. Fractional rules and all
+finite N>=m-1 are covered.
+
+SECTION2: POSITIVE ALLOWANCE IS SMALL ENOUGH AT BOTH BOOTSTRAP STAGES
+Let E<=r/m^2 and0<r<=R_m=m^(-7/8)/L^2. The coarse comparison gives
+ delta<=C[r/m+r^2L^2/m+r^3],
+because E<=r/m^2<=r/m, the denominator tends to1, rL^2=o(1), and
+mr^2=o(1). Thus delta<=Cr/m=o(1/m), before the broad V bound is used.
+That bound supplies D>=delta/2+r(V-W)>=0, even when E<0 and W>w.
+The degree-two tangent then gives
+ D<=C[r/m^2+r^2/m+r^3].
+Multiplication by m^2 yields the terms r,mr^2,m^2r^3. At R_m they are
+bounded respectively by m^(-7/8)L^(-2),m^(-3/4)L^(-4),
+m^(-5/8)L^(-6), all tending to zero. Hence every mass enters the
+refined[1/(2m),3/(2m)] box. There is no circular reliance on that box.
+
+SECTION3: SHARP LOCALIZATION WITH POSITIVE SLACK
+Rare-label hypercontractivity holds with t^2=1/(4L), uniformly in N,
+and r/t^2<=1 on the new range for large m. It bounds the full adverse
+odd tail by Cr^3L^3/m and the full positive reference even tail above
+degree two by Cr^4L^4/m. With the sign clarification above,
+
+ D<=C[r/m^2+r^2/m],
+ delta<=2D,
+ |W-w|<=J=D/r<=C[1/m^2+r/m],
+ W/w=1+O((1/m+r)/L).
+
+The absolute value bound follows from|delta-D|<=D and covers W>w.
+Balanced offsets still give R<=Delta+CL^2delta<=Delta+delta/r=J,
+since rCL^2=o(1). No positive lower bound on r occurs.
+
+SECTION4: CORRECT USE OF THE NEW FINITE PROXY THEOREM
+The actual centroid entropy and bounded normalization give a fixed upper
+row cap. Summed radial coercivity gives E_rad<=CL^2R, and actual-centroid
+conditional Cauchy gives ||Bhat||op^2<=C/m. Thus
+ kappa<=C/L, eta=E_rad/w<=C[L/m+rL],
+both tending to zero uniformly on the range. They satisfy the explicit
+finite theorem's kappa<=1/128 and eta<=1/1024 after an absolute threshold.
+The root applies that FINITE theorem directly, which is correct. Its
+Gaussian corollary printed under R<=Cr/m is narrower than the current
+positive-slack hypothesis and would not by itself be sufficient.
+
+I independently checked the finite proof: bad short rows occupy at most
+4eta of the labels, including zero rows; the frame bound is at most
+4(kappa+eta); the mean unit-vector bound is sqrt(eta). On the unit-median
+ball the Hessian is at least(1/2)I, the radial derivative is strictly
+outward, and the median displacement is at most2sqrt(eta). The resulting
+squared cost is at most1521E_rad/49<32E_rad, so the displayed64 is valid.
+The same-span argument weights by original radii and works for zero rows.
+This supplies the missing geometric bridge identified in849b68f8.
+
+SECTION5: HOW THE NEW MASS OUTPUT FITS THE COMPARISONS
+The local-extension theorem5945a7c6 assumes just its actual-centroid ball,
+the refined mass box, and the new r range. It adds no D<=Cr^2/m condition;
+therefore its theorem statement matches this positive-slack class.
+Its detailed analytic proof remains the responsibility of the separate
+local audit; this review does not infer it merely from endpoint powers.
+
+The conditional exterior theorem3bbd0c9e is printed under the narrower
+D<=C0r^2/m hypothesis. The root does not apply that statement wholesale:
+it reuses the subsequent proof after separately producing the proxy.
+This distinction is valid. The later steps require bounded W/w,R<=J,
+the proxy cost CL^2J,the exterior covariance floor,and the rare-label mass
+cap. They use no further upper bound J<=Cr/m. All these prerequisites
+hold with J<=C(1/m^2+r/m). The floor is independent of r, so the absolute
+Gaussian error remains payable as r tends to zero.
+
+The final coefficients are rL^3 and r^2m^(7/4)L^(7/2), bounded at R_m by
+m^(-7/8)L and L^(-1/2), respectively. Therefore the exterior gives E>=D/2
+for sufficiently large m. Since delta+rR<=3D, its coefficient1/6 is
+correct; the local branch gives a stronger coefficient. E>=0 is deduced
+only here, not inserted into the localization step.
+
+SECTION6 AND SCOPE
+The all-distance covariance and top-two-margin consequences use bounded
+W/w and actual first moments, so the previous d1^4<=Cm^(5/2)L^2R bound
+still applies. Combining with E>=(delta+rR)/6 gives the stated small-
+excess conclusion. Outside E<=r/m^2 the displayed global minimum bound
+is immediate after reducing c. At equality its geometric distance is
+zero and finite-N orbit compactness gives an actual regular assignment.
+All constants remain uniform in finite N and the displayed r interval.
+
+No broader negative-correlation, finite-small-m or discrete-channel
+conclusion is inferred. The full theorem remains an internal proof
+candidate relying on its separately supplied analytic foundations.

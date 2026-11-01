@@ -1,0 +1,124 @@
+FINAL V2 ASSEMBLY REVIEW AND EXPLICIT CORRECTION OF THE PRIOR REVIEW
+2 November 2026. Covariance/proxy branch.
+
+REVIEWED V2
+  ../QUANTITATIVE_NEGATIVE_SIMPLEX_BEYOND_THE_VOTING_INTERVAL_V2_20261102.txt
+  SHA-256 f48bc037dc690c6a1c8650533e8909a41c58b1d3d2d7bb2b2375183b639a9b98
+
+PRESERVED PRIOR REVIEW
+  WHOLE_WIDER_RANGE_QUANTITATIVE_ASSEMBLY_REVIEW_20261102.txt
+  SHA-256 5e15ebac454ee95ab61c8836f736c330a869cd8982f5fd39b2adc4dbd365b451
+
+The prior review concerned root draft
+7fdae77b578be86c36547a586aec8b24fce2202f0f5d7abcf695059f726e7ba1.
+It is retained unchanged for provenance. Its unqualified statement that
+no sign issue required correction was too strong: the mass branch then
+identified an unsafe common-constant display, and the prior review had
+repeated that display. The correction below supersedes that portion of
+the prior review. It does not retract the independently derived proxy,
+exterior, covariance-to-L1, or mass-redistribution calculations.
+
+1. THE SIGN CORRECTION IS NECESSARY
+
+Before nonnegativity of the full noise excess E has been established,
+the expression
+
+  D<=C[E+A],
+
+with an unspecified common constant C multiplying an unknown-sign E,
+does not follow in general from
+
+  (1-r ell)D<=E+C0 A,
+
+even if D>=0 and A>=0. Enlarging C can make the first right-hand side
+more negative when E+A<0. Thus the original shorthand must not serve
+as a literal proved inequality on the class that allows E<0.
+
+For example, purely as an algebraic warning, D=1, E=-2, A=1, C0=3,
+and 1-r ell=1 satisfy D<=E+C0 A, whereas C(E+A)<0 for every C>0.
+The root proof's intended positive final budget is recoverable without
+this invalid intermediate manipulation.
+
+2. V2 PERFORMS THE VALID OPERATIONS IN THE CORRECT ORDER
+
+Let
+  A=r^2/m+r^3L^3/m+r^4L^4/m >=0.
+The actual retained-degree-two comparison gives
+
+  (1-r ell)D<=E+C0 A,
+  1-r ell>=1/2.
+
+Division is legitimate and yields exactly
+
+  D <= (E+C0 A)/(1-r ell).
+
+Now use the authorized small-excess hypothesis E<=r/m^2 BEFORE
+enlarging constants. Since the new upper numerator is nonnegative,
+
+  D <= (r/m^2+C0 A)/(1-r ell)
+    <=2r/m^2+2C0 A
+    <=C[r/m^2+r^2/m].
+
+The last step uses rL^3=o(1) and r^2L^4=o(1), valid uniformly over
+0<r<=m^(-7/8)/L^2. This is exactly the operation made explicit in V2.
+No assumption E>=0 is introduced, and the later comparison can still
+prove E>=0 rather than assuming the desired global inequality.
+
+The earlier coarse and preliminary localization budgets already
+substitute the positive upper bound for E before displaying their
+common-C estimates. They do not require another correction.
+
+3. V2 ALSO MAKES THE POSITIVE-EXCESS EXTERIOR SCOPE EXPLICIT
+
+My earlier conditional exterior theorem stated the competitive budget
+J<=Cr/m. The larger positive-excess class only has
+
+  J<=C(m^-2+r/m).
+
+V2 now explicitly invokes the exterior proof after the independent
+proxy construction, rather than applying that narrower theorem verbatim.
+This is valid because the post-proxy proof needs only:
+
+  fixed masses p_i<=3/(2m), Delta<=J,
+  ||Z-B||^2<=CL^2J,
+  J>=R>=c/(m^3 sqrt L),
+  4rL<=1.
+
+Every one of those properties is proved in V2. There is no subsequent
+use of an upper bound on J. The positive-excess proxy parameters remain
+
+  kappa<=C/L,
+  eta<=C(L/m+rL),
+
+which are uniformly small and hence satisfy the finite zero-row proxy
+lemma's explicit sufficient constants. The extra term L/m is harmless.
+
+4. REMAINDER OF THE WHOLE-ASSEMBLY REVIEW
+
+I compared the full original and V2 files. Apart from the date/provenance
+header, the changes are precisely the signed-energy coefficient and the
+exterior-proof scope paragraph above. The rest of the whole-assembly
+analysis in the preserved prior review continues to apply:
+
+  - the fractional bad-mass redistribution and its centroid identity;
+  - both mass-window bootstraps, with the corrected final D budget;
+  - fixed normalized upper row cap and actual-centroid operator bound;
+  - the unit-direction median with zero rows and exact same-span output;
+  - matching hypotheses and endpoint exponents of the new local source;
+  - the exterior quadratic certificate, absolute-tail absorption, and
+    both signed higher-tail cases;
+  - all-distance covariance coercivity and regular-margin L1 modulus;
+  - the small-excess/global minimum dichotomy and equality classification.
+
+In particular the exterior relative errors are bounded at the new
+endpoint by m^(-7/8)L and L^(-1/2), and the quantitative conclusion
+continues to hold with the threshold r/m^2 after the sign correction.
+
+FINAL SCOPED VERDICT
+
+No further blocking change was found in the exact V2 source pinned above.
+The assembly is consistent with the new mass, proxy and local-range
+derivations as an internal mathematical proof candidate. The foundation
+of the result remains those analytic inputs, including the credited
+external Gaussian comparison; this review is not external validation or
+a proof independent of them. No old source or prior review was modified.

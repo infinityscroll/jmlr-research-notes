@@ -1,0 +1,442 @@
+OWN-ACTUAL-CENTROID LOCAL COMPARISON BEYOND THE VOTING INTERVAL
+1 November 2026. New derivation, submitted for independent audit.
+All original proof sources and preceding audits are unchanged.
+
+STATUS
+This proves an extension of the local comparison from the preserved
+analytic inputs by rechecking and extending every correlation-dependent
+step. It is a new candidate theorem, not an externally accepted result.
+It supplies only the local branch of the proposed wider-range global
+theorem. Global localization, proxy construction, and the exterior
+comparison are not asserted here.
+
+THEOREM
+Fix A>0. Set L=1+log m and R_m=m^(-7/8)L^(-2). For sufficiently large
+m depending on A, every finite N>=m-1, and every 0<r<=R_m, let
+f:R^N->Delta_m be measurable. Suppose its masses satisfy
+
+ 1/(2m)<=p_i<=3/(2m),
+
+and its ACTUAL centroid matrix B_i=E[X f_i(X)] has Procrustes distance
+d(B)<=A/m from the regular centroid orbit. Let g be the regular simplex
+assignment, U_i=1/m, w=||B0||_F^2, and
+R_U(B)=(w+||B||_F^2)/2-F_U(B). Then
+
+ S_{-r}(f)-S_{-r}(g)>=||p-U||^2/2+r R_U(B).            (T)
+
+Equality or competitiveness forces f to be a regular simplex assignment,
+up to orthogonal transformations, label permutations, and Gaussian null
+sets. The theorem permits fractional assignments and arbitrary dependence
+on extra coordinates. It assumes no delta<=Cr^2/m localization rate.
+
+The numerical exponent 7/8 and logarithmic power 2 are the requested
+target range, not an assertion that this is the sharp local range.
+
+SOURCE LEDGER
+[L] 1a489344: OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP
+[H] 7388c948: FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON
+[U] 5f2ef775: UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON
+[R] f0f22a63: SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING
+[T] 3ee89046: AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2
+[V] 3b6bd981: FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2
+[S] aca4da15: ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2
+[F] 47e441ee: BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP
+[O] 111ac79d: CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL
+[E] 9abf2430: BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS
+All are 20261031.txt sources. Complete paths and fresh byte hashes are in
+the companion manifest. [L], [H], and [S] are NOT invoked as theorems
+outside their printed correlation ranges. The needed extensions are
+derived below. The correlation-free conclusions of [U,F,O,E,V] and the
+explicit general-time trace of [T] are used within their actual scope.
+
+1. CORRELATION-FREE GEOMETRY AND DEPENDENCIES
+
+Write alpha=mu_m/(m-1), mu_m=E max_{i<=m} Z_i, so alpha~sqrt(L)/m.
+After alignment ||B-B0||<=A/m, every nonzero singular value of B lies
+between alpha/2 and2alpha for sufficiently large m. This conditioning
+depends on A,m, not r. The affine maximizer f0=g_(B,p), its prescribed-
+mass path, and the balanced score path stay in conditioned families.
+
+The following inputs have no noise-correlation variable:
+
+ - affine offset existence, uniqueness, and smoothness at full row rank;
+ - the identity M=L_graph B, the degree bound ||L_graph||op<=C, and
+   the positive mass-box gap L_graph|_(1-perp)>=c/L;
+ - normal offsets O(sqrt L), polynomial facet probability m^{-C}, and
+   fixed-degree conditional Gaussian polynomial moments;
+ - balanced offset and edge-velocity estimates
+   ||h||<=CL(d+||p-U||), N_l<=CL||Z||^2;
+ - the finite score gap d^2<=C_A m sqrt(L)R_U(B);
+ - the offset certificate ||h_U(B)||^2<=CL^2R_U(B);
+ - the unequal-row second-chaos comparison
+   A2(f0)-A2(g)>=-C_A sqrt(m)L^13 R_U(B)-C_A mL^7||p-U||^2.
+
+These are the actual conclusions of [U,F,O,E] used here. In particular,
+the comment in [U] discussing voting correlations is a later application
+of its correlation-free A2 inequality, not a hypothesis of that inequality.
+[F] cites an all-interface voting paper only for exact reference-facet
+moments and a static covariance identity; its proof uses no noise
+correlation or negative-noise second-variation theorem.
+
+For completeness, polynomial facet probability can be proved without an
+incorrect small norm assumption on the whole offset vector. Normalize
+C=B/alpha and a=h/alpha. All |a_i-a_j|<=C sqrt L. On a fixed ij plane
+let x* be its closest point to zero, with |x*|<=C sqrt L, and let Y be
+the standard tangent Gaussian. Set
+
+ z=T P(e_i+e_j), v=C^+z, T=C_* sqrt L.
+
+Then v is tangent to that plane, |v|<=CT, and it raises the tied i,j
+utilities equally by T relative to every other utility. The tangent event
+max_k|C_kY|<=C_3 sqrt L has probability >=1/2. A sufficiently large C_*
+puts its translate by v inside the actual facet. Cameron--Martin gives
+probability >=(1/4)exp(-|v|^2)>=m^{-C}. This is uniform in N and r.
+
+The first-moment endpoint and equality classification, covariance
+concavity, equal-row second-chaos input, and optimized mass envelope
+behind [O] remain foundational analytic inputs of this proof chain.
+Their validity is not inferred merely from a previous audit label.
+
+2. THE REGULAR NEGATIVE-NOISE LAW DOES NOT NEED rm<=1
+
+On the regular score span H=1-perp, let X,Z be independent standard
+Gaussians and Y=-rX+sqrt(1-r^2)Z. The joint covariance on H+H has
+eigenvalues 1-r and1+r. It is positive definite for every 0<r<1.
+The voting cutoff 1/(m-1) is not a condition for this two-copy law.
+The within-copy label covariance remains P; it is not an m-by-m matrix
+whose off-diagonal entries are being set equal to -r.
+
+Write sigma=sqrt(1-r^2). Adding a common independent Gaussian coordinate
+does not change the winning label. Hence T_{-r}g_i(x) is the utility
+winning probability P_i(a), a_i=-rX_i/sigma. The exact integral is
+
+ w_ij(a)=int phi(t-a_i)phi(t-a_j) product_{k!=i,j}Phi(t-a_k)dt.
+
+Let w0=mu_m/[m(m-1)] and T have density phi(t)^2Phi(t)^(m-2)/w0.
+Its mean M0 is nonnegative and O(sqrt L), and every linear tilt has
+variance <=1/2. For U=range(a)/2,
+
+ e^{-(4UM0+4U^2)}w0<=w_ij(a)<=e^{4UM0+4U^2}w0.
+
+Integrating an ij utility swap yields a positive divided difference
+k_ij(x), for ANY pair on either side of its tie, satisfying
+
+ (T_{-r}g)_j-(T_{-r}g)_i=r k_ij(x)(B0_i-B0_j).x,
+ sigma^{-1}e^{-E(U)}<=k_ij<=sigma^{-1}e^{E(U)},
+ E(U)=4UM0+4U^2, U=r range(X)/(2sigma).                 (2)
+
+No step in these exact formulas uses rm<=1. For r<=R_m, eventually
+r<=1/2, so all appearances of sigma^{-1} are uniformly bounded.
+
+With P0 the rank-(m-1) projection on the regular span, put
+
+ eta=4(M0^2+1)r^2/(1-r^2),
+ kappa(x)=exp(-1-eta|P0x|^2).
+
+The Euclidean range bound and Young's inequality in (2) give
+k_ij>=kappa. For
+
+ W=log(sum_i exp X_i)+log(sum_i exp(-X_i)),
+ e=C[r^2+r sqrt(L)W+r^2W^2] exp(C[r sqrt(L)W+r^2W^2]),
+
+we also have e>=max_ij|k_ij-1|. These are the same explicit functions as
+in [L], now justified on the larger range by (2), not by a voting-range
+corollary. W is 2-Lipschitz and has first two derivative bounds independent
+of ambient dimension.
+
+3. DAMPING MOMENTS AT THE LARGER ENDPOINT
+
+Fix q=C1L and every fixed multiple of q used in Holder. On an entire
+pair hyperplane, on a normalized convex facet, and on bounded normal
+shifts, Gaussian concentration and polynomial facet probability give
+
+ ||W||_q<=C(L+sqrt q),
+ ||e/r||_q<=CL^(3/2).                                  (3)
+
+To check the exponential explicitly, its linear coefficient is
+O(r sqrt L), its quadratic coefficient is O(r^2), and W has mean O(L)
+and subgaussian fluctuations. The required exponent bounds follow from
+rL^(3/2)=o(1) and r^2L^2=o(1), with q=O(L).
+
+For the radial factor, convex-Gaussian concentration and a Gaussian
+auxiliary integral give
+
+ E exp(b|P0Y|^2)
+ <=(1-2b)^(-(m-1)/2)
+   exp[b|P0 EY|^2/(1-2b)], b<1/2.
+
+Here |EY|^2=O(L). Taking b=q eta shows that ||kappa^{-1}||_q is uniformly
+bounded provided r^2mL^2=O(1), and tends to its harmless constant limit
+when r^2mL^2=o(1). At r=R_m,
+
+ rL^(3/2)=m^(-7/8)L^(-1/2),
+ r^2mL^2=m^(-3/4)L^(-2).
+
+Both tend to zero. All first two normal derivatives of the analytic
+factors have fixed L32 norms bounded by m^K, with K independent of r.
+Differentiating kappa^{-1} introduces only eta-polynomials in P0x;
+differentiating e/r introduces no inverse power of r. The relevant
+projection has rank m-1, so no N-dimensional determinant is present.
+
+4. EXTEND THE FULL SIGNED AFFINE TAIL UNDER rL<=c_*
+
+We derive a slightly more general usable tail statement. For a small
+absolute c_*>0, the proof of [H] gives, whenever 0<r<=c_*/L,
+
+ |H_r(g_(B,p))-H_r(g)|
+ <=C_A r^3L^10[d(B)^2+||p-U||^2],                     (4)
+ H_r(f)=sum_{k>=3}(-r)^k A_k(f).
+
+Here is the complete list of correlation-dependent checks in that proof.
+Choose t=c/sqrt L, reducing c once to allow all fixed-multiple Holder
+exponents. The dimension-free OU restriction lemma at time t is static:
+normal Mehler-row Cauchy, tangential hypercontractivity, and polynomial
+facet probability yield fixed conditional norms for T_t and its first
+two derivatives. The exact derivative identity is
+
+ nabla^j T_t v=(2t)^j T_{2t}(nabla^j T_{1/2}v), j=1,2.
+
+It has no noise correlation parameter. Its normal contraction variant
+only enlarges the normal calculation to a space of dimension at most2.
+
+For the regular tail potential, the exact factorization
+
+ q_i^0=T_t v_i^0,
+ v_i^0=T_{-r/t^2}Pi_{>=3}T_tg_i
+
+is valid when r/t^2<=1. Choose c_* so r/t^2<=1/2. Hypercontractivity
+gives ||T_tg_i||_2<=C/m, hence ||v_i^0||_2<=C(rL)^3/m. Permutation
+oddness then gives the exact quotient
+
+ q_i^0-q_j^0=(X_i-X_j)P_e,
+ ||P_e||_{Lq(facet)}<=Cr^3L^(5/2)/m,
+ ||grad P_e||_{Lq(facet)}<=Cr^3L^2/m.                   (5)
+
+For the current-potential difference q-q0=T_t v, integrate the affine
+boundary derivative. The general-time trace [T] requires
+
+ (r/t)^2 Lambda<=1, Lambda=O(L),
+
+which follows from rL<=c_*. It gives
+||v||<=Cr^3L^(7/2)d, and the same with d+||p-U|| on a mass path.
+The signed boundary quadratic in the second derivative is bounded using
+[T] at time sqrt(r), whose only requirement is r Lambda<=1. Thus
+
+ |<f',T_{-r}Pi_{>=3}f'>|<=C(rL)^3 N_l.
+
+Choose c_* small enough for all these inequalities simultaneously.
+No condition involving rm has appeared.
+
+The adjoint c solving L_graph c=div(w E(q_i-q_j)) cancels the complete
+offset acceleration, as in the exact algebra of [H]. Its bound is
+||c||<=Cr^3L^4d. For the coherent field V=-B^+(ZX+k), the full second
+derivative is
+
+ 2<f',T_{-r}Pi_{>=3}f'>
+ +2sum_e w_e E[l_e grad(q-c)_e.V+(q-c)_e Z_e.V
+                              +(q-c)_e l_e div_gamma V].
+
+The current-facet identity alpha(X_i-X_j)=-delta_l_e is used only after
+differentiating the original quotient in (5). This gives
+
+ grad(q_i^0-q_j^0).V
+ =-[P_e l_e+P_e delta_B_e.V+delta_l_e grad P_e.V]/alpha.
+
+Every subsequent transport bound uses (5), the displayed norm of v,c,
+and correlation-free conditional polynomial moments. Therefore the
+balanced Hessian bound Cr^3L^10||Z||^2 has unchanged constants.
+Integration from the regular fan, whose first derivative is zero, and
+the mass-path adjoint gradient 2c prove (4).
+
+For the infinite series, cutoff k gains respectively (r/t^2)^k,
+[(r/t)^2 Lambda]^(k/2), and (r Lambda)^k. All bases are bounded strictly
+below1 by the same fixed choice of c_*. Thus the full signed potential,
+its two parameter derivatives, and the adjoint converge uniformly; the
+argument does not replace the tail by a finite chaos truncation.
+
+Since R_m L=m^(-7/8)/L tends to zero, the proposed range lies inside
+this newly derived affine-tail range. Combining (4) with the static A2
+comparison and finite gap gives
+
+ S_{-r}(f0)-S_{-r}(g)
+ >=[1-C_A(r^2mL^7+r^3L^10)]||p-U||^2
+  +r[w-W(f0)]-C_A[r^2 sqrt(m)L^13+r^3mL^11]R_U(B).     (6)
+
+5. EXACT OWN-CENTROID CANCELLATION AT EVERY r<1
+
+Let M be the centroid matrix of f0, v=f-f0, z=p-U, Dloc=d+||z||,
+and Lroute=F_p(B)-||B||^2=<B,M-B>>=0. The inequality uses feasibility
+of the actual assignment, not stationarity. Let
+
+ u=T_{sqrt(r)}Pi_{odd>=3}v,
+ qB=T_{-r}Pi_{>=2}f0, q0=T_{-r}Pi_{>=2}g,
+ a=qB-q0-T_{sqrt(r)}u.
+
+Hermite orthogonality gives, dropping only a nonnegative even square,
+
+ S(f)-S(f0)>=r||M-B||^2+||u||^2
+                +2[rLroute+<v,q0+a>].                     (7)
+
+On a current winning cell i, put c_ij=(B_i-B_j).x+h_i-h_j>=0,
+delta_l_i=(B_i-B0_i).x+h_i. The exact regular relation (2) yields
+
+ r c_ij+q0_j-q0_i
+ =r k_ij c_ij+r(1-k_ij)(delta_l_i-delta_l_j).
+
+For psi_i=kappa^{-1}[e|delta_l_i|+|a_i|/r], preserve the j=i term as
+zero, then sum against the arbitrary new probabilities f_j. This gives
+
+ rLroute+<v,q0+a>>=-r Bcap(psi),
+ Bcap=E max(0,max_{j!=i}(psi_i+psi_j-c_ij)).              (8)
+
+These are algebraic identities and pointwise inequalities, valid for
+arbitrary measurable fractional assignments and for every 0<r<1.
+
+6. SMOOTHING AND THE CAP: DO NOT MISAPPLY [S]
+
+The theorem printed in [S] assumes s^2<=1/(m-1). That theorem cannot
+be cited with s^2=r in the new range. Instead we use the actual
+moment-based normal-fiber argument below, whose hypotheses have no such
+cutoff. The correlation-dependent inputs are explicitly checked here.
+
+Using the general-time trace with cutoff2 as in Section 4 gives
+
+ qB-q0=T_t vD, ||vD||<=Cr^2L^(5/2)Dloc.
+
+Because u starts in degree3, r/t^2<=1 implies
+
+ T_{sqrt(r)}u=T_t vu,
+ ||vu||<=(sqrt(r)/t)^3||u||<=Cr^(3/2)L^(3/2)||u||.
+
+Together with (3), Holder at q=C1L, and static offset estimates these
+give exactly
+
+ (sum_i||psi_i||_q^2)^(1/2)
+ <=C[rL^(5/2)Dloc+sqrt(r)L^(3/2)||u||],
+ sum_{e=ij}w_e E_e(psi_i^2+psi_j^2)
+ <=C[r^2L^5Dloc^2+rL^3||u||^2].                       (9)
+
+The second estimate uses bounded graph degrees and conditional OU norms;
+it does not sum m unweighted facet probabilities. Put
+
+ theta=C2L^4[rDloc+sqrt(r)||u||].
+
+If theta=0 the forcing vanishes. Otherwise v_i=psi_i/theta has vector
+Lq norm <=1 and bounded weighted facet square sum. Its analytic factors
+and first two normal derivatives have fixed L32 norms bounded by m^K,
+uniformly for all r in the new range. Indeed
+
+ rDloc/theta<=CL^(-4),
+ ||vD||/(r theta)<=CL^(-3/2),
+ ||vu||/(r theta)<=CL^(-5/2).
+
+The only remaining analytic factors are the damping functions controlled
+in Section 3 and T_t at time determined by m. Absolute values are locally
+Lipschitz and their a.e. derivatives are bounded by derivatives of those
+analytic factors. No inverse r remains in the normalized estimates.
+
+Here is the cap proof from precisely these hypotheses. For moderate
+amplitudes m^{-B}<=theta<=m^{-5/4}, separate source and target rewards
+using (a+b-c)_+<=[(2a-c)_++(2b-c)_+]/2. The correlation-free one-label
+entry/exit margin has sublevel measure <=Cs for s<=c/m. Its Lq bathtub
+bound and the vector Lq norm give
+
+ Bcap<=C m^(1/(q+1))theta^(2q/(q+1))
+       +(c/m)(C theta m/c)^q<=C_B theta^2.               (10)
+
+For theta<=m^{-B}, set M=theta^{-1/8}. At projected points whose normal
+supremum of |v_i|+|partial_n v_i| is <=M, positive pair rewards have width
+at most C theta M/alpha. Fiber Taylor error and Gaussian-density error
+are <=m^K theta^3M^3. Projections outside the actual facet belong to
+third-label strips of this width; conditioned tangent altitudes >=c alpha
+give the same error after summing the finitely many pairs and labels.
+Bad projected points cost <=m^K theta M^{-31} by L32. Normal distance
+>1 costs <=m^K theta^32 by full-space L32 and cost >=c alpha.
+The main term is bounded by the weighted facet square sum in (9).
+Therefore
+
+ Bcap<=C theta^2+C m^K theta^(21/8), theta<=m^{-B0}.
+
+Choose fixed B>max(B0,8K/5). The error is absorbed for theta<=m^{-B},
+and (10) covers the remaining amplitudes. This proves Bcap<=C theta^2
+at every allowed amplitude, with constants independent of r,N.
+
+To verify the amplitude ceiling, use only the full mass box:
+||z||<=C/sqrt m, d<=A/m, ||u||<=sqrt2 r^(3/2). At r<=R_m,
+
+ theta<=C_A L^4[r/sqrt m+r^2]
+       <=C_A[m^(-11/8)L^2+m^(-7/4)]
+       =o(m^(-5/4)).                                    (11)
+
+Thus even arbitrary masses in the full box are allowed. The stronger
+post-localization premise delta<=Cr^2/m is unnecessary; if available,
+it improves the ceiling to CL^4(r/m+r^2).
+
+7. FINAL COMBINATION AND EXPLICIT ENDPOINT CHECKS
+
+Substituting the cap into (7)--(8), the odd square is absorbed once
+Cr^2L^8<=1/2. This yields
+
+ S(f)-S(f0)>=r||M-B||^2-Cr^3L^8[d^2+||z||^2].          (12)
+
+Combine (12) with (6) and use d^2<=C_A m sqrt(L)R_U(B). The first-chaos
+terms cancel EXACTLY:
+
+ r[w-||M||^2]+r||M-B||^2
+ =r[w-||B||^2-2Lroute]=2rR_p(B).
+
+Use R_p(B)>=R_U(B)+h_U(B).z and ||h_U||^2<=CL^2R_U(B). Young's
+inequality gives the same final lower bound as in the preserved proof:
+
+ E(f)>=[1-C_A(rL^2+r^2mL^7+r^3L^10)]||z||^2
+       +[3/2-C_A(r sqrt(m)L^13+r^2mL^11)]rR_U(B).        (13)
+
+For clarity, at the NEW endpoint r=R_m the relevant quantities are:
+
+ condition                     exact endpoint monomial
+ rL                            m^(-7/8)L^(-1)
+ rL^(3/2)                      m^(-7/8)L^(-1/2)
+ r^2mL^2                       m^(-3/4)L^(-2)
+ r^2L^8                        m^(-7/4)L^4
+ rL^2                          m^(-7/8)
+ r^2mL^7                       m^(-3/4)L^3
+ r^3L^10                       m^(-21/8)L^4
+ r sqrt(m)L^13                 m^(-3/8)L^11
+ r^2mL^11                      m^(-3/4)L^7
+ m^(5/4)L^4*r/sqrt(m)          m^(-1/8)L^2
+ m^(5/4)L^4*r^2                m^(-1/2).
+
+Every displayed monomial tends to zero. They are increasing in r before
+substitution, so one sufficiently large m works uniformly for all
+0<r<=R_m, including arbitrarily small r. Equations (11)--(13) prove (T).
+
+8. EQUALITY, AMBIENT DIMENSION, AND PRECISE LIMITS
+
+If f is competitive, (T) forces p=U and R_U(B)=0. For its balanced
+affine allocation with centroid M,
+
+ 2R_U(B)=w-||M||^2+||M-B||^2.
+
+The balanced endpoint equality theorem forces M=B to be a regular
+centroid matrix. Since B is also the actual centroid of f, the regular
+linear assignment objective is attained by f. Its winning label is
+unique almost surely, which forces f to be that same regular assignment,
+even if f was initially fractional.
+
+Every use of a determinant or normal evaluation above is either on the
+rank-(m-1) regular score span or on at most two normal coordinates.
+Extra coordinates are integrated using Hilbert-valued hypercontractivity.
+Full row rank holds throughout the local score ball; dimension-opening
+score variations are covered by the coherent affine transport and
+Procrustes formulation. No smoothness or boundedness assumption on the
+exceptional sets of the original assignment is introduced.
+
+No condition rm<=1 has been found or used. The only genuinely changed
+inputs were the correlation range of the affine-tail lemma and the
+all-amplitude cap justification; both were re-derived above. The voting-
+range statement of [S] was not silently extended by citation.
+
+This establishes the LOCAL extension within the same foundational
+correlation-free proof chain. It does not establish the proposed global
+theorem, does not verify every foundational input externally, and does
+not provide a numerical alphabet threshold.

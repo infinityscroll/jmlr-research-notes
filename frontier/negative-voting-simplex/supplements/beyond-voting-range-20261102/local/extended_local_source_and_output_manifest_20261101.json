@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-01",
+  "status": "New local extension candidate; no claim of global theorem or external validation",
+  "source_pins": [
+    {
+      "path": "../../../dependency_review/proof_sources/OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "sha256": "1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt",
+      "sha256": "7388c94860fab24b1c033d4b52e1a2ed74a71622201a2abe0f0a430f3b5b764c"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt",
+      "sha256": "5f2ef775159f53f277d248995d17c138c2fbc53e27a089a2dea164aba7051432"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt",
+      "sha256": "f0f22a63d1b021ac51bd363622e2b36514043abf88575372727dc8ebadabba3f"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt",
+      "sha256": "3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt",
+      "sha256": "3b6bd981d0508f8ce9487b27659b4203473266fb7721f4acb0f8c3d74793f3a1"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt",
+      "sha256": "aca4da1519de156b684a61425e733eb7f1f9b58621f324ded01a0df2cf8ba58a"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt",
+      "sha256": "47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt",
+      "sha256": "111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt",
+      "sha256": "9abf2430423c2effd05b659ec2dca9d6e5ec456911fcf1940a055fa99d2678be"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt",
+      "sha256": "ec1edf184fef18a6630fe0007762943cc142d0b7a32dc61e01b83429b35ec633"
+    },
+    {
+      "path": "../../../dependency_review/proof_sources/ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt",
+      "sha256": "6c97ff1bf8888e492312a88550ef8465cccbdb1df1060334bf0c7fa9dd336355"
+    }
+  ],
+  "output_pins": [
+    {
+      "path": "OWN_CENTROID_LOCAL_COMPARISON_BEYOND_VOTING_20261101.txt",
+      "sha256": "5945a7c65fb51f71ad22081f014564d6b7169fea9633d35119185cb0caa529b0"
+    },
+    {
+      "path": "check_extended_local_exponents_20261101.py",
+      "sha256": "3903eb1597a9e7e7747236eb2fc76d3553d4fce49718910b4cf9ab18690a9a48"
+    },
+    {
+      "path": "extended_local_exponent_checks_20261101.json",
+      "sha256": "1d7a258e01670a9bd0459d1a9b23b2dfeb58c0d9626dd4f2adec608c2e8523c4"
+    }
+  ]
+}

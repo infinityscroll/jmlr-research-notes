@@ -1,0 +1,193 @@
+EXACT EQUAL-ROW PROXY FROM AGGREGATE RADIAL ERROR AND ANGULAR SPREAD
+1 November 2026. New elementary geometric proof; prior sources unchanged.
+
+THEOREM — A FINITE STATEMENT WITH EXPLICIT SUFFICIENT CONSTANTS
+
+Let B=(b_i)_(i=1)^m be a centered real m-by-N matrix and let beta>0.
+Assume
+
+  sum_i b_i=0, ||B||_F^2=w=m beta^2,
+  E=sum_i (|b_i|-beta)^2,
+  kappa=||B||op^2/w <=1/128,
+  eta=E/w <=1/1024.                                      (1)
+
+Then there is a matrix Z in exactly the same row span S=span{b_i}
+such that
+
+  sum_i Z_i=0, |Z_i|=beta for every i,
+  ||Z-B||_F^2<=64 E.                                     (2)
+
+No individual positive lower bound on |b_i| is assumed. Zero rows and
+arbitrarily short rows are permitted. The constants do not depend on
+m, N, rank, the number of zero rows, or separation between rows.
+The construction needs no unused ambient coordinate. It gives a test
+matrix; it does not claim centroid realizability or a noise comparison.
+
+1. NORMALIZE DIRECTIONS, INCLUDING ZERO ROWS
+
+Write r_i=|b_i|. Since ||B||_F^2=w>0, its row span S is nonzero.
+For r_i>0 set u_i=b_i/r_i. For r_i=0 choose any unit vector u_i in S.
+The choices for zero rows may coincide and may be adversarial.
+In every case b_i=r_i u_i and |u_i|=1.
+
+Call an index bad if r_i<beta/2. Then
+
+  #bad/m <=4E/(m beta^2)=4eta.                            (3)
+
+On good indices, u_i u_i^T <=4 beta^-2 b_i b_i^T in PSD order.
+On every bad index, u_i u_i^T<=I_S. Consequently the full frame obeys
+
+  ||m^-1 sum_i u_i u_i^T||op
+   <=4||B||op^2/(m beta^2)+#bad/m
+   <=4kappa+4eta <=9/256 <1/16.                           (4)
+
+No estimate of a reciprocal zero-row norm has been used. The arbitrary
+zero-row directions are charged only through their number.
+
+Centering gives the exact identity
+
+  beta sum_i u_i=sum_i(beta-r_i)u_i.
+
+By Cauchy-Schwarz,
+
+  |m^-1 sum_i u_i| <=(m beta)^-1 sum_i|beta-r_i|
+                    <=sqrt(E/(m beta^2))=sqrt(eta).       (5)
+
+This estimate is valid for every choice of the zero-row directions.
+
+2. A MEDIAN OF THE UNIT DIRECTIONS
+
+On S define Phi(a)=m^-1 sum_i |u_i-a|. Work in the closed ball |a|<=1/8.
+All distances lie in [7/8,9/8], so Phi is smooth there. Write
+v_i(a)=(u_i-a)/|u_i-a|. In PSD order,
+
+  (u_i-a)(u_i-a)^T <=2u_i u_i^T+2aa^T.
+
+Thus, using (4),
+
+  ||m^-1 sum_i v_i(a)v_i(a)^T||op
+   <=[2/(7/8)^2](1/16+1/64)=10/49.                      (6)
+
+Each I_S-v_i(a)v_i(a)^T is PSD, so its positive denominator can be
+bounded separately without changing the inequality direction. Hence
+
+  Hess Phi(a)
+   =m^-1 sum_i [I_S-v_i(a)v_i(a)^T]/|u_i-a|
+   >=(8/9)(I_S-m^-1 sum_i v_i(a)v_i(a)^T)
+   >=(104/147)I_S >=(1/2)I_S.                            (7)
+
+Also grad Phi(0)=-m^-1 sum_i u_i, whose norm is at most sqrt(eta)<=1/32.
+For a unit direction e and a=e/8, integrating (7) along the radius gives
+
+  e.grad Phi(e/8) >=-sqrt(eta)+1/16 >=1/32>0.             (8)
+
+A minimum of the continuous function Phi on the compact ball therefore
+lies in its interior. Call it a_*. It has gradient zero and, by convexity,
+is a global median of the unit rows. Taking the inner product of the
+gradient increment with a_* and using (7) gives
+
+  |a_*|<=2|grad Phi(0)|<=2sqrt(eta).                       (9)
+
+The construction does not require the median of the original unscaled
+rows b_i, which can lie at a zero row. It uses the unit rows, whose
+distances from the small ball are uniformly positive.
+
+3. CENTER, RESCALE, AND CONTROL THE COST
+
+Define
+
+  Z_i=beta (u_i-a_*)/|u_i-a_*|.                           (10)
+
+The zero-gradient equation gives sum_i Z_i=0, and every row has norm
+beta. All rows lie in S. Let Z0_i=beta u_i. Its discrepancy from B is
+exactly
+
+  ||Z0-B||_F^2=sum_i(beta-r_i)^2=E.                       (11)
+
+For unit u and |a|<=1/8,
+
+  |(u-a)/|u-a|-u| <=2|a|/(1-|a|) <=(16/7)|a|.
+
+Equations (9)-(11) therefore give
+
+  ||Z-Z0||_F <=(16/7)sqrt(w)|a_*|
+              <=(32/7)sqrt(E),
+  ||Z-B||_F <=(39/7)sqrt(E).
+
+In particular ||Z-B||_F^2<=1521E/49<32E; the theorem's constant 64
+is a harmless rounded value. There is no 1/min_i r_i factor.
+
+4. THE ROW SPAN IS PRESERVED EXACTLY
+
+It remains to exclude a loss of row span. Suppose v in S is orthogonal
+to every Z_i. By (10), v.u_i=v.a_* for every i. Multiply these equalities
+by r_i and sum. Centering and sum_i r_i>0 give
+
+  0=v.sum_i b_i=(sum_i r_i)(v.a_*),
+
+so v.a_*=0 and v.u_i=0 for all i. In particular v.b_i=0 for every i.
+Since v belongs to S, v=0. Hence span{Z_i}=S. Zero rows cause no problem:
+their weights r_i are simply zero in this argument.
+
+5. GAUSSIAN-SCORE COROLLARY AT THE REQUIRED SCALE
+
+Let L=1+log m and w=alpha^2(m-1) be the regular first-chaos scale, so
+w is comparable to L/m. Suppose the normalized centered matrix Bhat
+satisfies
+
+  ||Bhat||^2=w, ||Bhat||op^2<=C0/m,
+  E_rad=sum_i(|Bhat_i|-beta)^2<=C1 L^2 R,
+  R<=C2 r/m.                                             (12)
+
+Then kappa<=C/L and eta<=C rL. Thus the finite conditions (1) hold
+for all sufficiently large m uniformly over any range with rL=o(1).
+In particular they hold uniformly for
+
+  0<r<=r_max(m):=m^(-7/8)/(1+log m)^2,                    (13)
+
+because rL<=m^(-7/8)/L tends to zero. The theorem gives an exactly
+centered equal-row matrix Z in the same span, with
+
+  ||Z-Bhat||^2<=C E_rad<=C L^2 R.                         (14)
+
+For an unnormalized matrix B=s Bhat with s bounded above and below,
+the exact score remainder identity
+
+  R_U(B)=w(s-1)^2/2+s R_U(Bhat)
+
+implies ||B-Bhat||^2<=2R_U(B). If R_U(Bhat)<=C R_U(B), the same
+construction therefore gives
+
+  ||Z-B||^2<=C L^2 R_U(B).                               (15)
+
+The fixed normalized row cap is still required when invoking the global
+summed-row covariance theorem to obtain (12). The new geometric theorem
+does not require such a cap, but it does not remove that separate analytic
+hypothesis. Actual centroid entropy in a fixed mass window supplies it.
+
+OPTIONAL OPERATOR BOUND. Equations (4), (9), and (10) also give
+||Z||op^2<=C w(kappa+eta)<=C(||Bhat||op^2+E_rad).
+In (12)-(13), E_rad<=C rL^2/m<=C/m, so ||Z||op^2<=C/m as well.
+The exterior tensor argument needs only equal rows, centering and trace;
+it does not require this additional conclusion.
+
+6. ADVERSARIAL NECESSITY CHECK: SMALL RADIAL ERROR ALONE IS INSUFFICIENT
+
+The angular/operator assumption cannot be dropped. For odd m=2k+1,
+take a centered rank-one matrix with k rows
+  +beta sqrt((k+1)/k)
+and k+1 rows
+  -beta sqrt(k/(k+1)).
+It has ||B||^2=m beta^2 and
+
+  E/w=2/[m(m+sqrt(m^2-1))] ->0.
+
+Nevertheless an odd number of one-dimensional rows of norm beta cannot
+sum to zero: each is +beta or -beta. Thus no centered equal-row proxy
+exists in the same span, regardless of approximation cost. For this
+example kappa=1, violating (1). This exact obstruction explains why
+the proved angular spread, rather than radial smallness alone, is needed.
+
+This is a new proof, not a numerical search. It removes individual row
+lower bounds from the geometric proxy route while explicitly retaining
+the hypotheses that make same-span centering possible.

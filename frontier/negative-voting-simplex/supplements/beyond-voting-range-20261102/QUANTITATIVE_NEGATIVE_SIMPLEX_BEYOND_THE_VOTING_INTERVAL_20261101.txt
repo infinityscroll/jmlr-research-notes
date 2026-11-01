@@ -1,0 +1,217 @@
+QUANTITATIVE NEGATIVE SIMPLEX STABILITY BEYOND THE VOTING INTERVAL
+1 November 2026. New proof candidate for independent reconstruction.
+
+The earlier full-voting theorem and its quantitative supplements remain
+unchanged. This successor extends the Gaussian correlation interval by
+replacing two localization steps. It retains the existing foundational
+analytic inputs and their external-review limitations.
+
+THEOREM
+
+There are absolute c>0 and m0 such that for every m>=m0, finite N>=m-1,
+  0<r<=R_m:=m^(-7/8)/(1+log m)^2,
+and every measurable f:R^N->Delta_m,
+
+ S_-r(f)-S_-r(g)
+  >= c min{ r/m^2,
+            ||E f-U||^2 + r*d1(f)^4/[m^(5/2)(1+log m)^2] }.       (T)
+
+Here U is the uniform probability vector, g is a regular m-simplex
+assignment, and d1 is Gaussian-L1 distance to its orthogonal/label orbit.
+Equality with the reference holds exactly on that orbit, up to null sets.
+No mass, purity, stationarity or interface regularity premise is imposed.
+The threshold m0 is existential; neither a numerical m0 nor sharpness of
+the rate or stability exponent is asserted.
+
+The ratio R_m/(1/(m-1)) tends to infinity. Thus this Gaussian statement
+eventually includes the entire negative voting range and extends beyond
+it. The discrete m-symbol channel is not defined at those more negative
+correlations; the established voting and MAX-m-CUT consequences retain
+their original channel interval and their UGC hypothesis for hardness.
+
+NOTATION AND INPUTS
+
+Write L=1+log m, mu=E max_{i<=m} G_i for independent standard normals,
+alpha=mu/(m-1), w=mu^2/(m-1), B_i=E[X f_i], W=||B||_F^2,
+delta=||p-U||^2 with p=E f, Delta=w-W, D=delta+r Delta, J=D/r,
+R=R_U(B)=(w+W)/2-F_U(B), and E=S_-r(f)-S_-r(g).
+F_U is the balanced linear-assignment support function. Every constant
+below is independent of finite N and r in the displayed range.
+
+The new mass note proves an L2-neighborhood mass-value bound without
+coordinatewise lower bounds. The new proxy note gives a finite geometric
+lemma for centered matrices with small total radial error and spectral
+spread, including zero rows. The local-extension note explicitly
+re-establishes the weighted-cap and affine-tail estimates for R_m; merely
+substituting a larger r into an old voting-range theorem is insufficient.
+
+The remaining inputs are the balanced covariance/support theorem and
+finite covariance gap, the fixed-row-cap summed radial theorem, the
+rank-free balanced offset bound, Gaussian hypercontractivity, and the
+credited common-threshold comparison of Mulgund. Their frozen proofs
+and hypotheses are supplied in the existing dependency companion.
+
+1. A MASS-VALUE BOUND THAT ALLOWS TINY OR EMPTY LABELS
+
+There are absolute epsilon0,C>0 such that for large m and any assignment
+with delta<=epsilon0/m,
+
+                   W<=w+C L^2 delta.                           (1)
+
+Here is the complete reduction to the existing fixed-window value bound.
+Discard labels with p_i<1/(2m) or p_i>2/m. Let h be their number, M their
+total mass, k=m-h, F_bad=sum_bad f_i, and b=E[X F_bad]. Then
+  h<=4m^2 delta, M<=4m delta.
+Taking epsilon0 small ensures k>=7m/8 and M<=1/8. For retained labels put
+  q_j=p_j/(1-M), g_j=f_j+q_j F_bad.
+The g_j form a measurable k-label simplex assignment with masses q, where
+  1/(4k)<=q_j<=3/k, delta_q=||q-U_k||^2<=2delta.
+
+Let v=sum_good(q_j-1/k)B_j. Conditional Cauchy gives
+  ||B_good||op^2<=2/m, |v|<=sqrt(2delta_q/m).
+The exact centroid expansion is
+  W_good=W(g)-2b.v+|b|^2/k-delta_q|b|^2.
+Individual Gaussian rearrangement gives W_bad<=C L delta. If a bad label
+exists, delta>=1/(4m^2); the entropy bound for F_bad and M<=4m delta give
+  |b|^2<=C m^2 delta^2 L.
+Consequently the two positive errors |b|^2/k and2|b||v| are <=C L delta.
+If no bad labels exist, the original fixed-window bound applies directly.
+
+The existing k-label prescribed-mass bound gives
+  W(g)<=w_k+C L^2 delta_q.
+Monotonicity of mu_j implies
+  w_j-w_{j+1}<=mu_j^2/[j(j-1)]<=C log(ej)/j^2.
+Telescoping from k to m therefore gives w_k-w_m<=C hL/m^2<=C L delta.
+This proves (1), including arbitrary fractional rules and zero masses.
+Equivalently the same bound holds for the true first-moment optimum V_m(p).
+
+2. COARSE LOCALIZATION ENTERS THAT L2 NEIGHBORHOOD
+
+It suffices to consider E<=r/m^2. The scalar Gaussian Bregman estimate and
+Hermite parity, valid whenever r B_m<1, give
+  delta <=[E+r(F_m-w)+r^2 A2(g)+r^3+r^4]/(1-r B_m),
+where F_m-w=O(1/m), A2(g)=O(L^2/m), and B_m=O(L).
+At every r<=R_m,
+  rL=o(1), rL^2=o(1), mr^2=o(1).
+It follows that delta<=C r/m<=epsilon0/m. Apply (1) to obtain
+
+ D>=delta/2+r[V_m(p)-W]>=0.                                (2)
+
+The positive-degree-two tangent inequality has ell=mw-1=O(L),
+c_{m,r}=ell[1/r-(ell+2)/2]>=0 and1-r ell>=1/2. Its reference residual
+Delta2 is O(1/m). Hence
+  (1-r ell)D+r^2 c_{m,r}delta <=E+r^2 Delta2+r^3+r^4,
+  D<=C[r/m^2+r^2/m+r^3].
+At R_m the product of this last bound with m^2 tends to zero:
+  r+mr^2+m^2r^3=o(1).
+Thus delta=o(m^-2), and every mass now lies in[1/(2m),3/(2m)].
+
+3. RARE-LABEL TAILS RECOVER THE REQUIRED SECOND LOCALIZATION
+
+Take t^2=1/(4L). Hypercontractivity and the refined mass box give
+  ||T_t f||_2^2+||T_t g||_2^2<=C/m.
+Since r/t^2<=1, the adverse odd tail of f is at most C r^3 L^3/m and
+the positive even reference tail above degree two is at most C r^4 L^4/m.
+Repeat the same tangent comparison with these sharper allowances:
+  D<=C[E+r^2/m+r^3L^3/m+r^4L^4/m]
+    <=C[r/m^2+r^2/m].
+In particular
+
+ delta<=2D,
+ |W-w|<=J<=C[1/m^2+r/m],
+ W/w=1+O((1/m+r)/L).                                      (3)
+
+The balanced offset argument uses actual feasibility and the mass/row
+caps. It still gives
+  0<=R<=J.                                                (4)
+
+One-row coercivity would only give a relative row error of order
+sqrt(mr/L), which does not vanish at R_m. The following geometric
+construction uses total radial error instead.
+
+4. AN EQUAL-ROW PROXY WITHOUT INDIVIDUAL ROW LOWER BOUNDS
+
+Normalize Bhat=B/s, s=sqrt(W/w), and beta=sqrt(w/m). The exact radial
+identity gives R_U(Bhat)<=C R. Actual centroid entropy supplies a fixed
+normalized UPPER row cap. The summed radial theorem gives
+  E_rad=sum_i(|Bhat_i|-beta)^2<=C L^2 R.
+Conditional Cauchy gives ||Bhat||op^2<=C/m. Therefore
+  kappa=||Bhat||op^2/w<=C/L,
+  eta=E_rad/w<=C[L/m+rL]=o(1).                             (5)
+
+The new finite proxy lemma applies to these two small quantities. For
+completeness, normalize each nonzero row to a unit u_i and choose arbitrary
+unit directions in the centroid span for zero rows. Rows shorter than
+beta/2 have fraction at most4eta; on the others the direction-frame norm
+is at most4kappa. Thus
+  ||m^-1 sum u_i u_i^T||op<=4(kappa+eta),
+  |m^-1 sum u_i|<=sqrt(eta).
+The geometric median of these UNIT vectors lies in a fixed small ball,
+with norm O(sqrt eta), because the distance-average Hessian there has a
+positive absolute lower bound. Recenter and renormalize the unit rows,
+then multiply by beta. This gives a centered equal-row matrix Z satisfying
+
+ sum_i Z_i=0, |Z_i|=beta,
+ ||Z-Bhat||^2<=64 E_rad,
+ ||Z-B||^2<=C L^2 R<=C L^2 J.                             (6)
+
+The proxy lemma proves this with explicit sufficient constants and
+handles zero rows. It uses the same centroid span. No realizability or
+noise improvement by Z is asserted; it is only a quadratic test matrix.
+
+5. INTERIOR AND EXTERIOR NOISE COMPARISONS
+
+Let d be centroid distance to the regular orbit. If d<=1/m, the new local
+range audit proves the own-centroid conclusion throughout0<r<=R_m:
+
+                      E>=delta/2+rR.                     (7)
+
+The Gaussian regular-potential identity holds for0<r<1. The moment/cap
+proof is re-established using q eta_damp m=O(r^2mL^2)=o(1), rL=o(1),
+and forcing amplitude below m^(-5/4). The final local error coefficients
+  rL^2+r^2mL^7+r^3L^10,
+  r sqrt(m)L^13+r^2mL^11
+all vanish at R_m. These checks replace the original voting-range
+hypothesis of each invoked estimate; there is no lower cutoff on r.
+
+If d>1/m, unnormalized covariance coercivity gives
+  J>=R>=c/(m^3 sqrt L), d^2<=C m^(3/2)L R.
+With (6), the proxy mean deficit and actual routing loss sum to
+  w-<Z,B>=(w-W+||Z-B||^2)/2<=C L^2 J.
+The common-threshold Gaussian comparison, absolute Gaussian tail cutoff,
+and direct second-moment tensor certificate give
+  A2(f)-A2(g)>=-C L^3 J.
+The regular routing loss and rare-label hypercontractivity give the
+entire signed higher-tail estimate
+  |H_r(f)-H_r(g)|<=C r^3m^(7/4)L^(7/2)J.
+Their proofs use (3)-(6), the exterior floor, and rL=o(1); neither requires
+an individual lower bound on centroid row size or r<=1/(m-1).
+
+Consequently
+  E>=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)]>=D/2.                  (8)
+Indeed at R_m the two error orders are m^(-7/8)L and L^(-1/2), both zero
+in the limit. Since delta+rR<=3D, (7)-(8) imply
+
+                 E>=(delta+rR)/6                         (9)
+
+whenever E<=r/m^2. Negative E was allowed at entry and is now excluded.
+
+6. GLOBAL QUANTITATIVE CONCLUSION
+
+The previously independently reconstructed covariance/Procrustes and
+regular top-two margin arguments are independent of r. They give
+  d^2<=C m^(3/2)L R,
+  d1(f)^4<=64(m-1)^2 w d^2<=C m^(5/2)L^2 R.
+Combine this with (9) to obtain (T) in the small-excess class. Outside
+that class E>r/m^2 makes (T) immediate after reducing c to at most1.
+At E=0, delta=d1=0; compactness of the regular orbit in Gaussian L1
+gives the asserted exact equality classification.
+
+VERIFICATION LIMITS
+
+This source must be read with the new mass, proxy and local-extension
+proofs, not as permission to apply an old theorem outside its range.
+All foundational proofs retain their internal-candidate status pending
+adequate outside mathematical validation and priority assessment.
+The theorem does not cover all negative correlations or all alphabets.
+No computational experiment or formal-verification claim is used in it.
