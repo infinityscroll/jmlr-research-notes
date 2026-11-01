@@ -1,0 +1,224 @@
+LINEAR THRESHOLD: INDEPENDENT LOCAL-CAP, PROXY, AND L1 REVIEW
+1 November 2026. New review; frozen prior proofs and audits unchanged.
+
+Audited successor:
+ LINEAR_NOISE_THRESHOLD_GLOBAL_STABILITY_SUCCESSOR_20261101.txt
+ SHA256 55cdd937e4da8cf5b40b45a41610590a7869f7102625f2954bd50118838dba31
+
+Core local source independently reconstructed in the previous local audit:
+ OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt
+ SHA256 1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd
+
+Verdict
+-------
+Read the entire successor. No correction found. The local proof applies
+on the new small-excess class E<=r/m^2, with no hidden requirement
+delta<=C r^2/m. Its constants are uniform for every r>0 in the voting
+interval. The replacement median proof in Section 3 correctly uses the
+new geometry, and the covariance/routing conversion and small-r corollary
+in Section 5 remain valid.
+
+Thus, given the stated new localization and exterior estimates, the
+same proof yields
+
+ E>=c min{r/m^2, delta+r*d1^4/[m^(5/2)L^2]}, L=1+log m,
+
+with the intermediate E>=(delta+rR_U(B))/6 on E<=r/m^2. There is no
+positive lower bound on r. This is an audit of the successor as a
+consequence of its analytic proof chain, not external validation of all
+foundational inputs. The mass and exterior inputs retain their separate
+audit obligations.
+
+1. The local hypothesis is broader than either localization rate
+----------------------------------------------------------------
+The local source's theorem assumes exactly:
+  finite N>=m-1;
+  a measurable simplex-valued f;
+  its ACTUAL centroid matrix B;
+  d(B)<=A/m for fixed A;
+  every mass in [1/(2m),3/(2m)];
+  0<r<=1/(m-1).
+
+It does not assume competitiveness, small noise excess, delta<=Cr^2/m,
+an affine or pure assignment, an L1 neighborhood, or interface regularity.
+The new localization supplies the mass box, and the interior branch uses
+A=1. Therefore its theorem statement already applies.
+
+Checking the proof rather than only its statement leads to the same
+conclusion. Avoid conflating its local quantity
+
+ Dloc=d(B)+||p-U||
+
+with the global D=delta+r(w-W). Under the new localization,
+delta<=C r/m^2, so in the interior
+
+ Dloc<=1/m+C sqrt(r)/m<=C'/m.
+
+The original cap proof allowed the much larger Dloc<=A/m+C/sqrt(m).
+No smaller global-localization rate was used in that proof.
+
+2. The all-amplitude forcing remains controlled as r tends to zero
+------------------------------------------------------------------
+Use the local proof's odd component
+u=T_{sqrt(r)}Pi_{odd>=3}(f-f0). Since f and f0 are simplex-valued,
+||u||<=sqrt(2)r^(3/2). Its cap amplitude is
+
+ theta=C2 L^4[r Dloc+sqrt(r)||u||].
+
+Consequently, on the new small-excess class and inside the score ball,
+
+ theta<=C L^4[r/m+r^(3/2)/m+r^2]
+       <=C' L^4[r/m+r^2]<=C''L^4 r/m.                 (1)
+
+The last inequality uses r<=1/(m-1), and is uniform for r>0. In
+particular theta<=C L^4/m^2, which is inside the original allowed
+theta<=m^(-5/4) range for sufficiently large m.
+
+There is no amplitude floor. For theta>=m^(-B), the fixed exponent
+q=C1L gives the moderate-amplitude cap. For 0<theta<=m^(-B), the normal
+L32 argument yields
+
+ Bcap<=C theta^2+C m^K theta^(21/8)<=C' theta^2
+
+once fixed B>8K/5 is chosen. Thus decreasing r, even past every
+polynomial scale in m, does not leave the proved range.
+
+The apparent divisions by r in the forcing definition are compensated
+before applying the normal estimates. For t=c/sqrt L,
+
+ qB-q0=T_t vD, ||vD||<=Cr^2L^(5/2)Dloc,
+ T_{sqrt(r)}u=T_t vu, ||vu||<=Cr^(3/2)L^(3/2)||u||.
+
+The two separate nonnegative summands in theta imply
+
+ ||vD||/(r theta)<=C L^(-3/2),
+ ||vu||/(r theta)<=C L^(-5/2),
+ r Dloc/theta<=C L^(-4).
+
+These inequalities hold for all r>0; no coefficient diverges as r
+decreases. If theta=0, the forcing is identically zero and no normalization
+is performed. Damping moments depend on q eta*m=O(q r^2 Lm), so they
+also improve when r decreases. The factorization times r/t and
+sqrt(r)/t require only upper bounds on r, which hold uniformly for large m.
+
+3. Final local coefficients are uniform on the whole voting interval
+--------------------------------------------------------------------
+After the exact centroid-residual cancellation, the proof gives
+
+ E>=[1-C(rL^2+r^2mL^7+r^3L^10)]delta
+   +[3/2-C(r sqrt(m)L^13+r^2mL^11)]rR_U(B).
+
+Each error coefficient is a positive monomial in r. Its maximum occurs
+at r=1/(m-1); there they are, up to fixed factors,
+
+ L^2/m, L^7/m, L^10/m^3, L^13/sqrt(m), L^11/m.
+
+All tend to zero. The extra odd-square absorption uses r^2L^8, bounded
+by C L^8/m^2. One absolute m2 therefore works simultaneously for all
+0<r<=1/(m-1). In particular the local conclusion
+
+ E>=delta/2+rR_U(B)
+
+continues to hold with no relation between delta and r beyond the
+mass box. Its use on the new class is justified.
+
+4. Independent check of the revised median argument
+----------------------------------------------------
+Under Sections 1--2 of the successor, all normalized row lengths are
+beta(1+O(L^(-1/2))), the operator bound is ||Bhat||op<=C/sqrt(m),
+and E_rad<=CL^2/m^2. Since sum_i Bhat_i=0,
+
+ grad Phi(0)=-m^(-1)sum_i Bhat_i/|Bhat_i|
+ =-m^(-1) Bhat^T a,
+ a_i=1/|Bhat_i|-1/beta.
+
+Thus ||a||<=C sqrt(E_rad)/beta^2 and
+
+ |grad Phi(0)|<=C sqrt(m)sqrt(E_rad)/L<=C/sqrt(m).
+
+For |c|<=c0 beta, every row distance lies in [beta/2,2beta]. The unit
+directions change by at most C c0, so the averaged outer-product
+operator remains <=1/2 after fixing c0 small and m large. Therefore
+
+ Hess Phi(c)>=I/(4beta)
+
+on the actual centroid span. This proof does not require that span to
+have dimension m-1. A positive outward derivative puts a ball minimizer
+in its interior; convexity makes it a global minimizer. Strong convexity
+then gives |c_*|<=4beta|grad Phi(0)|.
+
+The projected rows Z_i=beta(Bhat_i-c_*)/|Bhat_i-c_*| have sum zero
+because grad Phi(c_*)=0, and each has norm beta. Rowwise,
+
+ |Z_i-Bhat_i|<=||Bhat_i|-beta|+2|c_*|.
+
+Hence ||Z-Bhat||^2<=2E_rad+8m|c_*|^2. Furthermore
+
+ m|c_*|^2<=C m beta^2[m E_rad/L^2]
+         <=C E_rad/L,
+
+using beta^2=w/m=O(L/m^2). The exact radial remainder identity gives
+||B-Bhat||^2<=2R_U(B), and therefore
+
+ ||Z-B||^2<=CL^2R_U(B)<=CL^2J.
+
+No former premise E_rad<=CrL^2/m was invoked. The explicit reproof
+correctly closes that potential scope mismatch. Duplicate proxy rows,
+rank loss, and extra ambient coordinates do not invalidate the argument.
+
+5. The L1 conversion has no correlation dependence
+--------------------------------------------------
+The previous quantitative source's covariance step uses W<=Cw to give
+
+ d(B)^2<=C m^(3/2)L R_U(B).
+
+The new localization gives W/w=1+O(1/(mL)), which is more than enough.
+The step is otherwise independent of r and delta. Procrustes remains
+valid at singular endpoints and in every allowed ambient dimension.
+
+For a closest regular centroid B0, let g0 be its winning assignment and
+epsilon=||f-g0||_1/2. The exact top-two score-gap density is bounded by
+m-1. Consequently the actual routing cost satisfies
+
+ epsilon^2/[2(m-1)]<=R0=w-<B0,B><=sqrt(w)d(B).
+
+This uses only 0<=1-f_{g0(X)}<=1. That fractional routing weight may
+depend on all extra coordinates; no independence assumption is needed.
+Squaring yields
+
+ ||f-g0||_1^4<=64(m-1)^2 w d(B)^2<=C mL d(B)^2.
+
+Taking the orbit infimum and combining with covariance coercivity gives
+d1(f)^4<=C m^(5/2)L^2R_U(B), unchanged under the new threshold.
+
+6. Assembly and the balanced small-r limit
+-------------------------------------------
+If the exterior estimates in Section 4 hold under the new localization,
+they give E>=D/2. Since delta<=2D and rR<=D, this is
+E>=(delta+rR)/6. The local branch is stronger. On E<=r/m^2, the L1
+conversion therefore gives the unsaturated lower bound in (T').
+On E>r/m^2, the saturated assertion follows by choosing c<=1.
+This logic does not assume nonnegativity of E beforehand.
+
+For a fixed balanced assignment f, Hermite orthogonality gives
+
+ E(f)/r=w-||B||^2+sum_{k>=2}(-r)^k[A_k(f)-A_k(g)]/r.
+
+Because sum_k A_k(f)<=1 and likewise for g, the absolute remainder is
+at most 2r for 0<r<=1. Thus the limit as r decreases to zero is indeed
+w-||B||^2. The theorem's constant is independent of r, and delta=0, so
+dividing (T') by r and passing to the limit yields exactly the displayed
+balanced first-moment consistency corollary. No interchange of an
+uncontrolled infinite series or positive lower bound on r is involved.
+
+7. What this review does and does not certify
+---------------------------------------------
+The local theorem, its uniform small-r scope, the revised median proof,
+and the complete L1/small-r assembly have been independently checked.
+The successor correctly identifies the old proxy lemma's unmet
+r-specific premise and supplies the needed replacement argument.
+
+The source's mass localization, global covariance curvature, and exterior
+second-chaos/signed-tail bounds remain their stated analytic dependencies.
+This review does not treat previous audit labels as proof of those inputs.
+It finds no additional premise or correction needed for the successor.

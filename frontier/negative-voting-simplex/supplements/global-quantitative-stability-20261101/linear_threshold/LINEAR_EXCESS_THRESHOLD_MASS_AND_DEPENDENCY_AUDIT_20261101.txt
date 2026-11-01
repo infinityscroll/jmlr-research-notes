@@ -1,0 +1,181 @@
+LINEAR EXCESS THRESHOLD r/m^2: MASS AND DOWNSTREAM DEPENDENCY AUDIT
+1 November 2026. New successor review; no frozen source changed.
+
+Verdict: the stronger threshold E<=r/m^2 is valid for the localization
+and for the downstream uses checked here. No lower bound on r is needed.
+The predecessor GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt,
+SHAd02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508,
+remains frozen. This review supplies the new estimates in place of its
+r^2/m localization. It is an independent implication audit, not external
+validation of all analytic inputs in the full-noise proof.
+
+SETUP
+For finite N>=m-1,0<r<=1/(m-1), and any measurable f:R^N->Delta_m,
+let E=S_-r(f)-S_-r(g), delta=|p-U|^2, W=||B||_F^2,
+D=delta+r(w-W), R=R_U(B), J=D/r, L=1+log m.
+Assume only E<=r/m^2, allowing E of either sign.
+All constants below are absolute after fixing the mass window.
+
+1. THE COARSE MASS WINDOW STILL CLOSES
+The exact slack comparison from45e2cc45 is
+
+ delta <=[E+r(F_m-w)+r^2 A2g+r^3+r^4]/(1-rB_m).
+
+The old zero-slack endpoint bound for m^2 delta tends to2-2gamma<1.
+Under the new ceiling the additional contribution is at most
+
+ m^2 E/(1-rB_m) <=r/(1-rB_m)
+               <=1/[(m-1)(1-B_m/(m-1))]=O(1/m).
+
+The argument remains valid for E<0. Thus the same fixed mass window
+1/(100m)<=p_i<=2/m holds for every sufficiently large m, uniformly as
+r tends to zero. This is established BEFORE invoking V(p).
+
+2. POSITIVE SECOND CHAOS AND V(p) GIVE THE NEW RATES
+Set ell=mw-1 and c_(m,r)=ell[1/r-(ell+2)/2]. The universal tangent
+comparison251c3c7c remains exactly
+
+ (1-r ell)D+r^2 c_(m,r)delta <=E+r^2 Delta2+r^3+r^4,
+
+where c_(m,r)>=0,1-r ell>=1/2 and0<=Delta2<=C/m for large m.
+The mass-value bound11a6959e, read with6d19bda9, is independent of E:
+
+ D>=(1-rA_m)delta+r[V(p)-W]
+  >=delta/2+r[V(p)-W]>=0,  A_m<=C L^2.
+
+Here V includes fractional assignments. The previous mass audit gives
+an explicit proof via dimension reduction, weak-star first-moment
+attainment, fractional pair re-splitting, and the own-score dual.
+This is fixed-m first-moment attainment, not full-noise attainment.
+
+It follows that
+
+ D<=2[E+C r^2/m]<=C r/m^2,                              (L1)
+ delta<=2D,  0<=V(p)-W<=D/r<=C/m^2,                   (L2)
+ |W-w|=|delta-D|/r<=D/r<=C/m^2,                       (L3)
+ W/w=1+O(1/(mL)).                                     (L4)
+
+For(L1), r^3+r^4<=C r^2/m and r^2/m<=2r/m^2 when
+0<r<=1/(m-1), m>=2. The nonnegative lower bound on D is derived,
+not assumed. The right side in the intermediate inequality
+D<=2[E+C r^2/m] must therefore be nonnegative for any actual f.
+
+In fact max_i|mp_i-1|<=m sqrt(delta)<=C sqrt(r)<=C/sqrt(m).
+Hence p_i lies in[1/(2m),3/(2m)] for sufficiently large m. Both W<=w
+and W>w are covered by(L3); no positive-part convention loses the latter.
+
+3. OWN-SCORE REMAINDER AND NORMALIZATION
+The balanced offset argument uses feasibility F_p(B)>=W, the mass box,
+the entropy row cap, and a bounded normalization scale. Equations(L3)-(L4)
+supply that scale. The same exact duality calculation gives
+
+ R<=w-W+C L^2 delta<=w-W+delta/r=J,
+ 0<=R<=J=D/r<=C/m^2.                                  (L5)
+
+The middle inequality follows from r C L^2<=1, valid for the whole
+interval after increasing the absolute threshold m0. It is valid even
+when w-W<0. The proof does NOT require R<=C r/m.
+
+With s=sqrt(W/w), Bhat=B/s, the exact radial identity gives
+R=w(s-1)^2/2+sR_U(Bhat), hence R_U(Bhat)<=C R and
+||B-Bhat||_F^2<=2R. The actual entropy estimate yields a fixed normalized
+row cap independently of m and r, as required by the summed-row theorem.
+
+4. THE OLD r-SPECIFIC ROW AND MEDIAN ESTIMATES CAN BE REPLACED
+The global one-row coercivity e33c710e Theorem1, used on its fixed row-cap
+interval, says
+
+ max_i | |Bhat_i|^2/(w/m)-1 |^2
+       <=C(m^2/L)R_U(Bhat).
+
+By(L5) this is at most C/L. Scaling back using(L4) preserves the
+uniform physical row estimate
+
+ max_i | |B_i|^2/(w/m)-1 |<=C/sqrt(L).                 (L6)
+
+Thus every row is bounded below by a fixed fraction of beta=sqrt(w/m).
+The previous finer bound C sqrt(mr/L) is unnecessary for the construction.
+
+The summed-row theorem1eb5d9f6 and the radial conversion give
+
+ E_rad=sum_i(|Bhat_i|-beta)^2<=C L^2 R<=C L^2/m^2.
+
+Conditional Cauchy still gives ||Bhat||op^2<=C/m, because p_max<=3/(2m).
+The uniform row lower bound then gives the angular-frame norm<=C/L.
+The median functional gradient at zero satisfies
+
+ |grad Phi(0)|<=C sqrt(m) sqrt(E_rad)/L<=C/sqrt(m).       (L7)
+
+This tends to zero uniformly in r. The local strong-convexity ball and
+outward-gradient argument therefore produce the same centered equal-row
+proxy Z, with
+
+ ||Z-B||_F^2<=C L^2 R<=C L^2 J.                         (L8)
+
+No use of the old C sqrt(r) gradient bound is required. The construction
+stays in the actual centroid span; no extra Gaussian coordinate, rank
+condition, or stationarity hypothesis is introduced.
+
+5. DOWNSTREAM DEPENDENCY CHECK AS r TENDS TO ZERO
+The local theorem1a489344 requires the actual centroid distance d<=1/m
+and the fixed mass box. It imposes no small-excess or localization-rate
+hypothesis. Its conclusion E>=delta/2+rR is unchanged.
+
+In the exterior d>1/m, the global covariance remainder uses only the
+bounded scale W/w and d>1/m to give
+
+ J>=R>=c/(m^3 sqrt(L)),
+ q=d/alpha<=C sqrt(m).
+
+These are independent of a positive lower bound on r. The floor pays the
+absolute Gaussian tail in the A2 certificate. The proxy comparison uses
+(L8), Delta=w-W<=J, and the free Gaussian maximum comparison. It therefore
+still gives A2(f)-A2(g)>=-C L^3 J. No step requires J<=Cr/m after the
+row and median prerequisites have been supplied.
+
+For the entire higher Hermite tail, the regular routing loss is
+R0=(Delta+d^2)/2. Its estimates in the cases J>=d^2 and J<d^2 use only
+Delta<=J, the exterior floor, the distance bound, p_max<=3/(2m), and the
+regular top-two margin bound. All remain valid. Consequently
+
+ |H_r(f)-H_r(g)|<=C r^3 m^(7/4)L^(7/2)J.
+
+Combining degree0,1,2 and the entire tail gives the unchanged relative
+inequality
+
+ E>=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)]>=D/2.                (L9)
+
+The errors decrease as r decreases. For the stress scaling r=m^(-a),
+a>=1, they are of orders m^(-a)L^3 and m^(7/4-2a)L^(7/2), respectively;
+the worst allowed endpoint is a=1. Superpolynomially small r is equally
+allowed. No absolute error is divided by r without first being paid by
+the exterior J floor.
+
+6. RESULTING GLOBAL SUCCESSOR, CONDITIONAL ON THE SAME ANALYTIC INPUTS
+From delta<=2D and rR<=D, the exterior gives
+E>=D/2>=(delta+rR)/6. The interior gives a stronger coefficient. Thus
+for EVERY f satisfying E<=r/m^2,
+
+ E>=(delta+rR_U(B))/6.                                 (L10)
+
+The all-distance covariance and regular routing arguments in the frozen
+quantitative successor use only the bounded scale W/w, not the old
+r^2/m ceiling. Hence their bound
+
+d1(f)^4<=C m^(5/2)L^2 R_U(B)
+
+is unaffected by this change of threshold. Its independent analytic
+verification belongs to the root/local audits, not this mass review.
+Combining it with(L10), and treating E>r/m^2 trivially, gives
+
+ E>=c min{r/m^2, delta+r d1(f)^4/[m^(5/2)L^2]}.         (L11)
+
+All constants and the existential m0 remain uniform over finite N>=m-1
+and the complete interval0<r<=1/(m-1). The proof never assumes E>=0;
+(L10) instead rules out E<0. The ceiling r/m^2 is larger than r^2/m
+when r<1/m and differs only by a factor tending1 at the upper endpoint.
+This is a meaningful improvement as r tends to zero.
+
+The old localization rates D=O(r^2/m), R=O(r/m), and row error
+O(sqrt(mr/L)) MUST NOT be copied verbatim into the new successor. The
+replacement rates(L1),(L5),(L6),(L7) are what this review establishes.

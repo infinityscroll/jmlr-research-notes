@@ -109,6 +109,54 @@
       "original_sha256": "dea413c9500724e1ba0aa6a9d557fca84012077499072b3d28b61d4acce78a5e",
       "published_sha256": "dea413c9500724e1ba0aa6a9d557fca84012077499072b3d28b61d4acce78a5e",
       "change": "none"
+    },
+    {
+      "path": "linear_threshold/COVARIANCE_PROXY_EXTERIOR_REVIEW_20261101.txt",
+      "original_sha256": "d0164507308efc29505ebb6b24f7f81c1140d8129645d22e044e4d34ff028bec",
+      "published_sha256": "d0164507308efc29505ebb6b24f7f81c1140d8129645d22e044e4d34ff028bec",
+      "change": "none"
+    },
+    {
+      "path": "linear_threshold/LINEAR_EXCESS_THRESHOLD_MASS_AND_DEPENDENCY_AUDIT_20261101.txt",
+      "original_sha256": "656cfdffbb0d42e54aff5a922a2ffa0020641e96ab7d5445db666625b956c28e",
+      "published_sha256": "656cfdffbb0d42e54aff5a922a2ffa0020641e96ab7d5445db666625b956c28e",
+      "change": "none"
+    },
+    {
+      "path": "linear_threshold/LINEAR_NOISE_THRESHOLD_GLOBAL_STABILITY_SUCCESSOR_20261101.txt",
+      "original_sha256": "55cdd937e4da8cf5b40b45a41610590a7869f7102625f2954bd50118838dba31",
+      "published_sha256": "55cdd937e4da8cf5b40b45a41610590a7869f7102625f2954bd50118838dba31",
+      "change": "none"
+    },
+    {
+      "path": "linear_threshold/LINEAR_SUCCESSOR_FINAL_MASS_REVIEW_20261101.txt",
+      "original_sha256": "70eb3cd6bf8c014a9afe9e885598673206a1ee3ff32cdc00ae7c5546be8cc2c0",
+      "published_sha256": "70eb3cd6bf8c014a9afe9e885598673206a1ee3ff32cdc00ae7c5546be8cc2c0",
+      "change": "none"
+    },
+    {
+      "path": "linear_threshold/LINEAR_THRESHOLD_LOCAL_CAP_AND_L1_INDEPENDENT_REVIEW_20261101.txt",
+      "original_sha256": "c3caebbbcd03627be6d38c2d3d79c762eb5139624cc795922fe842f3e8b21946",
+      "published_sha256": "c3caebbbcd03627be6d38c2d3d79c762eb5139624cc795922fe842f3e8b21946",
+      "change": "none"
+    },
+    {
+      "path": "linear_threshold/linear_final_mass_review_manifest.json",
+      "original_sha256": "a7931ce1fff18e3f25460ee189cd90e803e30eeebc2652caa47696d9dccf27a3",
+      "published_sha256": "a7931ce1fff18e3f25460ee189cd90e803e30eeebc2652caa47696d9dccf27a3",
+      "change": "none"
+    },
+    {
+      "path": "linear_threshold/linear_local_review_manifest.json",
+      "original_sha256": "ecf2586d6843648037e1ba1a186ac1068155fec43d3223a32f380114c6689328",
+      "published_sha256": "2028003d978708deb4475e51217263c2ce8fa0d406299dbb65f2d5e487ac87a9",
+      "change": "Portable source paths, or corresponding manifest hash/byte update; mathematical source text unchanged."
+    },
+    {
+      "path": "linear_threshold/linear_mass_review_manifest.json",
+      "original_sha256": "b0c830f177ec95b30dca69d66fc68050c68a3dc7989640e8a63f6a2c01e33380",
+      "published_sha256": "d417bcdda300ad46824ad88be8461a8a4dbc8306fdb8a92106b0415d67030c99",
+      "change": "Portable source paths, or corresponding manifest hash/byte update; mathematical source text unchanged."
     }
   ]
 }

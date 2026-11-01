@@ -1,0 +1,62 @@
+FINAL INDEPENDENT MASS REVIEW OF THE WRITTEN LINEAR-THRESHOLD SUCCESSOR
+1 November 2026. New review; previous reviews and proof sources unchanged.
+
+Reviewed actual source:
+LINEAR_NOISE_THRESHOLD_GLOBAL_STABILITY_SUCCESSOR_20261101.txt
+SHA25655cdd937e4da8cf5b40b45a41610590a7869f7102625f2954bd50118838dba31
+
+Scope: theorem statement and Sections1-3,5, checked against the explicit
+mass/dependency reconstruction656cfdffbb0d42e54aff5a922a2ffa0020641e96ab7d5445db666625b956c28e.
+The underlying local/exterior analytic certificates retain their separate
+review obligations. No extra logarithmic threshold is considered here.
+
+Result: no defect found in the reviewed statement or sections. They use
+the correct replacement rates, and the proxy is proved under the actual
+new hypothesis rather than imported from an inapplicable r-specific lemma.
+
+Section1. The slack contribution is at most r/(1-rB_m)=O(1/m), so the
+coarse mass box closes uniformly in0<r<=1/(m-1), even if E<0. The retained
+tangent and mass-value estimate give D>=0,delta<=2D, and
+D<=2[E+Cr^2/m]<=Cr/m^2, using rm<=2. Therefore
+|W-w|<=D/r<=C/m^2 and W/w=1+O(1/(mL)); W>w is covered.
+The sharper mass box follows from m sqrt(delta)<=C sqrt(r)<=C/sqrt(m).
+The own-score estimate R<=Delta+CL^2delta<=Delta+delta/r=J remains valid
+for large m and negative Delta. Fixed-m first-moment attainment is
+correctly distinguished from full-noise attainment.
+
+Section2. Entropy plus bounded scaling supplies a fixed normalized row
+cap. One-row coercivity gives row error at most C/sqrt(L), which is enough
+for a uniform positive row lower bound. Summed-row coercivity gives
+E_rad<=CL^2/m^2. Conditional Cauchy gives the operator bound C/m and then
+the angular-frame bound C/L. None of these steps uses the old estimates
+D=O(r^2/m),R=O(r/m), or row error O(sqrt(mr/L)).
+
+Section3. The direct median proof is sound. Centering and the operator
+bound give gradient at zero at most C/sqrt(m). In a sufficiently small
+absolute ball of radius c0 beta, the average directional outer product is
+at most1/2 and every distance is at most2beta. The positive-semidefinite
+summands therefore give Hess Phi>=I/(4beta), as stated. The outward radial
+derivative is positive for large m; the compact-ball minimizer is interior
+and, by convexity, global. Its displacement obeys
+m|c_*|^2<=C E_rad/L. Radial projection then gives
+||Z-Bhat||^2<=C E_rad and||Z-B||^2<=CL^2R<=CL^2J.
+The construction uses no added coordinate, full-rank assumption, actual-
+centroid interpretation of Z, or positive lower bound on r.
+
+Section5. The previous all-distance covariance and top-two-margin bounds
+need only W<=Cw and the actual centroid identity, both retained. If their
+constant is C2, the near-class conclusion follows with
+c<=1/(6 max(1,C2)); the case E>r/m^2 follows after c<=1. Thus the global
+minimum statement and the displayed near-optimal estimates have the
+claimed absolute-constant and finite-N-uniform scope.
+
+For a fixed balanced fractional f, the Hermite expansion gives
+E(f)/r=w-W+O(r), because degree-zero masses cancel and the total Hermite
+energies are at most1 for f and g. The uniform constants therefore permit
+r->0 in(T'), giving exactly the stated balanced first-moment consistency
+corollary. No attainment or exchange with a varying optimizer is needed.
+
+This is a conditional mathematical audit of the successor's derivation
+from its pinned analytic inputs, not external validation of the complete
+negative-noise theorem. The predecessor and previous mass review remain
+frozen. No publication, outreach, or extra-threshold claim was made.

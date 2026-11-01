@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-01",
+  "verdict": "No correction found within stated dependency scope",
+  "files": {
+    "successor": {
+      "path": "LINEAR_NOISE_THRESHOLD_GLOBAL_STABILITY_SUCCESSOR_20261101.txt",
+      "sha256": "55cdd937e4da8cf5b40b45a41610590a7869f7102625f2954bd50118838dba31"
+    },
+    "new_local_review": {
+      "path": "LINEAR_THRESHOLD_LOCAL_CAP_AND_L1_INDEPENDENT_REVIEW_20261101.txt",
+      "sha256": "c3caebbbcd03627be6d38c2d3d79c762eb5139624cc795922fe842f3e8b21946"
+    },
+    "frozen_quantitative_predecessor": {
+      "path": "../GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt",
+      "sha256": "d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508"
+    },
+    "frozen_local_audit": {
+      "path": "../local/INDEPENDENT_LOCAL_WEIGHTED_CAP_AND_SIGNED_TAIL_AUDIT_20261101.txt",
+      "sha256": "e5ba68dd360069b52ab75bd5ca144f0734ba12875a11685f82325bb8862dbaca"
+    },
+    "frozen_quantitative_local_addendum": {
+      "path": "../local/QUANTITATIVE_STABILITY_DRAFT_INDEPENDENT_LOCAL_AUDIT_20261101.txt",
+      "sha256": "e8d65095925d2c23bb13b3c4b424767e51cced451dc0402a0fa21e1e2e08b5bb"
+    },
+    "local_theorem": {
+      "path": "../../../dependency_review/proof_sources/OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt",
+      "sha256": "1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd"
+    }
+  }
+}

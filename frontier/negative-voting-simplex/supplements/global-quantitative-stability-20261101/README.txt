@@ -9,19 +9,30 @@ Let E=S_-r(f)-S_-r(g), delta=||E f-U||^2, L=1+log m, and d1 be the
 Gaussian-L1 distance to the regular simplex orbit. For all sufficiently
 large m, all finite N>=m-1, and 0<r<=1/(m-1), the proof gives
 
-  E >= c min{r^2/m, delta+r*d1^4/[m^(5/2)*L^2]}.
+  E >= c min{r/m^2, delta+r*d1^4/[m^(5/2)*L^2]}.
 
-On E<=r^2/m it also gives E>=(delta+r*R_U(B))/6 for the ACTUAL
+On E<=r/m^2 it also gives E>=(delta+r*R_U(B))/6 for the ACTUAL
 centroids B, without assuming E>=0 in advance. No mass, purity,
 stationarity or interface regularity assumption is imposed on f.
 The constants are absolute; the threshold m1 is existential and is not
 numerically specified. Neither the exponent nor its m-dependence is
 claimed sharp. This is a SINGLE-rule statement, not the paired theorem.
 
-START WITH
-  GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt
+START WITH THE SHARPER SUCCESSOR
+  linear_threshold/LINEAR_NOISE_THRESHOLD_GLOBAL_STABILITY_SUCCESSOR_20261101.txt
 
-THREE SEPARATE INTERNAL RECONSTRUCTIONS
+The earlier GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt
+remains unchanged and supplies the full covariance/margin/L1 derivation.
+The successor improves the threshold to linear order in r and explicitly
+re-proves the geometric proxy under its new hypotheses. Its distance
+bound remains nonvacuous after division by r as r decreases to zero.
+
+THREE REVIEWS OF THE SHARPER SUCCESSOR
+  linear_threshold/LINEAR_SUCCESSOR_FINAL_MASS_REVIEW_20261101.txt
+  linear_threshold/COVARIANCE_PROXY_EXTERIOR_REVIEW_20261101.txt
+  linear_threshold/LINEAR_THRESHOLD_LOCAL_CAP_AND_L1_INDEPENDENT_REVIEW_20261101.txt
+
+THREE REVIEWS OF THE EARLIER QUANTITATIVE DERIVATION
   mass/QUANTITATIVE_SUCCESSOR_MASS_REVIEW_20261101.txt
   covariance/ROOT_QUANTITATIVE_SECTION3_REVIEW_20261101.txt
   local/QUANTITATIVE_STABILITY_DRAFT_INDEPENDENT_LOCAL_AUDIT_20261101.txt
@@ -46,7 +57,7 @@ main candidate.
 
 REPRODUCIBILITY AND LIMITS
 SOURCE_PROVENANCE.json records byte-identical proof/audit copies and the
-two portable mass-manifest adaptations. Existing release verification
+portable review-manifest path adaptations. Existing release verification
 checks their integrity, not mathematical truth. Numerical stress outputs
 are illustrative and are not interval certificates or a theorem threshold.
 The isolated mass-coefficient gate near10^13 is not a value of m1.

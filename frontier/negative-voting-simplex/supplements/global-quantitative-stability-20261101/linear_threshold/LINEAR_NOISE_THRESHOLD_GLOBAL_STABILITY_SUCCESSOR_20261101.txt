@@ -1,0 +1,161 @@
+GLOBAL STABILITY WITH A THRESHOLD LINEAR IN THE NOISE MAGNITUDE
+1 November 2026. Successor; the previous quantitative proof is unchanged.
+
+This strengthens the small-r behavior of d02043adb87c785f8d03af93a612c536e9
+713df06cef323d1232ca19bc919508. It retains that source's theorem notation,
+analytic dependencies, eventual-large-m scope, and external-review limits.
+
+THEOREM
+There are absolute c>0 and m2 such that for every m>=m2, finite N>=m-1,
+0<r<=1/(m-1), and measurable f:R^N->Delta_m,
+
+ E(f) >= c min{ r/m^2,
+               delta+r*d1(f)^4/[m^(5/2)(1+log m)^2] }.       (T')
+
+If E(f)<=r/m^2, the stronger intermediate statement remains
+
+ E(f)>=[delta+r R_U(B)]/6.                                 (S')
+
+In particular, near the optimum,
+ delta<=6E(f),
+ d1(f)<=C[m^(5/2)(1+log m)^2 E(f)/r]^(1/4).
+
+The threshold is now linear in r. After division by r the geometric
+lower bound has a nonzero small-r limit. No positive lower bound on r,
+balance, purity, stationarity, or interface hypothesis is introduced.
+The exponent and alphabet threshold are not claimed optimal or numerical.
+
+1. LOCALIZATION WITH THE LARGER SMALL-r ALLOWANCE
+
+Assume only E(f)<=r/m^2. The additive term in the coarse mass estimate is
+  m^2 E(f)/(1-rB_m)<=r/(1-rB_m)=O(1/m).
+The fixed box1/(100m)<=p_i<=2/m therefore still follows. The retained
+positive-degree-two tangent and the prescribed-mass value bound give
+
+ 0<=D, delta<=2D,
+ D<=2[E(f)+C r^2/m]<=C r/m^2,                            (1)
+
+because rm<=m/(m-1)<=2. Hence
+
+ |W-w|<=D/r<=C/m^2,
+ W/w=1+O(1/(mL)), delta<=C r/m^2<=C/m^3, L=1+log m.       (2)
+
+In particular the refined mass box1/(2m)<=p_i<=3/(2m) holds. As before,
+the balanced offset argument uses feasibility and gives
+
+ 0<=R_U(B)<=J=D/r<=C/m^2.                                (3)
+
+There is no assumption E>=0. The final comparisons will imply it.
+Fixed-m first-moment attainment is still a legitimate input; full-noise
+attainment is unnecessary.
+
+2. ROW GEOMETRY REMAINS UNIFORMLY CONTROLLED
+
+Normalize Bhat=B/s, s=sqrt(W/w), and set beta=sqrt(w/m). The exact radial
+identity gives R_U(Bhat)<=C R_U(B). Individual centroid entropy and (2)
+give a fixed normalized row cap, independent of m and r. The one-row
+coercivity bound therefore gives
+
+ max_i ||Bhat_i|^2/beta^2-1|
+   <=C sqrt(m^2 R_U(Bhat)/L)<=C/sqrt(L).                  (4)
+
+The summed-row theorem gives
+
+ E_rad=sum_i(|Bhat_i|-beta)^2<=C L^2 R_U(B)<=C L^2/m^2.    (5)
+
+Conditional Cauchy for the actual assignment implies B^T B<=p_max I,
+so ||Bhat||op^2<=C/m. With u_i=Bhat_i/|Bhat_i|,
+
+ ||m^-1 sum_i u_i u_i^T||op<=C/L.                       (6)
+
+These are the required endpoint-sized geometric bounds. They no longer
+carry the sharper r-specific rates from exact competitiveness, and those
+old rates must not be asserted here.
+
+3. REPROVE THE GEOMETRIC PROXY UNDER (5), WITHOUT A WRONG LEMMA CITATION
+
+The frozen manuscript's proxy lemma explicitly assumes E_rad<=C rL^2/m.
+For very small ACTUAL r, (5) does not imply that premise. We therefore
+give the geometric argument directly rather than applying that lemma
+with an unmet hypothesis.
+
+On the centroid span let Phi(c)=m^-1 sum_i |Bhat_i-c|. Centering and
+the operator bound yield
+
+ |grad Phi(0)|
+ <=C ||Bhat||op sqrt(E_rad)/(m beta^2)
+ <=C sqrt(m) sqrt(E_rad)/L<=C/sqrt(m).                    (7)
+
+On |c|<=c0 beta, with c0>0 sufficiently small and absolute, all row
+distances lie between beta/2 and2beta. Unit directions change by at most
+C c0. Equation (6) then makes their average outer-product operator at
+most1/2. Each summand in the Hessian is positive semidefinite, so
+
+ Hess Phi(c)=m^-1 sum_i [I-u_i(c)u_i(c)^T]/|Bhat_i-c|
+             >=I/(4beta).                               (8)
+
+For large m, (7) and (8) make the outward radial derivative positive on
+the boundary of that ball. A minimizer of Phi on the ball is interior;
+convexity makes it a global minimizer, with gradient zero and
+  |c_*|<=C beta |grad Phi(0)|.
+Define Z_i=beta(Bhat_i-c_*)/|Bhat_i-c_*|. Then
+
+ sum_i Z_i=0, |Z_i|=beta,
+ ||Z-Bhat||^2<=C[E_rad+m|c_*|^2]<=C E_rad.                 (9)
+
+For the final inequality use
+ m|c_*|^2<=C m beta^2[m E_rad/L^2]<=C E_rad/L.
+The radial identity also gives ||B-Bhat||^2<=2R_U(B). Thus
+
+ ||Z-B||^2<=C L^2 R_U(B)<=C L^2 J.                       (10)
+
+This construction stays in the actual centroid span and tolerates rank
+loss and duplicate proxy rows. It makes no centroid-realizability or
+noise-monotonicity claim about Z.
+
+4. THE NOISE COMPARISON USES (10), NOT THE OLD r-SPECIFIC CEILING
+
+If d(B)<=1/m, the local own-centroid theorem assumes only its score ball
+and mass box. Both hold. Its conclusion is
+  E(f)>=delta/2+rR_U(B).                                 (11)
+In its proof d(B)+||p-U||<=C/m and the forcing amplitude is bounded by
+C L^4(r/m+r^2); the all-amplitude estimate covers arbitrarily small r.
+The theorem does not require delta<=C r^2/m.
+
+If d(B)>1/m, covariance coercivity gives the unchanged exterior floor
+J>=R>=c/(m^3 sqrt(L)). With (10), the actual routing loss and proxy mean
+defect sum to (w-W+||Z-B||^2)/2<=C L^2 J. The common-threshold Gaussian
+comparison and direct tensor test consequently give
+  A2(f)-A2(g)>=-C L^3 J.
+The absolute Gaussian tail is paid by the same exterior floor. No smaller
+upper bound on J is used at this stage.
+
+The entire signed-tail proof uses p_i<=3/(2m), the regular routing loss
+R0=(w-W+d(B)^2)/2, Delta<=J, and that exterior floor. Its two cases
+J>=d(B)^2 and J<d(B)^2 give exactly the previous bound
+  |H_r(f)-H_r(g)|<=C r^3 m^(7/4)L^(7/2)J.
+Neither case uses J<=Cr/m. Thus
+
+ E(f)>=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)]>=D/2.              (12)
+
+By delta<=2D and rR<=D, (11)-(12) prove (S').
+
+5. COMPLETE THE GLOBAL AND SMALL-r CONCLUSIONS
+
+The all-distance covariance remainder and exact top-two margin argument
+in Sections3-5 of the previous quantitative source use only W<=Cw,
+the actual centroid identity, and Gaussian geometry. They still give
+  d1(f)^4<=C m^(5/2)L^2 R_U(B).
+Combine with (S') when E(f)<=r/m^2. When E(f)>r/m^2, (T') is immediate
+after reducing c to at most1. This proves the theorem.
+
+For a balanced f, divide (T') by r and let r decrease to zero. The
+Hermite expansion, with total energy at most1, gives
+  E(f)/r -> w-||B||^2.
+Hence the same proof supplies the consistency corollary
+
+ w-||B||^2 >= c min{1/m^2, d1(f)^4/[m^(5/2)L^2]}.
+
+This is a quantitative consequence, not a priority claim for the already
+known balanced first-moment theorem. The full negative-noise candidate
+and its foundational analytic inputs remain subject to external review.

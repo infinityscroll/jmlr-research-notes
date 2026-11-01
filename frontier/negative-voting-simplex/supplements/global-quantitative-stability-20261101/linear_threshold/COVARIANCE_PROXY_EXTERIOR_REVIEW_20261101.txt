@@ -1,0 +1,301 @@
+LINEAR-IN-r THRESHOLD: COVARIANCE, PROXY, AND EXTERIOR REVIEW
+1 November 2026. Independent reconstruction by covariance audit branch.
+
+PROPOSAL AND VERDICT
+
+The proposed change is to replace the small-excess assumption
+  E(f)<=r^2/m
+by
+  E(f)<=r/m^2,
+where 0<r<=1/(m-1), without changing the preserved quantitative proof
+with SHA d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508.
+
+The new covariance/proxy/exterior route is valid provided the separately
+audited slack localization gives
+
+  p_i in[1/(2m),3/(2m)], 0<=D<=C r/m^2,
+  delta<=2D, |W-w|<=D/r.                                  (L)
+
+The change requires one explicit hypothesis repair in the proxy citation:
+the frozen manuscript's geometric lemma assumes E_rad<=C r L^2/m.
+The new E_rad<=C L^2/m^2 does not imply that inequality at the actual
+noise parameter r when r is much smaller than 1/m. Either re-run the
+geometric-median proof below, or invoke that purely geometric lemma with
+the separate auxiliary parameter r_geom=1/(m-1). Its conclusion does
+not contain the actual noise parameter. This repair is sufficient.
+
+After it, the exterior second-chaos and signed-tail estimates are valid
+with the same constants and the same final error coefficients. They do
+not use the old J=O(r/m) bound. The needed upper bound is J=O(m^-2),
+used to obtain the uniform row lower bound and a small median gradient.
+
+This is a proof review of the changed route, not independent validation
+of the foundational mass-semiconcavity, local full-noise, hypercontractive,
+or external Gaussian maximum comparison inputs. The earlier covariance
+audit supplies the independently reconstructed covariance inputs.
+
+1. NOTATION AND LOCALIZATION CONSEQUENCES
+
+Let B_i=E[X f_i], W=||B||_F^2, U=(1/m,...,1/m),
+delta=||p-U||^2, Delta=w-W, D=delta+r Delta, J=D/r, and R=R_U(B).
+Put L=1+log m, alpha=mu/(m-1), w=alpha^2(m-1), beta^2=w/m.
+All constants below are absolute and independent of r and finite N.
+
+From (L), J<=C/m^2 and
+
+  |W/w-1| <= (C/m^2)/(c L/m) <= C/(mL).                 (1)
+
+Thus s=sqrt(W/w) is bounded above and below, and s^2=1+O(1/(mL)).
+The actual fractional assignment satisfies the entropy row bound and
+the exact operator inequality
+
+  |B_i|<=p_i sqrt(2log(1/p_i))<=C alpha,
+  B^T B<=p_max I<=C I/m.                                 (2)
+
+The first estimate and (1) provide a fixed absolute normalized row cap
+for Bhat=B/s. This is essential: the cap cannot be allowed to grow with
+m, as shown by the rank-one counterexample in the covariance audit.
+
+The offset certificate uses only this cap and the fixed mass window.
+Feasibility of the actual assignment and the balanced dual offsets give
+
+  R<=Delta/2+CL sqrt(R delta)
+   <=Delta/2+R/2+C L^2 delta,
+  0<=R<=Delta+C L^2 delta<=Delta+delta/r=J.                (3)
+
+For the last inequality choose sufficiently large m so CrL^2<=1.
+The argument remains valid when Delta<0. It uses no sign assumption on
+the total excess E(f), no stationarity, and no optimizer attainment.
+
+2. THE UNIFORM ROW LOWER BOUND AT THE NEW SCALE
+
+The exact scaling identity gives
+
+  R=w(s-1)^2/2+s R_U(Bhat),
+  R_U(Bhat)<=C R<=C/m^2.                                 (4)
+
+The normalized global one-row theorem, with the fixed cap from (2),
+therefore yields
+
+  max_i ||Bhat_i|^2/beta^2-1|^2
+      <=C (m^2/L)R_U(Bhat)<=C/L,
+  max_i ||Bhat_i|^2/beta^2-1|<=C/sqrt(L)=o(1).            (5)
+
+Multiplying by s^2 only adds O(1/(mL)), so the actual rows have the
+same uniform estimate. This proves the needed lower bound directly;
+one must not import the old actual-minimizer estimate with its smaller
+right side C sqrt(mr/L) under the new excess threshold.
+
+3. SUMMED RADIAL COST AND THE MEDIAN CONSTRUCTION
+
+The normalized summed-row theorem and (4) give
+
+  E_rad=sum_i(|Bhat_i|-beta)^2
+       <=C L^2 R_U(Bhat)<=C L^2 R<=C L^2/m^2.             (6)
+
+Let u_i=Bhat_i/|Bhat_i|. Equations (2) and (5) imply
+
+  ||m^-1 sum_i u_i u_i^T||op
+     <=C ||Bhat^T Bhat||op/(m beta^2)<=C/L.              (7)
+
+On the row span, define Phi(c)=m^-1 sum_i |Bhat_i-c|. For a fixed
+sufficiently small c0>0 and |c|<=c0 beta, all distances are comparable
+to beta, and the normalized direction frame is bounded by
+C/L+C|c|^2/beta^2. Thus
+
+  Hess Phi(c)>=c1 beta^-1 I                              (8)
+
+for sufficiently large m. Centering of Bhat gives the independent
+gradient estimate
+
+  |grad Phi(0)|
+    <=C ||Bhat||op sqrt(E_rad)/(m beta^2)
+    <=C sqrt(m) sqrt(E_rad)/L
+    <=C/sqrt(m)=o(1).                                    (9)
+
+Consequently the radial derivative is positive on the boundary of the
+small beta-ball. Phi has an interior median c there, with
+
+  |c|<=C beta |grad Phi(0)|,
+  sum_i(Bhat_i-c)/|Bhat_i-c|=0,
+  m|c|^2<=C E_rad/L.                                     (10)
+
+Define Z_i=beta(Bhat_i-c)/|Bhat_i-c|. Then, in the same row span,
+
+  sum_i Z_i=0, |Z_i|=beta,
+  ||Z-Bhat||_F^2<=C E_rad<=C L^2 R.                       (11)
+
+The radial identity in (4) also gives ||B-Bhat||^2<=2R, so
+
+  E_Z=||Z-B||_F^2<=C L^2 R<=C L^2 J.                     (12)
+
+This is the entire geometric requirement in the exterior proof. It
+does not need Z to be actual centroids, a routing optimizer, full rank,
+or pair separated. Duplicate test rows are permitted.
+
+FORMAL CITATION REPAIR: manuscript 03_radial_coercivity.tex, Lemma proxy,
+states the sufficient condition E_rad<=C r L^2/m. Under the new excess
+threshold it can be invoked with r_geom=1/(m-1), since
+L^2/m^2<=r_geom L^2/m. Its median gradient then has size O(sqrt(r_geom))
+=O(m^-1/2), exactly (9). Distinguish this auxiliary parameter from the
+actual noise correlation throughout. Alternatively cite (6)-(11) as
+the direct strengthened geometric proof and avoid a second parameter.
+
+4. THE EXTERIOR COVARIANCE FLOOR IS UNCHANGED
+
+If d=dist(B,regular centroid orbit)>1/m, set q=d/alpha and
+e=||BB^T/alpha^2-P||_F. Procrustes gives e>=q, and (1) gives
+
+  c/sqrt(L)<=q<=C sqrt(m).
+
+The unnormalized global covariance remainder, independently checked in
+the covariance audit, yields
+
+  R>=c alpha^2 e^2/m min(1,c/(Le))
+   >=c q/m^3>=c/(m^3 sqrt(L)),
+  J>=R>0.                                                (13)
+
+In particular the exterior floor is independent of the old r-dependent
+localization bound. It continues to pay all absolute Gaussian tails,
+however small the actual correlation r is. Also Delta<=J follows
+directly from D=delta+r Delta and delta>=0.
+
+5. SECOND-CHAOS CERTIFICATE: NO OLD UPPER BOUND FOR J IS USED
+
+Use the exact equal-row matrix Z from (11), V=max_i Z_i.X, and its
+regular counterpart V_*. The existing equal-threshold Gaussian maximum
+comparison applies at this score scale without a rank hypothesis. It
+gives EV<=w and, for T>=1,
+
+  (EV_*^2-EV^2)_+
+     <=C beta T(w-EV)+C beta^2 m exp(-T^2/2).             (14)
+
+For the actual assignment's nonnegative routing loss
+c_f=V-sum_i f_i Z_i.X, the two nonnegative quantities Ec_f and w-EV
+have sum
+
+  w-<Z,B>=(Delta+E_Z)/2<=C L^2 J.                         (15)
+
+There is no need to assume Delta>=0 or exact balance. The pointwise
+quadratic inequality V^2-sum_i f_i(Z_i.X)^2<=2V c_f and a unit-marginal
+Gaussian union bound give
+
+  EV^2-E sum_i f_i(Z_i.X)^2
+   <=2beta T Ec_f+C beta^2 m(T^2+1)exp(-T^2/2).            (16)
+
+At T=sqrt(32L), beta T<=C L/m. The numerator of the quadratic tensor
+test is exactly E sum_i f_i(Z_i.X)^2-beta^2; the equality uses only
+sum_i p_i=1. Its denominator is at most
+D_*=alpha^4(m-1)(m-2)/m, since tr(ZZ^T)=w and rank(ZZ^T)<=m-1.
+The regular coefficient T_*/D_*<=Cm then gives
+
+  A2(f)-A2(g)>=-C L^3 J-C L^2 exp(-16L).                 (17)
+
+Equation (13) absorbs the absolute tail into C J, proving
+
+  A2(f)-A2(g)>=-C L^3 J.                                 (18)
+
+Every use of localization in this calculation is displayed in (12),
+(13), and (15). In particular no factor R<=C r/m, J<=C r/m, or
+E_rad<=C rL^2/m is used after the proxy is constructed.
+
+6. ENTIRE SIGNED TAIL: THE TWO CASES STILL CLOSE
+
+For the closest regular rule g0, let epsilon=||f-g0||_1/2. The exact
+regular routing identity is R0=(Delta+d^2)/2>=0. The scalar top-two
+margin bound gives epsilon<=min(1,C sqrt(m R0)). Rare-label
+hypercontractivity uses only p_i<=3/(2m), and yields the entire-tail
+estimate
+
+  |H_r(f)-H_r(g0)|<=C r^3 L^3 sqrt(epsilon)/m.             (19)
+
+If J>=d^2, then R0<=J and
+
+  |Hdiff|/J <= C r^3 L^3 m^(-3/4) J^(-3/4)
+             <=C r^3 m^(3/2)L^(27/8),                    (20)
+
+where the last step uses only (13). If J<d^2, then R0<=d^2, and with
+d=alpha q and J>=c q/m^3,
+
+  |Hdiff|/J <=C r^3 m^(7/4)L^(13/4)q^(-1/2)
+             <=C r^3 m^(7/4)L^(7/2).                     (21)
+
+No old upper bound on J occurs in either calculation. The second bound
+dominates the first, and rotation preserves the regular Hermite weights.
+
+7. THE FINAL SIGNED EXTERIOR COMPARISON AND NEW MODULUS
+
+The exact Hermite decomposition, (18), and (20)-(21) imply
+
+  E(f)>=D[1-C rL^3-C r^2 m^(7/4)L^(7/2)]>=D/2             (22)
+
+for sufficiently large m, uniformly in 0<r<=1/(m-1). The largest error
+coefficients remain O(L^3/m) and O(L^(7/2)/m^(1/4)). They are unchanged
+by the new small-excess threshold.
+
+The local theorem for d<=1/m has the same hypotheses as before because
+the actual centroids and fixed mass window are unchanged. It gives
+E>=delta/2+rR there. Thus, assuming (L) from the separate slack audit,
+the full small-excess argument still proves
+
+  E>=(delta+rR)/6  whenever E<=r/m^2.
+
+Together with the already reviewed covariance-to-rule estimate
+d1(f)^4<=C m^(5/2)L^2 R, the proposed sharpened conclusion is
+
+  E(f)>=c min{r/m^2,
+               delta+r d1(f)^4/[m^(5/2)L^2]}.             (23)
+
+This is a genuine improvement for small r. After division by r, its
+threshold term is 1/m^2 rather than r/m. For fixed balanced f, taking
+r down to zero therefore leaves a nonzero first-moment stability
+modulus. This limit observation is conditional on the same proof inputs
+and uses no additional uniformity in N or m beyond the displayed one.
+
+8. REVIEWED SOURCES AND PRESERVATION
+
+I reread the packaged direct proof, the conditional proxy/tensor
+assembly, and the manuscript's actual radial/proxy and exterior sections.
+The potentially stale hypotheses were checked against the proofs, not
+against prior audit labels. The original summed-row/covariance audit
+and its source pins remain in ../covariance/.
+
+No frozen source, manuscript, d02043ad proof, or master state was edited.
+Only this new review file was added under linear_threshold/. The present
+review isolates one formal citation repair and confirms that it is
+fully supplied by the existing geometric proof. No mathematical
+obstruction to the proposed threshold was found in this scoped route.
+
+9. REVIEW OF THE EXACT ROOT SUCCESSOR
+
+After writing the derivation above, I read the complete root successor:
+  LINEAR_NOISE_THRESHOLD_GLOBAL_STABILITY_SUCCESSOR_20261101.txt
+with independently recomputed SHA-256
+  55cdd937e4da8cf5b40b45a41610590a7869f7102625f2954bd50118838dba31.
+
+Its Section 3 explicitly identifies the frozen proxy lemma's unmet
+r-specific premise and re-proves the construction under E_rad<=CL^2/m^2.
+That exactly repairs the scope issue identified above. The displayed
+Hessian lower bound I/(4beta) follows because every distance is at most
+2beta and the averaged direction frame has norm at most 1/2. The bound
+m|c_*|^2<=C E_rad/L follows from beta^2 asymptotic to L/m^2 and the
+displayed gradient estimate. The distance estimate and the same-span
+claim therefore have the required uniform constants.
+
+The successor's Sections 2-5 agree with this independent reconstruction
+for the covariance, row cap, median, exterior A2/tail, and all-distance
+margin steps. No use of J<=Cr/m survives in those steps. Its Section 1
+slack localization and Section 4 local full-noise invocation remain the
+separate mass and local auditors' scope; this report assumes their stated
+inputs and does not substitute a second unsupported global endorsement.
+
+For completeness the exact frozen sources reread in this review have
+the following hashes:
+  c33cd021f18037d3e0d9ef32c6205aad593b31b58e844ae6e7ab0e60c3cc44f8
+    DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt
+  84e1de62215c41c998185d7d18224b6c904e7dddb7e3e14ffbd0fbfbadba63d4
+    CONDITIONAL_PROXY_TENSOR_EXTERIOR_AND_FULL_NEGATIVE_VOTING_ASSEMBLY_20261031.txt
+  17db47ec6fb3e3baf1420516e8ea6d1c89d594b11656ccf05c3ec75dba69fbe1
+    negative_voting_simplex_manuscript_v2_20261031/03_radial_coercivity.tex
+  da41b720a695d6dee535bf4e0399a4984c332d728b4cc8b70f05cde2933253d5
+    negative_voting_simplex_manuscript_v2_20261031/04_exterior_assembly.tex

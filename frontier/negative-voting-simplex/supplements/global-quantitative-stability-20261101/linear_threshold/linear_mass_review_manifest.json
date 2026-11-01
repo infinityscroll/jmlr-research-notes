@@ -1,0 +1,18 @@
+{
+  "review_sha256": "656cfdffbb0d42e54aff5a922a2ffa0020641e96ab7d5445db666625b956c28e",
+  "review_file": "LINEAR_EXCESS_THRESHOLD_MASS_AND_DEPENDENCY_AUDIT_20261101.txt",
+  "inputs": [
+    {
+      "path": "../GLOBAL_QUANTITATIVE_NEGATIVE_VOTING_STABILITY_20261101.txt",
+      "sha256": "d02043adb87c785f8d03af93a612c536e9713df06cef323d1232ca19bc919508"
+    },
+    {
+      "path": "../mass/MASS_LOCALIZATION_ADVERSARIAL_AUDIT_20261101.txt",
+      "sha256": "5ffb3295577bfd9432fde381be91873e41599fb610bfe249e602ff6ec00ce4fe"
+    },
+    {
+      "path": "../mass/SMALL_POSITIVE_EXCESS_LOCALIZATION_SUCCESSOR_20261101.txt",
+      "sha256": "49e1f0293fe5cfee53c935b46e2ad10296c894956d6375cfdc63c25483bc7a58"
+    }
+  ]
+}
