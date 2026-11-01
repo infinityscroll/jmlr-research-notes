@@ -1,0 +1,167 @@
+FORMALIZATION SOURCE AND PUBLICATION-SCOPE REVIEW
+2 November 2026
+
+Review type: separate internal source/semantic review by an AI reviewer.
+This is not an external expert assessment, an independent reconstruction of the
+full analytic theorem, or a replacement for the recorded Lean build and axiom
+audit. The root task is independently running the pinned build/audit. This review
+itself did not run that build and makes no claim about its outcome.
+
+RESULT
+
+No hidden conclusion assumption, contradiction of hypotheses, or proof escape
+was found in the concrete Gaussian components examined. The current preprint
+abstract and Appendix A formalization boundary match the actual theorem
+statements. The full Gaussian noise-stability theorem is not formalized.
+
+The source contains 54 authored theorem declarations in ten modules. The axiom
+audit explicitly lists 64 distinct compiled theorem names: those declarations,
+eight generated proof helpers, and two generated definition-equation theorems.
+These numbers describe coverage, not 54 independent research discoveries. The
+current verify.py counts authored declarations separately from compiled constants.
+
+MATERIAL EXAMINED
+
+All ten NegativeVoting/*.lean proof modules, the umbrella import,
+Inventory.lean, AxiomAudit.lean, verify.py, README.md, both module coverage notes,
+lean-toolchain, lakefile.toml, lake-manifest.json, and the current preprint main.tex
+and 07_dependency_ledger.tex were read. SHA-256 snapshots are appended below.
+The pinned toolchain is Lean 4.19.0; mathlib is pinned to
+c44e0c8ee63ca166450922a373c7409c5d26b00b. The manifest pins transitive revisions.
+
+CONCRETE GAUSSIAN CONTENT
+
+1. GaussianRouting (nine declarations) uses Mathlib's actual scalar Gaussian
+   measures and the actual finite product measure. Scalar singleton nullness
+   follows from absolute continuity at nonzero variance. The product hyperplane
+   proof separates a coordinate with nonzero coefficient, checks its fibers are
+   singletons, and uses the product-integral formula. This is a real Fubini
+   argument: the caller does not supply the desired hyperplane-null assertion.
+   Distinct coefficient rows then yield pairwise distinct scores almost
+   everywhere; finite maximum attainment supplies a strict winner.
+
+   The general affine-hyperplane theorem permits degenerate Gaussian coordinates
+   provided a coordinate with nonzero coefficient has nonzero variance. The
+   family-of-scores statements instead require every coordinate variance nonzero.
+   These are substantive, satisfiable hypotheses. Fin (n+1) means every positive
+   finite dimension; standard independent Gaussian measure is an explicit case.
+
+2. GaussianMoments (ten declarations) derives exponential and first-moment
+   integrability, coordinate marginal laws, and integrability of finite linear
+   scores and their maximum. The exponential proof uses Mathlib's exact Gaussian
+   moment-generating function, whose value is nonzero. The use of
+   Integrable.of_integral_ne_zero is legitimate: integrability is derived from
+   that proved value and is not an unstated premise. The later zero-integral
+   rigidity proofs explicitly establish integrability, so Lean's convention of
+   assigning integral zero to nonintegrable functions cannot produce vacuous
+   purity conclusions here.
+
+   The strongest statement, ae_gaussian_indicator_of_zero_maximum_gap, assumes
+   measurable simplex weights, distinct score rows, nondegenerate product
+   Gaussian coordinates, and zero integral of the actual finite maximum minus
+   the actual weighted score. It internally constructs a maximizing label and
+   proves almost-everywhere unique indicator routing. Neither no-tie behavior,
+   selector measurability, nor routing integrability is a premise. A separate
+   measurable selector is unnecessary: its selected score equals the measurable
+   finite maximum, and the conclusion is an almost-everywhere existence/uniqueness
+   statement. The remaining zero-gap equality is indispensable and plainly
+   visible. It is not derived from full-noise competitiveness by these modules.
+
+3. Integrability (six declarations) supplies a.e. [0,1] bounds for the simplex
+   weights and domination for weighted scores. Finite maxima are handled directly
+   by finite induction. Routing integrability follows from its equality to a
+   maximum minus an integrable mixture. No probability-one assumption is silently
+   used in the generic arbitrary-measure versions.
+
+4. GaussianCentroid (three declarations) defines actual coordinate integrals.
+   Expected fractional score equals the score/centroid pairing; substituting the
+   centroid score gives its squared Frobenius norm; subtracting yields the exact
+   expected self-centroid maximum-gap identity. Integrability is proved before
+   exchanging finite sums and integrals. These are unconditional identities for
+   measurable simplex weights under finite product Gaussians, including zero
+   variance. They do not prove a sharp bound for the expected maximum, regularity
+   of the centroid arrangement, or noise-stability optimality.
+
+FINITE ALGEBRA AND SCALAR THRESHOLD
+
+Routing (six declarations), Centroid (three), and EdgeEnergy (three) prove their
+literal finite-sum statements. In particular, the EdgeEnergy identity is for a
+symmetric matrix with every row sum zero. Its left side is the ORDERED-edge sum;
+the unordered-edge sum is half of it. The coefficient of Frobenius energy is four
+in that ordered convention. This gives coercivity and zero-strain rigidity, but
+not a Gaussian facet-weight estimate or covariance Hessian bound.
+
+Threshold (two declarations) proves actual real-power/logarithm decay for fixed
+p >= 0 and q > 0, then a natural-number eventual bound for fixed supplied real
+coefficients. VotingRange (six declarations) proves endpoint scaling, the
+quadratic r^2 m^(7/4) bound, and one threshold with quantifiers
+
+  for every fixed A,B >= 0, exists M >= 2, for every m >= M,
+  for every 0 < r <= 1/(m-1), the scalar remainder is <= 1/2.
+
+Thus its scalar uniformity in r is genuine; a separate threshold for each noise
+value is not being substituted. The exact endpoint exponent is m^(-1/4). The
+analytic constants' independence from ambient dimension/noise is not proved by
+this statement and is correctly left outside its claim.
+
+Assembly (six declarations) and the last VotingRange theorem are conditional
+real inequalities. Local comparison, exterior deficit, and signed-Hermite bounds
+remain explicit premises. Their proofs derive scalar nonnegativity and equality
+consequences once those premises hold. The code does not define a full correlated
+Gaussian noise functional or identify the scalar variables with all quantities
+of the analytic theorem. It therefore does not establish Gaussian simplex
+optimality, negative Plurality Is Stablest, or UGC hardness.
+
+AUDIT DESIGN AND SOURCE ESCAPES
+
+No sorry, admit, custom axiom, unsafe declaration, native_decide, implemented_by,
+extern, or alternate evaluation escape was found in the proof modules. Ordinary
+ring, linarith, norm_num, simp, and decide uses produce proof terms; no native
+oracle is substituted for the kernel proof. Noncomputable choice supplies finite
+maximizers and uses the stated standard classical foundation.
+
+Inventory.lean reads the compiled environment, lists imported NegativeVoting
+modules, rejects custom axioms in that namespace, and lists its theorem constants.
+AxiomAudit.lean contains direct #print axioms commands. verify.py rebuilds, compares
+that compiled inventory with the audit list, verifies that every source module is
+imported, and rejects transitive axioms outside propext, Classical.choice, and
+Quot.sound. This addresses hidden admitted proof dependencies; source scanning
+alone would not suffice. The lexical comment-removal scan is only a secondary
+check, not a complete Lean parser. The actual simple source and audit metaprograms
+were also inspected. No apparent gap in coverage affects this snapshot.
+
+PUBLICATION BOUNDARY
+
+The inspected preprint calls the development partial, names its genuine Gaussian,
+finite algebra, and scalar content, and states that the comparison estimates,
+Gaussian analytic uniformity, main theorem, and discrete/UGC transfer remain
+unformalized. The formalization README now states the same boundary and makes
+the zero-gap premise explicit. No claim that a source build certifies the full
+analysis is supported or made in these inspected scope passages.
+
+The final public package should include the completed build transcript/receipt
+and preserve this boundary. A future edit expanding the theorem claims requires
+fresh semantic review; a successful build alone cannot decide whether a new
+statement encodes the intended mathematics.
+
+SNAPSHOT SHA-256 (repository-relative paths)
+4ac683120c4ef1321b1f8ae0b7702341561900c7de5cf7dc3f9f867da269255f  formalization/negative-voting/NegativeVoting/Assembly.lean
+0fb2d7b470432b0af939a0ab5e75d3d616626c57eceb99fe73508c153885fd68  formalization/negative-voting/NegativeVoting/Centroid.lean
+f0cd7276eb283387aeb837b1752779a75857d318740eb06a671b33e08c8d1d84  formalization/negative-voting/NegativeVoting/EdgeEnergy.lean
+e6d6bdbf9c86fcdacd541ec2fa57b81e00fe5b884d269cdf477df6622ee608cc  formalization/negative-voting/NegativeVoting/GaussianCentroid.lean
+a7ffeeb4e8a3641fe7319657426bc91978237b457d479eb7b1ccccabcd6f513a  formalization/negative-voting/NegativeVoting/GaussianMoments.lean
+863bdc18e3eb8b892b72fcb98348e22ef021ad1eecc79decf1d5504c6f6aea1c  formalization/negative-voting/NegativeVoting/GaussianRouting.lean
+3d8cb14ebe9a76db5ffbfd19466b0e89261909a038e35392c209183be2ee800a  formalization/negative-voting/NegativeVoting/Integrability.lean
+245b2f08c1faaccd20e28f26a6cd0c33aab18e1dbd172d87327e64e742d437ee  formalization/negative-voting/NegativeVoting/Routing.lean
+d6dc2d0fe94f65d6b9aad2fe4a86524a582ae8ed6cf4470fc39dee6341c6400b  formalization/negative-voting/NegativeVoting/Threshold.lean
+49993ece9d3e5eed51a39dfb283fedd0e6aafdd92619ffd5ce4f9e959d4d7afe  formalization/negative-voting/NegativeVoting/VotingRange.lean
+52b324b140265a1fdda84165837d2d9914e109caf031edd298f372a517295c61  formalization/negative-voting/NegativeVoting.lean
+bf7f3f3d4e2e68803247432b48785ee491e2b4b42ef90fcbe9446bbcd83b5f77  formalization/negative-voting/verify.py
+857777097e6d76d492a5d46ab0de935a24d24a7ef13a7e9ae03572a261663b9c  formalization/negative-voting/Inventory.lean
+240bf00394e3885b193d85365cd5e6b22190dc813e80cfb41e4edb721815f963  formalization/negative-voting/AxiomAudit.lean
+4ec489e461c53f95450b85e0425e1ba195953e4a0ea8a70ec65724667c877280  formalization/negative-voting/README.md
+55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea  formalization/negative-voting/lean-toolchain
+68ccd4a59bd5bd7f2ba0461be5d933f988630d00a3a8ef183bca00fdff2d6f76  formalization/negative-voting/lakefile.toml
+2f6bda5ed982b1c856dcf6b11a98958e826a31a0a4c1404a6f50866895a28630  formalization/negative-voting/lake-manifest.json
+5b5554f1cb3ec442f638aebda4dbfecfdba88105de6ad6f1e0ec29474732915a  preprints/negative-voting-simplex/main.tex
+1ea79fb46873f7ad0a80546f2896ee4a8c78ab7e117d9bfee13dbaa940e0174a  preprints/negative-voting-simplex/07_dependency_ledger.tex

@@ -1,0 +1,24 @@
+{
+  "title": "Negative Gaussian Simplex Stability for Sufficiently Many Parts",
+  "authors": [
+    {
+      "name": "Jitendra Prajapati",
+      "orcid": "https://orcid.org/0009-0008-7493-0311"
+    }
+  ],
+  "date": "2026-11-02",
+  "submission_status": "prepared_not_submitted",
+  "arxiv_identifier": null,
+  "suggested_primary_category": "math.PR",
+  "suggested_cross_list": [
+    "cs.CC"
+  ],
+  "main_source": "main.tex",
+  "suggested_processor": "pdfLaTeX",
+  "source_archive": "../../archives/negative-voting-simplex-arxiv-source-2026-11-02.tar.gz",
+  "arxiv_license": null,
+  "license_status": "Author must select an arXiv submission license; no new license grant is made by this metadata.",
+  "formalization_scope": "Partial Lean formalization; Gaussian analytic estimates and the full main theorem remain unformalized.",
+  "repository": "https://github.com/infinityscroll/jmlr-research-notes",
+  "author_information_source": "Name and ORCID explicitly supplied by the user; no affiliation supplied."
+}

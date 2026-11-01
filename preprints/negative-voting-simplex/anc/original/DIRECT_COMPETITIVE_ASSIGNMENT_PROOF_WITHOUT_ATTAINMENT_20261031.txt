@@ -1,0 +1,111 @@
+DIRECT COMPETITIVE-ASSIGNMENT PROOF WITHOUT ATTAINMENT
+31 October 2026. Root scope reduction, submitted for independent audit.
+
+The full theorem e05b2c1e has an alternative direct proof: an existence,
+purity, stationarity, or interface theorem is unnecessary. Every step of
+its comparison can be applied to an arbitrary competitive assignment.
+The frozen predecessor remains valid and unchanged.
+
+PROPOSITION
+For all sufficiently large m, every finite N>=m-1, and every
+0<r<=1/(m-1), let f:R^N->Delta_m be measurable and satisfy
+S_{-r}(f)<=S_{-r}(g), where g is the regular simplex assignment.
+Then f is a regular simplex assignment up to orthogonal transformations,
+permutations and Gaussian null sets. The conclusion therefore implies
+the global inequality and equality classification directly for every f.
+
+1. Localization already has the required universal scope
+Sources45e2cc45 and251c3c7c explicitly concern every competitive
+simplex-valued measurable assignment, including fractional ones. The
+former uses individual Gaussian rearrangement and Hermite parity, with
+no optimization hypothesis. The latter retains the universal positive
+degree-two inequality and prescribed-mass value bound. Consequently,
+with p_i=E f_i, B_i=E[X f_i], W=||B||^2, delta=||p-U||^2,
+Delta=w-W and D=delta+rDelta, we have
+
+ p_i in[1/(2m),3/(2m)], 0<=D<=Cr^2/m, delta<=2D,
+ |W-w|<=D/r, W/w=1+O(r/L).
+
+The prescribed-mass value bound used here is11a6959e with its graph
+compactness clarification6d19bda9. It optimizes only the first-moment
+functional; it makes no full-noise attainment or stationarity assumption.
+
+2. The balanced score remainder and uniform rows
+For this arbitrary f, F_p(B)>=W simply because f is feasible. The
+balanced offsets supply F_p(B)<=F_U(B)-h_U(B).(p-U). The entropy row cap
+|B_i|<=p_i sqrt(2log(1/p_i)) and the bounded scale sqrt(W/w) allow41d649be
+to give ||h_U(B)||^2<=CL^2R_U(B). Exactly as in e33c710e Section4,
+
+ R:=R_U(B)<=Delta+CL^2delta<=D/r=:J<=Cr/m.
+
+No Euler-Lagrange equation or local minimality was used. Normalize
+Bhat=B/s, s=sqrt(W/w). The exact radial identity gives R_U(Bhat)<=CR.
+The global one-row inequality in e33c710e Theorem1 is valid for every
+centered score matrix at normalized norm. Applying it with the fixed row
+cap gives max_i||Bhat_i|^2/(w/m)-1|<=C sqrt(mr/L). Scaling back gives
+the identical uniform row estimate for B. This proves the extension of
+the row-lower-bound conclusion to every competitive f; the narrower
+wording of e33c710e Theorem2 is not used as a stronger hypothesis.
+
+3. The median proxy needs no subset-replacement argument
+Apply the global summed radial theorem1eb5d9f6 to Bhat. With
+beta=sqrt(w/m),
+
+ E_rad=sum_i(|Bhat_i|-beta)^2<=CL^2R<=CrL^2/m.
+
+Conditional Cauchy is valid for every simplex-valued assignment:
+(B_i.v)^2<=p_i E[f_i(v.X)^2], hence B^TB<=p_max I and
+||Bhat||op^2<=C/m. The uniform row lower bound just proved gives
+||m^-1sum_i u_i u_i^T||op<=C/L, where u_i=Bhat_i/|Bhat_i|.
+
+For Phi(c)=m^-1sum_i|Bhat_i-c| on the centroid span, the proof in
+e33c710e Section6 now applies directly. Its gradient at0 satisfies
+
+ |grad Phi(0)|<=C ||Bhat||op sqrt(E_rad)/(m beta^2)
+              <=C sqrt(m) sqrt(E_rad)/L<=C sqrt(r)=o(1).
+
+Its Hessian on a fixed sufficiently small ball |c|<=c0 beta is bounded
+below by c/beta, using the angular-frame bound above. Thus its minimizer
+lies in that ball and the exact radial projection
+Z_i=beta(Bhat_i-c)/|Bhat_i-c| satisfies
+
+ sum_i Z_i=0, |Z_i|=beta,
+ ||Z-Bhat||^2<=CE_rad<=CL^2R.
+
+Together with ||Bhat-B||^2<=2R this gives ||Z-B||^2<=CL^2J.
+The older subset-replacement estimate ab9f3d5b is not used: the new
+deficit-relative radial theorem supplies the needed small gradient.
+No centroid realizability, noise monotonicity, pair separation, rank,
+or unused-coordinate premise is added to this geometric construction.
+
+4. The interior and exterior comparison are assignment statements
+Let d be the distance of B from the regular centroid orbit. If d<=1/m,
+the local theorem1a489344 explicitly applies to every measurable
+simplex-valued assignment with its ACTUAL centroid in that ball and the
+stated mass box. It gives S(f)-S(g)>=delta/2+rR, whose equality argument
+forces regularity under competitiveness. Here actual means the first
+moments of f, not a stationarity property of f.
+
+If d>1/m, Sections2 and4--8 of84e1de62/e05b2c1e use only the quantities
+and bounds established above. The covariance remainder bound gives
+J>=R>=c/(m^3sqrt(L)). The proxy's common-threshold Gaussian comparison
+and direct tensor certificate give A2(f)-A2(g)>=-CL^3J. The regular
+routing loss and rare-label hypercontractivity give the entire signed
+tail bound Cr^3m^(7/4)L^(7/2)J. These arguments expressly allow unequal
+masses, fractional assignments, singular proxies and arbitrary routing.
+They imply
+
+ S(f)-S(g)>=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)]>=D/2>0,
+
+contradicting the assumed competitiveness. Thus only the interior
+regularity case is possible. No optimizing sequence or attainment is
+needed anywhere in this alternative proof.
+
+CONSEQUENCE AND LIMITS
+The original full theorem remains exactly the same, but its direct
+proof can omit the fixed-N existence/purity input3ff668be and the older
+subset-replacement inputab9f3d5b. Finite N>=m-1 is retained so the
+regular reference is realizable in the same ambient space. Constants
+remain uniform in N and the full negative voting interval. This note
+does not assert the positive-noise conjecture, every finite m, an
+explicit threshold, a bilinear theorem, or external verification.

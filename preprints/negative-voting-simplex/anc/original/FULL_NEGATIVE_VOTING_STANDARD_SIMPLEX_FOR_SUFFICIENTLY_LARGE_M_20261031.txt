@@ -1,0 +1,260 @@
+NEGATIVE GAUSSIAN SIMPLEX STABILITY FOR SUFFICIENTLY MANY PARTS
+31 October 2026. Root theorem assembly; AI-assisted research.
+
+STATUS: COMPLETE INTERNAL PROOF CANDIDATE, WITH THE RC PREMISE DISCHARGED.
+The new derivative lemma, global supporting inequality, and full-noise
+assembly have each passed independent full reconstructions. This is not
+an external endorsement, peer-reviewed result, or Lean formalization.
+This successor preserves the earlier conditional source unchanged.
+
+THEOREM
+There exists an absolute integer m0 such that for every m>=m0, every
+finite ambient dimension N>=m-1, every rho in[-1/(m-1),0), and every
+measurable f:R^N -> {u in[0,1]^m:sum_i u_i=1},
+
+ sum_i <f_i,T_rho f_i> >= sum_i <g_i,T_rho g_i>,
+
+where g is the indicator assignment of a regular m-cell Gaussian simplex
+partition, extended cylindrically to R^N. Equality holds only for these
+regular partitions, up to orthogonal transformations, relabeling and
+Gaussian null sets. T_rho is the Ornstein-Uhlenbeck noise operator.
+No mass constraint is imposed on f. The threshold m0 is independent
+of rho and finite N; this proof does not give a numerical value for it.
+
+SCOPE
+This settles the stated sufficiently-large-m, single-rule, negative
+voting-range case of the Gaussian Standard Simplex problem if the proof
+is correct. It does not settle every m, all negative Gaussian
+correlations, the positive-noise problem, or a two-rule bilinear problem.
+Discrete Plurality and computational-hardness consequences require their
+own transfer argument and are not asserted by this file.
+
+NEW INPUT (RC), NOW PROVED
+Put L=1+log m, mu_m=E max_(i<=m) G_i for iid standard Gaussians,
+alpha=mu_m/(m-1), w=alpha^2(m-1), and
+R_U(C)=(w+||C||_F^2)/2-F_U(C), where F_U is the balanced linear
+assignment value. For each fixed A and all sufficiently large m,
+every centered C with ||C||_F^2=w and max_i |C_i|<=A alpha satisfies
+
+ sum_i(|C_i|^2-w/m)^2 <= K_A L^3 R_U(C)/m^2.             (RC)
+
+Theorem1 of GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT,
+SHA1eb5d9f68cc145e0fd84c6913a2142c89046b8d9a1563986cd00242c34407d57,
+proves exactly this statement (replace its squared-row cap A by A^2).
+Its derivative input is be93031a114da3387fa7a6377af94daa1a1e4d72e655bde189fb1eb4cb600200.
+The result holds at arbitrary target rank and without a small Frobenius
+neighborhood. Root and separate branch, prior-art and cleanroom audits
+have checked its new proof chain. No conjectural radial premise remains.
+
+PROOF
+Write rho=-r. The following proof is the fully audited conditional
+assembly84e1de62 with RC supplied by the preceding theorem. Its
+mathematical argument is reproduced without alteration below.
+
+1. Actual minimizer, notation, and existing localization
+Choose an actual global minimizer f using[E]. Let
+  p_i=E f_i, B_i=E[X f_i], W=||B||^2,
+  delta=|p-U|^2, Delta=w-W, D=delta+r Delta,
+  R=R_U(B), d=dist_F(B,regular centroid orbit).
+The accepted localization[A] gives
+  p_i in[1/(2m),3/(2m)],
+  0<=D<=Cr^2/m, delta<=2D,
+  |W-w|<=D/r, W/w=1+O(r/L).                              (1)
+The mass-window theorem[V] gives
+  D>=(1-CrL^2)delta+r[V(p)-W]>=delta/2.                    (2)
+Write B0 for a closest regular centroid matrix, ||B0||^2=w. The
+distance is realized in the same finite N because N>=m-1.
+
+If d<=1/m, the accepted own-centroid local theorem[L] applies to f
+and gives S(f)-S(g)>=delta/2+rR. Competitiveness forces delta=R=0,
+and its equality argument forces regularity. Thus it remains to exclude
+  d>1/m.                                                   (3)
+All estimates below are used only in this exterior regime.
+
+2. The own-score remainder is paid by D/r
+The actual f is feasible for F_p(B), hence F_p(B)>=W. Balanced optimal
+offsets h_U are a dual test at p, giving
+  R<=(w-W)/2-h_U.(p-U).
+By[O] and bounded normalization scale from(1),
+  ||h_U||^2<=CL^2R.
+Young therefore gives
+  R<=Delta+CL^2delta.
+For sufficiently large m, CrL^2<=1; consequently
+  0<=R<=Delta+delta/r=D/r=:J.                              (4)
+This argument allows W>w and never identifies f with an affine fan.
+
+The global covariance remainder bound[G, and its unnormalized extension]
+applies to B. With q=d/alpha and e=||BB^T/alpha^2-P||_F,
+  R>=c alpha^2 e^2/m min(1,c/(Le)), e>=q.
+Since(1),(3) imply c/sqrt(L)<=q<=C sqrt(m), this yields
+  R>=c q/m^3>=c/(m^3sqrt(L)), J>=R,                        (5)
+  d^2<=C m^(3/2)L R.
+The lower bound in(5) is indispensable for paying absolute tails below.
+In particular J>0 in this exterior regime.
+
+3. Build the equal-row test matrix, not an alleged optimizer
+Put s=sqrt(W/w), Bhat=B/s. Equation(1) bounds s above and below by
+absolute constants. The exact radial identity gives
+  R=w(s-1)^2/2+sR_U(Bhat), R_U(Bhat)<=CR.
+The actual entropy cap and(1) give a fixed normalized row cap for Bhat.
+Apply(RC) to Bhat. With beta=sqrt(w/m),
+  sum_i (|Bhat_i|-beta)^2
+  <=beta^(-2)sum_i(|Bhat_i|^2-beta^2)^2<=CL^2R.             (6)
+The actual uniform row theorem[U] gives |Bhat_i|/beta=1+O(L^(-1/2)).
+Conditional Cauchy gives B^TB<=p_max I, hence ||Bhat||op^2<=C/m.
+
+Apply the geometric-median construction proved in[U, Section6] to
+Bhat. It provides a matrix Z with
+  sum_i Z_i=0, |Z_i|=beta, ||Z||^2=w,
+  ||Z-Bhat||^2<=CL^2R.
+The radial identity also gives ||B-Bhat||^2=w(s-1)^2<=2R. Therefore
+  E_proxy:=||Z-B||^2<=CL^2R<=CL^2J.                        (7)
+The construction stays in the actual centroid span; it needs no new
+coordinate. We do NOT claim that Z is a realizable centroid matrix,
+has separated rows, defines an optimizer, or decreases noise. It will
+only be a quadratic test matrix. Duplicate rows and rank loss are allowed.
+
+4. A free-maximum second-moment comparison with an explicit tail
+Let Y_i=Z_i.X/beta, M=max_i Y_i, and let M_* be the regular unit-row
+maximum. Since the rows of Z sum to zero, M>=0 pointwise. Write
+  a0=(m-1)/m, nu=sqrt(a0)M+G/sqrt(m),
+with G an independent standard Gaussian. The covariance of the Gaussian
+scores defining nu is a0 C+J_label/m, C=(ZZ^T)/beta^2, and has unit
+diagonal and dominates J_label/m. The primary equal-threshold theorem[W]
+therefore gives H(t)=P(nu<=t)-P(M_m<=t)>=0. The regular unit-row
+maximum with the same independent common Gaussian has distribution M_m.
+Thus
+  epsilon_free=E M_*-E M>=0,
+  int H=sqrt(a0)epsilon_free,
+  E M_*^2-E M^2=(2/a0)int t H(t)dt.
+
+For t>=T, H(t)<=m P(G>t); for t<=-T, H(t)<=P(G<=t).
+These use only unit marginal variances. For every T>=1,
+  (E M_*^2-E M^2)_+
+     <=C T epsilon_free+C m exp(-T^2/2).                  (8)
+This is an absolute Gaussian tail, not an unsupported deficit-relative
+CDF bound. No centering or facet convergence issue arises under singular
+covariance: the primary theorem applies by its PSD continuity statement.
+
+Let V=max_i Z_i.X=beta M and V_*=beta M_*. The regular mean is
+E V_*=w, so(8) becomes
+  (E V_*^2-E V^2)_+
+     <=C beta T(w-E V)+C beta^2 m exp(-T^2/2).             (9)
+In particular E V<=w, the free weak-simplex bound at this scale.
+
+5. The actual assignment's routing loss pays its quadratic test error
+Set Z_i.X=z_i(X) and
+  c_f(X)=V(X)-sum_i f_i(X)z_i(X)>=0.
+Its expectation is E V-<Z,B>. Both this quantity and w-E V are
+nonnegative. Their sum is exactly
+  w-<Z,B>=(Delta+E_proxy)/2<=CL^2J.                       (10)
+The last estimate uses Delta<=J and(7); Delta itself may be negative.
+The nonnegativity of the left side follows from the free maximum bound,
+not from assuming balance of f.
+
+Pointwise, since each z_i<=V and V>=0,
+  V^2-sum_i f_i z_i^2
+   =sum_i f_i(V-z_i)(V+z_i)<=2V c_f.
+Let A=max_i |Y_i|. Then c_f<=2beta A, V<=beta A, and the unit marginal
+Gaussian union bound gives
+  E[A^2 1_(A>T)]<=C m(T^2+1)exp(-T^2/2).
+Splitting at V<=beta T therefore yields
+  E V^2-E sum_i f_i z_i^2
+   <=2beta T E c_f+C beta^2 m(T^2+1)exp(-T^2/2).           (11)
+No property of the actual interfaces or routing by Z is assumed.
+
+Combine(9)-(11), choose T=sqrt(32L), and use beta T<=CL/m:
+  E sum_i f_i z_i^2
+   >=E V_*^2-C L^3J/m-C beta^2 m L exp(-16L).             (12)
+The last error is explicitly paid after the next certificate step.
+
+6. Direct second-chaos certificate for f
+Let Q_i=E[f_i(XX^T-I)] and
+  T_i=Z_i Z_i^T-(Z^T Z)/m.
+Since sum_i Q_i=0 and all |Z_i|^2=beta^2,
+  T_f:=sum_i <Q_i,T_i>=E sum_i f_i z_i^2-beta^2.           (13)
+This formula is valid for the UNEQUAL masses p because sum_i p_i=1.
+The denominator satisfies
+  sum_i||T_i||^2=m beta^4-tr((ZZ^T)^2)/m<=D_*,
+  D_*=alpha^4(m-1)(m-2)/m,
+by trace w and rank at most m-1. No inverse Gram matrix is used.
+
+For the regular reference, T_*=alpha^2(E M_m^2-1)>0,
+A2(g)=T_*^2/(2D_*), and T_*/D_*<=Cm. Cauchy and the squared
+positive-part inequality thus convert(12)-(13) into
+  A2(f)-A2(g)>=-CL^3J-C L^2exp(-16L).
+By(5), the last term is at most CJ for sufficiently large m. Hence
+  A2(f)-A2(g)>=-CL^3J.                                   (14)
+
+This is an EXTERIOR estimate for the localized actual minimizer using
+(RC) and the actual-row proxy construction. It is not the refuted
+global nonaffine relative-A2 inequality: the fixed A/m neighborhood
+is handled separately by the full-noise theorem[L].
+
+7. Entire signed higher tail for the actual unequal-mass assignment
+Let g0 be the regular assignment associated with the closest B0 and
+put epsilon=(1/2)||f-g0||_1. Its regular linear routing loss is
+  R0=w-<B0,B>=(Delta+d^2)/2>=0.
+The regular top-two gap estimate in[H] gives
+  epsilon<=min(1,C sqrt(m R0)).                            (15)
+It holds for fractional assignments as well: at each point the mass
+sent to nonwinning labels pays at least the top-two gap.
+
+At tau^2=1/(4L), rare-label hypercontractivity, using p_i<=3/(2m), gives
+  ||T_tau f||^2+||T_tau g0||^2<=C/m,
+  ||T_tau(f-g0)||^2<=C epsilon/m.
+Factoring all Hermite degrees>=3 through T_tau proves
+  |H_r(f)-H_r(g0)|<=Cr^3L^3 sqrt(epsilon)/m.               (16)
+This retains the ENTIRE signed tail; no finite truncation is substituted.
+
+If J>=d^2, then R0<=J by Delta<=J. Equations(5),(15)-(16) give
+  |Hdiff|/J<=Cr^3 L^3/(m^(3/4)J^(3/4))
+           <=Cr^3m^(3/2)L^(27/8).
+If J<d^2, then R0<=d^2, so epsilon<=C sqrt(m)d. Using d=alpha q,
+J>=R>=c q/m^3 and q>=c/sqrt(L), one obtains
+  |Hdiff|/J<=Cr^3 m^(7/4)L^(13/4)q^(-1/2)
+           <=Cr^3m^(7/4)L^(7/2).
+The latter also dominates the first case. Thus throughout the exterior,
+  |H_r(f)-H_r(g)|<=Cr^3m^(7/4)L^(7/2)J.                  (17)
+Rotation does not change the regular reference's noise energy.
+
+8. Full signed comparison and conclusion
+The exact decomposition into degrees0,1,2 and the entire higher tail is
+  S(f)-S(g)=D+r^2[A2(f)-A2(g)]+H_r(f)-H_r(g).
+Equations(14),(17), and J=D/r give
+  S(f)-S(g)
+   >=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)]>=D/2>0              (18)
+for sufficiently large m, uniformly over0<r<=1/(m-1). The endpoint
+errors are O(L^3/m) and O(L^(7/2)/m^(1/4)), respectively.
+The strict inequality uses the exterior floor(5). This contradicts
+global minimality because g is an admissible competitor.
+
+Thus every global minimizer is inside d<=1/m, where[L] gives regularity
+as in Section1. Fixed-N existence makes this a global minimum statement
+over all assignments, not merely a classification conditional on an
+unproved existence premise. The threshold is independent of finite N.
+
+DEPENDENCIES AND VERIFICATION RECORD
+The exact proof inputs are recorded in the companion source manifest.
+The prior conditional source84e1de62 and its frozen manifest remain
+unchanged for provenance. The new RC source1eb5d9f6 is supplied in full,
+together with its derivative sourcebe93031a and independent audits.
+
+Existing inputs: fixed-N existence3ff668be; positive-chaos localization
+251c3c7c; mass-window11a6959e with6d19bda9; global offset41d649be;
+single-row/proxye33c710e; local own-centroid1a489344; global covariance
+gap47e441ee with its unnormalized extension05176f6e; rare-label signed
+tail and regular margin5edacd0c/8b10fa5e; the primary equal-threshold
+Gaussian-maximum comparison of Mulgund2607.14087v4 Theorem2.1, used
+at exactly its published PSD/unit-diagonal hypotheses.
+
+New full assembly audits: cleanroom6243c20e, prior-art0fbf4af7,
+branch95d34374. New RC audits: cleanroomb01e001b, branch6e8b0177,
+and ROOT_CALIBRATED_HAZARD_AND_GLOBAL_SUMMED_RADIAL_COERCIVITY_AUDIT.
+The derivative source has independent cleanroom3a4fb915 and prior-art
+975e9932 audits, in addition to the root reconstruction. These are
+independent agent reconstructions, not outside expert verification.
+
+The main theorem's quantified threshold is existential and its domain
+is finite dimensional. No infinite-dimensional attainment is used.
+Current primary-source scope and novelty review is a separate record.

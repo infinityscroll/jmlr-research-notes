@@ -1,0 +1,180 @@
+\section{Global summed radial coercivity}\label{sec:radial}
+We now prove the supporting-covariance theorem of \cite{radial}.
+Only the supporting point is near the regular covariance; the target
+may be singular and far from it.
+
+\begin{theorem}\label{thm:radial}
+Fix $A\ge1$. For sufficiently large $m$, every centered score matrix
+$B$ with $\norm B_{\Frob}^2=w$ and $\abs{B_i}^2\le A\alpha^2$ satisfies
+\begin{align}
+ \calR(B)&\ge\frac{c_A\alpha^2}{L^2}
+       \sum_i\left(\frac{\abs{B_i}^2}{\alpha^2}-\frac nm\right)^2,
+       \label{eq:radialcoercivity}\\
+ \sum_i(\abs{B_i}^2-w/m)^2&\le C_A\frac{L^3}{m^2}\calR(B).
+       \label{eq:RC}
+\end{align}
+No lower row bound, pair separation, rank, or proximity assumption is
+required.
+\end{theorem}
+\begin{proof}
+For positive $v_i$ let $D=P\diag(v_i)P$. Independent scores
+$\sqrt{v_i}Z_i$, after subtracting their common sample mean, realize
+$D$. This subtraction changes neither the allocation nor its expected
+value. Using balanced offsets and the notation of
+Proposition~\ref{prop:hazard}, the mass-offset Laplacian is
+\begin{equation}\label{eq:hazard-matrix}
+ \calL_D=P\diag(\ell_i)P-H_D,\qquad
+ H_D=\int W_0(Pa)(Pa)^T\dd x\succeq0.
+\end{equation}
+Indeed $\diag(\ell)-\int W_0aa^T$ is exactly the ordinary Laplacian,
+which already annihilates $\one$.
+
+At this positive supporting point, Analytic interface~\ref{prior:value} gives
+$\nabla\Gamma(D)=\calL_D/2$. Homogeneity of degree $1/2$ gives
+$\Gamma(D)=\tr(\calL_DD)$. Concavity therefore implies, for every
+centered PSD target $C$,
+\begin{align}
+ \Gamma(C)&\le\Gamma(D)+\tfrac12\tr[\calL_D(C-D)]
+       =\tfrac12\tr[\calL_D(C+D)]\notag\\
+       &\le\tfrac12\sum_i\ell_i(C_{ii}+D_{ii}).
+       \label{eq:support}
+\end{align}
+The discarded term is $-\tr[H_D(C+D)]/2\le0$.
+This is an exact PSD sign, not an entrywise comparison. Continuity
+gives the same support inequality for singular $C$.
+
+Set $C=BB^T/\alpha^2$, so $\tr C=n$ and $C_{ii}\le A$. Write
+\[
+ z_i=C_{ii}-n/m,\qquad \kappa=1-2/m,\qquad \xi_i=z_i/\kappa.
+\]
+Then $\sum_i\xi_i=0$, $\norm\xi_\infty\le A_1:=3(A+1)$, and
+\begin{equation}\label{eq:diag-support}
+ D_t=P+tP\diag(\xi)P,\qquad
+ \tr D_t=n,\qquad (D_t)_{ii}=n/m+\kappa t\xi_i=n/m+t z_i.
+\end{equation}
+Let $c_H,C_H$ be the constants from Proposition~\ref{prop:hazard}
+for $A_1$. Choose
+\[
+ 0<b_A\le\min\left\{c_H,1,\frac1{2A_1},
+                       \frac1{24C_H(A+2)}\right\},\qquad t=b_A/L^2.
+\]
+The supporting covariance is positive definite on $\one^\perp$,
+its diagonal is at most $2$, and the whole segment lies in the proved
+coordinate box. Taylor's formula gives
+\[
+ \ell_i(t)=\alpha-\alpha\eta_m t\xi_i+e_i,\qquad
+ \abs{e_i}\le\tfrac12C_H\alpha L^2t^2
+                  (\xi_i^2+m^{-1}\norm\xi^2).
+\]
+Inserting this in \eqref{eq:support}, the constant term is
+$\alpha n=\mu_m$. The linear term pairs all diagonal errors at once:
+\[
+ \sum_i\xi_i(C_{ii}+(D_t)_{ii})
+                    =\kappa(1+t)\norm\xi^2.
+\]
+The absolute remainder is at most
+$C_H(A+2)\alpha L^2t^2\norm\xi^2/2$. Since
+$\eta_m\ge1/4$ and $\kappa\ge1/3$,
+\begin{align*}
+ \mu_m-\Gamma(C)
+ &\ge\alpha\left\{\frac{\eta_m\kappa t(1+t)}2
+                     -\frac{C_H(A+2)L^2t^2}2\right\}\norm\xi^2\\
+ &\ge\frac{\alpha\kappa t}{16}\norm\xi^2
+  \ge\frac{\alpha b_A}{16L^2}\norm z^2.
+\end{align*}
+For the middle inequality, after factoring $\alpha t$, the error is
+at most $1/48$, and $\kappa/8-1/48\ge\kappa/16$.
+Finally
+$\calR(B)=w-\alpha\Gamma(C)=\alpha[\mu_m-\Gamma(C)]$.
+This proves \eqref{eq:radialcoercivity}; multiplying by $\alpha^4$
+and using $\alpha^2\asymp L/m^2$ gives \eqref{eq:RC}.
+\end{proof}
+
+\begin{corollary}[Bounded unnormalized scales]\label{cor:unnormalized}
+Fix $0<s_0\le s_1<\infty$ and $A$. If $B$ is centered,
+$s=\norm B/\sqrt w\in[s_0,s_1]$, and
+$\abs{(B/s)_i}^2\le A\alpha^2$, then
+\begin{align}
+ \sum_i(\abs{B_i}^2-W/m)^2+
+ \sum_i(\abs{B_i}^2-w/m)^2
+                  &\le C\frac{L^3}{m^2}\calR(B),\label{eq:unnormvar}\\
+ E_{\rm rad}:=\sum_i(\abs{B_i}-\beta)^2
+                  &\le CL^2\calR(B).\label{eq:radial-distance}
+\end{align}
+\end{corollary}
+\begin{proof}
+Put $\widehat B=B/s$. Equation~\eqref{eq:radial-identity} is exact.
+The vector $(\abs{B_i}^2-W/m)_i$ equals $s^2$ times its hatted version,
+so Theorem~\ref{thm:radial} bounds its squared norm by
+$Cs^3\alpha^2L^2\calR(B)$. Orthogonal decomposition into the mean and
+mean-zero parts gives
+\[
+ \sum_i(\abs{B_i}^2-w/m)^2
+  =\sum_i(\abs{B_i}^2-W/m)^2+\frac{(W-w)^2}{m}.
+\]
+The last term is
+$w^2(s+1)^2(s-1)^2/m\le2w(s+1)^2\calR(B)/m$.
+This proves \eqref{eq:unnormvar}. Finally
+$(\abs{B_i}-\beta)^2\le(\abs{B_i}^2-\beta^2)^2/\beta^2$
+and $\beta^2\asymp L/m^2$ give \eqref{eq:radial-distance}.
+\end{proof}
+
+\section{An exactly centered equal-row test matrix}\label{sec:proxy}
+The matrix constructed next is only a test object. We will neither
+route the assignment by it nor claim it is a matrix of actual centroids.
+
+\begin{lemma}\label{lem:proxy}
+Suppose $\widehat B$ is centered, $\norm{\widehat B}^2=w$,
+$\norm{\widehat B}_{\rm op}^2\le C/m$, and
+$\max_i\abs{\abs{\widehat B_i}/\beta-1}=o(1)$.
+Let $E=\sum_i(\abs{\widehat B_i}-\beta)^2$ and suppose
+$E\le CrL^2/m$ for $0<r\le1/(m-1)$. For sufficiently large $m$ there is a matrix $Z$,
+in the same row span, such that
+\begin{equation}\label{eq:proxy}
+ \sum_i Z_i=0,\qquad \abs{Z_i}=\beta,\qquad
+                       \norm{Z-\widehat B}^2\le CE.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $u_i=\widehat B_i/\abs{\widehat B_i}$. The row lower bound and
+operator estimate give
+$\norm{m^{-1}\sum_i u_iu_i^T}_{\rm op}\le C/L$.
+On the row span consider
+$\Psi(c)=m^{-1}\sum_i\abs{\widehat B_i-c}$.
+For $\abs c\le c_0\beta$, distances are comparable to $\beta$, and
+\[
+ \left\lVert\frac1m\sum_i
+ \frac{(\widehat B_i-c)(\widehat B_i-c)^T}
+                         {\abs{\widehat B_i-c}^2}\right\rVert_{\rm op}
+               \le C/L+C\abs c^2/\beta^2.
+\]
+Choose a fixed sufficiently small $c_0$. Then
+$\nabla^2\Psi\succeq c\beta^{-1}I$ on that ball.
+At zero, centering gives
+\[
+ g_0:=\norm{\nabla\Psi(0)}
+ \le\frac{C\norm{\widehat B}_{\rm op}\sqrt E}{m\beta^2}
+ \le C\frac{\sqrt m\sqrt E}{L}\le C\sqrt r=o(1).
+\]
+The radial derivative is positive on the ball boundary for large $m$;
+therefore $\Psi$ has an interior minimizer $c$, with
+$\abs c\le C\beta g_0$ and
+$\sum_i(\widehat B_i-c)/\abs{\widehat B_i-c}=0$.
+Define $Z_i=\beta(\widehat B_i-c)/\abs{\widehat B_i-c}$.
+This gives the first two assertions in \eqref{eq:proxy}. Moreover
+\[
+ m\abs c^2\le C E/L.
+\]
+Compare $Z_i$ first with $\beta u_i$. Radial projection is uniformly
+Lipschitz on these points away from zero, so the squared comparison
+cost is $Cm\abs c^2$; the squared cost from $\beta u_i$ to
+$\widehat B_i$ is exactly $E$. This proves the final assertion.
+All operations take place in the row span.
+\end{proof}
+
+\begin{remark}
+The proof of Lemma~\ref{lem:proxy} is the geometric-median construction
+from \cite{rowcontrol}, with its small-gradient condition supplied here
+by the radial bound. Neither duplicate rows of $Z$ nor rank loss
+will cause a problem in the quadratic test below.
+\end{remark}

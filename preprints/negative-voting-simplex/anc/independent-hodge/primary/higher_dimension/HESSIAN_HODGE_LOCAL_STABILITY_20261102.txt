@@ -1,0 +1,204 @@
+HESSIAN-WEIGHTED GAUSSIAN HODGE ESTIMATE AND LOCAL NUCLEAR-TV STABILITY
+Date: 2026-11-02
+Status: derived argument; independent algebra audit requested and partly received.
+No claim of originality, literature recognition, global rearrangement, or major-result status.
+
+1. CLAIM AND SCOPE
+
+Let gamma be the standard Gaussian measure on R^d. Let phi be smooth and convex,
+M=D^2 phi positive definite, and v be a smooth compactly supported vector field
+with div_gamma v=div v-x.v=0. Let S_t be its Gaussian-preserving flow and T=grad phi.
+Provided V(t)=integral ||D(T o S_t)||_* dgamma is finite (or one takes the finite
+local change V(t)-V(0)), the calculation below gives V'(0)=0 and V''(0)>=0 in ALL
+dimensions. In particular the proposed higher-dimensional local negative-mode
+attack fails in this smooth compact-flow regime.
+
+The core estimate is first proved when m I <= M <= L I globally, m>0. In that
+regime it holds for any distributionally Gaussian-solenoidal v in L^2(gamma)
+for which the right side below is defined. Moreau regularization then extends
+the local inequality to arbitrary smooth positive-definite convex Hessians and
+compact v. This is a local second-variation result; it does not prove global N.
+
+Use the Jacobian convention Dv_ij=partial_j v_i. Define
+  K = M Dv - Dv^T M,
+  I(v) = integral v^T M v dgamma,
+  E(v) = integral sum_{i<j} K_ij^2/(lambda_i+lambda_j) dgamma,
+with components taken in any pointwise orthonormal eigenbasis of M.
+The conclusion is I(v)<=E(v).
+
+2. OPERATORS AND THE EXACT INTEGRATION-BY-PARTS IDENTITY
+
+Write partial_j^*=x_j-partial_j. A skew matrix A is identified with a 2-form,
+using the norm sum_{i<j} A_ij^2. Set
+  (delta_gamma A)_i = sum_j partial_j^* A_ij.
+This convention differs by a harmless sign from some exterior-form conventions.
+Let S_p(M) be the additive action of M on p-forms: its eigenvalue at the index
+set i_1<...<i_p is lambda_{i_1}+...+lambda_{i_p}. In particular
+  S_2(M) A = M A + A M,
+  J(A) = integral <A,S_2(M)A> dgamma
+       = integral tr(A^T M A) dgamma.
+
+For compact smooth skew A, put v=delta_gamma A. Two integrations by parts give
+  I(v) = J(A) + R(A),
+  R(A) = integral sum_{i,k,j,l} M_ik (partial_l A_ij)(partial_j A_kl) dgamma. (2.1)
+
+Detailed derivation:
+  I = integral A_ij partial_j(M_ik v_k).
+The term A_ij (partial_j M_ik) v_k vanishes by the full symmetry of D^3 phi and
+the skew symmetry in i,j. Since
+  partial_j partial_l^* = partial_l^* partial_j + delta_jl,
+the remaining term is
+  integral A_ij M_ik partial_l^* partial_j A_kl
+  + integral A_ij M_ik A_kj.
+Move partial_l^* to the other factor. The new term
+  A_ij (partial_l M_ik) partial_j A_kl
+vanishes by symmetry in k,l. The two surviving terms are R and J.
+
+The same first integration gives the pairing identity
+  I(v) = integral sum_{i<j} A_ij K_ij dgamma.                         (2.2)
+Both identities use the Hessian property, not merely M positive definite.
+
+3. THE POINTWISE THREE-INDEX ALGEBRA
+
+At a fixed point choose a CONSTANT orthogonal coordinate rotation diagonalizing
+M at that point; do not differentiate an eigenvector frame. In these coordinates
+the density of R splits as
+  sum_{i != j} lambda_i (partial_j A_ij)^2 + sum_{i<j<k} q_ijk.
+For a triple i<j<k set
+  alpha=lambda_i, beta=lambda_j, gamma=lambda_k,
+  a=partial_k A_ij, b=partial_i A_jk, c=partial_j A_ki.
+Then
+  q = -2(beta*a*b + gamma*b*c + alpha*c*a).                           (3.1)
+
+Let B=S_2(M)A. Full symmetry of D^3 phi cancels every derivative-of-M term in
+the exterior derivative dB. Thus its triple component, up to the global sign
+chosen for d, is
+  k=(alpha+beta)a+(beta+gamma)b+(gamma+alpha)c.                        (3.2)
+
+The elementary inequality needed is
+  q + k^2/[2(alpha+beta+gamma)] >= 0.                                (3.3)
+Indeed, the symmetric matrix of this quadratic form has null vector (1,1,1),
+positive diagonal entries, and every principal 2-by-2 minor equals
+alpha*beta*gamma/(alpha+beta+gamma)>0. Hence it is positive semidefinite.
+
+Equivalent direct check on k=0: solve for c to obtain
+  q = 2/(alpha+gamma) * [alpha(alpha+beta)a^2
+                        +2 alpha gamma a b
+                        +gamma(beta+gamma)b^2] >= 0.
+The determinant of the bracket's 2-by-2 matrix is
+alpha*beta*gamma*(alpha+beta+gamma)>0.
+
+Consequently (2.1) gives, for every compact smooth skew A, the augmented estimate
+
+ integral |delta_gamma A|_M^2 dgamma
+ + (1/2) integral <d(S_2(M)A), S_3(M)^(-1)d(S_2(M)A)> dgamma
+ >= J(A).                                                          (3.4)
+
+The second term is absent in dimensions below 3. If M>=mI, it is bounded above
+by (6m)^(-1) ||d(S_2(M)A)||_{L^2(gamma)}^2.
+
+4. CHOOSING THE CORRECT POTENTIAL
+
+First assume mI<=M<=LI globally. Minimize J(A) over the closed affine subset of
+skew L^2(gamma) fields satisfying delta_gamma A=v in distributions. The norm J
+is equivalent to the ordinary L^2 norm, so a unique minimizer exists once the
+constraint is nonempty.
+
+Nonemptiness follows from the elementary Gaussian Hodge construction. With
+L_OU=Delta-x.grad, set w=(-L_OU+1)^(-1)v, componentwise, and
+  A^0_ij=partial_j w_i-partial_i w_j.
+The commutation relation for delta_gamma and L_OU gives delta_gamma w=0,
+and direct calculation yields delta_gamma A^0=(-L_OU+1)w=v. Gaussian Hermite
+expansion makes A^0 in L^2 for v in L^2. Equivalently, this can be proved
+degree-by-degree in the orthogonal Hermite decomposition.
+
+For a compact smooth 3-form C, the variation A+t delta_gamma C preserves the
+constraint because delta_gamma^2=0. The Euler equation is therefore
+  d(S_2(M)A)=0 in distributions.                                   (4.1)
+This weighted closure condition is essential. Imposing dA=0 instead does not
+make R nonnegative, even for some constant anisotropic M.
+
+No unproved smoothness of the minimizing A is needed. Consider the graph of the
+first-order differential operator
+  A -> (delta_gamma A, d(S_2(M)A)).
+Compact smooth fields are dense in this graph for smooth bounded M:
+  (i) multiply by cutoffs chi_R with |grad chi_R|<=C/R. The commutator terms
+      are -(grad chi_R) contracted with A and dchi_R wedge S_2(M)A, which
+      vanish in L^2 because M is bounded and A is in L^2;
+  (ii) on a fixed compact support, standard Friedrichs mollification for
+      first-order operators with smooth coefficients converges in graph norm.
+The Gaussian density is smooth, positive, and locally equivalent to Lebesgue
+measure, so the local mollification statement applies directly.
+
+Approximate the minimizer by compact smooth A_n in this graph. Then
+  delta_gamma A_n -> v,
+  d(S_2(M)A_n) -> 0,
+  J(A_n) -> J(A).
+Apply (3.4), using the bound (6m)^(-1) on the correction term, and pass to the
+limit. This proves
+  J(A) <= I(v).                                                     (4.2)
+
+5. LOCAL STABILITY
+
+For smooth v with the indicated integrability, (2.2) extends to the minimizing
+potential by distributional integration by parts (compact support of v suffices).
+Weighted Cauchy-Schwarz gives
+  I(v)^2 <= J(A) E(v) <= I(v) E(v).
+For nonzero v, I(v)>0, so I(v)<=E(v). The zero field is immediate.
+
+For the flow calculation, put F_t=T o S_t and H=partial_t DF_t|_0=D(Mv).
+The D^3 phi contribution to H is symmetric, so H-H^T=K. The nuclear norm Hessian
+at positive-definite M is
+  D^2 ||.||_*(M)[H,H] = sum_{i<j}(H_ij-H_ji)^2/(lambda_i+lambda_j).
+Stationarity follows from
+  integral tr D(Mv) = integral x.Mv
+                   = integral grad(x.grad phi-phi).v = 0.
+Moreover,
+  partial_t^2 F_t|_0 = (v.grad)(Mv),
+and Gaussian-solenoidal integration by parts yields
+  integral tr D[(v.grad)(Mv)] = integral x.(v.grad)(Mv) = -I(v).
+Thus
+  V''(0)=E(v)-I(v)>=0.                                             (5.1)
+
+6. REMOVING GLOBAL HESSIAN BOUNDS FOR COMPACT v
+
+For a smooth globally convex phi, take its Moreau envelope
+  phi_epsilon(x)=inf_y [phi(y)+|x-y|^2/(2 epsilon)],
+and add eta |x|^2/2. Its Hessian is smooth, bounded above by (epsilon^-1+eta)I,
+and bounded below by eta I. On compact sets these Hessians converge to D^2 phi
+as epsilon,eta decrease to zero. Since v and Dv have compact support and M is
+positive definite there, I and E converge by continuity and uniform local
+eigenvalue bounds. Hence (5.1) holds for the stated general compact-flow regime.
+
+7. LITERATURE DISTINCTION
+
+Dorian Le Peutrec, 'On Witten Laplacians and Brascamp-Lieb's inequality on
+manifolds with boundary', arXiv:1607.08714v2, revised 22 February 2017:
+  https://arxiv.org/abs/1607.08714
+  https://arxiv.org/pdf/1607.08714
+gives differential-form Brascamp-Lieb inequalities associated with Witten
+Laplacians. Its standard Hessian term is tied to the logarithmic density V in
+e^{-V}. Here the integration measure is fixed Gaussian and M=D^2 phi is an
+independent Hessian. The source is contextual background, not a citation that
+proves (3.4) or (5.1). No exact prior formulation was located in the bounded
+search. That absence is not a novelty certificate.
+
+8. NUMERICAL SANITY CHECK AND QUADRATURE TRAP
+
+second_variation_search.py builds a 23-dimensional Gaussian-solenoidal Hermite
+basis of polynomial degrees 2 and 3, excluding linear rotation zero modes, and
+forms the Q=E-I Galerkin matrix. Six small smoke trials used softmax, exponential,
+and quartic convex potentials. This is diagnostic evidence only.
+
+A sharp anisotropic softmax gave a FALSE apparent negative mode on coarse
+tensor Gauss-Hermite quadrature:
+  order 12^3: minimum eigenvalue -0.1941929972;
+  order 28^3: minimum eigenvalue -0.1085369396.
+Resolving its sharp second coordinate by 256-point Gauss-Legendre integration
+on [-9,9], times Gauss-Hermite order 16 in the other two coordinates, gave
+  minimum eigenvalue +0.01585450011.
+A refinement to Gauss-Legendre 384 times Gauss-Hermite 20 squared gave
+  minimum eigenvalue +0.0158544905553,
+agreeing to approximately 1e-8.
+The refinement results are saved beside the script. Coarse negatives must not
+be represented as counterexamples. No numerical check replaces the argument.

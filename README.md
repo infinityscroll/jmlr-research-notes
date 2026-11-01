@@ -4,6 +4,12 @@ Substantial results and reproducible experiments through 2 November 2026.
 These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
 
+## Preprint and partial Lean formalization
+
+[The integrated preprint](preprints/negative-voting-simplex/output/pdf/negative_voting_simplex_preprint.pdf), by Jitendra Prajapati ([ORCID](https://orcid.org/0009-0008-7493-0311)), consolidates the large-alphabet negative-voting argument and its credited dependencies. [LaTeX sources and submission notes](preprints/negative-voting-simplex/README.txt) and a [upload bundle with proof companions](archives/negative-voting-simplex-arxiv-source-2026-11-02.tar.gz) include the supporting analytic proof files. This is a GitHub preprint package; it has not been submitted to arXiv.
+
+[The Lean project](formalization/negative-voting/README.md) contains 54 authored theorems covering actual product-Gaussian routing and integrability, centroid and covariance identities, scalar decay, and uniform voting-interval assembly. CI rebuilds the pinned project and audits all 64 compiled theorem constants, including generated helpers. **The Gaussian analytic estimates and the complete main theorem are not Lean-verified.** The source bundle includes an explicit coverage ledger; the [standalone Lean archive](archives/negative-voting-lean-2026-11-02.tar.gz) excludes downloaded dependencies and build caches.
+
 ## 2 November — integrated negative-voting proof
 
 [The integrated theorem and proof](frontier/negative-voting-simplex/supplements/integrated-full-voting-proof-20261102/MAIN_THEOREM_INTEGRATED_PROOF_20261102.txt) establishes regular-simplex optimality throughout the negative voting interval for every sufficiently large alphabet, in every finite ambient dimension N >= m-1, allowing fractional rules and unequal masses. Its consequence is negative Plurality Is Stablest and the **exact fixed-alphabet Frieze–Jerrum MAX-m-CUT threshold**, with UGC retained for hardness.

@@ -1,0 +1,361 @@
+ENDPOINT-ONLY TRANSFER: QUANTIFIERS, NORMALIZATION, AND ERROR ORDER
+2 November 2026. Successor audit of the algorithmic consequence.
+
+VERDICT
+
+No substantive obstruction was found in the passage from the stated Gaussian
+theorem to the exact fixed-alphabet Frieze--Jerrum/UGC threshold. In particular,
+there is no hidden equal-mass hypothesis, two-rule Gaussian inequality,
+correlation rescaling, or unjustified interchange of extrema in that passage.
+This is conditional verification of the transfer, not validation of the
+Gaussian theorem. The frozen manuscript remains an internal proof candidate.
+
+There is a useful stronger formulation of the dependency: once the previously
+credited endpoint theorem is used, matching hardness needs Gaussian optimality
+at ONE correlation, rho_m=-1/(m-1). It does not need the entire negative voting
+interval, a minimizing-correlation search, or any uniform invariance estimate
+as m grows. Below, the error choices and decoder are made explicit. This gives
+a concrete endpoint-only certificate and a nearly satisfiable instance gap.
+
+One wording refinement is warranted: the cited FJ algorithm directly supplies
+a RANDOMIZED polynomial-time guarantee IN EXPECTATION. An arbitrary small
+additional loss gives high probability by repetition. The manuscript's bare
+"polynomial-time algorithm" should not be read as a separately proved
+deterministic derandomization. The NP-hardness promise itself is deterministic.
+
+1. EXACT INPUT THAT THIS AUDIT USES
+
+Fix an integer m>=max(m0,3). Let r_m=-1/(m-1), let g_m be a regular Gaussian
+simplex assignment, and put
+
+  b_m=S_(r_m)(g_m),              a_m=1-b_m.
+
+The sufficient Gaussian hypothesis is only
+
+  (E_m) For every finite N>=m-1 and every measurable PURE m-part assignment h
+        on Gaussian R^N, with arbitrary cell masses,
+        S_(r_m)(h)>=b_m.
+
+The stated manuscript theorem is stronger: it permits fractional assignments,
+all negative voting correlations, and gives equality classification. None of
+those additional conclusions is required for the endpoint hardness proof.
+Fractional DISCRETE rules remain essential in the verifier calculation, but
+IM's transfer maps them to pure Gaussian rules. Thus Gaussian purity alone
+would suffice, provided unrestricted masses and all finite dimensions remain.
+
+The standard simplex exists in every N>=m-1. Cylindrical extension preserves
+stability. Therefore (E_m) implies that the infimum of Gaussian stability is
+exactly b_m in EACH such finite dimension, not merely in a dimension limit.
+For N<m-1, embedding a competitor into R^(m-1) gives the same lower bound.
+No existence theorem for a minimizing arbitrary partition is needed.
+
+The sources actually checked are the manuscript main.tex, statement/input
+section, discrete-consequence section, its frozen transfer companion, and the
+already credited endpoint successor. Source pins and primary locators appear
+in Section 8. No frozen source was changed.
+
+2. CORRELATION AND FJ NORMALIZATION
+
+For an SDP edge with unit endpoint vectors u,v and rho=<u,v>, independent
+Gaussian rounding directions Z_1,...,Z_m produce score pairs
+
+  X_i=<Z_i,u>, Y_i=<Z_i,v>,       Cov(X_i,Y_j)=rho*1_(i=j).
+
+The two winning labels agree with probability P_m(rho). Subtracting each score
+vector's coordinate mean does not change its winning index. On 1-perp the
+centered scores have identity covariance and cross-covariance rho times the
+identity, in orthonormal coordinates. Consequently
+
+  P_m(rho)=S_rho(g_m)=s_m(rho),
+
+with exactly the SAME rho. The simplex-vertex inner product -1/(m-1) is the
+edge feasibility bound, not an extra multiplier in the Gaussian correlation.
+The SDP edge contribution is c_m(rho)=(m-1)(1-rho)/m. At rho=r_m it equals 1.
+
+The original FJ algorithm and its edge ratio were checked in the primary
+Frieze--Jerrum preprint, Section 2 and Appendix. Its analysis is an expected
+rounding guarantee. Endpoint minimization is NOT credited to that 1994
+preprint or to this project. The relevant already credited later input is
+Garcia-Soriano--Miyauchi, arXiv:2609.35453v1, Theorem 4.8:
+
+  min_(r_m<=rho<1) [1-s_m(rho)]/c_m(rho) = 1-s_m(r_m)=a_m.
+
+Their Theorem 4.9 concerns tightness for the specified rounding algorithm;
+it is not an all-algorithm hardness theorem. The Gaussian input plus UGC
+provides the latter type of complexity consequence. Those claims must stay
+separate. The existing endpoint successor already makes this distinction.
+
+3. THE SINGLE-RULE SOUNDNESS IDENTITY AND THE MASS CHECK
+
+Write F_w(x)=e_(f_w(x)) for an arbitrary proof table at a right-hand Unique
+Games vertex. Let P_(v,w) permute the coordinates according to its constraint.
+Conditional on a left-hand vertex v, sample w,w' independently with the same
+neighbor law, independently of a correlated pair (X,Y), and define
+
+  G_v(x)=E_w F_w(P_(v,w)x).
+
+Expansion of the finite sums, before any inequality, gives
+
+  Pr[rejection | v]
+    =E_(X,Y),w,w' <F_w(P_(v,w)X), F_w'(P_(v,w')Y)>
+    =E_(X,Y) <G_v(X),G_v(Y)>
+    =S_(r_m)(G_v).
+
+The two tables need not agree. Their independent neighbor averages do agree,
+which is precisely why one-rule stability is enough. A verifier with two
+different conditional neighbor laws would instead yield a bilinear expression;
+that is not the IM verifier being invoked here.
+
+Each G_v is simplex-valued. Its mean is the neighbor average of the proof-table
+means, and can be any probability vector. For example, all tables constantly
+equal to label 1 yield mean e_1 and zero influences. The reduction does not
+balance such a mean. IM Theorem 7.1 preserves it; it does not convert it into
+the uniform vector. A Gaussian theorem only for equal masses would therefore
+leave a real soundness gap unless a separate balancing reduction were proved.
+Hypothesis (E_m), and the manuscript theorem, have exactly the needed
+unrestricted-mass scope. There is no common-mass requirement across vertices.
+
+4. ENDPOINT CHANNEL AND THE ORDER OF THE QUANTIFIERS
+
+At r_m the discrete channel is particularly simple:
+
+  Pr[Y_j=a | X_j=b] = 0 if a=b, and 1/(m-1) otherwise.
+
+All probabilities are rational. On the zero-mean coordinate subspace the
+channel operator is multiplication by r_m; its maximal correlation is
+|r_m|=1/(m-1)<1 for m>=3. Thus the zero diagonal probabilities at the endpoint
+do not cause a maximal-correlation-one obstruction to invariance. The m=2,
+rho=-1 degeneracy is outside this audit and need not be imported.
+
+For every FIXED m and every zeta>0, IM Theorem 7.1 gives integers d>=1 and
+tau>0, independent of the voter count k, such that every F:[m]^k->Delta_m with
+
+  Inf_j^(<=d)(F_i)<=tau for every output i and input coordinate j
+
+has a pure Gaussian transfer h in dimension k(m-1) satisfying
+
+  |S_(r_m)(F)-S_(r_m)(h)|<=zeta.
+
+Applying (E_m) gives S_(r_m)(F)>=b_m-zeta. The same masses are preserved by
+the cited theorem, but they need not be estimated because (E_m) is uniform
+over them. The endpoint plurality limit is identified by IM Lemma 7.3.
+
+The dependency order is
+
+  fixed m -> desired hardness slack -> zeta -> d,tau -> Unique Games
+  soundness gamma -> Unique Games label size M -> input graph size.
+
+The exponential long-code size m^M is a constant in the final input-size
+complexity statement. Nothing requires d,tau to be uniform in m, a computable
+numerical m0, an explicit rate in tau, or a relation between the number of
+input vertices and m. A theorem confined to one fixed Gaussian dimension
+would not justify this step: M can be large and the transfer uses M(m-1)
+dimensions. The candidate explicitly has the required all-finite-dimensional
+quantifier.
+
+5. EXPLICIT DECODING AND RATIO ERRORS
+
+Here is an independent finite-parameter reconstruction of the endpoint
+soundness, so that an asymptotic residual cannot hide in the notation.
+
+Take a desired nontrivial hardness slack 0<epsilon<1-a_m=b_m, and set
+
+  delta=epsilon/16, eta=epsilon/16, zeta=delta/4.
+
+Use d,tau for the preceding transfer at error zeta. For a vector-valued rule
+H define I_j(H)=sum_i Inf_j^(<=d)(H_i). Parseval gives
+
+  sum_j I_j(F_w)
+    =sum_sigma |supp sigma| 1_(|supp sigma|<=d) ||Fhat_w(sigma)||^2
+    <=d E||F_w||^2=d.
+
+Suppose verifier acceptance were greater than a_m+delta. Then
+E_v S(G_v)<b_m-delta. Put B={v:S(G_v)<b_m-delta/2}. Since S(G_v)>=0 and
+b_m<=1, the fraction p of vertices in B satisfies p>delta/2. Indeed,
+
+  E_v S(G_v)>=(1-p)(b_m-delta/2),
+
+and b_m-delta/2>0. For each v in B, the transfer with error delta/4 implies
+that some output/input influence exceeds tau; hence max_j I_j(G_v)>tau.
+
+Choose l(v) to maximize I_j(G_v). At w, choose l(w)=j with probability
+I_j(F_w)/(sum_t I_t(F_w)); if that denominator is zero, use any label.
+The zero-denominator case causes no difficulty, since its influences vanish.
+For every w,j this random label has probability at least I_j(F_w)/d.
+Squared Fourier coefficients are convex under averaging, so
+
+  I_(l(v))(G_v)
+    <=E_w I_(sigma_(v,w)^(-1)(l(v)))(F_w).
+
+It follows that the conditional probability of satisfying the Unique Games
+constraint out of v in B exceeds tau/d. The resulting labeling satisfies
+more than delta*tau/(2d) of the constraints in expectation, and therefore
+some deterministic labeling does. Choosing
+
+  gamma=delta*tau/(4d)
+
+contradicts Unique Games soundness VAL<=gamma. Hence every cut in the
+soundness case has value at most a_m+delta. This proof uses vector influence
+only as a sum of the manuscript's scalar influences; no silent conversion
+of conventions is needed. The conservative m*d denominator used in IM would
+also suffice and changes no conclusion.
+
+In the completeness case, dictator tables succeed whenever both sampled
+constraints are satisfied. At the endpoint the queried coordinates are always
+different, so completeness is at least 1-2eta. Therefore the gap ratio is
+
+  (a_m+delta)/(1-2eta),
+
+and its difference from a_m is
+
+  (delta+2eta*a_m)/(1-2eta)
+     <=(3epsilon/16)/(1-epsilon/8)<epsilon.
+
+Here 0<a_m<1 and epsilon<1; the strict inequalities follow from the positive
+Gaussian joint density at |r_m|<1 and the nontrivial simplex cells. Larger
+requested epsilon is covered by proving the result for a smaller positive
+slack. This completes the actual fixed-m quantifier proof.
+
+In particular, for each fixed m satisfying (E_m) and arbitrary positive
+eta_0,delta_0, UGC gives hardness of distinguishing normalized weighted
+MAX-m-CUT instances with OPT>=1-eta_0 from those with OPT<=a_m+delta_0.
+This is the endpoint's nearly satisfiable instance formulation, not a claim
+of perfect completeness or hardness on exactly m-colorable graphs.
+
+If a substitute Gaussian estimate has a nonzero error e_m,
+S_(r_m)(h)>=b_m-e_m, the same proof gives a soundness value no better than
+a_m+e_m+delta. Arbitrarily small invariance and UGC errors do NOT remove e_m.
+In particular an O(log log m/m^2) or o(m^-2) loss as m->infinity does not
+prove exact fixed-m hardness. This is precisely the distinction from KKMO
+Proposition 11.4 and Theorem 11. Those are asymptotic bounds; their low-degree
+replacement appears separately in Proposition 11.5. The current transfer
+uses the exact candidate Gaussian lower bound and then lets only the freely
+chosen transfer/reduction errors tend to zero, after m has been fixed.
+
+6. WHY THERE IS NO INFIMUM/SUPREMUM OR DIMENSION-LIMIT GAP
+
+For any pure N-dimensional partition h, define
+R_h(rho)=[m/(m-1)]*[1-S_rho(h)]/(1-rho), rho<1.
+For N>=m-1, the credited endpoint FJ identity gives inf_rho R_g(rho)=a_m,
+while (E_m) gives R_h(r_m)<=a_m for EVERY h. Hence, already in each finite
+N>=m-1,
+
+  sup_h inf_rho R_h(rho) <= a_m,
+
+with equality by testing g. Also, for every rho, sup_h R_h(rho)>=R_g(rho)
+>=a_m, while at r_m that supremum equals a_m. Thus
+
+  inf_rho sup_h R_h(rho)=a_m.
+
+These two extrema are evaluated separately. They are not interchanged by a
+minimax theorem. Both equal a_m before the outer dimension limit in IM's
+constants is taken. At rho=1 the edge contribution vanishes; the ratio is
+understood on rho<1 or by a limiting convention and cannot lower the infimum.
+
+Even without the later endpoint theorem, the manuscript's full negative-range
+input justifies its original compact-minimum route. Hermite weights of the
+pure balanced regular partition show R_g(rho)>=1 for rho>=0; R_g(0)=1.
+The same regular rule maximizes disagreement at every negative admissible
+rho. These facts evaluate both extrema without assuming positive-noise
+simplex optimality. The later endpoint input simply removes an unnecessary
+moving parameter and rational-approximation step: r_m itself is rational.
+
+7. PRECISE SCOPE AND RECOMMENDED SUCCESSOR WORDING
+
+The following is the appropriate compact application statement:
+
+  For every fixed m>=max(m0,3), put
+  a_m=1-s_m(-1/(m-1)), using the credited FJ endpoint theorem.
+  Frieze--Jerrum rounding gives, unconditionally, a randomized polynomial-
+  time (a_m-epsilon)-approximation in expectation for every epsilon>0.
+  Conditional on the candidate Gaussian endpoint inequality and UGC,
+  approximation within a_m+epsilon is NP-hard for every epsilon>0.
+  The algorithmic constants and reduction may depend on fixed m,epsilon.
+
+The rounding guarantee actually exists for every fixed m>=3 independently
+of the Gaussian candidate. Its new conditional significance in this project
+is matching hardness for all fixed m beyond an existential threshold. No
+improved rounding algorithm, numerical m0, particular small alphabet, exact
+finite-precision attainment of a_m, or uniform variable-alphabet running time
+has been obtained. Equality classification and quantitative distance-to-
+simplex estimates are not needed for this consequence.
+
+To turn the expected algorithm guarantee into high probability, run independent
+roundings and retain the best. Normalizing by OPT gives a random variable in
+[0,1]. If its expectation is at least a_m-epsilon/2, its probability of being
+at least a_m-epsilon is at least epsilon/2. Thus O(epsilon^(-1) log(1/q))
+repetitions give failure probability at most q. This adds no Gaussian proof
+assumption. It does not by itself furnish a deterministic derandomization.
+
+The direct audit concerns nonnegative rational weighted graphs, exactly the
+primary transfer formulation. The manuscript's optional simple-unweighted
+extension remains a separate mixing-graph reduction and was not silently
+used here. No new external publication, priority claim, or numerical test is
+part of this note.
+
+8. PRIMARY SOURCE LOCATORS AND FROZEN INPUT PINS
+
+[IM] Isaksson--Mossel, Maximally Stable Gaussian Partitions with Discrete
+Applications, arXiv:0903.3362v3; journal version Israel J. Math.189 (2012).
+Theorem 7.1, Lemma 7.3; Appendix A Definition A.3, Lemma A.4,
+Theorems A.5--A.6, Lemmas A.7--A.8, Theorem A.9.
+https://arxiv.org/html/0903.3362v3
+Live primary HTML reopened 2 November 2026. Frozen local HTML read as well:
+SHA256 e77c03e44e57d5dac04d4028722b23c0b58849ed46cf3b049a881e4b540e4e58.
+
+[FJ] Frieze--Jerrum, Improved approximation algorithms for MAX k-CUT and
+MAX BISECTION, preprint dated 6 June 1994, reproduced in BRICS NS-94-3.
+Section 2: SDP and random rounding; Appendix: separation ratio and Hermite
+normalization. In the 221-page proceedings PDF, article begins at PDF page
+199; the relevant SDP/ratio text is on PDF pages 203--204 and 210--211.
+https://www.brics.dk/NS/94/3/BRICS-NS-94-3.pdf
+Primary bytes fetched and read in memory 2 November 2026; SHA256:
+79553054bb555e5dd58b54425cc18f023de19b9a2e3bd69bfc4e1088ea149e16.
+Final bibliographic identity: Algorithmica18 (1997),67--81,
+https://doi.org/10.1007/BF02523688
+The original paper is not being credited with the later endpoint theorem.
+
+[GSM] Garcia-Soriano--Miyauchi, Hermite Brings a Laptop: Analyzing
+Frieze--Jerrum Rounding Yields Improved Approximations for Clustering
+Problems, arXiv:2609.35453v1, 28 September 2026, Theorems 4.8--4.9.
+https://arxiv.org/pdf/2609.35453v1
+Primary PDF and abstract reopened 2 November 2026; existing cached primary
+text read. The already recorded PDF SHA256 is
+fdc75bbe5fb58bf62840a1c7382bed37cb79bf8feb226762120a57048edd90c1.
+This is an external preprint, not an endorsement or result of this project.
+
+[KKMO] Khot--Kindler--Mossel--O'Donnell, Optimal Inapproximability Results
+for MAX-CUT and Other 2-Variable CSPs?, author copy dated 7 February 2007.
+Definitions 5--7 (printed pages8--9), Theorem11 (page14), Propositions
+11.4--11.5 (pages32--33). The informal page9 negative-sign display is not
+used; the actual endpoint lower bound is Proposition11.4.
+https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf
+Primary PDF reopened and frozen local PDF read 2 November 2026.
+SHA256 42d209e98ae861f192e815854ea52c99e893d94a7366c9074621fcf34ab8fb71.
+
+Local paths below are relative to full_standard_simplex_20261031/:
+
+negative_voting_simplex_manuscript_v2_20261031/main.tex
+SHA256 58c423a657cc2b916ba9d62bf51e732af191d47c86ce87a8db43bcac2ec37fe5
+
+negative_voting_simplex_manuscript_v2_20261031/01_statement_inputs.tex
+SHA256 d19d2f761c6ec27570ad6799bb5517bd54228002081759ea7c4c940b60799bca
+
+negative_voting_simplex_manuscript_v2_20261031/06_discrete_consequences.tex
+SHA256 7a27b5015bbab722aa7dd3660717481c38b778ca0c723aad4b918a08ab506487
+Key lines:24--49 transfer;63--80 exact ratio;82--119 threshold/averaging;
+122--131 scope. The successor wording above sharpens, not replaces, these.
+
+negative_voting_simplex_manuscript_v2_20261031/dependency_review/proof_sources/
+LARGE_M_NEGATIVE_PLURALITY_AND_SHARP_MAX_M_CUT_TRANSFER_20261031.txt
+SHA256 9482f0855064af8cae7ade28263e6e8256ab90cc7a27bc4e2f5f1537e9f3e1e5
+
+adversarial_review_20261031/
+ENDPOINT_FORM_OF_LARGE_ALPHABET_MAX_CUT_CANDIDATE_20261101.txt
+SHA256 37b03086530293878b0143ceacd56cbb19404d51356bca82a49f968fc672c5a8
+
+adversarial_review_20261031/GARCIA_SORIANO_MIYAUCHI_2609_35453v1.txt
+SHA256 a1b30984be5d7d51b73507391f5cef9a76d75107c2a6b4bf2db1229611e57200
+
+All frozen inputs were preserved. The only output of this audit is this TXT
+successor in completion_evidence_20261102/algorithmic/.

@@ -1,0 +1,72 @@
+FINAL ASSEMBLY ADDENDUM
+2 November 2026
+
+VERDICT: PASS for the three bounded edits checked here.
+
+Assembly:
+completion_evidence_20261102/
+HODGE_COVARIANCE_AND_SIMPLEX_CURVATURE_WITH_CLASSICAL_INPUTS_20261102.txt
+Current SHA256:
+98050b4e300f5fa686d938428e1e4f46a8956ef0fc259dd791b15e0f7f85375d
+
+This addendum supplements, and does not replace or modify,
+BOUNDED_ASSEMBLY_SCOPE_AND_FINITE_GAP_REPLACEMENT_REVIEW_20261102.txt.
+No prior audit or source was edited.
+
+1. SCOPE CLARIFICATIONS
+
+The intrinsic clause now explicitly covers an affinely independent simplex
+of r+1 sites embedded in a larger ambient space and excludes arbitrary
+affinely dependent target families. Its strictness assertion is correctly
+restricted to nonzero compressed covariance directions.
+
+The application paragraph now explicitly retains the Gaussian convex-set
+Brascamp--Lieb/Poincare result as a separate classical input. It correctly
+distinguishes replacement of the covariance calls from removal of all
+inputs used in the earlier finite-gap proof.
+
+2. FIRST DERIVATIVE: SIGN, NORMALIZATION, AND COAREA
+
+The added identity
+
+  DF_nu(C)[H]=(1/2) sum_(i<j) w_ij(C) a_ij^T H a_ij
+
+is correct at the stated full-simplex, positive-mass, C>0 scope.
+
+For fixed heights h define l_h(x)=max_i(y_i dot x+h_i). The dual value is
+E_(N(0,C)) l_h - sum_i p_i h_i, minimized over heights modulo constants.
+The already established smooth optimizer permits the envelope theorem;
+its height derivative is zero because its cell masses equal p_i. Thus
+the derivative of the optimized heights contributes nothing.
+
+The directional Gaussian heat identity is
+
+  D_C E l_h[H]=(1/2) integral gamma_C tr(H dD^2 l_h).
+
+It is legitimate distributionally: l_h has linear growth, its Hessian is
+a locally finite facet measure, and Gaussian density derivatives have
+integrable polynomial tails. Its i,j facet contribution is
+
+  D^2l_h=(a_ij a_ij^T/|a_ij|) dH^(d-1).
+
+To verify the exact whitening coefficient, let x=C^(1/2)z, a=a_ij, and
+let F_x,F_z be corresponding facets. Their normals are
+n_x=a/|a| and n_z=C^(1/2)a/|C^(1/2)a|. The surface change of variables gives
+
+  gamma_C(x) dH_x^(d-1)
+    = [|a|/|C^(1/2)a|] gamma_I(z) dH_z^(d-1).
+
+Consequently
+
+  (1/|a|) integral_(F_x) gamma_C dH^(d-1)
+    = area_gamma(F_z)/|C^(1/2)a|=w_ij(C).
+
+This proves the displayed derivative with one copy of every unoriented
+facet and the factor 1/2. It uses no derivative of a Brenier map and no
+chain-complex identity. For score sites P e_i the matrix sum
+sum_(i<j) w_ij(e_i-e_j)(e_i-e_j)^T is exactly the offset Laplacian,
+restricted to 1-perp. Therefore the derivative matrix is that Laplacian/2,
+as needed by the prior calibration input.
+
+These edits preserve the previously reviewed second-derivative coefficient,
+strictness, and the stated boundaries of the negative-voting application.

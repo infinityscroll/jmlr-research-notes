@@ -1,0 +1,202 @@
+REGULARIZED MASS WINDOW: PRUNED GRAPH AND OFFSET-DERIVATIVE CERTIFICATE
+31 October 2026. Root and branch independently derived the mechanism;
+branch full source. Proof candidate, independent full audit pending.
+
+This note proves the uniform mixed-Hessian input for the separate envelope
+argument. It permits the limiting centroid covariance to lose rank. It
+does not prove the higher-chaos comparison or Standard Simplex itself.
+
+1. Setup and conclusion
+Fix constants 0<c<=1<=C0 and the compact mass window
+  W_m={p:sum p_i=1, c/m<=p_i<=C0/m}.
+Assume m is sufficiently large depending only on c,C0; in particular m>=3.
+Work on H=1-perp, dimension d=m-1, with P=I-11^T/m. For positive masses,
+  F_p(C)=sup E[Z_I], Z~N(0,C), P(I=i)=p_i,
+  V(p)=max_{C>=0,C1=0} {2F_p(C)-tr C},
+  V_eps(p)=max_{C>=eps P,C1=0} {2F_p(C)-tr C}.
+Here and below the covariance inequalities and trace are on H. There is
+no added trace constraint or trace multiplier.
+
+Let C_eps(p) denote the unique constrained optimizer. There is an
+eps0(m,c,C0)>0 such that, for every 0<eps<=eps0 and p in W_m, the
+mean-zero balanced-to-p offset h(C,p) satisfies, for every symmetric
+covariance direction A on H,
+
+  ||D_C h(C_eps,p)[A]||^2
+       <= K(c,C0) L_m^2 [-D_C^2 F_p(C_eps)[A,A]],        (1)
+
+where L_m=1+log(m/c), and one valid constant is
+
+  K(c,C0)=128 C0^2 pi [56 exp(3/2)+2]/c^2.              (2)
+
+The same conclusion, with a fixed-factor enlargement of K, holds in a
+small neighborhood of each optimizer and mass point. The neighborhood
+size need not be uniform in eps or m. This is sufficient for a local
+envelope argument with a constant independent of eps.
+
+2. Primal interpretation, compactness and the covariance floor
+Factor C=B B^T, using m centered score rows b_i in R^d. The linear
+assignment principle gives
+  V(p)=max_f sum_i |int x f_i dgamma|^2,
+where f has masses p. Indeed optimize B in
+2 sum_i b_i.int x f_i-||B||_F^2. At a maximizing C, choose any maximizing
+pure assignment f and write M_i=int x f_i. Then
+  2F_p(C)-tr C=||M||_F^2-||B-M||_F^2<=V(p),
+so equality forces B=M. This does not presume full rank.
+
+Coercivity F_p(C)<=sqrt(tr C) implies existence and a common finite trace
+bound for optimizers when eps d<=1. This bound is only a compactness
+argument: the optimization itself has no trace cap. Strict covariance
+concavity at positive C gives uniqueness of C_eps(p).
+Adding independent centered Gaussian noise to an optimal coupling shows
+F_p(C+epsP)>=F_p(C), so
+
+  0<=V(p)-V_eps(p)<=eps d.                              (3)
+
+The assignment support is continuous jointly in C,p when p stays in a
+compact positive mass window. For example, the offset dual has uniformly
+bounded minimizers on bounded covariance sets, using p_min>0 and score
+integrability. Therefore any sequence eps_n->0, p_n->p and constrained
+optimizers has covariance accumulation points that maximize V(p).
+This also proves uniform nearness to the true optimal set on W_m, for
+each fixed m. No continuity or uniqueness of singular true optimizers is
+needed for this compactness statement.
+
+3. Uniform pair separation at every true optimizer
+For a pure maximizing assignment, fix i!=j and keep A_i union A_j fixed.
+Choose a unit direction e perpendicular to b_i+b_j; this is possible
+because d>=2. The projected, unnormalized measure of the union has total
+mass p_i+p_j, total first moment0, and density at most phi(0).
+Re-split it into an upper p_i tail and a lower p_j tail. If t is the split
+threshold, the density cap implies
+  int_upper (x-t)>=p_i^2/[2phi(0)],
+  int_lower (t-x)>=p_j^2/[2phi(0)].
+Thus the two conditional means differ by at least
+(p_i+p_j)/[2phi(0)]. Their total projected moment is zero, so the new
+projected first-moment DIFFERENCE is at least p_i p_j/phi(0).
+The common vector sum b_i+b_j is unchanged. Maximality of sum|b_i|^2
+therefore implies
+
+  |b_i-b_j|>=sqrt(2pi) p_i p_j.                        (4)
+
+For the upper bound, Gaussian exponential Jensen on any event of mass p
+gives |int_A x|<=p sqrt(2log(1/p)). Hence on W_m,
+  |b_i-b_j|<=2C0 sqrt(2L_m)/m.
+The uniform optimizer compactness from Section2 transfers these bounds,
+with fixed slack, to constrained optimizers for sufficiently small eps:
+
+  ell_min=sqrt(2pi)c^2/(2m^2)<=ell_ij
+       <=4C0 sqrt(2L_m)/m=ell_max.                     (5)
+
+This argument does not apply the re-splitting optimality assertion to a
+regularized assignment. It applies it to every true accumulation point.
+All constrained score rows are affinely independent because C_eps>0.
+
+4. KKT and the actual facet graph
+Let mu_ij be the intrinsic Gaussian surface mass of the winning facet,
+ell_ij the score-row separation, and w_ij=mu_ij/ell_ij. Let L be the
+corresponding weighted graph Laplacian. Price differentiation of the
+offset-minimized support gives grad_C F_p=L/2 on H. Equivalently this is
+the Gaussian second-derivative formula for the affine maximum, with its
+optimizing offset held by the envelope theorem. The weights here are the
+ACTUAL facet weights, not a prescribed complete-graph surrogate.
+
+KKT for maximization of the concave objective on C>=epsP yields
+
+  0<=L<=P,   (P-L)(C-epsP)=0.                          (6)
+
+In particular the maximum weighted degree is at most1. For reference,
+Gaussian boundary IBP gives M=LB, so with the symmetric factor B=C^(1/2)
+the complementarity identity gives B-M=sqrt(eps)(P-L). Thus the residual
+also tends0, without a rank assumption. This residual is not needed to
+replace the compactness argument in Section3.
+
+For any label set S, its union of cells has Gaussian perimeter equal to
+sum_{i in S,j notin S}mu_ij; codimension-two ties contribute no perimeter.
+Gaussian isoperimetry and concavity/symmetry of I(p)=phi(Phi^-1(p)) give
+  sum_cut mu_ij>=I(p(S))>=2phi(0)min(p(S),1-p(S)).
+If k=min(|S|,m-|S|), the mass window and (5) imply
+
+  sum_cut w_ij>= h0 k,
+  h0=c/[4C0 sqrt(pi L_m)].                             (7)
+
+Retain only edges with w_ij>=m^-4, and call their Laplacian L_str.
+A cut loses at most k m^-3. For sufficiently large m, m^-3<=h0/2, so
+every retained cut has conductance at least h0/2. Retained degrees remain
+at most1. The elementary weighted Cheeger inequality then gives
+
+  z^T L_str z>=lambda_*||z||^2 for sum z_i=0,
+  lambda_*=c^2/[128 C0^2 pi L_m].                      (8)
+
+For clarity, the Cheeger inequality used here is lambda_2>=h^2/(2dmax)
+with COUNTING measure. Its proof applies coarea to v_i^2 for a nonnegative
+vector supported on at most half the vertices and then Cauchy:
+h sum v_i^2<=sum_edges w|v_i^2-v_j^2|
+ <=sqrt[(sum w(v_i-v_j)^2)(2dmax sum v_i^2)].
+Split an arbitrary vector at a median, and use that its squared distance
+to a median is at least its squared distance to its mean. This proves (8)
+with the stated unordered-edge convention.
+
+5. Intrinsic probabilities and normalized offsets on retained edges
+Let q_ij=h_ij/ell_ij. Each cell i has mass at least c/m and is contained
+in its winning halfspace against j, and conversely. Therefore
+
+  |q_ij|<=Phi^-1(1-c/m),   q_ij^2<=2L_m.               (9)
+
+On an affine facet its intrinsic STANDARD tangential probability is
+  pi_ij=mu_ij/phi(q_ij).
+For a retained edge, (5), w_ij>=m^-4 and phi(q)<=phi(0) give
+
+  pi_ij>=pi c^2/m^6.                                  (10)
+
+No such bound is asserted for the deleted edges. For the Ehrhard
+coefficient a(p)=1+Phi^-1(p)p/phi(Phi^-1(p)), the accepted elementary
+bound a(p)^-1<=8 exp(3/2)[1+log(1/p)] gives from (10)
+
+  a(pi_ij)^-1<=56 exp(3/2)L_m                         (11)
+
+on every retained edge. In particular small individual weights outside
+the retained graph cause no unproved uniformity assumption.
+
+6. Applying the CYCLE-PRESERVING refined covariance Hessian
+Input: EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt,
+SHAd2611f1d80f447cadffd503e7d29a76ef84737d991700defedc141dc7bf614fd.
+At the present positive covariance whiten the source. For a covariance
+direction A write H for its whitened matrix, d_e for the whitened site
+gap, ell_e=|d_e|, and
+  x_e=(d_e^T H d_e)/ell_e,
+  q_e=h_e/ell_e,   h_e'=D_C h_e[A].
+The input's EXACT post-cycle estimate is
+
+  -4F_CC[A,A]>=sum_e w_e{x_e^2
+                      +a(pi_e)[2h_e'-q_e x_e]^2}.      (12)
+
+On each retained edge weighted Cauchy gives
+  4(h_e')^2
+    <=[a(pi_e)^-1+q_e^2]
+                   {x_e^2+a(pi_e)[2h_e'-q_e x_e]^2}.
+Using (9),(11),(12) and then (8), with sum_i h_i'=0,
+  ||h'||^2
+   <=lambda_*^-1 sum_retained w_e(h_e')^2
+   <=lambda_*^-1 [56 exp(3/2)+2]L_m [-F_CC[A,A]].
+This is precisely (1)-(2). The cycle energy has already been subtracted
+in (12); it is not discarded or replaced by the raw facet deficit.
+
+7. Local persistence and scope for the envelope
+For each fixed m,eps and positive mass vector, offsets and facet data are
+smooth locally because all sites are affinely independent and all cell
+masses are positive. The covariance Hessian is strictly negative definite.
+The particular finite retained graph at an optimizer can be kept fixed
+in a sufficiently small neighborhood. Its weights, gap and facet bounds
+then persist with fixed-factor slack; (1) holds there after a fixed-factor
+increase of K. This does not require L<=P at nearby nonoptimal points:
+that inequality was used to establish the optimizer's graph bounds, which
+then persist by continuity.
+
+The separate constrained-envelope argument must justify integration in p
+and passage eps->0. This note supplies the needed eps-independent mixed
+Hessian bound and does not assume differentiability of C_eps across active
+constraint changes. The source of the classical geometric input in (7)
+is the Gaussian isoperimetric inequality, in its measurable-set perimeter
+form; all the unions here are finite polyhedral unions, so its perimeter
+hypothesis is satisfied directly.

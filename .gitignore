@@ -5,3 +5,15 @@ __pycache__/
 external_cache/
 verification_local.json
 diagnostic_rerun/
+.lake/
+preprints/*/*.aux
+preprints/*/*.log
+preprints/*/*.out
+preprints/*/*.toc
+preprints/*/main.pdf
+preprints/*/tmp/
+preprints/*/output/pdf/main.*
+preprints/*/output/pdf/*.aux
+preprints/*/output/pdf/*.log
+preprints/*/output/pdf/*.out
+preprints/*/output/pdf/*.toc

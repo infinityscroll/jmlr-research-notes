@@ -1,0 +1,112 @@
+\section{Proof dependencies, formalization boundary, and provenance}
+\label{app:sources}
+\subsection{How to read the supplied proof package}
+The article gives the statement, the principal analytic reductions, and
+the complete final comparison. The longer weak Hodge, finite-fan cycle,
+moving-boundary, and all-amplitude cap calculations remain in the supplied
+ancillary notes. The PDF alone is therefore not a self-contained replacement
+for those notes. They are mathematical parts of this submission, not
+external theorems inferred from successful tests or audit verdicts.
+
+The source archive contains the directory \path{anc/}, with the following
+stable layout. Paths in the references are relative to the archive root.
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.61\textwidth}}
+\toprule
+Directory & Mathematical role\\
+\midrule
+\path{anc/original/} & Preserved analytic source notes, including the stronger cycle-refined estimate, local cap, offset duality, and affine signed-tail proofs.\\
+\path{anc/integrated/} & Current local, exterior, assembly, and arbitrary-PSD ray reconstructions, with section-level dependencies.\\
+\path{anc/classical-hodge/} & Covariance concavity, finite-simplex normal strain, established regularity replacement, and endpoint-only discrete transfer.\\
+\path{anc/independent-hodge/} & Supporting Hodge and covariance-transfer derivations and finite algebra checks.\\
+\path{anc/independent-hazard/} & Independent reconstruction of the threshold/hazard derivative calculation.\\
+\path{anc/current-diagnostics/} & Additional reconstruction of the critical mixed estimate and a reproducible, nonrigorous tetrahedral diagnostic.\\
+\path{anc/lean/} & Pinned Lean sources, theorem inventory, axiom audit, and precise formalization coverage.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The current integrated notes have four distinct roles:
+\begin{enumerate}
+\raggedright
+\item \cite[Sections 2--4]{currentassembly} supplies the initial mass box,
+the cycle-refined mass envelope, improved localization, and uniform
+quantifiers. Its use of the mixed offset estimate is explicit.
+\item \cite[Sections 1--6]{currentlocal} supplies the arbitrary-assignment
+local comparison, including the all-amplitude cap and the retained positive
+centroid square.
+\item \cite[Sections 2--9]{currentexterior} supplies the hazard derivative,
+summed-row payment, equal-row test, quadratic certificate, and signed-tail
+comparison outside the score ball.
+\item \cite{currentgap} supplies the finite facet bootstrap and the extension
+along a ray to every PSD covariance, including singular endpoints.
+\end{enumerate}
+The branch interface closure note in \path{anc/integrated/assembly/}
+records their matching hypotheses. It supplies no new theorem by itself.
+
+\subsection{External mathematical inputs}
+The modern Gaussian maximum comparison is Mulgund's
+Theorem 2.1 \cite{Mulgund}: common thresholds, unit variances, and
+$K\succeq\one\one^T/m$, including singular covariances. The transformation
+in Section~\ref{sec:assembly} verifies these exact hypotheses.
+Neither a general rectangular comparison nor unequal marginal variances
+are assumed.
+
+The Hodge successor uses Colombo--Figalli--Jhaveri regularity \cite{CFJ}
+through the reciprocal-coordinate reduction. It replaces the earlier
+recent-preprint regularity input in that branch. It does not remove the
+cycle-refined Ehrhard argument from the mass envelope. The classical
+Gaussian isoperimetric, intrinsic Ehrhard, Brascamp--Lieb/Poincare, and
+hypercontractive inputs are identified in Section~\ref{sec:inputs}.
+
+The discrete transfer is credited to Isaksson--Mossel \cite{IM}.
+The Frieze--Jerrum endpoint characterization is credited to
+Garc\'ia-Soriano--Miyauchi \cite{GSM}. Their tightness analysis for that
+rounding scheme is distinct from the matching UGC-hardness consequence
+claimed here. Heilman's three-label result \cite{Heilman} is prior work;
+this manuscript neither reproves it nor claims a new result for $m=3$.
+
+\subsection{What the Lean development establishes}
+The accompanying Lean project is a partial formalization. Its individual
+theorems and explicit hypotheses, pinned toolchain, and coverage ledger
+determine its precise scope. Its concrete Gaussian components prove
+hyperplane nullness for product Gaussians, almost-everywhere unique winning
+linear scores, exponential and first-moment integrability, and integrability
+of finite linear scores and their maximum. These facts support fractional
+routing rigidity from a zero expected maximum gap. Finite centroid-pairing
+and covariance edge-strain identities are also formalized. The scalar
+analysis includes shifted-logarithm decay, the exact endpoint power
+comparison, and a single threshold uniform over the voting interval for
+fixed supplied constants. A conditional local/exterior assembly consumes
+the analytic estimates explicitly. Gaussian transport, hypercontractivity,
+facet regularity, and the source papers' transfer theorems are not supplied
+by these component proofs. A checked implication from analytic estimates
+does not prove those estimates.
+
+In particular, this manuscript does not claim a Lean proof of
+Theorem~\ref{thm:main}, its analytic interfaces, the uniformity of their
+constants in dimension and noise, or the UGC reduction. Scalar eventual
+threshold statements concern fixed supplied constants; they do not
+establish the Gaussian estimates or the uniformity of their constants.
+The formal development is a foundation for further work, with its
+unformalized obligations stated explicitly. Source checksums certify file
+identity. Compiling this PDF certifies typesetting. Neither operation
+certifies the analysis.
+
+\subsection{Research status and assistance}
+The author used AI assistance to develop and organize the arguments,
+perform separate internal reconstructions, prepare the manuscript, and
+implement checking code. The internal reviewers were AI-agent runs;
+they are not external experts and their verdicts are not assumed in any
+mathematical inference. External expert review and exhaustive priority
+clearance remain pending. No cited author is claimed to endorse this
+manuscript.
+
+The public version history and immutable release records are available at
+\url{https://github.com/infinityscroll/jmlr-research-notes}.
+They establish a record of the released artifact, not mathematical
+correctness or exclusive research priority. Earlier frozen manuscripts
+and their source notes are preserved alongside this integrated edition.
+The existential large-alphabet threshold, full negative voting interval,
+and fixed-$m$ computational interpretation are the claims of this edition.
+The wider-correlation supplements are outside its scope.

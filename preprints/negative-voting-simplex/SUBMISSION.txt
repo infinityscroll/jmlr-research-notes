@@ -1,0 +1,40 @@
+ARXIV SUBMISSION PACKAGE
+
+Title: Negative Gaussian Simplex Stability for Sufficiently Many Parts
+Author: Jitendra Prajapati
+ORCID: https://orcid.org/0009-0008-7493-0311
+Affiliation: none supplied; none asserted.
+Suggested primary category: math.PR
+Suggested cross-list: cs.CC
+Main source: main.tex
+Suggested processor: pdfLaTeX
+
+STATUS
+Prepared for author review and GitHub publication. No arXiv submission has
+been made and no arXiv identifier has been assigned.
+
+UPLOAD
+Use archives/negative-voting-simplex-arxiv-source-2026-11-02.tar.gz from the
+repository root or the immutable GitHub release. It contains the LaTeX inputs,
+references, analytic proof companions in anc/, and partial Lean source in
+anc/lean/. It excludes the generated manuscript PDF, build caches, installed
+dependencies, and third-party papers. The PDF is a separate review artifact.
+
+In an authenticated arXiv author account, start a new submission and select
+an appropriate category and license. The license is deliberately not selected
+in submission.json. Upload the source archive, select main.tex and pdfLaTeX,
+then inspect arXiv's compiled PDF. Supply the title, author information and
+abstract matching the manuscript. An endorsement may be required by arXiv;
+moderation and acceptance are outside this package.
+
+FORMAL VERIFICATION BOUNDARY
+The Lean project proves selected algebra, finite routing, general
+measure-theoretic routing rigidity, and conditional comparison assembly.
+Its hypotheses include the analytic inequalities supplied by the manuscript.
+Neither its compilation nor GitHub CI certifies the full Gaussian theorem.
+
+OFFICIAL GUIDANCE
+https://info.arxiv.org/help/submit/index.html
+https://info.arxiv.org/help/submit_tex.html
+https://info.arxiv.org/help/ancillary_files.html
+https://info.arxiv.org/help/license/index.html

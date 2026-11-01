@@ -82,6 +82,9 @@ def verify_provenance(repository, commit, directory, names):
 def expected_names(tag):
     return {tag + '.tar.gz', 'negative_gaussian_simplex_stability_v2.pdf',
             'negative_voting_integrated_proof_20261102.txt',
+            'negative_voting_simplex_preprint.pdf',
+            'negative-voting-simplex-arxiv-source-2026-11-02.tar.gz',
+            'negative-voting-lean-2026-11-02.tar.gz',
             'RELEASE_MANIFEST.json', 'SOURCE_METADATA.json', 'SHA256SUMS',
             'build-provenance.sigstore.json'}
 
@@ -211,7 +214,11 @@ def publish(repository, commit, directory):
                 'The archive contains the complete tracked source tree, including the current '
                 'proof notes and reviews. The standalone PDF is the preserved v2 manuscript; '
                 'the latest integrated theorem is also attached as a standalone text asset, '
-                'and its supporting supplements are in the source archive.\n\n'
+                'and its supporting supplements are in the source archive. The new integrated '
+                'preprint PDF and arXiv-compatible source bundle are separate assets. The Lean '
+                'bundle checks selected algebra, routing rigidity and conditional assembly; '
+                'it does not formally verify the Gaussian analytic estimates or the full theorem. '
+                'This GitHub release is not an arXiv submission.\n\n'
                 'Use the server-recorded publication time and verified transparency-log record '
                 'as evidence of existence. Commit dates are not trusted timestamps. '
                 'This records provenance; it does not certify mathematical correctness or '

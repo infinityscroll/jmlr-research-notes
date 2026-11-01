@@ -1,0 +1,259 @@
+CRITICAL DEPENDENCY REVIEW: CYCLE REFINEMENT AND THE MASS ENVELOPE
+2 November 2026
+
+OUTCOME AND SCOPE
+
+The specific chain examined was
+  finite-fan Gaussian boundary identities
+  -> exact cycle cancellation with a retained Ehrhard term
+  -> a uniform mixed covariance/offset derivative bound at regularized optima
+  -> V(p) <= w + C(c,Cbar)(1+log m)^2 ||p-U||^2
+on the fixed positive relative-mass box c/m <= p_i <= Cbar/m.
+
+I reconstructed this chain directly and found no blocking gap in it. The
+quantitative constant shorthand required a correction: the elementary
+normalized-offset estimate gives q_e^2 <= 2 log(m/c), not directly
+2(1+log m) for an arbitrary fixed c. The new preprint now writes the
+correct estimate and absorbs its fixed-c dependence explicitly. The
+regularization monotonicity step is also expanded into its direct coupling
+argument. Historical sources are preserved unchanged.
+
+This is a focused analytic reconstruction by an AI agent, not external
+expert review, proof-assistant certification of these analytic steps, or
+an independent certification of the entire negative-voting theorem. The
+separate local high-chaos/cap and exterior estimates are outside this
+review's reconstructed conclusion.
+
+1. GAUSSIAN BOUNDARY IDENTITIES: SIGNS AND GEOMETRY
+
+At positive covariance, whitening gives affinely independent sites y_i in
+R^(m-1). Every offset vector is c-y_i.a, so its diagram is a translated
+simplex normal fan. Its strata are convex polyhedra with Gaussian-decaying
+tails. The following integration by parts can be justified on truncated
+strata; the sphere terms vanish by Gaussian polynomial tail bounds.
+
+Let mu_S and m_S be the intrinsic Gaussian surface mass and conditional
+mean on a stratum, and P_S its tangent projector. With inward boundary
+normals n_(S,k), the first-moment identity is
+  mu_S P_S m_S = sum_(k outside S) mu_(S+k) n_(S,k).
+For an edge facet e, differentiating the centered first moment gives
+  mu_e(P_e-Cov_e X)
+    = sum_(k outside e) mu_(e+k) n_(e,k)(m_e-m_(e+k))^T.
+The sign can also be seen directly from the outward normal -n_(e,k).
+The displacement between the two conditional means is tangential, so the
+right side acts in the facet tangent space. Gaussian convex-restriction
+Brascamp--Lieb gives Cov_e X <= P_e; no invertibility of this deficit is
+needed.
+
+For a target triangle g, put D_g=2 Area(g)/mu_g. Let v_k be minus the
+gradient of target barycentric coordinate k. Then sum_k v_k=0 and
+v_k.(y_i-y_j)=delta_(k,j)-delta_(k,i). For facet e=(i,j), the projected
+vectors P_e(y_i-y_k), k outside e, are a basis and have dual rows v_k^T.
+Consequently the matrix N_e with columns (mu_(e+k)/|y_i-y_j|) n_(e,k)
+has inverse rows D_(e+k) v_k^T. These inverses are on the tangent space.
+
+Writing w_e=mu_e/|y_i-y_j| and E_e=w_e(P_e-Cov_e X), the boundary identities
+therefore give
+  E_e=N_e T_e^T,  T_e[:,g]=m_e-m_g,
+  B_e=N_e^-1 E_e N_e^-T=N_e^-1 T_e,
+  N_e 1=w_e P_e m_e.
+No inverse of E_e appears.
+
+2. THE TRIANGLE/TETRAHEDRON FACTORIZATION
+
+Use oriented simplex boundary maps partial_2 and partial_3 and write W for
+diag(w_e). Assemble A=partial_2^T W^-1 partial_2 and B from the local B_e
+with the same edge/triangle incidence signs. Then
+  A-B=-D partial_3 diag(mu_h/(6 Vol(h))) partial_3^T D.
+
+To verify an off-diagonal entry, triangles g and g' sharing an edge e
+have one outside vertex k. The vector v_k is tangent to the g' stratum
+and pairs to zero with all its boundary normals except that for adding k.
+The surviving pairing is the reciprocal height, giving
+  v_k.m_g' = mu_(g union g') Area(g')/[3 Vol(g union g') mu_g'].
+Combining this with the inverse-row formula gives the off-diagonal entry
+with coefficient D_g D_g' mu_h/(6 Vol(h)); its sign is the negative product
+of the two tetrahedron incidence signs because partial_2 partial_3=0.
+For a diagonal entry, sum the three outside-edge barycentric vectors on g
+and use sum_k v_k=0. The result is -D_g^2 sum_(h containing g) mu_h/(6Vol(h)),
+which is exactly the diagonal of the same factorization. Nonincident
+triangles give zero. This argument is dimension-independent: target
+triangle areas and tetrahedron volumes are intrinsic Euclidean volumes.
+
+Fix an actual edge cycle j. All lambda with partial_2 lambda=j differ by
+im(partial_3). Minimizing lambda^T D lambda on this affine space gives
+partial_3^T D lambda=0 without changing j. Therefore the factorization gives
+  sum_e eta_e^T B_e eta_e=j^T W^-1 j,
+where eta_(e,g)=(partial_2)_(e,g)lambda_g. It is the triangle representative
+that changes, not the physical offsets or target masses.
+
+3. EXACT RESIDUAL AND THE MIXED OFFSET TERM
+
+Give cells vectors z_i; put z_e=z_i-z_j and c_e=z_e.m_e. Let b minimize
+sum_e w_e(c_e+b_i-b_j)^2. Its Euler equation makes
+j_e=w_e(c_e+b_i-b_j) a cycle, and its energy is CYC=j^T W^-1 j=j.c.
+Triangle telescoping gives sum_e z_e.T_e eta_e=j.c. With the preceding
+weighted gauge and r_e=z_e-N_e^-T eta_e, direct square expansion proves
+  sum_e r_e^T E_e r_e=sum_e z_e^T E_e z_e-CYC.
+This is an equality after subtracting the full cycle energy. Also
+  r_e.P_e m_e=-(b_i-b_j)-z_e.(I-P_e)m_e,
+since N_e^-1 P_e m_e=1/w_e and the entries of eta_e sum to j_e.
+
+For a convex tangential section K of probability pi, intrinsic Ehrhard
+applied to translations of K gives
+  I-Cov(X|K) >= a(pi) E[X|K]E[X|K]^T,
+  a(pi)=1+Phi^-1(pi) pi/phi(Phi^-1(pi)) > 0.
+Indeed differentiation of Phi^-1(gamma(K+x)) yields this matrix inequality.
+For negative q=-t, a(pi)=integral_0^infinity u exp(-tu-u^2/2)du; restricting
+u to [0,1/(1+t)] gives the quantitative reciprocal bound
+  a(pi)^-1 <= 8 exp(3/2)[1+log(1/pi)].
+
+Apply Ehrhard to r_e, not to z_e. For covariance perturbation H at the
+whitened base, set z_i=H y_i. The covariance square-root derivatives are
+H/2 and -H^2/4. The exact covariance Hessian thus has factor four, and
+its minimizing offset variable is b=2h'. If ell_e=|y_i-y_j|,
+x_e=d_e^T H d_e/ell_e, and q_e=(h_i-h_j)/ell_e, then
+  -4 F_CC[A,A] >= sum_e w_e [x_e^2+a(pi_e)(2h'_e-q_e x_e)^2].
+The normal component of the facet mean is -q_e d_e/ell_e, fixing the
+minus sign in this bracket. No raw covariance-deficit bound is substituted
+for the corrected residual.
+
+4. REGULARIZATION, PAIR SEPARATION, AND THE PHYSICAL GRAPH
+
+Square completion identifies V(p)=max_(C>=0){2F_p(C)-tr C}, including
+fractional assignments. A support maximizer may be chosen pure for this
+linear fixed-mass problem, with measurable splitting of ties; this does
+not prove purity of any full-noise minimizer.
+
+The bound F_p(C)<=sqrt(tr C) makes optimizing covariances bounded. If
+(X,Y) is any admissible source/target coupling, and G is an independent
+N(0,eps I_H) vector, then (X+G,Y) has the new Gaussian source covariance
+and the same target law, with E[(X+G).Y]=E[X.Y]. Taking suprema proves
+F_p(C+eps I_H)>=F_p(C), even at singular C. Testing C*+eps I_H at a true
+optimizer therefore gives
+  0<=V(p)-V_eps(p)<=eps(m-1).
+
+At a true optimum, square completion forces score rows B to equal actual
+centroids. Re-split two cells' fixed union along a direction perpendicular
+to their centroid sum. Its unnormalized projected density is bounded by
+phi(0). If the upper and lower masses are p_i,p_j, integration of the
+smallest possible tail first moments gives a projected centroid difference
+at least p_i p_j/phi(0). Keeping the vector sum fixed and using optimality
+of the squared centroid norm gives |B_i-B_j|>=sqrt(2pi)p_i p_j.
+Gaussian exponential Jensen gives the corresponding upper edge bound.
+
+At fixed m, the covariance bound, joint continuity in (C,p), compact mass
+box, and the uniform value error imply that every accumulation point of
+regularized optimizing pairs (p,C_eps) lies in the closed true optimizer
+graph. This transfers the uniform edge lower and upper bounds with fixed
+slack. It does not assume convergence to the optimizer fiber at the same
+varying mass vector or rank persistence of true optima.
+
+At each regularized optimum, the derivative F_C=Laplacian/2 and KKT give
+  0<=Laplacian<=I_H,
+  (I_H-Laplacian)(C_eps-eps I_H)=0.
+Physical weighted degrees are consequently at most one. Isoperimetry of
+cell unions, positive masses, and the edge upper bound give conductance
+h0 >= c/[4 Cbar sqrt(pi L_c)], where L_c=1+log(m/c). Removing weights below
+m^-4 loses at most |S|m^-3 on a cut. For large m the retained conductance
+is at least h0/2, and counting-measure Cheeger gives
+  lambda_* >= c^2/[128 Cbar^2 pi L_c].
+
+For a retained edge, its weight and pair separation give
+pi_e=mu_e/phi(q_e)>=pi c^2/m^6. The two winning halfspaces give
+q_e^2<=2 log(m/c)<=2L_c. Hence a(pi_e)^-1<=56 exp(3/2)L_c. Weighted Cauchy
+in the two terms x_e and sqrt(a)(2h'_e-q_e x_e) yields
+  4(h'_e)^2 <= (a^-1+q_e^2)[x_e^2+a(2h'_e-q_e x_e)^2].
+Summing on retained edges and using lambda_* yields
+  ||D_C h[A]||^2 <= A_m[-F_CC[A,A]],
+  A_m=128 Cbar^2 pi[56 exp(3/2)+2] L_c^2/c^2.
+All dependence on fixed c,Cbar is explicit. Since L_c is bounded by a
+fixed-c multiple of 1+log m, this is the stated O_(c,Cbar)(log m)^2 bound.
+The corrected draft uses this dependence instead of silently replacing
+log(m/c) by log m inside a literal coefficient.
+
+5. ACTIVE SETS AND THE SINGULAR LIMIT
+
+For each fixed eps>0 and m, the covariance feasible set can be restricted
+to a compact positive-definite region. Strict negative covariance Hessians
+and continuity give a positive strong-concavity constant on that region;
+mixed derivatives are bounded. The two optimizer inequalities imply that
+C_eps(p) is Lipschitz along mass segments. These constants may diverge as
+eps tends to zero and are not used as uniform constants.
+
+Write g=2F_p-tr C. Along p(t)=p0+t u, the constrained envelope satisfies
+V_eps'=g_p.u and has a Lipschitz first derivative for each fixed eps. At
+almost every differentiability point, the two optimizer inequalities give
+  E=-g_CC[C',C'] <= B=g_Cp[C',u].
+This is an inequality, not an interior stationary equation. Since g_Cp=-2h_C,
+the uniform mixed estimate gives B^2<=2A_m ||u||^2 E. Thus
+0<=E<=B<=2A_m ||u||^2. Finally g_pp=-2Laplacian^-1<=0, so
+  V_eps''=g_pp[u,u]+B<=2A_m||u||^2 almost everywhere.
+The Lipschitz first derivative ensures that integration loses no singular
+positive part. At uniform masses, uniqueness and permutation symmetry of
+the regularized optimum give zero centered mass derivative. Integrating
+from U to p gives V_eps(p)<=V_eps(U)+A_m||p-U||^2. Uniform convergence from
+the explicit eps(m-1) value error passes this inequality to V, including
+singular optimizing covariance matrices.
+
+The cutoff eps0 may depend on m. This does not invalidate the uniform
+large-m coefficient: for each fixed m the estimate holds for all sufficiently
+small eps, and the same explicit A_m survives the eps->0 passage. The mass
+box constants are fixed before choosing the eventual m threshold. Ambient
+dimension is eliminated by the finite centroid/score representation.
+
+6. INDEPENDENT NUMERICAL FALSIFICATION DIAGNOSTIC
+
+The accompanying review/critical_fan_diagnostic.py constructs twelve fixed-
+seed translated, nonregular tetrahedral Gaussian fans. It independently
+integrates each facet's tangential probability and first two moments,
+computes triangle-ray moments analytically, and assembles the boundary
+identity, triangle/tetrahedron factorization, weighted cycle residual,
+and refined Ehrhard gap. It does not call the historical source checkers.
+
+For each facet, rotate tangential coordinates so its inequalities are
+u>=a and v>=b+k(a-u). Gaussian integration in v is analytic; the remaining
+u integral uses 512-node Gauss-Legendre quadrature up to 14. The source
+record includes every site, translation, covariance direction and numerical
+output, with seed 20261102 and NumPy 2.3.5.
+
+Observed maxima/minima in this diagnostic:
+  boundary-moment identity relative error: 1.78e-15
+  chain-factorization relative error:     2.32e-14
+  cycle-residual identity relative error: 2.60e-15
+  smallest refined residual gap:          0.0189657
+  smallest intrinsic Ehrhard eigenvalue:  0.0000127310
+
+The checks passed. They are ordinary floating-point diagnostics, with no
+interval bounds or proof-assistant certificate. They do not prove the
+identities, uniform constants, or any result at general m. Their purpose
+was to try to expose sign, transpose, orientation, or normalization errors
+independently of the written reconstruction. The analytic argument above,
+not the diagnostic, supplies the reconstructed implication.
+
+7. WHAT THIS REVIEW DOES AND DOES NOT CLOSE
+
+The stronger mixed covariance/offset estimate and its constrained-envelope
+transfer withstand this focused hostile reconstruction, after the harmless
+fixed-c logarithm precision correction. No additional rank assumption,
+optimizer-fiber continuity, uniform-in-eps strong-concavity constant, or
+full-noise purity assertion was needed.
+
+The review does not formalize Gaussian integration by parts, Ehrhard,
+isoperimetry, the optimizer dual, or the semiconcavity passage in Lean. It
+also does not certify the separate full signed-tail and all-amplitude local
+comparison. The public formalization ledger and full-manuscript status
+must retain those boundaries. No external mathematical endorsement or
+priority claim follows from this internal reconstruction.
+
+SOURCE PINS
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b  ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+d2611f1d80f447cadffd503e7d29a76ef84737d991700defedc141dc7bf614fd  EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt
+12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08  REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt
+11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2  GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt
+6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c  OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt
+
+Reviewed preprint and diagnostics at 2026-11-01T22:30:44.597711+00:00
+c4ea4f5ee6b6064c7149d9715e5794f190440dce6d06e605cf0bd37cc95a24ce  02_foundation_localization.tex
+0e4a23302e9ca78b5d6d7d621d9d5c876ccea14534afc4c4eda7022ca5178436  review/critical_fan_diagnostic.py
+9007b22029435e078c11b910dfc89d57ade5d93b26685ef9d973ad977467c65c  review/critical_fan_diagnostic.json

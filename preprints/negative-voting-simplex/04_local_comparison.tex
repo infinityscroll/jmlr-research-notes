@@ -1,0 +1,204 @@
+\section{The local comparison at every perturbation scale}
+\label{sec:local-proof}
+We reconstruct the local interface \eqref{eq:local-noise}. The complete
+affine trace, moving-boundary, and cap estimates are supplied in
+\cite{currentlocal,localboundary,localsmallcap,localsigned}; they apply to
+the actual centroids of arbitrary fractional assignments.
+Fix $A$ and suppose $d=d(B)\le A/m$ and
+$p_i\in[1/(2m),3/(2m)]$. Write $z=p-U$ and $R=\calR(B)$.
+After alignment with a regular matrix, all $m-1$ singular values of
+$B$ on $H=\one^\perp$ lie in $[\alpha/2,2\alpha]$ for large $m$, since
+$\alpha\asymp\sqrt L/m$. Full score rank is therefore a consequence
+of this local regime, rather than a global assumption on competitors.
+
+\subsection{Conditioned affine fans and the signed affine comparison}
+Let $f^0$ be the affine winner with scores $B$ and offsets giving the
+actual masses $p$, and let $M$ be its centroid matrix.
+Gaussian integration by parts gives $M=\calL B$.
+The centroid entropy bound, the pseudoinverse of $B$, and isoperimetry
+on unions of cells give bounded graph degrees and a gap
+$\lambda_2(\calL)\ge c/L$.
+
+Every specified pair facet has intrinsic Gaussian probability at least
+$m^{-C}$, with no dimension-dependent small-ball argument. To see the
+key construction, normalize scores and offsets by $\alpha$. Their
+singular values lie in $[1/2,2]$, and pair halfspaces give
+$H=\max_i|h_i|\le C\sqrt L$. For labels $i,j$, choose
+$T=H+32\sqrt L$, set $q_i=T-h_i$, $q_j=T-h_j$, and set every other
+$q_k=-(q_i+q_j)/(m-2)$. Then $q\in H$, $\|q\|^2=O(L)$, and its
+minimum-norm preimage has squared norm $O(L)$. At that point the two
+selected utilities dominate the others. A tangential Gaussian union
+bound followed by the Cameron--Martin inequality gives the polynomial
+facet probability. Only two score coordinates are made large.
+
+This facet bound and convex Gaussian conditioning give conditional moments
+of fixed-degree polynomials with powers of $L$, independent of $N$.
+The normal Mehler row on a hyperplane at coordinate $a$ satisfies
+\[
+ K_t(a)^2=(1-t^4)^{-1/2}
+           \exp\{t^2a^2/(1+t^2)\}.
+\]
+At $t^2=1/(2q-1)$, its product with $\phi(a)^{1/q}$ has no exponential
+$a$ dependence. Combined with tangential hypercontractivity at $q=CL$,
+this gives the dimension-free affine trace estimate in
+\cite{localboundary}. The argument separates at most two normal directions;
+it never estimates a full-$N$ pointwise Mehler determinant.
+
+To compare second chaos along a balanced affine path, the adjoint
+Laplacian equation removes the entire offset-acceleration coefficient.
+A coherent affine velocity moves all interfaces and their intersections.
+Its surface divergence and the derivative of inverse edge length combine
+into Gaussian divergence; junction contributions cancel under this same
+velocity. At the regular reference, the pair potential difference factors
+through $X_i-X_j$ and vanishes on the regular facet. On a perturbed facet
+the factor is the negative score displacement divided by $\alpha$,
+providing the deficit factor in the remaining transport terms.
+
+The unequal-row transfer needs more than an unweighted score Hessian
+bound. First normalize the scores to squared Frobenius norm $w$, and
+write their covariance divided by $\alpha^2$ as $P+E$. Thus $\tr E=0$. Decompose
+$E=E_d+E_s$, where $E_s$ has zero diagonal and
+$E_d=mP\diag(\diag E)P/(m-2)$. If $a=\|E_d\|$ and $b=\|E_s\|$,
+the retained diagonal normal energy gives
+\[
+ R\ge\frac{c_A\alpha^2}{m\sqrt L}(ma^2+b^2).
+\]
+The rectangle error is bounded by $C_A\alpha^2L^{10}a(a+b)$.
+The inequalities $a^2\le(ma^2+b^2)/m$ and
+$ab\le(ma^2+b^2)/(2\sqrt m)$ pay this error relative to $R$.
+The exact radial identity \eqref{eq:radial-identity} restores the original
+score scale and retains its nonnegative radial square.
+The equal-row input uses only the credited common-threshold comparison
+of Analytic interface~\ref{prior:max}; its affine offset terms are
+canceled before applying that comparison. No stochastic domination for
+unequal thresholds is asserted.
+
+For higher chaos, factor the regular tail potential through a fixed OU
+smoothing time and use the odd pair difference on the reference facet.
+The same adjoint and coherent second variation yield a bound
+$C_Ar^3L^{10}\|Z\|^2$ on its score Hessian. Finite Hermite cutoffs
+obey bounds uniform in the cutoff; the residual geometric multipliers
+are below one, so the potentials and boundary derivatives converge.
+The resulting affine comparison is
+\begin{align}
+ S_{-r}(f^0)-S_{-r}(g)
+ \ge{}&[1-C_A(r^2mL^7+r^3L^{10})]\|z\|^2
+                 +r(w-\|M\|^2)\notag\\
+ &-C_A(r^2\sqrt mL^{13}+r^3mL^{11})R.
+ \label{eq:local-affine}
+\end{align}
+The derivations of the boundary Hessian and of the infinite signed-tail
+passage are substantive analytic parts of \cite{localboundary,localsigned};
+\eqref{eq:local-affine} is not inferred from a numerical truncation.
+
+\subsection{The exact actual-to-affine identity}
+Put $v=f-f^0$ and
+$L_{\rm route}=F_p(B)-\|B\|^2=\ip B{M-B}\ge0$.
+Feasibility of the actual assignment in its mass class proves this
+inequality. Let
+$u=T_{\sqrt r}\Pi_{\mathrm{odd}\ge3}v$, and set
+$q_B=T_{-r}\Pi_{\ge2}f^0$. Let $q_0$ denote the corresponding regular
+potential. Hermite orthogonality, with only nonnegative even squares
+dropped, gives
+\begin{equation}\label{eq:actual-affine-exact}
+\begin{aligned}
+ S_{-r}(f)-S_{-r}(f^0)
+ &\ge r\|M-B\|^2+\|u\|_2^2
+       +2\{rL_{\rm route}+\ip v{q_0+a}\},\\
+ a&=q_B-q_0-T_{\sqrt r}u.
+\end{aligned}
+\end{equation}
+In particular the positive centroid square is retained.
+
+The two-label regular comparison has a positive divided coefficient
+$k_{ij}$. With $\eta=O(r^2L)$ and
+$\kappa(x)=\exp(-1-\eta|P_0x|^2)$, one has $k_{ij}\ge\kappa$.
+A smooth log-sum-exp range majorant controls $|1-k_{ij}|$ by $e_r$.
+On the old affine cell $i$, this bounds the last bracket in
+\eqref{eq:actual-affine-exact} below by minus $r$ times the expected cap
+\[
+ \max\{0,\max_{j\ne i}(\psi_i+\psi_j-c_{ij})\},\qquad
+ \psi_i=\kappa^{-1}\{e_r|\delta l_i|+|a_i|/r\}.
+\]
+The diagonal $j=i$ is excluded: it would create an artificial reward
+with zero switching cost.
+
+\subsection{A quadratic cap with no amplitude floor}
+Write $D_0=d+\|z\|$. The trace and restriction estimates imply
+\[
+ \|\psi\|_{L^q(\ell^2)}
+ \le C(rL^{5/2}D_0+\sqrt rL^{3/2}\|u\|_2),\qquad q=C_1L,
+\]
+and a corresponding weighted facet-square bound
+$C(r^2L^5D_0^2+rL^3\|u\|_2^2)$. Radial exponential moments remain
+bounded: on a convex facet restriction, for a rank-at-most-$m$ projection,
+\[
+ \E e^{b|PY|^2}\le(1-2b)^{-m/2}
+                 \exp\{b|P\E Y|^2/(1-2b)\}.
+\]
+For $b=q\eta$, one has $bm=O(L^2/m)$ and $|\E Y|^2=O(L)$.
+There is no dependence on the unused ambient dimensions.
+
+Choose $\theta=C_2L^4(rD_0+\sqrt r\|u\|_2)$. If $\theta=0$,
+the forcing vanishes. Otherwise $v_i=\psi_i/\theta$ has controlled
+vector and weighted facet moments, and $\theta\le m^{-5/4}$ for
+large $m$. For moderate amplitudes $\theta\ge m^{-B}$, the separate
+source-exit and target-entry margin estimates give the cap bound
+\[
+ C\left[m^{1/(q+1)}\theta^{2q/(q+1)}
+             +\frac cm(C\theta m/c)^q\right]=O_B(\theta^2).
+\]
+Here $q=C_1L$ is fixed independently of $\theta$. This estimate alone
+does not give a quadratic bound as $\theta\downarrow0$ at fixed $m$.
+
+For smaller amplitudes, the structured forcing has entire-plane
+$L^{32}$ bounds, including its first normal derivatives, bounded by a
+fixed power of $m$ after division by $\theta$. The smoothed input norms
+divided by $r\theta$ remain bounded, so no inverse small-$r$ factor
+is hidden. Set $M_{\rm cut}=\theta^{-1/8}$. At good projected points
+the normal reward width is $O(\theta M_{\rm cut}/\alpha)$.
+Taylor and density errors are $O(m^C\theta^3M_{\rm cut}^3)$.
+Points outside the actual facet that enter an old cell lie in a
+third-label strip of this width; the local singular-value bound controls
+its tangent altitude. Bad projected points cost
+$O(m^C\theta M_{\rm cut}^{-31})$, and normal distances greater than
+one cost $O(m^C\theta^{32})$. The main facet term is $C\theta^2$.
+Thus the cap is at most
+\[
+ C\theta^2+Cm^K\theta^{21/8}.
+\]
+Fix $B>8K/5$, enlarged for the fixed constants. The second term is
+absorbed for $\theta\le m^{-B}$. Joining the two ranges proves the
+quadratic estimate at every amplitude. The geometric strip and normal
+supremum details are supplied in \cite{localsmallcap}.
+
+Substituting in \eqref{eq:actual-affine-exact}, and retaining the
+nonnegative residual coefficient of $\|u\|_2^2$, gives
+\begin{equation}\label{eq:actual-affine-paid}
+ S_{-r}(f)-S_{-r}(f^0)
+       \ge r\|M-B\|^2-Cr^3L^8(d^2+\|z\|^2).
+\end{equation}
+
+\subsection{Cancellation and the local conclusion}
+The essential algebra is exact:
+\begin{equation}\label{eq:retained-square-cancellation}
+ r(w-\|M\|^2)+r\|M-B\|^2
+      =2r\{(w+\|B\|^2)/2-F_p(B)\}.
+\end{equation}
+Balanced offsets are an admissible dual test at $p$, so the braces
+are at least $R+h_U\cdot z$. The deficit-relative offset certificate
+and Young's inequality give
+$2h_U\cdot z\ge-R/2-CL^2\|z\|^2$.
+Use $d^2\le C_Am\sqrt L R$ to pay the geometric error. Adding
+\eqref{eq:local-affine} and \eqref{eq:actual-affine-paid} yields
+\begin{align}
+ S_{-r}(f)-S_{-r}(g)
+ \ge{}&[1-C_A(rL^2+r^2mL^7+r^3L^{10})]\|z\|^2\notag\\
+ &+[3/2-C_A(r\sqrt mL^{13}+r^2mL^{11})]rR.
+ \label{eq:local-final-brackets}
+\end{align}
+Every loss tends to zero uniformly for $0<r\le1/(m-1)$.
+Choose $m$ sufficiently large, depending only on fixed $A$, to make
+the two brackets at least $1/2$ and one. This proves
+\eqref{eq:local-noise}. In the final assembly $A=1$ is fixed once;
+neither the threshold nor a constant depends on the assignment or $N$.

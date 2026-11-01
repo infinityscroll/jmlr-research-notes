@@ -5,6 +5,8 @@ Name: Publish immutable research snapshot
 
 WHEN IT RUNS
 A successful "Verify research release" push run on main triggers publication.
+Its jobs include the bounded scientific checks, a partial Lean build and axiom
+audit, and a standard pdfLaTeX build of the new preprint.
 Forks, pull requests, failed checks and other branches cannot trigger it.
 The verified source SHA must also equal the release workflow's GitHub context
 SHA. A quickly superseded main commit is skipped; the next current verified
@@ -13,17 +15,21 @@ identity equal to the exact source that is packaged.
 
 You can also run this workflow manually on main from GitHub Actions or:
   gh workflow run release.yml --ref main
-Manual publication first runs all scientific checks in a read-only job.
+Manual publication first runs all scientific checks, validates the source
+bundles, and builds/audits the partial Lean project in a read-only job.
 Packaging integrity tests run in that read-only job for both triggers.
 Only the subsequent publication job can write releases or obtain attestation
 OIDC credentials. All third-party Actions are pinned to full commit IDs.
 
 WHAT IS RELEASED
 The tag is research- followed by the first 16 characters of the source commit.
-It carries seven assets:
+It carries ten assets:
   research-<commit-prefix>.tar.gz
   negative_gaussian_simplex_stability_v2.pdf
   negative_voting_integrated_proof_20261102.txt
+  negative_voting_simplex_preprint.pdf
+  negative-voting-simplex-arxiv-source-2026-11-02.tar.gz
+  negative-voting-lean-2026-11-02.tar.gz
   RELEASE_MANIFEST.json
   SOURCE_METADATA.json
   SHA256SUMS
@@ -37,12 +43,16 @@ rejected. Every tracked file except the manifest itself must be covered by
 its SHA-256 manifest. Archive ordering, modes, ownership and gzip timestamp
 are deterministic. The standalone PDF preserves the v2 manuscript. The integrated theorem is
 also attached as a standalone text asset; its supporting proof updates are
-in the archive's supplements.
+in the archive's supplements. The new preprint PDF, arXiv-compatible source
+bundle with analytic companions, and separate partial Lean source archive are
+also attached. The Lean archive excludes downloaded third-party dependencies.
+The GitHub package is not an arXiv submission, and the partial Lean proofs do
+not certify the Gaussian analytic estimates or the complete main theorem.
 
 SOURCE_METADATA records the full commit and tree IDs, source URL, workflow
-run and manifest digest. SHA256SUMS covers the five primary assets. GitHub
+run and manifest digest. SHA256SUMS covers the eight primary assets. GitHub
 Actions attests those assets AND SHA256SUMS together; the signed Sigstore
-bundle is the seventh asset. A signature bundle is verified cryptographically,
+bundle is the tenth asset. A signature bundle is verified cryptographically,
 not through a circular checksum of itself.
 
 PUBLICATION AND RETRIES
@@ -77,7 +87,8 @@ Read source_commit from SOURCE_METADATA.json, then verify each primary asset:
     --signer-workflow infinityscroll/jmlr-research-notes/.github/workflows/release.yml \
     --source-ref refs/heads/main --source-digest "<full-commit>" \
     --signer-digest "<full-commit>"
-Repeat for the PDF, negative_voting_integrated_proof_20261102.txt,
+Repeat for both PDFs, both focused source archives,
+negative_voting_integrated_proof_20261102.txt,
 RELEASE_MANIFEST.json, SOURCE_METADATA.json and SHA256SUMS.
 For verification against the downloaded bundle, additionally pass:
   --bundle build-provenance.sigstore.json

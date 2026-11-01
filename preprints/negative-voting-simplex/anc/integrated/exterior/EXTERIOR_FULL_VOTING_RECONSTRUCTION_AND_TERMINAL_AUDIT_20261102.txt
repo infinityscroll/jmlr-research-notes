@@ -1,0 +1,374 @@
+EXTERIOR FULL-VOTING RECONSTRUCTION AND TERMINAL AUDIT
+2 November 2026 (Asia/Kolkata)
+Independent analytic reconstruction. No numerical search or formalization.
+
+VERDICT
+
+PASS for the exterior branch, with the exact input boundary stated below.
+The actual inequalities establish a strict contradiction for every competitive
+assignment whose centroid distance from the regular orbit exceeds 1/m, for all
+sufficiently large m, uniformly in finite N>=m-1 and 0<r<=1/(m-1).
+
+This conclusion follows from the proofs, not from previous PASS labels. I
+reconstructed the calibrated hazard remainder, diagonal supporting-covariance
+payment, one-row exclusion, geometric-median proxy, transformed Gaussian
+maximum comparison, direct quadratic certificate, and entire signed tail.
+I found no failed estimate in these steps. The regular margin is independently
+derived below from order statistics; no affine-interface cap estimate is
+needed for that exterior input.
+
+INPUT BOUNDARY
+
+The parent assigns the following input proofs to a separate assembly review:
+for every measurable competitive f:R^N->Delta_m, writing
+ p_i=E f_i, B_i=E[X f_i], W=||B||_F^2, delta=||p-U||^2,
+ Delta=w-W, D=delta+r Delta, L=1+log m,
+ mu=E max_i Z_i, alpha=mu/(m-1), w=alpha^2(m-1), beta^2=w/m,
+one has
+ p_i in [1/(2m),3/(2m)], 0<=D<=C r^2/m, delta<=2D,
+and the prescribed-mass value estimate V(p)<=w+C L^2||p-U||^2.
+The latter is used by the balanced-offset certificate. These are genuine
+inputs here, not inferred from the exterior computation. The parent review
+must establish them to obtain the complete main theorem.
+
+The new classical-input Hodge theorem supplies ordinary-covariance concavity,
+the derivative with factor 1/2, and finite-simplex normal-strain curvature.
+The separate local branch, used only when d<=1/m, is outside this task.
+Mulgund's explicitly credited Theorem 2.1 supplies the common-threshold
+comparison stated in Section 6 below. Classical Gaussian isoperimetry,
+Brascamp--Lieb variance/covariance bounds, and OU hypercontractivity are used
+with their standard hypotheses.
+
+1. BALANCED OFFSETS AND THE CORRECT DEFICIT SCALE
+
+Since delta in [0,2D], |r Delta|=|D-delta|<=D. Thus
+ |W-w|<=D/r<=Cr/m and W/w=1+O(r/L).
+In particular s=sqrt(W/w) is bounded above and away from zero. The entropy
+centroid bound gives |B_i|<=p_i sqrt(2log(1/p_i))<=C alpha. Centering follows
+from sum_i f_i=1, and Cauchy gives B^T B<=p_max I. All these hold for
+fractional f; no optimizer or affine partition is assumed.
+
+For fixed mass p let F_p(B) be the optimal linear assignment value. The actual
+f is feasible, so F_p(B)>=W. Testing its dual with the balanced offsets h_U
+shows F_p(B)<=F_U(B)-h_U.(p-U). Put R=(w+W)/2-F_U(B).
+Covariance concavity and permutation averaging imply F_U(B)<=sqrt(wW), hence
+R>=0. The bounded-row offset certificate gives ||h_U||^2<=C L^2 R and thus
+ R<=Delta/2+C L sqrt(R delta)<=Delta/2+R/2+C L^2 delta/2.
+Consequently, once C r L^2<=1,
+             0<=R<=Delta+C L^2 delta<=Delta+delta/r=D/r=:J.       (1)
+The division by r is required. The calculation remains valid if W>w.
+
+I also checked the proof of the offset certificate used here. For distinct
+bounded sites, Gaussian coarea plus isoperimetry yields a physical graph gap
+at least c/L. The row-norm error in its Cheeger calculation is retained as
+4 B_max sqrt(EK), leading to h<=sqrt(A)u+4B_max u^2, rather than being discarded.
+Inverting the offset Laplacian gives mass Lipschitz constant CL. Coincident
+sites are handled by value/offset limits with equal offsets on each duplicate
+group; no finite physical weight is assigned to a zero-length edge. At
+normalized ||B||^2=w, testing the mass-value upper bound at
+p-U=-h_U/(C L^2) gives the deficit-relative offset estimate. The halfspace
+bound ||h_U||_infinity<=CL/m ensures that this mass perturbation remains in
+the positive box for large m. The only nonlocal input in that last step is
+exactly the separately assigned V(p) estimate above.
+
+2. RECONSTRUCTION OF THE HAZARD COEFFICIENT LEMMA
+
+Let sum xi_i=0, ||xi||_infinity<=A fixed, v_i=1+t xi_i,
+0<=t<=c_A/L^2, and choose mean-zero balancing offsets h_i(t). With
+ F_i=Phi((x-h_i)/sqrt(v_i)), a_i=(partial_x F_i)/F_i,
+ W_0=product F_i, rho_ij=W_0 a_i a_j,
+ omega_ij=int rho_ij, ell_i=sum_j omega_ij,
+the analytic diagonal omega_ii is included only in ell_i. It is not a facet.
+
+The whole-threshold moment proof gives
+ omega_ij comparable to alpha/m,
+ E_ij[(m max_k a_k)^p(1+|x|)^q]<=C_pq L^((p+q)/2),            (2)
+for every one of the finitely many fixed moment orders used in the proof.
+For positive thresholds, the change s=1-Phi(z), followed by y=ms, leaves
+m^p int s^(p+1-O(1/L))(1-s)^(m-p-2)log(e/s)^((p+q+1)/2) ds.
+Its normalization is alpha/m comparable to sqrt(L)/m^2. Thus the m powers
+cancel and the logarithmic power in (2) is correct. The negative and bounded
+threshold intervals are exponentially small in m. The bounds apply equally
+to i=j; the extra reciprocal F_i on positive thresholds is bounded.
+
+The complete-graph Laplacian has weights between c alpha/m and C alpha/m.
+For mean-zero b its inverse satisfies
+ |(Laplacian^-1 b)_i|<=C alpha^-1(|b_i|+mean_j |b_j|).
+This component bound follows from L1 contraction after subtracting a complete
+graph, followed by the individual row equation; L1 contraction alone would
+not suffice.
+
+Define b_i(x)=h_i'+xi_i(x-h_i)/(2v_i). Differentiating the mass exactly gives
+ 0=sum_(j!=i) int rho_ij(b_i-b_j).
+The moment and inverse estimates yield
+ |h_i'|<=C sqrt(L)(|xi_i|+M1),  M1=mean|xi|.
+This closes the coordinate box by continuation: h_i=O(t sqrt L), while
+v_i-1=O(t). No Frobenius-small perturbation is assumed.
+
+For clarity, the terms whose omission would break this calculation are
+ P_ij=partial_t log rho_ij
+     =L_i+L_j+a_i b_i+a_j b_j-sum_k a_k b_k,
+ L_i=-xi_i/(2v_i)+xi_i(x-h_i)^2/(2v_i^2)+h_i'(x-h_i)/v_i,
+ b_i'=h_i''-xi_i^2(x-h_i)/(2v_i^2)-xi_i h_i'/(2v_i).
+All other labels remain in the sum. Differentiating the mass equation gives
+the same Laplacian applied to h'', with source int rho_ij times
+P_ij(b_i-b_j) plus the displayed quadratic b_i' remainder. Holder and (2)
+give source_i<=C alpha L^(3/2)(xi_i^2+M2), M2=mean xi^2. The component inverse
+therefore gives |h_i''|<=C L^(3/2)(xi_i^2+M2).
+
+Differentiating rho_ij again gives rho_ij(P_ij^2+P_ij'). The identities
+ a_i'=a_i(L_i+a_i b_i) and
+ (sum_k a_k b_k)'=sum_k a_k[(L_k+a_k b_k)b_k+b_k']
+retain both offset acceleration and all labels. For the sums one uses
+sum a_k xi_k^2<=m max a_k M2 and
+sum a_k(|xi_k|+M1)^2<=C m max a_k M2.
+Equation (2), not a crude sum of m separate estimates, then yields
+ E_ij(P_ij^2+|P_ij'|)<=C L^2(xi_i^2+xi_j^2+M2).
+Summing against omega_ij<=C alpha/m proves
+                |ell_i''|<=C alpha L^2(xi_i^2+M2).           (3)
+The offset derivatives and normalizations above also justify differentiation
+under the integrals; the Gaussian tail domination is uniform on the box.
+
+At the regular point, the tie density is proportional to
+phi(x)^2 Phi(x)^(m-2). Write M=E T, V=Var T. Balancing gives h_i'=-M xi_i/2.
+The log-hazard derivative is [(x+a(x))(x-M)-1]xi_i/2. The derivatives of
+W_0 and sum a_i vanish because sum xi_i=0. Integration by parts in the tie
+law gives -2V+(m-2)Cov(T,a(T))=-1, hence
+ ell_i(0)=alpha, ell_i'(0)=-alpha eta_m xi_i,
+ eta_m=[m-1-mV]/[2(m-2)].
+The tie law has potential Hessian at least 2, so V<=1/2. Conditioning regular
+scores on the tie and being maximal does not constrain their independent
+common mean; therefore V>=1/m. These bounds give eta_m in [1/4,1/2].
+This is an exact coefficient, not just the correct sign asymptotically.
+
+3. GLOBAL SUMMED ROW PAYMENT, WITH A SINGULAR TARGET ALLOWED
+
+Normalize Bhat=B/s, so ||Bhat||^2=w, and put C=Bhat Bhat^T/alpha^2.
+Then C>=0, C1=0, tr C=m-1, and C_ii is uniformly bounded. Define
+ z_i=C_ii-(m-1)/m, kappa=1-2/m, xi_i=z_i/kappa,
+ D_t=P diag(1+t xi)P, t=b_A/L^2.
+Here (D_t)_ii=(m-1)/m+t z_i and ||xi||_infinity is bounded independently of m.
+Only D_t, not C, must be positive definite on 1-perp.
+
+At D_t the exact hazard identity is
+ Laplacian=P diag(ell_i)P-H_t,
+ H_t=int W_0(Pa)(Pa)^T>=0.
+The covariance derivative is Laplacian/2. Euler homogeneity and concavity give
+ Gamma(C)<=tr[Laplacian(C+D_t)]/2
+          <=sum_i ell_i(C_ii+(D_t)_ii)/2.                    (4)
+The discarded term is -tr[H_t(C+D_t)]/2<=0. This is its exact sign; no
+operator bound on C or estimate of off-diagonal errors is needed.
+
+Taylor with (3) gives ell_i=alpha-alpha eta_m t xi_i+e_i,
+ |e_i|<=C alpha L^2 t^2(xi_i^2+M2).
+The constant contribution in (4) is mu. Its linear contribution is controlled
+by the exact identity sum_i xi_i(C_ii+(D_t)_ii)=kappa(1+t)||xi||^2.
+The full remainder sums to C alpha L^2 t^2||xi||^2. Choose b_A small enough
+once and for all. The positive linear term dominates and gives
+ R_U(Bhat)>=c alpha^2 L^-2 sum_i z_i^2.
+Equivalently,
+ sum_i(|Bhat_i|^2-beta^2)^2<=C L^3 R_U(Bhat)/m^2,
+ E_rad:=sum_i(|Bhat_i|-beta)^2<=C L^2 R_U(Bhat)<=C L^2 R.     (5)
+The last step uses the exact radial identity
+ R=w(s-1)^2/2+s R_U(Bhat).
+No factor m is lost in (5), and no rank restriction is introduced.
+
+4. ROW LOWER BOUNDS AND THE EXACT CENTERED EQUAL-ROW PROXY
+
+The one-row theorem can be derived using the new normal-strain inequality.
+Symmetrize the target covariance over permutations fixing label i. At fixed
+trace this gives K_a=a uu^T+b(P-uu^T), b=(m-1-a)/(m-2), where
+ a=|Bhat_i|^2/beta^2. For edges incident to i, the squared edge length is a+1
+and its derivative in a is exactly 1. The normal-strain inequality plus
+Gaussian isoperimetry of the balanced i-th cell gives
+ -4 d^2 Gamma(K_a)/da^2>=I(1/m)/(a+1)^(3/2).
+Integration from a=1, including its zero tangent, yields
+ R_U(Bhat)>=[alpha I(1/m)/(2sqrt2)](sqrt(1+a)-sqrt2)^2.
+Continuity includes a=0,m-1. On the fixed row-cap interval this implies
+ max_i ||Bhat_i|^2/beta^2-1|<=C sqrt(m^2 R/L)
+                           <=C sqrt(mr/L)=o(1).             (6)
+Thus the normalized rows are uniformly bounded away from zero.
+
+Cauchy gives ||Bhat||_op^2<=C/m. For u_i=Bhat_i/|Bhat_i|,
+||mean_i u_i u_i^T||_op<=C/L. Let Phi(c)=mean_i|Bhat_i-c| on the row span.
+For |c|<=c0 beta with c0 fixed sufficiently small, its Hessian is >=c/beta.
+Using sum Bhat_i=0,
+ |grad Phi(0)|<=C ||Bhat||_op sqrt(E_rad)/(m beta^2)
+               <=C sqrt(m E_rad)/L<=C sqrt(r)=o(1).
+Its global minimizer therefore lies inside that ball, at |c|<=C beta|grad Phi(0)|.
+The exact definition Z_i=beta(Bhat_i-c)/|Bhat_i-c| then satisfies
+ sum Z_i=0, |Z_i|=beta,
+ ||Z-Bhat||^2<=C E_rad,  ||Z-B||^2=:E_Z<=C L^2 R<=C L^2 J.   (7)
+The minimizer is ordinary and differentiable because no row lies in the small
+ball. This is only a test matrix. It need not be a centroid matrix, have
+separated rows, or preserve the actual routing. It stays in the original row
+span; no unused coordinate in the original problem is assumed.
+
+5. THE EXTERIOR FLOOR AND DIMENSION-FREE GLOBAL PAYMENT
+
+Write d=dist_F(B,regular centroid orbit), q=d/alpha,
+e=||BB^T/alpha^2-P||_F. Procrustes gives e>=q, also for singular B.
+The finite covariance-gap argument gives
+ R>=c alpha^2 e^2/m *min(1,c/(L e)).                         (8)
+Its propagation to arbitrary PSD endpoints is legitimate: along
+P+t(C-P), integrate the local normal-strain curvature only for
+0<=t<=min(1/2,c/(L e)), where the balanced facet weights are controlled.
+Concavity propagates this loss to t=1. The integration weight is 1-t, so
+the payment is proportional to the interval length, not its square.
+The regular tangent accounts for tr(C-P) even without trace normalization.
+
+I checked the local facet bootstrap: the reference facet is a convex Gaussian
+cone, hence has Poincare constant <=1. Its mean is O(sqrt L) and covariance
+differs from the identity on 1-perp by bounded Frobenius norm. The latter also
+follows directly from the tie law used above: on differences of the m-2
+nonwinning coordinates the variance is E[1-T a(T)-a(T)^2], whose deficit is
+O(L/m) by (2); the remaining distinguished variance is <=1 by Brascamp--Lieb,
+and the normal variance is zero. Under a small covariance/mean tilt, the
+potential remains uniformly convex. The mean/covariance derivative bounds
+then control the facet weight ratio by exp(C[epsilon L+sqrt(L)|h|+|h|^2]).
+The balancing ODE and the complete-graph gap give |h'|<=C sqrt(L) epsilon,
+closing the bootstrap at epsilon<=c/L. All trace terms cancel before any
+estimate; no ambient determinant or dimension factor survives.
+
+In the exterior d>1/m, q>=c/sqrt L and q<=C sqrt m. Thus L e is large,
+and (8) yields
+          J>=R>=c q/m^3>=c/(m^3 sqrt L),
+                    d^2<=C m^(3/2)L R.                    (9)
+The strict positive floor is essential below. It is not a bound for all
+arbitrarily close competitors.
+
+6. THE MAXIMUM COMPARISON AND ITS EXACT EXTERNAL SCOPE
+
+Let Y_i=Z_i.X/beta, M=max_i Y_i>=0, and let M_* be the regular unit-row maximum.
+Let a0=(m-1)/m and add an independent standard G only for the probabilistic
+comparison: nu=sqrt(a0)M+G/sqrt m. The covariance R_c of its underlying scores
+has unit diagonal and R_c-J_label/m=a0 ZZ^T/beta^2>=0.
+Mulgund, arXiv:2607.14087v4, Theorem 2.1, gives
+ H(t)=P(nu<=t)-P(max_i Z_i^iid<=t)>=0 for every common threshold t.
+I reopened the primary theorem on 2 November 2026:
+https://arxiv.org/html/2607.14087v4
+Its statement and Appendix B include singular covariance matrices. No
+unequal-threshold or unequal-variance extension is used. The paper's own
+covariance transformation is the same one above. Its full external proof
+or claimed Lean formalization is not reverified by this audit.
+
+Integration gives int H=sqrt(a0)(E M_*-E M) and
+E M_*^2-E M^2=(2/a0)int t H(t)dt. The right and left tails are bounded by
+m barPhi(t) and Phi(t), respectively. Consequently, for T>=1,
+ (E M_*^2-E M^2)_+<=CT(E M_*-E M)+Cm exp(-T^2/2).             (10)
+This is an absolute tail error; it is not silently called deficit-relative.
+With V=beta M, V_*=beta M_*, E V_*=w, the bound is
+ (E V_*^2-E V^2)_+<=C beta T(w-E V)+C beta^2m exp(-T^2/2).
+In particular E V<=w. Adding the common independent Gaussian here is a
+comparison identity and does not require an extra coordinate in f's space.
+
+7. ROUTING AND THE DIRECT QUADRATIC CERTIFICATE
+
+Let z_i=Z_i.X and c_f=V-sum_i f_i z_i>=0. Both E c_f and w-E V are
+nonnegative and their sum is exactly
+             w-<Z,B>=(Delta+E_Z)/2<=C L^2 J.                (11)
+Since V>=0 and z_i<=V,
+ V^2-sum f_i z_i^2<=2V c_f.
+For A_X=max_i|Y_i|, c_f<=2beta A_X and V<=beta A_X. The unit marginal
+Gaussian union bound gives E[A_X^2 1_(A_X>T)]<=Cm(T^2+1)e^(-T^2/2).
+Splitting the preceding routing inequality and combining with (10), at
+T=sqrt(32L), gives
+ E sum_i f_i z_i^2>=E V_*^2-C L^3 J/m-C beta^2mL e^(-16L).   (12)
+The actual masses can be unequal and the actual f fractional throughout.
+
+Define Q_i=E[f_i(XX^T-I)] and T_i=Z_i Z_i^T-Z^TZ/m. Then sum Q_i=0 and
+ T_f:=sum<Q_i,T_i>=E sum_i f_i z_i^2-beta^2,
+ sum||T_i||_F^2=m beta^4-tr((ZZ^T)^2)/m
+                  <=D_*:=alpha^4(m-1)(m-2)/m.              (13)
+The denominator inequality is trace-squared/rank, using rank<=m-1; no inverse
+Gram matrix appears. The Hermite convention is A2(f)=sum||Q_i||_F^2/2.
+Thus A2(f)>=(T_f)_+^2/(2D_*), even if the test tensors vanish.
+
+For the regular reference, conical homogeneity makes each Q_i trace-free on
+the score span; outside it Q_i=0. Permutations fixing i leave only the radial
+and transverse invariant tensor components, so trace zero makes Q_i a scalar
+multiple of the regular T_i. This proves equality in the regular Cauchy bound.
+Direct centering of independent scores gives
+ T_*=alpha^2(E(max_i Z_i^iid)^2-1)>0,
+ A2(g)=T_*^2/(2D_*), and T_*/D_*<=Cm for large m.
+Using (T_*-e)_+^2>=T_*^2-2T_*e in (12)-(13) yields
+ A2(f)-A2(g)>=-C L^3 J-C L^2 e^(-16L).
+The exterior floor (9) pays the latter since its ratio to J is at most
+C m^-13 L^(5/2). Therefore
+                    A2(f)-A2(g)>=-C L^3 J.                 (14)
+This is an exterior estimate. It does not assert the false unrestricted
+near-simplex relative-A2 inequality ruled out in earlier work.
+
+8. INDEPENDENT REGULAR-MARGIN DERIVATION
+
+The regular centroid scores are alpha(Z_i-Zbar). Their top-two gap is
+alpha times the independent Gaussian order-statistic gap. If F(s) is the
+probability that that independent gap is <=s, differentiating its exact
+order-statistic integral for 0<=s<=1 gives
+ F'(s)=m(m-1)e^(-s^2/2) int phi(x)^2 e^(-s x)Phi(x)^(m-2)dx.
+On x>=0, the extra exponential is <=1. On x<0, the integral is at most
+C 2^(-(m-2)), uniformly for s<=1, by completing the Gaussian square.
+Since int phi^2 Phi^(m-2)=alpha/m, this proves F'(s)<=C mu for large m.
+For centroid gap c(X), P(c<=a)<=C m a when a<=alpha. When a>alpha,
+C m a>=C m alpha>=1 for large m, so the same bound holds for every a>0.
+
+Let B0 be a closest regular centroid matrix and g0 its assignment. Its routing
+loss is R0=w-<B0,B>=(Delta+d^2)/2>=0. The mismatch weight of fractional f is
+1-f_(regular winner)(X), between zero and one. It pays at least that weight
+times c(X). Thus for epsilon=||f-g0||_L1/2,
+ epsilon<=P(c<=a)+R0/a<=Cma+R0/a,
+                  epsilon<=min(1,C sqrt(m R0)).             (15)
+No actual affine geometry, stationarity, purity or interface regularity is
+needed for (15).
+
+9. ALL SIGNED HIGHER DEGREES AND THE TWO EXTERIOR REGIMES
+
+Set tau^2=1/(4L). Hypercontractivity, 0<=f_i<=1, and p_i<=3/(2m) give
+ ||T_tau f||_2^2+||T_tau g0||_2^2<=C/m.
+Writing e_i=E|f_i-g0_i|<=C/m and using sum e_i=2epsilon gives
+ ||T_tau(f-g0)||_2^2<=sum e_i^(2/(1+tau^2))<=C epsilon/m.
+The factor m^(2tau^2/(1+tau^2)) is bounded by e^(1/2). The chosen smoothing
+time depends on m, not on mismatch amplitude. On Hermite degrees >=3 the
+residual multiplier after factoring through T_tau has absolute value at most
+(r/tau^2)^3. For large m, r<=tau^2 throughout the voting interval. Cauchy gives
+ |H_r(f)-H_r(g0)|<=C r^3 L^3 sqrt(epsilon)/m,                (16)
+where H_r includes every signed Hermite degree >=3. Rotation leaves the
+regular reference's Hermite weights unchanged.
+
+If J>=d^2, then R0<=J, and (15)-(16) imply
+ |Hdiff|/J<=C r^3 L^3/(m^(3/4)J^(3/4))
+           <=C r^3 m^(3/2)L^(27/8),
+using the floor in (9).
+If J<d^2, then R0<=d^2. With d=alpha q and J>=c q/m^3, they imply
+ |Hdiff|/J<=C r^3 m^(7/4)L^(13/4)q^-1/2
+           <=C r^3 m^(7/4)L^(7/2).
+The latter bound dominates both. Hence
+             |H_r(f)-H_r(g)|<=C r^3 m^(7/4)L^(7/2)J.        (17)
+These powers were recomputed explicitly; no signed tail is dropped.
+
+10. STRICT EXTERIOR CONTRADICTION AND QUANTIFIERS
+
+Hermite orthogonality gives exactly
+ S_-r(f)-S_-r(g)=D+r^2[A2(f)-A2(g)]+H_r(f)-H_r(g).
+Substitute (14),(17), J=D/r:
+ S_-r(f)-S_-r(g)
+   >=D[1-CrL^3-Cr^2m^(7/4)L^(7/2)].                         (18)
+For every 0<r<=1/(m-1), the two losses are bounded by
+C L^3/m and C L^(7/2)/m^(1/4), both tending to zero. There is therefore one
+absolute eventual m threshold for which the bracket is >=1/2. By (9),
+D=rJ>0 in the exterior. Equation (18) contradicts competitiveness strictly.
+
+All constants used for this branch depend only on fixed absolute mass/row
+boxes and the fixed finite moment orders. None depends on ambient N or on
+positive r in the stated range. All singular score limits use values or
+continuous covariances; no endpoint facet derivatives are taken. No property
+of a minimizing assignment is used, and no attainment theorem is needed.
+
+This establishes the exterior implication with the stated localized inputs.
+It is not a proof of the local d<=1/m branch or of the initial mass-value
+localization, both separately assigned. There is no unresolved analytic
+obligation found inside the exterior chain above. The only modern external
+theorem directly used here is the expressly credited Mulgund comparison;
+its scope is checked, not silently strengthened or claimed as this project's
+new result. The separate classical-input Hodge foundation is the parent's
+already audited input for this continuation.

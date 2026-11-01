@@ -1,0 +1,168 @@
+⚠ [2161/2315] Replayed NegativeVoting.Routing
+warning: ././././NegativeVoting/Routing.lean:29:0: automatically included section variable(s) unused in theorem 'NegativeVoting.routingLoss_eq_sum':
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2165/2315] Replayed NegativeVoting.Integrability
+warning: ././././NegativeVoting/Integrability.lean:20:0: automatically included section variable(s) unused in theorem 'NegativeVoting.simplex_weight_le_one':
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././NegativeVoting/Integrability.lean:48:0: automatically included section variable(s) unused in theorem 'NegativeVoting.integrable_finite_max':
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully.
+NV_MODULE NegativeVoting.Routing
+NV_MODULE NegativeVoting.Centroid
+NV_MODULE NegativeVoting.Assembly
+NV_MODULE NegativeVoting.Threshold
+NV_MODULE NegativeVoting.Integrability
+NV_MODULE NegativeVoting.GaussianRouting
+NV_MODULE NegativeVoting.GaussianMoments
+NV_MODULE NegativeVoting.EdgeEnergy
+NV_MODULE NegativeVoting.GaussianCentroid
+NV_MODULE NegativeVoting.VotingRange
+NV_MODULE NegativeVoting
+NV_THEOREM NegativeVoting.exists_uniform_voting_assembly_threshold
+NV_THEOREM NegativeVoting.ae_gaussian_unique_max
+NV_THEOREM NegativeVoting.centered_symmetric_edge_energy._proof_2
+NV_THEOREM NegativeVoting.integrable_finite_max
+NV_THEOREM NegativeVoting.voting_endpoint_rpow_identity
+NV_THEOREM NegativeVoting.integrable_routing_loss
+NV_THEOREM NegativeVoting.product_linear_hyperplane_null
+NV_THEOREM NegativeVoting.centroid_cancellation
+NV_THEOREM NegativeVoting.weight_eq_zero_of_zero_routingLoss
+NV_THEOREM NegativeVoting.linearScore.eq_1
+NV_THEOREM NegativeVoting.finite_max_eq_chosenWinner
+NV_THEOREM NegativeVoting.gaussian_product_score_tie_null
+NV_THEOREM NegativeVoting.frobenius_energy_le_ordered_edge_energy
+NV_THEOREM NegativeVoting.chosenWinner_max
+NV_THEOREM NegativeVoting.centered_symmetric_edge_energy._proof_1
+NV_THEOREM NegativeVoting.squared_distance_identity
+NV_THEOREM NegativeVoting.gaussian_singleton_null
+NV_THEOREM NegativeVoting.product_linear_hyperplane_null._proof_2
+NV_THEOREM NegativeVoting.centered_edge_energy_zero_iff
+NV_THEOREM NegativeVoting.ae_gaussian_indicator_of_zero_maximum_gap
+NV_THEOREM NegativeVoting.ae_pure_of_integrable_scores
+NV_THEOREM NegativeVoting.gaussian_centroid_pairing
+NV_THEOREM NegativeVoting.simplex_routing_rigidity
+NV_THEOREM NegativeVoting.routingLoss_nonneg
+NV_THEOREM NegativeVoting.routingLoss.eq_1
+NV_THEOREM NegativeVoting.voting_noise_le_two_div
+NV_THEOREM NegativeVoting.gaussian_self_centroid_score
+NV_THEOREM NegativeVoting.gaussian_linear_max_integrable
+NV_THEOREM NegativeVoting.logarithmic_remainder_tendsto_zero
+NV_THEOREM NegativeVoting.exists_uniform_remainder_threshold
+NV_THEOREM NegativeVoting.competitive_assembly
+NV_THEOREM NegativeVoting.exists_uniform_voting_remainder_threshold
+NV_THEOREM NegativeVoting.squared_defect_eq_zero_iff
+NV_THEOREM NegativeVoting.exterior_strict
+NV_THEOREM NegativeVoting.gaussian_product_score_tie_null._proof_1
+NV_THEOREM NegativeVoting.ae_gaussian_scores_injective._proof_1
+NV_THEOREM NegativeVoting.integrable_score_mixture
+NV_THEOREM NegativeVoting.routingLoss_eq_sum
+NV_THEOREM NegativeVoting.nonnegative_of_local_exterior
+NV_THEOREM NegativeVoting.ae_gaussian_routing_rigidity_from_zero_loss
+NV_THEOREM NegativeVoting.gaussian_exp_integrable
+NV_THEOREM NegativeVoting.simplex_weight_le_one
+NV_THEOREM NegativeVoting.gaussian_product_linear_hyperplane_null
+NV_THEOREM NegativeVoting.finite_centroid_cancellation
+NV_THEOREM NegativeVoting.ae_gaussian_routing_rigidity
+NV_THEOREM NegativeVoting.voting_noise_quadratic_bound
+NV_THEOREM NegativeVoting.routingLoss_margin_bound
+NV_THEOREM NegativeVoting.gaussian_id_integrable
+NV_THEOREM NegativeVoting.routingLoss_margin_bound._proof_1
+NV_THEOREM NegativeVoting.centered_symmetric_edge_energy
+NV_THEOREM NegativeVoting.exterior_from_hermite_bounds
+NV_THEOREM NegativeVoting.product_linear_hyperplane_null._proof_1
+NV_THEOREM NegativeVoting.gaussian_expected_centroid_gap
+NV_THEOREM NegativeVoting.chosenWinner._proof_1
+NV_THEOREM NegativeVoting.voting_remainder_majorant
+NV_THEOREM NegativeVoting.gaussian_linear_score_integrable
+NV_THEOREM NegativeVoting.local_rigidity
+NV_THEOREM NegativeVoting.ae_pure_of_zero_integrated_routing_loss
+NV_THEOREM NegativeVoting.gaussian_noAtoms
+NV_THEOREM NegativeVoting.gaussian_product_coordinate_integrable
+NV_THEOREM NegativeVoting.integrable_weighted_score
+NV_THEOREM NegativeVoting.standard_gaussian_score_tie_null
+NV_THEOREM NegativeVoting.gaussian_product_coordinate_law
+NV_THEOREM NegativeVoting.ae_gaussian_scores_injective
+'NegativeVoting.routingLoss_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.routingLoss_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.routingLoss_margin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.weight_eq_zero_of_zero_routingLoss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.simplex_routing_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_pure_of_zero_integrated_routing_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.squared_distance_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.finite_centroid_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.squared_defect_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.centroid_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.exterior_from_hermite_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.exterior_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.local_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.competitive_assembly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.nonnegative_of_local_exterior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.logarithmic_remainder_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.exists_uniform_remainder_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.simplex_weight_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.integrable_weighted_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.integrable_score_mixture' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.integrable_finite_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.integrable_routing_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_pure_of_integrable_scores' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.routingLoss_margin_bound._proof_1' depends on axioms: [propext, Quot.sound]
+'NegativeVoting.gaussian_exp_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_id_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_product_coordinate_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_product_coordinate_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_linear_score_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_linear_max_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_singleton_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_noAtoms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.product_linear_hyperplane_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_product_linear_hyperplane_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_product_score_tie_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.standard_gaussian_score_tie_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_gaussian_scores_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_gaussian_unique_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_gaussian_routing_rigidity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.centered_symmetric_edge_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.frobenius_energy_le_ordered_edge_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.centered_edge_energy_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_gaussian_routing_rigidity_from_zero_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.chosenWinner_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.finite_max_eq_chosenWinner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_gaussian_indicator_of_zero_maximum_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_centroid_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_self_centroid_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_expected_centroid_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.voting_noise_le_two_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.voting_endpoint_rpow_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.voting_noise_quadratic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.voting_remainder_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.exists_uniform_voting_remainder_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.exists_uniform_voting_assembly_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.ae_gaussian_scores_injective._proof_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.centered_symmetric_edge_energy._proof_1' depends on axioms: [propext, Quot.sound]
+'NegativeVoting.centered_symmetric_edge_energy._proof_2' depends on axioms: [propext, Quot.sound]
+'NegativeVoting.chosenWinner._proof_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.gaussian_product_score_tie_null._proof_1' depends on axioms: [propext]
+'NegativeVoting.linearScore.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVoting.product_linear_hyperplane_null._proof_1' depends on axioms: [propext]
+'NegativeVoting.product_linear_hyperplane_null._proof_2' depends on axioms: [propext]
+'NegativeVoting.routingLoss.eq_1' depends on axioms: [propext, Classical.choice, Quot.sound]
+{
+  "status": "passed",
+  "theorem_count": 64,
+  "named_theorem_count": 54,
+  "allowed_logical_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "partial components and conditional scalar assembly; not the Gaussian theorem"
+}

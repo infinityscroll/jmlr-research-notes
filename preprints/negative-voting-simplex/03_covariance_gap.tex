@@ -1,0 +1,106 @@
+\section{Finite covariance gaps and arbitrary PSD endpoints}
+\label{sec:gap-proof}
+We supply the quantitative ray argument used in both noise branches.
+The full reconstruction, including covariance tilts, is \cite{currentgap}.
+Write $b=\Phi^{-1}(1-1/m)$, so $b^2\asymp L$ for large $m$.
+At $P$, every physical score-facet weight is $w_0=\alpha/m$.
+
+\subsection{Facet bootstrap near the regular covariance}
+The regular facet Gaussian has mean of size $O(b)$ and covariance
+$S_e$ satisfying $\|S_e-P\|_\Frob\le C$. The latter bound has no
+ambient-dimension factor: the normal variance is zero, one distinguished
+variance lies in $[0,1]$, and the remaining $m-3$ variances are
+$1-O(b^2/m)$. These formulas follow from the tied-maximum density
+proportional to $\phi(t)^2\Phi(t)^{m-2}$ and the truncated independent
+coordinates conditional on the tied value.
+
+For $K=P+E$ with $\epsilon=\|E\|_\Frob\le1/8$, a shifted facet density
+relative to its regular counterpart is $\exp(c+q(y))$, where
+\[
+ q(y)=\tfrac12y^T(P-K^{-1})y+(K^{-1}h)\cdot y,\quad
+ c=-\tfrac12\log\det_HK-\tfrac12h^TK^{-1}h.
+\]
+The trace cancellation
+$|\tr_H(P-K^{-1})-\log\det_HK|\le C\epsilon^2$ removes any
+$\sqrt m\epsilon$ contribution. The tilted tangent potential remains
+uniformly convex. Brascamp--Lieb and differentiation of the mean give
+\[
+ \Var_t(q)\le C(\epsilon^2b^2+|h|^2),\qquad
+ |\mu_1-\mu_0|\le C(\epsilon b+|h|).
+\]
+Thus the facet weight ratio lies between $e^{-A}$ and $e^A$, where
+$A=C(\epsilon b^2+b|h|+|h|^2+\epsilon^2b^2)$.
+
+Along $K_t=P+tE$, the balancing offset solves a complete-graph
+Laplacian equation. While weights lie between $w_0/2$ and $2w_0$,
+the centered graph gap is at least $mw_0/2$ and its forcing energy is
+at most $Cmw_0b^2\epsilon^2$. Hence $|h'_t|\le Cb\epsilon$.
+Choose the bootstrap coefficient first, then an absolute $c>0$ such that
+$\epsilon\le c/b^2$ closes the weight and offset bounds strictly.
+This proves uniform facet control on $\|K-P\|_\Frob\le c/L$.
+
+\subsection{Normal strain and propagation along a ray}
+For a centered symmetric $E$, the exact finite identity is
+\begin{equation}\label{eq:edge-identity}
+ \sum_{i<j}[(e_i-e_j)^TE(e_i-e_j)]^2
+ =m\sum_i E_{ii}^2+(\tr E)^2+2\|E\|_\Frob^2.
+\end{equation}
+Apply \eqref{eq:hodge-strain} on the preceding ball. Edge denominators
+are bounded above by three, so
+$-D^2\Gamma(K)[E,E]\ge w_0\|E\|_\Frob^2/12$.
+The derivative at $P$ is $D\Gamma(P)[E]=(\alpha/2)\tr E$.
+
+Now let $K=BB^T/\alpha^2$ be any centered PSD covariance and put
+$e=\|K-P\|_\Frob$. Invariance of Gaussian realizations gives
+\[
+ \calR(B)=\alpha\{\Gamma(P)+D\Gamma(P)[K-P]-\Gamma(K)\}.
+\]
+If $e>0$, integrate curvature only on
+$0\le t\le s=\min\{1/2,c/(Le)\}$ along $P+t(K-P)$.
+The rest of the ray has a nonnegative curvature measure by concavity.
+Taylor's integral weight is $1-t$, at least $1/2$ on this initial interval.
+Consequently
+\begin{equation}\label{eq:ray-gap-proved}
+ \calR(B)\ge\frac{c\alpha^2e^2}{m}
+                      \min\{1,c/(Le)\}.
+\end{equation}
+For a singular endpoint, integrate first to $T<1$ and then let
+$T\uparrow1$ by value continuity. No global lower bound on the
+competitor's eigenvalues is used.
+
+Procrustes gives $q=d/\alpha$ with
+$q^2=\sum_{i=1}^{m-1}(\sqrt{\lambda_i(K|_H)}-1)^2$, with eigenvalues
+taken on $H=\one^\perp$ and including any zeros on that subspace.
+Since $e\ge q$ and $x^2\min\{1,c/(Lx)\}$ is increasing,
+\eqref{eq:ray-gap-proved} also holds with $e$ replaced by $q$.
+Competitive norm localization gives $q\le C\sqrt m$; in the exterior
+$d>1/m$, one has $q\ge c/\sqrt L$. Hence
+\begin{equation}\label{eq:ray-exterior-proved}
+ \calR(B)\ge cq/m^3\ge c/(m^3\sqrt L),\qquad
+ d^2\le Cm^{3/2}L\calR(B).
+\end{equation}
+For the local score ball $d\le A/m$, a correspondingly short initial
+segment gives $d^2\le C_A m\sqrt L\calR(B)$. Retaining the diagonal
+part in \eqref{eq:edge-identity} also gives the stronger normal energy
+used in the local unequal-row transfer.
+
+\subsection{A single row cannot collapse}
+At fixed trace, symmetrize a covariance over permutations fixing one label.
+It becomes $K_a=a uu^T+b(P-uu^T)$ with
+$b=(m-1-a)/(m-2)$, where $a=|\widehat B_i|^2/\beta^2$.
+For edges incident to that label, the squared edge length is $a+1$ and
+its derivative is one. Normal strain and Gaussian isoperimetry of that
+balanced cell therefore imply
+\[
+ -4\frac{\dd^2}{\dd a^2}\Gamma(K_a)
+       \ge\frac{I(1/m)}{(a+1)^{3/2}},\qquad
+ I(p)=\phi(\Phi^{-1}(p)).
+\]
+The tangent at $a=1$ vanishes. Integration gives
+\[
+ \calR(\widehat B)\ge\frac{\alpha I(1/m)}{2\sqrt2}
+                    (\sqrt{1+a}-\sqrt2)^2.
+\]
+Continuity covers $a=0$ and $a=m-1$. On any fixed row-cap class this
+proves \eqref{eq:one-row}. Together with competitive localization it
+supplies precisely the row lower bounds required by the equal-row proxy.

@@ -15,6 +15,11 @@ PDF_PATH = 'frontier/negative-voting-simplex/output/pdf/negative_gaussian_simple
 PDF_ASSET = 'negative_gaussian_simplex_stability_v2.pdf'
 INTEGRATED_PATH = 'frontier/negative-voting-simplex/supplements/integrated-full-voting-proof-20261102/MAIN_THEOREM_INTEGRATED_PROOF_20261102.txt'
 INTEGRATED_ASSET = 'negative_voting_integrated_proof_20261102.txt'
+EXTRA_ASSETS = {
+    'negative_voting_simplex_preprint.pdf': 'preprints/negative-voting-simplex/output/pdf/negative_voting_simplex_preprint.pdf',
+    'negative-voting-simplex-arxiv-source-2026-11-02.tar.gz': 'archives/negative-voting-simplex-arxiv-source-2026-11-02.tar.gz',
+    'negative-voting-lean-2026-11-02.tar.gz': 'archives/negative-voting-lean-2026-11-02.tar.gz',
+}
 
 
 def git(repo: Path, *args: str) -> bytes:
@@ -82,6 +87,11 @@ def build(repo: Path, commit: str, repository: str, workflow_url: str, output: P
     manifest = validate_manifest(files)
     if not files[PDF_PATH][1].startswith(b'%PDF-'):
         raise ValueError('Expected manuscript PDF is absent or invalid')
+    for name, path in EXTRA_ASSETS.items():
+        if path not in files:
+            raise ValueError('Required preprint/formalization asset missing: ' + path)
+        if name.endswith('.pdf') and not files[path][1].startswith(b'%PDF-'):
+            raise ValueError('Invalid preprint PDF')
     epoch = int(git(repo, 'show', '-s', '--format=%ct', commit).decode())
     tag = 'research-' + commit[:16]
     archive_name = tag + '.tar.gz'
@@ -98,9 +108,10 @@ def build(repo: Path, commit: str, repository: str, workflow_url: str, output: P
         'source_archive': archive_name,
         'tracked_file_count': len(files),
         'manifest_pins': len(manifest['files']),
-        'primary_documents': {PDF_ASSET: PDF_PATH, INTEGRATED_ASSET: INTEGRATED_PATH},
+        'primary_documents': {PDF_ASSET: PDF_PATH, INTEGRATED_ASSET: INTEGRATED_PATH, **EXTRA_ASSETS},
         'release_manifest_sha256': sha256(files['RELEASE_MANIFEST.json'][1]),
         'scientific_status': 'Research manuscript with internal audits; provenance is not mathematical verification or an exclusive-priority certificate.',
+        'formalization_status': 'Partial Lean formalization only; Gaussian analytic estimates and the full main theorem are not kernel-verified.',
     }
     payload = {
         archive_name: archive_bytes(files, tag, epoch),
@@ -109,6 +120,7 @@ def build(repo: Path, commit: str, repository: str, workflow_url: str, output: P
         'RELEASE_MANIFEST.json': files['RELEASE_MANIFEST.json'][1],
         'SOURCE_METADATA.json': (json.dumps(metadata, indent=2, sort_keys=True) + '\n').encode(),
     }
+    payload.update({name: files[path][1] for name, path in EXTRA_ASSETS.items()})
     payload['SHA256SUMS'] = ''.join(f'{sha256(content)}  {name}\n' for name, content in sorted(payload.items())).encode()
     if output.exists() and any(output.iterdir()):
         raise ValueError('Output directory must be empty')

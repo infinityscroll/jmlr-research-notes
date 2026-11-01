@@ -1,0 +1,172 @@
+FIXED-MASS FIRST-CHAOS DUAL AND A FINITE-CURVATURE LIMIT
+31 October 2026. Branch derivation. Independent full audit pending.
+
+This note has two distinct conclusions. The entire linear Gaussian score
+block admits an exact fixed-mass dual with no ambient-dimensional factor.
+However, a constant fraction of its FULL local shape curvature cannot be
+assumed throughout a score ball of radius order1/m. The second conclusion
+is proved on an exactly mass-calibrated Gaussian covariance path, not on
+the uncalibrated cap example. A weaker finite gap of order1/m times the
+squared score displacement is NOT ruled out. No noise-stability theorem
+or counterexample is claimed.
+
+Pinned inputs
+[C] ../all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+[H] ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt
+ec1edf184fef18a6630fe0007762943cc142d0b7a32dc61e01b83429b35ec633
+[E] ENDPOINT_ALL_SPEED_L1_TANGENT_COERCIVITY_20261031.txt
+The companion pins JSON records its complete current SHA256.
+[M] GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt
+The companion pins JSON records its complete current SHA256.
+[G] OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt
+6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c
+
+1. Exact constrained score dual
+Let U=(1/m,...,1/m), P=I-11^T/m, mu=E max_(i<=m) Z_i,
+ alpha=mu/(m-1), B0=alpha P, w=alpha^2(m-1).
+The rows of B0 are the regular partition's unnormalized first moments.
+For a centered score matrix B, in any finite ambient dimension at least
+m-1, define
+ F_p(B)=sup{E sum_i f_i(X) B_i.X: E f_i=p_i, f_i>=0, sum_i f_i=1}.
+The same notation permits smaller rank. Gaussian coupling/projection
+identifies F_p(B) with the covariance functional of[C] at C=BB^T for
+the fixed target law supported on the coordinate simplex with masses p.
+
+For balanced p=U, covariance concavity and the exact gradient at
+C0=alpha^2 P give
+ F_U(B)<= (w+||B||_F^2)/2.
+One can also obtain this inequality directly from the balanced endpoint
+theorem: for every admissible centroid matrix M,
+ 2<B,M>-||B||^2=||M||^2-||B-M||^2<=w.
+Define the exact nonnegative tangent remainder
+ R_U(B)=(w+||B||^2)/2-F_U(B).                                  (1)
+
+If J0(f)=w-<B0,M_f>, then, for every centered score test Z,
+ sup_(E f=U){<M_f-B0,Z>-J0(f)}
+  =F_U(B0+Z)-w-<B0,Z>
+  =||Z||^2/2-R_U(B0+Z).                                       (2)
+This is an exact nonlinear supremum over balanced assignments. It does
+not replace a constrained assignment by an arbitrary coupling between
+two labels or by an unrestricted noise coupling.
+
+For prescribed p in the accepted positive mass box, the same calculation
+and the definition V(p)=sup||M_f||^2 give
+ sup_(E f=p){<M_f-B0,Z>-J0(f)}
+ <=||Z||^2/2+[V(p)-w]/2
+ <=||Z||^2/2+(A_m/2)||p-U||^2, A_m=O(log^2 m),                 (3)
+using[M,G]. Thus the mass block can be retained exactly instead of
+entering an unconstrained pair-cap Taylor estimate. Equations(2)-(3)
+concern first moments. The full reference potential T_-r g contains
+higher degrees, whose comparison is not supplied by this identity.
+
+2. An exactly calibrated covariance perturbation
+Let A have entries A_12=A_21=1 and every other entry zero. On H=1-perp
+put
+ E=-PAP,
+ C_t=P(I-tA)P|_H,
+ B_t=alpha C_t^(1/2),   0<=t<1.
+All covariances are positive definite on H. These score vectors have
+exactly the law alpha P Y where Y_1,Y_2 are standard normals with
+correlation -t, and Y_3,...,Y_m are independent standard normals,
+independent of the first pair. The common projection does not affect
+winner comparisons, and its expectation is zero in the objective.
+
+We prove, uniformly for 0<=t<=1/2 and large m,
+                         F_U(B_t)>=w-O(m^-4).                    (4)
+This is enough for the finite-curvature comparison; no asymptotic
+expansion of the calibrated maximizing partition is needed.
+
+Write M=max(Y_3,...,Y_m). At zero offsets the exceptional group wins with
+probability
+ p_t(0)=2/(m-1)-Q_t,
+ Q_t=P(Y_1>M,Y_2>M).
+For nonpositive pair correlation, the bivariate Gaussian upper-tail
+probability at equal thresholds is no greater than at correlation0.
+This follows, for example, by differentiating the bivariate CDF in its
+correlation, whose derivative is the positive bivariate density. Hence
+ 0<=p_t(0)-2/m<=Q_0=2/[m(m-1)].                                (5)
+The value of Q_0 follows by conditioning on M: Phi(M) is Beta(m-2,1),
+so E[1-Phi(M)]^2=2/[m(m-1)].
+
+Put a common offset a on labels1,2, and zero on all other labels. Then
+ p_t'(a)=2 E[phi(M-a) Phi((M-a)sqrt((1+t)/(1-t)))].                (6)
+Let b=Phi^(-1)(1-1/m). The event b<=M<=b+1/b has probability bounded
+below by an absolute positive constant. On that event, for
+-K/(mb)<=a<=0 with any fixed K, the integrand in(6) is bounded below
+by c phi(b)>=c' b/m. Therefore, after fixing a sufficiently large K,
+there is a_t in [-K/(mb),0] such that p_t(a_t)=2/m. Symmetry within
+the exceptional pair and among the other labels then makes EVERY mass
+exactly1/m. Strict positivity of(6) also gives uniqueness of this offset.
+
+The convex offset dual is
+ Psi_t(a)=E max(Y_1+a,Y_2+a,M)-2a/m.
+At a_t all individual mass derivatives vanish, so this one-parameter
+critical point is a full optimal offset vector, by convexity and the
+stated two-group symmetry. Its calibration cost satisfies
+ 0<=Psi_t(0)-Psi_t(a_t)
+    =int_(a_t)^0 [p_t(a)-2/m] da
+    <=[K/(mb)]*[2/(m(m-1))]=O(1/(m^3 b)).                      (7)
+
+Moreover E max(Y_1,Y_2,M)>=mu. Indeed its CDF is
+Phi_2(z,z;-t) Phi(z)^(m-2)<=Phi(z)^m for every real z, again by the
+positive correlation derivative. Both maxima are integrable, so this
+stochastic ordering implies the expectation inequality. Multiplying
+Psi_t(a_t)>=mu-O(1/(m^3 b)) by alpha~b/m proves(4).
+
+3. The finite tangent remainder is smaller than its full local model
+The exact trace change is
+ tr(C_t)-tr(P)=2t/m.
+It follows from(1),(4) that
+ 0<=R_U(B_t)<=alpha^2 t/m+O(m^-4).                              (8)
+Choose t_m=1/b. Then
+ R_U(B_(t_m))=O(b/m^3).                                       (9)
+Meanwhile the score displacement is
+ ||B_(t_m)-B0||^2
+  =(alpha^2 t_m^2/4)||E||^2(1+o(1))~1/(2m^2),                 (10)
+because ||E||^2=2-4/m+4/m^2 and b~mu. Thus this example lies at exactly
+the score-displacement scale order1/m under consideration.
+
+For completeness, the fixed-m second derivative of the SAME remainder
+at t=0 has size at least c b^4/m^3. At B0, R_U has zero gradient.
+The symmetric score space decomposes orthogonally into its scalar,
+standard and diagonal-zero shape parts, and its Hessian has no mixed
+terms between these parts by the permutation-invariant contractions in[H].
+It is positive semidefinite on the whole score space by(1).
+
+For a shape matrix T=T^T,T1=0,T_ii=0, the first-order optimizing offsets
+vanish because every conditional facet mean is zero. The exact facet
+second variation therefore gives
+ F_U''(B0)[T,T]=(m-1)V_m||T||^2/m,
+ R_U''(B0)[T,T]=kappa_m||T||^2,
+ kappa_m=1-(m-1)V_m/m~4log m/m~2b^2/m,                          (11)
+as in[E](3)-(4). These are score derivatives, not partition speeds;
+the displayed facet normalization accounts for that distinction.
+
+The shape projection E_sh of E has ||E_sh||^2->2. Explicitly the scalar
+coefficient is2/[m(m-1)], and the standard matrix is P diag(u)P with
+ u_1=u_2=2/m, u_j=-4/[m(m-2)] for j>=3.
+The standard squared norm is8/m^2, and the scalar squared norm is
+4/[m^2(m-1)]; subtracting these from ||E||^2 proves the claim.
+Since B_t'(0)=alpha E/2 and the gradient of R_U at B0 vanishes,
+ (d^2/dt^2)R_U(B_t)|_(t=0)
+ >=(alpha^2/4) kappa_m ||E_sh||^2
+                  ~alpha^2 b^2/m~b^4/m^3.                     (12)
+Combining(9),(12),
+ R_U(B_(t_m)) /
+ [ (t_m^2/2) (d^2/dt^2)R_U(B_t)|_(t=0) ] ->0.                 (13)
+Thus no absolute positive fraction of the FULL local shape-curvature
+prediction remains valid on every such score displacement of order1/m,
+even with exact mass calibration and positive-definite covariances.
+
+4. The remaining quantitative target
+This example does not refute a finite bound
+ R_U(B0+Z)>=c ||Z_shape||^2/m
+under a suitable gauge and neighborhood: its upper bound in(9) is larger
+than the proposed scale m^-3 by a factor of order sqrt(log m). Nor does it
+show that this weaker bound holds. A proof must control a genuine finite
+covariance remainder, rather than identify it with the full local Hessian.
+
+The two exact reductions useful for continuation are(2)-(3) and the
+calibration estimate(7). Neither supplies the higher-chaos coupling or a
+global noise comparison. No master-state files or prior sources are changed.

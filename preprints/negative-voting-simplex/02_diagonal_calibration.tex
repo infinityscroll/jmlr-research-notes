@@ -1,0 +1,287 @@
+\section{Calibrated diagonal derivatives on a coordinate box}
+\label{sec:calibration}
+This section proves the derivative estimate of \cite{hazards}.
+The distinction between a small maximum coordinate and a small
+Frobenius norm is essential.
+
+\begin{proposition}\label{prop:hazard}
+Fix $A>0$. Let $\sum_i\xi_i=0$ and $\max_i\abs{\xi_i}\le A$.
+Set $v_i(t)=1+t\xi_i$, $\sigma_i=\sqrt{v_i}$, and choose the unique
+mean-zero offsets $h(t)$ such that the independent scores
+$\sigma_iZ_i+h_i$ give every label probability $1/m$.
+For all sufficiently large $m$, on $0\le t\le c_A/L^2$, define
+\begin{align*}
+ F_i(x)&=\Phi((x-h_i)/\sigma_i),& f_i(x)&=\partial_xF_i(x),&
+ a_i(x)&=f_i(x)/F_i(x),\\
+ W_0(x)&=\prod_iF_i(x),& A_h(x)&=\sum_i a_i(x),&
+ \rho_{ij}(x)&=W_0(x)a_i(x)a_j(x),\\
+ \omega_{ij}&=\int_\RR\rho_{ij}(x)\dd x,&
+ \ell_i(t)&=\sum_j\omega_{ij}=\int_\RR W_0 A_h a_i\dd x.
+\end{align*}
+The analytic quantity $\omega_{ii}$ is included in $\ell_i$ but is not
+a physical facet weight. Put $M_1=m^{-1}\sum_i\abs{\xi_i}$ and
+$M_2=m^{-1}\sum_i\xi_i^2$. Then
+\begin{align}
+ c\alpha/m&\le\omega_{ij}\le C\alpha/m,\label{eq:weightbox}\\
+ \abs{h_i'}&\le C\sqrt L(\abs{\xi_i}+M_1),&
+ \abs{h_i''}&\le CL^{3/2}(\xi_i^2+M_2),\label{eq:offsetderivatives}\\
+ \abs{\ell_i''(t)}&\le C\alpha L^2(\xi_i^2+M_2).
+ \label{eq:ell-second}
+\end{align}
+The constants depend only on $A$, not on $\norm{\xi}_2$.
+If $T$ has density proportional to $\phi(x)^2\Phi(x)^{m-2}$, then
+\begin{equation}\label{eq:ell-exact}
+ \ell_i(0)=\alpha,\qquad
+ \ell_i'(0)=-\alpha\eta_m\xi_i,\qquad
+ \eta_m=\frac{m-1-m\Var T}{2(m-2)}\in[1/4,1/2].
+\end{equation}
+In particular,
+\begin{equation}\label{eq:ell-Taylor}
+ \abs{\ell_i(t)-\alpha+\alpha\eta_m t\xi_i}
+       \le \tfrac12 C\alpha L^2t^2(\xi_i^2+M_2).
+\end{equation}
+\end{proposition}
+
+\subsection{Uniform threshold moments}
+We first prove the analytic estimate needed for all differentiations.
+
+\begin{lemma}\label{lem:threshold}
+For a fixed small $\delta_0>0$, suppose
+\begin{equation}\label{eq:thresholdbox}
+ \epsilon:=\max_i\abs{v_i-1}\le\delta_0/L,
+ \qquad H:=\max_i\abs{h_i}\le\delta_0/\sqrt L.
+\end{equation}
+Balance is not required here. For every fixed pair of nonnegative
+integers $p,q$, uniformly in all $i,j$, including $i=j$,
+\begin{equation}\label{eq:thresholdmoments}
+ \omega_{ij}\asymp\alpha/m,\qquad
+ \E_{ij}\!\left[(m\max_k a_k)^p(1+\abs{x})^q\right]
+                    \le C_{p,q}L^{(p+q)/2},
+\end{equation}
+where $\E_{ij}$ is expectation under $\rho_{ij}/\omega_{ij}$.
+\end{lemma}
+\begin{proof}
+Write
+\begin{equation}\label{eq:baselineZ}
+ Z_0=\int\phi(x)^2\Phi(x)^{m-2}\dd x
+              =\frac{\mu_m}{m(m-1)}=\frac\alpha m
+              \asymp\frac{\sqrt L}{m^2}.
+\end{equation}
+The identity follows by integration by parts in
+$\mu_m=m\int x\phi(x)\Phi(x)^{m-1}\dd x$. The order
+$\mu_m\asymp\sqrt L$ follows from the Gaussian union bound for the
+upper estimate and the usual Mills lower bound at a fixed fraction of
+$\sqrt{2\log m}$ for the lower estimate.
+
+For $x\ge2H$, set $z=(x+H)/\sigma_{\min}\ge0$. Every standardized
+argument $y_k=(x-h_k)/\sigma_k$ is nonnegative and belongs to
+$[z-C\epsilon z-CH,z]$. Comparing Gaussian densities gives
+\begin{align}
+ \rho_{ij}(x)\dd x
+ &\le C\phi(z)^2\Phi(z)^{m-2}
+       e^{C\epsilon z^2+CHz+CH^2}\dd z,\label{eq:thresholdupper}\\
+ \max_k a_k(x)&\le C\frac{\phi(z)}{\Phi(z)}
+       e^{C\epsilon z^2+CHz+CH^2}.
+ \label{eq:hazardupper}
+\end{align}
+For $i=j$ the extra factor $F_i^{-1}$ is at most $2$, so the same
+estimates apply. For a lower weight bound instead use
+$y=(x-H)/\sigma_{\max}$ on $x\ge2H$. The lower density is a constant
+times $\phi(y)^2\Phi(y)^{m-2}e^{-C\epsilon y^2-CHy-CH^2}$.
+For $i=j$, use $\Phi(y)^{m-1}\ge\frac12\Phi(y)^{m-2}$.
+The omitted interval near zero has exponentially small baseline mass.
+The baseline law has $\E T^2\le CL$: below a fixed multiple of
+$\sqrt L$ this is immediate, and above it the factor $\phi^2$,
+divided by \eqref{eq:baselineZ}, gives an integrable Gaussian tail;
+the negative half-line is exponentially suppressed by $\Phi^{m-2}$.
+Jensen's inequality therefore bounds the lower integral below by $cZ_0$.
+
+For the upper moments, put $s=1-\Phi(z)$ on $z\ge0$.
+Mills bounds give
+$\phi(z)\le Cs\sqrt{\log(e/s)}$ and $z^2\le2\log(1/s)$.
+Also
+$CHz\le CH\sqrt L/2+CHz^2/(2\sqrt L)$.
+Thus \eqref{eq:thresholdupper}--\eqref{eq:hazardupper}, including the
+absolute Jacobian $\abs{\dd z}=\abs{\dd s}/\phi(z)$, bound the desired unnormalized moment by
+\begin{equation}\label{eq:beta-integral}
+ C_{p,q}m^p\int_0^{1/2}(1-s)^{m-p-2}
+       s^{p+1-2\theta}[\log(e/s)]^{(p+q+1)/2}\dd s,
+ \quad 0\le\theta\le C_{p,q}\delta_0/L.
+\end{equation}
+For large $m$, substitution $u=ms$ and splitting at $u=1$ give
+\[
+ \int_0^{1/2}(1-s)^{m-p-2}s^{p+1-2\theta}
+       [\log(e/s)]^b\dd s
+ \le C_{p,q}m^{-p-2+2\theta}L^b.
+\]
+On $u\le1$ use integrability of a fixed positive power times
+$\log(1/u)^b$; on $u\ge1$ use $(1-s)^{m-p-2}\le e^{-ms/2}$.
+Since $m^{2\theta}$ is bounded, division by $Z_0$ proves
+\eqref{eq:thresholdmoments} on $x\ge2H$.
+
+On $x\le-2H$, the product $W_0$ is at most
+$2^{-m}e^{-cmx^2}$ and every hazard is at most $C(1+\abs{x})$.
+On $[-2H,2H]$, every $F_i$ is bounded by a fixed number below one,
+and the hazards are bounded. These two regions contribute at most
+$C_{p,q}m^pc_0^m$ for some $c_0<1$, negligible relative to $Z_0$.
+This also verifies all negative-threshold tails and completes the proof.
+\end{proof}
+
+\subsection{A componentwise inverse and the calibrated acceleration}
+The balanced offset exists uniquely in the mean-zero gauge: the Gaussian
+offset dual is coercive there, its gradient is the mass vector minus $U$,
+and its Hessian is the complete Laplacian with positive weights
+$\omega_{ij}$. These integral weights are smooth for positive variances,
+so the implicit function theorem gives smooth $h(t)$.
+
+\begin{lemma}\label{lem:componentinverse}
+If $c\alpha/m\le\omega_{ij}\le C\alpha/m$ for $i\ne j$, the
+associated Laplacian $\calL$ satisfies, for mean-zero $b$,
+\begin{equation}\label{eq:componentinverse}
+ \abs{(\calL^{-1}b)_i}
+      \le\frac C\alpha\left(\abs{b_i}+\frac1m\sum_j\abs{b_j}\right).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Subtract $c\alpha/m$ from every edge weight. The remainder is a graph
+Laplacian $\calL_0$, and on $\one^\perp$,
+$e^{-s\calL}=e^{-c\alpha s}e^{-s\calL_0}$.
+The second semigroup is doubly stochastic, hence contracts $\ell^1$.
+Integration gives $\norm{\calL^{-1}b}_1\le\norm b_1/(c\alpha)$.
+For $y=\calL^{-1}b$, the row equation
+$\deg_i y_i=b_i+\sum_{j\ne i}\omega_{ij}y_j$, together with
+$\deg_i\ge c\alpha$ and the upper weight bound, proves
+\eqref{eq:componentinverse}.
+\end{proof}
+
+Define the threshold velocities and logarithmic density derivatives
+\begin{align}
+ b_i(x)&=h_i'+\frac{\xi_i}{2v_i}(x-h_i),\label{eq:bvelocity}\\
+ L_i(x)&=\partial_t\log f_i
+   =-\frac{\xi_i}{2v_i}+\frac{\xi_i(x-h_i)^2}{2v_i^2}
+                      +\frac{h_i'(x-h_i)}{v_i}.
+ \label{eq:logdensity}
+\end{align}
+The density transport equation $\partial_t f_i=-\partial_x(f_ib_i)$
+and integration by parts in the winning-probability integral give
+\begin{equation}\label{eq:massflux}
+             0=p_i'=\sum_{j\ne i}\int\rho_{ij}(b_i-b_j)\dd x.
+\end{equation}
+While \eqref{eq:thresholdbox} holds, the threshold moment lemma and
+Lemma~\ref{lem:componentinverse} solve this equation for $h'$ and give
+the first estimate in \eqref{eq:offsetderivatives}.
+
+This estimate closes the box by continuation. Starting with $h(0)=0$,
+it gives $\norm{h(t)}_\infty\le C_A t\sqrt L$.
+Choose a bootstrap bound twice this size and then choose $c_A$ small.
+For $t\le c_A/L^2$ the offset and variance bounds lie strictly inside
+\eqref{eq:thresholdbox}. The constants in that box do not depend on
+the bootstrap constant. Thus the first derivative estimate and the
+weight comparison hold on the whole interval, without smallness of
+$\norm{h}_2$ or $\norm{\xi}_2$.
+
+For the second derivative set
+\begin{align}
+ S(x)&=\sum_k a_kb_k,&
+ P_{ij}&=L_i+L_j+a_ib_i+a_jb_j-S,\label{eq:Pij}\\
+ c_i(x)&=-\frac{\xi_i^2(x-h_i)}{2v_i^2}
+                       -\frac{\xi_ih_i'}{2v_i}.
+\end{align}
+Then $\partial_t\log\rho_{ij}=P_{ij}$, also for $i=j$, and
+$b_i'=h_i''+c_i$. For every fixed finite $k$, the moment lemma gives
+\begin{align}
+ \norm{b_i}_{L^k(ij)}&\le C_k\sqrt L(\abs{\xi_i}+M_1),\\
+ \norm{P_{ij}}_{L^k(ij)}&\le C_kL(\abs{\xi_i}+\abs{\xi_j}+M_1).
+ \label{eq:P-moment}
+\end{align}
+For the summed term use
+$\sum_k a_k(\abs{\xi_k}+M_1)\le2m\max_k a_k M_1$.
+This step retains the contributions of all other labels without losing
+a factor $m$.
+
+Differentiating \eqref{eq:massflux} yields exactly
+\begin{equation}\label{eq:massacceleration}
+ \calL h''=-b^{(2)},\qquad
+ b_i^{(2)}=\sum_{j\ne i}\int\rho_{ij}
+           \{P_{ij}(b_i-b_j)+c_i-c_j\}\dd x.
+\end{equation}
+H\"older's inequality, \eqref{eq:P-moment}, and $M_1^2\le M_2$ give
+$\abs{b_i^{(2)}}\le C\alpha L^{3/2}(\xi_i^2+M_2)$ and
+$m^{-1}\sum_i\abs{b_i^{(2)}}\le C\alpha L^{3/2}M_2$.
+The right side has mean zero by pairwise antisymmetry. Applying
+Lemma~\ref{lem:componentinverse} proves the asserted bound for $h_i''$.
+
+\subsection{Second derivatives of the hazard coefficients}
+Since $\partial_t^2\rho_{ij}=\rho_{ij}(P_{ij}^2+P_{ij}')$, it remains
+to estimate the two terms. Differentiating \eqref{eq:logdensity} gives
+\[
+ L_i'=\frac{\xi_i^2}{2v_i^2}
+ -\frac{\xi_i^2(x-h_i)^2}{v_i^3}
+ -\frac{2\xi_i h_i'(x-h_i)}{v_i^2}
+ +\frac{h_i''(x-h_i)}{v_i}-\frac{(h_i')^2}{v_i}.
+\]
+Its conditional $L^k$ norm is at most $C_kL^2(\xi_i^2+M_2)$.
+Moreover
+\[
+ a_i'=a_i(L_i+a_ib_i),\qquad
+ (a_ib_i)'=a_i\{(L_i+a_ib_i)b_i+b_i'\}.
+\]
+The same bound holds for this last expression. For $S'$ first sum
+pointwise using
+\[
+ \sum_k a_k\xi_k^2\le m\max_k a_k M_2,\qquad
+ \sum_k a_k(\abs{\xi_k}+M_1)^2\le C m\max_k a_k M_2.
+\]
+An additional factor $\max a_k$ handles the terms with $a_k^2$.
+Lemma~\ref{lem:threshold} then yields
+$\norm{S'}_{L^k(ij)}\le C_kL^2M_2$. Consequently
+\begin{equation}\label{eq:rho-second-bound}
+ \E_{ij}(P_{ij}^2+\abs{P_{ij}'})
+                   \le CL^2(\xi_i^2+\xi_j^2+M_2).
+\end{equation}
+All derivatives are dominated by the integrable functions just estimated,
+so differentiation under the integral is legitimate. Summing
+\eqref{eq:rho-second-bound} with $\omega_{ij}\le C\alpha/m$, including
+$j=i$, proves \eqref{eq:ell-second}.
+
+\subsection{The exact regular coefficient}
+At $t=0$, all variances are one and all offsets are zero. Equation
+\eqref{eq:massflux} gives $h_i'(0)=-(\E T)\xi_i/2$.
+Put $M=\E T$ and $a(x)=\phi(x)/\Phi(x)$. Then
+\[
+ \left.\partial_t\log a_i\right|_{t=0}
+      =\frac{(x+a(x))(x-M)-1}{2}\,\xi_i=:k(x)\xi_i.
+\]
+Because $\sum_i\xi_i=0$, both $\partial_tW_0$ and
+$\partial_tA_h$ vanish at zero. Thus
+$\ell_i'(0)=\alpha\E_T k(T)\xi_i$, and
+$\ell_i(0)=mZ_0=\alpha$.
+
+The logarithmic derivative of the tie density is $-2x+(m-2)a(x)$.
+Integration by parts against $x-M$ gives
+\[
+             -2\Var T+(m-2)\Cov(T,a(T))=-1.
+\]
+It follows that $\E k(T)=[m\Var T-m+1]/[2(m-2)]$.
+The tie density has logarithmic second derivative at most $-2$, so
+$\Var T\le1/2$. For the reverse bound, decompose the independent
+regular scores into their common mean $\overline Z$ and their centered
+vector. Conditioning on $Z_i=Z_j$ and on their being maximal depends
+only on the centered vector. The raw threshold is
+$T=\overline Z+T_H$, with independent $\Var\overline Z=1/m$.
+Hence $\Var T\ge1/m$. This proves \eqref{eq:ell-exact} and its
+coefficient interval. Integrating \eqref{eq:ell-second} twice proves
+\eqref{eq:ell-Taylor}, completing Proposition~\ref{prop:hazard}.
+
+\begin{remark}[Normalization check]
+The physical degree is $\ell_i-\omega_{ii}$. At zero,
+$\omega_{ii}'=-2\alpha\eta_m\xi_i/m$. Therefore Price's formula
+gives, in variance coordinates,
+\[
+ F_v''[\xi,\xi]
+       =-\frac\alpha4\left(\frac{m-1}{m}-\Var T\right)\norm\xi_2^2.
+\]
+In standard-deviation coordinates the corresponding balanced Hessian
+is $\alpha\Var T\norm\xi_2^2$. These local checks do not replace the
+uniform coordinatewise remainder proved above.
+\end{remark}

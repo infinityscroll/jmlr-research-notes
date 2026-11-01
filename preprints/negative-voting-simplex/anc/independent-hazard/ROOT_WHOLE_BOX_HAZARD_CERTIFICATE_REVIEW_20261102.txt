@@ -1,0 +1,70 @@
+ROOT REVIEW OF THE INDEPENDENT WHOLE-BOX HAZARD CERTIFICATE
+2 November 2026 local. Scoped analytic reconstruction, not a global verdict.
+
+Reviewed final source:
+hazard/INDEPENDENT_WHOLE_BOX_HAZARD_HESSIAN_CERTIFICATE_20261102.txt
+SHA256 3b1b8f6d8beda72bdc00f5fb50a0f00684b3766d4e63c7933347a21f05049dde.
+
+The source reconstructs the structured remainder from explicit Gaussian
+integrals. It proves an entire variance box of radius c/L, all real
+directions and polarized mixed derivatives, extending the narrower
+centered bounded-direction path needed by the published application.
+This review reads that derivation directly, not earlier PASS labels.
+
+1. THE WHOLE-THRESHOLD INTEGRAL
+For positive thresholds, the common upper coordinate z bounds every
+standardized coordinate, and density ratios cost only
+exp(C(epsilon z^2+H z+H^2)). The analytic i=j term has a harmless extra
+1/F_i<=2; it is not mistaken for an ordinary physical facet. Substitution
+s=1-Phi(z) removes exactly one Gaussian density factor. The remaining
+power is s^(p+1-beta), not s^(p-beta); the logarithmic power is
+(p+q+1)/2. Therefore the leading m power after y=ms is m^(-2+beta).
+Since beta=O(1/L), m^beta is uniformly bounded. The beta-integral
+calculation controls moments of total degree through four, exactly what
+the later pointwise ledger uses.
+
+The lower weight bound on s in[1/m,2/m] has length1/m and density
+comparable to sqrt(L)/m. Negative thresholds have exponentially small
+product CDFs and polynomial hazards; the short central interval likewise
+has a uniform q0^m factor. No omitted left tail or uncontrolled m factor
+was found. All constants can be fixed for finitely many moment orders.
+
+2. OFFSETS AND COMPONENTWISE CONTROL
+The complete graph Hessian gives unique centered balanced offsets for
+every positive variance vector. Under the small moment box, subtracting
+the lower complete graph leaves a genuine graph Laplacian. Its doubly
+stochastic heat semigroup yields the L1 resolvent bound. The individual
+row equation then gives the claimed coordinate-plus-mean estimate;
+an L2 spectral bound alone would not have sufficed.
+
+Integrating the first derivative along the straight segment from1 to v
+strictly improves the offset-size bound, closing the whole c/L box by
+continuity. This avoids assuming small offsets before proving them.
+The second derivative equation differentiates the balanced flux itself,
+retains the actual h'', and its forcing remains centered by pair symmetry.
+
+3. DIFFERENTIATED DENSITY LEDGER
+I re-derived dot F, dot f, dot a, P_ij, dot b, and dot lambda directly.
+The two mixed xi*h'*q terms combine with coefficient minus2 in (6.1).
+The complete S=sum a_k b_k is retained. Its first and second derivative
+costs use sum r_k=2m M1 and sum d_k=2m M2, canceling the 1/m in the
+max-hazard normalization. The normalized moments of all U,Y polynomials
+have total degree at most4 and hence cost at most L^2 where required.
+Summing omega_ij times these estimates gives alpha L^2 d_i, without an
+extra m. The analytic diagonal is included throughout.
+
+The optimized polarization bound follows from the diagonal quadratic
+estimate for every real direction. It does not presume a sign for the
+hazard Hessian. The centered regular coefficient has the exact variance
+formula eta_m=[m-1-m Var(T)]/[2(m-2)]; the strong-convexity upper variance
+bound and independent common-Gaussian-coordinate lower bound give
+1/4<=eta_m<=1/2 with the stated normalization.
+
+VERDICT AND LIMITS
+No missing term, circular offset bound, tail omission, or extra dimension
+factor was found. This independently reconstructed certificate supplies
+the structured hazard input used in the global summed-row argument.
+The proof of covariance concavity, the local all-amplitude noise comparison,
+and the full conjecture remain separate from this review. This is internal
+mathematical evidence, not external expert endorsement or formal proof
+verification. Original sources and published claims are unchanged.

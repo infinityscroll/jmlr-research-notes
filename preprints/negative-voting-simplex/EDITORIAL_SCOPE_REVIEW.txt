@@ -1,0 +1,173 @@
+BOUNDED EDITORIAL AND MATHEMATICAL-SCOPE REVIEW
+Negative Gaussian Simplex Stability for Sufficiently Many Parts
+2 November 2026
+
+STATUS AND LIMIT
+
+The reviewed integrated TeX agrees with the stated interfaces of the existing
+analytic proof package after the corrections recorded below. No additional
+blocking contradiction in signs, normalization, logical scope, or source
+locations was identified in this bounded comparison. This is an AI-agent
+editorial and interface audit. It is not a fresh independent proof of all
+analytic lemmas, external expert review, a priority determination, or Lean
+verification of the Gaussian theorem.
+
+The complete mathematical claim still requires the supplied longer proof
+notes. This audit has not replaced their arguments with their historical PASS
+labels. The appendix correctly says that the PDF alone is not self-contained.
+
+MATERIAL INSPECTED
+
+All twelve TeX files of the integrated preprint were read. The comparison
+used the current integrated theorem, local reconstruction, exterior
+reconstruction, assembly/localization ledger, and arbitrary-PSD ray proof.
+The original cycle-refined Ehrhard derivation and its all-dimensional
+covariance foundation were inspected for dependency scope. The classical
+Hodge successor and its reciprocal-coordinate regularity reduction were
+also inspected. The current manuscript's explicit limitations were compared
+with these sources.
+
+CORRECTIONS REQUESTED AND CONFIRMED
+
+1. The local unequal-row decomposition now first normalizes the scores to
+squared Frobenius norm w. Consequently tr(E)=0, which is required for
+E_d = m P diag(diag E) P/(m-2) to leave a zero-diagonal remainder E_s.
+The exact radial identity is explicitly used to restore the original scale.
+
+2. The Procrustes sum explicitly runs over the m-1 eigenvalues of K restricted
+to H=1-perp, including zeros on that subspace. It does not include the forced
+zero eigenvalue in the all-ones direction of the centered m-by-m matrix.
+
+3. The mass-envelope section specifies that its covariance derivatives are
+of Gamma_p at fixed masses, defines the normalized edge offsets q_e, and
+identifies the whitened covariance perturbation and offset differences.
+
+4. The local norm uses the Greek symbol psi rather than a literal word.
+The renamed analytic-interface environment is referenced consistently.
+
+5. The earlier sentence declining an endpoint-minimization assertion has
+been replaced with explicit credit to Garcia-Soriano--Miyauchi. The algorithm
+is stated as randomized, with slack and fixed-m dependence, and UGC is
+attached only to hardness.
+
+SCIENTIFIC SCOPE CONFIRMED AT THE INTERFACE LEVEL
+
+The main theorem has one existential absolute alphabet threshold, all finite
+N >= m-1, the entire negative voting interval including its negative endpoint,
+and arbitrary measurable simplex-valued single assignments. It has no
+prescribed-mass constraint. The manuscript does not claim the remaining small
+alphabets, all negative correlations, positive noise, or a two-rule theorem.
+
+The covariance framework retains the derivative factor 1/2. The Hodge
+normal-strain bound remains separate from the stronger cycle-refined
+covariance/offset inequality. The latter is still an explicit input to the
+mass-envelope proof; the manuscript does not falsely describe the entire
+proof as independent of the finite-fan cycle machinery.
+
+The mass localization first obtains a positive mass box before invoking the
+mass envelope. Its deficit is D = delta + r(w-W), and the exterior comparison
+uses J = D/r, including when W>w. The exterior floor is strictly positive.
+The two branch domains d<=1/m and d>1/m cover every competitive assignment.
+
+The local comparison retains the positive r||M-B||^2 term and the resulting
+exact cancellation with the affine first-chaos term. The moderate-amplitude
+cap is not used by itself as an all-amplitude bound; the small-amplitude
+argument is separately identified. Uniform analytic constants and their
+proof obligations remain outside the formal Lean claim.
+
+The exterior second-chaos and full signed-tail interfaces give exactly
+ D[1 - C r L^3 - C r^2 m^(7/4) L^(7/2)].
+At the voting endpoint the two error scales tend to zero. The manuscript
+uses the exterior floor to pay its absolute truncation error, rather than
+claiming that error is a global relative bound near the optimum.
+
+The equality argument uses zero nonnegative routing loss and Gaussian-null
+regular-score ties, so it applies to fractional rules. It does not infer
+purity or regular boundaries for an arbitrary full-noise minimizer.
+
+The discrete theorem uses low-degree influences with thresholds independent
+of voter count. The UGC soundness calculation uses one averaged simplex-valued
+rule in both noise slots. The fixed-alphabet MAX-m-CUT consequence is not
+presented as a variable-alphabet polynomial-time statement or a deterministic
+derandomization.
+
+PRIMARY-SOURCE VERIFICATION
+
+Mulgund, arXiv:2607.14087v4, Theorem 2.1 and Remarks 2.2--2.3:
+https://arxiv.org/html/2607.14087v4
+The credited statement applies to unit-diagonal PSD K with
+K - 11^T/m PSD, including singular K, at a common threshold. The transformed
+equal-row test in the manuscript has those hypotheses. No arbitrary
+rectangular comparison or unequal-variance extension is inferred. The
+arXiv authorship entry confirms Abhijeet Mulgund.
+
+Isaksson--Mossel, arXiv:0903.3362v3, Theorem 7.1 and Lemma 7.3:
+https://arxiv.org/html/0903.3362v3
+Theorem 7.1 has the same low-degree-influence, simplex-valued-rule,
+negative-channel, mass-preserving, and finite-dimensional scope used by the
+manuscript. The transfer includes a pure Gaussian assignment in dimension
+k(m-1). The endpoint is admissible for the sufficiently large alphabets here.
+
+Colombo--Figalli--Jhaveri, 2017, Theorems 1.1, 2.2 and 3.2:
+https://doi.org/10.2422/2036-2145.201510_009
+https://people.math.ethz.ch/~afigalli/papers-pdf/Lipschitz-changes-of-variables-between-perturbations-of-log-concave-measures.pdf
+Author names, title, year and DOI were verified. Theorem 1.1 concerns a
+compactly supported semiconvex perturbation of the same uniformly convex
+reference potential. The manuscript's reciprocal-coordinate construction
+addresses precisely that requirement. The reverse-map use of Theorem 3.2
+requires an upper source-potential Hessian bound; source convexity is not a
+hypothesis of that stated theorem.
+
+The credited FJ endpoint characterization remains distinct from all-algorithm
+hardness, and Heilman's three-label result is identified as prior work.
+
+FORMALIZATION AND AUTHORSHIP BOUNDARY
+
+The manuscript calls the Lean project partial and does not claim Lean
+verification of the Gaussian theorem, Gaussian uniform constants, analytic
+interfaces, or UGC reduction. Scalar eventual-decay statements for supplied
+constants are distinguished from proving the existence of uniform analytic
+constants. A conditional assembly theorem does not certify its premises.
+This review did not independently build or audit the Lean project.
+
+The byline and ORCID match the details supplied by the user. No affiliation
+has been invented. The assistance statement identifies AI assistance and
+internal AI reconstructions, without claiming external author endorsement.
+No arXiv submission or acceptance is asserted by this audit.
+
+MECHANICAL SOURCE CHECKS
+
+All TeX reference labels and citation keys resolve; there are no duplicate
+labels. All 28 explicit ancillary-file locators in the bibliography resolve
+to existing public proof sources through the declared ancillary directory
+mapping. These checks do not certify the mathematical contents or the final
+archive. Root's packaging validation remains responsible for ensuring that
+the copied ancillary bytes and generated archive match those sources.
+
+The final PDF rendering and visual inspection are separate tasks. This audit
+compares the mathematical source and its dependency boundary.
+
+FOLLOW-UP CRITICAL REVIEW
+
+The focused hostile reconstruction in CRITICAL_DEPENDENCY_REVIEW.txt checks
+the cycle-refined mixed estimate and its regularization/envelope passage.
+The literal 2L normalized-offset bound was replaced in the new preprint
+by 2log(m/c)<=C_c L with fixed mass-box dependence explicit. The independent
+Gaussian coupling argument for regularization is now spelled out. These
+changes have been included in the updated TeX snapshot below.
+
+REVIEWED TEX SOURCE SNAPSHOT
+Captured at 2026-11-01T22:30:44.599223+00:00
+
+13004527b97a5dd2696bc7b7a569588650f784c49a58aa58a0b0966a4c950baf  01_statement_inputs.tex
+e97933c02063ee89e54a13955efd81d87632450af575cac89b7cfde08665a77b  02_diagonal_calibration.tex
+c4ea4f5ee6b6064c7149d9715e5794f190440dce6d06e605cf0bd37cc95a24ce  02_foundation_localization.tex
+61d521da2a7838de549d71a3e3d33ec48984fd5ef959842547910c9f18677808  03_covariance_gap.tex
+1a2f1057905e5a68a2d956206f4f41b528edd51cb2199170a726cfb101cfdea3  03_radial_coercivity.tex
+168b4522dbfafa7c391f9b0bc9abe44886b969ab969f2f88acd229b2a0fb2495  04_exterior_assembly.tex
+52bb8b6049ee3e361c2f73af8c44ef41e27323d9d663c27d53201a1b197dab05  04_local_comparison.tex
+c19a0057a8c2b5dcda0c1f63c7e2dd0e1e0a8203b736c617faa73838e61ee53e  06_discrete_consequences.tex
+1cec2efacdd30370fa8885364b1c6c65b9f5ea21654a0297f2d0e0c8d676b6ae  07_dependency_ledger.tex
+3e0b3d3d33b9761ff9cc5889225dff53a30252e9fe2724942954fff48fab747e  08_references.tex
+ccd0597d0dece9bb416e15e2cc90e487acd50ca3a2a60185a44a048e8e65305d  author.tex
+3ce7430a5d1eefc017fe8d468d590f15ed2e16e78ba48c53db8b93ebe50f7d6c  main.tex

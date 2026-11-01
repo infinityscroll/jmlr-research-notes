@@ -10,14 +10,50 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest discover -s tests -p 'test_release_*.py'
+      - run: python scripts/build_preprint.py --check
       - run: python verify_release.py
         env:
           OPENBLAS_NUM_THREADS: '1'
           OMP_NUM_THREADS: '1'
           PYTHONDONTWRITEBYTECODE: '1'
+  lean-kernel-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64 # v1
+        with:
+          lake-package-directory: formalization/negative-voting
+          use-mathlib-cache: 'true'
+          build: 'true'
+          test: 'false'
+          lint: 'false'
+      - name: Audit every project theorem and its axioms
+        working-directory: formalization/negative-voting
+        run: python3 verify.py
+  preprint-tex-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Install standard TeX packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends texlive-latex-extra texlive-fonts-recommended lmodern
+      - name: Compile arXiv source with pdfLaTeX
+        working-directory: preprints/negative-voting-simplex
+        run: |
+          mkdir -p "$RUNNER_TEMP/preprint-pdf"
+          pdflatex -halt-on-error -interaction=nonstopmode -output-directory "$RUNNER_TEMP/preprint-pdf" main.tex
+          pdflatex -halt-on-error -interaction=nonstopmode -output-directory "$RUNNER_TEMP/preprint-pdf" main.tex
+          pdflatex -halt-on-error -interaction=nonstopmode -output-directory "$RUNNER_TEMP/preprint-pdf" main.tex

@@ -1,0 +1,2 @@
+# These are byte-identical historical sources; preserve their terminal blank lines.
+preprints/negative-voting-simplex/anc/** whitespace=-blank-at-eof

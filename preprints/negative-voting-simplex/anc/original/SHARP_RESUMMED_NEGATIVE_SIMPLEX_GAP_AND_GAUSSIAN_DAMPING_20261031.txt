@@ -1,0 +1,161 @@
+SHARP RESUMMED NEGATIVE SIMPLEX GAP WITH MILD GAUSSIAN DAMPING
+31 October 2026. Branch derivation; independent full audit pending.
+
+This is a pointwise bound on the EXACT negative-noise reference potential.
+It retains all chaoses. It replaces an exponentially-small-in-m gap
+constant by the correct first-moment scale, and is asymptotically sharp
+on typical Gaussian balls at voting correlations. It is not an arbitrary-
+speed quadratic-operator bound or a full Standard Simplex theorem.
+
+1. Gaussian utility weights, including all constants
+Let Z_1,...,Z_m be independent standard normals, and define
+  P_i(a)=P(Z_i+a_i=max_k(Z_k+a_k)), a in R^m.
+For i!=j the derivative weight is
+  w_ij(a)=int_R phi(t-a_i)phi(t-a_j)
+                           product_(k!=i,j)Phi(t-a_k) dt. (1)
+The Jacobian of P is the weighted Laplacian L(a): its diagonal is the
+row sum of w_ij and its off-diagonal entry is -w_ij. Differentiation under
+the one-dimensional Gaussian integral proves this directly; ties have
+probability zero and all weights are positive.
+
+At a=0 put
+  w0=int phi(t)^2 Phi(t)^(m-2) dt
+     =mu_m/[m(m-1)],  mu_m=E max_i Z_i.                 (2)
+The equality follows by integration by parts of
+m int t phi(t)Phi(t)^(m-1)dt.
+Let T have probability density phi(t)^2Phi(t)^(m-2)/w0 and let M=E T.
+For m>=2, M>=0; m=2 gives zero by symmetry, and for m>2 the density at t
+is larger than at -t for t>0. Its potential has second derivative at
+least2 because log Phi is concave. All exponential tilts have the same
+curvature bound, so the one-dimensional Brascamp--Lieb variance bound
+gives Var(T under tilt lambda)<=1/2. Integrating the second derivative
+of the log moment-generating function gives, for every real lambda,
+
+  E exp(lambda T)<=exp(lambda M+lambda^2/4).             (3)
+
+All such moments exist by Gaussian domination. This uses the same
+classical BL variance input as the covariance proof, not an unverified
+concentration assumption. One also has the exact formula
+  M=[E(max_i Z_i)^2-1]/mu_m,                            (4)
+by the two integrations by parts in the exact second-chaos computation.
+Consequently M^2=O(log m).
+
+2. Uniform pair-weight comparison under bounded utility means
+Assume max_i|a_i|<=U, U>=0. For a lower bound in (1), set t=u+U and
+delta_i=U-a_i, delta_j=U-a_j, both in [0,2U]. The other CDF factors are
+at least Phi(u). Thus
+  w_ij(a)>=w0 E exp[-(delta_i+delta_j)T
+                              -(delta_i^2+delta_j^2)/2]
+           >=w0 exp[-4UM-4U^2],                        (5)
+where the last step is Jensen, M>=0 and delta_i+delta_j<=4U.
+For the upper bound set t=u-U and delta_i=U+a_i, delta_j=U+a_j.
+The CDF factors are now at most Phi(u), so (3) yields
+  w_ij(a)<=w0 E exp[(delta_i+delta_j)T
+                              -(delta_i^2+delta_j^2)/2]
+           <=w0 exp[4UM+4U^2].                         (6)
+Common shifts of all means leave the weights unchanged. Thus U may always
+be chosen as half the range of the mean vector, after centering its two
+extremes, regardless of its original common offset. In particular
+
+ e^(-E(U))w0<=w_ij(a)<=e^(E(U))w0,
+ E(U)=4UM+4U^2.                                       (7)
+
+No factor2^(-m), union bound over all cells, or tail truncation occurs.
+The upper estimate may discard the favorable negative square term; this
+does not affect its exact limiting value1 at U=0.
+
+3. Exact integration of a two-label mean swap
+Suppose a_j-a_i=delta>=0, with max|a_k|<=U. Hold all other means fixed,
+and interpolate a_i,a_j symmetrically about their common midpoint, from
+equal means at delta'=0 to their actual separation delta. Every point
+on this interpolation still has coordinate absolute value at most U.
+At its initial point P_i=P_j. Along it,
+  d(P_j-P_i)/d delta'
+    =2w_ij+(1/2)sum_(k!=i,j)(w_ik+w_jk).
+The coefficients sum to m. Therefore (7) gives the exact comparison
+
+  m w0 delta e^(-E(U))
+      <=P_j(a)-P_i(a)
+      <=m w0 delta e^(E(U)).                           (8)
+
+This is a linear gap times a global damping factor, with no unjustified
+large-gap saturation. At large U the lower damping is sufficient for
+compatibility with probabilities bounded by1.
+
+4. Application to the reference simplex at negative correlation
+Work in H=1-perp subset R^m. The regular cells are g_i(x)=1{x_i=max_k x_k}.
+Their first-moment vectors are
+  b_i=alpha P e_i, alpha=mu_m/(m-1).
+Let 0<r<1 and sigma=sqrt(1-r^2), and write G_i=T_-r g_i.
+Adding a common independent normal coordinate does not affect the maximum,
+so the utility representation uses a_i=-r x_i/sigma. At a reference
+winning point x in g_i, a_j-a_i=r(x_i-x_j)/sigma>=0. Apply (8) with
+  U_x=r[max_k x_k-min_k x_k]/(2sigma),
+using the common-shift invariance and m w0=alpha to obtain
+
+ (r/sigma)(b_i-b_j).x e^(-E(U_x))
+       <=G_j(x)-G_i(x)
+       <=(r/sigma)(b_i-b_j).x e^(E(U_x)).                 (9)
+
+The comparison is exact for every x, including arbitrarily remote
+winning facets. It also proves the correct strict ordering whenever
+x_i>x_j. At a tie both sides and the potential difference vanish.
+
+For a simpler Euclidean radial corollary, U_x<=r|x|/sigma and Young's
+inequality gives 4UM<=1+4M^2U^2. Thus
+
+ G_j(x)-G_i(x)
+  >=e^-1(r/sigma)(b_i-b_j).x exp(-kappa_r |x|^2),
+ kappa_r=4(M^2+1)r^2/(1-r^2).                         (10)
+
+This keeps the r^2 log(m) dependence in the exponent instead of replacing
+it by an m-independent positive radial exponent.
+
+5. Actual assignment loss and the size of the damping moments
+For any relaxed assignment f (balanced or not), define
+  J_f(x)=max_i b_i.x-sum_i f_i(x)b_i.x>=0,
+  D_-(f)=sum_i E[(f_i-g_i)G_i].
+At each reference-winning label i, sum the inequalities (9) against
+f_j(x). This gives
+
+ (r/sigma)E[J_f(X)e^(-E(U_X))]
+       <=D_-(f)
+       <=(r/sigma)E[J_f(X)e^(E(U_X))],            (11)
+
+whenever the upper expression is finite; the pointwise statement remains
+valid without an integrability assertion. In particular the lower bound
+is always well defined and
+  D_-(f)>=e^-1(r/sigma)E[J_f(X)e^(-kappa_r|X|^2)].       (12)
+
+Now restrict to the full voting interval 0<r<=1/(m-1). Since M^2=O(log m),
+  kappa_r=O(log m/m^2).
+For each fixed q>0, for all sufficiently large m,
+  E exp(q kappa_r|X|^2)
+       =(1-2q kappa_r)^(-(m-1)/2)
+       =exp(O_q(log m/m)),                             (13)
+uniformly in this entire interval. Thus these damping compensation moments
+remain bounded and tend1, unlike the earlier fixed radial exponent whose
+Gaussian moments grew exponentially with dimension.
+
+More sharply, on the set range(x_i)<=R sqrt(log m),
+  E(U_x)=O_R(r log m+r^2 log m)=O_R(log m/m),
+  1/sigma=1+O(1/m^2).
+Hence (9) has relative error O_R(log m/m) against the first-chaos gap
+r(b_i-b_j).x, uniformly in r and all labels on this set. This includes
+points arbitrarily close to a facet; no lower distance to a tie is imposed.
+For X in H, write X=PZ with independent standard Gaussian coordinates Z.
+Their ranges are identical, and the union bound gives
+  P(range(X_i)>R sqrt(log m))<=2m^(1-R^2/8).
+Thus any fixed R>sqrt(8) gives a set of probability tending1. The range
+comparison is the primary pointwise estimate; the Euclidean damping in
+(10)-(13) is a convenient integrable corollary.
+
+6. Remaining operator issue
+Equations (9)-(13) control the reference potential and the actual linear
+assignment loss. They do not bound the quadratic term
+<f-g,T_-r(f-g)> by that loss with a usable relative constant, and do not
+give a weighted-L2 interface operator inequality for arbitrary normal
+speeds. In particular they do not justify a separate global per-chaos
+comparison: remote tangential deformations can make such ratios unbounded.
+The next required step is a full weighted, resummed quadratic comparison,
+not removal of the Gaussian channel or an additive chaos truncation.

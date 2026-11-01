@@ -1,0 +1,297 @@
+ALL INTERFACE SPEEDS: SIMPLEX SECOND VARIATION ON THE NEGATIVE VOTING INTERVAL
+31 October 2026. gaussian_cleanroom_end_to_end.
+Complete analytic candidate awaiting independent hostile audit.
+
+THEOREM AND SCOPE
+There is an absolute m0 such that for m>=m0, -1/(m-1)<=rho<0, and every
+finite N>=m-1, the regular m-simplex Gaussian partition has nonnegative
+noise-stability second variation for every actual interface speed in the
+full-diagonal weighted L2 space. The nullspace consists precisely of
+ambient rotation speeds; rotations acting only in unused coordinates
+have zero speed.
+
+This is second-variation stability, not finite-change minimality. No
+uniform nonlinear neighborhood, explicit m0, global optimum, or full
+Standard Simplex / Plurality theorem is asserted. Negative correlation
+has NO prescribed mass constraint. All sufficiently-large-m choices below
+are absolute and uniform in 0<r=-rho<=1/(m-1).
+
+PINNED INPUTS
+[I] ../full_ssc_instability_20261031/EXACT_INTERFACE_HERMITE_REDUCTION_AND_CONSTANT_CYCLES_20261031.txt
+6f5c5b382c1da8da1a84ac1372278d06f1e2fd4fff5a829427f4db817e503769
+[S] ../full_ssc_instability_20261031/large_m_tracefree_shape/TRACEFREE_SHAPE_CHAOS_CURVATURE_AND_VOTING_ENDPOINT_20261031.txt
+1f5c1ee8ccb882a880813691613526c0717c54ea46a4decc12faaf7bd7dfb500
+[G] SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt
+f0f22a63d1b021ac51bd363622e2b36514043abf88575372727dc8ebadabba3f
+[T] WEIGHTED_HYPERCONTRACTIVE_FACET_TRACE_AND_FULL_BOUNDARY_TAIL_20261031.txt
+77b20d9ad3a40d55ad8f746ca3cb1b33ae32eea35c25e484c2e5c6f9900ce90f
+The author read[T] fully and independently checked its normal restriction
+norm, conditional radial Holder estimate, incidence normalization, Riesz
+passage, and ambient-dimensional scope. No numerical experiment is an input.
+
+1. Exact intrinsic form
+First work on H=1-perp in R^m, dimension d=m-1. Write
+ g_i={x:x_i=max_j x_j}, Sigma_ij={x:x_i=x_j=max_l x_l},
+ b_ij=e_i-e_j, n_ij=-b_ij/sqrt2,
+ lambda_e=gamma_H dH^(m-2)|Sigma_e,
+ s=lambda_e(Sigma_e), B0=ms=sqrt2 mu_m/(m-1), L=1+log m,
+ mu_m=E max_i Z_i.
+The outward normal is n_ij. Set
+ beta_e=partial_n(T_-r g_i-T_-r g_j)/r>0,
+ N_r(f)=sum_e int beta_e f_e^2 d lambda_e,
+ N_0(f)=B0 sum_e int f_e^2 d lambda_e.
+N_0 denotes a reference norm, not the r=0 stability functional.
+
+For h_i=sum_e(b_e)_i f_e lambda_e, let A_l>=0 be the squared norm of its
+total Hermite degree l. In particular
+ A_0(f)=sum_i|sum_e(b_e)_i int f_e d lambda_e|^2,
+ A_1(f)=sum_i|sum_e(b_e)_i int x f_e d lambda_e|^2.
+The signed boundary form is A_rho=sum_l rho^l A_l. The exact half-Hessian is
+ Q_0(f)=S_-r''(f)/2=A_-r(f)+rN_r(f).                                  (1)
+All potential differences vanish on the reference interfaces, so the
+stationary multiplier is zero. The negative diagonal is retained in full.
+
+Input[T] proves, for every k>=0 and every speed with finite N_r,
+ sum_(l>=k) r^l A_l(f)<=C(rL)^k N_r(f).                                (2)
+For k=0, use its exact formula(4); the same uniform-constant proof applies.
+Polarization/Cauchy over nonnegative Hermite coefficient sums gives
+ |sum_(l>=k)(-r)^l A_l(f,g)|
+       <=C(rL)^k sqrt(N_r(f)N_r(g)).                                  (3)
+Thus(1) is a continuous form on this weighted Hilbert space, including
+arbitrarily remote speeds that need not belong to unweighted L2.
+
+2. Conditional range and affine-polynomial moments
+Let nu_e=lambda_e/s. Its cone probability on the facet hyperplane is
+ pi_m=s/phi(0)=2sqrt(pi)mu_m/[m(m-1)]~sqrt(log m)/m^2.
+Every coordinate of the unconditioned hyperplane Gaussian has variance<=1.
+For R=max_i x_i-min_i x_i, a union bound therefore gives
+ nu_e(R>u)<=min(1,Cm^3 exp(-u^2/8)).                                   (4)
+For every fixed nonnegative integer q and fixed constants C1,C2,
+ E_nu[R^q exp(C1 r sqrt(L)R+C2 r^2R^2)]<=C_q L^(q/2).                 (5)
+One direct proof splits at sqrt(KL), with K a sufficiently large absolute
+constant. Below it the exponential is bounded since rL tends0. Above it
+the exponent is at most u^2/32 plus a bounded constant, for large m.
+Integration of(4) against the derivative of the weighted monomial gives
+a Gaussian tail whose m^3 prefactor is absorbed by K. This proves(5)
+without restricting the support of a speed.
+
+Let T have density proportional to phi(t)^2 Phi(t)^(m-2). Put
+ M=ET, V=E[1-T phi(T)/Phi(T)-(phi(T)/Phi(T))^2],
+ v=Var(T)-1/m.
+In H, the tied coordinate z=x_i=x_j has mean M and variance v: removing
+the independent common Gaussian coordinate subtracts1/m from the variance.
+The intrinsic facet covariance has eigenvalues
+ V on remaining-coordinate differences, and
+ (2m/(m-2))v on the remaining tangent direction.                        (6)
+This follows from conditional exchangeability and sum x_i=0.
+
+We record a lower bound needed for arbitrary affine polynomials. The tie
+density has supremum at most C sqrt(L). Its normalizer is
+mu_m/[m(m-1)]~sqrt(L)/m^2. For 0<=t<=2sqrt(L), the elementary lower Mills
+bound yields phi(t)<=C(t+1)barPhi(t), so the numerator is at most
+ C L q^2 exp(-(m-2)q)<=C L/m^2, q=barPhi(t).
+For t>2sqrt(L), phi(t)^2<=C exp(-4L); for t<0 its CDF factor is at most
+2^(-(m-2)). These prove the density bound. A density bounded by D has
+variance at least1/(12D^2), by integrating
+P(|X-EX|>u)>=(1-2Du)_+ against2u. Hence Var(T)>=c/L and v>=c'/L for large m.
+Also V tends1 by[S], equation(8). Therefore the covariance in(6) is at
+least c/L times the tangent identity.
+
+The convex Gaussian facet law has Poincare constant at most1. For any
+affine p=a+z dot x, applying this inequality to p^2 gives
+ E p^4 <=(E p^2)^2+4|z_tan|^2 E p^2<=C L(E p^2)^2.                   (7)
+The lower covariance bound gives the last inequality. Truncation and
+Gaussian moments justify the polynomial variance inequality. This estimate
+is uniform over every affine p, not only the shape examples.
+
+3. Full-diagonal comparison on finite polynomials only
+Differentiate both sides of[G], equation(9), at a tie. Analyticity of the
+Gaussian potentials and continuity of the bounding factor give
+ sigma^-1 exp(-E(U_x))<=beta_e/B0<=sigma^-1 exp(E(U_x)),
+ U_x=rR(x)/(2sigma), E(U)=4MU+4U^2, sigma=sqrt(1-r^2).                  (8)
+The distance to the interface cancels before taking the limit.
+Put eta=beta/B0 and a_x=-log sigma+E(U_x). Then
+ |log eta|<=a_x<=C[r^2+r sqrt(L)R+r^2R^2].
+Equation(5) gives
+ E[a_x^4 exp(4a_x)]<=C r^4L^4,
+ E[a_x^2 exp(2a_x)]<=C r^2L^2.                                       (9)
+Since (eta-1)^2/eta<=a_x^2 exp(a_x), Cauchy with(7),(9) proves, for ANY
+family of affine facet polynomials p_e,
+ sum_e int ((beta_e-B0)^2/beta_e)p_e^2 d lambda_e
+                                      <=C r^2L^3 N_0(p).             (10)
+There is harmless slack from L^(5/2) to L^3. The same calculation with
+eta-1 and eta^-1-1 gives
+ |N_r(p)-N_0(p)|<=C rL^2 N_0(p),
+ |sum_e int (B0^2/beta_e)p_e^2 d lambda_e-N_0(p)|
+                                      <=C rL^2 N_0(p).               (11)
+These relative errors are at most1/2 for large m. They are NOT estimates
+comparing N_r and N_0 for arbitrary far-out speeds.
+
+For the constant polynomial, there is no L4 loss. By edge symmetry
+ chi_r=E_nu[(eta-1)^2/eta]
+is independent of the edge and obeys
+                         chi_r<=C r^2L^2.                            (12)
+
+4. Finite moment space and exact decomposition
+Let Pfin be generated by facet speeds
+ (u_i-u_j), and (z_i-z_j) dot x,
+where u in H, z_i in H, and sum_i z_i=0. These are exactly the N_0
+representers of the zeroth and first label-boundary moments. Their possible
+trace direction gives zero speed, since(e_i-e_j) dot x=0 on its facet.
+
+This space is the direct sum of
+ Pstd: (u_i-u_j)+(w_i-w_j)(z_e-M), u,w in H;
+ Psh:  (T_i-T_j) dot x/sqrt2, T=T^T,T1=0,T_ii=0;
+ Prot: normal speeds of rigid rotations within H.                       (13)
+Here z_e=x_i=x_j in H. For completeness, split the centered row matrix(z_i)
+into skew and symmetric parts. The skew part gives rotations. From the
+symmetric part subtract a scalar multiple of P=I-11^T/m, which gives zero
+speed. Its remaining trace is zero. Subtract P diag(u)P to kill its
+diagonal, using u=m/(m-2) times that diagonal. The remainder is T as in
+Psh. Centering the tied coordinate by M is absorbed by the first standard
+copy. This also proves completeness and absence of a missing low mode.
+
+N_0 makes these components orthogonal except for the intended two copies
+inside Pstd. Q_0 has no cross term between Pstd and Psh. An elementary
+invariant-tensor check suffices: the regular partition and kernel are
+permutation invariant. Every coefficient tensor with three or four label
+indices is a linear combination of index-equality patterns. For centered
+matrices, after zero row/column sums the surviving contractions are
+entrywise, transposed-entrywise, diagonal-entrywise, and traces. A symmetric
+zero-diagonal T pairs to zero with P diag(u)P in every such contraction;
+the vector/matrix contractions are diagonal or row sums and also vanish.
+This proves standard/shape orthogonality for any invariant bilinear form,
+including Q_0 and N_0, without postulating a spectral classification.
+
+Rotation speeds annihilate the FULL Q_0 bilinear form. Every rotated
+reference partition is stationary for every test deformation. Differentiate
+that first-variation identity in rotation time. The acceleration term
+vanishes because the reference first variation is zero. Thus
+Q_0(p_rot,f)=0 for regular compact tests and then for the weighted closure
+by(2). Quadratic vanishing alone would not justify this cross identity.
+
+5. Exact standard block
+For p in Pstd, conditional facet moments give
+ N_0(p)=m^2s^2(|u|^2+v|w|^2),
+ A_0(p)=m^2s^2|u|^2,
+ A_1(p)=m^2s^2[m/(m-2)]|Mu+v w|^2.                                  (14)
+Indeed the conditional mean is
+[mM/(m-2)](e_i+e_j-2/m), and
+Cov_e(x,z_e)=[mv/(m-2)](e_i+e_j-2/m).
+The incidence sum with(u_i-u_j) is m P diag(u)P, whose squared Frobenius
+norm is(m-2)|u|^2/m. These facts verify every factor in(14).
+
+The tie potential has second derivative at least2, so Var(T)<=1/2 and
+ m v/(m-2)=[m Var(T)-1]/(m-2)<=1/2.                                   (15)
+Using |a+b|^2<=3|a|^2+(3/2)|b|^2 gives
+ A_0(p)+r[N_0(p)-A_1(p)]>=c r N_0(p).                                (16)
+In detail the u coefficient is at least
+1+r-3r mM^2/(m-2)>=1/2 for large m, while the w coefficient is at least
+r v/4. Independent vectors u,w are allowed, not just proportional copies.
+
+Changing the diagonal N_0 to N_r costs at most Cr^2L^2N_0 by(11).
+The entire boundary degree>=2 part costs the same by(2),(11).
+Since rL^2 tends0 uniformly,
+                       Q_0(p_std)>=c rN_0(p_std).                    (17)
+
+6. Shape block uniformly on the whole voting interval
+Input[S] computes the actual score-family curvature as
+ W_1''~ -16(log m)^2 m^-3||T||_F^2,
+ W_2''~ -32(log m)^3 m^-3||T||_F^2,
+ |S_-r''+rW_1''-r^2W_2''|
+                  <=C r^3 m^(2-105/34)||T||_F^2.                     (18)
+Its last bound was proved for every r<=1/16 before specialization to the
+voting endpoint. Also
+ N_0(p_sh)=m(m-1)s^2 V||T||_F^2/2~2(log m)m^-2||T||_F^2.
+The second-chaos/leading-term ratio is O(r log m), and the remainder ratio
+is at most C m^(-3/34)/(log m)^2 on the full voting interval. Both tend0.
+Thus the endpoint result immediately extends uniformly to
+                       Q_0(p_sh)>=c r(L/m)N_0(p_sh).                 (19)
+The exact second-chaos cancellation in[S] is retained here. A crude1/m
+first-moment lower bound would not supply this actual shape gap.
+
+By the standard/shape cross cancellation, for p in Pstd plus Psh,
+                             Q_0(p)>=c r(L/m)N_0(p).                 (20)
+
+7. Arbitrary weighted speeds: projection and coupling
+Let N_r(f)<infinity without assuming N_0(f)<infinity. Its zeroth and first
+moments exist by the inverse-diagonal damping bound and Gaussian moments.
+Define p in Pfin by the finite-dimensional Riesz equations
+ sum_e int p_e w_e d lambda_e=sum_e int f_e w_e d lambda_e
+                                        for every w in Pfin,
+and put g=f-p. The N_0 Gram form is positive definite after zero-speed
+directions are discarded. Equation(11) ensures boundedness of these
+moment functionals in N_r, so this projection remains valid for tail speeds
+outside unweighted L2. By construction
+ A_0(g)=A_1(g)=0, and sum_e int p_e g_e d lambda_e=0.                   (21)
+The trace of the first boundary-moment matrix is identically zero, so
+there is no omitted trace constraint.
+
+Keep all even chaos terms and use(2) only for odd degrees>=3:
+ Q_0(g)>=rN_r(g)-Cr^3L^3N_r(g)>=rN_r(g)/2.                            (22)
+The mixed degrees0 and1 vanish. Its diagonal cross subtracts B0 exactly
+by(21). Applying(10),(3), and(11) therefore gives
+ |Q_0(p,g)|
+ <=r|sum_e int (beta_e-B0)p_e g_e d lambda_e|
+                +Cr^2L^2 sqrt(N_r(p)N_r(g))
+ <=Cr^2L^2 sqrt(N_0(p)N_r(g)).                                       (23)
+The diagonal term alone is O(r^2L^(3/2)); the stated bound includes the
+entire degree>=2 boundary cross. No arbitrary-speed unweighted estimate
+has replaced N_r.
+
+Remove the rotation component of p, which changes neither Q_0(f) nor
+the mixed form. Combining(20),(22),(23), then absorbing the cross term,
+ Q_0(f)>=[c rL/m-Cr^3L^4]N_0(p)+(r/4)N_r(g).
+Because r^2 mL^3<=C L^3/m tends0 uniformly, this proves
+ Q_0(f)>=c' r(L/m)N_0(p)+(r/4)N_r(g)>=0.                              (24)
+Equality requires p=g=0 after rotation removal. Thus the intrinsic
+nullspace is exactly Prot. By(11), the right side also controls a constant
+times r(L/m) times squared N_r-distance to the rotation space.
+
+8. The indispensable extra-coordinate degree1 block
+The intrinsic result alone does not establish all ambient dimensions.
+The external Hermite degree1 block is
+                       Q_1(f)=r[N_r(f)-A_-r(f)].                     (25)
+For constant translation speeds t_e(v)=n_e dot v, v in H, the exact Jacobi
+identity in[I] is A_-r t=beta t. Hence Q_1(t,f)=0 for all f.
+
+Now take f N_r-orthogonal to these translations. Equivalently
+sum_e b_e int beta_e f_e d lambda_e=0. Its zeroth moment vector is therefore
+sum_e b_e a_e with a_e=int(1-beta_e/B0)f_e d lambda_e.
+The complete-graph incidence identity BB^T=mP and Cauchy imply
+ A_0(f)<=m sum_e a_e^2
+       <=m(s/B0)chi_r N_r(f)=chi_r N_r(f).                            (26)
+Indeed the scalar Cauchy factor on each edge is
+int(1-beta/B0)^2/beta d lambda=(s/B0)chi_r, and s/B0=1/m.
+Using(2),(12) and
+A_-r<=A_0+sum_(l>=2)r^l A_l, we obtain
+ Q_1(f)>=r[1-Cr^2L^2]N_r(f)>=rN_r(f)/2                               (27)
+on that orthogonal complement. Thus Q_1 is nonnegative on the full space
+with nullspace exactly the constant translation speeds. Multiplying one
+of these by an extra-coordinate linear Hermite gives an ambient rotation
+mixing H with that coordinate, not a mass-changing translation.
+
+9. All ambient degrees and the precise conclusion
+Expand a general speed in Hermites of the unused coordinates. Since beta
+depends only on H, this expansion is orthogonal for N_r. The exact block is
+ Q_k(f)=(-r)^k A_-r(f)+rN_r(f).
+For l>=0,
+ Q_(2l)=r^(2l)Q_0+(1-r^(2l))rN_r,
+ Q_(2l+1)=r^(2l)Q_1+(1-r^(2l))rN_r.                                  (28)
+Every block is nonnegative; every nonzero speed in degree k>=2 is strictly
+positive because 0<r<1. The degree0 and1 kernels are exactly the ambient
+rotation speeds already identified. This proves the stated all-N theorem.
+
+For compact smooth regular-patch speeds these are ordinary second
+variations of actual Gaussian partitions. Truncating radius and deleting
+junction neighborhoods gives density in the natural weighted space,
+and(2),(1) give the continuous form extension. There is no negative-case
+mass restriction. No nonlinear remainder or global comparison is inferred
+from this Hessian statement. The pure-lens/core classification problem
+and the full negative-noise finite-change comparison remain separate.
+
+REVIEW STATUS
+The newly combined steps requiring full audit are the uniform finite-
+polynomial weight estimate, standard block, moment-complement coupling,
+exact rotation treatment, and the external degree1 argument. The frozen
+shape and192-block exploratory sources were not modified.

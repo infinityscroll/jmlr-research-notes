@@ -1,0 +1,354 @@
+TRACE-FREE SYMMETRIC SIMPLEX SHAPE: EXACT CHAOS CURVATURES AND THE NEGATIVE ENDPOINT
+31 October 2026. gaussian_cleanroom_end_to_end. New proof for independent audit.
+
+RESULT AND SCOPE
+Let m>=4 and let T be a real symmetric m-by-m matrix with zero diagonal
+and T1=0. Define the actual Gaussian partition
+ A_i(epsilon)={x: [(I+epsilon T)x]_i=max_j[(I+epsilon T)x]_j}.
+It depends only on H=1-perp and is a genuine smooth linear deformation
+of the regular-simplex partition for sufficiently small epsilon.
+
+We compute the exact second derivatives of its first and second Hermite
+weights. For sufficiently large m the noise-stability curvature at the
+negative voting endpoint rho=-1/(m-1) is strictly POSITIVE for every
+nonzero such T. More precisely, uniformly over this whole matrix space,
+
+ S_(-1/(m-1))''(0)
+      ~16 (log m)^2 m^(-4) ||T||_F^2.                                  (A)
+
+Thus this explicit potentially soft shape representation is not a
+negative-correlation instability for all sufficiently large m. This
+is a local statement for the specified actual deformations. It does
+not prove the full negative Standard Simplex Conjecture, a finite-m
+threshold, or stability for all interface speeds. The proof includes
+a legitimate bound for the entire higher-chaos remainder.
+
+The concrete matrix suggested for the attack has
+ T13=T31=T24=T42=1, T14=T41=T23=T32=-1,
+all other entries zero. Its squared Frobenius norm is8. No abstract
+covariance coupling replaces its actual score partition in this proof.
+
+1. NOTATION AND THE TIE LAW
+Write phi,Phi for the standard normal density and CDF, and let
+ h(z)=phi(z)/Phi(z),
+ v(z)=Var(N | N<=z)=1-z h(z)-h(z)^2,
+ k=m-2.
+Let Z have probability density proportional to
+                         phi(z)^2 Phi(z)^k.
+All expectations below refer to this tie law. Define
+ t=EZ, V=Ev(Z), a=E[Z v(Z)], b=-E[h(Z)v(Z)],
+ c=E kappa_3(N | N<=Z).
+Here a,b,c are moment parameters, NOT interaction energies of a lens.
+Let s be the Gaussian surface measure of a single simplex interface.
+If mu_m=E max_(1<=i<=m) X_i for independent standard normals, then
+
+ s=sqrt2 int phi^2 Phi^(m-2)
+   =sqrt2 mu_m/[m(m-1)].                                                (1)
+
+The last identity is one integration by parts using x phi=-phi'.
+The tie coordinates are X_i=X_j=Z; conditional on Z, the other m-2
+coordinates are independent normals truncated above at Z.
+
+The central third moment of the truncated normal is
+ kappa_3(z)=(1-z^2)h(z)-3z h(z)^2-2h(z)^3=-v'(z).
+Since the tie density has logarithmic derivative -2z+k h(z),
+integration by parts gives
+
+                         c=-2a-k b.                                    (2)
+
+All boundary terms vanish by Gaussian decay, including at negative
+infinity where h has only polynomial growth.
+
+2. ACTUAL SPEEDS, MASS TANGENCY, AND THE SIGNED HESSIAN
+For e=(i,j), let b_e=e_i-e_j and n_e=-b_e/sqrt2 be the outward normal
+from cell i. The score deformation has velocity -Tx, so its interface
+speed is
+ f_ij(x)=(T_i-T_j).x/sqrt2=c_ij.x,
+where on the interface we may delete the i,j components and put
+
+ (c_ij)_l=(T_il-T_jl)/sqrt2 for l outside{i,j},
+ (c_ij)_i=(c_ij)_j=0.                                                   (3)
+
+The deleted contributions cancel because X_i=X_j and T is symmetric
+with zero diagonal. Moreover sum_l(c_ij)_l=0. Therefore the conditional
+mean of f_ij at every tie value Z is zero. Each interface has zero
+integrated speed separately, so every Gaussian cell mass has zero
+first derivative. In particular the zeroth Hermite weight sum_i p_i^2
+has zero second derivative at the equal-mass point.
+
+Let r_ef=b_e.b_f and p_rho be the joint Gaussian density. The exact
+simplex Hessian, including negative rho, is
+
+ S_rho''/2=A_rho-rho B_rho,
+ A_rho=sum_ef r_ef int_(Sigma_e x Sigma_f)p_rho f_e(x)f_f(y),
+ B_rho=(1/2)sum_ef r_ef^2 int_(Sigma_e x Sigma_f)p_rho f_e(x)^2.           (4)
+
+This follows from distributional differentiation of the indicator
+gradients. The diagonal is signed: its density is rho/2 times the
+positive sum of squared-incidence kernel rows. The regular scores tie
+on every interface for every rho, so their common volume multiplier is
+zero. Acceleration of (I+epsilon T)^(-1) and second-order mass changes
+therefore do not introduce an omitted Hessian term.
+
+Write the noise expansion S_rho=sum_(l>=0)rho^l W_l, where
+ W_1=sum_i||int x1_Ai gamma||^2,
+ W_2=(1/2)sum_i||int (xx^T-I)1_Ai gamma||_F^2.
+Expansion of(4) gives
+ W_1''/2=A_1-B_0,  W_2''/2=A_2-B_1.                                    (5)
+The symbols A_l,B_l here mean Hermite coefficients of the boundary
+pairings in(4). Their higher-coefficient convergence is justified in
+Section7 rather than assumed from formal differentiation.
+
+3. THE EXACT FIRST-CHAOS CURVATURE
+Conditional independence and sum c_ij=0 give
+ int_(Sigma_e) gamma f_e^2=s V ||c_e||^2,
+ int_(Sigma_e) gamma x f_e=s V c_e.
+Two elementary matrix identities are
+
+ sum_(i<j)||c_ij||^2=(m-1)||T||_F^2/2,
+ sum_(j!=i)c_ij=(m-1)T_i/sqrt2.                                        (6)
+
+For the second identity orient c_ij consistently with the row i.
+For the first, sum all row differences and subtract their two deleted
+entries. Since T1=0, the full row-difference sum is m||T||_F^2/2 and
+the deleted sum is||T||_F^2/2.
+
+Consequently
+ A_1=s^2 V^2 (m-1)^2 ||T||_F^2/2.
+For each edge sum_f r_ef^2=2m, so
+ B_0=m s sum_e int gamma f_e^2
+    =m(m-1)s^2 V ||T||_F^2/2.
+Thus the exact answer is
+
+ W_1''=-s^2(m-1)V[m-(m-1)V]||T||_F^2.                                 (7)
+
+It is strictly negative for nonzero T because0<V<1. Its actual
+coercivity contains m-(m-1)V=1+(m-1)(1-V); replacing this quantity by1
+would lose the decisive order-log m factor in its asymptotic value.
+
+For m>3 the variance loss also has the exact formula
+
+ 1-V=m(2EZ^2-1)/[(m-2)(m-3)].                                          (8)
+
+Indeed integration of(z times the tie density)' gives
+k E[Z h]=2EZ^2-1. Integration of(h times the density)' gives
+(k-1)E h^2=3E[Z h]. Add these two contributions to1-V.
+
+4. THE EXACT SECOND-CHAOS CURVATURE
+Put d=a-b, z_i=e_i-1/m, t_i=T_i as a column vector, and P=I-11^T/m.
+On a face e=(i,j), let d_e=e_i+e_j and u_e=1-d_e. Direct conditional
+third moments give
+
+ Q_e:=int_(Sigma_e)gamma f_e(xx^T-I)
+   =s[a(d_e c_e^T+c_e d_e^T)
+       +b(u_e c_e^T+c_e u_e^T)+c diag(c_e)].                            (9)
+
+The subtraction of I has no effect because int gamma f_e=0. For
+distinct remaining coordinates the conditional third moment is
+-h v(c_l+c_q); on a repeated coordinate it is
+2(-h)v c_l+kappa_3 c_l; a tied/remaining pair gives Z v c_l.
+These are all entries of(9). Equation(2) also verifies Q_e 1=0,
+as required by independence of the irrelevant common coordinate.
+
+Summing the consistently oriented face derivatives at cell i yields
+
+ M_i':=sum_(j!=i) Q_ij
+  =(s/sqrt2)[m d(z_i t_i^T+t_i z_i^T)-2d T
+              -m h_* P diag(t_i)P],
+ h_*=2a+(m-3)b.                                                        (10)
+
+For transparency, the invariant contractions used to square this are
+ sum_i||z_i t_i^T+t_i z_i^T||_F^2=2(m-1)||T||_F^2/m,
+ sum_i||P diag(t_i)P||_F^2=(m-2)||T||_F^2/m,
+ sum_i<z_i t_i^T+t_i z_i^T,T>=2||T||_F^2,
+ sum_i<z_i t_i^T+t_i z_i^T,P diag(t_i)P>=-2||T||_F^2/m,
+ <T,P diag(t_i)P>=0.
+The last identity uses the zero diagonal of T. Therefore
+
+ A_2=(1/2)sum_i||M_i'||_F^2
+ =m(m-1)s^2/4
+   *[6a^2+4(m-4)ab+(m-3)(m-4)b^2]||T||_F^2.                           (11)
+
+For the diagonal correction, the unnormalized face centroid is s mu_e,
+ mu_e=[m t/(m-2)](e_i+e_j-2/m),
+and sum_f r_ef^2 mu_f=m mu_e. The common coordinate is independent of
+the face event and of f_e^2, so int gamma f_e^2 sum_l x_l=0. It follows
+that
+
+ B_1=m^2(m-1)s^2 t a/[2(m-2)] ||T||_F^2.                              (12)
+
+Combining(5),(11),(12), the exact second-chaos answer is
+
+ W_2''=m(m-1)s^2/2
+ *[6a^2+4(m-4)ab+(m-3)(m-4)b^2-(2m/(m-2))t a]||T||_F^2.              (13)
+
+The terms of apparent order m^2 s^2 log m in(11),(12) cancel. They
+must not be bounded separately when assessing the endpoint.
+
+5. TIE-LAW ASYMPTOTICS, WITH THE CANCELLATION RETAINED
+Let L=log m. Elementary Gaussian maximum estimates give
+ mu_m~sqrt(2L). For completeness, the union bound above
+(1+delta)sqrt(2L) and independence below(1-delta)sqrt(2L), followed by
+the Gaussian tail integral, give upper and lower expectations with this
+ratio. By(1), the tie normalizing integral is therefore of order
+sqrt L/m^2.
+
+For every fixed positive p,
+
+             E|Z|^p~(2L)^(p/2),  EZ~sqrt(2L).                         (14)
+
+Here concentration follows directly from the tie density: below
+(1-delta)sqrt(2L), Phi(Z)^(m-2) is exponentially small in a positive
+power of m; above(1+delta)sqrt(2L), its phi(Z)^2 tail is at most
+m^(-2(1+delta)^2) times a polynomial. Division by the stated normalizer
+proves concentration. The same tail bounds with |Z|^p give uniform
+integrability, including negligible negative tails.
+
+Equation(8) now gives
+ V=1-(4+o(1))L/m,
+ m-(m-1)V~4L,
+ s^2~4L/m^4.
+Hence(7) gives
+
+                 W_1''~ -16 L^2/m^3 ||T||_F^2.                         (15)
+
+To expand(13) without a false large remainder, define
+ I1=E[Z^2 h], I2=E[Z h^2], I3=E h^3.
+For m>4, integration by parts gives exactly
+ I1=2(EZ^3-t)/k,
+ I2=(3I1-2t/k)/(k-1),
+ I3=4I2/(k-2).
+Consequently
+ a=t-I1-I2,
+ a-t~ -2(2L)^(3/2)/m,
+ c=2t/k-I1-3I2-2I3=O(L^(3/2)/m).                                      (16)
+
+Substitute b=-2a/k-c/k from(2) into the bracket in(13). It becomes
+
+ (2m/k)a(a-t)
+  +[8a^2-4(k-2)a c+(k-1)(k-2)c^2]/k^2.                                (17)
+
+Its first term is asymptotic to-16L^2/m. The rest is
+O(L^3/m^2)=o(L^2/m). Therefore
+
+                 W_2''~ -32 L^3/m^3 ||T||_F^2.                         (18)
+
+At r=1/(m-1), the second-chaos contribution r^2 W_2'' divided by
+the positive first-chaos contribution-r W_1'' is asymptotic to
+-2 log(m)/m. It is too small to reverse the sign. This statement about
+the ratio does not assume a sharper error term in(15) than was proved.
+
+6. A FIXED-CORRELATION SURFACE BOUND
+We next control ALL higher chaoses, not just the first two. Fix
+ eta=1/16 and beta=56/17. For a face Gaussian measure
+ lambda_e=gamma_H dH^(m-2)|_(Sigma_e), let
+ I_eta(mu,nu) be its Mehler pairing. There is an absolute constant C
+and a sufficiently large absolute m_0 such that
+
+                   I_eta(lambda_e,lambda_e)<=C m^(-beta).               (19)
+
+Proof: work in R^m, integrating out the independent common coordinate.
+Conditioning on the two equalities for this same face gives tie values
+U,V of variance1/2 and correlation eta. The remaining m-2 independent
+coordinate pairs must each lie below U,V. Their joint probability is
+at most min(Phi(U),Phi(V)) and hence at most sqrt(Phi(U)Phi(V)). The
+bivariate tie density is at most
+ C exp(-(U^2+V^2)/(1+eta)).
+The equality-constraint density is a fixed bounded constant. Thus the
+surface integral is at most
+ C [int exp(-z^2/(1+eta)) Phi(z)^((m-2)/2) dz]^2.
+
+Split at z_0=sqrt((7/4)log m). Below z_0, the lower Mills bound gives
+ Phi(z)^((m-2)/2)<=exp(-c m^(1/8)/sqrt(log m)).
+Above z_0, the widened Gaussian tail is at most
+ C m^(-7/[4(1+eta)])=C m^(-28/17).
+The first contribution is smaller than this power for all sufficiently
+large m. Squaring proves(19).
+
+For the linear face function f_e=c_e.x, Gaussian conditioning on the
+two normal equalities leaves every fixed linear Gaussian moment bounded
+by a constant times the corresponding power of||c_e||. Holder with
+exponent16 on the winning event therefore gives, with
+                       beta'=15 beta/16=105/34>3,
+
+ I_eta(f_e lambda_e,f_e lambda_e)
+       <=C||c_e||^2 m^(-beta'),
+ I_eta(f_e^2 lambda_e,f_e^2 lambda_e)
+       <=C||c_e||^4 m^(-beta').                                        (20)
+
+Absolute values may be put inside the two weighted integrals to obtain
+these upper bounds. The high but fixed Gaussian moments only affect C,
+not its dependence on m or T. This avoids assuming that a conditional
+winning-event moment is bounded without proof.
+
+7. A LEGITIMATE BOUND FOR THE FULL HIGHER-CHAOS HESSIAN
+Expand these Gaussian surface distributions in normalized Hermites.
+Their Mehler self-pairings at eta are finite by(19)-(20). Thus their
+eta-weighted square coefficient sums converge. This can equivalently
+be justified by first applying a small OU smoothing to each surface
+distribution and passing to the limit in these finite positive sums.
+
+For A_rho in(4), the degree coefficients A_l are nonnegative: group
+the signed edge measures by their label incidence to write A_rho as
+sum_i I_rho(sum_e b_e,i f_e lambda_e, sum_e b_e,i f_e lambda_e).
+For the scalar coefficients B_l in(4), Cauchy--Schwarz over Hermite
+coefficients gives
+ sum_l eta^l |B_l|
+ <=(1/2)sum_ef r_ef^2
+       sqrt[I_eta(f_e^2 lambda_e,f_e^2 lambda_e)
+                    I_eta(lambda_f,lambda_f)].
+
+The line-graph absolute-incidence row sum is2m-2, its squared-incidence
+row sum is2m, and(6) supplies sum_e||c_e||^2=O(m)||T||_F^2. Applying
+(19)-(20), and Cauchy--Schwarz to the signed cross terms of A_eta,
+therefore yields
+
+ A_eta + sum_l eta^l |B_l|
+                   <=C m^(2-beta')||T||_F^2.                            (21)
+
+For example the A_eta bound uses
+ sum_ef |r_ef| ||c_e|| ||c_f||
+ <=(2m-2)sum_e||c_e||^2;
+the B bound uses sum_f r_ef^2/2=m. No count of all edge pairs of
+order m^4 is introduced, since disjoint edges have zero incidence.
+
+For |rho|=r<=eta, subtracting the coefficients in(5) gives
+
+ |S_rho''-rho W_1''-rho^2 W_2''|
+    <=C r^3 m^(2-beta')||T||_F^2.                                     (22)
+
+Indeed the A remainder starts at degree3 and is bounded by
+(r/eta)^3 A_eta; the rho B remainder starts at degree3 and is bounded
+by r(r/eta)^2 sum eta^l|B_l|. Constants absorb the fixed powers of eta
+and the factor2 in(4). A_0=0 by the exact mass tangency in Section2.
+
+At r=1/(m-1), equation(22) is
+
+ |remainder|<=C m^(-1-beta')||T||_F^2
+             =C m^(-4-3/34)||T||_F^2.                                 (23)
+
+This is o((log m)^2/m^4)||T||_F^2. Together with(15),(18), it proves(A)
+and strict positive curvature for sufficiently large m. The constants
+are not optimized and this proof does not state an explicit threshold.
+
+8. WHAT THIS ATTACK DOES AND DOES NOT ESTABLISH
+The first-chaos reserve was computed, not identified with a lossy
+covariance-coercivity lower bound. The second-chaos leading cancellation
+and every higher-chaos term have been retained. The four-label matrix
+and the full symmetric zero-diagonal row-sum representation are thus
+excluded as local counterexamples at the negative voting endpoint for
+all sufficiently large m.
+
+This does not classify finite perturbations, give a global optimizer
+theorem, cover arbitrary shape representations, or assert anything
+outside the named single-partition problem. The first-order masses of
+this actual family vanish; if positive equal-mass variants are later
+tested, a standard second-order exact mass repair has no Hessian cost
+at the regular partition because its multiplier is zero.
+
+INHERITED SIGN/GEOMETRY SOURCE
+../EXACT_INTERFACE_HERMITE_REDUCTION_AND_CONSTANT_CYCLES_20261031.txt
+6f5c5b382c1da8da1a84ac1372278d06f1e2fd4fff5a829427f4db817e503769
+Its Hessian identities are independently rederived in Sections2 and7
+above; its exploratory192-block numerical screen is not a proof input.
+The original screen and its frozen manifest are unchanged.

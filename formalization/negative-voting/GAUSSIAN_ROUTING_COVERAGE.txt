@@ -1,0 +1,80 @@
+GAUSSIAN ROUTING: ACTUAL MEASURE-THEORETIC COVERAGE
+2 November 2026
+
+Source: NegativeVoting/GaussianRouting.lean
+Toolchain: Lean 4.19.0
+mathlib: c44e0c8ee63ca166450922a373c7409c5d26b00b
+
+The module was checked successfully with:
+  lake env lean NegativeVoting/GaussianRouting.lean
+  lake build NegativeVoting.GaussianRouting
+
+A subsequent #print axioms check of all nine theorem declarations reported
+only [propext, Classical.choice, Quot.sound], the standard classical
+foundations used here. No additional/custom analytic axiom was reported.
+
+It contains no sorry, admit, custom axioms, or native_decide.
+The central proof is an actual finite-product Fubini argument, not an
+assumption that each score gap has a Gaussian law or that ties are null.
+
+PROVED DECLARATIONS
+
+1. gaussian_singleton_null
+   A scalar Gaussian with nonzero variance assigns zero mass to every
+   singleton, by its absolute continuity with respect to Lebesgue measure.
+
+2. gaussian_noAtoms
+   Packages that statement as the NoAtoms property.
+
+3. product_linear_hyperplane_null
+   A proper affine linear equation has zero mass under a finite product
+   of sigma-finite scalar measures whenever one coordinate with nonzero
+   coefficient has an atomless marginal. The proof uses the measurable
+   equivalence separating that coordinate, the symmetric product-integral
+   formula, and its singleton fibers. Other marginals need not be atomless.
+
+4. gaussian_product_linear_hyperplane_null
+   Specializes the actual product measure to scalar Gaussians. Only one
+   nonzero coefficient at a positive-variance coordinate is required;
+   degeneracy at other coordinates is permitted.
+
+5. gaussian_product_score_tie_null
+   Distinct coefficient rows have zero probability of equal linear scores
+   under a finite product Gaussian with all variances nonzero.
+
+6. standard_gaussian_score_tie_null
+   Specializes to the standard independent Gaussian measure.
+
+7. ae_gaussian_scores_injective
+   A finite family of distinct coefficient rows has pairwise distinct
+   scores almost everywhere, by the finite intersection of the null-tie
+   complements.
+
+8. ae_gaussian_unique_max
+   A nonempty finite family of distinct linear scores has an almost
+   everywhere unique winning label. Existence comes from finite maximum
+   attainment; strictness comes from the proved no-tie result.
+
+9. ae_gaussian_routing_rigidity
+   For actual Gaussian linear scores from distinct rows, an a.e.
+   simplex-valued rule with zero expected routing loss is a.e. the
+   maximizing label's indicator. This theorem assumes a.e. maximizing
+   behavior of the supplied winner function, not uniqueness. Uniqueness
+   is derived from the Gaussian measure. It also retains an integrability
+   premise for the routing loss; the separate Gaussian-moment development
+   can discharge that premise under measurable simplex weights.
+
+PARAMETERS AND LIMITS
+
+Finite coordinate spaces are Fin (n+1) -> Real, so the statements cover
+every positive finite dimension. Labels are an arbitrary finite type.
+Means may be nonzero; variances may vary by coordinate. The standard
+Gaussian specialization takes every mean zero and variance one.
+
+These results prove the null-tie and a.e.-purity step needed by the
+manuscript's final rigidity argument once the analytic estimates have
+forced the actual centroid rows to be regular and the routing integral
+to vanish. They do not prove that centroid/deficit conclusion, the
+noise-stability inequality, covariance concavity, or a quantitative
+Gaussian margin estimate. They do not construct a measurable argmax
+selector in this file. No full formalization is claimed.

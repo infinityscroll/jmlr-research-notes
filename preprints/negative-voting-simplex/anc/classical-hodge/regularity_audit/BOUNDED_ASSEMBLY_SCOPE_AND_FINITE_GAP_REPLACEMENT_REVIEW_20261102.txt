@@ -1,0 +1,100 @@
+BOUNDED ASSEMBLY REVIEW: SCOPE AND FINITE-GAP REPLACEMENT
+2 November 2026
+
+VERDICT: PASS at the scopes explicitly proved by the component notes.
+No coefficient error, strictness overclaim, or unproved enlargement of the
+negative-noise result was found. This is a bounded assembly check; it does
+not repeat the independent analytic review of the Hodge theorem.
+
+ASSEMBLY READ
+completion_evidence_20261102/
+HODGE_COVARIANCE_AND_SIMPLEX_CURVATURE_WITH_CLASSICAL_INPUTS_20261102.txt
+SHA256 c150d823f8abc3756960834b47d6755ad5a8ccfddc3184c20318f08af95a077e
+
+1. THEOREM 1
+
+The all-P2 target statement matches the approximation argument. The dense
+smooth compact-log-Gaussian class is handled at every positive definite
+base by the classical CFJ reduction; target W2 continuity passes concavity
+to arbitrary finite-second-moment laws. Source-Gaussian W2 continuity
+includes singular covariances. No target balance or log-concavity survives
+as a restriction after density. The resulting squared W2 convexity follows
+from the displayed affine-minus-twice-F identity. The assertion concerns
+ordinary affine covariance interpolation, as stated, not Bures geodesics.
+
+The assembly correctly replaces the former regularity Section7 of the
+Hodge transfer. It does not accept the 2026 regularity preprint implicitly.
+No new uniform-in-base, uniform-in-dimension, or uniform-in-approximation
+regularity constant is needed by the scalar minimum argument.
+
+2. THEOREM 2 AND STRICTNESS
+
+The smoothness argument applies to d+1 affinely independent sites in R^d
+with all masses positive. Such offset partitions are translations of a
+simplex fan. Every pair has a genuine codimension-one facet with positive
+Gaussian surface area. The offset Laplacian is positive modulo constants,
+so the claimed smooth optimized value is supported by the implicit-function
+argument, rather than assumed for a generic finite target.
+
+The coefficient is exactly
+  w_ij (a_ij^T H a_ij)^2/(a_ij^T C a_ij),
+  w_ij=area_gamma(F_ij)/|C^(1/2)a_ij|.
+The Hessian jump is |C^(1/2)a_ij| n_ij n_ij^T. Combining that coefficient
+with n_ij^TC^(-1/2)HC^(-1/2)n_ij gives the displayed expression, with
+one copy of each unoriented facet. Lower touching converts the Peano
+coefficient -1/8 to the classical second-derivative coefficient -1/4.
+
+Strictness follows without an additional geometric hypothesis. In the
+basis v_i=y_i-y_0, vanishing of every edge quadratic first gives
+v_i^THv_i=0 and then, using v_i-v_j, gives v_i^THv_j=0. Thus H=0.
+All weights are positive, so nonzero H gives strictly negative curvature.
+
+The intrinsic clause is valid for the SAME affinely independent simplex
+embedded in a higher-dimensional ambient space. Its exact value depends
+only on Q^TCQ and its curvature only on Q^THQ. It is not a claim about
+arbitrary affinely dependent families with more than rank+1 sites.
+The component audit states that restriction explicitly; this is the
+intended reading of the assembly's shorter intrinsic clause.
+
+3. EXACT OLD CALL-SITE REPLACEMENT
+
+The old file actually checked was
+../full_correlation_bridge_20261031/
+BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt
+SHA256 47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e
+
+Its Section4 equation(11) is precisely the assembly's equation(1) with
+target sites P e_i, masses1/m, covariance K and centered direction H,
+all interpreted on 1-perp. Removing the common component of e_i changes
+no maximal covariance because the Gaussian source is centered. The old
+file already identifies its score-coordinate weights with the same
+physical coarea weights. There is no replacement of one weight family
+by an unproved comparable family.
+
+Theorem1 also supplies the concavity used in old Section5 to propagate
+the finite remainder beyond the small covariance ball. Consequently the
+two covariance-theorem calls are replaced: global concavity and quantitative
+normal strain. Mere concavity would not have replaced equation(11).
+
+The separate facet-density lower bounds, Gaussian convex-set Brascamp--Lieb
+bound, balanced first-chaos dual identity, scaling/Procrustes comparison,
+and full negative-noise/localization estimates remain their own inputs.
+In particular the old input paragraph references Brascamp--Lieb through
+the earlier source; this standard external bound is not reproved by the
+new Hodge assembly. Replacing the two covariance conclusions does not
+mean replacing every fact cited under the old source label.
+
+The assembly's application limits correctly preserve the remaining
+negative-voting dependencies. It claims neither an end-to-end new proof
+of every noise estimate nor resolution of all alphabets/noise ranges.
+
+4. VERIFICATION BOUNDARY
+
+This review uses the previously inspected CFJ replacement, rank-one
+Hessian-measure lemma, lower-touching/moving-base audit, and exact Hodge
+transfer note. Their argument scopes and coefficients match the assembly.
+The Hodge existence/graph-closure theorem itself remains the separately
+audited component named by ModuleA. This is an internal assembly review,
+not peer review, external endorsement, or formal verification.
+
+No frozen assembly, component, or earlier review was edited.

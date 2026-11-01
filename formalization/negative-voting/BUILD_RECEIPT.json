@@ -1,0 +1,46 @@
+{
+  "allowed_logical_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "compiled_theorem_constants_audited": 64,
+  "custom_axioms_or_sorry": false,
+  "executed_checks": [
+    "lake build",
+    "lake env lean Inventory.lean",
+    "lake env lean AxiomAudit.lean"
+  ],
+  "lean_release": "https://github.com/leanprover/lean4/releases/tag/v4.19.0",
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "named_theorem_declarations": 54,
+  "packaging_note": "The repository-only .gitignore is excluded from focused source archives and from this proof-input manifest.",
+  "schema_version": 1,
+  "scope": "Concrete Gaussian routing, moments, centroid identities, finite covariance algebra, uniform scalar voting-range threshold, and conditional local/exterior assembly. The full Gaussian simplex theorem and discrete hardness consequences are not formalized.",
+  "source_sha256": {
+    "AxiomAudit.lean": "240bf00394e3885b193d85365cd5e6b22190dc813e80cfb41e4edb721815f963",
+    "BUILD_TRANSCRIPT.txt": "893537adad6d03ebbaa65e424ab909ed41b25c3cc3b5b4e6bb12d574e6ca0fc7",
+    "GAUSSIAN_ROUTING_COVERAGE.txt": "76766169e90a0bd61266d69c58e383b3400762f1b772c407f285a3bddf3a5e44",
+    "Inventory.lean": "857777097e6d76d492a5d46ab0de935a24d24a7ef13a7e9ae03572a261663b9c",
+    "NegativeVoting.lean": "52b324b140265a1fdda84165837d2d9914e109caf031edd298f372a517295c61",
+    "NegativeVoting/Assembly.lean": "4ac683120c4ef1321b1f8ae0b7702341561900c7de5cf7dc3f9f867da269255f",
+    "NegativeVoting/Centroid.lean": "0fb2d7b470432b0af939a0ab5e75d3d616626c57eceb99fe73508c153885fd68",
+    "NegativeVoting/EdgeEnergy.lean": "f0cd7276eb283387aeb837b1752779a75857d318740eb06a671b33e08c8d1d84",
+    "NegativeVoting/GaussianCentroid.lean": "e6d6bdbf9c86fcdacd541ec2fa57b81e00fe5b884d269cdf477df6622ee608cc",
+    "NegativeVoting/GaussianMoments.lean": "a7ffeeb4e8a3641fe7319657426bc91978237b457d479eb7b1ccccabcd6f513a",
+    "NegativeVoting/GaussianRouting.lean": "863bdc18e3eb8b892b72fcb98348e22ef021ad1eecc79decf1d5504c6f6aea1c",
+    "NegativeVoting/Integrability.lean": "3d8cb14ebe9a76db5ffbfd19466b0e89261909a038e35392c209183be2ee800a",
+    "NegativeVoting/Routing.lean": "245b2f08c1faaccd20e28f26a6cd0c33aab18e1dbd172d87327e64e742d437ee",
+    "NegativeVoting/Threshold.lean": "d6dc2d0fe94f65d6b9aad2fe4a86524a582ae8ed6cf4470fc39dee6341c6400b",
+    "NegativeVoting/VotingRange.lean": "49993ece9d3e5eed51a39dfb283fedd0e6aafdd92619ffd5ce4f9e959d4d7afe",
+    "README.md": "4ec489e461c53f95450b85e0425e1ba195953e4a0ea8a70ec65724667c877280",
+    "VOTING_RANGE_COVERAGE.txt": "1fd0a348c6b0d6f91e58f83391695cd43891829434df9050629ac55708b7aa02",
+    "lake-manifest.json": "2f6bda5ed982b1c856dcf6b11a98958e826a31a0a4c1404a6f50866895a28630",
+    "lakefile.toml": "68ccd4a59bd5bd7f2ba0461be5d933f988630d00a3a8ef183bca00fdff2d6f76",
+    "lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "verify.py": "bf7f3f3d4e2e68803247432b48785ee491e2b4b42ef90fcbe9446bbcd83b5f77"
+  },
+  "status": "passed",
+  "verification_command": "python3 verify.py"
+}

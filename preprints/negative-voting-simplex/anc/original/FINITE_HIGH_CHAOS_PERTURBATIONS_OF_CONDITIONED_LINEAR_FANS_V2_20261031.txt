@@ -1,0 +1,159 @@
+FINITE HIGH-CHAOS PERTURBATIONS OF CONDITIONED LINEAR FANS
+31 October 2026. Branch derivation. Independent hostile audit pending.
+
+THEOREM
+Fix c0,C0,Cp>0. Let m be sufficiently large, alpha=E max_i Z_i/(m-1),
+b=Phi^(-1)(1-1/m), and N>=m-1. Suppose a centered score matrix B has
+rank exactly m-1 and its m-1 nonzero singular values in[c0 alpha,C0 alpha].
+Its affine winning cells
+A_i, with offsets h_i, have masses0<p_i<=Cp/m. Put
+ l_i(x)=B_i.x+h_i, w(x)=argmax_i l_i(x).
+For a vector perturbation psi in L^q, q>=2, define its exact max-Bregman
+remainder
+ J_tau(psi)=E[max_i(l_i+tau psi_i)-max_i l_i-tau psi_w].
+Let V_q^2=sum_i||psi_i||_q^2 and A=|tau|V_q. There are constants C,c>0,
+depending only on c0,C0,Cp, such that with a0=c alpha/b,
+
+ 0<=J_tau(psi)
+ <=C[m^(1/(q+1)) A^(2q/(q+1))+a0(A/a0)^q].                     (1)
+
+In particular, for fixed beta>1+delta>1, Q>0, q=Q log m, and
+ m^(-beta)<=A<=m^(-1-delta),
+                         J_tau(psi)<=C_(beta,delta,Q) A^2.       (2)
+The constants do not depend on N or offset magnitudes. For
+psi=T_s Pi_(>=k)u and s^2(q-1)<=1, one may replace A in(1) by
+
+ A=|tau|[s^2(q-1)]^(k/2) ||u||_(L2(vector)).                    (3)
+
+This is a finite nonlinear result, not merely an interface Hessian. The
+baseline must be a conditioned AFFINE Gaussian score fan. No assertion
+identifies the full resummed reference potential with these linear scores.
+
+Inputs
+[O] CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt
+111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7
+[T] AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057
+Only M=L B and the Gaussian centroid bound are used from[O]. The proof
+below is independent of the boundary-trace conclusion of[T]; it uses
+the same elementary degree bound and standard hypercontractivity.
+
+1. Small offset shifts preserve the rare-cell upper bound
+For any original cell A of Gaussian mass p<=Cp/m, and a translation v,
+Gaussian Cameron--Martin and Holder with q0=1+log m give
+ gamma(A-v)<=p^(1-1/q0) exp[(q0-1)|v|^2/2].                      (4)
+Raising or lowering ONE label offset by a is, modulo a common score
+shift, exactly the translation v=B^+(a P e_i). Thus
+ |v|<=|a|/(c0 alpha).
+Choose c so that for |a|<=a_*:=4a0=4c alpha/b, the right side of(4)
+is at most C'/m, since
+b^2~2log m. This holds simultaneously for all labels, including those
+whose original mass is much smaller than1/m. There is no lower-mass
+assumption or change of the score matrix B.
+
+For every such shifted fan, Gaussian integration by parts gives M=L B.
+The centroid bound ||M_i||<=p_i sqrt(2log(1/p_i))<=C b/m and the
+pseudoinverse bound ||B^+||<=1/(c0 alpha) imply
+                   deg_i(L)=L_ii<=||L_i||<=C.                   (5)
+These constants are uniform along all the offset intervals just described.
+The exact derivative of a cell mass in its own offset is deg_i(L).
+
+2. Both one-label margins have linear small-sublevel bounds
+Define the target-entry margin on the complement of A_j by
+ c_j^+(x)=max_i l_i(x)-l_j(x)>0,
+and the source-exit margin on A_i by
+ c_i^-(x)=l_i(x)-max_(j!=i) l_j(x)>0.
+Ties have Gaussian measure zero. The two exact set identities are
+ {x outside A_j: c_j^+(x)<=a}=A_j(h_j+a)\A_j(h_j),
+ {x in A_i: c_i^-(x)<=a}=A_i(h_i)\A_i(h_i-a).
+Consequently, by integrating(5), for 0<a<=a_*,
+ gamma(c_j^+<=a, x outside A_j)<=C a,
+ gamma(c_i^-<=a, x in A_i)<=C a.                               (6)
+This uses the MAX margin, not a sum over ordered pair margins. In
+particular, no uncontrolled multiplicity of nearly tied labels appears.
+
+3. Exact separation of the finite maximum remainder
+At a point with old winner i, write c_ij=l_i-l_j>=0. For real numbers
+a,b and c>=0, convexity of the positive part gives
+ (a+b-c)_+ <=[(2a-c)_++(2b-c)_+]/2.
+Apply this with a=tau psi_j, b=-tau psi_i, then take the largest new
+winning-label improvement. The target terms can be summed, while the
+source term uses only the smallest old gap. After integration,
+ J_tau(psi)
+ <=(1/2)sum_j int_(outside A_j)(2tau psi_j-c_j^+)_+ dgamma
+   +(1/2)sum_i int_(A_i)(-2tau psi_i-c_i^-)_+ dgamma.             (7)
+The identity defining J_tau is nonnegative pointwise. Equation(7)
+remains valid for arbitrary measurable perturbations with finite moments;
+no differentiability of perturbed interfaces is required.
+
+4. A finite Lq bathtub estimate
+Suppose a nonnegative cost c on a measure space satisfies
+ measure{c<=a}<=C a for0<a<=a_*. Let v have Lq norm W, q>=2. On
+D={v>c, c<=a_*}, with theta=measure(D), the cost distribution bound gives
+ int_D c>=theta^2/(2C),
+while Holder gives int_D v<=W theta^(1-1/q). Optimizing the difference
+over theta>=0 proves
+ int_(c<=a_*)(v-c)_+<=C' W^(2q/(q+1)),                          (8)
+with C' uniformly bounded for q>=2 when C is fixed. To justify the
+cost bound, theta<=C a_*, and integration of(theta-Ct)_+ from0 to a_*
+gives exactly theta^2/(2C).
+On c>a_*,
+ (v-c)_+<=|v| 1_(|v|>a_*)<=|v|^q/a_*^(q-1).
+Therefore
+                 int(v-c)_+<=C W^(2q/(q+1))+W^q/a_*^(q-1).      (9)
+
+Use(9) for all the terms in(7). Their Lq norms are at most
+2|tau| ||psi_i||_q. The direct conclusion is
+ J_tau<=C m^(1/(q+1))A^(2q/(q+1))
+              +(2A)^q/a_*^(q-1).                              (10)
+The choice a_*=4a0 made in Section1 absorbs the factors2 without an
+exponential-in-q loss in the theorem's constant, because
+ (2A)^q/(4a0)^(q-1)<=4 a0(A/a0)^q
+for q>=2. The near part retains the same absolute constant. This proves(1).
+The label sums used here are, with p=2q/(q+1),
+ sum_i||psi_i||_q^p<=m^(1-p/2)V_q^p=m^(1/(q+1))V_q^p,
+ sum_i||psi_i||_q^q<=V_q^q.
+There is no ambient-dimensional norm or a factor m from summing ordered
+pair costs.
+
+5. Polynomial amplitudes and Gaussian high degrees
+Divide the first term of(1) by A^2. For q=Q log m and A>=m^(-beta),
+ m^(1/(q+1))A^(-2/(q+1))<=exp((1+2beta)/Q).
+For A<=m^(-1-delta) and a0 comparable to1/m,
+ [a0(A/a0)^q]/A^2=(A/a0)^(q-2)/a0 tends0 faster than any fixed
+power of1/m. This proves(2), uniformly over the stated amplitude interval.
+
+Finally hypercontractivity and the spectral gap in Hermite degree give
+ ||T_s Pi_(>=k)u_i||_q
+ <=||T_(s sqrt(q-1)) Pi_(>=k)u_i||_2
+ <=[s^2(q-1)]^(k/2)||u_i||_2
+whenever s^2(q-1)<=1. Summing squares proves(3). Since the right side
+of(1) is increasing in A, that upper value of A may safely be substituted.
+When invoking the simplified conclusion(2) with this substituted upper
+amplitude, its lower polynomial bound is imposed on that upper amplitude,
+not claimed automatically for the actual Lq norm.
+
+6. Prescribed masses and the exact remaining application gate
+Let the original offsets h be optimal for prescribed masses p. Define
+the perturbed fixed-mass score value
+ F_p(B;tau psi)=sup_(E f=p) E sum_i f_i(B_i.X+tau psi_i).
+In the offset dual, using the original h remains admissible, so
+ F_p(B;tau psi)-F_p(B)-tau E sum_i1_(A_i)psi_i
+                                      <=J_tau(psi).             (11)
+Thus(1)-(3) give a genuine finite higher-degree remainder around every
+conditioned affine fan, with no assumed topology of the perturbed winner
+sets. The lower bound0 in(1) concerns J_tau; the left side of(11) is also
+nonnegative by testing the old assignment.
+
+For voting-scale high odd degrees, the relevant effective amplitude can
+be polynomially small (for example order m^-2), so(2) supplies a constant
+quadratic bound even though the raw first-chaos cap has the saturation
+obstruction already recorded elsewhere. A complete negative-noise proof
+must still connect these affine score values and perturbations to the
+actual full potential, retain all even terms, and justify any required
+score-radius or amplitude hypotheses. None of those steps is asserted here.
+
+REVISION PROVENANCE
+This V2 adds the explicit rank(B)=m-1 hypothesis required to realize
+every one-label offset change by a Gaussian translation, and updates[T]
+to its correspondingly clarified V2. Originalaa080829 remains unchanged.

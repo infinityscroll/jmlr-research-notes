@@ -1,0 +1,159 @@
+EHRHARD REFINEMENT OF THE ACTUAL COVARIANCE HESSIAN AFTER CYCLE CANCELLATION
+31 October 2026. Derivation: strong_signal_prior_art; root independently checked
+both the exact residual identity and normalized-offset factors before freezing.
+Complete proof candidate awaiting full independent source audit.
+
+The conclusion is a new positive term in the accepted covariance Hessian bound.
+It retains the cycle subtraction exactly. No uniform graph-weight or intrinsic
+facet-probability bound, or full mass-window estimate, is claimed here.
+
+1. Classical input and its differentiated consequence
+We use Ehrhard's inequality for convex Gaussian sets. The precise statement
+was checked on the publisher page for R. Latala, A note on the Ehrhard inequality,
+Studia Mathematica118(1996),169--174, DOI10.4064/sm-118-2-169-174:
+ https://www.impan.pl/en/publishing-house/journals-and-series/studia-mathematica/all/118/2/109424/a-note-on-the-ehrhard-inequality
+That statement permits two Borel sets when one is convex; only the simpler
+case of two translates of the same convex set is used here. The publisher's
+full-PDF link returned403 during this check; the exact inequality is displayed
+on its primary landing page. We do not claim a new classical inequality or an
+independent proof of Ehrhard's theorem.
+
+Let K be convex in R^k with 0<p=gamma_k(K)<1. Put
+ mu=E[X|K], Sigma=Cov(X|K), q=Phi^{-1}(p),
+ a(p)=1+q p/phi(q).
+Convexity gives lambda(K+x)+(1-lambda)(K+y)=K+lambda x+(1-lambda)y.
+Thus x -> Phi^{-1}(gamma_k(K+x)) is concave. At x=0,
+ grad gamma(K+x)=-p mu,
+ Hess gamma(K+x)=p(Sigma+mu mu^T-I).
+The chain rule, using (Phi^{-1})''(p)=q/phi(q)^2, yields
+
+ I-Sigma >= a(p) mu mu^T.                               (1)
+
+Gaussian domination justifies differentiating translations even for unbounded
+convex K. No boundary smoothness is needed.
+
+The coefficient is strictly positive. For q>=0 it is >=1. For q=-t<0,
+write R(t)=barPhi(t)/phi(t)=integral_0^infty exp(-tu-u^2/2)du. Integration
+by parts gives
+ a(p)=1-tR(t)=integral_0^infty u exp(-tu-u^2/2)du>0.
+Restricting to 0<=u<=1/(1+t) gives
+ a(p)>=exp(-3/2)/[2(1+t)^2].
+Since t^2<=2log(1/p), this proves, for every 0<p<1,
+
+ a(p)^{-1} <= 8 exp(3/2)[1+log(1/p)].                    (2)
+
+Repeated tail integration also gives a(p)^{-1}=t^2+O(1) as p->0,
+but that sharper asymptotic is unnecessary below.
+
+2. Simplex notation and exact intrinsic probability
+Take m=d+1>=3 affinely independent sites y_i in R^d, fixed positive masses,
+and source covariance C=I. Let h_i be the optimizing score offsets for
+ F(C)=inf_h {E max_i(y_i dot X_C+h_i)-sum_i p_i h_i}.
+For an oriented edge e=(i,j), define
+ d_e=y_i-y_j, ell_e=|d_e|, n_e=d_e/ell_e,
+ h_e=h_i-h_j, P_e=I-n_e n_e^T,
+ Gamma_e={x: i,j co-win},
+ mu_e=integral_Gamma_e phi_d dH^(d-1), w_e=mu_e/ell_e,
+ m_e=conditional mean of X on Gamma_e,
+ Sigma_e=conditional covariance on Gamma_e,
+ E_e=w_e(P_e-Sigma_e).
+The facet lies in n_e dot x=-h_e/ell_e. Its tangential section is a convex
+set in R^(d-1), and its standard intrinsic Gaussian probability is exactly
+
+ pi_e=mu_e/phi(h_e/ell_e),  0<pi_e<1.                    (3)
+
+The conditioned tangential mean is P_e m_e, and its covariance is Sigma_e
+restricted to the tangent space. Applying (1) intrinsically gives
+
+ E_e >= w_e a(pi_e)(P_e m_e)(P_e m_e)^T.                 (4)
+
+The pi_e in (3) is NOT a cell mass. Controlling cell masses alone has not
+been used to assert a lower bound for pi_e.
+
+3. The exact residual after the chain-complex cancellation
+We retain the notation and the already proved identities of
+ ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt,
+ SHA225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b,
+Sections3--8. They apply to this same translated simplex fan. In particular,
+for each facet its incident triangle columns satisfy
+ E_e=N_e T_e^T,
+ T_e=E_e N_e^{-T},
+ B_e=N_e^{-1}E_e N_e^{-T},
+ N_e 1=w_e P_e m_e.                                    (5)
+All inverses here are on the tangent space; E_e itself need not be invertible.
+
+Give cells arbitrary vectors z_i; put z_e=z_i-z_j and c_e=z_e dot m_e.
+Choose a mean-zero b minimizing
+ CYC=min_b sum_e w_e(c_e+b_i-b_j)^2.
+Set j_e=w_e(c_e+b_i-b_j). Its graph divergence is zero, so it is a cycle.
+Use the accepted weighted gauge: partial_2 lambda=j and
+partial_3^T D lambda=0. With eta_(e,g)=(partial_2)_(e,g)lambda_g, the accepted
+factorization says
+
+ sum_e eta_e^T B_e eta_e=j^T W^{-1}j=CYC,
+ sum_e z_e dot T_e eta_e=j dot c=CYC.                    (6)
+
+The second equality in the last expression uses orthogonality of j to the
+exact edge vector db. Define the tangentially corrected vectors
+
+ r_e=z_e-N_e^{-T}eta_e.
+
+Expansion using (5)--(6) now gives the exact, nonnegative identity
+
+ K := sum_e z_e^T E_e z_e-CYC
+    = sum_e r_e^T E_e r_e.                             (7)
+
+This is not a bound on the total covariance deficit before subtracting CYC.
+It identifies the remainder after subtracting the entire cycle mean energy.
+
+Moreover (5) gives N_e^{-1}P_e m_e=1/w_e. Since sum_g eta_(e,g)=j_e,
+
+ r_e dot P_e m_e
+  =z_e dot P_e m_e-j_e/w_e
+  =-(b_i-b_j)-z_e dot(I-P_e)m_e.                        (8)
+
+Applying (4) to the residual vectors, not to the original z_e, proves
+
+ K >= sum_e w_e a(pi_e)
+       [(b_i-b_j)+z_e dot(I-P_e)m_e]^2.                 (9)
+
+All cycle coordinates and signs in (6)--(9) are the same as in the accepted
+chain-complex proof. No edge-dependent offsets or new cycle gauge freedom
+are inserted into the actual optimization problem.
+
+4. Refined covariance Hessian, with every factor retained
+Let C(t)=I+tH, H symmetric, and let h_i(t) be the optimizing offsets at the
+fixed target masses. In the accepted exact Hessian formula take z_i=H y_i.
+The minimizing b in Section3 is b_i=2 h_i'(0) modulo a common constant:
+the square-root score derivative is (H y_i dot X)/2+h_i'(0).
+Since (I-P_e)m_e=-(h_e/ell_e)n_e, put
+ q_e=d_e^T H d_e/ell_e^2.
+Then (9) becomes
+ K>=sum_e w_e a(pi_e)[2h_e'-h_e q_e]^2.
+The remaining normal term of the exact Hessian is
+ N=sum_e w_e |(I-P_e)H d_e|^2=sum_e w_e ell_e^2 q_e^2.
+Consequently the refined bound is
+
+ -4 D^2F(I)[H,H]
+   = N+K
+   >=sum_e w_e {ell_e^2 q_e^2
+                   +a(pi_e)[2h_e'-h_e q_e]^2}.          (10)
+
+Equivalently let ell_e(t)=|C(t)^(1/2)d_e|. Its derivative at0 is
+ell_e q_e/2, so the offset bracket is exactly
+
+ 2h_e'-h_e q_e =2ell_e [h_e(t)/ell_e(t)]' at t=0.         (11)
+
+Thus (10) controls both changing edge lengths and changing normalized facet
+offsets. At any other positive definite base covariance, whitening applies
+the same formulas with transformed sites; no conclusion at a singular base
+is asserted by differentiating through it.
+
+5. What the estimate leaves open
+The new term in (10) is valid even when the raw cycle energy is large.
+This resolves the specific logical failure of replacing K by the total
+facet deficit. It does not yet yield a uniform O(log m) offset certificate:
+that requires control of the actual intrinsic probabilities pi_e, graph
+weights, and/or a justified integrated path. Formula(2) is logarithmic in
+1/pi_e, not automatically logarithmic in m. Neither rank persistence of the
+optimized centroid Gram nor a singular-covariance passage is proved here.

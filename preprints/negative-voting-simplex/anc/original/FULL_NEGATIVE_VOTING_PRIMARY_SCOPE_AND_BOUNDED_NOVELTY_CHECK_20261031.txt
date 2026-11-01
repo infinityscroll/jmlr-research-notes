@@ -1,0 +1,143 @@
+FULL NEGATIVE-VOTING GAUSSIAN SIMPLEX RESULT:
+PRIMARY-SOURCE SCOPE, HISTORY, AND BOUNDED NOVELTY CHECK
+31 October 2026. Independent primary-source check by prior-art agent.
+
+VERDICT
+No earlier exact theorem covering every sufficiently large number of labels
+throughout its full negative voting interval was found in the primary sources
+inspected here. The current October 2026 Heilman paper still identifies the
+four-and-higher cases as open. An older asymptotic endpoint result DOES exist;
+it must not be presented as if the large-label regime had no prior progress.
+This is a bounded literature check, not exhaustive priority clearance or
+external validation of the new proof.
+
+1. Exact internal claim under review
+The frozen root assembly is
+  FULL_NEGATIVE_VOTING_STANDARD_SIMPLEX_FOR_SUFFICIENTLY_LARGE_M_20261031.txt
+in full_standard_simplex_20261031. Its status is a complete internal proof
+candidate with independent agent reconstructions, not peer review.
+
+It states that there is an absolute integer m0 such that, for each integer
+m>=m0, each finite N>=m-1, each rho in[-1/(m-1),0), and each measurable
+single assignment f:R^N -> Delta_m,
+  sum_i <f_i,T_rho f_i> >= sum_i <g_i,T_rho g_i>,
+where g is a centered regular-simplex partition extended cylindrically.
+Equality is restricted to its orthogonal/relabeling/null-set orbit.
+There is NO balance or prescribed-mass assumption. The same m0 works for
+all the indicated rho and finite N; no numerical m0 is supplied.
+
+The phrase "full negative voting range" refers exactly to[-1/(m-1),0).
+It does not mean the full Gaussian interval(-1,0), all finite m, the
+positive-correlation branch, or a two-rule bilinear optimization problem.
+
+2. Original named target and history
+Isaksson--Mossel, arXiv0903.3362v3, Conjecture1.4, formulates Standard
+Simplex for N>=m-1: positive correlation maximization requires equal
+masses, while negative correlation minimization has no mass restriction.
+It attributes the Gaussian conjecture to Mossel around2004. The first
+arXiv version appeared19March2009; v3 is dated3August2009.
+
+Their Conjecture1.9 formulates Plurality is Stablest for the symmetric
+m-state channel rho in[-1/(m-1),1]. Its negative branch also imposes no
+output-balance condition. Theorems1.10--1.11 provide the Gaussian/discrete
+connection on that channel range. Consequently the proposed Gaussian
+statement addresses a recognized branch of a longstanding named problem,
+rather than an invented fixed-mass or communications-simplex variant.
+The exact discrete quantifiers and hardness transfer are audited separately.
+Primary: https://arxiv.org/html/0903.3362v3
+Locations: Conjectures1.4,1.9; Theorems1.10--1.11.
+
+3. Current primary status and the important older asymptotic result
+Fresh arXiv metadata checks on31October2026 returned:
+  0903.3362: latest v3,3August2009;
+  2608.00333: latest v1,31July2026;
+  2610.32158: latest v1,23October2026;
+  2607.14087: latest v4,21August2026.
+The companion manifest pins the source bytes and fresh rendered receipts.
+
+Heilman2608.00333v1 proves the three-label Gaussian negative result on
+[-1/2,0) without fixed masses (Theorem7.1), and the balanced positive
+result on(0,2/5] (TheoremA.1). Its Section1.4 explicitly leaves four or
+more labels/candidates largely open. It does not assert the general-m
+negative voting result.
+Primary: https://arxiv.org/html/2608.00333v1
+Locations: Theorems7.1,A.1; Section1.4, especially the four-or-more item.
+
+Heilman2610.32158v1 again describes the four-and-higher Standard Simplex
+cases as open after Theorem1.3. That is recent supporting evidence for
+the scope distinction, not a substitute for checking the actual earlier
+theorems. The same paragraph's broad description of a mass constraint
+must not override the original negative branch, which is unrestricted.
+Primary: https://arxiv.org/html/2610.32158v1
+Location: paragraph following Remark1.4, web-rendered line99.
+
+The existing asymptotic large-m result is recorded explicitly in
+Isaksson--Mossel, equation(20), based on Khot--Kindler--Mossel--O'Donnell.
+It gives asymptotic endpoint optimality as m tends to infinity, with a
+vanishing low-influence error. It is not exact regular-simplex optimality
+for each fixed sufficiently large m, nor an exact entire-interval result.
+The original KKMO paper is also retained in the primary cache:
+https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf
+This distinction is the main reason not to describe the new claim merely
+as "an asymptotic large-m result": that wording obscures the exactness
+and interval quantifiers that constitute the proposed advance.
+
+4. Nearby theorems that do not already settle this target
+Mulgund2607.14087v4, Theorem2.1, compares equal-threshold Gaussian maxima:
+a unit-diagonal covariance R>=11^T/m yields
+  P(max_i X_i<=t)>=Phi(t)^m.
+It applies to singular PSD covariances and characterizes distributional
+equality. This is a cited INPUT to the new proof. Its Weak Simplex/mean-width
+consequences concern Gaussian maxima and signal decoding, not the
+two-correlated-input partition objective above. The terms "Weak Simplex",
+"Standard Simplex", and "Propeller" must therefore remain distinct.
+Primary: https://arxiv.org/html/2607.14087v4
+Location: Theorem2.1 and Sections1--2.
+
+The current OpenAI/math overview at commit
+4eaee87548250b2682affda7d05d947c05554bae, dated30October2026 in the root's
+retrieval, includes a Gaussian Propeller entry. Its objective is an
+unconstrained sum of squared Gaussian first moments, not finite negative
+noise stability. The exact cached overview was independently hash-checked:
+39de58f1bf2185eb11d444a58aec4c7c7530419f3127deb9261fa46e044a4135.
+Literal case-insensitive searches found no "Standard Simplex", "plurality",
+"noise stability", or "noise-stability". That is only a statement about
+this overview's text; it does not certify absence from every manuscript,
+repository, unpublished argument, or differently named result.
+Primary: https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/overview.tex
+
+5. Search boundary and significance
+The check combined the original conjecture, its asymptotic caveat, current
+arXiv version histories, the two current Heilman discussions, Mulgund's
+precise input theorem, the pinned catalogue, and focused primary-domain
+searches for Standard Simplex/Plurality, sufficiently large label counts,
+negative correlation, and MAX-k-CUT. Search queries and cached evidence
+are listed in the companion receipt. No aggregator was used as a theorem
+source. No author was contacted and no manuscript was published.
+
+Within that bounded record, the new claim would resolve the ENTIRE
+negative channel branch for every label count beyond one absolute
+threshold, in all indicated finite dimensions and without balancing the
+competitor. This is an exact global extremal result, not another endpoint
+moment inequality or an additive asymptotic approximation. It would be
+substantial progress on the original named problem if the proof withstands
+outside scrutiny. It would still leave the finite exceptional label
+counts, Gaussian correlations below -1/(m-1), and the positive branch
+untouched. This note makes no independent computational-hardness claim.
+
+Preferred description:
+  "An internally audited proof candidate for the negative Standard
+   Simplex inequality throughout the voting range, for all sufficiently
+   large numbers of parts, with no mass constraint."
+Do not describe it as a proof of the full Standard Simplex Conjecture,
+as the first asymptotic large-label result, or as externally verified.
+
+PROVENANCE
+This note does not alter any proof source or master checkpoint. Current
+primary web receipts are provider-rendered retrieval records, not raw
+arXiv source files. The older full HTML/PDF caches are separately pinned.
+A direct raw-byte refresh attempt was interrupted after network delays;
+the fresh version/status checks and passages were successfully obtained
+through the web tool and saved. The note's literature verdict does not
+depend on that interrupted download.
+

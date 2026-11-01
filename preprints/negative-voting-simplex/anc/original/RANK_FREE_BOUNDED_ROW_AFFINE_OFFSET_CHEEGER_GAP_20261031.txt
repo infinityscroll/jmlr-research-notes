@@ -1,0 +1,224 @@
+RANK-FREE BOUNDED-ROW AFFINE OFFSET GAP AND DEFICIT-RELATIVE OFFSETS
+31 October 2026. New analytic candidate; independent audit pending.
+
+No lower singular value, pair-separation, equal-row or radial-exposure
+assumption appears. The physical graph statement is for DISTINCT sites
+with positive cell masses. Duplicate sites are treated separately at the
+value/offset level, not by pretending their 1/ell edge weights are finite.
+
+Notation: L=1+log m, alpha=E max_(i<=m) Z_i/(m-1),
+w=alpha^2(m-1), U=(1/m,...,1/m). Thus alpha is comparable to sqrt(L)/m.
+Constants may depend on fixed0<cp<Cp and C0, but not m or ambient N.
+All statements below hold for sufficiently large m.
+
+THEOREM A. Physical affine graph, with no rank requirement
+Let B_i be distinct sites in a finite Gaussian R^N, centered by
+sum_i B_i=0 and satisfying max_i|B_i|<=C0 alpha. Let the affine
+maximizer cells of B_i.X+h_i have masses cp/m<=p_i<=Cp/m. Write
+ ell_ij=|B_i-B_j|, mu_ij=int_(Sigma_ij) gamma_N dH^(N-1),
+ w_ij=mu_ij/ell_ij, and mathcal L for the label Laplacian with weights w.
+Zero-area/nonadjacent facets have weight0. Then
+
+             z^T mathcal L z>=c L^-1 |z|^2 for z perpendicular1. (1)
+
+The sites may be collinear, nonvertices, or have deficient affine span.
+Every cell has positive Gaussian measure by hypothesis.
+
+THEOREM B. Mass values and offsets, including duplicates
+Let N>=m-1, B centered and max_i|B_i|<=C0 alpha, now allowing coincident
+rows and any rank. On a fixed positive mass box cp/m<=p_i<=Cp/m,
+let F_p(B) be the prescribed-mass linear-score value and let h(p) be the
+mean-zero optimal offset vector, using maximizers of B_i.X+h_i. Then
+
+ |h(p)-h(q)|<=C L |p-q|,                                    (2)
+ -C L |p-q|^2<=F_p(B)-F_q(B)+h(q).(p-q)<=0.                 (3)
+
+The vector h is common on each duplicate group; fractional allocation
+inside that group is allowed. No convergence of individual allocations
+is asserted or needed.
+
+COROLLARY C. Global deficit-relative balanced offsets
+Under Theorem B, additionally normalize ||B||F^2=w and put
+R_U(B)=w-F_U(B)>=0. Then
+
+                       |h(U)|^2<=C L^2 R_U(B).              (4)
+
+This is global in the score covariance, subject only to the row cap.
+For p in a fixed positive box one also obtains
+ |F_p(B)-F_U(B)|<=C L sqrt(R_U(B))|p-U|+C L|p-U|^2.          (5)
+These are offset/value conclusions. They do not prove a full-noise sign,
+centroid rank, equal row norms, or proximity to the regular score orbit.
+
+1. Exact physical row identity
+For distinct sites, the cells are convex polyhedra and have finite
+Gaussian perimeter. Let M_i=int_(cell i) x dgamma. Gaussian integration
+by parts, with outward normal (B_j-B_i)/ell_ij, gives
+
+                 M_i=sum_j w_ij(B_i-B_j)=(mathcal L B)_i.   (6)
+
+Let v_i=|B_i|^2 and k_i=sum_j w_ij ell_ij^2. The exact identity is
+
+                    k_i=2B_i.M_i-(mathcal L v)_i.           (7)
+
+It is important to retain the second term when row norms differ.
+Gaussian one-dimensional rearrangement gives |M_i|<=I(p_i), where
+I(p)=phi(Phi^-1(p)); the elementary entropy bound also suffices.
+The mass upper bound therefore implies
+
+                       max_i |M_i|<=C sqrt(L)/m.             (8)
+
+No relation between M_i and B_i beyond(6) is assumed.
+
+2. A weighted Cheeger estimate with its row error retained
+For a real label vector z define
+ E(z)=sum_(i<j) w_ij(z_i-z_j)^2,
+ K(z)=sum_(i<j) w_ij ell_ij^2(z_i+z_j)^2,
+ S(z)=sum_(i<j) mu_ij |z_i^2-z_j^2|.
+By Cauchy,
+
+                            S(z)<=sqrt(E(z)K(z)).            (9)
+
+Equations(7)-(8) give, with Z=|z| and Bmax=max|B_i|,
+ K(z)<=2sum_i z_i^2 k_i
+      =4sum_i z_i^2 B_i.M_i
+           -2sum_(i<j)w_ij(v_i-v_j)(z_i^2-z_j^2)
+      <=A Z^2+4Bmax sqrt(E(z)K(z)),                          (10)
+where A=4Bmax max_i|M_i|. The last step uses exactly
+ |v_i-v_j|<=2Bmax ell_ij.
+Consequently
+
+               sqrt(K(z))<=sqrt(A)Z+4Bmax sqrt(E(z)).        (11)
+
+Suppose z>=0 and the union of its positive labels has Gaussian mass at
+most1/2. Gaussian isoperimetry, in its elementary consequence
+P_gamma(E)>=2phi(0)gamma(E) for gamma(E)<=1/2, and discrete coarea give
+ S(z)=int_0^infinity P_gamma(union_{z_i^2>t} cell_i)dt
+     >=2phi(0)sum_i p_i z_i^2>=h Z^2,
+where h=2phi(0)cp/m. Thus, writing u=sqrt(E(z))/Z when Z>0,
+
+                  h<=sqrt(A)u+4Bmax u^2.                    (12)
+
+At least one term on the right is at least h/2. It follows that
+ E(z)/Z^2>=min[h^2/(4A),h/(8Bmax)]
+          >=c/[m Bmax sqrt(L)]>=c/L.                        (13)
+The last inequality uses the row cap and alpha comparable to sqrt(L)/m.
+This proof does not require an upper bound on the physical graph degrees.
+Tiny distances make w large; they do not spoil the argument.
+
+For arbitrary z perpendicular1, choose a median a for the probability
+weights p_i. Both z_+=(z-a)_+ and z_-=(a-z)_+ have positive support mass
+at most1/2. Edgewise,
+ E(z)>=E(z_+)+E(z_-),
+while |z_+|^2+|z_-|^2=|z-a1|^2>=|z|^2.
+Apply(13) twice to prove(1). This also proves connectedness/coercivity of
+the physical offset graph quantitatively.
+
+3. Physical degeneracies and the offset derivative
+For distinct sites and positive masses, cells have nonempty interior.
+A whole facet cannot have three distinct affine scores identically tied
+while all three cells have positive volume: the three affine functions
+would be collinear combinations, and the middle one could never win
+strictly. Thus genuine facets are unsplit apart from lower-dimensional
+sets. This statement allows arbitrary rank and bounded cells.
+
+Ordinary Gaussian coarea gives the derivative of the mass vector with
+respect to offsets as mathcal L. These first derivatives are continuous
+on the positive-cell region. One can see this on each fixed pair plane:
+all other restrictions have boundary of surface measure zero unless a
+whole-facet triple degeneracy occurs, which was just excluded. Gaussian
+domination then proves continuity of the facet integrals. Existence of
+offsets for positive target masses is the standard finite-target dual
+fact already used in the pinned covariance proof.
+
+The mean-zero offsets consequently have derivative
+                   dh/dp=(mathcal L|1-perp)^-1.
+The gap(1), uniformly along the segment of masses inside the fixed box,
+proves(2) for distinct sites. Since the concave mass value has gradient
+-h, integration gives(3). No second derivative in score sites is claimed.
+
+4. Exact passage to singular and duplicate rows
+Rank loss with distinct sites is already covered by Sections1-3. For a
+uniform treatment including duplicates, approximate B by centered
+full-rank matrices B_epsilon in the SAME R^N, using an extended partial
+polar isometry; preserve the row cap up to a fixed factor. If ||B||^2=w
+is imposed, normalize each approximant to that same norm. The finite
+dimension N>=m-1 makes the extension possible.
+
+For any positive mass vector in the box, the halfspace constraint for
+cell i against j gives
+ |h_i-h_j|<=ell_ij Phi^-1(1-cp/m).
+Thus all mean-zero approximating offsets are uniformly bounded. By(2)
+they are also uniformly Lipschitz as functions of p. Subsequential limits
+on the compact mass box exist and satisfy(2).
+
+The score-value estimate
+ |F_p(B_epsilon)-F_p(B)|<=E max_i|(B_epsilon-B)_i.X|
+                       <=||B_epsilon-B||F
+is uniform in p. Passing in the dual objective identifies every limit
+as an optimal offset. For duplicate rows, positive prescribed masses
+force their offsets equal: a strictly smaller offset would give that
+label zero mass. Grouping duplicates leaves distinct sites with positive
+group masses. Their whole-facet adjacency is connected (a generic line
+segment between cell interiors crosses only facets), and equality in the
+convex dual along two optima forces equal offset differences on every
+adjacent pair. Hence optimal offsets are unique up to a common constant.
+The mean-zero convention identifies the limit uniquely. Alternatively
+this is precisely the standard uniqueness argument for the finite
+Gaussian semi-discrete dual, applied to duplicate groups.
+
+Consequently all approximating offsets converge to the same h(p), and
+(2)-(3) pass to the endpoint. This uses values and offsets only; arbitrary
+fractional splitting of a duplicate group need not converge.
+
+5. Deficit-relative offsets without a covariance lower bound
+For this section use a fixed auxiliary mass box containing, for example,
+1/(2m)<=p_i<=3/(2m). Let h=h(U), sum h_i=0. The balanced halfspace bounds
+from Section4 give
+
+                         ||h||infty<=C L/m.                  (14)
+
+The accepted global mass-window theorem gives
+ V(p)<=w+C L^2|p-U|^2,
+including singular covariance optimizers. For any B with ||B||^2=w,
+Young's inequality against each assignment's centroid matrix gives
+ F_p(B)<=1/2(||B||^2+V(p))<=w+C L^2|p-U|^2.                  (15)
+
+Let z=p-U. The lower Taylor estimate(3) gives
+ F_p(B)>=w-R_U(B)-h.z-C L|z|^2.
+Combining with(15),
+
+                    -h.z<=R_U(B)+C1 L^2|z|^2.               (16)
+
+Choose z=-h/(2C1 L^2). Equation(14) ensures this choice lies in the
+auxiliary mass box for all sufficiently large m; it is centered.
+Equation(16) yields |h|^2<=4C1 L^2 R_U(B), proving(4).
+Finally(3) and(4) give(5), using an auxiliary box containing both U and
+the target fixed positive box if necessary.
+
+6. Exact scope and next use
+The physical spectral gap applies to any finite ambient dimension with
+distinct sites and positive cells. The duplicate extension in Theorem B
+uses N>=m-1; it does not assign physical graph weights to duplicate sites.
+All constants are uniform in the rank, pair separation and offsets.
+
+The row cap is satisfied by actual competitive centroid matrices from
+the mass window and the Gaussian centroid bound, after harmless common
+normalization when their total moment is comparable to w. This makes
+the lemma applicable without asserting that such minimizers are affine.
+An affine score comparison and an actual partition remain different
+objects. No actual geometry, second-chaos sign, or full-noise theorem
+is inferred here.
+
+PINNED INPUTS
+GLOBAL_MASS_WINDOW_SEMICONCAVITY_ACROSS_RANK_BOUNDARIES_20261031.txt
+11a6959e34ee49c2adc883c788265dcd054b013e2a886e2be868dc62df77aab2
+OPTIMIZER_GRAPH_COMPACTNESS_CLARIFICATION_20261031.txt
+6d19bda9fc3b2f6ec97d5fb2d30096de61e1a9f41bcd71e78feda8de74b3029c
+REGULARIZED_MASS_WINDOW_PRUNED_GRAPH_OFFSET_CERTIFICATE_20261031.txt
+12dc8e6e99b6d2aef1438f2de28f697f4ff153c07bb079b4ac4440fb75067e08
+The last source records the Gaussian isoperimetric/coarea input used here;
+none of its KKT or pruned-graph conclusions is substituted for this proof.
+../all_dimensional_covariance_concavity_20261031/ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b
+The finite-target offset/value existence and continuity conventions are
+the same as in that pinned source. Frozen inputs and master are untouched.

@@ -1,0 +1,145 @@
+GLOBAL MASS LOCALIZATION THROUGH THE FULL ADMISSIBLE NEGATIVE INTERVAL
+31 October 2026. Proof candidate; independent audit pending.
+
+This is a new implication for the SINGLE-assignment problem. It does not
+prove Standard Simplex/Plurality is Stablest, nor the stronger two-rule
+negative statement. It does overcome the O(m^-2) positivity restriction
+in the previously frozen bilinear transfer. No publication claim.
+
+1. Statement and exact finite-m certificate
+Let f=(f_1,...,f_m) be a Gaussian partition in any finite dimension, or a
+simplex-valued measurable assignment. Put p_i=E f_i, U=(1/m,...,1/m),
+delta=|p-U|^2, W=sum_i |E[X f_i]|^2. Let g be the balanced regular
+m-cone partition, allowed in a larger dimension when necessary. Write
+M_m=max of m independent standard normals, mu_m=E M_m, and
+  w_m=mu_m^2/(m-1),
+  I(p)=phi(Phi^-1(p)), I(0)=I(1)=0,
+  F_m=m I(1/m)^2,
+  B_m=max(2 log m+1,6),
+  A2_m=m(E M_m^2-1)^2/[2(m-1)(m-2)]       (m>=3).
+
+Suppose 0<r<=1/(m-1) and S_{-r}(f)<=S_{-r}(g). If m-1>B_m, then
+
+  delta <= [r(F_m-w_m)+r^2 A2_m+r^3+r^4]/(1-r B_m).       (1)
+
+In particular define the explicit, one-dimensional-integral quantity
+
+  L_m = m^2/[1-B_m/(m-1)] *
+        [(F_m-w_m)/(m-1)+A2_m/(m-1)^2
+                            +1/(m-1)^3+1/(m-1)^4].       (2)
+
+Then m^2 delta<=L_m UNIFORMLY throughout the full interval. Moreover
+
+  L_m -> 2-2 gamma <1,                                  (3)
+
+where gamma is Euler's constant. Consequently for every eta>0 with
+2-2 gamma+eta<1, all sufficiently large m and every competitive f satisfy
+
+  [1-sqrt(2-2 gamma+eta)]/m <= p_i
+       <= [1+sqrt(2-2 gamma+eta)]/m       for every i.     (4)
+
+Thus no label can disappear in a competitive assignment anywhere in the
+full negative interval for all sufficiently large m. This does not force
+p=U, closeness of the partition to g, or equality of noise stability.
+The theorem gives an asymptotic threshold, not a claimed computed m_0.
+
+2. The scalar Bregman bound is global, including p=0 and p=1
+Set H(p)=I(p)^2 and a=1/m. On (0,1), with z=Phi^-1(p),
+  H'(p)=-2z I(p),   H''(p)=2z^2-2.
+We prove for all p in [0,1]
+
+  H(p)<=H(a)+H'(a)(p-a)+B_m(p-a)^2.                     (5)
+
+For p<a, the integral Taylor remainder is
+  int_p^a (t-p) H''(t) dt.
+For t<=1/2 the elementary Gaussian tail bound implies
+|Phi^-1(t)|^2<=2 log(1/t). With t=p+(a-p)s>=as, the remainder is at most
+  4(a-p)^2 int_0^1 s[log m+log(1/s)] ds
+  =(2 log m+1)(a-p)^2.
+This also proves the endpoint p=0 by monotone limiting or integrability.
+For a<=p<=1/2, H''(t)<=2|Phi^-1(a)|^2<=4 log m, proving (5).
+For p>=1/2, H'(a)>=0 and H(a)>=0, while H(p)<=1/(2pi).
+Since p-a>=1/6 for m>=3, the remainder divided by (p-a)^2 is at most
+18/pi<6. This proves (5) on the entire interval.
+Summing and using sum_i(p_i-a)=0 gives
+
+  sum_i I(p_i)^2 <= F_m+B_m delta.                      (6)
+
+Gaussian one-dimensional rearrangement gives |E X f_i|<=I(p_i): project
+onto the centroid direction and place the allowed mass on a half-line.
+This holds also for 0<=f_i<=1. Therefore W<=F_m+B_m delta.
+
+3. Retaining the single-rule parity
+Let a_k(f) be the summed squared Hermite coefficients at degree k.
+All a_k>=0, a_0=|p|^2, a_1=W, and sum a_k<=1 (equality for a partition).
+For negative correlation,
+  S_{-r}(f)>=|p|^2-r W-r^3(1-|p|^2-W)
+            >=|p|^2-r W-r^3.                           (7)
+Even degrees were kept nonnegative; the odd degrees >=3 were bounded
+by r^3. This is unavailable for an arbitrary bilinear pair.
+For the reference, discard its negative odd degrees and bound even degrees
+>=4 by r^4 to get
+  S_{-r}(g)<=1/m-r w_m+r^2 A2_m+r^4.                    (8)
+Competitive comparison and (6) now give (1). Since F_m>=w_m (apply the
+individual centroid bound to g), every numerator coefficient is nonnegative.
+The right side of (1) increases with r while rB_m<1. This proves (2).
+
+4. Exact second-chaos coefficient of the regular partition
+Root derived the formula for A2_m independently; the derivation here
+checks it directly. Work in H=1-perp subset R^m with projected standard
+Gaussian X and unit regular axes t_i=sqrt(m/(m-1))(e_i-1/m).
+For cell i, the matrix E[(XX^T-I_H)1_{g_i}] has one eigenvalue along t_i
+and a repeated eigenvalue on its orthogonal complement, by permutation
+symmetry. Its trace is zero because g_i is conical and Gaussian radius
+is independent of direction. Conditional on cell i, the axis second moment is
+  (m E M_m^2-1)/(m-1).
+Indeed, the common Gaussian mean is independent of H and has variance1/m,
+and subtracting it from M_m leaves the winning projected coordinate.
+Multiplying the conditional deficit by the cell mass1/m gives the axis
+eigenvalue q=(E M_m^2-1)/(m-1); the other eigenvalue is -q/(m-2).
+Degree-two Hermite weight is one half the squared Frobenius norm of this
+matrix. Summing over m cells gives exactly A2_m above.
+For direct evaluation, integration by parts twice gives
+  E M_m^2-1
+    =m(m-1)(m-2)/2 * int_R phi(t)^3 Phi(t)^(m-3) dt.     (9)
+Boundary terms vanish by Gaussian decay. In the first step use
+(t phi(t))'=(1-t^2)phi(t); in the second use (phi^2)'=-2t phi^2.
+
+5. Asymptotics needed for (3), with tail control
+Put b_m=Phi^-1(1-1/m). Mills expansion, obtained by repeated integration
+by parts of the Gaussian tail, gives
+  phi(b_m)/(1/m)=b_m+1/b_m+O(b_m^-3),
+  F_m=[b_m^2+2+o(1)]/m,   b_m^2=O(log m).              (10)
+For Z_m=b_m(M_m-b_m), the same tail ratio gives
+  P(Z_m<=z)->exp(-exp(-z)) for every fixed real z.
+Moment convergence is justified as follows. For z>=0 the union bound and
+Mills bounds give P(Z_m>z)<=C exp(-z). For 0<=z<=b_m^2/2, the lower
+Mills bound at b_m-z/b_m gives P(Z_m<-z)<=exp(-c exp(z/2)).
+Between b_m^2/2 and b_m^2 this probability is at most
+exp(-m barPhi(b_m/2)), whose product with any fixed power of b_m tends0.
+For z=b_m^2+b_m s, s>=0, use
+  P(M_m<-s)=barPhi(s)^m<=2^-m exp(-m s^2/2).
+These bounds give uniform integrability of Z_m and Z_m^2 and hence
+  E M_m^2=b_m^2+2 gamma+o(1),
+  (E M_m)^2=b_m^2+2 gamma+o(1).                         (11)
+Here gamma is the mean of the displayed Gumbel law. Its equality with
+Euler's constant follows, for example, by the substitution u=exp(-z)
+in its density integral, or the usual harmonic-number limit.
+Equations (10)-(11) imply
+  m(F_m-w_m)->2-2 gamma,
+  A2_m=O(log^2 m/m),   B_m=O(log m).
+In (2), the second, third and fourth terms after multiplication by m^2
+are respectively O(log^2 m/m), O(1/m), O(1/m^2); the denominator tends1.
+This proves (3). The strict gamma>1/2 can be seen without a decimal
+approximation: the increasing trapezoidal error for 1/x has limit
+gamma-1/2 and already has positive value3/4-log2 on [1,2].
+
+6. Scope and the genuine remaining bridge
+This theorem excludes zero or arbitrarily underweight cells in large-m
+competitive SINGLE-rule assignments throughout [-1/(m-1),0). It does
+not convert the old bilinear transfer into a full-range theorem. Nor does
+it control all higher-chaos differences relative to the endpoint deficit.
+The full named conjecture still requires a sign proving that a competitive
+assignment with the mass window (4) is exactly the regular partition.
+No endpoint coercivity constant, compactness-only delta_*, or numerical
+threshold is silently used in (1)-(4).

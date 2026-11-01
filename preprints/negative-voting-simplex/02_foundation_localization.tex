@@ -1,0 +1,272 @@
+\section{Covariance foundation and competitive localization}
+\label{sec:foundation-proof}
+This section reconstructs the covariance, mass, and localization inputs.
+The Hodge proof and the cycle refinement are distinct components. The
+former gives covariance concavity and normal strain; the latter is needed
+for the mixed covariance/offset estimate in the mass envelope. Detailed
+weak-limit and finite-fan identities are supplied in the analytic notes
+\cite{hodge,cycle,currentassembly}.
+
+\subsection{The covariance functional and its quantitative curvature}
+For a probability law $\nu$ on $\RR^d$ with finite second moment, set
+\[
+ \mathcal F_\nu(C)=\sup\{\E X\cdot Y:X\sim N(0,C),\ Y\sim\nu\}.
+\]
+The classical-input Hodge argument \cite{hodge} establishes concavity
+on the ordinary PSD covariance cone, including singular covariances by
+continuity. It does not concern Bures geodesics. For a simplex target
+$\nu=\sum_{i=1}^{d+1}p_i\delta_{y_i}$ with affinely independent sites and
+positive masses, write $a_{ij}=y_i-y_j$ and let $s_{ij}(C)$ be the Gaussian
+surface area of the physical interface for the scores $C^{1/2}y_i$ with
+the prescribed-mass offsets. Put $w_{ij}=s_{ij}/|C^{1/2}a_{ij}|$. Then
+\begin{align}
+ D\mathcal F_\nu(C)[H]&=\frac12\sum_{i<j}w_{ij}a_{ij}^THa_{ij},
+       \label{eq:hodge-derivative}\\
+ -4D^2\mathcal F_\nu(C)[H,H]
+ &\ge\sum_{i<j}w_{ij}\frac{(a_{ij}^THa_{ij})^2}{a_{ij}^TCa_{ij}}.
+       \label{eq:hodge-strain}
+\end{align}
+Strictness holds on the affine span of the simplex. The balanced target
+$y_i=Pe_i$ gives the functional $\Gamma$ used here.
+
+We record the route to these inequalities to identify the substantial
+analytic input. If $M=D^2\varphi$ is smooth and uniformly elliptic, the
+weighted Gaussian Hodge estimate gives, for every weak Gaussian-solenoidal
+vector field $v$, a skew matrix field $A$ such that
+\[
+ \delta_\gamma A=v,\qquad
+ \E\tr(A^TMA)\le\E v^TMv.
+\]
+Its proof minimizes the left side subject to the divergence constraint.
+The Euler equation is $d(MA+AM)=0$. The integration-by-parts identity
+reduces its three-index terms to
+\[
+ -2(\beta ab+\gamma bc+\alpha ca)
+ +\frac{[(\alpha+\beta)a+(\beta+\gamma)b+(\gamma+\alpha)c]^2}
+             {2(\alpha+\beta+\gamma)}\ge0
+\]
+for positive eigenvalues $\alpha,\beta,\gamma$. The remaining terms are
+nonnegative squares. Gaussian OU resolvents, compact cutoffs, and graph
+approximation justify the weak minimization and integration by parts;
+these steps are proved in the supplied Hodge notes, not by the finite
+identity alone.
+
+For symmetric $H$ define
+\[
+ j_M(H)=\sum_i\lambda_iH_{ii}^2+
+       \sum_{i<j}\frac{4\lambda_i\lambda_j}{\lambda_i+\lambda_j}H_{ij}^2,
+\]
+in an eigenbasis of $M$. The coupling variational formula and the Hodge
+bound give the local upper Peano estimate
+\begin{equation}\label{eq:hodge-peano}
+ \limsup_{t\to0}\frac{\mathcal F_\nu(I+tH)-\mathcal F_\nu(I)
+       -(t/2)\tr(H\E M)}{t^2}\le-\frac18\E j_M(H).
+\end{equation}
+Strong convexity bounds optimizing displacements in $L^2$ by $O(t)$;
+Fenchel duality supplies the energy lower limit for their weak velocities.
+This avoids differentiating an optimal transport map along the covariance
+path or assuming a uniform Taylor remainder for unbounded displacements.
+
+The smooth target class $Z^{-1}e^{-q}\gamma_\Sigma$, with compactly supported
+smooth $q$, is covered by Colombo--Figalli--Jhaveri \cite{CFJ}. The reciprocal
+change $x'=\Sigma^{1/4}x$, $y'=\Sigma^{-1/4}y$ makes the two reference
+Gaussians identical and preserves the coupling inner product. The class
+is closed under invertible linear target changes and is dense in $W_2$.
+A scalar chord-and-quadratic barrier applied to \eqref{eq:hodge-peano}
+gives concavity along each covariance segment. The bound
+\[
+ |\mathcal F_\nu(C)-\mathcal F_\eta(C)|
+        \le\sqrt{\tr C}\,W_2(\nu,\eta)
+\]
+passes it to arbitrary targets; Gaussian $W_2$ continuity includes singular
+source covariances.
+
+For simplex targets, smooth Hessians converge as PSD matrix measures to
+rank-one facet measures. The representation
+\[
+ j_M(H)=\min_{K^T=-K}\tr((H+K)^TM(H+K))
+\]
+and the estimate, for a unit vector $n$,
+\[
+ |j_M(H)-\tr(M)(n^THn)^2|
+ \le16\|H\|_\Frob^2
+       \sqrt{\tr(M)\tr((I-nn^T)M)}
+\]
+give the required facet limit. This is a rank-one measure argument, not
+a general lower-semicontinuity claim for a concave matrix function.
+Patch exhaustion and a scalar curvature barrier yield
+\eqref{eq:hodge-strain}. The Gaussian heat identity and the offset envelope
+give \eqref{eq:hodge-derivative}, including its factor $1/2$.
+
+\subsection{The mass envelope and the retained cycle refinement}
+Fix absolute $0<c<1<\overline C$ and let
+$c/m\le p_i\le\overline C/m$. Square completion gives
+\begin{equation}\label{eq:Vrepresentation}
+ V(p)=\sup_{\E f=p}\|M_f\|_\Frob^2
+     =\max_{C\succeq0}\{2\Gamma_p(C)-\tr C\},
+\end{equation}
+where $\Gamma_p(C)$ is the Gaussian linear assignment value with prescribed
+masses. In this mass-envelope argument, covariance and mixed derivatives
+written as $\Gamma_{CC}$, $\Gamma_{Cp}$, or $\Gamma_{pp}$ are derivatives
+of $\Gamma_p(C)$ at the current prescribed mass $p$; they are not
+restricted to the balanced value $\Gamma=\Gamma_U$.
+Its support function agrees for pure and fractional rules.
+A pure support maximizer exists by the finite Gaussian offset dual;
+duplicate-score ties may be split measurably. This does not assert purity
+of a full-noise minimizer.
+
+Restrict the covariance in \eqref{eq:Vrepresentation} to
+$C\succeq\epsilon I_H$ on $H=\one^\perp$, and write the resulting value
+as $V_\epsilon$. The elementary bound
+$\Gamma_p(C)\le\sqrt{\tr C}$ gives a common trace bound. Adding an
+independent Gaussian to a coupling gives
+\begin{equation}\label{eq:Vepsilon}
+ 0\le V(p)-V_\epsilon(p)\le\epsilon(m-1).
+\end{equation}
+Indeed, if $(X,Y)$ is an admissible coupling for $\Gamma_p(C)$, retain
+$Y$ and replace $X$ by $X+G$, where $G$ is an independent centered
+Gaussian of covariance $\epsilon I_H$. The objective is unchanged, while
+the source covariance becomes $C+\epsilon I_H$. Thus
+$\Gamma_p(C+\epsilon I_H)\ge\Gamma_p(C)$, including singular $C$;
+the trace penalty increases by exactly $\epsilon(m-1)$.
+At a regularized optimizer, the derivative formula and KKT conditions give
+\[
+ 0\preceq\calL\preceq I_H,\qquad
+       (I_H-\calL)(C_\epsilon-\epsilon I_H)=0.
+\]
+Thus physical graph degrees are bounded by one. A two-cell re-splitting
+argument at an unregularized optimum, using the scalar Gaussian density
+bound, gives $|B_i-B_j|\ge\sqrt{2\pi}p_ip_j$. The entropy estimate gives
+the upper edge-length bound $C\sqrt L/m$. Compactness of the closed
+optimizer graph transfers these inequalities with slack to the regularized
+optimizers; continuity of individual optimizer fibers is unnecessary.
+
+Gaussian isoperimetry applied to unions of cells gives conductance at least
+$c_1/\sqrt L$. Removing edges of weight below $m^{-4}$ loses at most
+$|S|m^{-3}$ across a cut. The retained graph therefore has counting-measure
+gap $\lambda_*\ge c_2/L$. Its intrinsic facet probabilities satisfy
+$\pi_e\ge c_3m^{-6}$, and the normalized offsets satisfy
+$q_e^2\le 2\log(m/c)\le C_c L$, where $p_i\ge c/m$ is the fixed
+lower mass bound. Constants in this subsection may depend on the fixed
+mass-box parameters $c$ and $\overline C$, but not on dimension or noise.
+These are facet probabilities, not the masses of the adjoining cells.
+
+The stronger finite-fan estimate used here is
+\begin{equation}\label{eq:cycle-refined}
+ -4\Gamma_{CC}[A,A]\ge
+ \sum_e w_e\{x_e^2+a(\pi_e)(2h'_e-q_ex_e)^2\},\qquad
+ a(p)=1+\frac{\Phi^{-1}(p)p}{\phi(\Phi^{-1}(p))}.
+\end{equation}
+Here $d_e=y_i-y_j$ is an edge at the whitened covariance base,
+$\widetilde A$ is the whitened covariance perturbation,
+$x_e=d_e^T\widetilde A d_e/|d_e|$, and
+$q_e=(h_i-h_j)/|d_e|$. The vector $h'$ is the mass-balancing offset
+derivative, with $h'_e=h'_i-h'_j$. The proof in \cite{cycle} retains
+the whole cycle correction before applying intrinsic Ehrhard. More
+precisely, the finite-fan integration identities yield a negative
+semidefinite weighted boundary-of-boundary remainder. Choosing its
+weighted gauge preserves the prescribed cycle $j$. If $r_e$ is the
+resulting residual tangential field and
+$E_e=w_e(P_e-\Cov_e X)$, the two identities used are
+\[
+ \sum_e r_e^TE_er_e=\sum_e z_e^TE_ez_e-\mathrm{CYC},
+ \qquad r_e\cdot P_em_e=-\mathrm db_e-z_e\cdot(I-P_e)m_e.
+\]
+Intrinsic Ehrhard is then applied to $r_e$, with $b=2h'$. Applying it
+directly to $z_e$ would discard the cycle energy and would not prove
+\eqref{eq:cycle-refined}. The complete finite-fan definitions and identity
+proof are in \cite[Sections 3--5]{cycle}; the current reconstruction is
+\cite[Section 2b]{currentassembly}.
+
+On retained edges, intrinsic Ehrhard gives $a(\pi_e)^{-1}\le CL$.
+The elementary inequality
+\[
+ 4(h'_e)^2\le(a(\pi_e)^{-1}+q_e^2)
+       \{x_e^2+a(\pi_e)(2h'_e-q_ex_e)^2\}
+\]
+and the graph gap consequently imply
+\begin{equation}\label{eq:mixed-offset}
+ \|D_Ch[A]\|^2\le CL^2[-\Gamma_{CC}[A,A]].
+\end{equation}
+The normal-strain estimate alone would not imply this mixed bound.
+
+Let $g(C,p)=2\Gamma_p(C)-\tr C$. Along a mass segment $p(t)$ with
+velocity $u$, optimality inequalities at two times imply almost everywhere
+\[
+ E_0=-g_{CC}[C',C']\le B_0=g_{Cp}[C',u],\qquad
+ B_0^2\le CL^2|u|^2E_0.
+\]
+For fixed $\epsilon$, strict curvature and compactness give a Lipschitz
+optimizer map and a Lipschitz envelope derivative. Since
+$\Gamma_{pp}=-\calL^{-1}$, the second derivative of the envelope is at
+most $CL^2|u|^2$. At $U$, symmetry gives zero centered derivative.
+Integrating, passing $\epsilon\downarrow0$ in \eqref{eq:Vepsilon}, and
+using $V(U)=w$ prove
+\begin{equation}\label{eq:mass-envelope-proved}
+                  V(p)\le w+CL^2|p-U|^2.
+\end{equation}
+The regularization cutoff may depend on fixed $m$; the coefficient in
+\eqref{eq:mass-envelope-proved} and the eventual noise threshold do not.
+
+\subsection{From arbitrary competitive rules to a narrow mass box}
+Suppose $S_{-r}(f)\le S_{-r}(g)$. Scalar Gaussian rearrangement gives
+$|B_i|^2\le H(p_i)$, where $H(p)=\phi(\Phi^{-1}(p))^2$ with continuous
+endpoint values. The global scalar tangent estimate is
+\[
+ \sum_iH(p_i)\le mH(1/m)+B_m\delta,\qquad B_m=O(\log m).
+\]
+Hermite parity gives
+\[
+ S_{-r}(f)\ge\|p\|^2-rW-r^3,\qquad
+ S_{-r}(g)\le m^{-1}-rw+r^2A_2(g)+r^4.
+\]
+The Mills/Gumbel calculation in \cite{localization}, including uniform
+integrability of the first two centered maximum moments, yields
+$m^2\delta\le L_m$ with $L_m\to2-2\gamma_{\rm E}<1$.
+Consequently a fixed positive box, for example
+$0.01/m\le p_i\le2/m$, contains every competitive assignment for all
+sufficiently large $m$. This first box is essential before applying
+\eqref{eq:mass-envelope-proved}.
+
+Set $P_2=\sum_i p_i^2$. Conditional Jensen in each centroid direction
+and weighted Cauchy give the assignment-independent perspective bound
+\begin{equation}\label{eq:positive-perspective}
+ A_2(f)\ge\frac{(W-P_2)_+^2}{2P_2}.
+\end{equation}
+Its positive part makes the expression jointly convex in $(W,P_2)$.
+The tangent at $(w,1/m)$, with $\ell=mw-1$, is
+\[
+ A_2(f)\ge F_0-\frac\ell rD+c_{m,r}\delta,
+ \quad F_0=\frac{\ell^2}{2m},\quad
+ c_{m,r}=\ell\left(\frac1r-\frac{\ell+2}{2}\right)\ge0.
+\]
+The exact regular second-chaos identity and
+$\Var(\max_i Z_i)=O(1/\log m)$ give
+$0\le A_2(g)-F_0\le C/m$. Keeping the quadratic term in the parity
+comparison therefore gives
+\[
+ (1-r\ell)D+r^2c_{m,r}\delta\le Cr^2/m+r^3+r^4.
+\]
+Meanwhile \eqref{eq:mass-envelope-proved}, once $CrL^2\le1/2$, gives
+$D\ge\delta/2+r(V(p)-W)\ge0$. Since $r\le1/(m-1)$, this proves
+\begin{equation}\label{eq:localized-proved}
+ \delta\le2D,\qquad 0\le D\le Cr^2/m,
+ \qquad |W-w|\le D/r.
+\end{equation}
+It follows that $\max_i|mp_i-1|\le C\sqrt m\,r=o(1)$, and hence
+the required box $[1/(2m),3/(2m)]$ holds.
+
+Finally, rank-free offset duality and a physical-graph Cheeger estimate
+give $\|h_U\|^2\le CL^2\calR(B)$ on the bounded row class. To obtain
+the deficit dependence, combine the lower fixed-score mass Taylor bound
+$F_{pp}\succeq-CL I$ with \eqref{eq:mass-envelope-proved}, then test
+$p-U=-h_U/(CL^2)$. The halfspace bound $\|h_U\|_\infty\le CL/m$
+keeps this test inside the positive mass box. Coincident sites are handled
+by value/offset limits with equal offsets on duplicate groups. Testing
+the balanced dual at the actual masses now gives
+\[
+ \calR(B)\le\Delta/2+CL\sqrt{\calR(B)\delta},\qquad
+                    0\le\calR(B)\le D/r.
+\]
+The argument uses neither stationarity nor existence of a minimizer of
+the full-noise functional.

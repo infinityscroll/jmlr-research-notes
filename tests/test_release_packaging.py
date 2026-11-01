@@ -20,6 +20,7 @@ def load(name):
 
 builder = load('build_release')
 publisher = load('publish_release')
+preprint = load('build_preprint')
 
 
 class SnapshotIntegrity(unittest.TestCase):
@@ -35,6 +36,8 @@ class SnapshotIntegrity(unittest.TestCase):
         self.write('proof.txt', b'The frozen proof.\n')
         self.write(builder.PDF_PATH, b'%PDF-1.4\nfixture\n')
         self.write(builder.INTEGRATED_PATH, b'Integrated theorem fixture.\n')
+        for name, path in builder.EXTRA_ASSETS.items():
+            self.write(path, b'%PDF-1.4\npreprint fixture\n' if name.endswith('.pdf') else b'Archive fixture\n')
         self.pin()
         self.commit = self.commit_all()
 
@@ -78,7 +81,10 @@ class SnapshotIntegrity(unittest.TestCase):
             digest, name = line.split('  ', 1)
             self.assertEqual(digest, hashlib.sha256((first / name).read_bytes()).hexdigest())
         self.assertEqual(meta['source_commit'], self.commit)
-        self.assertEqual(meta['manifest_pins'], 3)
+        self.assertEqual(meta['manifest_pins'], 3 + len(builder.EXTRA_ASSETS))
+        for name, path in builder.EXTRA_ASSETS.items():
+            self.assertEqual((first / name).read_bytes(), (self.repo / path).read_bytes())
+        self.assertIn('Partial Lean', meta['formalization_status'])
         self.assertIn('not trusted timestamps', meta['timestamp_note'])
 
     def test_committed_proof_change_without_new_pin_is_rejected(self):
@@ -151,6 +157,38 @@ class PublicationIntegrity(unittest.TestCase):
         with mock.patch.object(publisher, 'tag_commit', return_value='b' * 40):
             with self.assertRaisesRegex(RuntimeError, 'wrong source'):
                 publisher.verify_published('owner/repo', 'research-tag', 'a' * 40, {'draft': False, 'immutable': True})
+
+
+class FormalSourceBundleIntegrity(unittest.TestCase):
+    def test_build_receipt_binds_sources_and_excludes_dependency_cache(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            directory = root / preprint.FORMAL
+            directory.mkdir(parents=True)
+            files = {'lean-toolchain': b'leanprover/lean4:v4.19.0\n',
+                     'lake-manifest.json': b'{}\n',
+                     'Proof.lean': b'theorem identity (P : Prop) (h : P) : P := h\n'}
+            for name, content in files.items():
+                (directory / name).write_bytes(content)
+            receipt = {'status': 'passed', 'source_sha256':
+                       {name: hashlib.sha256(data).hexdigest() for name, data in files.items()}}
+            (directory / 'BUILD_RECEIPT.json').write_text(json.dumps(receipt))
+            (directory / '.lake').mkdir()
+            (directory / '.lake' / 'untracked.lean').write_text('Not a distributed proof')
+            bundled = preprint.lean_files(root)
+            self.assertEqual(set(bundled), set(files) | {'BUILD_RECEIPT.json'})
+            (directory / 'Proof.lean').write_text('Changed source after the build')
+            with self.assertRaisesRegex(ValueError, 'does not match distributed source'):
+                preprint.lean_files(root)
+
+    def test_source_archive_is_deterministic_and_rejects_unsafe_names(self):
+        first = preprint.tar_bytes({'b.txt': b'B', 'a.txt': b'A'})
+        self.assertEqual(first, preprint.tar_bytes({'a.txt': b'A', 'b.txt': b'B'}))
+        with self.assertRaisesRegex(ValueError, 'Unsafe'):
+            preprint.tar_bytes({'../outside.txt': b'X'})
+        with tarfile.open(fileobj=io.BytesIO(first), mode='r:gz') as archive:
+            self.assertEqual(archive.getnames(), ['a.txt', 'b.txt'])
+            self.assertTrue(all(item.isfile() and item.mtime == 0 for item in archive))
 
 
 if __name__ == '__main__':

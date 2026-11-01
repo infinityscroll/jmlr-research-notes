@@ -1,0 +1,162 @@
+ALL SMALL AMPLITUDES: HIGH-CHAOS CAP FOR CONDITIONED AFFINE FANS
+31 October 2026. Branch derivation. Independent hostile audit pending.
+
+THEOREM
+Fix positive c0,C0,cp,Cp and delta>0. For sufficiently large m, let B be
+a centered m-by-N score matrix of rank EXACTLY m-1, N>=m-1, with all
+m-1 singular values in[c0 alpha,C0 alpha], alpha=E max_i Z_i/(m-1).
+Its affine winning fan has masses cp/m<=p_i<=Cp/m. Let0<s^2<=1/(m-1),
+fix k in{2,3}, let u have only total Hermite degrees at least k, and set
+ q=2+log m,
+ theta=|tau| s^k ||u||_(L2(vector)),
+ A=theta(q-1)^(k/2).
+If A<=m^(-1-delta), then the exact maximum remainder defined in[V] obeys
+
+ J_tau(T_su)<=C_delta tau^2(s^2 log m)^k||u||_2^2.                (1)
+
+There is NO lower amplitude cutoff. Constants are independent of N.
+The same upper remainder holds for the prescribed-mass score value by
+retaining its original offsets in the dual. This still concerns an
+AFFINE baseline, not the full resummed reference potential.
+
+Inputs
+[V] FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt
+3b6bd981d0508f8ce9487b27659b4203473266fb7721f4acb0f8c3d74793f3a1
+[T] AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057
+The proof fills only[V]'s arbitrarily-small-amplitude gap. Its moderate
+polynomial-amplitude theorem is used unchanged, with full rank explicit.
+
+1. Geometry and dimension-free polynomial bounds
+Write l_i(x)=B_i.x+h_i and ell_ij=|B_i-B_j|. Then
+ c alpha<=ell_ij<=C alpha.
+Both winning masses are at least cp/m, and each cell is contained in its
+comparison halfspace against the other. Consequently the signed normal
+offset a_ij of every pair hyperplane satisfies
+ |a_ij|=|h_i-h_j|/ell_ij<=Phi^(-1)(1-cp/m)<=C sqrt(log m).         (2)
+For every distinct i,j,k, the projection of B_i-B_k tangent to the ij
+hyperplane has norm at least c alpha. Indeed minimizing over multiples
+of B_i-B_j and using the smallest singular value reduces this assertion
+to the fixed angle between e_i-e_k and e_i-e_j. Thus near-tie slabs in
+the ij plane have Gaussian measure at most C times their physical width.
+
+For u!=0 put
+                         v=T_su/(s^k||u||_2).
+For any fixed p>=2 and derivative order j<=2, Gaussian hypercontractivity
+gives dimension-free bounds of the following form on every pair plane:
+ ||partial_n^j v_i(a+z,.)||_(L^p(gamma_(N-1)))<=m^C,
+                       |z|<=1,                                (3)
+where C depends only on the fixed data,p,j, not on N,s,u or the pair.
+Here and below m^C can absorb fixed multiplicative constants.
+
+To verify(3), choose a fixed t>0 with t^2<=1/(p-1), and for large m s<t.
+Write T_su=T_t w, w=T_(s/t)u. Since u starts in degree k,
+||w||_2<= (s/t)^k||u||_2. The normal Mehler row and its first two
+derivatives have L2 norms bounded by
+ C_j(1+|a+z|^j) exp(C_t(a+z)^2).
+This follows by differentiating the one-dimensional Mehler kernel; its
+derivatives are polynomials of degrees at most2 times that kernel, and
+their squared integrals are Gaussian polynomial moments. Tangential
+L2-to-Lp hypercontractivity supplies(3) after division by s^k||u||_2,
+because(2) turns the displayed exponential into a fixed power of m.
+No full-N point-evaluation bound is used.
+
+The fundamental theorem of calculus in the normal variable, together
+with the j=0,1,2 bounds, implies for each pair
+ W_ij(y)=sup_(|z|<=1)(|v_i-v_j|(y+zn)+|partial_n(v_i-v_j)|(y+zn))
+                         ||W_ij||_32<=m^C.                     (4)
+Also ||v_i||_32<=C by ordinary full-space hypercontractivity with a fixed
+time and the same degree k factorization. These facts hold uniformly in
+all extra coordinates, which have been integrated rather than evaluated.
+
+2. A quantitative local upper cap with polynomial constants
+The sign of tau can be absorbed into v. Assume theta>0 is small. The
+maximum remainder is bounded by the sum of its ordered-pair positive
+rewards. On source cell i use normal coordinates x=y+zn, z>=0, about
+the ij comparison plane, oriented so that l_i-l_j=ell_ij z. The pair
+reward is
+                       (theta(v_j-v_i)-ell_ij z)_+.
+
+Choose the normal-sup cutoff M=theta^(-1/8). On a good projected point
+W_ij(y)<=M, positive rewards with0<=z<=1 have
+ z<=eta_ij:=theta M/ell_ij.
+For theta<=m^(-B0), with an absolute sufficiently large B0, all eta_ij
+are at most1/[2(1+|a_ij|)]. Taylor in z and the Gaussian density ratio
+then compare this fiber integral with
+             theta^2 (v_j-v_i)(y)_+^2/(2ell_ij)
+times Gaussian surface density. The absolute error per fiber is bounded
+by a fixed polynomial in m times theta^3 M^3. In detail the score error
+is at most theta zM; its integral up to eta is O(theta M eta^2).
+The Gaussian relative error is O((1+|a_ij|)eta), multiplying a fiber
+integral at most theta M eta. Both are O(m^C theta^3 M^3).
+
+The old source-cell restriction causes no extra main term. If y belongs
+to the actual ij facet, extending its normal fiber can only increase the
+upper bound. If y does NOT belong to that facet but y+zn belongs to cell
+i for some0<=z<=eta, then some third comparison at y is negative by at
+most C alpha eta. By the angle bound in Section1, y lies in a slab of
+width C eta about an affine codimension-one plane inside the ij plane.
+There are at most m-2 such slabs. Their conditional Gaussian measure is
+at most C m eta. Multiplying by the good-fiber bound theta M eta gives
+another O(m^C theta^3 M^3) error. This explicitly accounts for all triple
+junction neighborhoods; no smooth single-interface representation is
+assumed there.
+
+On bad projected points W_ij>M and0<=z<=1, discard the cost and bound
+the reward by theta W_ij. The normal Gaussian density ratio over that
+unit interval is at most exp(C sqrt(log m))<=m^C. Equation(4) gives a
+total bad contribution bounded by
+ m^C theta M^(-31)=m^C theta^(39/8).                            (5)
+For z>1 the cost is at least c alpha, so full-space L32 bounds give
+ a total contribution <=C theta^32 alpha^(-31)<=m^C theta^32.    (6)
+These estimates also apply to the reverse ordered side. There are only
+m(m-1) ordered pairs, so their number is absorbed into a fixed polynomial.
+
+Summing the two signed main terms at each actual facet yields exactly
+theta^2/2 times its full squared value, rather than twice that value.
+Since M^3=theta^(-3/8), the preceding bounds prove, for some fixed K,
+
+ J_tau(T_su)
+ <=(theta^2/2) sum_e ell_e^-1 int (v_i-v_j)^2 d lambda_e
+                 +C m^K theta^(21/8),  theta<=m^(-B0).          (7)
+
+No lower bound on any individual facet area is used. All error estimates
+are upper bounds, so deleting bad projected points from the main term
+and then restoring the full nonnegative main term is legitimate.
+
+3. The exact linear-fan trace pays the main term
+Apply[T] with the chosen k in{2,3}. Since s^2 O(log m)<=1 for large m, and v has the
+normalization used above,
+ sum_e ell_e^-1 int (v_i-v_j)^2 d lambda_e<=C(1+log m)^k.         (8)
+Choose a fixed B larger than B0 and8K/5, increasing it if needed to absorb
+the fixed constants. For every0<theta<=m^(-B),
+ C m^K theta^(21/8)<=C theta^2,
+and(7)-(8) imply
+                 J_tau(T_su)<=C theta^2(1+log m)^k.             (9)
+Thus arbitrarily small amplitudes are controlled with a quadratic bound
+and no ambient-dimensional prefactor.
+
+4. Join the small and moderate amplitude regimes
+For theta>=m^(-B), put q=2+log m and
+A=theta(q-1)^(k/2). Then A>=m^(-B). If also A<=m^(-1-delta), the
+polynomial-amplitude part of[V] applies, with beta=B and a harmless
+adjustment of fixed constants, giving
+ J_tau(T_su)<=C_delta A^2<=C_delta theta^2(1+log m)^k.             (10)
+Together(9),(10) cover every amplitude in the theorem, including theta=0
+by direct evaluation. This proves(1). The prescribed-mass comparison is
+exactly[V](11), which uses the original offsets as a dual competitor.
+
+5. Remaining full-noise issue
+The result removes the amplitude floor from the finite higher-degree
+comparison around conditioned affine Gaussian scores. It can be paired
+with the finite first-chaos remainder and their mixed boundary trace.
+It does not replace the true noise reference's even/high-degree LINEAR
+potential by a linear Gaussian score. That cancellation, and any actual
+conditioning/localization hypothesis needed for application, remain
+separate requirements for the named conjecture.
+
+REVISION PROVENANCE
+This V2 explicitly covers k=2 as well as k=3. The normalized local
+Taylor, truncation and junction errors do not depend on k; only the
+Hermite gain and trace logarithm change from power3 to power k.
+Original0551ebfb is preserved byte-for-byte at its original path.

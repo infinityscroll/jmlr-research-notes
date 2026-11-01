@@ -1,0 +1,87 @@
+BALANCED ENDPOINT AND REMAINDER RIGIDITY FROM COVARIANCE CONCAVITY
+31 October 2026. Root explicit dependency reduction.
+
+This derives the needed endpoint, score remainder, and equality facts
+directly from the concavity and normal-strain theorem proved in225db53f.
+It does not invoke that file's Section10 references to older local
+endpoint/coercivity notes3cfd9d78 or8a419147. Quantitative remainder
+bounds used by the final proof are supplied separately by47e441ee.
+
+Let m>=3, n=m-1, H=1-perp, P=I-11^T/m, mu=E max_i G_i for iid
+standard Gaussians, alpha=mu/n, and w=alpha^2n. For centered score
+matrices B, write F_U(B) for the balanced Gaussian linear assignment
+value and Gamma(C)=F_U(C^(1/2)) for centered PSD C.
+
+1. Exact reference gradient
+The regular centroid matrix is B0=alpha P on H. To see its normalization,
+the expected winning coordinate of the iid Gaussian vector is mu; label
+symmetry gives diagonal centroid coordinate mu/m. The common Gaussian
+mean is independent of the winning label and has mean zero, while label
+symmetry makes the other coordinates equal. Centering therefore makes
+the entire centroid matrix precisely alpha P. Its cell masses are1/m.
+
+Put C0=B0 B0^T=alpha^2P. The balanced offsets at the reference are zero,
+and F_U(B0)=E max_i B0_i.X=alpha mu=w. The score-value envelope has
+gradient equal to the reference assignment's centroid matrix B0. Since
+B0 is invertible on H, differentiating C=BB^T gives
+
+                 grad Gamma(C0)=P/2.
+
+Equivalently, the covariance theorem's boundary identity M=L B0 and
+M=B0 imply L=P on H, and its covariance gradient is L/2. The regular
+winner is unique off finitely many Gaussian-null hyperplanes, so the
+reference score envelope is differentiable. No endpoint differentiability
+at a singular target is asserted.
+
+2. Global nonnegative remainder and its strict zero set
+By concavity at C0, for every centered PSD C,
+
+ Gamma(C)<=w+(tr C-w)/2.
+
+Hence R_U(B)=(w+||B||^2)/2-F_U(B)>=0 for every centered B. The covariance
+value is continuous at singular C, as established in225db53f.
+
+If C!=C0, let E=C-C0 and C_t=C0+tE. This path is positive definite
+on H for0<=t<1. At t=0 every regular pair facet has positive Gaussian
+measure. At least one edge quadratic (e_i-e_j)^T E(e_i-e_j) is nonzero:
+if all vanished, writing d_i=E_ii would give E_ij=(d_i+d_j)/2; the row
+sum condition then gives m d_i+tr E=0 for all i, whose sum forces tr E=0
+and hence E=0, a contradiction.
+
+The normal-strain inequality from225db53f thus makes the second
+derivative of Gamma(C_t) strictly negative at0, and by the same local
+smoothness/positive-facet argument on a sufficiently short initial
+interval. Integrating the curvature gives a positive gap below the
+reference tangent on that interval. Concavity makes this tangent gap
+nondecreasing afterwards, so it remains positive up to t=1; continuity
+handles a singular endpoint. Consequently
+
+                  R_U(B)=0 iff BB^T=alpha^2P.
+
+This is an equality statement, not a quantitative uniform curvature
+bound at arbitrary targets. No old local-spectrum estimate is needed.
+
+3. Balanced first moments and routing equality
+For a balanced measurable simplex assignment f, let B_i=E[X f_i] and
+W=||B||^2. The assignment itself is feasible in F_U(B), so
+
+                W<=F_U(B)<=(w+W)/2,
+
+which implies W<=w in every finite dimension. If W=w, both inequalities
+are equalities, giving BB^T=alpha^2P. Thus N>=m-1 and B is a regular
+centroid configuration up to an orthogonal embedding and relabeling.
+Moreover E max_i B_i.X=w while E sum_i f_i B_i.X=W=w. The pointwise
+nonnegative routing loss has expectation zero. Gaussian ties for these
+distinct regular rows have measure zero, so f is the regular assignment.
+
+The final routing implication does not need balance: any measurable
+simplex assignment whose ACTUAL centroids satisfy BB^T=alpha^2P has
+W=w and the same zero routing loss, and is therefore regular. In
+particular R_U(B)=0 for actual centroids already forces that conclusion.
+
+Inputs: ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt,
+SHA225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b,
+specifically its interior concavity, normal-strain, regular boundary
+identity and PSD continuity proofs. The regular centroid normalization
+was reconstructed above. No full-noise attainment or external review
+is asserted by this dependency reduction.

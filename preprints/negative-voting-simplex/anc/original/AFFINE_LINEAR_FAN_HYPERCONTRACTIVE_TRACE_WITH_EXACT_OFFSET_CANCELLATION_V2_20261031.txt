@@ -1,0 +1,122 @@
+AFFINE LINEAR FANS: HYPERCONTRACTIVE TRACE WITH EXACT OFFSET CANCELLATION
+31 October 2026. Branch derivation. Independent hostile audit pending.
+
+THEOREM
+Fix positive constants c0,C0,Cp. For sufficiently large m let
+alpha=E max_(i<=m)Z_i/(m-1). Let B be a centered m-by-N Gaussian score
+matrix of rank exactly m-1, N>=m-1, whose m-1 nonzero singular values
+lie in[c0 alpha,C0 alpha].
+Let its affine winning fan, with arbitrary optimal offsets, have masses
+0<p_i<=Cp/m. For each actual facet e=ij write
+ell_e=|B_i-B_j| and lambda_e=Gaussian surface measure on that facet.
+Set q=2+log(m/alpha) and Lambda=2q-1=O(log m).
+There is C depending only on c0,C0,Cp such that, whenever s^2 Lambda<=1,
+
+ sum_e (1/ell_e) int |T_s(u_i-u_j)|^2 d lambda_e
+       <=C(s^2 Lambda)^k sum_i||u_i||_2^2                       (1)
+
+for every vector u supported in total Hermite degrees at least k>=0.
+The constant is independent of N, every facet probability, and the
+offset magnitudes. Consequently, for boundary speeds f with
+N_lin(f)=sum_e ell_e int f_e^2 d lambda_e<infinity, and their label
+boundary measures h_i=sum_e(B_inc)_ie f_e lambda_e,
+
+ sum_(l>=k) s^(2l) A_l(f)<=C(s^2 Lambda)^k N_lin(f).             (2)
+
+Here A_l is the squared degree-l Hermite coefficient norm of the vector
+boundary distribution. Statement(2) is a Hilbert-space trace estimate,
+not a finite nonlinear perturbation theorem.
+
+Inputs
+[O] CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt
+111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7
+[T] WEIGHTED_HYPERCONTRACTIVE_FACET_TRACE_AND_FULL_BOUNDARY_TAIL_20261031.txt
+77b20d9ad3a40d55ad8f746ca3cb1b33ae32eea35c25e484c2e5c6f9900ce90f
+Only the exact identity M=L B and elementary centroid bound from[O] are
+needed; its deficit-relative offset theorem is not used. The Gaussian
+hypercontractivity and dual Hermite argument are as in[T].
+
+1. Gaussian facet area has a bounded row sum at the score scale
+Let mu_e=lambda_e(Sigma_e), w_e=mu_e/ell_e, and L the offset Laplacian.
+Gaussian integration by parts gives M=L B, where M_i is the unnormalized
+centroid of winning cell i. Since p_i<=Cp/m,
+ ||M_i||<=p_i sqrt(2log(1/p_i))<=C sqrt(log m)/m<=C alpha.
+The pseudoinverse bound ||B^+||op<=1/(c0 alpha) implies ||L_i||<=C,
+and hence every degree sum_j w_ij=L_ii<=C. Also
+ c alpha<=ell_e<=C alpha.
+It follows that
+                          sum_j mu_ij<=C alpha.                 (3)
+No lower cell mass, minimum facet probability or offset bound enters(3).
+All sites are distinct by the singular-value hypothesis. Empty facets,
+if any, contribute zero and can simply be omitted.
+
+2. Exact normal restriction and the offset cancellation
+Consider any affine hyperplane at signed distance a from the origin.
+In orthogonal coordinates x=(a,z), standard Gaussian surface measure is
+phi(a) d gamma_(N-1)(z). Let E be any measurable part of this plane,
+pi=gamma_(N-1)(E), and mu=phi(a)pi.
+
+Let t^2=1/(2q-1). The normal Gaussian Mehler row at a has squared L2 norm
+ K_t(a)^2=(1-t^4)^(-1/2) exp[t^2 a^2/(1+t^2)].                   (4)
+This follows by a one-dimensional Gaussian integral, or the semigroup
+identity int M_t(a,y)^2 dgamma(y)=M_(t^2)(a,a). Write T_t as normal
+restriction followed by tangential OU smoothing. Cauchy in the normal
+variable and tangential L2-to-L^(2q) hypercontractivity give
+ ||T_t v(a,.)||_(2q)<=K_t(a)||v||_2.
+Holder on E therefore gives
+ int_E |T_t v|^2 d lambda
+ <=mu^(1-1/q) phi(a)^(1/q) K_t(a)^2 ||v||_2^2.                  (5)
+
+The offset exponent cancels EXACTLY at the chosen hypercontractive time:
+ t^2/(1+t^2)=1/(2q),
+ phi(a)^(1/q) K_t(a)^2
+       =(2pi)^(-1/(2q))(1-t^4)^(-1/2)<=C.                       (6)
+Thus(5) has no factor involving a. It holds for arbitrary measurable
+facet subsets, without cone homogeneity or a conditional radial MGF.
+
+3. Sum the traces without a minimum-facet-probability assumption
+Apply(5)-(6) to each actual facet with v_i-v_j. The resulting effective
+edge weights are omega_e=mu_e^(1-1/q)/ell_e. By(3) and Holder over the at
+most m-1 incident labels,
+ sum_j omega_ij
+ <=(C/alpha) m^(1/q) (sum_j mu_ij)^(1-1/q)
+ <=C m^(1/q) alpha^(-1/q)
+ <=C exp(log(m/alpha)/q)<=Ce.                                  (7)
+The complete edge sum of ||v_i-v_j||_2^2 with these weights is at most
+twice their maximum degree times sum_i||v_i||_2^2. Consequently
+ sum_e ell_e^-1 int |T_t(v_i-v_j)|^2 d lambda_e
+                                      <=C sum_i||v_i||_2^2.     (8)
+
+For a vector u in degrees at least k and s<=t, write
+ T_su=T_t v, v=T_(s/t)u.
+Orthogonality of Hermite degrees gives
+ sum_i||v_i||^2<= (s/t)^(2k) sum_i||u_i||^2
+               =(s^2 Lambda)^k sum_i||u_i||^2.
+Combining with(8) proves(1), including k=0. Infinite-dimensional L2 tests
+follow by density and the bounded restriction operators just constructed.
+
+4. Dual boundary-distribution statement
+For a finite Hermite test u in degrees at least k, Cauchy on the facets
+and(1) give
+ |sum_i <h_i,T_su_i>|^2
+ <=N_lin(f) sum_e ell_e^-1 int |T_s(u_i-u_j)|^2 d lambda_e
+ <=C(s^2 Lambda)^k N_lin(f) sum_i||u_i||_2^2.
+The Riesz representation theorem therefore defines the projected
+smoothed boundary vector as an L2 function with that norm bound. Taking
+the supremum over finite Hermite tests gives(2); monotone convergence of
+the nonnegative Hermite norm sum removes the finite truncation.
+
+5. Intended use and remaining nonlinear issue
+The lemma controls high Hermite perturbations uniformly around every
+conditioned affine score fan, including the mass-calibrated perturbed
+fans used by the fixed-mass first-chaos dual. The exact cancellation(6)
+removes the ambient evaluation factor and arbitrary-offset penalty.
+
+It does not assert that a finite nonlinear high-degree perturbation
+retains affine interfaces or the degree bound(3). Nor does it compare
+the full reference potential to a linear cost. Those nonlinear steps
+remain required before this trace can close the full-noise argument.
+
+REVISION PROVENANCE
+This V2 adds the explicit rank(B)=m-1 hypothesis needed for the
+pseudoinverse identities. The original532f6bbd source remains unchanged.

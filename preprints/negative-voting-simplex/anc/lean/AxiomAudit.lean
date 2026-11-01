@@ -1,0 +1,73 @@
+import NegativeVoting
+
+/- The complete list of public theorem constants in this package.
+Lean expands transitive axiom dependencies for every item. -/
+#print axioms NegativeVoting.routingLoss_eq_sum
+#print axioms NegativeVoting.routingLoss_nonneg
+#print axioms NegativeVoting.routingLoss_margin_bound
+#print axioms NegativeVoting.weight_eq_zero_of_zero_routingLoss
+#print axioms NegativeVoting.simplex_routing_rigidity
+#print axioms NegativeVoting.ae_pure_of_zero_integrated_routing_loss
+#print axioms NegativeVoting.squared_distance_identity
+#print axioms NegativeVoting.finite_centroid_cancellation
+#print axioms NegativeVoting.squared_defect_eq_zero_iff
+#print axioms NegativeVoting.centroid_cancellation
+#print axioms NegativeVoting.exterior_from_hermite_bounds
+#print axioms NegativeVoting.exterior_strict
+#print axioms NegativeVoting.local_rigidity
+#print axioms NegativeVoting.competitive_assembly
+#print axioms NegativeVoting.nonnegative_of_local_exterior
+#print axioms NegativeVoting.logarithmic_remainder_tendsto_zero
+#print axioms NegativeVoting.exists_uniform_remainder_threshold
+#print axioms NegativeVoting.simplex_weight_le_one
+#print axioms NegativeVoting.integrable_weighted_score
+#print axioms NegativeVoting.integrable_score_mixture
+#print axioms NegativeVoting.integrable_finite_max
+#print axioms NegativeVoting.integrable_routing_loss
+#print axioms NegativeVoting.ae_pure_of_integrable_scores
+-- Compiler-generated proof constant; audited as well as its parent theorem.
+#print axioms NegativeVoting.routingLoss_margin_bound._proof_1
+#print axioms NegativeVoting.gaussian_exp_integrable
+#print axioms NegativeVoting.gaussian_id_integrable
+#print axioms NegativeVoting.gaussian_product_coordinate_law
+#print axioms NegativeVoting.gaussian_product_coordinate_integrable
+#print axioms NegativeVoting.gaussian_linear_score_integrable
+#print axioms NegativeVoting.gaussian_linear_max_integrable
+#print axioms NegativeVoting.gaussian_singleton_null
+#print axioms NegativeVoting.gaussian_noAtoms
+#print axioms NegativeVoting.product_linear_hyperplane_null
+#print axioms NegativeVoting.gaussian_product_linear_hyperplane_null
+#print axioms NegativeVoting.gaussian_product_score_tie_null
+#print axioms NegativeVoting.standard_gaussian_score_tie_null
+#print axioms NegativeVoting.ae_gaussian_scores_injective
+#print axioms NegativeVoting.ae_gaussian_unique_max
+#print axioms NegativeVoting.ae_gaussian_routing_rigidity
+#print axioms NegativeVoting.centered_symmetric_edge_energy
+#print axioms NegativeVoting.frobenius_energy_le_ordered_edge_energy
+#print axioms NegativeVoting.centered_edge_energy_zero_iff
+
+#print axioms NegativeVoting.ae_gaussian_routing_rigidity_from_zero_loss
+
+#print axioms NegativeVoting.chosenWinner_max
+#print axioms NegativeVoting.finite_max_eq_chosenWinner
+#print axioms NegativeVoting.ae_gaussian_indicator_of_zero_maximum_gap
+#print axioms NegativeVoting.gaussian_centroid_pairing
+#print axioms NegativeVoting.gaussian_self_centroid_score
+#print axioms NegativeVoting.gaussian_expected_centroid_gap
+#print axioms NegativeVoting.voting_noise_le_two_div
+#print axioms NegativeVoting.voting_endpoint_rpow_identity
+#print axioms NegativeVoting.voting_noise_quadratic_bound
+#print axioms NegativeVoting.voting_remainder_majorant
+#print axioms NegativeVoting.exists_uniform_voting_remainder_threshold
+#print axioms NegativeVoting.exists_uniform_voting_assembly_threshold
+
+-- Additional compiler-generated proof constants.
+#print axioms NegativeVoting.ae_gaussian_scores_injective._proof_1
+#print axioms NegativeVoting.centered_symmetric_edge_energy._proof_1
+#print axioms NegativeVoting.centered_symmetric_edge_energy._proof_2
+#print axioms NegativeVoting.chosenWinner._proof_1
+#print axioms NegativeVoting.gaussian_product_score_tie_null._proof_1
+#print axioms NegativeVoting.linearScore.eq_1
+#print axioms NegativeVoting.product_linear_hyperplane_null._proof_1
+#print axioms NegativeVoting.product_linear_hyperplane_null._proof_2
+#print axioms NegativeVoting.routingLoss.eq_1
