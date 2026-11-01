@@ -1,0 +1,440 @@
+INDEPENDENT WHOLE-BOX HAZARD HESSIAN CERTIFICATE
+2 November 2026. Foundation challenge; new source only.
+
+VERDICT AND THE PRECISE NEW EVIDENCE
+The structured hazard remainder closes from the one-dimensional Gaussian
+integrals. No unaccounted offset-acceleration or other-label term was found.
+This certificate proves a slightly stronger statement than the requested
+one: a Hessian estimate on an open variance box, for every direction and
+every mixed pair of directions. It does not assume a Frobenius bound or
+infer a uniform theorem from derivatives at the regular point.
+
+The actual uniform evidence is (A) the finite-order whole-threshold moment
+estimate proved below by a beta-tail integral, and (B) the pointwise ledger
+in Sections 5-6. That ledger bounds the complete differentiated density,
+including S'=sum_k (a_k b_k)', and solves for the actual balanced h''.
+Finite identities alone would not establish the result. The global
+covariance-concavity theorem and any later noise-stability theorem are
+outside the conclusion of this certificate.
+
+1. STATEMENT
+Let m>=3, L=1+log m, mu=E max_{k<=m} Z_k for independent standard
+normal Z_k, alpha=mu/(m-1). There are absolute c0,C>0 and m0 such that
+for m>=m0 the following holds. Let
+
+                 max_k |v_k-1| <= c0/L.                    (1.1)
+
+Let h(v) be the unique mean-zero offsets for which the independent scores
+sqrt(v_k) Z_k+h_k give each label winning probability 1/m. Set
+
+ q_k=x-h_k, F_k=Phi(q_k/sqrt(v_k)), f_k=partial_x F_k,
+ a_k=f_k/F_k, W=product_k F_k,
+ rho_ij=W a_i a_j, omega_ij=integral_R rho_ij dx,
+ ell_i=sum_j omega_ij.                                    (1.2)
+
+The analytic diagonal j=i is included. For every real vector xi, put
+
+ M1=mean_k |xi_k|, M2=mean_k xi_k^2,
+ r_i=|xi_i|+M1, d_i=xi_i^2+M2.
+
+Then, at the base point v,
+
+ |D_xi h_i| <= C sqrt(L) r_i,
+ |D_xi^2 h_i| <= C L^(3/2) d_i,
+ |D_xi^2 ell_i| <= C alpha L^2 d_i.                       (1.3)
+
+In particular this is homogeneous in xi, so no directional amplitude
+restriction is required. For any two real directions xi,zeta,
+
+ |D_xi D_zeta ell_i|
+ <= C alpha L^2 sqrt(xi_i^2+mean xi^2)
+                    sqrt(zeta_i^2+mean zeta^2).            (1.4)
+
+The same polarized bound, with prefactor C L^(3/2), holds for h_i.
+For a centered xi with max|xi_i|<=A, the target path v=1+t xi stays
+inside (1.1) whenever |t|<=c0/((1+A)L), hence in particular whenever
+|t|<=c_A/L^2. Along that path (1.3) gives the claimed ell_i'' bound.
+Centering is used for the regular linear coefficient, not for (1.3).
+
+2. ELEMENTARY WHOLE-THRESHOLD MOMENT CERTIFICATE
+First allow arbitrary v,h with
+
+ max|v_k-1|=epsilon <= delta/L,
+ max|h_k|=H <= delta/sqrt(L),                              (2.1)
+
+where delta>0 is a sufficiently small fixed number. Balance is not used.
+Put X=1+|x| and Y=m max_k a_k. For every fixed pair of nonnegative
+integers p,q, and all sufficiently large m depending only on p,q,
+
+ c sqrt(L)/m^2 <= omega_ij <= C sqrt(L)/m^2,
+ integral rho_ij Y^p X^q dx
+            <= C_(p,q) [sqrt(L)/m^2] L^((p+q)/2).          (2.2)
+
+All labels i,j, including equal labels, are covered. Constants are uniform
+over (2.1). For (1.3)-(1.4), only the orders p+q<=4 are needed. Thus one
+fixed maximum of their constants and m thresholds serves the whole proof.
+
+Proof on x>=2H. Let sigma_-=min sqrt(v_k),
+z=(x+H)/sigma_-. Every y_k=q_k/sqrt(v_k) is nonnegative and lies in
+[z-C epsilon z-C H,z]. The change x->z has a bounded Jacobian.
+Gaussian density ratios therefore give, with
+E(z)=C(epsilon z^2+Hz+H^2),
+
+ rho_ij dx <= C phi(z)^2 Phi(z)^(m-2) exp(E(z)) dz,
+ max_k a_k <= C [phi(z)/Phi(z)] exp(E(z)).                 (2.3)
+
+For i!=j, use rho_ij=f_i f_j product_{k!=i,j} F_k. For i=j,
+rho_ii=f_i^2 product_{k!=i} F_k/F_i and F_i>=1/2, giving the same
+upper bound with a constant. Also X<=C(1+z).
+
+Set s=1-Phi(z). Elementary Mills estimates on z>=0 imply
+phi(z)<=C s sqrt(log(e/s)) and z^2<=2log(1/s). Use
+Hz <= H sqrt(L)/2 + H z^2/(2sqrt(L)).
+After the substitution ds=-phi(z)dz, (2.3) yields
+
+ integral_{x>=2H} rho_ij Y^p X^q dx
+ <= C_(p,q) m^p integral_0^(1/2)
+       (1-s)^(m-p-2) s^(p+1-beta)
+             [log(e/s)]^((p+q+1)/2) ds,                  (2.4)
+
+where 0<=beta<=C_(p,q)(epsilon+H/sqrt(L))<=C_(p,q)delta/L.
+The factor exp(C_(p,q)H sqrt(L)) is bounded and absorbed in C_(p,q).
+Take m>=2(p+2), so (1-s)^(m-p-2)<=exp(-ms/2).
+With y=ms and R=(p+q+1)/2, the right side of (2.4) is bounded by
+
+ C m^(-2+beta) integral_0^(m/2)
+       exp(-y/2)y^(p+1-beta)[log(em/y)]^R dy
+ <= C_(p,q) m^(-2+beta) L^R
+ <= C_(p,q) m^-2 L^R.                                   (2.5)
+
+For the middle inequality split y<=1 and y>=1. On y<=1, bound
+log(em/y)<=L+log(1/y) and use beta<=1/2; the fixed power of
+log(1/y) is integrable against y^(p+1-beta). On y>=1, the logarithm
+is <=L and the exponential controls every fixed power. Finally
+m^beta<=exp(C_(p,q)delta) is independent of m. This last observation
+is the dimension-critical point; replacing it by an uncontrolled
+exp(O(epsilon m)) would not suffice.
+
+For the lower weight bound let sigma_+=max sqrt(v_k),
+y=(x-H)/sigma_+. On x>=2H, y_k lies in [y,y+C epsilon y+C H].
+Thus f_k>=c phi(y) exp[-C(epsilon y^2+Hy+H^2)], and F_k>=Phi(y).
+For i!=j the resulting lower rho bound has Phi(y)^(m-2); for i=j
+it has Phi(y)^(m-1), which is at least half that value when y>=0.
+Restrict to 1-Phi(y) in [1/m,2/m]. For large m this interval has
+y comparable to sqrt(L), x>=2H, and the exponential factor bounded
+above and below by constants. Mills estimates also give
+phi(y) comparable to (1-Phi(y))sqrt(L). Therefore
+
+ omega_ij >= c integral_{1/m}^{2/m} phi(Phi^-1(1-s))ds
+           >= c sqrt(L)/m^2.                             (2.6)
+
+The omitted factor Phi(y)^(m-2) is bounded below by a positive constant
+on this interval. This lower bound uses no concentration theorem.
+
+Left and central thresholds. If x<=-2H, then y_k<=-c|x| and
+Phi(y_k)<=2^-1 exp(-c x^2). Also a_k<=C(1+|x|), by the left-tail
+Mills estimate. Hence
+rho_ij Y^p X^q <= C_(p,q) m^p 2^-m exp(-cmx^2)
+                                      (1+|x|)^(p+q+2).
+Its integral is exponentially small relative to sqrt(L)/m^2.
+On |x|<=2H all F_k<=q0<1 uniformly, while all a_k are bounded;
+that interval contributes at most C_(p,q)m^p q0^m. This completes
+(2.2), with no omitted negative-threshold region.
+
+To identify its normalization exactly, set
+Z0=integral phi(x)^2 Phi(x)^(m-2)dx. Since the maximum density is
+m phi(x)Phi(x)^(m-1), integration by parts gives
+
+ mu=m integral x phi(x)Phi(x)^(m-1)dx=m(m-1)Z0,
+                         Z0=alpha/m.                     (2.7)
+
+Applying (2.2) at v=1,h=0 gives Z0 comparable to sqrt(L)/m^2.
+Thus (2.2), normalized by omega_ij, is equivalently
+
+ omega_ij comparable to alpha/m,
+ E_ij[Y^p X^q] <= C_(p,q)L^((p+q)/2).                     (2.8)
+
+Here E_ij is expectation for rho_ij/omega_ij. Constants in (2.8)
+also cover any fixed polynomial in X and Y of the indicated degree.
+
+3. BALANCED OFFSETS AND THEIR COMPONENTWISE INVERSE
+For fixed positive v, the function G_v(h)=E max_k(sqrt(v_k)Z_k+h_k)
+is smooth in h. Restrict to mean-zero h. It is coercive: G_v(h)>=max h,
+and on this finite-dimensional subspace max h tends to infinity with
+the norm. Its h-gradient is the vector of winning probabilities p_i.
+Direct differentiation of the one-dimensional winning integral gives
+its Hessian as the complete graph Laplacian L_v with positive edge
+weights omega_ij, i!=j. It is positive definite on 1-perp. Thus G_v
+has a unique mean-zero minimizer, with p_i=1/m. The implicit function
+theorem gives smooth h(v) throughout the positive variance orthant.
+These conclusions need no external offset gap or rank-degeneracy theorem.
+
+Whenever (2.1) holds, c alpha/m<=omega_ij<=C alpha/m. For a centered
+vector g and mean-zero y=L_v^-1 g, one has
+
+ |y_i| <= (C/alpha)(|g_i|+mean_j |g_j|).                   (3.1)
+
+Here is a proof retaining the needed coordinate information. Subtract
+the complete graph with edge weight c alpha/m, choosing c below the
+lower bound. The remainder E is again a graph Laplacian, and on 1-perp
+L_v=c alpha I+E. Its heat semigroup exp(-sE) is doubly stochastic and
+contracts the l1 norm. Integrating exp(-sL_v)g gives
+||y||1<=||g||1/(c alpha). The i-th row equation, its degree>=c'alpha,
+and its edge upper bound C alpha/m give (3.1). A spectral l2 estimate
+alone would not prove this componentwise statement.
+
+4. FIRST OFFSET DERIVATIVE AND A UNIFORM OPEN BOX
+Fix a base variance vector, and differentiate along v(t)=v+t xi.
+Dots below mean these total derivatives, including h(v(t)). Put
+
+ u_i=xi_i/(2v_i), b_i=dot h_i+u_i q_i.
+
+Direct differentiation gives
+dot F_i=-f_i b_i and dot f_i=-partial_x(f_i b_i).
+Since p_i=integral f_i product_{k!=i}F_k, integration by parts gives
+
+ 0=dot p_i=sum_{j!=i} integral rho_ij(b_i-b_j)dx.           (4.1)
+
+The boundary terms vanish in both tails. Moving dot h to the left,
+(4.1) is L_v dot h=-g, where
+
+ |g_i| <= C alpha sqrt(L)(|xi_i|+M1),
+ mean |g_i| <= C alpha sqrt(L)M1.                         (4.2)
+
+Indeed (2.8) gives E_ij|q_k|<=C sqrt(L) for every k; the pair
+formula, omega_ij<=C alpha/m, and summation give (4.2).
+The source g is centered by pairwise antisymmetry. Equation (3.1)
+proves |dot h_i|<=C sqrt(L)r_i while (2.1) holds.
+
+This estimate closes the entire box (1.1), not just one prescribed
+direction. Given v satisfying (1.1), join 1 to v by 1+s(v-1), 0<=s<=1.
+At s=0 the balanced h is zero. As long as max|h_i|<=delta/sqrt(L),
+the preceding estimate with xi=v-1 gives
+
+ max_i |d h_i/ds| <= 2C sqrt(L)||v-1||infinity
+                  <=2C c0/sqrt(L).
+
+Choose c0<=delta and 2Cc0<=delta/2. Integration gives the strict
+improvement max|h_i|<=delta/(2sqrt(L)); by continuity there can be
+no first exit from the moment box. Thus (2.8) and (4.2) hold uniformly
+for every v in (1.1). The constants are fixed before m is increased.
+No sum of squared coordinate errors is used in this continuation.
+
+5. FULL SECOND OFFSET DERIVATIVE
+The exact log-density velocity is
+
+ lambda_i=dot f_i/f_i
+   =-xi_i/(2v_i)+xi_i q_i^2/(2v_i^2)+dot h_i q_i/v_i.
+
+Define A_i=a_i b_i and S=sum_k A_k. Then
+
+ dot a_i=a_i(lambda_i+A_i),
+ dot W=-WS,
+ P_ij=dot rho_ij/rho_ij=lambda_i+lambda_j+A_i+A_j-S.       (5.1)
+
+These formulas apply without modification to i=j. They retain all
+other-label contributions. In particular S cannot be replaced by the
+two displayed pair terms.
+
+For a compact pointwise ledger let U=X+sqrt(L), Y=m max a_k. By (2.8),
+every fixed mixed moment E_ij[U^p Y^q] is <=C_(p,q)L^((p+q)/2).
+Using (4.2), bounded v, and small h, one has pointwise
+
+ |b_i|<=C r_i U,
+ |lambda_i|<=C r_i U^2,
+ |S|<=C M1 YU,
+ |P_ij|<=C(r_i+r_j)(U^2+YU).                            (5.2)
+
+The S estimate uses sum r_k=2mM1 before applying the max hazard.
+Consequently
+
+ E_ij P_ij^2<=C L^2(d_i+d_j),
+ E_ij |P_ij(b_i-b_j)|<=C L^(3/2)(d_i+d_j).                (5.3)
+
+Here r_i^2<=2d_i and M1^2<=M2; all products between different
+coordinates are covered by these inequalities.
+
+Differentiate b_i exactly:
+
+ dot b_i=ddot h_i+c_i,
+ c_i=-xi_i^2 q_i/(2v_i^2)-xi_i dot h_i/(2v_i),
+ |c_i|<=C d_i U.                                        (5.4)
+
+Differentiating (4.1) now yields the actual acceleration equation
+
+ L_v ddot h=-g^(2),
+ g_i^(2)=sum_{j!=i} integral rho_ij
+                  [P_ij(b_i-b_j)+c_i-c_j]dx.             (5.5)
+
+This is not a fixed-offset derivative. Its right side is centered by
+pairwise antisymmetry, since P_ij=P_ji. Equations (2.8), (5.3),
+and (5.4), followed by the sum over j, give
+
+ |g_i^(2)|<=C alpha L^(3/2)d_i,
+ mean_i |g_i^(2)|<=C alpha L^(3/2)M2.
+
+Apply (3.1):
+
+                    |ddot h_i|<=C L^(3/2)d_i.             (5.6)
+
+6. COMPLETE HAZARD SECOND-DERIVATIVE LEDGER
+Here are every term and its summation cost. The exact derivative of
+lambda_i is
+
+ dot lambda_i=xi_i^2/(2v_i^2)-xi_i^2 q_i^2/v_i^3
+       -2xi_i dot h_i q_i/v_i^2-(dot h_i)^2/v_i
+       +ddot h_i q_i/v_i.                               (6.1)
+
+Define the nonnegative threshold polynomials
+
+ J=U^2+L^(3/2)U,
+ K=YU^3+(Y^2/m)U^2+Y(L^(3/2)+U).
+
+Equations (4.2),(5.4),(5.6) imply, pointwise,
+
+ |dot lambda_i|<=C d_i J,
+ |dot b_i|<=C d_i(L^(3/2)+U),
+ dot A_i=a_i[lambda_i b_i+a_i b_i^2+dot b_i],
+ |dot A_i|<=C(d_i/m)K,
+ |dot S|<=C M2 K.                                      (6.2)
+
+For clarity, the three sums behind the last estimate are
+
+ sum a_k|lambda_k b_k| <= C YU^3 M2,
+ sum a_k^2 b_k^2      <= C (Y^2/m)U^2 M2,
+ sum a_k|dot b_k|     <= C Y(L^(3/2)+U)M2.                (6.3)
+
+They use sum r_k^2<=4mM2 and sum d_k=2mM2. This is where summing
+all moving offsets remains dimension independent. Bounding each label
+first and then paying m without its hazard factor would lose the proof.
+
+The moment certificate gives
+
+ E_ij J<=C L^2, E_ij K<=C L^2.
+
+Therefore the exact derivative
+dot P_ij=dot lambda_i+dot lambda_j+dot A_i+dot A_j-dot S
+satisfies
+
+ E_ij |dot P_ij|<=C L^2(d_i+d_j).                        (6.4)
+
+Finally ddot rho_ij=rho_ij(P_ij^2+dot P_ij), so (5.3),(6.4), and
+omega_ij<=C alpha/m imply
+
+ |D_xi^2 ell_i|
+ <=sum_j omega_ij E_ij[P_ij^2+|dot P_ij|]
+ <=C(alpha/m)L^2 sum_j(d_i+d_j)
+ <=C alpha L^2(xi_i^2+M2).                               (6.5)
+
+The sum explicitly includes j=i. No physical-facet interpretation of
+rho_ii was used. Its positive-threshold extra denominator and its
+negative-threshold tails were already covered in Section 2.
+
+Differentiation under the integral is justified locally for every fixed
+m by Gaussian tail domination of the differentiated expressions; on
+negative thresholds the hazards have polynomial growth and W decays
+as exp(-cmx^2), while on positive thresholds the density factors supply
+Gaussian decay. The uniform values of those integrals are exactly the
+finite-order estimates in Section 2. This separates differentiability
+from the dimension-uniform bound instead of assuming the latter.
+
+7. ALL MIXED DIRECTIONS
+At each fixed v in (1.1), the preceding proof applies to any xi; a short
+line segment through v suffices to define its derivatives. At boundary
+points one may use the larger moment box, or pass by continuity from
+the interior. Hence Q_i(xi)=xi_i^2+mean xi^2 is a positive definite
+quadratic form for which
+|D^2 ell_i[xi,xi]|<=C alpha L^2 Q_i(xi) for all real xi.
+For any lambda>0, polarization gives
+
+ |D^2 ell_i[xi,zeta]|
+ <=(C alpha L^2/2)[lambda^2 Q_i(xi)+lambda^-2 Q_i(zeta)].
+
+Optimize lambda to obtain (1.4), including zero directions by continuity.
+This proves mixed bounds uniformly over all coordinate patterns, without
+separate finite-support or two-block assumptions. The same argument
+applied to (5.6) gives the stated mixed offset-acceleration bound.
+
+One can also see the mixed offsets before polarization. Write
+b_{i,xi}=D_xi h_i+xi_i q_i/(2v_i), and define P_{ij,zeta} by (5.1)
+in direction zeta. Differentiating the xi-flux in direction zeta gives
+
+ L_v D_zeta D_xi h=-g^(xi,zeta),
+ g_i^(xi,zeta)=sum_{j!=i} integral rho_ij
+       [P_{ij,zeta}(b_{i,xi}-b_{j,xi})
+                       +c_{i,xi,zeta}-c_{j,xi,zeta}]dx,
+ c_{i,xi,zeta}=-xi_i zeta_i q_i/(2v_i^2)
+                              -xi_i D_zeta h_i/(2v_i).   (7.1)
+
+Although the displayed forcing is not manifestly symmetric, it is the
+derivative of a smooth balanced flux, so its solution is symmetric in
+xi,zeta. The polarization argument bounds exactly this full derivative,
+including all the asymmetric-looking transport terms in (7.1).
+
+8. REGULAR COEFFICIENT, WITH THE NORMALIZATION RECHECKED
+This section is supplementary: the uniform certificate is Sections 2-7.
+At v=1,h=0, let T have normalized density phi(x)^2 Phi(x)^(m-2),
+M=E T and V=Var T. Then omega_ij=Z0=alpha/m and ell_i=alpha.
+For centered xi, (4.1) and sum dot h=0 give dot h_i=-M xi_i/2.
+Writing a=phi/Phi, direct differentiation gives
+
+ (dot a_i/a_i)|_(v=1)=k(x)xi_i,
+ k(x)=[(x+a(x))(x-M)-1]/2.
+
+Both dot W and sum dot a_i vanish at this point. Thus
+dot ell_i=alpha E[k(T)]xi_i. The log derivative of T's density is
+-2x+(m-2)a(x). Integrating its product with x-M gives
+
+ -2V+(m-2)E[(T-M)a(T)]=-1,
+ E k(T)=[mV-m+1]/[2(m-2)].
+
+Therefore dot ell_i=-alpha eta_m xi_i with
+
+                    eta_m=[m-1-mV]/[2(m-2)].             (8.1)
+
+For completeness, V<=1/2 has an elementary proof. If the T-density is
+proportional to exp(-Vpot), then
+Vpot''=2-(m-2)a'>=2, since a'=-a(x+a)<0. Independent T,T' obey
+E[(T-T')(Vpot'(T)-Vpot'(T'))]=2 by integration by parts. Strong
+monotonicity makes the left side >=2E(T-T')^2=4Var(T).
+
+For V>=1/m, realize T as the common coordinate of Z_1=Z_2 conditional
+on these two coordinates being maximal. Conditioning on Z_1-Z_2=0
+and the maximality inequalities depends only on the centered Gaussian
+vector Z-bar Z. The independent common mean bar Z retains variance
+1/m; thus T=bar Z+T_centered with independent summands. These two
+variance bounds give exactly 1/4<=eta_m<=1/2.
+
+Combining (6.5) with (8.1) proves, for centered bounded xi and
+|t|<=c_A/L^2,
+
+ |ell_i(t)-alpha+alpha eta_m t xi_i|
+       <=C alpha L^2 t^2(xi_i^2+mean xi^2).
+
+The sign of t does not affect any step of the continuation or the
+remainder proof. This supplies the requested two-sided path statement.
+
+9. SCOPE, SOURCE HANDLING, AND WHAT IS STILL SEPARATE
+The requested hazard input is established by this derivation. There is
+no smaller missing analytic statement for this input after Sections 2-7.
+The proof yields an absolute variance box of radius c0/L, larger than
+the path radius c_A/L^2 needed by the supporting-covariance application.
+No claim is made that the L^2 loss is optimal.
+
+The following frozen source texts were inspected for the claim and its
+normalizations, not used as audit verdicts:
+ * GLOBAL_SUMMED_ROW_COVARIANCE_COERCIVITY_BY_DIAGONAL_SUPPORT_20261031.txt
+ * CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_ON_A_COORDINATE_BOX_20261031.txt
+ * CALIBRATED_DIAGONAL_HAZARD_DERIVATIVES_PINS_20261031.json
+ * RANK_FREE_BOUNDED_ROW_AFFINE_OFFSET_CHEEGER_GAP_20261031.txt
+ * OPTIMIZED_MASS_HESSIAN_AT_THE_REGULAR_SIMPLEX_20261031.txt
+The final two sources identify the offset-dual and raw-tie conventions.
+Sections 3 and 8 above give independent proofs of the portions used here.
+No prior audit verdict was read or adopted. No numerical evidence is
+required for the conclusion, and no installation or paid compute was used.
+
+The PSD support identity and covariance concavity remain separate inputs
+to the global summed coercivity application. This certificate establishes
+its hazard derivative dependency; it does not audit a full negative-noise
+theorem, an asymptotic tail transfer, or the entirety of that application's
+dependency graph.

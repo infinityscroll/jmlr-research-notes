@@ -1,0 +1,15 @@
+{
+  "scope": "Independent mathematical derivation and scoped root review; original sources unchanged.",
+  "files": [
+    {
+      "path": "INDEPENDENT_WHOLE_BOX_HAZARD_HESSIAN_CERTIFICATE_20261102.txt",
+      "sha256": "3b1b8f6d8beda72bdc00f5fb50a0f00684b3766d4e63c7933347a21f05049dde",
+      "change": "none"
+    },
+    {
+      "path": "ROOT_WHOLE_BOX_HAZARD_CERTIFICATE_REVIEW_20261102.txt",
+      "sha256": "bc1cd0734806194481956b4af6af17c190e9e168e2255ea2461c8e40d2e2a0ed",
+      "change": "none"
+    }
+  ]
+}
