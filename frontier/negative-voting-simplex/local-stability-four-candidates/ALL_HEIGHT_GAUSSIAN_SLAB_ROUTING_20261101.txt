@@ -1,0 +1,61 @@
+EXACT GAUSSIAN ROUTING CONTROL FOR EVERY SLAB HEIGHT
+1 November 2026. Root derivation; independent audit requested.
+
+This lemma strengthens the routing part of the finite-change attack. It
+does not estimate the signed interaction between two changed partitions.
+It does not authorize overlapping slabs or a reduction of arbitrary
+partitions to normal graphs.
+
+Let C_i,C_j be measurable sets exchanged by reflection in the plane
+n.x=0, with C_i contained in n.y<=0 and n a unit vector. For rho=-r,
+0<r<1, write sigma^2=1-r^2 and
+  G=T_-r(1_Ci-1_Cj), d(x)=partial_n G(x), n.x=0.
+Assume C_i has positive Gaussian measure, so d(x)>0. Fix any such base x.
+Define
+  psi(u)=int_0^u exp(-t^2/2)dt,
+  L_x(u)=int_0^u G(x+t n)exp(-t^2/2)dt.
+These are unnormalized normal-coordinate integrals; the Gaussian surface
+density at x is to be multiplied afterward when integrating over a facet.
+
+THEOREM. If sigma^2>=pi/4, then, for every real height u,
+                       L_x(u)>=(d(x)/2) psi(u)^2.          (1)
+In particular (1) holds at r=1/3, since8/9>pi/4.
+
+Proof of the reflection bound. Let k(x,y) be the Mehler kernel relative
+to the ambient Gaussian density. At n.x=0, reflecting C_j into C_i gives,
+for t>=0,
+ G(x+t n)=2exp[-r^2t^2/(2sigma^2)]
+     *int_Ci k(x,y)sinh[r t(-n.y)/sigma^2]d gamma(y).
+Differentiating at0 gives
+ d(x)=(2r/sigma^2)int_Ci(-n.y)k(x,y)d gamma(y).
+Since sinh(a)>=a for a>=0,
+ G(x+t n)>=d(x)t exp[-r^2t^2/(2sigma^2)].
+Multiplying by exp(-t^2/2) and integrating yields
+ L_x(u)>=d(x)sigma^2[1-exp(-u^2/(2sigma^2))], u>=0.       (2)
+
+Proof of the scalar comparison. The square integral is exactly
+ psi(u)^2=int_[0,u]^2 exp[-(s^2+t^2)/2]dsdt.
+Among subsets of the positive quadrant with area u^2, this decreasing
+radial integrand is maximized by the quarter-disk of the same area. This
+follows directly by exchanging points outside that disk with missing
+points inside it, where the integrand is larger. Its radius is2u/sqrt(pi).
+Consequently
+ psi(u)^2<=(pi/2)[1-exp(-2u^2/pi)].                       (3)
+For z>=0 the function a -> [1-exp(-az)]/a is decreasing for a>0:
+it equals int_0^z exp(-as)ds. Since sigma^2>=pi/4,
+ sigma^2[1-exp(-u^2/(2sigma^2))]
+     >=(pi/4)[1-exp(-2u^2/pi)] >=psi(u)^2/2.
+Together with (2) this proves (1) for u>=0. Reflection makes G(x+t n)
+odd in t, hence L_x is even and psi is odd. The negative-height case
+follows. All integrands are nonnegative in the comparisons used above.
+
+APPLICATION AND LIMIT
+For valid disjoint normal slabs on the tetrahedral interfaces, the exact
+mass coordinate is p_e(x)=psi(u_e(x)). After multiplying (1) by the surface
+Gaussian measure and summing facets, the reference routing cost is at
+least D(p)/2. This is an exact finite-change bound at every allowable
+height, without a Taylor remainder or a lower bound on d over a compact
+set. The geometry must still ensure that the prescribed slabs define the
+intended partition and do not cross other interfaces. Their mutual noise
+interaction remains a separate term. Neither global optimality nor an
+all-partitions comparison follows from this routing lemma alone.

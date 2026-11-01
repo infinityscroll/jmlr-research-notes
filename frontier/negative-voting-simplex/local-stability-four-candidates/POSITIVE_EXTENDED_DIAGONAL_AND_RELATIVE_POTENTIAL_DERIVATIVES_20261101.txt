@@ -1,0 +1,97 @@
+POSITIVE EXTENDED DIAGONAL AND RELATIVE POTENTIAL DERIVATIVES
+2026-11-01. Independent completion of the derivative estimates used by
+Sections5 and7 of MOVING_JUNCTION_FORMAL_SLAB_CAP_DECOMPOSITION_20261101.txt.
+
+Let e=(i,j), n=n_e, rho=-1/3, sigma^2=8/9, and
+G=T_rho(1_Ci-1_Cj). The reference cell C_i lies in n.y<=0 and is exchanged
+with C_j by reflection in n-perp. Write phi_sigma for the centered
+three-dimensional Gaussian density with covariance sigma^2 I. Define
+the POSITIVE EXTENSION of the facet diagonal to every z in R^3 by
+
+ D_e(z)=(3/4)int_Ci(-n.y)phi_sigma(y+z/3)dy.              (1)
+
+This extension is not asserted to equal partial_n G away from n-perp.
+On the tie plane it does equal the actual positive diagonal d_e.
+
+1. GLOBAL LOGARITHMIC CURVATURE
+The factor(-n.y)1_Ci(y) is log-concave: on the convex cone interior it
+has logarithm log(-n.y), a concave function; extension by0 preserves
+log-concavity. Its convolution with a Gaussian is log-concave. Hence
+Hess log D_e<=0. This is the same Prekopa argument already used for the
+accepted diagonal-curvature lemma, now retaining all three coordinates.
+
+Alternatively writing out the Gaussian exponent gives
+ D_e(z)=constant*exp(-|z|^2/16)
+     int_Ci(-n.y)exp(-9|y|^2/16-3z.y/8)dy.
+The integral is a positive Laplace transform. Its log Hessian is a
+covariance matrix and is positive semidefinite. Therefore exactly
+
+                    -I/8<=Hess log D_e<=0.               (2)
+
+There are only six edges. Thus a fixed finite constant C0 bounds all
+|grad log D_e(0)|, and for |z|<=R+1,
+ |grad log D_e(z)|<=C0+(R+1)/8,
+ ||Hess D_e(z)||<=D_e(z)[1/8+(C0+(R+1)/8)^2].            (3)
+All differentiations are justified by the Gaussian integrability of
+polynomials times linear tilts. No lower minimum of d_e on B_R is used.
+
+2. EXACT REPRESENTATION OF THE POTENTIAL DIFFERENCE
+For x in n-perp, reflection gives
+ G(x+tn)=2exp(-t^2/16)
+              int_Ci sinh(alpha(y)t)phi_sigma(y+x/3)dy,
+ alpha(y)=-(3/8)n.y>=0.
+Use sinh(alpha t)=(alpha/2)int_(-t)^t exp(alpha s)ds and
+phi_sigma(y+(x+sn)/3)=phi_sigma(y+x/3)exp(alpha s-s^2/16).
+The result, valid also for negative t with oriented integration, is
+
+ G(x+tn)=(1/2)exp(-t^2/16)
+                   int_(-t)^t exp(s^2/16)D_e(x+sn)ds
+        =(t/2)int_(-1)^1 exp[(u^2-1)t^2/16]
+                                      D_e(x+utn)du.     (4)
+
+At t=0 this gives partial_n G(x)=D_e(x)=d_e(x), checking the factor.
+The representation uses a strictly positive integrand. In particular,
+if |x|<=R, |t|<=1, and(R+1)|t|<=1, then(3)-(4) give
+ |G(x+tn)|<=C|t|d_e(x),
+ |grad_tan G(x+tn)|<=C|t|(R+1)d_e(x),
+ |partial_n G(x+tn)|<=C d_e(x),
+ ||Hess G(x+tn)||<=C(R+1)d_e(x).                         (5)
+Here C is universal for the fixed tetrahedron. To verify the last bound,
+differentiate(4) twice. Tangential second derivatives have an extra
+factor |t|(R+1)^2; mixed derivatives have size O(R+1); and normal second
+derivatives have size O(R+1)+O(|t|(R+1)^2). The hypothesis
+|t|(R+1)<=1 absorbs the extra factors. Formula(3) controls every derivative
+that occurs. This makes the Hessian estimate explicit without a separate
+unproved tilted-moment assertion.
+
+3. APPLICATION NEAR A TRIPLE RAY OR THE VERTEX
+If z lies within distance a<=1 of a triple-ray point x0=s ell, and
+(R+1)a<=c for a fixed constant c, write z=x+tn for any incident facet.
+Then |x-x0|,|t|<=a. Equation(3) makes d_e(x) comparable to d_e(x0) by
+a universal factor; the incident d_e(x0) are equal by label symmetry.
+Equation(5) therefore gives
+ |G_i(z)-G_j(z)|<=C a d_j(x0)
+for each pair among the three incident labels. At the vertex the same
+argument uses D_e(0), common to all six edges. This is exactly the extra
+factor a needed to convert cap volume into the cubic/quartic routing
+error controlled by the weighted traces.
+
+4. ROTATION TESTS AND THEIR NORMAL DERIVATIVES
+For ||Omega||<=1, let g_Omega,i=-(Omega z).grad G_i(z). Then
+ g_Omega,i-g_Omega,j=-(Omega z).grad G(z).
+At x in the tie plane, grad G(x)=d_e(x)n, so
+        g_Omega,i(x)-g_Omega,j(x)=-d_e(x)r_Omega,e(x).
+For |t|(R+1)<=1, (5) gives
+ |g_Omega,i(x+tn)-g_Omega,j(x+tn)|<=C(R+1)d_e(x).
+Differentiating this actual signed difference, rather than estimating
+individual potentials, gives
+ partial_n(g_Omega,i-g_Omega,j)
+  =-(Omega n).grad G-(Omega z).Hess G n.
+Thus its magnitude is at most C(R+1)^2 d_e(x), by(5).
+This justifies both the formal-slab Taylor error and the cap rotation
+test bound used in the moving-junction source.
+
+All constants in these estimates grow at most polynomially with R.
+Only small(R+1) times the displacement is required. The estimates are
+therefore compatible with the growing core R=O(sqrt(log(1/epsilon))) and
+the displacement epsilon^(11/400-o(1)).

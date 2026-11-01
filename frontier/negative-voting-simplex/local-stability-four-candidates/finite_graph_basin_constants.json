@@ -1,0 +1,39 @@
+{
+  "R": 3,
+  "normalized_other_label_clearance": "1/10",
+  "d0": "[0.171562562167327355342831107830 +/- 1.63e-31]",
+  "kappa": "[0.189361631743319715558913044482 +/- 4.72e-31]",
+  "d_min_on_radius_R": "[0.0553880074796517957088085209346 +/- 4.87e-33]",
+  "rotation_tail_fraction_lower": "[0.000475068286617188876470957347759 +/- 5.17e-35]",
+  "cases": [
+    {
+      "case": "compact_no_rotation_gauge",
+      "height": "[2.00000000000000000000000000000e-6 +/- 3e-40]",
+      "leading_gap_c": "[8.90753037407229143383045027048e-5 +/- 2.84e-36]",
+      "routing_error_coefficient": "0",
+      "cross_error_coefficient": "[1.24005752354775147946075087233e-5 +/- 4.75e-35]",
+      "certified_finite_gap_coefficient": "[4.45376518703614571691522513524e-5 +/- 1.42e-36]",
+      "checks": {
+        "clearance": true,
+        "height_le_one": true,
+        "linear_remainder_condition": true,
+        "direct_remainder_below_half_gap": true
+      }
+    },
+    {
+      "case": "exact_common_rotation_gauge",
+      "height": "[0.00400000000000000000000000000000 +/- 3e-37]",
+      "leading_gap_c": "[0.160000000000000000000000000000 +/- 3e-35]",
+      "routing_error_coefficient": "0",
+      "cross_error_coefficient": "[0.0249352688922622697094545624529 +/- 1.02e-32]",
+      "certified_finite_gap_coefficient": "[0.0800000000000000000000000000000 +/- 3e-35]",
+      "checks": {
+        "clearance": true,
+        "height_le_one": true,
+        "linear_remainder_condition": true,
+        "direct_remainder_below_half_gap": true
+      }
+    }
+  ],
+  "scope": "Finite disjoint normal-graph slabs only; not a global partition theorem."
+}

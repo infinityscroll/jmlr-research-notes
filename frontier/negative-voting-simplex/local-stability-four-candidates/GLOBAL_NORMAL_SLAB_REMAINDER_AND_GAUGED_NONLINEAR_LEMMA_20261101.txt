@@ -1,0 +1,195 @@
+GLOBAL NORMAL-SLAB REMAINDER AND A GAUGED NONLINEAR LEMMA
+1 November 2026. covariance_adversarial_cleanroom.
+New successor source. Frozen theorem, code, and audit files are unchanged.
+
+RESULT
+
+At rho=-1/3, consider the cylindrical tetrahedral partition in any finite
+N>=3. There is a quantitative finite-change lower bound for arbitrary
+measurable normal graphs with exact matching masses and exact rotation
+gauge. No spatial cutoff is needed. A sufficient uniform height bound is
+
+                        epsilon <=1/1638400.               (1)
+
+The graph heights must also taper near other interfaces so their slabs are
+valid and disjoint. Under the precise conditions below, the actual paired
+noise deficit is at least (2/25)(D(p)+D(q)), where p,q are exact signed
+slab-mass coordinates. This is a nonlinear inequality for the specified
+graph class, not a reduction of arbitrary measurable partitions to graphs.
+
+1. VALID MEASURABLE SLABS AND EXACT MASS COORDINATES
+
+Use all definitions from THEOREM_AND_PROOF_ACCEPTED_20261101.txt. For the
+facet e=(i,j), n_e points from C_i into C_j. Write a base point as x=(x0,z),
+where x0 is on the three-dimensional facet and z is in R^(N-3). Define the
+normalized gap to the other labels by
+
+ a_e(x0)=min_{k notin{i,j}} (Y_i-Y_k).x0/sqrt(2).
+
+On the facet Y_i.x0=Y_j.x0, so the same expression results with j. It is
+positive on the relative interior and zero on the junctions. Let u_e,v_e
+be arbitrary measurable heights satisfying, almost everywhere,
+
+ |u_e(x)|,|v_e(x)| <=min(epsilon,a_e(x0)/3).                (2)
+
+The normal map x+t n_e has Gaussian volume measure
+d lambda_e,N(x) exp(-t^2/2)dt, because x.n_e=0. Moving a distance at most
+a_e/3 preserves a strict gap between both labels i,j and every other label.
+Every point in such a tube therefore has the unique unordered top-two
+label pair{i,j}. Tubes associated with different facets are disjoint; the
+normal projection within one tube is unique. Thus the signed slabs define
+actual measurable partitions P,Q: for positive u, label i replaces j on
+0<t<u, and for negative u, label j replaces i on u<t<0. Outside the slabs
+the reference partition is unchanged. Apply the same construction with v.
+No differentiability of the height functions is used.
+
+Put psi(t)=int_0^t exp(-s^2/2)ds, p_e=psi(u_e), q_e=psi(v_e).
+The mass changes are EXACTLY M_Np and M_Nq. Consequently label-by-label
+matching masses of P and Q are equivalent to
+
+                            M_N(p-q)=0.                  (3)
+
+Their common masses can change; they need not stay equal to1/4. Bounded
+heights imply p,q belong to H_N. Impose also the explicit rotation gauge
+
+                       P_{R_N}(p+q)=0.                   (4)
+
+This is an assumption of the lemma, not a claim that every nearby pair
+admits such a gauge while remaining in the class(2).
+
+2. EXACT FINITE-CHANGE IDENTITY AND ROUTING
+
+Let G_e=T_-1/3(1_Ci-1_Cj). Expanding the bilinear objective exactly gives
+
+ J_-1/3(P,Q)-J_-1/3(C,C)=L(u)+L(v)+C(u,v),                 (5)
+
+where
+ L(u)=sum_e int d lambda_e,N(x) int_0^{u_e(x)}
+                                 G_e(x+t n_e) exp(-t^2/2)dt,
+
+and C(u,v) is the signed double-slab interaction, with incidence factor
+b_e.b_f and Mehler kernel k_N(x+t n_e,y+s n_f). Integrals from0 to a
+negative height retain their orientation. In particular there is one
+cross term in(5), whereas the Hessian has twice the mixed boundary form.
+
+The independently checked routing theorem in
+ALL_HEIGHT_GAUSSIAN_SLAB_ROUTING_20261101.txt, lines24-50, gives
+
+                         L(u)>=D(p)/2                    (6)
+
+for every allowable height. At the endpoint sigma^2=8/9>=pi/4.
+For completeness, reflection gives G_e(x+t n)>=d_e(x)t exp(-t^2/16)
+for t>=0; integrating with exp(-t^2/2) gives
+d_e sigma^2[1-exp(-u^2/(2sigma^2))]. The square integral psi(u)^2 is at
+most the Gaussian integral on the quarter disk of the same area, namely
+(pi/2)[1-exp(-2u^2/pi)]. Comparing the two exponential integrals proves(6).
+Negative heights follow by reflection. This checks the routing sign and
+factor without a Taylor error or a reciprocal lower bound on d over a
+compact set.
+
+3. GLOBAL INTERACTION REMAINDER
+
+Let r=|x0|, s=|y0|. For any |t|,|w|<=epsilon, direct substitution into the
+three-dimensional kernel gives
+
+ log[k_3(x0+t n_e,y0+w n_f)/k_3(x0,y0)]
+ =-(t^2+w^2)/16
+   -(3/8)[t n_e.y0+w x0.n_f+tw n_e.n_f].                  (7)
+
+The same ratio holds in dimension N, because the extra-coordinate kernel
+is unchanged by these normal displacements. Therefore, if epsilon<=1,
+
+ |log ratio| <=(3epsilon/8)(r+s)+epsilon^2/2
+              <=epsilon W(r,s),
+ W(r,s)=3(r+s)/8+1/2,
+ |ratio-1| <=epsilon W(r,s) exp(W(r,s)).                   (8)
+
+Define C_3^# on H_3 to be the operator whose unitarily normalized kernel
+(after the map f_e -> sqrt(d_e)f_e into direct_sum L^2(d lambda_e)) is
+
+ |b_e.b_f| k_3(x0,y0) W(r,s)exp(W(r,s))/sqrt(d_e(x0)d_f(y0)).
+
+This is a pointwise nonnegative kernel. The superscript# does NOT mean
+spectral absolute value. Squaring the kernel uses the same incidence
+factor as the previously certified Hilbert-Schmidt integral.
+
+The compact-sector lower diagonal, established in
+COMPACT_SECTOR_DIAGONAL_AND_CERTIFIED_OPERATOR_TAIL_20261101.txt, gives
+the following radial envelope for every nonnegative radial multiplier F:
+
+ sum_{e,f}(b_e.b_f)^2 int int
+   k_3^2 F(r,s)/(d_e d_f) d lambda_e d lambda_f
+ <=432 exp(15/8) int_0^infinity int_0^infinity
+   r(1+r)^2 s(1+s)^2 exp[-3(r^2+s^2)/16]F(r,s)drds.        (9)
+
+The constant is the ordered incidence-square sum48 divided by rho^2=1/9;
+the angular factors and Gaussian prefactors cancel with c0^2. The exponent
+bound uses x0.y0>=-rs and2rs<=r^2+s^2. Thus(9) applies with the multiplier
+W^2 exp(2W), not just with a constant multiplier.
+
+Now
+ (3/4)r <=3r^2/32+3/2,
+ W^2 <=(9/16)(r^2+s^2)+1/2.
+Writing J_j=int_0^infinity r^(j+1)(1+r)^2 exp(-3r^2/32)dr, one obtains
+
+ ||C_3^#||_HS^2
+ <=432 exp(47/8)[(9/8)J_2 J_0+(1/2)J_0^2].               (10)
+
+Elementary Gaussian integrals, sqrt(pi)<16/9, and sqrt(3/32)>3/10 give
+ J_0<7600/81<128, J_2<143872/81<2048.
+Also exp(47/8)<exp(6)<404. Hence
+
+ ||C_3^#||_HS^2 <432*404[(9/8)*128*2048+(1/2)*128^2]
+                =52900134912<68719476736=2^36,
+                         ||C_3^#||<2^18.                 (11)
+
+All numerical inequalities in(10)-(11) are independently checked by the
+exact-rational script certify_global_slab_remainder_rational_20261101.py.
+No additional numerical quadrature is used for this remainder bound.
+
+In dimension N the corresponding positive-kernel operator is
+
+                  C_N^#=C_3^# tensor T_-1/3^{(N-3)}.
+
+The extra Gaussian kernel is pointwise positive and its L^2 operator norm
+is1. Thus ||C_N^#||<2^18 with no dimension factor. This factorization would
+be wrong if# denoted spectral modulus; the definition above avoids that
+confusion.
+
+Apply(8) to the oriented double integrals in(5), then take absolute values.
+Their absolute normal integrals are exactly |p_e(x)| and |q_f(y)|. It
+follows that
+
+ |C(u,v)-K_N(p,q)|
+ <=epsilon <|p|,C_N^#|q|>_D
+ <=2^18 epsilon ||p||_D ||q||_D
+ <=2^17 epsilon [D(p)+D(q)].                             (12)
+
+This estimates the actual signed routing interaction. It does not replace
+that interaction by a first-moment quantity.
+
+4. NONLINEAR CONCLUSION IN THE EXACT GAUGE
+
+Let p_+=(p+q)/2 and p_-=(p-q)/2. Conditions(3)-(4) give M_Np_-=0 and
+P_{R_N}p_+=0. The accepted operator theorem supplies
+
+ .5[D(p)+D(q)]+K_N(p,q)
+ =<p_+,(I+A_N)p_+>_D+<p_-,(I-A_N)p_->_D
+ >=(3/8)D(p_+)+(8/25)D(p_-)
+ >=(4/25)[D(p)+D(q)].                                    (13)
+
+Combining(5),(6),(12),(13), for every epsilon<=1,
+
+ J_-1/3(P,Q)-J_-1/3(C,C)
+ >=[4/25-2^17 epsilon][D(p)+D(q)].                        (14)
+
+The threshold(1) makes the coefficient at least2/25. The deficit is
+strictly positive unless both graphs vanish almost everywhere. Reflection
+of the second partition gives the corresponding positive-correlation
+statement at(C,-C), preserving matching masses.
+
+This proves a genuine finite-change inequality for measurable graphs in
+all finite dimensions. It assumes the exact rotation gauge and the
+junction taper(2); it does not prove those properties for an arbitrary
+nearby or globally competitive measurable pair. Establishing such a
+reduction remains a separate task.

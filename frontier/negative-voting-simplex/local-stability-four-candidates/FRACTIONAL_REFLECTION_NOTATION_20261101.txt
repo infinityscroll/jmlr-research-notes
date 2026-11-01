@@ -1,0 +1,18 @@
+SPATIAL REFLECTION IN THE FRACTIONAL COROLLARY
+1 November 2026. Notation clarification; the frozen audit is unchanged.
+
+In Section 10 of
+TRANSFER_COMPACTNESS_AND_FRACTIONAL_ALL_DIMENSION_INDEPENDENT_AUDIT_20261101.txt,
+the phrase "near the pair (theta,-theta)" uses the set-reflection shorthand
+from the partition discussion. For an assignment vector it should read
+
+                 near (theta,Rtheta),
+                 (Rtheta)(x)=theta(-x).
+
+It does not mean the componentwise negative vector -theta(x), which is
+not a simplex-valued assignment. Indeed T_rho R=T_(-rho), so replacing
+the second rule h by Rh changes correlation -1/3 to +1/3 and sends the
+reference pair (theta,theta) to (theta,Rtheta). The proved negative-
+correlation statement, mass constraints, orbit distance and coefficient
+are unchanged. The public main theorem is stated for partitions; the
+audit's fractional extension uses this spatial-reflection convention.

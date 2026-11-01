@@ -123,6 +123,138 @@
     "covariance_frozen_certificate_rerun/facet_moment_certificate.json": {
       "sha256": "7652e378b2a17d1d8895d0d237cea3c6004dfb59a5f1640aa67c8575cc14936e",
       "public_path": "covariance_frozen_certificate_rerun/facet_moment_certificate.json"
+    },
+    "NONLINEAR_LOCAL_THEOREM_READING_GUIDE_20261101.txt": {
+      "sha256": "b559a6ae59614570aac97fe35995119d244fcc1e232eb87720dd01485fcf18e9",
+      "public_path": "NONLINEAR_LOCAL_THEOREM_READING_GUIDE_20261101.txt"
+    },
+    "ARBITRARY_MEASURABLE_LOCAL_STABILITY_VIA_TRANSFER_COMPACTNESS_R3_20261101.txt": {
+      "sha256": "dafe546180f0e467ef39b2ef2db75dab6c4b65e9f2ff0220eef04fdf1eb4d4ec",
+      "public_path": "ARBITRARY_MEASURABLE_LOCAL_STABILITY_VIA_TRANSFER_COMPACTNESS_R3_20261101.txt"
+    },
+    "ARBITRARY_MEASURABLE_LOCAL_STABILITY_ALL_FINITE_DIMENSIONS_SUCCESSOR_20261101.txt": {
+      "sha256": "992bc8a2f1d92afd7fe6e702b5e2292f0d0ed76486e5f22b7ae674d88cf4ee0a",
+      "public_path": "ARBITRARY_MEASURABLE_LOCAL_STABILITY_ALL_FINITE_DIMENSIONS_SUCCESSOR_20261101.txt"
+    },
+    "ARBITRARY_TRANSFER_FIBER_COMPRESSION_AND_GLOBAL_ROTATION_BOUNDS_20261101.txt": {
+      "sha256": "c8e1f228d803144b50b07c9435d48302b2a8b47dd98fc7da14e5fd90869b036b",
+      "public_path": "ARBITRARY_TRANSFER_FIBER_COMPRESSION_AND_GLOBAL_ROTATION_BOUNDS_20261101.txt"
+    },
+    "POSITIVE_EXTENDED_DIAGONAL_AND_RELATIVE_POTENTIAL_DERIVATIVES_20261101.txt": {
+      "sha256": "46d6fd50caffdb31584fcf028b3cd5f32e81d6f46d0fbfedbc0cfc0619c1f3c7",
+      "public_path": "POSITIVE_EXTENDED_DIAGONAL_AND_RELATIVE_POTENTIAL_DERIVATIVES_20261101.txt"
+    },
+    "ALL_HEIGHT_GAUSSIAN_SLAB_ROUTING_20261101.txt": {
+      "sha256": "e5c3464af3847646e0504f128386ecbd652760bdc3be812f33073ebdb5a8c58b",
+      "public_path": "ALL_HEIGHT_GAUSSIAN_SLAB_ROUTING_20261101.txt"
+    },
+    "GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt": {
+      "sha256": "1b395c81a1ce6eb332b18402b0d08eb08e1fa8ebd0f3262ddd9d7ffbd7d70601",
+      "public_path": "GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt"
+    },
+    "FINITE_DIMENSIONAL_ROTATION_GAUGE_AND_CUTOFF_DEFECT_20261101.txt": {
+      "sha256": "22da2f184ca10cfc70c3dde9915bac27a9e43d7f61eb4787d87e59810f2b427c",
+      "public_path": "FINITE_DIMENSIONAL_ROTATION_GAUGE_AND_CUTOFF_DEFECT_20261101.txt"
+    },
+    "FINITE_CHANGE_COMPACT_NORMAL_GRAPH_BASIN_20261101.txt": {
+      "sha256": "7d84d04bd82230257c11449b64b6e92007b2c5648e10baa54c1d486847475b5c",
+      "public_path": "FINITE_CHANGE_COMPACT_NORMAL_GRAPH_BASIN_20261101.txt"
+    },
+    "FINITE_CHANGE_NORMAL_GRAPH_INDEPENDENT_AUDIT_20261101.txt": {
+      "sha256": "81ff3090b5d7c7c4eb3c83425a63060af99fa22dea755f3dd93270f0e8bf94a8",
+      "public_path": "FINITE_CHANGE_NORMAL_GRAPH_INDEPENDENT_AUDIT_20261101.txt"
+    },
+    "MOVING_JUNCTION_FORMAL_SLAB_CAP_DECOMPOSITION_20261101.txt": {
+      "sha256": "9644fcc891358161920ed1d0e4476b1ee0b9cf4a72dcc359fc0256e405bd1d59",
+      "public_path": "MOVING_JUNCTION_FORMAL_SLAB_CAP_DECOMPOSITION_20261101.txt"
+    },
+    "MOVING_JUNCTION_AND_RELATIVE_POTENTIAL_INDEPENDENT_AUDIT_20261101.txt": {
+      "sha256": "abf575b4ad69dfaa030e02ffd2a0ce250cfeb99f804e3dce198271e72583947c",
+      "public_path": "MOVING_JUNCTION_AND_RELATIVE_POTENTIAL_INDEPENDENT_AUDIT_20261101.txt"
+    },
+    "WEIGHTED_JUNCTION_TRACE_LEMMAS_20261101.txt": {
+      "sha256": "15909fd9567594002081efd6cdc408bf12d1d52173183079a97f4653ec652c1d",
+      "public_path": "WEIGHTED_JUNCTION_TRACE_LEMMAS_20261101.txt"
+    },
+    "COMPACT_MINIMIZER_STRAIGHTENING_WITH_JUNCTIONS_20261101.txt": {
+      "sha256": "112b1a97be5cc524bad323fe8af53106d02e405204c6c8ba3f36445598374aa0",
+      "public_path": "COMPACT_MINIMIZER_STRAIGHTENING_WITH_JUNCTIONS_20261101.txt"
+    },
+    "MEHLER_SMOOTHING_AND_GROWING_CORE_WINDOW_20261101.txt": {
+      "sha256": "5580d0d4f7ec8562337258dfb6dedab996f53a0ef6a69840e061a56249472c93",
+      "public_path": "MEHLER_SMOOTHING_AND_GROWING_CORE_WINDOW_20261101.txt"
+    },
+    "GROWING_CORE_WINDOW_INDEPENDENT_AUDIT_20261101.txt": {
+      "sha256": "20272d6e7511cb32d9a79664f83da9357368d3575a89691a38284008d7de655e",
+      "public_path": "GROWING_CORE_WINDOW_INDEPENDENT_AUDIT_20261101.txt"
+    },
+    "DUAL_BOUND_AND_COMPACT_REDUCTION_OF_NEAR_MINIMIZERS_20261101.txt": {
+      "sha256": "ef9b61ef82de0781422695791d65f919be712825a7978e353c9efeb047ea1ab8",
+      "public_path": "DUAL_BOUND_AND_COMPACT_REDUCTION_OF_NEAR_MINIMIZERS_20261101.txt"
+    },
+    "NEAR_TETRAHEDRAL_COMPETITIVE_LOCAL_MINIMIZER_ISOLATION_20261101.txt": {
+      "sha256": "90479cdf3c5b17b36a6bd16a62407606dab6d6f23bd394593bed19750763b7a4",
+      "public_path": "NEAR_TETRAHEDRAL_COMPETITIVE_LOCAL_MINIMIZER_ISOLATION_20261101.txt"
+    },
+    "certify_global_slab_remainder_rational_20261101.py": {
+      "sha256": "a205433340a2d0be439de84a72c910ca489cde5bd3c47d0b121f5f84e06b4b0f",
+      "public_path": "certify_global_slab_remainder_rational_20261101.py"
+    },
+    "certify_dual_multiplier_constant_20261101.py": {
+      "sha256": "c5fdf26bb77ac7f14ee307b9580d7e9363625a6bdf1e76c56109bc9c643bb661",
+      "public_path": "certify_dual_multiplier_constant_20261101.py"
+    },
+    "certify_compact_straightening_constants_20261101.py": {
+      "sha256": "227193a01041a9a3bec91a70336bd1fdc0daec44e326813f934b35b64c5c947e",
+      "public_path": "certify_compact_straightening_constants_20261101.py"
+    },
+    "check_cap_geometry_constants_20261101.py": {
+      "sha256": "b1ff3174bc30eb3d64506bacb68720b005ef58ed2c8dfa983f2e349a2bbc0039",
+      "public_path": "check_cap_geometry_constants_20261101.py"
+    },
+    "check_cap_geometry_constants_20261101.json": {
+      "sha256": "fdbf47fdb78ba94a5ca1cd36a70572cadee41d4452e55ee5468396a55162ef91",
+      "public_path": "check_cap_geometry_constants_20261101.json"
+    },
+    "check_arbitrary_fiber_rotation_constants_20261101.py": {
+      "sha256": "adc12719827c5e5626a1d76f10488dccd509bd0068ea550cb6355b03c099f1a0",
+      "public_path": "check_arbitrary_fiber_rotation_constants_20261101.py"
+    },
+    "check_arbitrary_fiber_rotation_constants_20261101.json": {
+      "sha256": "d8e5dc2dd0a30e1fd5bf7e37a232857292d36bb583b161ce79c094480aee9c14",
+      "public_path": "check_arbitrary_fiber_rotation_constants_20261101.json"
+    },
+    "finite_graph_basin_constants.py": {
+      "sha256": "82085756b784a73a0a40125cc31735fd71379425e1291487cebe889ee51693fc",
+      "public_path": "finite_graph_basin_constants.py"
+    },
+    "finite_graph_basin_constants.json": {
+      "sha256": "2a62f1c89bea89692c8db8fa0e4c75da8155607757afb0800529f493f5648e8e",
+      "public_path": "finite_graph_basin_constants.json"
+    },
+    "finite_change_covariance_audit_fingerprints_20261101.json": {
+      "sha256": "8a9ef8fd3e8045e1c28681c0cf60847c165ae4308b8604ec4583773ce880ed28",
+      "public_path": "finite_change_covariance_audit_fingerprints_20261101.json"
+    },
+    "growing_core_covariance_audit_fingerprints_20261101.json": {
+      "sha256": "0c264d38e4821411dca97600a1766acb3c9049add6bc359e33e5f4043474c7c2",
+      "public_path": "growing_core_covariance_audit_fingerprints_20261101.json"
+    },
+    "moving_junction_covariance_audit_fingerprints_20261101.json": {
+      "sha256": "e1cf312e1828cfe43975d6f2771bff34952345746b9af3b7dd8eb31b01667484",
+      "public_path": "moving_junction_covariance_audit_fingerprints_20261101.json"
+    },
+    "TRANSFER_COMPACTNESS_AND_FRACTIONAL_ALL_DIMENSION_INDEPENDENT_AUDIT_20261101.txt": {
+      "sha256": "d7e8c5cc26c11bd7f831703e15a230ca15ba58fb8c6204ad41033294fd17fedc",
+      "public_path": "TRANSFER_COMPACTNESS_AND_FRACTIONAL_ALL_DIMENSION_INDEPENDENT_AUDIT_20261101.txt"
+    },
+    "transfer_compactness_covariance_audit_fingerprints_20261101.json": {
+      "sha256": "4d2e4f7ec0762b400c1fee7be449a06b838fc87629e1b7aac2d447858cc966db",
+      "public_path": "transfer_compactness_covariance_audit_fingerprints_20261101.json"
+    },
+    "FRACTIONAL_REFLECTION_NOTATION_20261101.txt": {
+      "sha256": "10f663e5f1e5268aa468e673a300a6790260e9e36c2219b964815f9fd30c0c95",
+      "public_path": "FRACTIONAL_REFLECTION_NOTATION_20261101.txt"
     }
   },
   "portable_change": "The executable main script removes exactly two workspace-specific dependency-search lines. All mathematical operations are byte-for-byte unchanged. Its audited original is in frozen_source/.",

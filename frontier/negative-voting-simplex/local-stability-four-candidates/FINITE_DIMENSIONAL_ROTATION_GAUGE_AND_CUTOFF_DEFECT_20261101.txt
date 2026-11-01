@@ -1,0 +1,119 @@
+FINITE-DIMENSIONAL ROTATION GAUGE AND ITS CUTOFF DEFECT
+2026-11-01. Successor note; no edits to the existing Hessian theorem.
+
+RESULT
+Every paired partition sufficiently close in Gaussian L1 to(C,C) has a
+well-defined local reference orientation obtained by minimizing a smooth
+three-dimensional cross-agreement functional. It obeys an exact rotation
+orthogonality identity before truncation. The compact matched-mass
+replacement constructed in
+DUAL_BOUND_AND_COMPACT_REDUCTION_OF_NEAR_MINIMIZERS_20261101.txt
+obeys the same identity with defect O((R+1)t_R)=o(epsilon^2).
+This finite-dimensional statement is proved here. Turning it into the
+weighted boundary orthogonality needed for nonlinear coercivity still
+requires the moving-junction remainder estimate being developed separately.
+
+1. EXACT CHOICE OF ORIENTATION
+Let rho=-1/3, G_i=T_rho1_Ci and let A,H be measurable four-way partitions.
+They need not minimize any objective for this lemma. Set
+ L_(A,H)(Q)=sum_i int (1_Ai+1_Hi)T_rho1_(Q C_i) dgamma,
+ Q in SO(3) near identity.                                      (1)
+At A=H=C the identity is a strict local minimum. If Omega is skew, put
+ r_Omega,e(x)=n_e.Omega x,
+ D(r,s)=sum_e int_(Sigma_e)d_e r_e s_e d lambda_e.
+The one-sided second variation at C gives
+              Hess L_(C,C)(I)[Omega,Omega]=2D(r_Omega,r_Omega). (2)
+This is positive definite on the three-dimensional skew matrices: if all
+the rotation speeds vanish on the facets, Omega annihilates the spanning
+facet normals and hence Omega=0. The boundary integrals are finite since
+d_e is bounded and Gaussian surface measure integrates |x|^2.
+
+The functional is uniformly C2-close to L_(C,C) when A,H approach C in
+Gaussian L1. Indeed T_rho commutes with rotations, so
+ T_rho1_(Q C_i)(x)=G_i(Q^(-1)x).
+The first two spatial derivatives of G_i are bounded, by differentiating
+the Gaussian convolution. Its first two rotation derivatives are bounded
+by const*(1+|x|^2), uniformly for Q in a fixed compact coordinate chart.
+They therefore belong to L2(gamma), with a uniform bound. Gaussian
+Cauchy--Schwarz applied to 1_Ai-1_Ci and 1_Hi-1_Ci gives
+ ||L_(A,H)-L_(C,C)||_C2<=const*sqrt(epsilon),              (3)
+where epsilon is the maximum summed label symmetric difference.
+
+Choose a sufficiently small fixed coordinate ball about I on which the
+reference Hessian is uniformly positive definite. By(3), the perturbed
+functional remains strictly convex in those coordinates. Its minimum is
+interior for sufficiently small epsilon, is unique in that coordinate
+ball, and satisfies
+                 |Q-I|<=const*sqrt(epsilon).             (4)
+One can prove(4) directly from the gradient at I and uniform strong
+convexity. This argument does not assume differentiability of the
+minimizer with respect to the measurable partitions.
+
+Rotate A and H together by Q^(-1), so the selected reference orientation
+becomes I. Simultaneous rotation preserves the noise objective and every
+label mass. The post-alignment Gaussian L1 distance epsilon' tends to0:
+the rotation of the polyhedral cones changes their Gaussian measures by
+O(|Q-I|), giving epsilon'<=epsilon+O(sqrt(epsilon)). The growing-core
+construction should be restarted using epsilon', not the previous
+epsilon. No comparison in the other direction is required. If epsilon'
+is zero, the pair is already a common rotation of(C,C).
+
+2. THE EXACT ROTATION IDENTITY AND ITS LINEARIZATION
+After alignment, let
+ g_Omega,i(x)=d/dt|_(t=0) T_rho1_(exp(tOmega)C_i)(x)
+            =-(Omega x).grad G_i(x).
+Optimality of Q gives the exact identities
+      sum_i int (1_Ai+1_Hi)g_Omega,i dgamma=0             (5)
+for every Omega. The same identity holds for(C,C), so either the raw or
+reference-subtracted integrand can be used.
+
+At the reference facet,
+ g_Omega,i-g_Omega,j=-d_e r_Omega,e.                      (6)
+For smooth first-order boundary speeds u,v, differentiation of the left
+side of(5) therefore gives
+                    -D(u+v,r_Omega).                   (7)
+Thus this gauge has precisely the common-rotation normal direction
+required by the certified Hessian. It does not impose any condition on
+the contrast speed and does not restrict common label masses.
+
+Equation(7) alone does not justify replacing the exact nonlinear identity
+by D-orthogonality for a finite deformation: the error must be controlled
+relative to its actual boundary energy, including the junction caps.
+
+3. EFFECT OF COMPACT CUTOFF AND MASS REPAIR
+Apply the compact reduction note after alignment and rename epsilon'
+as epsilon. Its pair(A*,H**) differs from(A,H) only outside B_(R-3),
+apart from the fixed compact mass-repair patches of total changed measure
+O(t_R). Here
+ R^2=(21/5)log(1/epsilon),
+ t_R=gamma_3(|x|>R-3)=epsilon^(21/10-o(1)).
+
+For ||Omega||<=1, the convolution derivative bound gives
+ |g_Omega,i(x)|<=const*|x|.
+Consequently the defect of(5) for(A*,H**) is at most
+ const*int_(|x|>R-3)|x| dgamma+O(t_R)
+             <=const*(R+1)t_R=o(epsilon^2),              (8)
+uniformly over a fixed orthonormal basis of the three rotation directions.
+The tail moment bound follows explicitly from
+ int_s^infinity r^3 exp(-r^2/2)dr=(s^2+2)exp(-s^2/2)
+and the elementary lower bound on the Gaussian radial tail. The compact
+mass-repair fields contribute only O(t_R), since g is bounded on their
+fixed supports.
+
+An exact rotation gauge on the truncated boundary heights is therefore
+unnecessary. A later cap/slab expansion may use(8) as an additive error.
+For example, if it proves for the normalized common height p+q that
+ |D(p+q,r_Omega)|
+ <=C polynomial(R)*eta*sqrt(E)+C(R+1)t_R,
+then finite-dimensional projection gives
+ ||P_rot(p+q)||_D^2
+ <=C polynomial(R)*eta^2 E+C(R+1)^2 t_R^2.                (9)
+The last term is o(epsilon^2), even without a lower bound on E. If an
+energy-to-measure estimate E>=c epsilon^2 is available, it is also o(E).
+
+4. EXACT SCOPE
+Equations(1)-(8) are independent of any unproved nonlinear junction
+estimate. Equation(9) is a conditional consequence of the stated
+cap/slab approximation; that approximation has not been proved here.
+This note closes the finite-dimensional orientation and cutoff-gauge
+bookkeeping, not the full nonlinear local-minimum argument.

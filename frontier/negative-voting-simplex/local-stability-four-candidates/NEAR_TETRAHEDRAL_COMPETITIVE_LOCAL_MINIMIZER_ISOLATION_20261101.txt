@@ -1,0 +1,243 @@
+NEAR-TETRAHEDRAL COMPETITIVE LOCAL-MINIMIZER ISOLATION IN R3
+2026-11-01. New end-to-end successor and independent assembly audit.
+All earlier sources remain unchanged. This is an internally reviewed
+proof derived from the accepted computational Hessian certificate and
+the analytic successor lemmas listed below; it is not an external
+endorsement or a claim of a global Standard Simplex solution.
+
+EXACT THEOREM
+Let C=(C1,...,C4) be the regular tetrahedral conical partition of R3.
+Let gamma denote standard Gaussian measure and T=T_(-1/3). For two
+measurable partitions A,H with gamma(Ai)=gamma(Hi), write
+ J(A,H)=sum_i<1_Ai,T1_Hi>, S=J(C,C),
+ d(P,Q)=sum_i gamma(Pi symmetric_difference Qi),
+ dist(A,H)=inf_(Q in O(3)) max{d(A,QC),d(H,QC)}.          (1)
+The common mass vector is free, not fixed to(1/4,...,1/4).
+
+There exists delta0>0 such that every Gaussian-L1 LOCAL MINIMIZER of J
+under the matched-mass constraint, with dist(A,H)<delta0, satisfies
+
+                 J(A,H)>=S+dist(A,H)^2/10000.            (2)
+
+In particular, if such a local minimizer also has J(A,H)<=S, it is a
+common orthogonal image of(C,C), up to Gaussian null sets. Every global
+minimizer is a local minimizer and has value<=S, so the same isolation
+conclusion applies to global minimizers in this neighborhood.
+
+Here local minimizer means that J cannot be lowered by any sufficiently
+small Gaussian-L1 change of the two pure rules preserving matching
+masses. The size of that individual local neighborhood need not be
+uniform. No explicit numerical delta0 is claimed. The coefficient1/10000
+is deliberately conservative; the existence proof below supplies it
+after decreasing delta0.
+
+Reflecting the second partition gives the equivalent correlation+1/3
+statement near(C,-C). This theorem is proved in R3. The accepted Hessian
+extends to every finite ambient dimension, but this nonlinear isolation
+argument is not silently given the same extension.
+
+WHAT THIS DOES NOT SAY
+Equation(2) is asserted for local minimizers, not for every nearby
+measurable competitor. It does not prove that C is a Gaussian-L1 local
+minimum among arbitrary partitions. It also does not prove that any
+global minimizer lies in the stated neighborhood. Those are separate
+selection/regularity and global-closeness problems.
+
+1. A LOCAL PURE MINIMUM HAS THE SHARED DUAL ROUTING PROPERTY
+The global-minimizer routing proof in
+DUAL_BOUND_AND_COMPACT_REDUCTION_OF_NEAR_MINIMIZERS_20261101.txt extends
+to a local minimizer as follows.
+
+For a relaxed simplex-valued rule f and an original pure rule A,
+ its extended L1 distance is exactly
+                 d(f,A)=2int[1-f_(A(x))(x)]dgamma.       (3)
+This is affine in f. Given a sufficiently close feasible relaxed pair,
+purify its first rule while preserving its label masses, current linear
+noise objective, and the quantity(3). Then purify its second rule with
+the first fixed, preserving the analogous data. The finite-constraint
+extreme-point argument in the dual note applies with this one extra
+linear constraint. The resulting pure pair has the same objective and
+the same two distances from the original pure pair. It lies within the
+local-minimum neighborhood. Thus the original pair is a local minimum
+over relaxed rules as well.
+
+Every global feasible relaxed direction has a sufficiently short segment
+inside that neighborhood. The one-sided first derivative is nonnegative
+along each such segment. Hence(A,H) globally minimizes the linearized
+functional subject to Ef=Eg. The attainable balance projection contains
+a neighborhood of0 in label space1-perp; its supporting hyperplane
+therefore provides one finite dual vector lambda, sum lambda_i=0, with
+
+ Ai selected among argmin_j(T1_Hj+lambda_j),
+ Hi selected among argmin_j(T1_Aj-lambda_j).              (4)
+
+This argument uses neither global minimality of the bilinear objective
+nor a prescribed common mass vector. It preserves the opposite signs of
+the SAME dual vector, which are needed by the matched-mass problem.
+
+2. ALIGNMENT, DUAL CONTROL, AND ANALYTIC STRAIGHTENING
+Compactness of O(3) supplies an orientation realizing the distance in(1).
+Use it to bring the pair close to(C,C). Then select the nearby reference
+orientation minimizing
+ L(Q)=sum_i int(1_Ai+1_Hi)T1_(QCi)dgamma,
+as proved in FINITE_DIMENSIONAL_ROTATION_GAUGE_AND_CUTOFF_DEFECT_20261101.txt.
+At the reference its rotational Hessian is2D(r_Omega)>0. Gaussian L2
+bounds on the first two rotation derivatives make L C2-close to its
+reference functional, so this orientation exists and its displacement
+is O(sqrt(dist)). After aligning to it, rename
+              epsilon=max{d(A,C),d(H,C)}.
+Then dist<=epsilon->0 as dist->0. If epsilon=0 the theorem is immediate.
+The aligned pair satisfies the exact bulk rotation-gauge identities.
+
+Using(4), the occupied-prism argument gives the explicit normalized dual
+bound ||lambda||_2<13sqrt(epsilon), for epsilon<c/8, where
+c=exp(-9/8)/(64sqrt(2pi)). Its coefficient12.0630459031... is enclosed
+by certify_dual_multiplier_constant_20261101.py.
+
+The quantitative choice-map inverse argument in
+MEHLER_SMOOTHING_AND_GROWING_CORE_WINDOW_20261101.txt now applies. The
+reference derivative is a positive weighted K4 Laplacian. Its smallest
+eigenvalue has the lower bound
+ const*(1+R)^(-2)exp(-R^2/16).
+The exact Mehler L2 norm grows as exp(R^2/20). The electrical maximum
+principle controls relative weighted-Laplacian inversion independently
+of conditioning, avoiding a second inverse-eigenvalue factor.
+
+With R^2=(21/5)log(1/epsilon), this yields whole-partition analytic
+charts, including every junction, with
+                 ||Psi-id||_C1<=epsilon^(11/400-o(1)).   (5)
+This is where the local-minimizer routing property is used. It is not
+available here for an arbitrary measurable near competitor.
+
+3. EXACT COMPACT REDUCTION
+The dual/reduction note cuts off these charts in a constant-width annulus,
+obtaining global compactly supported C1-small ambient diffeomorphisms.
+Their partitions agree with the original pair on the physical B_(R-3).
+The discarded Gaussian mass is
+ t_R=gamma(|x|>R-3)=epsilon^(21/10-o(1))=o(epsilon^2).
+Three fixed compact facet flows restore exact matching masses; a uniform
+finite-dimensional implicit-function theorem gives parameters O(t_R).
+
+Call the resulting pair(P,Q). It has
+ J(P,Q)=J(A,H)+O(t_R),
+ max{d(P,C),d(Q,C)}=epsilon+O(t_R)>=epsilon/2,            (6)
+and is a pair of compact ambient deformations with support radius at
+most R+O(1), C1 size eta=epsilon^(11/400-o(1)). Its bulk rotation-gauge
+defect zeta satisfies
+                        zeta=O((R+1)t_R)=o(epsilon^2).  (7)
+Every polynomial in R times sqrt(eta) tends to0. The constant-width
+changes of support radius leave these asymptotic statements unchanged.
+
+4. MOVING JUNCTIONS AND ACTUAL SIGNED INTERACTIONS
+The independently checked source is
+MOVING_JUNCTION_FORMAL_SLAB_CAP_DECOMPOSITION_20261101.txt,
+SHA2569644fcc891358161920ed1d0e4476b1ee0b9cf4a72dcc359fc0256e405bd1d59.
+It constructs the normal graph of each entire deformed tie plane, then
+restricts it to the original facet. If its height is h_e, use the exact
+normal-mass coordinate p_e=psi(h_e), psi(t)=int_0^t exp(-s^2/2)ds;
+define q similarly and E=D(p)+D(q).
+
+Formal slabs may overlap. The source does not mistake their sum for an
+actual partition. The actual-minus-formal defect is supported near
+triple rays or the vertex. Its support follows from the explicit score
+criterion: projection to facet(i,j) is eligible precisely when the
+midpoint of scores i,j exceeds the other scores. A mismatch requires
+three near-tied scores. Lipschitz control then localizes it to tubes with
+radius bounded by the incident graph heights on the triple ray, or a
+vertex ball controlled by the heights at0.
+
+Cap shadows on actual reference facets satisfy
+ D(shadow)<=C(R+1)eta D(p),
+ ||cap||_1<=C(R+1)eta sqrt(D(p)).                         (8)
+The weighted cubic and quadratic edge traces, and quartic and cubic
+vertex estimates, are proved in WEIGHTED_JUNCTION_TRACE_LEMMAS_20261101.txt.
+They differentiate the Gaussian/diagonal weight and do not use an
+exponentially small minimum density on B_R.
+
+Crucially, signed cap interactions are dominated by a POSITIVE kernel
+with coefficient2 on all36 ordered pairs of facets. Its normalized HS
+norm is a fixed finite constant, using the accepted global denominator
+envelope. This handles labels different from those of the shadow facet;
+no unjustified signed-incidence cancellation is used. Equations(8) give
+total cap-cross errors at most C sqrt((R+1)eta)E.
+
+Reference routing on a cap carries an extra distance factor, giving
+C(R+1)eta E. Formal routing is at least D(p)/2 by the exact all-height
+reflection inequality. Formal cross interaction equals K(p,q) plus a
+relative O((R+1)eta)E remainder. The explicit off-plane derivative proof
+is POSITIVE_EXTENDED_DIAGONAL_AND_RELATIVE_POTENTIAL_DERIVATIVES_20261101.txt:
+the positive extension D_e of d_e has -I/8<=Hess log D_e<=0 and represents
+the potential difference by an exact positive one-dimensional integral.
+It also justifies the rotation-test derivative estimates without D2Phi.
+
+5. APPROXIMATE CONSTRAINTS RETAIN THE QUADRATIC GAP
+The actual common masses are exactly matched, so cap masses are the
+entire error in the formal linear mass constraint:
+ |M(p-q)|<=C(R+1)eta sqrt(E).
+The mass representer Gram is4V0 I on label space1-perp, with fixed V0>0.
+Thus the forbidden mass projection of b=(p-q)/2 is o(sqrt(E)).
+
+The bulk gauge, using label differences of rotation tests on the caps,
+gives for a=(p+q)/2
+ ||P_rot a||_D<=C(R+1)^2 eta sqrt(E)+C zeta.              (9)
+The exact rotation eigenvalue is-1. If g=P_G b and r=P_rot a, the accepted
+operator spectrum and gaps give the independent assembly estimate
+
+ Q(p,q):=E/2+K(p,q)
+ >=(4/25)E-(3/8)||r||^2
+                -2sqrt2||g||sqrt(E)-(58/25)||g||^2.       (10)
+
+This follows by splitting b into ker M and its orthogonal complement;
+||I-A||<=2. Rotation cross terms vanish exactly. In particular both
+projection norms<=sqrt(E)/100 imply Q>=E/8. Full details are in
+ROBUST_QUADRATIC_COERCIVITY_UNDER_APPROXIMATE_CONSTRAINTS_20261101.txt.
+
+Combining these facts gives the audited finite-change estimate
+
+ J(P,Q)-S>=[4/25-C(R+1)^2sqrt(eta)]E-C zeta^2.            (11)
+
+The accepted V0<1 and the cap-volume estimate also give
+ d(P,C)<=6sqrt(D(p)), d(Q,C)<=6sqrt(D(q)).
+By(6), therefore,
+                           E>=epsilon^2/144.            (12)
+This is the common energy that controls the errors; no unweighted or
+unrelated displacement norm is substituted at this stage.
+
+6. FINAL COMPARISON AND ISOLATION
+For sufficiently small epsilon, the coefficient in(11) is at least3/25.
+By(7),(12), C zeta^2<=E/100 after decreasing the threshold again. Thus
+ J(P,Q)-S>=E/10>=epsilon^2/1440.
+The objective cutoff error O(t_R)=o(epsilon^2) in(6) can be made at most
+epsilon^2/2880. Consequently
+ J(A,H)-S>=epsilon^2/2880
+          >=dist(A,H)^2/2880>=dist(A,H)^2/10000.
+This proves(2), with a universal sufficiently small neighborhood.
+Competitive local minimizers and global minimizers then have zero
+distance, proving the stated common-orthogonal-image conclusion.
+
+7. AUDIT STATUS AND THE NEXT EXTENSION
+This assembly independently checked the whole-plane graphs, midpoint
+score combinatorics, nearest-facet shadow cover, all-facet positive-kernel
+domination, exact formal-mass error, rotation projection, and the energy
+versus tail comparison. covariance_adversarial_cleanroom independently
+confirmed the geometric and extended-diagonal derivative steps as well.
+These are internal AI-agent reviews; external mathematical review remains
+appropriate. The underlying floating-point/Arb certificate retains its
+already documented computational premises and frozen acceptance receipt.
+
+A concrete extension toward arbitrary near competitors is a selection
+principle: from a hypothetical sequence with J<S and dist->0, produce
+competitive Gaussian-L1 local minimizers also approaching the orbit.
+That implication has NOT been established. Minimizing inside a small L1
+ball can put the minimizer on its boundary and introduce an additional
+distance multiplier, so it cannot simply reuse(4).
+
+Two fixed-mass best responses give a possible smoothing start: each
+replacement lowers J and preserves common masses. Against a rule tending
+to C, any such response also tends to C, by the strictly positive
+reference routing gap away from the tie set. But two replacements do
+not make the pair mutually optimal, and repeated responses need not stay
+in a quantitatively controlled shrinking neighborhood. Nor do two steps
+alone supply the growing-core/tail rate relative to their final distance.
+Those are precise remaining requirements for this route, not assumed
+consequences of the present theorem.

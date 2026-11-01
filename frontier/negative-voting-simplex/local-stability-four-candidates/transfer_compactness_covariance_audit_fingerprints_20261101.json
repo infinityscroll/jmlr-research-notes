@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-11-01T15:54:44.049937+00:00",
+  "audit": "TRANSFER_COMPACTNESS_AND_FRACTIONAL_ALL_DIMENSION_INDEPENDENT_AUDIT_20261101.txt",
+  "audit_sha256": "d7e8c5cc26c11bd7f831703e15a230ca15ba58fb8c6204ad41033294fd17fedc",
+  "audited_source_sha256": {
+    "ARBITRARY_MEASURABLE_LOCAL_STABILITY_VIA_TRANSFER_COMPACTNESS_R3_20261101.txt": "dafe546180f0e467ef39b2ef2db75dab6c4b65e9f2ff0220eef04fdf1eb4d4ec",
+    "ARBITRARY_MEASURABLE_LOCAL_STABILITY_ALL_FINITE_DIMENSIONS_SUCCESSOR_20261101.txt": "992bc8a2f1d92afd7fe6e702b5e2292f0d0ed76486e5f22b7ae674d88cf4ee0a",
+    "THEOREM_AND_PROOF_ACCEPTED_20261101.txt": "72b9952b32df019adbcb40e4cc49747a31402813bcbd7e5e862d461ae1e5406f",
+    "GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt": "1b395c81a1ce6eb332b18402b0d08eb08e1fa8ebd0f3262ddd9d7ffbd7d70601",
+    "POSITIVE_EXTENDED_DIAGONAL_AND_RELATIVE_POTENTIAL_DERIVATIVES_20261101.txt": "46d6fd50caffdb31584fcf028b3cd5f32e81d6f46d0fbfedbc0cfc0619c1f3c7",
+    "FINITE_DIMENSIONAL_ROTATION_GAUGE_AND_CUTOFF_DEFECT_20261101.txt": "22da2f184ca10cfc70c3dde9915bac27a9e43d7f61eb4787d87e59810f2b427c",
+    "covariance_frozen_certificate_audit_receipt.json": "1191fb40c1c62fbd77be9e210d8ba0ee400431d8636a3e591755de99a9b42a8e"
+  },
+  "verdict": "Accepted internal independent audit within documented certificate premises",
+  "new_analytic_steps": [
+    "bad wedge inverse-cost integrability",
+    "fixed positive Hilbert-Schmidt majorants",
+    "weak normalized bad transfers",
+    "arbitrary normal-fiber bathtub compression",
+    "global good rotation weak-moment estimate",
+    "sequential uniform neighborhood",
+    "finite-dimensional Gaussian tensor extension"
+  ],
+  "direct_fractional_corollary": "Section 10 of the audit; measurable simplex-valued rules, matching arbitrary common masses, every fixed finite N>=3",
+  "exact_arithmetic": {
+    "fixed_delta": "1/16777216",
+    "good_shift_error_over_L": "1/32",
+    "liminf_gain_over_L": "231/800",
+    "eventual_gain_over_L": "1/4",
+    "uniform_local_gap_coefficient": "1/1000"
+  },
+  "limits": [
+    "unknown neighborhood radius",
+    "radius may depend on N",
+    "not global optimality",
+    "not external refereeing or novelty verification",
+    "inherits documented finite arithmetic certificate premises"
+  ],
+  "originals_changed": false,
+  "heavy_computation_rerun": false
+}

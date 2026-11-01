@@ -1,0 +1,172 @@
+INDEPENDENT AUDIT OF THE FINITE-CHANGE NORMAL-GRAPH ROUTE
+1 November 2026. covariance_adversarial_cleanroom.
+New audit source. No frozen theorem, implementation, or master file changed.
+
+AUDITED SOURCES
+
+FINITE_CHANGE_COMPACT_NORMAL_GRAPH_BASIN_20261101.txt, lines1-416.
+ALL_HEIGHT_GAUSSIAN_SLAB_ROUTING_20261101.txt, lines1-61.
+The accepted Hessian inputs and their frozen execution are as recorded in
+covariance_frozen_certificate_audit_receipt.json.
+
+VERDICT
+
+The compact three-dimensional normal-graph theorem is valid with its stated
+geometric hypotheses, exact common masses, and explicit radius-dependent
+height threshold. It is an actual finite-change bound for measurable graph
+heights. The all-height routing improvement is also valid. The interaction
+estimate controls the actual noise-weighted slabs, not a centroid surrogate.
+
+A dimension-free extension is valid, but its positive-kernel operator must
+not be confused with spectral modulus, and an ungauged compact extension
+must include mixed rotation modes in its angle constant. Both points were
+raised during the audit and communicated to the author before the
+all-dimensional extension. Its final Sections11-12 incorporate the correct
+operator convention, mixed-rotation angle, and global remainder. I read
+and checked those sections after they were saved. Details follow.
+
+1. GEOMETRY AND EXACT MASS COORDINATES
+
+The normal has the correct orientation. Positive u expands label i into j,
+so the signed indicator change is b_e=e_i-e_j on0<t<u. Negative u reverses
+both the signed height integral and the indicator change. The projection
+Jacobian is one, and x.n_e=0 gives the exact Gaussian factor exp(-t^2/2).
+Thus p=psi(u), psi(u)=int_0^u exp(-t^2/2)dt, is the true signed mass swept
+per unit surface Gaussian measure. The formula M(p-q)=0 at compact-source
+lines59-66 is EXACTLY equivalent to actual matching masses. No fixed common
+volume or balancing assumption has entered.
+
+The clearance hypothesis and epsilon<=a/3 ensure both adjacent labels stay
+strictly above the other two throughout each tube. Its unordered top-two
+label pair identifies its facet uniquely. Consequently different facet
+tubes cannot overlap; normal projection makes each individual tube
+injective. This also proves the pointwise tapered version
+|u_e(x)|<=a_e(x)/3 without a uniform clearance a.
+
+2. FINITE-CHANGE SIGNS AND FACTORS
+
+Expanding J(Theta+delta_f,Theta+delta_h) gives two linear routing terms and
+ONE mixed term. The correct finite leading form is
+
+ .5D(p)+.5D(q)+K(p,q)
+ =(D+K)((p+q)/2)+(D-K)((p-q)/2).
+
+This is half the paired Hessian evaluated on(p,q). Compact-source
+lines124-134 and160-178 use the correct factor. The oriented double
+integrals include every sign combination of u and v. Taking their absolute
+values gives |p| and |q| after the mass-coordinate substitution; it does not
+discard a negative contribution without estimating it.
+
+3. ALL-HEIGHT ROUTING: INDEPENDENT CHECK
+
+For rho=-r and a tie-plane point x, reflection gives
+
+ G(x+t n)=2exp[-r^2t^2/(2sigma^2)]
+          *int_Ci k(x,y)sinh[r t(-n.y)/sigma^2]d gamma(y).
+
+Since C_i lies in n.y<=0, sinh(z)>=z for t>=0 yields
+G(x+t n)>=d(x)t exp[-r^2t^2/(2sigma^2)]. Multiplication by exp(-t^2/2)
+and integration gives d(x)sigma^2[1-exp(-u^2/(2sigma^2))].
+
+For u>=0, psi(u)^2 is the integral of exp(-(s^2+t^2)/2) over the square
+[0,u]^2. Its equal-area quarter disk has radius2u/sqrt(pi) and integral
+(pi/2)[1-exp(-2u^2/pi)]. Moving area from outside that disk into missing
+area inside proves the upper bound directly. Finally
+(1-exp(-az))/a=int_0^z exp(-at)dt decreases in a. Therefore sigma^2>=pi/4
+implies L_x(u)>=d(x)psi(u)^2/2. Oddness of G gives evenness of L_x and
+settles negative u. The condition holds at sigma^2=8/9. Root's routing
+source lines24-50 has no missing sign, variance factor, or small-height
+restriction. The geometric disjointness condition remains separate.
+
+4. DISPLACED KERNEL AND ABSORPTION
+
+The exact logarithmic ratio is
+
+ -(t^2+s^2)/16-(3/8)[t n_e.y+s n_f.x+ts n_e.n_f].
+
+On base points of radius<=R, its absolute value is bounded by
+eta=3R epsilon/4+epsilon^2/2. The normalized kernel obtained by replacing
+b_e.b_f with |b_e.b_f| has the same Hilbert-Schmidt square H; hence its
+operator norm is <=sqrt(H)<6. This is a pointwise absolute-kernel operator,
+not spectral modulus. The error bound at compact-source lines146-153,
+
+ |cross-K(p,q)|<=(sqrt(H)/2)(exp(eta)-1)[D(p)+D(q)],
+
+is valid. With epsilon<=min(a/3,1,c/[9(R+1)]), c<=4/25, one has
+epsilon<=1/[2(R+1)], eta<=3(R+1)epsilon/4<1/2, and exp(eta)-1<=2eta.
+The adverse coefficient is therefore <=(9/2)(R+1)epsilon<=c/2.
+This checks the explicit finite-change absorption at lines237-256.
+
+5. COMPACT ROTATION ANGLE
+
+The lower curvature bound and origin constants give
+d_e(x)>=d0 exp[-kappa|x|-|x|^2/16]. The upper bound
+d_e<=1/(2sqrt(pi)) follows directly from the Mehler derivative estimate.
+For intrinsic rotations, tetrahedral symmetry makes the total and radial-
+tail Gram matrices scalar. Their trace integrand is d_e|x|^2. Restricting
+the numerator to[R,R+1] and using integral_0^infinity r^3 exp(-r^2/2)dr=2
+gives exactly
+
+ beta_R=d0 sqrt(pi) R^3 exp[-9(R+1)^2/16-kappa(R+1)].
+
+Every unit rotation has outside energy at least beta_R. A speed supported
+inside radius R consequently has squared rotation projection at most
+1-beta_R times its squared norm. The common-channel lower bound is
+(3beta_R/8)D(p_+), while the contrast lower bound is(8/25)D(p_-).
+This gives c_R=min(3beta_R/16,4/25), including the factor from half-sums.
+Compact-source lines198-231 are correct in the stated three dimensions.
+
+For N>3, there are also mixed rotations T_3 tensor linear extra-coordinate
+functions. Their base-facet speeds are homogeneous of degree zero, not one.
+The relevant denominator radial integral is now
+integral_0^infinity r exp(-r^2/2)dr=1. A valid tail fraction is
+
+ beta_T,R=2d0 sqrt(pi) R exp[-9(R+1)^2/16-kappa(R+1)].
+
+Intrinsic and mixed blocks are orthogonal even after radial restriction,
+because their extra-coordinate Hermite degrees differ. Therefore a valid
+ungauged all-N compact constant uses
+
+ beta_N,R=d0 sqrt(pi) min(R^3,2R)
+                     *exp[-9(R+1)^2/16-kappa(R+1)].
+
+Using the intrinsic R^3 bound alone for all N would omit a real mode. This
+correction does not affect the three-dimensional theorem or the exact-gauge
+version. It also avoids any unnecessary dimension factor.
+
+6. ALL-N KERNEL FACTORIZATION AND A STRONGER SUCCESSOR
+
+If the slab displacements use only the three-dimensional facet normals,
+the extra-coordinate Mehler kernel is unchanged. The positive-kernel
+operator factors as A_3^# tensor T_-1/3^(N-3), and ||T_-1/3||=1.
+Thus the compact interaction estimate is dimension-free when R bounds the
+first three coordinates. The equation would be false for spectral modulus:
+|T_-1/3| in that sense is T_1/3. The superscript# convention is essential.
+
+The Gaussian envelope also removes the compact radius entirely in the
+exact rotation gauge. A separate new source proves
+
+ ||C_3^#||^2<52900134912<2^36,
+ |cross-K(p,q)|<=2^17 epsilon[D(p)+D(q)], epsilon<=1,
+
+with a positive-kernel multiplier W exp(W), W=3(|x0|+|y0|)/8+1/2.
+Tensoring with the extra-coordinate noise operator preserves this bound.
+Consequently epsilon<=1/1638400 gives actual deficit at least
+(2/25)[D(p)+D(q)] for arbitrary measurable graphs satisfying the pointwise
+junction taper, exact matching masses, and exact common-rotation gauge.
+
+See GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt and
+certify_global_slab_remainder_rational_20261101.py. The latter checks the
+new constants with Fraction arithmetic. The radial agent independently
+checked the Gaussian-envelope calculation during this audit.
+
+7. HONEST IMPLICATION GAP
+
+These results prove nonlinear inequalities on specified graph classes.
+They do not show that an arbitrary near-reference pair has one crossing
+per normal fiber, that its junctions remain fixed, that it admits the exact
+rotation gauge within this class, or that every competitive pair is close
+to a tetrahedral orbit. The common-mass box alone supplies none of those
+geometric conclusions. The compact source's final limitations are accurate;
+the new Gaussian-envelope estimate resolves its unbounded-radius kernel
+issue only under the additional exact gauge and graph hypotheses.

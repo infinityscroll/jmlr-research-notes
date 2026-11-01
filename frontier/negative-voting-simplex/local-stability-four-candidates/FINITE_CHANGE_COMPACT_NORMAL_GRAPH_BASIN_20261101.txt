@@ -1,0 +1,416 @@
+FINITE-CHANGE BASIN FOR PAIRED TETRAHEDRAL NORMAL GRAPHS
+1 November 2026. Successor to the certified all-boundary-speed local bound.
+
+RESULT AND LIMIT
+
+This note proves a quantified finite-change inequality, including an
+explicit nonlinear remainder, for normal-graph modifications of the
+tetrahedral partition in compact facet tubes away from junctions. Actual
+matching masses are imposed, not just their linearization. No smoothness
+of the graph heights is required beyond measurability and boundedness.
+
+The proof uses the previously certified operator gap and the exact
+Gaussian mass coordinate of a swept slab. Its key improvement is that
+the routing losses dominate their quadratic model exactly. The only
+adverse remainder comes from the displaced cross kernel.
+
+This is a genuine basin result for the specified graph class. It does
+not reduce arbitrary measurable competitors, or all possible global
+minimizers, to that class. Section 10 isolates that remaining gap.
+
+1. NOTATION AND TUBES
+
+Work first in R3 at rho=-1/3. Let Theta be the regular tetrahedral
+partition with sites y_i=(+/-1,+/-1,+/-1)/2, sign product positive.
+For e=(i,j), i<j, put b_e=e_i-e_j and n_e=(y_j-y_i)/sqrt(2), the
+outward unit normal from cell i towards j. Let Sigma_e be its facet.
+Set lambda_e=(2pi)^(-3/2)exp(-|x|^2/2)dH^2(x) on Sigma_e.
+
+Fix R>=1 and a>0. Choose measurable facet patches K_e such that
+
+  |x|<=R,
+  (y_i-y_k).x/sqrt(2)>=a for every k outside {i,j}.
+
+Choose measurable heights u_e,v_e supported in K_e, with
+max(|u_e|,|v_e|)<=epsilon<=a/3. The corresponding normal tubes are
+disjoint and meet only the two adjacent reference cells. Indeed, other
+normalized score gaps decrease by at most epsilon under a displacement
+epsilon, while overlap with an adjacent facet tube would force a second
+such gap to have absolute value at most epsilon. Since a>2epsilon this
+is impossible. Tubes of opposite facets cannot overlap while each has
+only its own two labels as possible maximizers.
+
+For positive u_e, change label j to i on 0<t<u_e(x), where the point
+is x+t n_e. For negative u_e, change label i to j on u_e(x)<t<0.
+Do the same with v to form a second partition. Denote them f_u,h_v.
+These are genuine partitions because the tubes do not overlap.
+The requested positive-noise pair is (f_u,reflection(h_v)); reflection
+preserves masses and turns its agreement into
+
+  J(f_u,h_v)=sum_i <(f_u)_i,T_-1/3(h_v)_i>.
+
+2. EXACT SLAB MASS COORDINATE
+
+Put
+
+  psi(t)=integral_0^t exp(-s^2/2)ds,
+  p_e(x)=psi(u_e(x)), q_e(x)=psi(v_e(x)).                   (2.1)
+
+Because the reference facet passes through the origin,
+gamma3(x+t n_e)=gamma3(x)exp(-t^2/2). Therefore
+
+  E(f_u-Theta)=sum_e b_e integral p_e d lambda_e=M p,
+  E(h_v-Theta)=M q.                                       (2.2)
+
+Actual common masses are exactly equivalent to M(p-q)=0. No Taylor
+remainder in the constraint, and no correction multiplier, is needed.
+The variables p,q belong to the full weighted boundary Hilbert space.
+
+Write D(p)=sum_e integral d_e p_e^2 d lambda_e, with the ACTUAL positive
+normal derivative d_e of G_i-G_j, G_i=T_-1/3 1_Theta_i. Let K be the
+signed boundary bilinear form with kernel
+
+  k(x,y)=(9/8)^(3/2)
+          exp[-(|x|^2+|y|^2)/16-(3/8)x.y].                 (2.3)
+
+The previously certified facts used below are
+
+  H:=||D^(-1/2)K D^(-1/2)||_HS^2<30+3/8<36,
+  D+K >=(3/8)D on the complement of common rotations,
+  D-K >=(8/25)D on ker M.                                 (2.4)
+
+The rotation space and projections here use the D inner product. Pure
+translations have not been incorrectly deleted from ker M; their actual
+constraint angle was included in the certificate leading to (2.4).
+
+3. EXACT ROUTING LOWER BOUND
+
+The routing loss of one graph is exactly
+
+  L(u)=sum_e integral d lambda_e(x)
+       integral_0^{u_e(x)} exp(-t^2/2)g_e(x,t)dt,
+  g_e(x,t)=(G_i-G_j)(x+t n_e).                            (3.1)
+
+Reflection in the facet exchanges cells i,j, so g_e is odd in t. For
+t>=0, the reflected Gaussian formula and sinh(z)>=z give
+
+  g_e(x,t)>=d_e(x)t exp(-t^2/16).
+
+Consequently, with sigma^2=8/9,
+
+  L_e(x,u)>=d_e(x)sigma^2[1-exp(-u^2/(2sigma^2))].          (3.2)
+
+The following elementary comparison upgrades this to all heights.
+The integral psi(u)^2 is the integral of exp(-(s^2+t^2)/2) over the
+square [0,u]^2. Among sets of the same area in the positive quadrant,
+the quarter disk centered at the origin maximizes this decreasing
+radial integral. Its radius is 2u/sqrt(pi), hence
+
+  psi(u)^2<=(pi/2)[1-exp(-2u^2/pi)].
+
+For fixed u, c -> c[1-exp(-u^2/(2c))] is increasing. Since sigma^2=8/9
+is greater than pi/4, (3.2) implies
+
+  L(u)>=D(p)/2,       L(v)>=D(q)/2.                       (3.3)
+
+Negative heights follow by oddness. This bound has NO routing-error
+term and no small-height restriction. The independent routing audit
+first established it for |u|<=1; the all-height quarter-disk comparison
+was supplied and checked by root. It does not require an unproved
+global Gaussian partition inequality. The standalone root source is
+ALL_HEIGHT_GAUSSIAN_SLAB_ROUTING_20261101.txt.
+
+4. EXACT DISPLACED CROSS TERM AND ITS REMAINDER
+
+The exact finite deficit is
+
+  J(f_u,h_v)-J(Theta,Theta)=L(u)+L(v)+B(f_u-Theta,h_v-Theta).
+
+In the cross term, change each normal variable from t to z=psi(t).
+Its density factor exp(-t^2/2)dt becomes dz exactly. If tau=psi^(-1),
+the e,f kernel contribution is
+
+  (b_e.b_f) integral d lambda_e(x)d lambda_f(y)
+     integral_0^{p_e(x)} integral_0^{q_f(y)}
+       k(x+tau(z)n_e,y+tau(w)n_f) dw dz.                  (4.1)
+
+For every integration point |tau(z)|,|tau(w)|<=epsilon. The exact
+logarithmic kernel ratio is
+
+  -(t^2+s^2)/16
+  -(3/8)[t n_e.y+s n_f.x+ts n_e.n_f].
+
+Since |x|,|y|<=R, its absolute value is at most
+
+  eta_R(epsilon)=(3/4)R epsilon+epsilon^2/2.                (4.2)
+
+Define A# to mean the operator obtained by taking the POINTWISE absolute
+value of the incidence-weighted normalized kernel. This is not a spectral
+modulus. Its Hilbert-Schmidt square is also H, so ||A#||<=sqrt(H)<6.
+Taking absolute values in (4.1) and applying its operator norm gives
+
+  |cross-K(p,q)|
+    <=(exp(eta_R)-1)sqrt(H) sqrt(D(p)D(q))
+    <=[sqrt(H)/2][exp(eta_R)-1][D(p)+D(q)].                (4.3)
+
+This controls the actual kernel remainder by the same energy appearing
+in the certified Hessian. It is not an inference from positivity of the
+Hessian alone. All orientations of positive and negative slabs are
+included by the signed integrals in (4.1).
+
+5. MASTER FINITE-CHANGE INEQUALITY
+
+Use half-sum variables
+
+  p_+=(p+q)/2, p_-=(p-q)/2.
+
+Then M p_-=0, D(p)+D(q)=2[D(p_+)+D(p_-)], and
+
+  D(p)/2+D(q)/2+K(p,q)
+       =(D+K)(p_+)+(D-K)(p_-).
+
+Combining (3.3), (4.3), and (2.4) proves
+
+  J(f_u,h_v)-J(Theta,Theta)
+   >=(3/8)D((I-P_rot)p_+)+(8/25)D(p_-)
+       -E_R(epsilon)[D(p)+D(q)],                         (5.1)
+
+  E_R(epsilon)=[sqrt(H)/2]
+                    [exp((3/4)R epsilon+epsilon^2/2)-1].
+
+Equation (5.1) is a quantified finite-change statement under ACTUAL
+matching masses. It holds for bounded measurable graph heights, not
+only differentiable one-parameter families.
+
+6. REMOVING THE COMMON ROTATION DEGENERACY
+
+There are two valid options. They must not be conflated.
+
+Option A: impose the exact graph-coordinate gauge P_rot p_+=0. Then the
+positive part of (5.1) is at least c[D(p)+D(q)] with c=4/25. This gauge
+is an explicit additional condition; it is not silently inferred from
+some informal choice of orientation.
+
+Option B: use compact support, requiring no rotation gauge. All p_+
+vanish outside intrinsic radius R, whereas every nonzero rotation field
+has positive D energy outside that radius. This yields an explicit
+angle gap as follows.
+
+Let L=acos(-1/3),
+  d0=L/(2pi^(3/2)), kappa=sqrt(2pi/3)/(4L).
+At the facet origin d=d0 and grad log d=(-kappa,0) in the bisector frame.
+The proved lower curvature bound Hess log d>=-I/8 gives
+
+  d_e(x)>=d0 exp[-kappa|x|-|x|^2/16].                     (6.1)
+
+Also d_e<=1/(2sqrt(pi)) by the elementary first derivative bound for the
+Mehler smoothing of a function with absolute value at most one.
+
+Rotations have speeds omega.(x cross n_e). Tetrahedral symmetry makes
+their total and outside-radius-R Gram matrices scalar. Taking traces,
+their outside fraction is the ratio
+
+  integral_{Sigma_e,|x|>R} d_e|x|^2d lambda_e
+       /integral_{Sigma_e}d_e|x|^2d lambda_e.
+
+Use (6.1) on the radial annulus [R,R+1]. The numerator is at least
+s d0 R^3 exp[-9(R+1)^2/16-kappa(R+1)], where
+s=L/(2pi)^(3/2). The denominator is at most s/sqrt(pi).
+Therefore a valid lower bound on that fraction is
+
+  beta_R=d0 sqrt(pi) R^3
+                   exp[-9(R+1)^2/16-kappa(R+1)]>0.        (6.2)
+
+For any speed supported in the radius-R facet patches,
+
+  D((I-P_rot)p_+)>=beta_R D(p_+).
+
+This is the standard projection-angle inequality obtained by restricting
+the rotation Gram to the complement of the support. Hence the positive
+part of (5.1) is at least c_R[D(p)+D(q)], where
+
+  c_R=min(3 beta_R/16,4/25)>0.                            (6.3)
+
+The compact-support argument proves a basin without an extra gauge.
+Its constants deliberately deteriorate with R; this deterioration cannot
+be erased when attempting a global conclusion.
+
+7. AN EXPLICIT BASIN THEOREM
+
+Choose c=c_R for the gauge-free compact class, or c=4/25 under Option A.
+If actual masses match and
+
+  epsilon <= min{a/3, 1, c/[9(R+1)]},                    (7.1)
+
+then
+
+  J(f_u,h_v)-J(Theta,Theta)
+                  >=(c/2)[D(p)+D(q)].                    (7.2)
+
+Proof of the numerical absorption. Since c<=4/25, condition (7.1)
+implies epsilon<=1/[2(R+1)]. Thus eta_R<=3(R+1)epsilon/4<1/2 and
+exp(eta_R)-1<=2eta_R. Since sqrt(H)<6,
+
+  E_R(epsilon)<= (9/2)(R+1)epsilon<=c/2.
+
+Insert this into (5.1). This supplies the missing finite-change
+remainder control explicitly.
+
+Because |psi(u)|>=exp(-epsilon^2/2)|u|,
+the right side of (7.2) is also at least
+(c/2)exp(-epsilon^2)[D(u)+D(v)]. Equality in this basin requires u=v=0
+as weighted speed functions, hence the partitions coincide with the
+reference up to null sets.
+
+There is also a weaker disagreement-measure consequence. If d_A,d_H
+are the Gaussian measures on which the two labels differ from Theta,
+then d_A=sum_e integral |p_e|d lambda_e and similarly for q. Put
+d_R=d0 exp[-kappa R-R^2/16]. Since the total facet measure is 6s,
+
+  J(f_u,h_v)-J(Theta,Theta)
+                   >= c d_R(d_A^2+d_H^2)/(12s).            (7.3)
+
+8. AN EXECUTABLE NONVACUOUS EXAMPLE
+
+The separate Arb script finite_graph_basin_constants.py checks example
+constants at R=3 and normalized junction clearance a=1/10. It verifies
+beta_R>0.00047506828 and c_R>0.00008907530. Heights at most 2e-6 satisfy
+the gauge-free theorem; the finite energy-gap coefficient is larger
+than 0.00004453765. Under the exact common-rotation gauge, heights at
+most 1/250 satisfy the theorem, with coefficient c/2=2/25.
+
+The exact analytic formulas, rather than rounded example decimals,
+define the theorem. The script uses interval comparisons and saves its
+receipt next to this source. These small radii are sufficient explicit
+choices, not claims of an optimal basin size.
+
+9. RELATION TO THE EXACT COMMON-MASS BOX
+
+COMMON_MASS_BOX_RATIONAL_CERTIFICATE_20261101.txt proves that a pair
+with agreement no greater than the tetrahedral value must have
+1/8<p_i<3/8. The graph basin is compatible with that exact localization:
+each label has three incident facets, so
+
+  |E(f_u)_i-1/4|<=3s epsilon,
+
+and likewise for h_v. Condition (7.1) is much smaller than the height
+needed to leave the certified mass box. No balance assumption was added;
+the common masses may vary inside it.
+
+The mass box by itself does not imply that interfaces are graphs, that
+the pair is close to a tetrahedral orbit, or that changes avoid junctions
+and tails. Thus it is a valid global restriction, not a replacement for
+the geometric hypotheses of this basin theorem.
+
+10. PRECISE REMAINING OBSTRUCTION TO A GLOBAL PROOF
+
+To settle arbitrary measurable competitors, one must still prove a
+reduction that pays for changes outside this graph class. Three concrete
+issues remain:
+
+  * Near triple lines and the central vertex, legitimate cell deformations
+    move junctions together. Independent facet slabs overlap there; the
+    exact partition construction used above no longer applies. A compatible
+    ambient deformation or a quantified junction-cutoff argument is needed.
+
+  * In Gaussian tails, |x| is unbounded and the uniform displaced-kernel
+    ratio in (4.2) has no fixed R. The gauge-free rotation angle beta_R
+    also tends to zero. Truncation creates cross terms and matching-mass
+    corrections; their cost cannot be discarded just because tail volume
+    is small.
+
+  * Arbitrary measurable partitions can have multiple normal crossings or
+    fine interlacing, and the mass box supplies no closeness to the reference
+    orbit. Stationarity/regularity of a putative minimizing pair may yield
+    local graphs, but a proof must establish that reduction and control all
+    excluded regions. The local Hessian and this basin do not do so alone.
+
+This successor therefore advances an actual finite-change step while
+leaving the global implication gap explicit. No publication, outreach,
+or master-state edit was made.
+
+11. A STRONGER NONCOMPACT GRAPH RESULT IN THE EXACT GAUGE
+
+The independent successor
+GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt
+removes the radial cutoff when the exact rotation gauge is assumed.
+Its constants and proof were independently checked in this task.
+
+Let a_e(x) be the normalized other-label clearance at each facet point.
+Suppose the measurable heights satisfy
+
+  |u_e(x)|,|v_e(x)|<=min{epsilon,a_e(x)/3}
+
+everywhere, actual matching masses, and P_rot(p+q)=0. Pointwise clearance
+taper still makes the tubes disjoint. For an alleged overlap of adjacent
+tubes, the two projected distances t,s would have to satisfy both
+|s|>=2|t| and |t|>=2|s|; the only exceptional boundary point has zero
+height and is irrelevant to the slab measures.
+
+For epsilon<=1, the logarithmic kernel remainder is at most
+epsilon W(r,s), W=3(r+s)/8+1/2. The existing global HS envelope absorbs
+W^2 exp(2W). The exact rational bounds J0<128, J2<2048 for the resulting
+Gaussian radial integrals give a positive remainder-kernel norm below
+2^18. Consequently
+
+  |cross-K(p,q)|<=2^17 epsilon[D(p)+D(q)].
+
+This proves the explicit all-radius graph inequality
+
+  deficit>=[4/25-2^17 epsilon][D(p)+D(q)].
+
+In particular epsilon<=1/(25*2^16)=1/1638400 gives the lower bound
+(2/25)[D(p)+D(q)]. No unproved inference from an infinitesimal Hessian
+is used; the remainder is integrated globally with a Gaussian envelope.
+
+The exact gauge and the junction taper remain hypotheses. Neither this
+note nor the cited successor asserts that arbitrary competitive pairs
+can be put into this class while preserving the hypotheses. In
+particular a general ambient diffeomorphism moves triple junctions;
+the fixed-junction normal-slab representation does not cover it.
+
+12. DIMENSION-FREE CYLINDRICAL EXTENSION
+
+The compact theorem also extends to a cylindrical tetrahedron in every
+finite N>=3. Heights may depend measurably on the extra coordinates,
+while their intrinsic three-dimensional base point remains in the
+radius-R patches and satisfies the same intrinsic clearance. Use the
+actual all-N rotation projection and common-mass map.
+
+The normalized boundary operator factors as A_N=A_3 tensor T_-1/3 on
+the extra Gaussian coordinates. The proved all-N local gaps retain
+3/8 in the common channel off rotations and 8/25 in the mass-zero
+contrast channel. Equivalently this follows by Hermite degree: extra
+degree0 is the proved 3D operator; degree1 turns the translation
+eigenvalue3 into the mixed-rotation eigenvalue-1; every remaining new
+channel lies strictly inside the already used gap bounds.
+
+For the finite-change remainder, use the POINTWISE nonnegative kernel
+operator A#, not a spectral modulus. It factors as
+A#_N=A#_3 tensor T_-1/3, and its operator norm is at most sqrt(H3)<6.
+Thus the compact cross estimate (4.3) has no dimension factor. The
+all-radius remainder operator in Section 11 factors in the same way.
+Using an N-dimensional Hilbert-Schmidt norm instead would introduce
+an unnecessary and harmful dimension dependence.
+
+Without an imposed rotation gauge, the all-N rotation space includes
+both intrinsic rotations and mixed rotations proportional to a
+translation speed times an extra Gaussian coordinate. The latter have
+radial D energy proportional to integral d_e d lambda_e instead of
+integral d_e|x|^2d lambda_e. The same annulus argument gives their tail
+fraction at least
+
+  2d0 sqrt(pi) R exp[-9(R+1)^2/16-kappa(R+1)].
+
+The intrinsic and mixed sectors are orthogonal in the extra Gaussian
+variables, including after a cutoff on intrinsic radius. Hence a valid
+uniform tail-angle bound for ALL ambient rotation modes is
+
+  beta_R,N=d0 sqrt(pi) min(R^3,2R)
+                     exp[-9(R+1)^2/16-kappa(R+1)].
+
+Replace beta_R in (6.3) by beta_R,N. The same explicit height condition
+(7.1) and finite-change inequality (7.2) then hold, with constants
+independent of N. This is still a theorem about the specified normal
+graphs; it does not supply a global dimension-reduction or graph-
+reduction theorem for arbitrary measurable competitors.

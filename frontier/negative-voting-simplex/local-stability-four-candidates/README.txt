@@ -1,19 +1,30 @@
-TETRAHEDRAL GAUSSIAN NOISE: STRICT SECOND VARIATION IN EVERY FINITE DIMENSION
+TETRAHEDRAL GAUSSIAN NOISE: LOCAL STABILITY IN EVERY FIXED FINITE DIMENSION
 1 November 2026
 
-Read THEOREM_AND_PROOF_ACCEPTED_20261101.txt first.
+Read NONLINEAR_LOCAL_THEOREM_READING_GUIDE_20261101.txt first, followed by
+the R3 arbitrary-measurable proof and the all-finite-dimensions successor.
 
-For every finite N>=3, the paired tetrahedral partition at correlation1/3
-has a coercive second variation under label-by-label matching masses.
-The common mass vector may vary. On the full finite-energy boundary-speed
-space, the Hessian is at least8/25 times squared distance from simultaneous
-rotation speeds. These rotations are its entire neutral space, of dimension
-3N-6. The equivalent reflected formulation uses correlation-1/3.
+For every fixed finite N>=3, arbitrary measurable four-label paired
+partitions sufficiently close to the cylindrical tetrahedral orbit obey
 
-This is a computer-assisted second-variation theorem. It does not prove
-global tetrahedral optimality, the four-label Standard Simplex conjecture,
-a uniform nonlinear neighborhood theorem, or sharp MAX-4-CUT hardness.
-It is independent of the separate large-alphabet proof candidate.
+ J_-1/3(P,Q)-J_-1/3(C,C)>=d_orb(P,Q)^2/1000.
+
+The two partitions have exactly matching label masses; their common mass
+vector may vary. The distance uses one common orthogonal transformation.
+No smoothness, normal-graph, stationarity or minimizer premise is imposed.
+Reflection of the second rule gives the positive-correlation1/3 version
+near opposite tetrahedral partitions.
+
+The coefficient is universal, but the neighborhood may depend on N and
+its numerical radius is not supplied. This is local stability. Global
+four-label Standard Simplex optimality and sharp MAX-4-CUT hardness are
+not proved. The result is independent of the large-alphabet candidate.
+
+The proof uses the accepted all-speed Hessian gap8/25 modulo all3N-6
+common rotation modes, then compresses nearby label transfers into normal
+mass coordinates. Compact weighted operators control the remaining
+transfers. This analytic step upgrades the second variation to a finite
+L1 neighborhood for arbitrary measurable competitors.
 
 The computational input is a rigorous enclosure of the complete boundary
 operator, using Arb, exact polynomial cubature, proved curvature and tail
@@ -32,9 +43,11 @@ Use Python3.12 with the repository's requirements.txt:
   python -m pip install -r requirements.txt
   python frontier/negative-voting-simplex/local-stability-four-candidates/verify.py
 
-The wrapper checks source integrity, reruns four exact arithmetic checks,
+The wrapper checks source integrity, reruns eight finite arithmetic checks,
 then recomputes the full moment certificate in a temporary directory. It
-asserts the precise interval inequalities used by the8/25 theorem. Saved
+asserts the precise interval inequalities used by the8/25 Hessian theorem.
+The compactness and nonlinear analytic proofs are separately audited, not
+formally verified by running these scripts. Saved
 research results are not overwritten. No remote compute is used.
 
 PROVENANCE
@@ -49,3 +62,10 @@ Some retained notes describe earlier exploratory scans or local environment
 commands. Those are provenance, not prerequisites for the portable verifier.
 No private correspondence, third-party articles, or installed dependencies
 are redistributed.
+
+FINAL NONLINEAR REVIEW
+TRANSFER_COMPACTNESS_AND_FRACTIONAL_ALL_DIMENSION_INDEPENDENT_AUDIT_20261101.txt
+pins and independently checks the corrected pure R3 and all-dimension
+proofs. Its Section10 also proves the fractional-assignment extension.
+FRACTIONAL_REFLECTION_NOTATION_20261101.txt clarifies that reflection of
+an assignment means theta(-x), not a negative probability vector.

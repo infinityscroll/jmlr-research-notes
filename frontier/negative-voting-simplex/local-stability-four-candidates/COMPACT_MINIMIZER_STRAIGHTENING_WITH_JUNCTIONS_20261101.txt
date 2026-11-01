@@ -1,0 +1,241 @@
+QUANTITATIVE COMPACT STRAIGHTENING OF NEAR-TETRAHEDRAL PAIRED MINIMIZERS
+2026-11-01. Successor note; existing theorem and certificate files preserved.
+
+RESULT AND LIMIT
+This note proves a compact regularity lemma, including the triple junctions
+and the four-way vertex. A sufficiently close matched-mass paired global
+minimizer in R^3 is, on every fixed smaller ball, an analytic diffeomorphic
+deformation of the entire regular tetrahedral partition. Explicit Gaussian
+measure-to-C1 constants and a bound on the common-mass multipliers are given.
+This is stronger than regularity only away from junctions. It does NOT yet
+prove that every sufficiently close global minimizer is regular: a uniform
+tail/nonlinear argument is still missing. The certified Hessian gap alone
+does not supply that argument.
+
+1. SETUP AND A SPECIFIC WEIGHTED MEASURE METRIC
+Use the tetrahedral rows Y_i=(+/-1,+/-1,+/-1)/2 with positive sign product,
+Y^T Y=I_3, and C_i={Y_i.x=max_j Y_j.x}. Put rho=-1/3.
+Reflect the second positive-correlation rule, so the reference pair is(C,C)
+and the objective is sum_i <1_Ai,T_rho1_Hi>. Assume gamma(A_i)=gamma(H_i).
+
+For two labelled pairs define the Gaussian-weighted measure distance
+ d_gamma((A,H),(C,C))
+   =max{sum_i gamma(A_i symmetric_difference C_i),
+         sum_i gamma(H_i symmetric_difference C_i)} = epsilon.          (1)
+A common rotation may first be chosen to align the reference. The lemma
+uses the resulting value of (1); it does not demand a preferred orientation.
+All claims below concern R^3. A lift to arbitrary-dimensional minimizers
+would separately require the applicable paired dimension-reduction theorem
+and control of alignment of their active three-dimensional subspace.
+
+2. ROUTING CONDITIONS WITH OPPOSITE MULTIPLIERS
+A global paired minimizer admits a vector lambda in R^4, sum_i lambda_i=0,
+such that, almost everywhere,
+ A_i={x: U_i(x)+lambda_i=min_j(U_j(x)+lambda_j)},
+ H_i={x: V_i(x)-lambda_i=min_j(V_j(x)-lambda_j)},           (2)
+with possible measurable tie-breaking, where
+ U_i=T_rho1_Hi, V_i=T_rho1_Ai.
+
+Justification of the coupled sign and a single multiplier vector:
+first regard assignments as simplex-valued. Pure and relaxed infima agree:
+with one rule fixed, finite-dimensional nonatomic vector-measure splitting
+purifies the other rule while preserving its label masses and the current
+linear objective; then purify the second rule. A pure global minimizer is
+therefore also a relaxed global minimizer. The derivative along every
+feasible segment is nonnegative, so(A,H) minimizes the linearized objective
+sum_i int f_i U_i+g_i V_i subject to Ef=Eg. The set of attainable mass
+differences and linear objectives is convex and compact. Its mass-difference
+projection contains a neighborhood of0 in1-perp, using constant assignments
+near(1/4,...,1/4). A supporting hyperplane at the minimum therefore has a
+finite mass multiplier lambda. Pointwise minimization gives (2), with
+opposite signs because the constraint is Ef-Eg=0. This argument does not
+incorrectly assume that the bilinear objective itself is convex.
+
+The associated dual objective is
+ int min_i(U_i+lambda_i)+int min_i(V_i-lambda_i).
+Since0<=U_i,V_i<=1, it is at most2-(max lambda-min lambda), which also
+shows coercivity in the normalized multiplier space. No arbitrary separate
+constants for the two partitions are imported into (2).
+
+For completeness, the purification step needs only a finite-constraint
+extreme-point argument. The simplex-valued rules with specified label
+masses and specified current linear objective form a nonempty weakly
+compact convex subset of L2. If an extreme point had two coordinates
+bounded away from0 on a positive-measure set, split that set into enough
+positive-measure pieces. A nonzero linear combination of their signed
+two-label transfers annihilates the finitely many constraints. Scaling
+it gives two distinct feasible rules averaging to the original, a
+contradiction. Hence an extreme point is pure. This avoids any claim
+that a general bilinear minimum must itself occur at an extreme point.
+
+3. EXPLICIT SMOOTHING BOUNDS
+Let K_rho(x,y) denote the kernel relative to Gaussian measure. Direct
+Gaussian integration gives, for |x|<=R,
+ ||K_rho(x,.)||_L2(gamma)<=C_R,
+ C_R=(81/80)^(3/4) exp(R^2/20).                           (3)
+Under the probability measure proportional to K_rho(x,y)^2 gamma(dy),
+y has mean-3x/5 and covariance(4/5)I. The first kernel derivative is
+(-3y/8-x/8)K, whose multiplier has mean x/10 and covariance(9/80)I.
+Consequently, for unit directions a,b,
+ ||partial_a K||_2<=C_R B1_R,
+ ||partial_a partial_b K||_2<=C_R B2_R,
+ B1_R=sqrt(R^2/100+9/80),
+ B2_R=(R/10+3^(1/4)*3/sqrt80)^2+1/8.                    (4)
+The second inequality follows from the fourth Gaussian moment and
+partial_ab K=[Z_a Z_b-(a.b)/8]K, with Z=-3y/8-x/8.
+
+For F_P(x)=-Y^T(T_rho1_Pi(x))_i and F0=F_C, (1),(3),(4) imply
+ sup_(B_R)|F_P-F0|<=C_R sqrt(epsilon),
+ sup_(B_R)||D F_P-D F0||<=C_R B1_R sqrt(epsilon).          (5)
+Indeed sum_i||1_Pi-1_Ci||_2^2<=epsilon and ||Y^T||op=1.
+Also ||D^2 F0||<=L_R:=C_R B2_R on B_R. These estimates follow from
+Gaussian kernel integrals; they do not presume any boundary regularity of P.
+The smoothed potentials are real analytic.
+
+4. A QUANTITATIVE MULTIPLIER BOUND FROM OCCUPIED THIN PRISMS
+For every pair i,j, the point x_ij=Y_i+Y_j is the unit facet bisector.
+Take the radius1/4 tangential disk about x_ij, and normal thickness
+t in[-a,-a/2] for C_i or[a/2,a] for C_j, with0<a<=1/4.
+These prisms lie respectively inside C_i,C_j, involve no other label,
+and are contained in B_(3/2). Each has Gaussian measure at least c*a, where
+                 c=exp(-9/8)/(64 sqrt(2pi)).              (6)
+This uses tangential area pi/16, thickness a/2, and the minimum Gaussian
+density on B_(3/2). The reference score gaps to the other two labels
+remain at least1/2 throughout each prism.
+
+Assume0<epsilon<c/8 and choose a=2epsilon/c<1/4. Each prism has measure
+at least2epsilon, so it contains a positive-measure portion of the
+corresponding A_i or A_j. Apply its routing inequality in (2).
+The reference potential difference vanishes on the tie plane and has
+gradient norm at most D_*=1/(2sqrt(pi)), by the Gaussian derivative
+formula for a function taking values in[-1,1]. Its size in these prisms
+is at most D_*a. The perturbed difference differs by at most
+C_(3/2)sqrt(2epsilon), from (3). Using both sides gives, for every i,j,
+
+ |lambda_i-lambda_j|<=Delta(epsilon),
+ Delta(epsilon)=epsilon/(c sqrt(pi))+C_(3/2)sqrt(2epsilon). (7)
+
+With sum lambda_i=0, this implies ||lambda||_2<=2Delta(epsilon).
+The epsilon=0 case follows by a limit or directly from (2).
+Thus the free common masses do not leave an uncontrolled order-one
+multiplier in the compact perturbation problem.
+
+5. A GLOBAL REFERENCE PROBABILITY MAP WITH POSITIVE DERIVATIVE
+Let c_*=1/(2sqrt2) and a_i(x)=-c_*Y_i.x. The vector
+G(x)=(T_rho1_Ci(x))_i is the choice-probability vector for independent
+standard Gaussian utilities Z_i+a_i(x). The common Gaussian component
+in the score representation cancels from all comparisons.
+
+The derivative of the choice probabilities with respect to their means
+is the Laplacian W(a) of the complete four-vertex graph. Its edge weights are
+ w_ij(a)=int phi(t-a_i)phi(t-a_j) product_(k!=i,j)Phi(t-a_k)dt>0.
+The diagonal entries are sums of incident weights and the off-diagonal
+entries are -w_ij. Therefore
+                  D F0(x)=c_* Y^T W(a(x))Y.              (8)
+This matrix is symmetric positive definite at every finite x.
+
+For an explicit lower bound on B_R, let A_R=sqrt(3/32)*R. On[-1,1],
+each Gaussian product is at least(2pi)^(-1)exp[-(1+A_R)^2], and
+Phi(-1-A_R)>=phi(2+A_R). Thus
+ w_ij>=omega_R=(1/(2pi^2))exp[-(1+A_R)^2-(2+A_R)^2].
+Since sum_(i<j)((Y_i-Y_j).v)^2=4|v|^2, (8) gives
+                  D F0>=ell_R I,
+                  ell_R=sqrt2*omega_R>0 on B_R.          (9)
+The constants are intentionally coarse but fully explicit.
+
+The map F0 preserves the labels of C. To see this, hold all other means
+fixed and vary a_i-a_j symmetrically about its midpoint. The derivative
+of G_i-G_j is one half of(e_i-e_j)^T W(e_i-e_j), strictly positive;
+it vanishes when a_i=a_j by exchange symmetry. Hence G_i-G_j has the
+sign of a_i-a_j, opposite to(Y_i-Y_j).x. Finally
+ Y_i.F0=-G_i+1/4. Therefore F0 maps each C_i, and each of its labelled
+faces and junctions, into the same labelled cone arrangement.
+
+6. COMPACT STRAIGHTENING LEMMA, INCLUDING EVERY JUNCTION
+Fix R>0 and0<r<R/2. Define
+ eta0=C_R sqrt(epsilon)+2Delta(epsilon),
+ eta1=C_R B1_R sqrt(epsilon).
+Assume
+ epsilon<c/8, eta1<ell_R/2, eta0<ell_R*r/2.               (10)
+Set
+ F_A=-Y^T(U+lambda), F_H=-Y^T(V-lambda).
+Each map differs from F0 by at most eta0 in value and eta1 in derivative
+on B_R. Its derivative's symmetric part is at least ell_R/2, so it is
+strongly monotone and injective on that ball, with invertible derivative.
+
+For x in B_(R-r), the equation F_A(z)=F0(x) has a unique solution z in B_R.
+Existence follows by degree: on the boundary of B_R, for every homotopy
+F_t=F0+t(F_A-F0),
+ (F_t(z)-F0(x)).(z-x)>=ell_R|z-x|^2-eta0|z-x|>0.
+The target is never met on the boundary, and the reference map has degree1
+there. Strong monotonicity gives uniqueness. Define
+             Psi_A=F_A^(-1) composed_with F0,
+and similarly Psi_H. They are analytic diffeomorphisms onto their images.
+Equations (2) and the label-preservation property of F0 give, up to null sets,
+ Psi_A(C_i intersect B_(R-r))=A_i intersect Psi_A(B_(R-r)),
+ Psi_H(C_i intersect B_(R-r))=H_i intersect Psi_H(B_(R-r)). (11)
+One can take canonical closed routing cells in the images; the tie strata
+have measure zero because the potential map is a local diffeomorphism.
+
+The quantitative bounds are
+ ||Psi_A-id||_infinity, ||Psi_H-id||_infinity <=eta0/ell_R,
+ ||D Psi_A-I||, ||D Psi_H-I||
+        <=(2/ell_R)[eta1+L_R*eta0/ell_R].                 (12)
+For the displacement bound use strong monotonicity of F0 and
+F_A(Psi_A(x))=F0(x). For the derivative bound differentiate this identity,
+use ||D F_A^(-1)||<=2/ell_R, and use the Lipschitz bound L_R for D F0.
+The images contain B_(R-2r); the same boundary-degree argument applied to
+F0 on B_(R-r) proves this inclusion.
+
+This is the promised compact lemma. It straightens the entire partition,
+including all triple lines and its single four-way vertex in the smaller
+ball. It does not merely describe regular points of individual interfaces.
+If the second bound in (12) is less than1/2, every compact facet patch away
+from a junction is, after its tangential reparametrization, a unique normal
+graph. The height is bounded by eta0/ell_R and its slope by beta/(1-beta),
+where beta is the derivative bound in (12), on the projected patch.
+This supplies the input to a compact normal-graph remainder estimate.
+
+An executable check of these deliberately conservative constants is in
+certify_compact_straightening_constants_20261101.py. At R=2, r=1/2,
+epsilon<=10^-30, Arb verifies (10), displacement<10^-8 and derivative
+error<10^-3. More precise enclosed bounds are about7.654e-10 and1.750e-4,
+respectively. The straightened images cover B_1. This finite example
+certifies the stated constants, not the existence of a close minimizer.
+
+7. WHAT PRIMARY REGULARITY ALREADY PROVIDES
+Heilman, Hyperstable Sets with Voting and Algorithmic Hardness Applications,
+https://arxiv.org/html/2209.11216v1, Lemmas7.4-7.5, gives local finite surface
+area, locally finite smooth boundary decomposition, and potential level-set
+conditions for paired minimizers. Theorem7.9 is a paired dimension reduction.
+Those statements do not provide a quantitative near-reference normal-graph
+radius, a global graph at infinity, or the uniform nonlinear remainder
+needed here. Equations (5)-(12) give a direct quantitative compact result
+under the stated Gaussian-measure closeness. No positive-maximizer or
+hyperstability assumption is used in this derivation.
+
+8. PRECISE REMAINING GAP TO ISOLATION OF GLOBAL MINIMIZERS
+The certified Hessian gap applies to the full weighted boundary space.
+The radial agent's finite-change estimate applies to bounded normal heights
+supported in compact patches away from junctions. Lemma(11) now supplies
+compatible analytic deformations across compact junctions for minimizers.
+It does not yet give the global remainder estimate needed to combine these
+facts. The constants C_R grow and ell_R tends to zero as R grows; no fixed
+epsilon in (10) controls the whole space.
+
+Two tasks remain genuinely open in this route:
+ (i) a nonlinear estimate for the compatible moving-junction charts, or a
+     controlled cutoff reduction to the existing compact patch estimate;
+ (ii) a tail/no-concentration lemma for stationary global minimizers that
+      makes the remainder negligible relative to the global D-energy.
+Small Gaussian symmetric difference alone cannot supply (ii). For example,
+swapping two labels only outside a distant ball gives matched pairs with
+distance tending to zero and extra far-away interfaces. These examples are
+NOT asserted stationary or minimizing; they identify where minimization
+must supply additional information rather than being silently replaced
+by a global normal-graph assumption.
+
+Accordingly this note does not conclude that a sufficiently close global
+minimizer is regular, nor that the global four-label endpoint is solved.
+It isolates and proves the compact regularity/junction step needed for
+that attempted implication, with explicit hypotheses and estimates.

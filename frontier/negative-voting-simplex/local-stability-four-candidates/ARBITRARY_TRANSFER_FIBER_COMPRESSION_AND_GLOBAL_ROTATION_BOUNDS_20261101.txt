@@ -1,0 +1,326 @@
+ARBITRARY TRANSFERS: NORMAL-FIBER COMPRESSION AND GLOBAL ROTATION BOUNDS
+2026-11-01. New successor source; frozen graph/cap sources are unchanged.
+radial_coercivity_cleanroom. Independent audit requested.
+
+RESULT AND SCOPE
+
+At rho=-1/3 in R3, arbitrary measurable partition changes can be split
+into good transfers, which project to a reference facet and have normal
+distance below delta, and bad transfers. No boundary regularity is used.
+The good transfers compress to signed facet masses p and absolute masses
+a with
+
+                 D(p)<=2L_good, D(a)<=4L_good.           (A)
+
+The good-good interaction differs from K(p,q) by at most
+
+                    2^19 delta L_total.                 (B)
+
+For each unit rotation direction, its actual good-transfer bulk moment
+differs from the boundary moment -D(p,r_Omega) by at most
+
+                    2^20 delta sqrt(L_good).            (C)
+
+The estimate(C) is global in the facet radius. It does not require
+delta|x| to be small. Bad-transfer mass and rotation moments are
+o(sqrt(L_total)) along any sequence converging to C in Gaussian L1,
+for each FIXED delta>0. A concrete rate O_delta(epsilon^(1/6)) is proved
+below after division by sqrt(L_total).
+
+This source does not assert that bad cross interactions are o(L_total).
+That is the separate reciprocal-cost Hilbert-Schmidt compactness step.
+It also does not infer a global optimum from a local result.
+
+1. ROUTING COST AND GOOD/BAD TRANSFERS
+
+Use the accepted sites Y_i, cells C_i, facet normals n_(ij), measures
+d lambda_e=(2pi)^(-3/2)exp(-|y|^2/2)dH2(y), diagonal d_e, and boundary
+forms D,K,M. Put G_i=T_-1/3 1_Ci.
+
+For an arbitrary measurable partition P, let a_ij=1_(Ci intersect Pj)
+for i!=j. Its routing cost is
+
+ L(P)=sum_(i!=j) int a_ij(x)[G_j(x)-G_i(x)]d gamma(x)
+     =<1_P-1_C,T 1_C>.                                  (1.1)
+
+Every summand is nonnegative and is strictly positive off the reference
+tie plane whenever a_ij=1. Also L(P)<=.5 sum_i gamma(P_i symmetric C_i),
+since each cost is at most1. Thus L(P)->0 under L1 convergence, and a
+nonzero change has positive routing cost.
+
+Fix 0<delta<=1. For the pair{i,j}, write x=y+t n_e with y=P_e x on the
+entire tie plane. A transfer is good if y belongs to the ORIGINAL facet
+Sigma_e and |t|<delta. Every other transfer is bad. These definitions
+refer to the source and destination labels of the actual transfer.
+They give an exact vector decomposition
+
+           1_P-1_C=f_good+f_bad.                         (1.2)
+
+The full good/bad supports can be arbitrary measurable sets.
+
+2. STRICT MONOTONICITY ON EVERY NORMAL FIBER
+
+Fix y on a tie plane. Set g_e(t)=(G_i-G_j)(y+t n_e), with n_e pointing
+from C_i to C_j. Reflection gives oddness. Moreover g_e is strictly
+increasing, even when y lies outside the actual facet.
+
+One direct proof uses independent Gaussian utilities. The vector Y_i.Z
+has the law of N_i-mean(N), with independent standard normal N_i; the
+common mean does not change the winning label. At y+t n_e, utility i has
+mean slope +1/(3sqrt2), utility j slope -1/(3sqrt2), and the other two
+means are fixed. The winning event for i increases pointwise as t grows;
+the winning event for j decreases. Nondegenerate Gaussian differences
+give strict probability changes on every nonzero interval. Hence
+g_e(t)>0 for t>0 and g_e(t)<0 for t<0.
+
+For y in Sigma_e, every positive normal point belongs to reference C_j
+and every negative normal point belongs to reference C_i: the two tied
+scores at the base dominate all other scores, and the maximum of these
+two increases under either normal displacement.
+
+3. EXACT NORMAL-FIBER COMPRESSION
+
+For each y in Sigma_e, let E_+(y) subset(0,delta) be the good transfer
+set C_j->P_i, and E_-(y) subset(-delta,0) the good transfer set C_i->P_j.
+Define
+
+ q_+(y)=int_E+ exp(-t^2/2)dt,
+ q_-(y)=int_E- exp(-t^2/2)dt,
+ p_e=q_+-q_-,  a_e=q_++q_-.                              (3.1)
+
+Both q values are nonnegative and at most psi(delta), where
+psi(t)=int_0^t exp(-s^2/2)ds. These are exact Gaussian normal masses;
+there is no hidden factor of sqrt(2pi), because lambda_e already uses
+the three-dimensional Gaussian density.
+
+Pass to z=psi(t). The increasing integrand g_e(psi^(-1)(z)) has smallest
+integral over a set of z-measure q when that set is[0,q]. This follows
+directly by moving any mass above q into any missing portion below q.
+Apply it separately to E_+ and the reflection of E_-. The all-height
+Gaussian slab routing theorem gives
+
+ L_e(y)>=int_0^(psi^-1(q+)) g_e(t)exp(-t^2/2)dt
+         +int_0^(psi^-1(q-)) g_e(t)exp(-t^2/2)dt
+        >=.5d_e(y)[q_+^2+q_-^2].                         (3.2)
+
+The cited all-height statement is
+ALL_HEIGHT_GAUSSIAN_SLAB_ROUTING_20261101.txt. It is a one-dimensional
+reflection/rearrangement inequality, not a global partition theorem.
+
+Since(q_+-q_-)^2<=q_+^2+q_-^2 and(q_++q_-)^2<=2(q_+^2+q_-^2),
+integration proves exactly
+
+                       D(p)<=2L_good,
+                       D(a)<=4L_good.                   (3.3)
+
+The good transfer mass vector is exactly Mp. In particular this
+compression preserves the good signed mass; it does not discard the
+opposite-direction transfer cancellation on a fiber.
+
+4. GLOBAL GOOD-GOOD KERNEL REMAINDER
+
+For two partitions let p,q be their signed compressed masses and a,b
+their absolute compressed masses. The exact good-good interaction is
+the signed fourfold integral of the shifted Mehler kernel. Replacing
+that kernel by its value at the two facet bases gives EXACTLY K(p,q).
+
+For |t|,|s|<=delta<=1,
+ |log[k(x+tn_e,y+sn_f)/k(x,y)]|
+ <=delta W(|x|,|y|), W(r,s)=3(r+s)/8+1/2,
+ |ratio-1|<=delta W exp(W).                              (4.1)
+
+The global positive remainder operator with kernel
+|b_e.b_f|k W exp(W)/sqrt(d_e d_f) has norm below2^18, as proved in
+GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt.
+That proof is a pointwise kernel bound and applies to arbitrary signed
+normal measures, not only intervals or graph slabs. Taking absolute
+values of the normal integrals produces exactly a_e and b_f.
+
+Thus
+ |<f_good,T h_good>-K(p,q)|
+ <=2^18 delta sqrt(D(a)D(b))
+ <=2^20 delta sqrt(L_good(P)L_good(Q))
+ <=2^19 delta[L(P)+L(Q)].                               (4.2)
+
+This controls the actual nonlinear interaction without a radial cutoff.
+
+5. GLOBAL RELATIVE DERIVATIVE ENVELOPE
+
+For a pair e=(i,j), define the positive extended diagonal
+
+ D_e(z)=(3/4)int_Ci(-n_e.u)phi_sigma(u+z/3)du,
+ sigma^2=8/9.                                          (5.1)
+
+It equals d_e on the tie plane. The independently proved positive-
+extension source gives
+
+                    -I/8<=Hess log D_e<=0.               (5.2)
+
+At the origin the probability density proportional to(-n_e.u)phi_sigma
+on C_i has radial degree1. Its second radial moment is4sigma^2=32/9.
+Since grad log D_e(0)=-(3/8)E u, its norm is at most sqrt2/2<1.
+Therefore for r=|y| and |t|<=delta<=1, global concavity gives
+
+ D_e(y+ut n_e)<=d_e(y) exp[delta(1+r/8)], |u|<=1.         (5.3)
+
+Also, on these segments,
+ |grad D_e|<=2(1+r)D_e,
+ ||Hess D_e||op<=5(1+r)^2D_e.                            (5.4)
+
+Use the exact positive representation
+
+ g_e(t)=(t/2)int_-1^1 exp[(u^2-1)t^2/16]D_e(y+ut n_e)du.(5.5)
+
+Differentiate(5.5) in orthonormal tangent/normal coordinates. The
+exponential factor E satisfies |E'|<=E/8 and |E''|<=9E/64 for |t|<=1.
+Equations(5.3)-(5.4), with deliberately generous constants, give
+
+ |grad(G_i-G_j)(y+tn_e)|
+ <=8(1+r) exp[delta(1+r/8)]d_e(y),
+
+ ||Hess(G_i-G_j)(y+tn_e)||op
+ <=64(1+r)^2 exp[delta(1+r/8)]d_e(y).                    (5.6)
+
+For audit: before these generous norm bounds, the normal derivative is
+at most4(1+r), each tangent derivative at most2delta(1+r); the normal
+second derivative is at most11(1+r)^2, mixed entries at most8(1+r)^2,
+and tangent entries at most5delta(1+r)^2, times the common factor in(5.6).
+
+Let g_Omega,i(z)=-(Omega z).grad G_i(z), ||Omega||op<=1.
+At the facet its label difference is exactly -d_e r_Omega,e. Normal
+differentiation yields
+
+ partial_n(g_Omega,i-g_Omega,j)
+ =-(Omega n).grad(G_i-G_j)
+   -(Omega z).Hess(G_i-G_j)n.
+
+Consequently, for every facet radius r without restriction,
+
+ |partial_n(g_Omega,i-g_Omega,j)(y+tn_e)|
+ <=128(1+r)^3 exp[delta(1+r/8)]d_e(y).                   (5.7)
+
+The exponential exp(delta r/8) is retained. Dropping it by assuming
+delta r small would be an invalid tail argument.
+
+6. EXPLICIT GOOD-TRANSFER ROTATION ERROR
+
+By(5.7), the difference between a good-transfer bulk moment and its
+compressed boundary moment -D(p,r_Omega) is at most
+
+ 128delta sum_e int a_e d_e(1+r)^3 exp[delta(1+r/8)]d lambda_e.
+
+Weighted Cauchy bounds this by128delta sqrt(D(a)) B, where
+
+ B^2=sum_e int d_e(1+r)^6 exp[2delta(1+r/8)]d lambda_e.
+
+There is a uniform explicit bound B<2^12 for all delta<=1. Indeed use
+d_e<1/2, sector opening<4, (2pi)^(-3/2)<1, e^2<9, and
+r/4<=r^2/4+1/16. Then
+
+ B^2<216 int_0^infinity r(1+r)^6 exp(-r^2/4)dr
+    <=216*32[ int r exp(-r^2/4)dr+int r^7 exp(-r^2/4)dr]
+     =216*32*(2+768)=5,322,240<2^24.                    (6.1)
+
+Together with D(a)<=4L_good, this proves
+
+ |good bulk rotation moment+D(p,r_Omega)|
+ <=2^20delta sqrt(L_good).                              (6.2)
+
+For a pair, the combined error is at most2^21delta sqrt(L_total).
+The constants are independent of support, smoothness, and radial size.
+For general Omega, multiply by ||Omega||op.
+
+7. BAD MASS AND GAUGE MOMENTS: A RECIPROCAL-COST LEMMA
+
+This section concerns only mass/gauge moments, not bad cross interactions.
+For a source C_i and destination j, write x=y+t n_e; the source condition
+fixes the sign of t. In this paragraph orient n_e from the source C_i
+toward C_j; the resulting absolute-value bounds do not depend on this
+orientation choice. Let c_ij(x)=G_j-G_i>0 on the source interior.
+Reflection and sinh(a)>=a give, on the ENTIRE tie plane,
+
+ c_ij(x)>=d_e(y)|t|exp(-t^2/16).
+
+The lower curvature bound in(5.2), d_e(0)>1/8, and
+|grad log D_e(0)|<1 give
+
+ c_ij(x)>=(1/8)|t|exp[-|x|-|x|^2/16],
+ 1/c_ij(x)<=8|t|^(-1)exp[|x|+|x|^2/16].                (7.1)
+
+Fix delta>0 and restrict to the bad set B_delta,ij. For every fixed
+polynomial weight (1+|x|)^m,
+
+ 1_(B_delta,ij)(1+|x|)^m/c_ij(x) belongs to L^(3/2)(gamma). (7.2)
+
+To prove this, the part |t|>=delta has no local denominator singularity;
+the Gaussian exponent after taking power3/2 is -13|x|^2/32+O(|x|).
+For an ineligible projection with |t|<1, some other label k satisfies
+
+ 0<(Y_k-Y_i).y<=|t|/sqrt2.
+
+Its gradient within the tie plane has length sqrt(3/2). Thus y lies in
+one of two strips of width |t|/sqrt3. After integration in y, any fixed
+polynomial times the damped Gaussian is O(|t|), uniformly for |t|<1.
+The remaining singular integral is int_0^1 t^(1-3/2)dt<infinity.
+This proves(7.2). It also proves ordinary L1 integrability.
+
+The rotation test has the crude global bound
+ |g_Omega,j-g_Omega,i|<=C||Omega||op |x|,
+obtained by differentiating the Gaussian convolution of 1_Cj-1_Ci.
+Thus both 1/c_ij and |g_Omega,j-g_Omega,i|^2/c_ij have the integrability
+needed below on every fixed bad set.
+
+Let a sequence of partitions approach C with summed-label distance at
+most epsilon. Its changed support has Gaussian measure at most epsilon/2.
+Cauchy with routing cost, followed by Holder with exponent3/2, gives
+
+ int_bad a_ij d gamma
+ <=sqrt(L_bad,ij)[int_(bad changed support)1/c_ij d gamma]^(1/2)
+ <=C_delta epsilon^(1/6) sqrt(L_total),
+
+ |int_bad a_ij(g_Omega,j-g_Omega,i)d gamma|
+ <=C_delta ||Omega||op epsilon^(1/6) sqrt(L_total).       (7.3)
+
+Summing the finitely many transfers changes only C_delta. The constant
+may deteriorate as delta decreases; no uniform-in-delta little-o claim
+is made. First take epsilon->0 with delta FIXED.
+
+8. CONSTRAINT CONSEQUENCES AND THE TWO-LIMIT ORDER
+
+Suppose a pair P,Q has exact common masses and exact bulk common-rotation
+gauge, and converges to(C,C). Let L_total=L(P)+L(Q)>0. The compressed good
+masses satisfy
+
+ D(p)+D(q)<=2L_total,
+ |M(p-q)|<=C_delta epsilon^(1/6)sqrt(L_total),
+ |D(p+q,r_Omega)|
+ <=[2^21delta+C_delta epsilon^(1/6)]sqrt(L_total).        (8.1)
+
+The second line follows from exact actual matching and bad mass(7.3).
+The third follows from the exact bulk gauge, the good estimate(6.2), and
+the bad gauge estimate(7.3). Projection onto the finite-dimensional mass
+representer and rotation spaces uses their fixed positive Gram matrices.
+
+Thus, after normalization by sqrt(L_total), the contrast mass defect
+vanishes for fixed delta, and the common rotation defect is O(delta).
+The accepted boundary spectral theorem implies
+
+ K(p,q)>=-[17/25+C delta^2+o_delta(1)]L_total,            (8.2)
+
+where o_delta(1)->0 as epsilon->0 for fixed delta. One way to see the
+coefficient is that, with exact boundary constraints,
+.5[D(p)+D(q)]+K(p,q)>=(4/25)[D(p)+D(q)], so
+K>=-(17/50)[D(p)+D(q)]>=-(17/25)L_total.
+Perturbing the mass projection costs o_delta(L_total); the rotation
+eigenvalue is exactly-1, so its O(delta) projection contributes O(delta^2).
+
+Combined with(B), this leaves a strict margin against a competitive
+cross term at most -L_total, PROVIDED all interactions involving bad
+transfers are o_delta(L_total). That last statement is intentionally a
+separate input. If it holds, choose delta sufficiently small first, then
+epsilon sufficiently small depending on delta. Interchanging these two
+choices or silently asserting uniform bad compactness is unnecessary.
+
+This note proves compression, the global kernel-shift and rotation
+bounds, and bad mass/gauge integrability. It preserves the exact common-
+mass setting; no balanced-mass assumption has been inserted.

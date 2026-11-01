@@ -1,0 +1,276 @@
+ARBITRARY MEASURABLE LOCAL STABILITY VIA TRANSFER COMPACTNESS IN R3
+2026-11-01. New proof source; independent audit requested.
+Earlier geometric and minimizer-isolation sources are unchanged.
+
+THEOREM TO AUDIT
+Let C be the regular tetrahedral partition in R3 and rho=-1/3. There
+exists delta0>0 such that every pair of measurable four-way partitions
+P,Q with exactly matching Gaussian label masses and orbit distance
+
+ d_orb(P,Q)=inf_(O in O(3)) max{sum_i gamma(Pi triangle OCi),
+                               sum_i gamma(Qi triangle OCi)}<delta0
+
+satisfies
+ J(P,Q)-J(C,C)>=d_orb(P,Q)^2/1000.                       (T)
+Here J(P,Q)=sum_i<1_Pi,T_rho1_Qi>. The common masses are unrestricted.
+Equality at the reference value therefore requires a common orthogonal
+image of(C,C), up to null sets. Reflect Q for the correlation+1/3 version
+near(C,-C).
+
+This is local Gaussian-L1 stability for arbitrary measurable rules in R3.
+It assumes the accepted computational all-speed Hessian certificate and
+its documented arithmetic premises. It does not assert a numerical
+radius delta0 or global optimality. The proof below does NOT assume
+stationarity, normal-graph regularity, local minimality, or global
+minimality of P,Q. The transfer compactness argument replaces that step.
+
+1. FIXED REFERENCE DATA AND EXACT ROTATION GAUGE
+Use the accepted notation: facet Sigma_e, unit normal n_e from C_i to
+C_j, incidence b_e=e_i-e_j, Gaussian surface measure lambda_e,
+ G_i=T_rho1_Ci,
+ d_e=partial_n(G_i-G_j)>0 on its tie plane,
+ D(p)=sum_e int d_e p_e^2 d lambda_e,
+ K(p,q)=<p,Aq>_D.
+The accepted operator has spectrum in[-1,3], common gap3/8 off rotations,
+and contrast gap8/25 on ker M. Also
+ V0=int_(Sigma_e)d_e^(-1)d lambda_e<1,
+so sum_e int d_e^(-1)d lambda_e<6.
+
+It is enough to prove the theorem along every sequence approaching the
+common orthogonal orbit; uniform local constants then follow by the
+sequential characterization of a neighborhood. First align to a closest
+reference orientation. The finite-dimensional rotation-gauge lemma applies
+to ANY sufficiently close measurable pair: minimize locally
+ sum_i int(P_i+Q_i)T_rho1_(O C_i)dgamma over O near identity.
+Its reference rotational Hessian is2D(r_Omega)>0, and its first two
+derivatives are C2-close by Gaussian Cauchy--Schwarz. After the additional
+common rotation, P_n,Q_n tend to C in Gaussian L1 and obey EXACTLY
+
+ sum_i int(P_ni+Q_ni-2C_i)g_Omega,i dgamma=0,
+ g_Omega,i=-(Omega x).grad G_i.                          (1)
+
+The post-alignment distance epsilon_n tends to0 and is at least d_orb.
+All subsequent quantities refer to this aligned sequence. There is no
+cutoff of the partitions and therefore no discarded objective tail.
+
+2. ROUTING LOSS AND A GLOBAL LOWER BOUND FOR TRANSFER COST
+For an ordered transfer i->j, on C_i define
+ w_ij(z)=G_j(z)-G_i(z)>0, except on a null tie set.
+The strict inequality follows from the Gaussian utility ordering, or
+the reflection formula below. Put
+ L_P=sum_(i!=j)int_(Ci intersect Pj) w_ij dgamma,
+ L_Q similarly, L=L_P+L_Q.                               (2)
+These are exactly the two reference-routing terms in the bilinear
+expansion. They are nonnegative, tend to0 under L1 convergence, and
+L=0 precisely when P=Q=C almost everywhere.
+
+For e=(i,j), write z=y+t n_e, y perpendicular to n_e. The positive
+extension from the derivative addendum is
+ D_e(z)=(3/4)int_Ci(-n_e.u)phi_sigma(u+z/3)du,
+ sigma^2=8/9, D_e(y)=d_e(y) on the entire tie plane.
+Restrict the integral to a fixed angular subcone in the interior of C_i
+and radius(1+|z|)^(-1). The factor(-n.u) has degree1, so the volume
+integral is bounded below by a fixed positive constant times
+(1+|z|)^(-4). The other exponent terms are bounded on that subcone.
+Consequently, for all z,
+ D_e(z)>=c exp(-|z|^2/16)/(1+|z|)^4.                      (3)
+
+Reflection and sinh(a)>=a for a>=0 give
+ |G_i(y+tn)-G_j(y+tn)|>=D_e(y)|t|exp(-t^2/16).
+Thus on the source cell C_i,
+ w_ij(z)>=c |t| exp(-|z|^2/16)/(1+|z|)^4.                (4)
+This bound also holds when the projection y is outside the actual facet.
+That point is essential for the bad-transfer analysis.
+
+3. GOOD AND BAD TRANSFERS
+Fix once and for all
+                         delta=2^(-24).                 (5)
+A transfer between labels i,j is GOOD if |t|<delta and its orthogonal
+projection y belongs to Sigma_ij. All other transfers are BAD. The
+decomposition is made separately for P and Q. No disjoint-tube assumption
+is required: an actual changed point has only one source and one target.
+
+The bad source region B_ij is fixed independently of the sequence:
+ B_ij={z in Ci: |t_ij|>=delta or P_ij z notin Sigma_ij}.
+For every a>0 and finite exponent m,
+
+ int_(B_ij) (1+|z|)^m exp(-a|z|^2)/|t_ij(z)| dz<infinity. (6)
+
+Proof near the apparent singularity. The far part has1/|t|<=1/delta.
+If projection is ineligible, some k outside{i,j} has
+ r_k>(r_i+r_j)/2, where r_l=Y_l.z and r_i is maximal. In normalized
+gap coordinates u=(r_i-r_j)/sqrt2=|t_ij| and
+v=(r_i-r_k)/sqrt2, this gives0<=v<u/2. The two unit comparison normals
+have inner product1/2. In orthonormal transverse coordinates the allowed
+width is u/sqrt3. It cancels the1/u singularity. The remaining triple-line
+coordinate has a Gaussian integral. A finite union over k proves(6).
+
+4. BATHTUB COMPRESSION OF EACH GOOD NORMAL FIBER
+On a fixed facet base y, let E_+(y) be the measurable set of t in(0,delta)
+where the actual transfer is j->i, and E_-(y) the absolute negative
+normal coordinates where the transfer is i->j. Define
+ a_+=int_(E_+)exp(-t^2/2)dt,
+ a_-=int_(E_-)exp(-t^2/2)dt,
+ p=a_+-a_-, a=a_++a_-.                                  (7)
+Use p,a for P and q,b for Q. These functions are measurable; the normal
+Jacobian is exactly d lambda_e(y) exp(-t^2/2)dt.
+
+For0<t<delta the reference cost G_i(y+tn)-G_j(y+tn) is increasing. One
+direct proof differentiates its positive reflection integral:
+ alpha cosh(alpha t)-(t/8)sinh(alpha t)
+ >=alpha cosh(alpha t)(1-t^2/8)>0.
+For a prescribed Gaussian normal mass a_+ or a_-, the least routing cost
+is therefore the initial interval from0 having that mass. The exact
+all-height routing inequality then gives cost at least d_e a_+^2/2 or
+d_e a_-^2/2. This yields
+
+ D(p)<=2L_P, D(q)<=2L_Q,
+ D(a)<=4L_P, D(b)<=4L_Q.                                (8)
+
+The first inequalities use(a_+-a_-)^2<=a_+^2+a_-^2; the second use
+(a_++a_-)^2<=2(a_+^2+a_-^2). The exact good mass changes are Mp and Mq.
+This compression permits arbitrary measurable subsets in each fiber.
+
+5. COMPACT OPERATORS REMOVE ALL BAD INTERACTIONS
+For each bad transfer write its indicator as A_ij. Its normalized function
+ F_ij=A_ij sqrt(w_ij)/sqrt(L) belongs to L2(gamma), with squared norm
+equal to its fraction of the total routing loss. The finite vector F is
+bounded in L2. Its support has Gaussian measure tending to0, because the
+partitions tend to C. Thus F converges WEAKLY to0: against any L2 test,
+Cauchy--Schwarz on that shrinking support proves the assertion.
+
+The bad-bad normalized kernel is, up to fixed incidence constants,
+ k_rho(x,y)/sqrt(w_ij(x)w_kl(y)), on B_ij times B_kl.
+Using(4), its square with the Gaussian volume densities is bounded by
+ C(1+|x|)^4(1+|y|)^4 exp[-3(|x|^2+|y|^2)/16]
+                     /(|t_ij(x)||t_kl(y)|).              (9)
+Indeed the joint quadratic exponent before bounding x.y is
+-9(|x|^2+|y|^2)/16-3x.y/4. Equation(6) makes(9) integrable.
+The corresponding operator is Hilbert--Schmidt, hence compact.
+
+The mixed bad-boundary kernel
+ k_rho(x,y)/sqrt(w_ij(x)d_e(y)), y in Sigma_e,
+is Hilbert--Schmidt by the same calculation and the accepted global
+facet lower bound d_e(y)>=c exp(-|y|^2/16)/(1+|y|)^2.
+Actual good points are y+s n_e with |s|<=delta. Dominate their kernels by
+the positive shifted envelope exp[C(1+|x|+|y|)]k_rho(x,y).
+Its normalized square remains integrable: linear exponential factors
+do not defeat the Gaussian exponent in(9) or the integrable1/|t| factor.
+
+The normalized absolute good masses a/sqrt(L),b/sqrt(L) are bounded in
+the boundary D space by(8). Compactness applied to F weakly tending to0
+therefore gives, for ACTUAL signed measures,
+ bad-bad interaction=o(L),
+ bad-good and good-bad interactions=o(L).                (10)
+This argument uses a positive dominating kernel; it does not assume
+incidence cancellation, normal-graph regularity, or convergence of the
+compressed good masses.
+
+6. GOOD-GOOD INTERACTION
+The global normal-shift kernel estimate from
+GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt
+has positive normalized operator norm below2^18. Its pointwise proof
+applies equally to the measurable normal subsets in(7). Taking absolute
+normal masses gives
+ |actual good-good interaction-K(p,q)|
+ <=2^18 delta sqrt(D(a)D(b))
+ <=2^19 delta L=L/32.                                   (11)
+This is the sole fixed-delta error that must be made small. Equations
+(5),(11) leave a strict numerical margin below the certified8/25 gap.
+
+7. MASS AND ROTATION DEFECTS ARE o(sqrt(L))
+For mass,1_(B_ij)/sqrt(w_ij) belongs to L2(gamma), by(4),(6). Testing
+the weakly zero F against it gives bad label masses=o(sqrt(L)). Exact
+matching of the actual masses therefore implies
+                         M(p-q)=o(sqrt(L)).              (12)
+
+For rotation, the bad test(g_Omega,j-g_Omega,i)/sqrt(w_ij) is also L2
+on B_ij. Gaussian convolution bounds |grad G_i| by a fixed constant,
+so the numerator is at most C|x|. Equations(4),(6) again apply. Bad
+rotation moments are consequently o(sqrt(L)).
+
+The good rotation Taylor remainder needs a separate argument; a crude
+uniform C delta bound is not substituted for convergence. Define the
+nonnegative first normal moment on each good fiber by
+ c_e(y)=int_(E_+) t exp(-t^2/2)dt
+                 +int_(E_-) t exp(-t^2/2)dt.
+The two integrals are ADDED: E_- uses absolute negative coordinates,
+so the two positive-coordinate sets can overlap and must retain their
+separate multiplicities.
+Then c_e<=delta a_e and
+ D(c)<=4delta^2 L,
+ sum_e int d_e c_e d lambda_e<=exp(delta^2/16)L.          (13)
+The second inequality is the reflection lower bound for the routing cost.
+Thus c/sqrt(L) is bounded in the D Hilbert space and tends weakly to0:
+its pairings against compact bounded tests tend to0 by the second bound,
+and such tests are dense.
+
+The extended-diagonal identity and its global log-curvature imply, for
+all y on a facet and |t|<=1,
+ |partial_n(g_Omega,i-g_Omega,j)(y+tn)|<=d_e(y)F(|y|),
+ F(r)=C(1+r)^3 exp[C(1+r)].                              (14)
+To verify the global bound, compare D_e(y+utn) to d_e(y) using
+|grad log D_e(z)|<=C+|z|/8 in the exact positive integral representation,
+then differentiate twice. No condition r|t|<<1 is needed for(14).
+The function F belongs to the boundary D space: d_e is bounded on its
+facet and Gaussian surface measure integrates polynomial times linear
+exponentials.
+
+The absolute good Taylor remainder divided bysqrt(L) is bounded by
+<c/sqrt(L),F>_D, which tends to0. On the facet the exact test difference
+is -d_e r_Omega,e. Combining this fact, the bad estimates, and the exact
+bulk gauge(1), gives
+                     D(p+q,r_Omega)=o(sqrt(L)).          (15)
+The three rotation representers have a fixed positive Gram matrix.
+
+8. APPLY THE CERTIFIED QUADRATIC FORM WITH THESE DEFECTS
+Set E=D(p)+D(q)<=2L, a0=(p+q)/2, b0=(p-q)/2. Let
+r=P_rot a0 and g=P_G b0. The fixed mass Gram and(12) give
+||g||_D=o(sqrt(L)); the rotation Gram and(15) give the same bound for r.
+The robust quadratic estimate is
+ E/2+K(p,q)>=(4/25)E-(3/8)||r||^2
+                   -2sqrt2||g||sqrt(E)-(58/25)||g||^2
+             >=(4/25)E-o(L).                            (16)
+Notice that the defects are measured relative tosqrt(L), notsqrt(E).
+This is sufficient because E<=2L, even if cancellations make E very small.
+
+The bilinear expansion around C is exact. Its routing term is L.
+Using(10),(11),(16),
+ J(P,Q)-S>=L-E/2+(4/25)E-L/32-o(L)
+          >=(8/25-1/32)L-o(L).
+Since8/25-1/32=.28875>1/4, along every aligned nontrivial sequence,
+                         J(P,Q)-S>=L/4                  (17)
+eventually. There is no unestimated residual routing loss; the use of
+E<=2L retains it with its favorable sign.
+
+9. ROUTING LOSS DOMINATES THE L1 DISTANCE
+The actual good label-L1 distance for one rule is exactly
+2sum_e int a_e d lambda_e. By V0<1 and(8), it is at most
+                         4sqrt6 sqrt(L).
+The bad label-L1 distance is o(sqrt(L)), by the mass-test argument in
+Section7 applied to each nonnegative transfer. Therefore the maximum
+post-alignment distance epsilon satisfies
+ epsilon<10sqrt(L) eventually, since4sqrt6<10.
+Together with(17),
+ J(P,Q)-S>=epsilon^2/400>=d_orb(P,Q)^2/400.              (18)
+The weaker coefficient1/1000 in(T) follows uniformly in some sufficiently
+small neighborhood: otherwise a violating sequence with orbit distance
+tending to0 would contradict(18).
+
+10. INPUTS, SCOPE, AND AUDIT STATUS
+The computational input is the accepted H<30+3/8 and angle defect<11/400
+certificate, yielding the stated all-speed spectral gaps and V0<1.
+Analytic inputs are the global positive normal-shift operator bound,
+the positive extended diagonal, and the finite-dimensional rotation-gauge
+lemma. Their source files and independent receipts remain unchanged.
+
+The new points requiring independent audit are the transverse integrability
+calculation(6), Hilbert--Schmidt dominance(9)-(10), arbitrary-fiber bathtub
+compression, and the weak first-normal-moment argument(13)-(15). All are
+spelled out to avoid importing a regularity or selection principle.
+
+The theorem is presently stated only in R3. A separate tensor and rotation
+gauge argument would be needed to state it in every finite dimension;
+no dimension-independent neighborhood is claimed. Even if accepted, this
+is local stability. Excluding globally competitive pairs far from the
+tetrahedral orbit remains a separate global problem.

@@ -1,0 +1,352 @@
+TRANSFER COMPACTNESS: INDEPENDENT AUDIT AND FRACTIONAL EXTENSION
+2026-11-01. New successor. All audited sources remain unchanged.
+Internal AI mathematical review; no external review or novelty claim.
+
+VERDICT AND SCOPE
+
+The new transfer argument is accepted within the documented premises of
+the previously audited finite arithmetic certificate. The bad-transfer
+Hilbert--Schmidt estimates, weak compactness, good-fiber compression,
+rotation control, and sequential-to-uniform conclusion check independently.
+The all-finite-dimensional successor checks as well. Section 10 below
+proves a direct extension to measurable fractional assignments, without
+purification, affine cells, balanced masses, or stationarity assumptions.
+
+The result is local stability near the common tetrahedral orbit, in each
+fixed finite dimension N>=3. The neighborhood is not quantified and may
+depend on N. This does not prove global optimality, exclude distant
+competitors, or supply dimension-independent compactness.
+
+1. EXACT SOURCES AUDITED
+
+R3 = ARBITRARY_MEASURABLE_LOCAL_STABILITY_VIA_TRANSFER_COMPACTNESS_R3_20261101.txt
+SHA256 dafe546180f0e467ef39b2ef2db75dab6c4b65e9f2ff0220eef04fdf1eb4d4ec
+
+AN = ARBITRARY_MEASURABLE_LOCAL_STABILITY_ALL_FINITE_DIMENSIONS_SUCCESSOR_20261101.txt
+SHA256 992bc8a2f1d92afd7fe6e702b5e2292f0d0ed76486e5f22b7ae674d88cf4ee0a
+
+The following existing inputs were checked against their frozen hashes:
+
+THEOREM_AND_PROOF_ACCEPTED_20261101.txt
+SHA256 72b9952b32df019adbcb40e4cc49747a31402813bcbd7e5e862d461ae1e5406f
+
+GLOBAL_NORMAL_SLAB_REMAINDER_AND_GAUGED_NONLINEAR_LEMMA_20261101.txt
+SHA256 1b395c81a1ce6eb332b18402b0d08eb08e1fa8ebd0f3262ddd9d7ffbd7d70601
+
+POSITIVE_EXTENDED_DIAGONAL_AND_RELATIVE_POTENTIAL_DERIVATIVES_20261101.txt
+SHA256 46d6fd50caffdb31584fcf028b3cd5f32e81d6f46d0fbfedbc0cfc0619c1f3c7
+
+FINITE_DIMENSIONAL_ROTATION_GAUGE_AND_CUTOFF_DEFECT_20261101.txt
+SHA256 22da2f184ca10cfc70c3dde9915bac27a9e43d7f61eb4787d87e59810f2b427c
+
+covariance_frozen_certificate_audit_receipt.json
+SHA256 1191fb40c1c62fbd77be9e210d8ba0ee400431d8636a3e591755de99a9b42a8e
+
+In particular, this review does not substitute a new floating-point scan
+for the accepted certificate. Its usable conclusions are spec(A) in
+[-1,3], common gap >3/8 off rotations, contrast gap >8/25 on ker M,
+and the one-facet reciprocal integral V0<1. The certified output has
+V_upper <0.928, so the last bound has ample margin.
+
+2. THE GLOBAL COST BOUND REALLY HOLDS OFF THE ACTUAL FACET
+
+R3 lines 56-83 use a full tie-plane statement, not merely the diagonal
+defined on the facet sector. With n pointing from C_i to C_j and
+sigma^2=8/9, set
+
+ D_e(z)=(3/4) integral_Ci (-n.u) phi_sigma(u+z/3) du.
+
+The integrand is positive in the interior of C_i. On a fixed angular
+subcone, restrict 0<|u|<(1+|z|)^(-1). The linear factor contributes one
+radial power and the volume element contributes two. The remaining
+exponent is bounded below by a constant times exp(-|z|^2/16). Therefore
+
+ D_e(z) >= c (1+|z|)^(-4) exp(-|z|^2/16),   z in R3.
+
+On the entire plane n.y=0, D_e(y)=d_e(y). Reflection and sinh(s)>=s give
+
+ w_ij(y+tn) >= |t| d_e(y) exp(-t^2/16)
+             >= c |t| (1+|y+tn|)^(-4) exp(-|y+tn|^2/16)
+
+whenever y+tn belongs to the source C_i. No eligibility of y was used.
+This is the essential distinction from an estimate restricted to Sigma_e.
+
+3. THE APPARENT BAD-TRANSFER SINGULARITY IS INTEGRABLE
+
+R3 lines 93-106: let r_l=Y_l.x, with r_i maximal on the source C_i.
+Put u=(r_i-r_j)/sqrt(2)=|t_ij| and
+v=(r_i-r_k)/sqrt(2). Ineligible projection means that for some k,
+
+                         0 <= v < u/2.
+
+The unit normals defining u and v have inner product 1/2. Choose an
+orthonormal transverse coordinate xi so that
+
+                    v=u/2+(sqrt(3)/2)xi.
+
+Thus -u/sqrt(3)<=xi<0: the transverse width is exactly u/sqrt(3).
+For 0<u<delta the integral of 1/u over this strip is bounded uniformly
+in u. The remaining triple-line coordinate has a Gaussian integral.
+For u>=delta the reciprocal is at most 1/delta. A finite union over k
+therefore proves, for every a>0 and every finite m>=0,
+
+ integral_Bij (1+|x|)^m exp(-a|x|^2) / |t_ij(x)| dx < infinity.
+
+The same statement accommodates additional linear exponentials by
+absorbing them into a slightly weaker Gaussian. This audit found no
+missing endpoint, triple-line, or vertex singularity.
+
+4. THE NORMALIZED BAD AND MIXED OPERATORS ARE COMPACT
+
+R3 lines 134-167: for a pure bad transfer A_ij, define
+
+ F_ij = A_ij sqrt(w_ij)/sqrt(L).
+
+Its L2(gamma) norm is bounded and its support has measure tending to zero.
+Hence F_ij converges weakly to zero. This conclusion concerns normalized
+routing energy, not an unnormalized small-volume assertion.
+
+The endpoint Mehler kernel is
+
+ k(x,y)=(9/8)^(3/2)
+        exp[-(|x|^2+|y|^2)/16-(3/8)x.y].
+
+For the square of k/sqrt(w_ij w_kl), with Gaussian volume densities,
+the quadratic exponent is exactly
+
+             -9(|x|^2+|y|^2)/16-(3/4)x.y
+                    <= -3(|x|^2+|y|^2)/16.
+
+The remaining factors are polynomial and
+1/(|t_ij(x)| |t_kl(y)|). Section 3 integrates them. Thus every bad-bad
+block is Hilbert--Schmidt. For a mixed bulk-boundary block, replace the
+second w by d_e(y); the same exponent calculation applies with surface
+Gaussian measure, and the second reciprocal has no normal singularity.
+
+Actual good points lie at y+s n_e, |s|<=delta. Their kernels are dominated
+by ONE fixed positive kernel
+
+               C exp[C(|x|+|y|)] k(x,y).
+
+Its normalized mixed block is still Hilbert--Schmidt. Let B denote this
+fixed operator. Then B*F_n tends strongly to zero, whereas the normalized
+absolute good fiber masses are bounded in their boundary Hilbert space.
+Cauchy--Schwarz gives actual mixed interaction o(L).
+
+This fixed-majorant formulation matters: compactness of a varying family
+of operators would not, by itself, prove the asserted limit. The source's
+positive domination supplies the fixed operator needed here. Incidence
+coefficients are a finite matrix and do not affect compactness.
+
+5. ARBITRARY GOOD FIBERS RETAIN THE EXACT LEADING COEFFICIENT
+
+R3 lines 108-132: normal masses use dnu(t)=exp(-t^2/2)dt, with the surface
+factor contained in lambda_e. There is no missing sqrt(2pi) factor.
+On 0<t<delta, differentiating the reflection integral gives the positive
+factor
+
+ alpha cosh(alpha t)-(t/8)sinh(alpha t)
+ >= alpha cosh(alpha t)(1-t^2/8)>0.
+
+Thus the least cost of a given normal mass is its initial interval.
+The accepted all-height routing bound is cost >= d_e m^2/2.
+Writing the two side masses m_+,m_-, the signed and absolute masses are
+p=m_+-m_- and a=m_++m_-. Consequently
+
+        D(p)<=2 L_P,        D(a)<=4 L_P,
+        D(q)<=2 L_Q,        D(b)<=4 L_Q.
+
+Neither holes nor disconnected measurable pieces on a normal fiber
+invalidate this argument. It does not replace the assignment by a graph.
+
+For two good fibers the global pointwise normal-shift proof applies
+before integration. Hence R3 lines 169-179 correctly give
+
+ |actual good-good interaction-K(p,q)|
+ <=2^18 delta sqrt(D(a)D(b)) <=2^19 delta L.
+
+With the fixed delta=2^(-24), this is L/32 exactly. The order of limits
+is legitimate: delta is fixed first; only the L1 neighborhood then shrinks.
+Bad-operator constants may depend on delta and need not be uniform as
+delta tends to zero.
+
+6. MASS AND GLOBAL ROTATION TESTS HAVE VANISHING NORMALIZED DEFECTS
+
+R3 lines 181-224: the bad mass test 1_B/sqrt(w) is in L2(gamma), by
+Sections 2-3. The bad rotation test has numerator
+g_Omega,j-g_Omega,i, bounded by C|x|, so it too belongs to L2 after
+division by sqrt(w). Weak convergence therefore makes both defects
+o(sqrt(L)), separately for every nonnegative ordered transfer.
+
+For the good rotation error, the corrected source uses the SUM
+
+ c_e = integral_E+ t dnu(t) + integral_E- t dnu(t),
+
+where E_- is expressed in absolute negative coordinates. Taking their
+union would lose multiplicity. The final R3 source explicitly preserves
+it at lines 195-199. With that definition,
+
+ D(c)<=4 delta^2 L,   integral d_e c_e d lambda_e<=exp(delta^2/16)L.
+
+Thus c/sqrt(L) is bounded in H_D and its L1(d_e lambda_e) norm tends to
+zero. Bounded compact tests are dense in H_D, proving weak convergence
+to zero without a support assumption on c.
+
+The positive extended diagonal has Hess log D_e between -I/8 and 0,
+and |grad log D_e(z)|<=C+|z|/8. The exact positive integral formula for
+G_i-G_j can therefore be differentiated twice for every |t|<=1. Its
+normal rotation-test derivative is bounded by
+
+ d_e(y) F(|y|),  F(r)=C(1+r)^3 exp[C(1+r)].
+
+F belongs to H_D because d_e is bounded and lambda_e is Gaussian.
+Pairing F with c/sqrt(L) proves a good rotation error o(sqrt(L)).
+No restriction delta|y|<<1 is needed and no growing spatial core is used.
+
+The exact bulk rotation gauge then gives
+M(p-q)=o(sqrt(L)) and D(p+q,r_Omega)=o(sqrt(L)). The fixed positive
+mass and rotation Gram matrices turn these into projection-norm defects.
+
+7. CONSTANTS AND THE SEQUENTIAL-TO-UNIFORM STEP
+
+R3 lines 226-258: put E=D(p)+D(q)<=2L. The accepted robust quadratic
+estimate, including the just-controlled projections, gives
+
+                  E/2+K(p,q) >= (4/25)E-o(L).
+
+This estimate is relative to L, not E; cancellations in p or q cause no
+problem. Adding the EXACT routing loss and all actual interactions yields
+
+ J-S >= L-(17/50)E-L/32-o(L)
+     >= (8/25-1/32)L-o(L) = (231/800)L-o(L).
+
+Since 231/800>1/4, eventually J-S>=L/4 along every aligned nontrivial
+sequence. The good label-L1 distance for one assignment is
+2 sum_e integral a_e d lambda_e. Cauchy--Schwarz and V0<1 give at most
+4sqrt(6)sqrt(L). The bad label-L1 distance is o(sqrt(L)), since the bad
+mass test was applied to each NONNEGATIVE transfer. Hence the maximum
+post-alignment distance epsilon is eventually <10sqrt(L). Therefore
+
+                  J-S >= epsilon^2/400 >= d_orb^2/400.
+
+If no neighborhood with coefficient 1/1000 existed, choose a violating
+sequence with d_orb tending to zero, align it to a closest common
+orthogonal image, and apply the exact local bulk gauge. The aligned
+distance still tends to zero and is at least d_orb. The preceding bound
+contradicts every sufficiently late member of that sequence. Points with
+L=0 are exactly the aligned reference and satisfy the inequality directly.
+No compactness of the full class of partitions or minimizer selection is
+being asserted in this argument.
+
+8. EVERY FINITE DIMENSION
+
+AN lines 29-37 correctly distinguish reference weights from arbitrary
+perturbations: w and d depend only on the intrinsic x0 in R3, whereas
+p(y,z),q(y,z) may depend arbitrarily on z in R^(N-3).
+
+Every normalized bad or positive-majorant mixed operator is its intrinsic
+operator tensor T_rho on the extra coordinates. The exact formula is
+
+ ||T_rho on L2(gamma_d)||_HS^2=(1-rho^2)^(-d)=(9/8)^d.
+
+Thus compactness persists for every fixed finite d. In contrast, the
+good-shift operator uses ||T_rho||=1, so its error stays L/32. The surface
+measure is lambda_e,3 tensor gamma_d, so V0 and the mass Gram are unchanged.
+
+The correct local rotation slice is
+
+ Omega = [[Q,B],[-B^T,0]],   Q in so(3), B in R^(3 by d).
+
+Its 3+3d=3N-6 boundary speeds are n_e.(Qx0+Bz), exactly the intrinsic and
+mixed common null modes of the accepted tensor spectral theorem. Their
+Gram is positive definite. Rotations entirely in the extra coordinates
+have zero speed and must be excluded from the slice. Whether one calls
+the discrete tetrahedral label symmetries a stabilizer or separate orbit
+points has no effect on this local slice.
+
+Bad rotation tests gain at most a linear |z| factor. Good derivative
+majorants gain at most a linear |z| factor multiplying the intrinsic F.
+Both remain square-integrable for each fixed N. The exact local rotation
+gauge follows from the positive reference Hessian and C2 convergence on
+this finite-dimensional slice. All subsequent projection estimates apply
+to its finitely many modes.
+
+AN lines 121-134 therefore preserve 231/800, then 1/4 and 1/1000.
+The proof does not claim uniform compactness or a uniform positive radius
+as N tends to infinity. No dimension-reduction theorem is imported.
+
+9. CORRECTIONS RESOLVED BEFORE THE AUDITED FREEZE
+
+The R3 first normal moment now sums both sides with multiplicity.
+The AN introduction no longer asserts that perturbation heights depend
+only on intrinsic coordinates, and explicitly permits arbitrary extra-
+coordinate dependence of the compressed masses. The hashes in Section 1
+pin these corrected versions. No further correction to either theorem
+was found in this audit.
+
+10. DIRECT FRACTIONAL-ASSIGNMENT EXTENSION
+
+THEOREM. Fix a finite N>=3. Let theta be the cylindrical tetrahedral
+assignment and rho=-1/3. There exists epsilon_N>0 such that measurable
+f,h:R^N->Delta_4 with E f=E h and
+
+ d_orb(f,h)=inf_O max{sum_i ||f_i-1_(OC_i)||_1,
+                     sum_i ||h_i-1_(OC_i)||_1}<epsilon_N
+
+satisfy
+
+       sum_i <f_i,T_rho h_i>-sum_i <theta_i,T_rho theta_i>
+                         >= d_orb(f,h)^2/1000.
+
+The common masses are arbitrary. This theorem has the same documented
+certificate premises and local scope as Sections 1-8. Reflection of h
+gives the correlation +1/3 version near the pair (theta,-theta).
+
+PROOF. On the reference source cell C_i, define the fractional transfer
+a_ij(x)=f_j(x) for j!=i, and zero outside C_i. Then 0<=a_ij<=1 and
+
+ f-theta=sum_(i!=j) a_ij(e_j-e_i),
+ sum_i |f_i-theta_i|=2 sum_(i!=j) a_ij,
+ L_f=sum_(i!=j) integral a_ij w_ij dgamma.
+
+The bilinear expansion, routing identity, good/bad split, and all mass
+identities are therefore unchanged. The same holds for h. The rotation
+gauge applies because ||f_i-theta_i||_2^2<=||f_i-theta_i||_1, so its C2
+perturbation estimates require no purity assumption.
+
+The only pure-support step needing replacement is weak convergence of
+the bad normalized transfer. Set F=a sqrt(w)/sqrt(L), with 0<=a<=1.
+Its L2 norm is at most one. For a fixed threshold tau>0, split into
+a>tau and a<=tau. The first set has Gaussian measure at most
+(integral a dgamma)/tau, which tends to zero. On the second set,
+
+ ||F 1_(a<=tau)||_2^2
+       <= tau (integral a w dgamma)/L <= tau.
+
+For any fixed L2 test phi, Cauchy--Schwarz makes the first pairing tend
+to zero, and bounds the second by sqrt(tau)||phi||_2. Sending tau to
+zero proves F weakly tends to zero. Thus all compact-operator and bad
+mass/gauge arguments survive even when the fractional supports do not
+shrink. This does not use a false shrinking-support assertion.
+
+On each good side the fiber is now a density q(t) in [0,1], supported
+in (0,delta). Its normal mass m is at most psi(delta). Let u satisfy
+psi(u)=m and let c(t) be the increasing reference cost. Then
+
+ integral [q(t)-1_(0,u)(t)] [c(t)-c(u)] dnu(t) >=0.
+
+The mass difference is zero, so this proves the same initial-interval
+bathtub inequality. Consequently D(p)<=2L_f and D(p_abs)<=4L_f remain
+exact. The summed first normal moment also retains both bounds in
+Section 6, proving its normalized weak convergence and the good gauge
+estimate. Positivity permits every kernel domination used above.
+
+All remaining steps are linear identities, bounded-operator inequalities,
+or the same sequential contradiction. The coefficient 1/1000 follows.
+If L=0, positivity of each w off its null tie set forces every off-diagonal
+a_ij to vanish, hence f=h=theta almost everywhere after alignment.
+
+This fractional extension is direct. It neither purifies the pair nor
+assumes that either rule is a reflection of the other.
+
+END OF AUDIT. Global optimality away from the orbit remains unresolved.

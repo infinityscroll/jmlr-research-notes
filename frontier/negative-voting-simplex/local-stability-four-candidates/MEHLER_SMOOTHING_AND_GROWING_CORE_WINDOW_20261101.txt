@@ -1,0 +1,176 @@
+MEHLER SMOOTHING AND THE GROWING-CORE EXPONENT WINDOW
+1 November 2026. Root derivation; independent audit requested.
+
+PURPOSE AND LIMIT
+
+This note isolates a quantitative route from L1 closeness to a large-core
+coordinate representation of a stationary paired minimizer. It does not
+prove local minimality, a moving-junction energy expansion, or the global
+four-label conjecture. The premise on the dual constants in Section 5 is
+explicit. The required moving-junction argument is separate.
+
+1. EXACT L2 SMOOTHING
+
+Let rho=-1/3, sigma^2=1-rho^2=8/9, and let k(x,y) be the Mehler kernel
+relative to standard Gaussian measure on R3. Completing the square gives
+
+ int k(x,y)^2 dgamma(y)
+   =(1-rho^4)^(-3/2) exp(rho^2 |x|^2/(1+rho^2)).
+
+Consequently
+
+ ||k(x,.)||_2=(80/81)^(-3/4) exp(|x|^2/20).             (1)
+
+Under the normalized measure proportional to k(x,y)^2 dgamma(y), y is
+Gaussian with mean 2rho x/(1+rho^2) and covariance
+sigma^2/(1+rho^2) I. Since
+
+ grad_x k=(rho y-rho^2 x)k/sigma^2,
+
+Cauchy-Schwarz gives ||grad_x k||_2 <=C(1+|x|) exp(|x|^2/20).
+If f,g are indicator vectors and epsilon=sum_i ||f_i-g_i||_1, their
+componentwise L2 differences are at most sqrt(epsilon). Therefore
+
+ ||T_rho(f-g)||_{C1(B_R)}
+   <=C sqrt(epsilon)(1+R) exp(R^2/20).                  (2)
+
+Here and below constants are finite, depend only on the fixed tetrahedral
+geometry, and are independent of R and epsilon. Equation (2) does not use
+an L1-to-Linfinity kernel supremum; that weaker bound loses the window.
+
+2. A GLOBAL LOWER BOUND FOR EVERY FACET WEIGHT
+
+Let Y be the 4-by-3 matrix of regular sites, with Y^T Y=I and
+Y Y^T=I-11^T/4. Let Sigma_e be one of its six facets, of planar aperture
+L=acos(-1/3), and define
+
+ I_e(x)=int_{Sigma_e} k(x,y) d lambda_e(y).
+
+This definition makes sense for every x in R3; x need not belong to that
+facet. Expanding the Gaussian density yields
+
+ I_e(x)=sigma^(-3)(2pi)^(-3/2) exp(-|x|^2/16)
+   *int_{Sigma_e} exp(-|y|^2/(2sigma^2)+rho x.y/sigma^2) dH2(y).
+
+For |x|<=R, restrict the last integral to |y|<=1/(1+R). Its area is
+L/[2(1+R)^2], and its exponential is at least exp(-15/16). Thus
+
+ I_e(x)>=c0 (1+R)^(-2) exp(-R^2/16),                   (3)
+ c0=sigma^(-3)(2pi)^(-3/2)(L/2)exp(-15/16)>0.
+
+This bound holds simultaneously for all six weights and all points of
+B_R. The same integral is a Gaussian convolution with convex-facet
+surface measure, so Prekopa log-concavity and the covariance formula give
+
+                  -I/8 <= Hess(log I_e) <=0.           (4)
+
+In particular |grad log I_e(x)|<=C+|x|/8 globally. Multiplying a weight
+by a positive constant does not change (4).
+
+3. CONDITION-INDEPENDENT RELATIVE LAPLACIAN ESTIMATE
+
+For a connected graph on m vertices, let L(w)=sum_e w_e b_e b_e^T,
+where b_e=e_i-e_j and all w_e>0. Work on 1-perp. If
+|w'_e/w_e-1|<=theta for every edge, then
+
+ ||L(w)^dagger [L(w')-L(w)]||_op
+        <=sqrt(2m) |E| theta.                           (5)
+
+Proof: put z=L(w)^dagger b_e. The electrical maximum principle says its
+maximum and minimum are attained at the two endpoints of e. Their
+difference is the effective resistance R_e=b_e^T L(w)^dagger b_e.
+The edge itself is an available conductance, so R_e<=1/w_e. Since z has
+mean zero, ||z||_2<=sqrt(m)R_e. It follows that
+
+ ||w_e L(w)^dagger b_e b_e^T||_op <=sqrt(2m).
+
+Sum over the edges to prove (5). The estimate is intentionally rough;
+its essential feature is independence of the condition number.
+
+For m=4 and its six edges, (5) is at most 6sqrt(8)theta. Conjugating by
+Y gives the identical estimate for Y^T L(w)Y on R3.
+
+4. A QUANTITATIVE INVERSE-CHOICE CHART
+
+Set F0(x)=-Y^T(T_rho 1_Ci(x))_i. The independent Gaussian utility formula
+gives
+
+ DF0(x)=(|rho|/sigma) Y^T L(W(x))Y,
+ W_e(x)=(sigma/sqrt(2)) I_e(x).
+
+Indeed a standard Gaussian utility difference has variance 2, which is
+the sqrt(2) conversion between its tie density and the unit-normal facet
+density. The complete graph has unweighted Laplacian 4I on 1-perp.
+Equation (3) therefore gives, on B_R,
+
+ DF0(x)>=a_R I,
+ a_R=2sqrt(2)|rho|c0(1+R)^(-2)exp(-R^2/16).             (6)
+
+Suppose F is C1 on B_(R+1) and ||F-F0||_C1<=E_R there, with E_R/a_(R+1)
+small. Its symmetric derivative is positive definite. Thus F is strongly
+monotone and injective on the ball. For x in B_R, the boundary test
+
+ [F(y)-F0(x)].(y-x)>0,       y in boundary B_(R+1),
+
+follows from strong monotonicity and E_R<a_(R+1)/4. The usual degree-one
+argument gives a unique Psi(x) in B_(R+1) with F(Psi(x))=F0(x). Moreover
+
+ |Psi(x)-x| <=2E_R/a_(R+1).                              (7)
+
+The derivative bound must NOT use two inverse eigenvalue bounds. Write
+A=DF0(Psi(x)). By (4), the relative changes of its six edge weights from
+Psi(x) to x are bounded by
+
+ theta <=exp[(C+(R+1)/8)|Psi(x)-x|]-1.
+
+Equation (5) gives ||A^-1 DF0(x)-I||<=6sqrt(8)theta. Meanwhile
+||A^-1[DF(Psi(x))-A]||<=E_R/a_(R+1). Factoring the inverse derivative in
+D Psi=DF(Psi)^-1 DF0(x) therefore proves
+
+ ||Psi-id||_C1(B_R)
+   <= C(1+R) E_R/a_(R+1),                              (8)
+
+provided the right side is sufficiently small. No additional exponential
+inverse-conditioning factor appears. The same argument works for a
+nonsymmetric perturbation DF, since its additive error is handled before
+applying the relative-weight estimate to the symmetric reference map.
+
+5. THE EXPONENT WINDOW
+
+Assume a paired stationary minimizer (A,H) is within epsilon in Gaussian
+L1 of the tetrahedral reference and its mass-matching dual vector lambda,
+modulo an irrelevant constant, obeys |lambda|<=C sqrt(epsilon). Apply the
+preceding sections to F_A=-Y^T(T_rho H+lambda) and analogously to F_H with
+the opposite dual sign. Then
+
+ E_R <= C sqrt(epsilon)(R+2) exp((R+1)^2/20),
+
+and (8) is at most
+
+ C sqrt(epsilon) polynomial(R) exp[9(R+1)^2/80].         (9)
+
+Choose R^2=(21/5)log(1/epsilon). The power of epsilon in (9) is
+
+          1/2-(9/80)(21/5)=11/400>0.
+
+Hence the whole-partition coordinate maps, whenever supplied by the
+stationary routing equations, are C1-close to identity on the growing
+core with error epsilon^(11/400-o(1)). The Gaussian tail obeys
+
+ gamma3(|x|>R)<=C(1+R)exp(-R^2/2)
+              =epsilon^(21/10-o(1))=o(epsilon^2).       (10)
+
+Replacing any partition outside this core changes a bounded paired noise
+objective by at most a constant times that tail mass. The entire open
+interval 4<a<40/9 is available in place of 21/5 in R^2=a log(1/epsilon).
+
+6. WHAT THIS DOES AND DOES NOT CLOSE
+
+The window avoids a tail-versus-quadratic-distance obstruction: core
+regularity can approach identity while the discarded objective is
+o(epsilon^2). It does not establish that the core deformation has an
+energy bound by its normal components, including all moving junctions.
+It also does not supply rotation gauge, the dual-vector estimate, or a
+global compactness/isolation theorem by itself. Those require their own
+arguments. In particular it does not justify replacing an arbitrary
+nearby partition by the previously proved tapered normal-slab class.

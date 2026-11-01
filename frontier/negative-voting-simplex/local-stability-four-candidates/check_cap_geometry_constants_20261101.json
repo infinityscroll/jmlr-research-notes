@@ -1,0 +1,18 @@
+{
+  "scope": "Exact inequalities used in the cap cover and positive-kernel bound. Does not collect the universal nonlinear constant C.",
+  "A": 4096,
+  "eta_upper": "1/1048576",
+  "all_facet_shifted_kernel_HS_square_upper": 8578400256,
+  "checks": {
+    "triple_projection_absorption": true,
+    "negative_ray_vertex_absorption": true,
+    "s_below_half_radius_contradiction": true,
+    "sqrt3_over2_above_4_over5": true,
+    "narrow_tube_ratio": true,
+    "sqrt_two_thirds_above_13_over16": true,
+    "inverse_sqrt3_below_three_fifths": true,
+    "fourth_gap_above_four_fifths": true,
+    "fourth_height_below_hundredth": true,
+    "all_facet_shifted_kernel_norm_below_2pow18": true
+  }
+}

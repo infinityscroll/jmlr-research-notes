@@ -1,0 +1,227 @@
+INDEPENDENT AUDIT: MOVING JUNCTIONS AND RELATIVE POTENTIAL CONTROL
+1 November 2026. covariance_adversarial_cleanroom.
+New successor audit. All previously saved sources remain unchanged.
+
+DECISION AND EXACT SCOPE
+
+The final MOVING_JUNCTION_FORMAL_SLAB_CAP_DECOMPOSITION_20261101.txt is
+accepted with its stated hypotheses: compact C1 ambient deformations in
+R3, exact matching masses, and eta(R+1)^2 sufficiently small. Its bulk-gauge
+defect is explicitly retained. The argument supplies an actual nonlinear
+energy estimate, including moved triple lines and the vertex. Its separate
+fixed-support corollary is also valid without a rotation gauge.
+
+The source's universal constants are established finite constants for the
+fixed tetrahedron; this audit does not claim a collected numerical basin
+radius. Neither the cap theorem nor this audit proves that every distant
+measurable competitor is close to the tetrahedral orbit. Arbitrary ambient
+dimensions are not silently included in this three-dimensional cap proof.
+
+This verdict follows the checks below, not an inherited prior verdict.
+The final cap-source SHA256 is
+ 9644fcc891358161920ed1d0e4476b1ee0b9cf4a72dcc359fc0256e405bd1d59.
+
+1. WHOLE-PLANE GRAPHS AND THE EXACT DEFECT WITNESS
+
+For Phi=id+w with ||Dw||<1/2, F_e(x)=x+P_e w(x) on the entire tie plane
+is a global bijection by contraction. Its inverse is Lipschitz, so
+h_e(y)=n_e.w(F_e^-1 y) has sup norm<=eta and Lipschitz constant<=2eta.
+Along a normal line n_e.Phi^-1 has strictly positive derivative, because
+||DPhi^-1-I||<=eta/(1-eta)<1. Thus the image halfspaces really are the
+graph halfspaces. This argument uses only C1 control.
+
+The restriction h_e|Sigma_e is supported inside B_R. If a point outside
+B_R had an interior preimage under F_e, it would have two preimages, since
+F_e is the identity outside B_R. This verifies the support assertion used
+later in the fixed-R angle argument.
+
+Let i be the unique reference score winner. Projection to the i,j tie
+plane averages r_i,r_j and leaves all other scores unchanged. Therefore
+eligibility is exactly(r_i+r_j)/2>=max_{k outside{i,j}}r_k. Every eligible
+pair includes i. A formal signed slab is present exactly when the i,j
+comparison flips, and its vector is e_j-e_i. Hence the source's expression
+for the formal sum is exact, including both slab signs.
+
+If the formal sum differs from the true winner, either that winner's
+projection is ineligible or at least two eligible comparisons flip. In
+the first case, the witness triple i,k,l has every score difference
+bounded by r_i-r_l, controlled by the crossing i,l height. In the second,
+the two crossing heights control the two score gaps from the reference
+winner. All these heights belong to the INCIDENT triple. No ambient
+displacement norm or unrelated fourth-label height is substituted here.
+
+The two comparison normals have Gram eigenvalues1/2 and3/2. If b bounds
+the two normalized score gaps, distance to their full triple line is at
+most2b. Projection to an incident plane is a contraction and fixes that
+line, so b<=H(s)+2eta*t. Absorption gives t<=4H(s).
+
+If the longitudinal parameter s is negative, the reference winner must
+overcome the fourth-label gap. The stated |s|<=2t is valid (a sharper
+constant is unnecessary). Thus |z|<=6b and b<=h0+2eta|z|; for eta<=1/24,
+|z|<=12h0. This independently checks the endpoint case: it is controlled
+by the vertex normal heights, not by tangential displacement.
+
+Outside the A h0 vertex ball, with A=4096, the actual narrower tube
+t<=4H(s) has s comparable to |z| and t/s<1/100 for sufficiently small
+universal eta. The fourth-label normalized gap is then>4s/5. Every
+crossing height involving that fourth label is at most
+h0+2eta|z|<s/100. Thus it cannot contribute to the actual cap. Its formal
+projection is also ineligible. This supplies the separation needed in
+the routing and rotation estimates; the unnecessarily enlarged A H
+shadow tube itself need not have that separation.
+
+2. PROJECTION DOMAINS AND SHADOW ENERGY
+
+The three transverse reference facet rays at a triple line are120 degrees
+apart. A nearest ray has angle at most60 degrees, giving a nonnegative
+orthogonal ray coordinate and normal distance bounded by the tube radius.
+The longitudinal coordinate is unchanged. Crucially the actual tetrahedral
+facet opening acos(-1/3) is greater than pi/2. Hence the ENTIRE quadrant
+s>=0,tau>=0 lies in that facet. No projection falls outside the facet at
+a short collar or a positive ray endpoint.
+
+For a vertex-ball point, choose a closest supporting plane of its reference
+cone. Projection stays on the actual facet: every other normalized score
+gap decreases by at most half the chosen minimal gap. Projected radius
+and normal distance remain bounded by the original radius. Thus the
+vertex cover also uses original facets, as required by the operator norm.
+
+The shadow heights are bounded sums of the incident edge widths and the
+vertex width. Their multiplicity is finite. On a distance O(eta) from the
+edge, the logarithmic weight derivative is O(R+1); eta(R+1) small makes
+the comparison a universal factor. The incident diagonals agree along
+a triple ray by label symmetry. Direct integration gives edge energy
+proportional to d H^3 and vertex energy proportional to d0 h0^4.
+
+The weighted trace identity is exact:
+ int_edge w|f|^k <=[k Lip(f)+sup|grad log w| ||f||infinity]
+                         int_facet w|f|^(k-1).
+It follows by differentiating w|f|^k along the entire inward half-strip.
+The derivative of the weight must be included, and is included. Using
+k=3 with w=d gamma_surface and k=2 with Gaussian weight gives
+
+ D(shadow)<=C(R+1)eta D(h),
+ ||cap||_L1<=C(R+1)eta L(h).
+
+At the vertex, the sector disk of radius |h(0)|/(4eta) has height at least
+|h(0)|/2 and radius<=1/4. The weights have a fixed positive comparison
+there. This gives h0^4<=C eta^2 D(h) and h0^3<=C eta^2 L(h), with the
+appropriate origin-density factors. No second derivative of Phi is used.
+
+3. ACTUAL CAP INTERACTIONS
+
+A cap vector need not correspond to the facet on which its shadow is
+placed. The signed Hessian incidence matrix would therefore be the wrong
+majorant. The source correctly uses coefficient2 on every ordered facet
+pair, whose coefficient-square sum is144, not48. Bounded cap multiplicity
+and its pointwise ell1 bound are included in the universal constant.
+
+For shifts of magnitude<=1, the kernel is bounded by its reference value
+times exp[3(|x|+|y|)/8+1/2]. The global compact-sector diagonal envelope
+therefore bounds the shifted all-facet Hilbert-Schmidt square by
+3*432 exp(47/8) J0^2, J0<128. The rational upper bound is
+8578400256<2^36. It has no factor depending on R or min_{B_R}d.
+
+Consequently actual cap/formal-slab interactions are bounded by
+C sqrt(D(shadow)D(formal)), and cap/cap interactions by the corresponding
+product of shadow norms. Their combined error is
+C sqrt((R+1)eta)E. This is the essential energy-relative control. The
+weaker cap-volume bound alone would not suffice and is not used here.
+
+4. INDEPENDENT COMPLETION OF RELATIVE POTENTIAL DERIVATIVES
+
+I checked POSITIVE_EXTENDED_DIAGONAL_AND_RELATIVE_POTENTIAL_DERIVATIVES_20261101.txt
+including its exact normalization. For x on the i,j tie plane, define
+
+ D_e(z)=(3/4)int_Ci(-n.y)phi_sigma(y+z/3)dy,
+ alpha(y)=-(3/8)n.y, sigma^2=8/9.
+
+D_e is positive everywhere and equals d_e on the tie plane. It need not
+equal the actual normal derivative off that plane; no such identification
+is used. Prékopa and the positive Laplace representation prove
+-I/8<=Hess log D_e<=0 globally. Thus first and second derivatives of D_e
+are bounded by D_e times fixed polynomials of degree1 and2 in |z|.
+
+Reflection and the identity sinh(alpha*t)=(alpha/2)int_{-t}^t exp(alpha*s)ds
+give exactly
+
+ G_i(x+tn)-G_j(x+tn)
+   =(t/2)int_{-1}^1 exp[(u^2-1)t^2/16]D_e(x+utn)du.
+
+The factors3/4 andt/2 are correct, and differentiation at t=0 gives d_e.
+When |t|(R+1)<=1, the D_e values on the segment are comparable to d_e(x).
+Two differentiations of this representation give
+
+ |G_i-G_j|<=C|t|d_e,
+ |grad_tan(G_i-G_j)|<=C|t|(R+1)d_e,
+ |partial_n(G_i-G_j)|<=C d_e,
+ ||Hess(G_i-G_j)||<=C(R+1)d_e.
+
+The tangential second derivative carries |t|(R+1)^2; mixed derivatives
+carry O(R+1), and the normal second derivative has terms O(R+1) and
+O(|t|(R+1)^2). The hypothesis absorbs the latter terms. This provides the
+missing detail behind the draft's tilted-moment shorthand.
+
+As a separate check, the weighted-cone radial identity is
+9 E|Y|^2+3x.EY=32, because the three-dimensional volume measure has one
+additional homogeneous linear weight. It yields the same first and second
+tilted-moment bounds. Using the two-dimensional constant16 here would be
+wrong; the source correctly uses32.
+
+These relative bounds give the extra distance factor in linear cap routing,
+so its error is C(R+1)eta E. They also control the actual LABEL DIFFERENCES
+of rotation tests. If g_Omega,i=-(Omega z).grad G_i, then
+partial_n(g_Omega,i-g_Omega,j)
+ =-(Omega n).grad(G_i-G_j)-(Omega z).Hess(G_i-G_j)n,
+whose magnitude is C(R+1)^2 d_e. No inverse small diagonal appears.
+
+5. MATCHING MASS, BULK GAUGE, AND ASSEMBLY
+
+The formal masses are exactly Mp,Mq. Actual matching masses make their
+defect the negative cap-mass difference, bounded by C(R+1)eta sqrt(E).
+The mass-representer Gram is4V0 I on1-perp, with fixed positive V0.
+Projection into ker M therefore costs C(R+1)eta sqrt(E) in D norm and
+C(R+1)eta E in the quadratic form. This is not an illicit deletion of
+translations.
+
+The formal-slab rotation-test error is C(R+1)^2 E. Since E<=C eta^2,
+it is at most C(R+1)^2 eta sqrt(E). Weighted quadratic traces give the
+same bound for the cap rotation tests. The fixed rotation Gram then yields
+||P_rot p_+||<=C(R+1)^2 eta sqrt(E)+C zeta.
+
+The accepted common and contrast gaps are3/8 and8/25. Their half-sum form
+has leading coefficient4/25 on E=D(p)+D(q), not8/25. Combining the mass,
+gauge, routing, and interaction errors gives precisely
+
+ J(P,Q)-J(C,C)>=[4/25-C(R+1)^2 sqrt(eta)]E-C zeta^2.
+
+The FINAL source consistently assumes eta(R+1)^2 sufficiently small.
+An earlier top-level condition used only eta(R+1); that bookkeeping
+mismatch has been corrected before this audit was pinned.
+
+Finally L(p)<=sqrt(6D(p)) follows from the certified per-facet inverse-
+diagonal integral V0<1. Actual summed-label distance is <=2L(p)+||cap||_1.
+Shrinking the universal threshold gives <=6sqrt(D(p)), separately for
+each partition. This proves E>=epsilon^2/144 under the stated distance
+assumption, without a minimum Gaussian density on the growing ball.
+
+6. FIXED-SUPPORT COROLLARY AND LIMIT OF THE APPLICATION
+
+Section10 of the final source uses the compact rotation-tail angle on the
+FORMAL heights, which remain supported in B_R even when actual junctions
+move. Thus common-channel energy is >=(3beta_R/8)D(p_+), with beta_R>0.
+Together with the contrast gap, its leading coefficient is
+c_R=min(3beta_R/16,4/25). For each fixed finite R, the same errors are
+smaller than c_R/2 for sufficiently small eta. This proves strict local
+minimality in the specified compact ambient-deformation class without
+any bulk rotation gauge. Zero formal energy implies unchanged partitions,
+not necessarily identity deformation maps; tangential reparametrizations
+are correctly harmless.
+
+For the growing-core application, every polynomial(R) times sqrt(eta)
+tends to zero when R^2=(21/5)log(1/epsilon) and
+eta=epsilon^(11/400-o(1)). The cap theorem is therefore compatible with
+the separately proved chart, cutoff, mass-repair, and finite-dimensional
+gauge estimates. Those inputs must still be stated explicitly in any
+end-to-end isolation theorem. No distant-competitor or global-conjecture
+conclusion is supplied by this audit.

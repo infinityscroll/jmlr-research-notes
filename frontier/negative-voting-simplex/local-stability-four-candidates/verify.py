@@ -1,4 +1,4 @@
-"""Recompute the accepted local operator certificate without altering evidence."""
+"""Recompute the local operator and finite arithmetic bounds without altering evidence."""
 import contextlib
 import hashlib
 import importlib.util
@@ -32,7 +32,11 @@ def main():
         for name in ('certify_common_mass_box_rational_20261101.py',
                      'certify_operator_tail_rational_20261101.py',
                      'certify_tensor_moment_tail_rational_20261101.py',
-                     'covariance_audit_rational_quadrature_bounds.py'):
+                     'covariance_audit_rational_quadrature_bounds.py',
+                     'certify_global_slab_remainder_rational_20261101.py',
+                     'certify_dual_multiplier_constant_20261101.py',
+                     'check_cap_geometry_constants_20261101.py',
+                     'check_arbitrary_fiber_rotation_constants_20261101.py'):
             target = Path(temp)/name
             shutil.copy2(ROOT/name, target)
             subprocess.run([sys.executable, str(target)], check=True, capture_output=True, text=True, env=env)
@@ -53,7 +57,8 @@ def main():
         assert arb(result['mass_constrained_Rayleigh_upper']) < arb(17)/25
     print('PASS: source integrity, exact tails, arithmetic budget, mass box, and full operator certificate.')
     print('PASS: H < 243/8, delta < 11/400, constrained Rayleigh bound < 17/25.')
-    print('The analytic theorem is a second-variation result; global optimality is not certified.')
+    print('PASS: eight finite arithmetic checks supporting the local nonlinear analysis.')
+    print('The nonlinear local proof additionally uses analytic compactness; global optimality is not certified.')
 
 if __name__ == '__main__':
     main()

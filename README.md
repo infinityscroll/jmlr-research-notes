@@ -4,13 +4,13 @@ Substantial results and reproducible experiments through 1 November 2026.
 These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
 
-## 1 November — tetrahedral second variation
+## 1 November — tetrahedral local stability
 
-[The tetrahedral endpoint package](frontier/negative-voting-simplex/local-stability-four-candidates/README.txt) proves **strict paired second-variation stability in every finite dimension N >= 3**, at correlation 1/3 with matching cell masses. The Hessian has a quantitative gap of 8/25 modulo simultaneous rotations. The complete boundary operator is controlled by an audited computational certificate, beyond the exploratory polynomial scans.
+[The tetrahedral endpoint package](frontier/negative-voting-simplex/local-stability-four-candidates/NONLINEAR_LOCAL_THEOREM_READING_GUIDE_20261101.txt) proves **local Gaussian-L1 quadratic stability for arbitrary measurable matched-mass pairs in every fixed finite dimension N >= 3**. At correlation -1/3, the objective exceeds the tetrahedral value by at least the squared distance to its common orthogonal orbit divided by 1000, in a sufficiently small neighborhood. The common mass vector may vary. Reflection gives the equivalent correlation 1/3 statement near opposite tetrahedral partitions.
 
-[Accepted theorem and proof](frontier/negative-voting-simplex/local-stability-four-candidates/THEOREM_AND_PROOF_ACCEPTED_20261101.txt) · [Numerical proof and error bounds](frontier/negative-voting-simplex/local-stability-four-candidates/INDEPENDENT_CURVATURE_QUADRATURE_AND_FLOATING_AUDIT_20261101.txt)
+[Measurable proof in R3](frontier/negative-voting-simplex/local-stability-four-candidates/ARBITRARY_MEASURABLE_LOCAL_STABILITY_VIA_TRANSFER_COMPACTNESS_R3_20261101.txt) · [All finite dimensions](frontier/negative-voting-simplex/local-stability-four-candidates/ARBITRARY_MEASURABLE_LOCAL_STABILITY_ALL_FINITE_DIMENSIONS_SUCCESSOR_20261101.txt) · [Certified Hessian input](frontier/negative-voting-simplex/local-stability-four-candidates/THEOREM_AND_PROOF_ACCEPTED_20261101.txt)
 
-This proves a second-variation result. Global four-label simplex optimality and a uniform nonlinear neighborhood theorem are not claimed. Reviews are internal; novelty and external verification remain open.
+The proof combines the certified Hessian gap of 8/25 with an analytic transfer-compactness argument. It imposes no smoothness or stationarity assumption on competitors. The neighborhood may depend on dimension; its numerical radius is not supplied. **Global four-label optimality remains open.** Reviews are internal; novelty and external verification remain open.
 
 ## New results — 31 October
 

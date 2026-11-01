@@ -1,0 +1,488 @@
+MOVING JUNCTIONS: FORMAL SLABS, CAP SHADOWS, AND A FINITE-CHANGE ESTIMATE
+2026-11-01. New successor source; no frozen source is changed.
+Author: radial_coercivity_cleanroom. Independent audit requested.
+
+STATUS AND PRECISE TARGET
+
+This note supplies a concrete cap decomposition for compact C1-small
+ambient deformations of the regular tetrahedral partition. It includes
+moving triple junctions and the moving vertex. Its estimates use only
+C1 bounds. In particular, no uncontrolled second derivative of a choice-
+map straightening diffeomorphism is assumed.
+
+Throughout C denotes a finite universal constant for the fixed regular
+tetrahedron; it can increase between displayed estimates. No C depends
+on R, on a deformation, or on its normal energy. The proof gives a
+polynomial-in-R rate, rather than a numerical sharp basin radius. A
+single numerical upper bound for all occurrences of C has not been
+collected or certified in this source. That distinction is intentional.
+
+The conclusion to audit is the following. Let P=Phi(C), Q=Psi(C), where
+Phi=id+w and Psi=id+v are global C1 diffeomorphisms equal to identity
+outside B_R, R>=1. Suppose
+
+ max(||w||infinity,||Dw||op,infinity,
+     ||v||infinity,||Dv||op,infinity)<=eta,
+ eta(R+1)^2 sufficiently small.
+
+Suppose the actual partitions have exactly matching label masses.
+Let zeta be the norm of their reference-subtracted bulk rotation-gauge
+defect, with an orthonormal basis of the three skew matrices. Then the
+formal exact swept-mass heights p,q defined below have E=D(p)+D(q), and
+
+ J(P,Q)-J(C,C)
+ >=[4/25-C(R+1)^2 sqrt(eta)] E-C zeta^2.                  (T)
+
+After decreasing the universal smallness threshold, each actual summed-
+label Gaussian L1 distance from C is at most6 sqrt(E). Thus, when the
+maximum of those distances is at least epsilon/2,
+
+                         E>=epsilon^2/144.              (L)
+
+The accepted all-speed Hessian is an input. Equation(T) is a finite-
+change statement, proved by controlling actual caps and signed cross
+terms. It is not obtained merely by asserting positivity of a Hessian.
+The independent compact near-minimizer reduction and rotation-gauge
+notes are separate inputs to any L1-isolation application.
+
+1. ENTIRE TIE PLANES HAVE UNAMBIGUOUS NORMAL GRAPHS
+
+Use sites Y_i=(+,+,+),(+,-,-),(-,+,-),(-,-,+), divided by2.
+For e=(i,j), n_e=(Y_j-Y_i)/sqrt2 points from C_i to C_j;
+Pi_e=n_e perpendicular, and Sigma_e is the actual reference facet.
+Let P_e be orthogonal projection to Pi_e.
+
+For a single deformation Phi=id+w, define on the ENTIRE plane Pi_e
+
+ F_e(x)=x+P_e w(x),
+ h_e(y)=n_e.w(F_e^(-1)(y)).                              (1.1)
+
+If eta<1/2, F_e is globally bi-Lipschitz, with inverse Lipschitz constant
+at most(1-eta)^(-1). Indeed F_e-id has Lipschitz constant eta; surjectivity
+also follows by the contraction equation x=y-P_e w(x). Consequently
+
+ ||h_e||infinity<=eta, Lip(h_e)<=eta/(1-eta)<=2eta.        (1.2)
+
+The image of the entire tie plane is precisely
+{y+h_e(y)n_e:y in Pi_e}. Orientation is preserved: for every z,
+n_e.Phi^(-1)(z) and n_e.z-h_e(P_e z) have the same sign. To see this,
+along each normal line the first quantity has positive derivative:
+n_e.DPhi^(-1)n_e>=1-eta/(1-eta)>0 for eta<1/2 sufficiently small.
+Its unique zero is the displayed graph. Therefore the actual image cells
+are exactly intersections of these deformed comparison halfspaces.
+
+Only h_e restricted to the ORIGINAL facet Sigma_e is used as a formal
+slab height. The entire-plane construction supplies its extension and
+its Lipschitz constant. The restriction is supported in B_R: Phi is the
+identity off B_R, so its tangential plane map is also the identity there.
+Set p_e=psi(h_e), psi(t)=int_0^t exp(-s^2/2)ds.
+
+Let S_e(z) be the oriented signed indicator of the slab from t=0 to
+t=h_e(y), y in Sigma_e. Define the R4-valued formal sum
+
+               ftilde=1_C+sum_e b_e S_e, b_e=e_i-e_j.    (1.3)
+
+This formal sum may overlap or take values outside{0,1}. It is used only
+as a bounded vector function in exact bilinear identities. Let
+f=1_P and c=f-ftilde be its cap defect. Its label sum is zero, pointwise.
+There are at most three eligible slabs at any point, so a harmless bound
+||c(z)||_1<=14 suffices. Define gtilde,q,k similarly for Q.
+
+2. SCORE-GAP PROOF OF CAP LOCALIZATION
+
+Write r_i=Y_i.z for the reference scores and a_i=Y_i.Phi^(-1)(z) for
+the actual scores. Ignore tie sets, which have Gaussian measure zero.
+Let i be the reference winner.
+
+Projection P_(ij) averages r_i,r_j and leaves every other r_k unchanged,
+because Y_k.(Y_i-Y_j)=0 for k outside{i,j}. Thus
+
+ P_(ij)z in Sigma_(ij)
+ iff (r_i+r_j)/2>=max_(k outside{i,j}) r_k.               (2.1)
+
+Every eligible formal slab at z includes the reference winner i. Its
+sign is a transfer i->j exactly when a_j>a_i. Hence
+
+ ftilde(z)=e_i+sum_(j: (2.1) and a_j>a_i)(e_j-e_i).       (2.2)
+
+If this differs from the actual winner e_l, one of two things occurs:
+
+(a) The actual winner l has an ineligible projection in(2.1). Then for
+some k, r_k>(r_i+r_l)/2, while a_l>a_i. Thus i,k,l have reference scores
+within r_i-r_l of one another, and this difference is bounded by
+sqrt2 |h_(il)(P_(il)z)| because the i,l comparison has crossed.
+
+(b) There are at least two eligible flips i->j and i->k. Both crossed
+comparisons bound the three reference score differences by sqrt2 times
+the largest of their crossing heights.
+
+This also covers the case where l is eligible but an extra formal flip
+is present. If the actual winner remains i, no formal flip is possible.
+
+For three labels, their two independent unit comparison normals have
+Gram eigenvalues1/2 and3/2. Consequently a bound b on the two normalized
+score gaps implies distance at most2b to their FULL triple line. Write
+z=s ell_j+z_perp, |z_perp|=t, where ell_j is the unit triple-ray direction
+on which those three labels beat the fourth. On that line, all relevant
+tie planes contain s ell_j. Define
+
+ H_j(s)=max_(e incident to ray j)|h_e(s ell_j)|, s>=0,
+ h0=max_e |h_e(0)|.                                    (2.3)
+
+For s>=0, the Lipschitz estimate gives b<=H_j(s)+2eta t.
+Absorbing the second term for eta<=1/16 gives
+
+                           t<=4 H_j(s).                 (2.4)
+
+If s<0, the fourth label beats the tied triple along the line. Since i
+was a reference winner, its transverse score correction must overcome
+that gap. The unit-ray normalized gap slope is sqrt(2/3), so |s|<=2t.
+Thus |z|<=3t<=6b. The entire-plane Lipschitz bound gives
+b<=h0+2eta|z|, hence |z|<=12h0 for eta<=1/24.
+
+In particular, using the fixed generous constant A=4096, the entire cap
+defect lies in the union of
+
+  the vertex ball |z|<=A h0,
+  the four triple-ray tubes t<=A H_j(s), s>=0.           (2.5)
+
+For the portions of a tube outside the vertex ball, the fourth-label
+gap is separated quantitatively. Retain the narrow bound(2.4), so
+t<=4h0+8eta s. If |z|>A h0, eta<=2^(-20), then s>=|z|/2; otherwise
+t>sqrt(3)|z|/2 contradicts t<=4|z|/A+4eta|z|. Consequently
+t/s<=8/A+8eta<1/100. The normalized reference gap from each tied-triple
+label to the fourth is at least sqrt(2/3)s-t/sqrt3>4s/5.
+On the other hand every comparison height, including those involving
+the fourth label, is at most h0+2eta|z|<=2s/A+4eta s<s/100.
+No fourth-label comparison can cross. Thus both the actual label and
+all participating formal labels belong to this same triple outside
+the vertex ball. Use the narrow tube for this inference; the wider
+A H tube is only a convenient cover in the estimates.
+
+3. COVER BY REFERENCE-FACET SHADOWS
+
+In a transverse slice of a separated triple tube, the three actual
+reference facet rays make angles120 degrees. Project a point to its
+nearest ray; the angle is at most60 degrees, so its ray coordinate is
+nonnegative, its normal distance is at most the tube radius, and its
+projected ray coordinate is no greater than that radius. The coordinate
+s along ell_j is unchanged because every incident n_e is perpendicular
+to ell_j. The reference-facet base therefore lies in
+
+ x=s ell_j+tau v_(e,j), s>=0, 0<=tau<=A H_j(s),           (3.1)
+
+where v_(e,j) is the inward unit conormal to the edge within Sigma_e.
+The whole quadrant(s,tau)>=0 is contained in Sigma_e, because its sector
+opening acos(-1/3) exceeds pi/2. There is no short-collar or vertex-end
+loss in this assertion.
+
+For a point in the vertex ball, choose a closest supporting plane of
+its containing reference cone. Its orthogonal projection belongs to
+the corresponding actual facet: the other normalized gaps fall by
+at most half the chosen minimal gap. Both projected radius and normal
+distance are at most A h0. Thus vertex defects are also covered by
+reference-facet shadows.
+
+Define a nonnegative shadow height on each original facet by summing
+the at most two incident edge-shadow heights
+
+ A H_j(s) 1_{0<=tau<=A H_j(s)}
+
+and the vertex-shadow height A h0 1_{|x|<=A h0}. Let this sum be r_e(x).
+Every cap point lies in at least one signed-normal shadow |t|<=r_e(x).
+The cover can overlap. Only an upper bound is needed.
+
+With eta A(R+1) sufficiently small, all shadows have height below1 and
+their Gaussian/diagonal weights differ from the weights at their edge
+or vertex by at most a fixed factor. The established bound
+
+ |grad log(d_e lambda-density)|<=C0+(9/8)|x|             (3.2)
+
+justifies this comparison. Here C0=|grad log d_e(0)| is a fixed constant;
+the established curvature bound -I/8<=Hess log d_e<=0 gives(3.2) directly.
+Its explicit value is sqrt(2pi/3)/(4acos(-1/3))<1/2, but that numerical
+comparison is not needed. On a triple ray the three incident d_e are
+equal by permutation symmetry. At the vertex all six are equal.
+
+Let D(h)=sum_e int d_e h_e^2 d lambda_e and
+L(h)=sum_e int |h_e|d lambda_e. Direct integration across the shadow
+width, followed by the weighted trace estimates, gives
+
+ D(r)<=C sum_j int_ray d_j H_j^3 d lambda_ray
+                +C d(0) lambda-density(0) h0^4
+      <=C(R+1)eta D(h),                                 (3.3)
+
+ ||c||_(L1(gamma;ell1))
+ <=C sum_j int_ray H_j^2 d lambda_ray
+                +C lambda-density(0) h0^3
+ <=C(R+1)eta L(h).                                      (3.4)
+
+Here lambda_ray means the density(2pi)^(-3/2)exp(-s^2/2)ds,
+not normalized one-dimensional Gaussian measure. All factors are thus
+consistent with the facet surface measure. H_j^k<=sum_incident |h_e|^k;
+h0^k<=sum_e|h_e(0)|^k. Squaring the sum in r costs multiplicity at most3.
+
+For clarity, the edge trace used in(3.3)-(3.4) is the exact half-strip
+identity, with f compact and Lipschitz,
+
+ int_edge w|f|^k
+ <=[k Lip(f)+sup|grad log w| ||f||infinity]
+                       int_facet w|f|^(k-1).            (3.5)
+
+It holds along the full inward orthogonal quadrant and differentiates
+the weight. Use k=3 with w=d_e lambda-density and k=2 with w=lambda-
+density. At the vertex, |f|>=|f(0)|/2 on the sector disk of radius
+|f(0)|/(4eta)<=1/4. Both weights have fixed positive comparison on this
+disk, giving h0^4<=C eta^2 D(h) after the displayed weight normalization,
+and h0^3<=C eta^2 L(h). These estimates use no D2Phi.
+
+Since exp(-eta^2/2)|h_e|<=|p_e|<=|h_e|, D(h) and D(p) differ by at most
+exp(eta^2), and likewise L(h),L(p). The global certified V0<1 gives
+
+ L(p)<=sqrt(6D(p)),
+ ||c||_1<=C(R+1)eta sqrt(D(p)).                          (3.6)
+
+All these statements apply separately to the second partition.
+
+4. A GLOBALLY BOUNDED ALL-FACET POSITIVE KERNEL
+
+The cap defect may move labels not represented by the facet on which
+its shadow is placed. Thus using the signed incidence matrix of the
+Hessian for cap estimates would be incorrect. Instead use the kernel
+with coefficient2 on EVERY ordered pair of the six facets.
+
+The ordered coefficient-square sum is144, three times the value48 in
+the accepted compact-sector HS envelope. If |t|,|s|<=1 are normal shifts,
+
+ k(x+tn_e,y+sn_f)<=k(x,y) exp(W(|x|,|y|)),
+ W(r,s)=3(r+s)/8+1/2.                                   (4.1)
+
+After division by sqrt(d_e d_f), the square of this positive kernel has
+finite HS norm bounded by
+
+ 3*432 exp(47/8) J0^2,
+ J0=int_0^infinity r(1+r)^2 exp(-3r^2/32)dr<128.         (4.2)
+
+The bound follows from the already proved global envelope and
+(3/4)r<=3r^2/32+3/2. With exp(47/8)<404, it is a fixed finite numerical
+constant (in particular the resulting norm is below2^18). Crucially it
+does not depend on R or on the minimum of d_e in B_R.
+
+The total variation of the cap is bounded by14 times the shadow cover.
+The absolute normal mass on a symmetric shadow is2psi(r_e)<=2r_e.
+Taking absolute values of label coefficients and using(4.2), therefore,
+
+ |<c,T(gtilde-C)>|<=C sqrt(D(r)D(q)),
+ |<k,T(ftilde-C)>|<=C sqrt(D(r_Q)D(p)),
+ |<c,T k>|<=C sqrt(D(r)D(r_Q)).                          (4.3)
+
+These are bounds for actual signed cap measures, not point evaluations
+of a smoothed potential. By(3.3) their combined size is at most
+
+                         C sqrt((R+1)eta) E.            (4.4)
+
+This is the reason the weaker square-root remainder is sufficient. A
+cap-volume estimate alone would not establish(4.4).
+
+5. REFERENCE ROUTING ON THE CAPS
+
+The remaining linear cap terms are <c,T C> and <k,T C>. Their label sums
+are zero. In a triple tube only its three incident labels can contribute;
+the fourth-label gap is separated outside the vertex ball. Reference
+potential differences of those three labels vanish on the triple ray.
+They obey, within distance a<=1 of that ray,
+
+ |G_i(z)-G_j(z)|<=C d_j(s) a
+
+when(R+1)a is bounded. The same assertion at the vertex uses d(0).
+
+Here is a relative-derivative justification, avoiding a tiny lower
+diagonal. On a tie plane, log d has gradient at most |x|/4+1/2.
+Reflection writes the normal potential difference as
+2exp(-t^2/16) int_Ci sinh(alpha(y)t)phi_sigma(y+x/3)dy,
+alpha=(3/8)(-n.y)>=0, sigma^2=8/9. After division by td(x), the positive
+integral is bounded by the tilted moment generating function of alpha.
+For its density proportional to alpha phi_sigma on C_i, radial
+integration gives 9m^2-3|x|m-32<=0 for m=sqrt(E|y|^2).
+The same bound after a tilt uses |x|+|t|. Hence the logarithmic derivative
+of that moment generating function is at most C(R+1). This proves the
+displayed bound for |t|(R+1) small. It applies on the entire tie plane,
+including the small portions outside the original facet.
+
+Combining the extra potential factor a with the cap-volume cover gives
+the cubic/quartic expressions in(3.3), rather than quadratic/cubic mass
+expressions. Therefore
+
+              |<c,T C>|+|<k,T C>|<=C(R+1)eta E.          (5.1)
+
+No adverse reference-routing term has been omitted.
+
+6. EXACT FORMAL ROUTING AND THE MASS DEFECT
+
+For each formal slab, the all-height routing theorem applies algebraically:
+
+ <ftilde-C,T C> >=D(p)/2,
+ <gtilde-C,T C> >=D(q)/2.                                (6.1)
+
+It does not require ftilde or gtilde to be a partition. Likewise the
+cross interaction is K(p,q) plus the bounded kernel-shift remainder.
+The compact estimate or the global remainder lemma gives
+
+ |<ftilde-C,T(gtilde-C)>-K(p,q)|<=C(R+1)eta E.            (6.2)
+
+The formal mass changes are EXACTLY Mp and Mq. Since the ACTUAL masses
+match, their difference is the negative cap-mass difference. By(3.6),
+
+                       |M(p-q)|<=C(R+1)eta sqrt(E).      (6.3)
+
+The Gram of the mass representers is4V0 times identity on1-perpendicular,
+with V0 bounded above and below by the accepted certificate. Projection
+onto ker M therefore changes p_-=(p-q)/2 in D norm by at most the right
+side of(6.3), up to a universal constant. The operator norm of A is3, so
+
+ (D-K)(p_-)>=(8/25)D(p_-)-C(R+1)eta E.                  (6.4)
+
+Thus the exact common-mass condition survives the cap decomposition with
+a RELATIVE small error. It is not replaced by balance or by orthogonality
+to translation speeds.
+
+7. BULK ROTATION GAUGE VERSUS FORMAL BOUNDARY GAUGE
+
+For a skew Omega, let
+ g_Omega,i=-(Omega x).grad G_i,
+ r_Omega,e=n_e.Omega x.
+The reference facet difference is exactly -d_e r_Omega,e. Normalize Omega
+in a fixed Euclidean basis of the three skew matrices, and let zeta be
+the norm of the three actual reference-subtracted moments
+
+             sum_i int(P_i+Q_i-2C_i)g_Omega,i dgamma.   (7.1)
+
+Across a formal slab, expansion of this test gives
+-D(p+q,r_Omega) plus an error at most C(R+1)^2 E.
+Indeed its normal derivative is bounded by C(R+1)^2 d_e near the facet.
+At t=0, the term(Omega n).grad(G_i-G_j) is zero, and the remaining
+derivative is bounded using grad log d. For the off-plane estimate, the
+tilted positive density in Section5 satisfies E|Y|<=C(R+1) and
+E|Y|^2<=C(R+1)^2, uniformly for |t|(R+1) bounded. Differentiating its
+Gaussian factor tangentially inserts -(3/8)Y_T-x_T/8; differentiating
+sinh(alpha t) normally inserts alpha cosh(alpha t). The same tilted
+moment bounds therefore give
+
+ |partial_n(G_i-G_j)|<=Cd_e,
+ |grad_T partial_n(G_i-G_j)|<=C(R+1)d_e,
+ |partial_nn(G_i-G_j)|<=C(R+1)^2 |t|d_e.
+
+For the last estimate use |sinh(alpha t)|<=alpha|t|exp(alpha|t|);
+normal differentiation twice also has only lower-order Gaussian terms.
+In partial_n[(Omega z).grad(G_i-G_j)], the leading normal gradient
+annihilates Omega n, while |Omega z|<=C(R+1). The displayed bounds yield
+C(R+1)^2 d_e when |t|(R+1) is small. This supplies the claimed normal
+test derivative without any second derivative of the deformation.
+
+An independent, more explicit integral derivation is recorded in
+POSITIVE_EXTENDED_DIAGONAL_AND_RELATIVE_POTENTIAL_DERIVATIVES_20261101.txt.
+It defines the positive extended diagonal on all of R3 and expresses
+G_i-G_j as an integral of that diagonal along the normal segment. That
+source independently verifies the relative derivative bounds used here.
+
+For a cap, use LABEL DIFFERENCES of g_Omega, never individual bounded
+potentials divided by d. On a triple tube these differences are at most
+C(R+1)d_j; at the vertex they are at most C(R+1)d(0).
+The quadratic weighted trace with w=d lambda-density then gives cap
+gauge error at most C(R+1)^2 eta sqrt(E). Here
+sum_e int|h_e|d_e d lambda_e<=C sqrt(D(h)) because int d_e d lambda_e
+is a fixed finite constant. Also E<=C eta^2, so the formal-slab error
+C(R+1)^2 E is bounded by C(R+1)^2 eta sqrt(E).
+
+The rotation Gram is a fixed positive matrix. Consequently
+
+ ||P_rot p_+||_D<=C(R+1)^2 eta sqrt(E)+C zeta,
+ p_+=(p+q)/2.                                           (7.2)
+
+The rotation eigenvalue is exactly-1. Applying the accepted common-
+channel gap gives
+
+ (D+K)(p_+)>=(3/8)D(p_+)
+                  -C(R+1)^4 eta^2 E-C zeta^2.           (7.3)
+
+Only an approximate bulk gauge is needed; a cutoff defect of size
+o(epsilon^2) contributes o(epsilon^2) after squaring, with room to spare.
+
+8. ASSEMBLY AND THE ENERGY-TO-MEASURE BOUND
+
+Expand J(f,g) exactly around the formal sums. Equations(4.3),(5.1),
+(6.1),(6.2) give the formal leading quadratic form plus a relative
+O(sqrt((R+1)eta)+(R+1)eta)E error. The leading form is exactly
+
+ .5[D(p)+D(q)]+K(p,q)=(D+K)(p_+)+(D-K)(p_-).
+
+Use(6.4),(7.3), and D(p)+D(q)=2D(p_+)+2D(p_-).
+When eta(R+1)^2 is sufficiently small, all remaining terms are bounded
+by C(R+1)^2 sqrt(eta)E. This proves the asserted inequality(T), subject
+to independent audit of the geometric and relative-potential estimates.
+
+The actual L1 distance is bounded by2L(p)+||c||_1. Equations(3.4)-(3.6)
+and V0<1 imply, after shrinking the universal smallness threshold,
+
+ ||P-C||_(L1(gamma;ell1))<=6 sqrt(D(p)),
+ ||Q-C||_(L1(gamma;ell1))<=6 sqrt(D(q)).                  (8.1)
+
+This proves(L). No minimum Gaussian density on B_R is used.
+
+9. WHAT THIS WOULD AND WOULD NOT CLOSE
+
+For the independently derived growing compact window,
+R^2=(21/5)log(1/epsilon) and eta=epsilon^(11/400-o(1)).
+Then every polynomial(R) times sqrt(eta) tends to zero. Compact cutoff
+and mass repair cost o(epsilon^2), while(8.1) forces E>=epsilon^2/144
+for a nontrivial aligned pair with distance at least epsilon/2. The bulk
+rotation-gauge cutoff defect is also o(epsilon^2). Thus an independently
+audited(T), combined with those separate reductions, would exclude a
+sequence of distinct competitive matched-mass minimizers converging to
+the common rotation orbit of(C,C).
+
+This is a LOCAL isolation implication. It does not prove every globally
+competitive measurable partition is close to that orbit. The certified
+common-mass box alone does not supply such closeness or exclude distant
+competitors. No global Standard Simplex conclusion follows here.
+
+The present detailed proof is in R3. A fiber-preserving cylindrical
+extension can reuse the geometric/trace argument fiberwise and tensor
+the positive kernel with the extra-coordinate OU operator. A claim for
+arbitrary ambient dimensions additionally needs the correct mixed-
+rotation gauge bookkeeping; it is not silently asserted in this note.
+
+10. AN UNGAUGED FIXED-SUPPORT COROLLARY
+
+There is also a direct conclusion for arbitrary compact deformations,
+without assuming a bulk rotation gauge or any minimizer regularity.
+Fix finite R>=1. The formal heights are supported in B_R. The established
+compact rotation-tail angle from
+FINITE_CHANGE_COMPACT_NORMAL_GRAPH_BASIN_20261101.txt gives
+
+ ||(I-P_rot)p_+||_D^2>=beta_R D(p_+),
+ beta_R=d0 sqrt(pi) R^3
+                  exp[-9(R+1)^2/16-kappa(R+1)]>0,
+ d0=acos(-1/3)/(2pi^(3/2)),
+ kappa=sqrt(2pi/3)/(4acos(-1/3)).
+
+This concerns the fixed reference facets, so it applies to the formal
+heights even though the ACTUAL junctions have moved. Replace Section7
+by this angle estimate. With
+
+                  c_R=min(3beta_R/16,4/25)>0,
+
+the preceding cap and approximate-mass arguments give
+
+ J(P,Q)-J(C,C)>=[c_R-C(R+1)^2 sqrt(eta)]E.                (10.1)
+
+For eta small enough depending on R, the right side is at least
+(c_R/2)E. By(8.1), E=0 implies P=Q=C almost everywhere. This is strict
+local minimality among exactly matched-mass compact C1-small ambient
+deformations supported in the fixed ball, including moved triple
+junctions and a moved vertex. It requires no rotation alignment.
+
+The dependence of beta_R on R prevents using this ungauged corollary
+alone with the growing compact window. The bulk gauge is what removes
+that loss in the separate proposed L1-isolation assembly. Neither
+conclusion asserts global optimality among arbitrary measurable pairs.

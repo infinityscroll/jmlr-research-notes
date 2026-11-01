@@ -1,0 +1,21 @@
+{
+  "scope": "Exact constant bookkeeping only; the analytic inequalities are proved in the companion TXT source.",
+  "weighted_envelope_square_upper": 5322240,
+  "one_partition_good_gauge_coefficient": 1048576,
+  "pair_good_cross_remainder_coefficient": 524288,
+  "checks": {
+    "origin_gradient_square_below_one": true,
+    "extended_gradient_factor": true,
+    "extended_hessian_factor": true,
+    "F_second_derivative_factor": true,
+    "normal_first_derivative_factor": true,
+    "normal_second_derivative_factor": true,
+    "mixed_second_derivative_factor": true,
+    "gradient_norm_factor": true,
+    "hessian_operator_factor": true,
+    "rotation_derivative_factor": true,
+    "weighted_envelope_square": true,
+    "final_good_gauge_factor": true,
+    "cross_remainder_factor": true
+  }
+}

@@ -1,0 +1,139 @@
+ARBITRARY MEASURABLE LOCAL STABILITY IN EVERY FIXED FINITE DIMENSION
+2026-11-01. New successor to the R3 transfer-compactness proof.
+
+THEOREM
+For every fixed finite N>=3 there exists epsilon_N>0 such that every pair
+of measurable four-label partitions P,Q of Gaussian R^N, with exactly
+matching label masses and distance less than epsilon_N from the common
+orthogonal orbit of the cylindrical tetrahedral pair, satisfies
+
+ J_(-1/3)(P,Q)-J_(-1/3)(C^N,C^N)
+                    >=d_orb(P,Q)^2/1000.                (1)
+
+Here C_i^N=C_i^3 times R^(N-3),
+ d_orb(P,Q)=inf_(O in O(N)) max{sum_i gamma_N(Pi triangle OCi^N),
+                               sum_i gamma_N(Qi triangle OCi^N)}.
+The common mass vector is free. Equality at the reference objective
+requires a common orthogonal image of(C^N,C^N), up to null sets.
+Reflection of Q gives the correlation+1/3 statement near(C^N,-C^N).
+
+The coefficient1/1000 is universal. The neighborhood epsilon_N is allowed
+to depend on N; this proof does NOT provide a positive dimension-independent
+radius. It remains a local statement and does not exclude distant global
+competitors. It inherits the documented computational premises of the
+accepted all-speed Hessian certificate.
+
+PROOF BY VERIFYING EVERY DIMENSION-SENSITIVE STEP
+The R3 argument is
+ARBITRARY_MEASURABLE_LOCAL_STABILITY_VIA_TRANSFER_COMPACTNESS_R3_20261101.txt.
+The good-fiber and bad-transfer decomposition is unchanged. Write
+x=(x0,z), x0 in R3, z in R^d, d=N-3. The reference potentials, transfer
+costs, and diagonal weights depend only on x0:
+ G_i^N(x)=G_i^3(x0), w_ij^N(x)=w_ij^3(x0), d_e^N(x)=d_e^3(x0).
+The normal acts only in the intrinsic first three coordinates; the
+compressed fiber masses p(y,z),q(y,z) may depend arbitrarily on z. The facet
+and volume measures factor as
+ lambda_e,N=lambda_e,3 tensor gamma_d,
+ gamma_N=gamma_3 tensor gamma_d.
+
+1. ROUTING, COMPRESSION, AND MASS
+The one-dimensional reflection/bathtub argument works at each fixed
+(facet base,z). Its bounds remain exactly
+ D(p)<=2L_P, D(q)<=2L_Q,
+ D(p_abs)<=4L_P, D(q_abs)<=4L_Q.
+The normal cutoff is still delta=2^(-24). The transfer bad region is
+B_ij^3 times R^d. The intrinsic1/|t| integrability proof is unchanged.
+The integral of d_e^(-1) on each full facet is still V0<1, since the
+extra Gaussian factor has total mass1. The mass-representer Gram remains
+4V0 times identity on label space1-perp. All exact mass and
+energy-to-label-L1 calculations therefore retain their R3 constants.
+
+2. BAD AND MIXED OPERATORS REMAIN COMPACT
+The Mehler kernel factorizes:
+ k_N((x0,z),(y0,z'))=k_3(x0,y0)k_d(z,z').
+Each normalized bad-bad operator is exactly its intrinsic3D operator
+tensor T_rho^(d). The same holds for the positive dominating mixed
+bad-boundary operator: its normal-shift exponential envelope depends
+only on the intrinsic coordinates. On L2(gamma_d),
+ ||T_rho^(d)||_HS^2=(1-rho^2)^(-d)=(9/8)^d.
+For every finite d this is finite. Thus each tensor operator remains
+Hilbert--Schmidt, with HS norm multiplied by(9/8)^(d/2).
+
+The normalized bad indicators still have bounded L2 norms and shrinking
+Gaussian_N supports, hence converge weakly to0. Compactness therefore
+removes the actual bad-bad and bad-good interactions as o(L), just as
+in R3. No uniform compactness in unbounded dimension is claimed.
+
+3. GOOD INTERACTION ERROR HAS THE SAME CONSTANT
+The positive normal-shift remainder operator is C_3^# tensor T_rho^(d).
+Its extra-coordinate L2 operator norm is1, even though its HS norm
+depends on d. The accepted intrinsic bound ||C_3^#||<2^18 therefore
+gives exactly the same good-good error
+                         2^19 delta L=L/32.
+This distinction between operator norm and Hilbert--Schmidt norm is
+essential. It preserves the numerical margin231/800 in the final step.
+
+4. THE CORRECT FINITE-DIMENSIONAL ROTATION SLICE
+The reference orbit has stabilizer O(d), acting inside the extra
+coordinates, together with a discrete symmetry group. Near a fixed
+orientation choose the transverse skew-matrix space
+ Omega=[[Q,B],[-B^T,0]],
+ Q in so(3), B a3-by-d matrix.
+Its dimension is3+3d=3N-6. The induced boundary speeds are
+                 r_Omega,e(x0,z)=n_e.(Qx0+Bz).
+These are exactly the accepted all-dimensional common null modes:
+intrinsic rotations plus translations tensor linear extra coordinates.
+They are linearly independent, and their weighted Gram matrix is
+positive definite. Extra-coordinate rotations have zero boundary speed
+and are properly excluded from the slice.
+
+The reference cross-agreement functional has Hessian2D(r_Omega)>0 on
+this finite-dimensional slice. Its first two derivatives have polynomial
+Gaussian growth. Thus the same finite-dimensional C2 perturbation argument
+chooses an exact local bulk orientation for every sufficiently close
+measurable pair. Start by minimizing distance over compact O(N); then
+apply this local SO(N) slice. Label permutations require no additional
+continuous modes: regular-simplex label symmetries are realized by
+orthogonal transformations.
+
+5. MASS AND GAUGE DEFECTS
+The bad mass tests are unchanged, tensor the constant extra function.
+For rotations, the relevant numerator is
+ -(Qx0+Bz).grad_(x0)(G_i-G_j).
+It grows at most linearly in |x0|+|z|. Its square divided by w_ij is
+integrable on the bad region, by the intrinsic bad-cost estimate and
+Gaussian integrability of |z|^2. Thus bad gauge moments are o(sqrt(L)).
+
+For each good fiber, define c as the SUM of the two first normal moments,
+retaining separate multiplicities on the positive and negative sides.
+The same estimates hold in the full boundary D space:
+ D(c)<=4delta^2L, int d c d lambda_N<=exp(delta^2/16)L.
+Hence c/sqrt(L) is bounded and weakly tends to0 in that space.
+The normal derivative of the rotation-test difference is bounded by
+d_e(x0) times a function of the form
+ C(1+|x0|+|z|)(1+|x0|)^2 exp[C(1+|x0|)].
+For fixed Omega this function belongs to L2(d_e lambda_e,N). Thus good
+gauge errors are o(sqrt(L)) for every direction in the finite slice.
+There are finitely many such directions, so the full rotation projection
+is o(sqrt(L)). Constants and convergence thresholds may depend on N.
+
+6. FINAL COERCIVITY AND UNIFORM COEFFICIENT
+The accepted all-speed spectral theorem has the same spectrum inclusion
+[-1,3], common gap3/8 off ALL ambient rotation speeds, and contrast gap
+8/25 on ker M in every finite dimension. The robust quadratic estimate
+therefore applies unchanged with E<=2L and mass/rotation defects
+o(sqrt(L)). It yields
+ liminf_(d_orb->0)[J(P,Q)-S_N]/L>=8/25-1/32=231/800.
+Thus the objective gain is at least L/4 in a sufficiently small
+N-dependent neighborhood.
+
+The good label-L1 bound is still4sqrt6 sqrt(L); bad label-L1 is
+o(sqrt(L)). The post-alignment distance is eventually below10sqrt(L).
+Consequently the gain is at least d_orb^2/400 along every approaching
+nontrivial sequence. Sequential contradiction supplies a neighborhood
+epsilon_N on which the weaker coefficient1/1000 holds, proving(1).
+
+This extension requires no regularity theorem or unknown global
+dimension-reduction theorem. It uses finite-dimensional Gaussian tensor
+identities at the fixed cylindrical reference. Independent audit of this
+successor is requested before treating its statement as accepted.

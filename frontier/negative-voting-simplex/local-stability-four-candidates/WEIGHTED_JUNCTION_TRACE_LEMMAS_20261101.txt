@@ -1,0 +1,88 @@
+WEIGHTED JUNCTION TRACE LEMMAS FOR THE TETRAHEDRAL FACETS
+2026-11-01. Analytic estimates, separated from the geometric cap reduction.
+
+PURPOSE
+This note supplies explicit polynomial-in-radius estimates for cubic
+edge and quartic vertex errors relative to facet L2 energy, and for the
+lower-power errors needed to compare changed measure with facet L1 size.
+It does not claim that every geometric defect has one of these forms;
+that is the separate cap-decomposition task.
+
+1. A HALF-STRIP IDENTITY
+Write(s,t) for orthonormal facet coordinates with s>=0 along a triple ray
+and t>=0 perpendicular inward. A regular tetrahedral facet has opening
+L=acos(-1/3)>pi/2. Hence the entire quadrant s,t>=0 lies in that facet,
+for either boundary ray. There is no need to stop the t integration at
+the other ray. The two quadrants may overlap; summing estimates costs
+at most a fixed multiplicity.
+
+Let f be compactly supported and Lipschitz on the facet. Let w>0 be C1,
+and suppose on the support of f that
+ ||f||_infinity<=a, ||partial_t f||_infinity<=b,
+ |partial_t log w|<=L_w.
+For every k>=2, the fundamental theorem of calculus gives, for a.e.s,
+ w(s,0)|f(s,0)|^k
+ =-int_0^infinity partial_t[w(s,t)|f(s,t)|^k]dt
+ <=(k b+L_w a)int_0^infinity w(s,t)|f(s,t)|^(k-1)dt.     (1)
+The same follows by approximation for Lipschitz f. It is essential to
+differentiate the weight as well; freezing the Gaussian weight along a
+long strip would introduce an unnecessary exponential radius loss.
+
+After integrating s, the cases k=3 and k=2 are
+ int_edge w|f|^3 <=(3b+L_w a)int_facet w f^2,            (2)
+ int_edge w|f|^2 <=(2b+L_w a)int_facet w |f|.            (3)
+
+For w=d_e(x)(2pi)^(-3/2)exp(-|x|^2/2), the established curvature bound
+ -I/8<=Hess log d_e<=0 on the tie plane yields
+ |grad log w(x)|<=|grad log d_e(0)|+(9/8)|x|.
+Thus L_w<=C+(9/8)R on a support of radius R. For Gaussian surface weight
+alone, L_w<=R. Consequently if a,b<=eta,
+ cubic weighted edge errors <=C(1+R)eta * facet D-energy,
+ quadratic Gaussian edge errors <=C(1+R)eta * facet L1 size.             (4)
+All constants here are independent of the support radius apart from the
+displayed linear factor. With R=O(sqrt(log(1/epsilon))) and
+eta=epsilon^(11/400-o(1)), the relative coefficients tend to0.
+
+2. VERTEX ESTIMATES
+Let W be a planar sector of opening L>0 with vertex0. Suppose f is
+Lipschitz with |grad f|<=b and a=|f(0)|. If b=0 and f is compactly
+supported then f=0, so assume b>0. On W intersect B_(a/(2b)),
+                  |f(x)|>=a/2.
+If w(x)>=c_w w(0) on that small sector, then for any p>=1,
+ int_W w|f|^p
+ >=c_w w(0)*(a/2)^p*(L/2)*(a/(2b))^2,
+and hence
+ w(0) a^(p+2)
+ <=[2^(p+3)/(c_w L)] b^2 int_W w|f|^p.                 (5)
+For p=2 this controls a quartic vertex defect by b^2 times facet energy;
+for p=1 it controls a cubic vertex volume by b^2 times facet L1 size.
+
+If a<=eta and b<=eta, use the Lipschitz upper bound eta in the disk
+radius a/(2eta)<=1/2 instead of b. Both relevant weights have a uniform
+positive comparison c_w on the fixed ball B_(1/2), independent of R.
+Thus
+ w(0)|f(0)|^4<=C eta^2 int_W w f^2,
+ w(0)|f(0)|^3<=C eta^2 int_W w |f|.                     (6)
+For six facets or finitely many height components, sum these estimates.
+Finite-dimensional equivalence of their values costs only a fixed factor.
+
+3. ENERGY-TO-MEASURE CONSEQUENCE ONCE GEOMETRY IS SUPPLIED
+Suppose a cap/slab representation of an ambient deformation produces
+facet heights p_e such that its changed Gaussian measure is bounded by
+ C sum_e int|p_e|d lambda_e,
+ plus quadratic edge and cubic vertex expressions controlled by(3),(6).
+Then, for (1+R)eta sufficiently small, its changed measure is at most
+                  C' sum_e int|p_e|d lambda_e.          (7)
+The GLOBAL weighted Cauchy--Schwarz bound is
+ sum_e int|p_e|d lambda_e
+ <=[sum_e int d_e^(-1)d lambda_e]^(1/2)
+   [sum_e int d_e p_e^2 d lambda_e]^(1/2).               (8)
+The first factor is a fixed finite number, already enclosed in the
+accepted translation/mass-angle certificate. It does not deteriorate
+as R grows. Therefore(7) would give E>=c epsilon^2 with a fixed c>0,
+avoiding any exponentially small minimum Gaussian density on B_R.
+
+The hypotheses of this last consequence are deliberately explicit.
+Showing that normal extensions and moving junctions actually admit the
+stated cap/slab representation remains geometric work; equations(1)-(8)
+are the analytic trace and measure estimates available once it does.
