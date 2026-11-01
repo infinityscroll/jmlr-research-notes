@@ -1,0 +1,201 @@
+NEGATIVE PLURALITY AND EXACT MAX-m-CUT FOR SUFFICIENTLY LARGE ALPHABETS
+Integrated theorem and proof, 2 November 2026
+
+STATUS
+Complete internally audited analytic proof manuscript. The local, exterior,
+localization/assembly, and covariance-gap arguments have been reconstructed
+separately and combined below. Reviews were performed by AI agents; external
+expert review and proof-assistant formalization are not claimed. No cited
+author's endorsement, exclusive priority, or resolution of the full
+all-alphabet Standard Simplex conjecture is asserted.
+
+1. THE GAUSSIAN THEOREM
+
+There is one absolute integer m0 such that, for every integer m>=m0,
+every finite N>=m-1, every rho in [-1/(m-1),0), and every measurable
+f:R^N->Delta_m, where Delta_m={u>=0:sum_i u_i=1},
+
+ S_rho(f):=sum_i E[f_i(X)f_i(Y)] >= S_rho(g_m).
+
+Here X,Y are standard Gaussian vectors with E[XY^T]=rho I, and g_m
+is the indicator assignment of the regular m-cell simplex partition,
+extended cylindrically to R^N. Equality holds precisely for those regular
+indicator assignments up to orthogonal transformations, relabeling and
+Gaussian null sets. There is no prescribed-mass constraint on f.
+
+The threshold m0 is existential. This theorem gives the complete negative
+voting interval for every sufficiently large fixed alphabet. It does not
+assert all alphabets, every negative Gaussian correlation, positive noise,
+or an independently chosen pair of rules.
+
+2. DEFINITIONS AND THREE PROVED ESTIMATES
+
+Write r=-rho, L=1+log m, mu=E max_(i<=m) Z_i for iid standard Gaussians,
+alpha=mu/(m-1), w=alpha^2(m-1), beta^2=w/m. For an actual assignment f put
+ p_i=E f_i, B_i=E[X f_i], W=||B||_F^2, delta=||p-U||^2,
+ U=(1/m,...,1/m), Delta=w-W, D=delta+r Delta.
+Let F_p(B) be the maximum linear assignment value with prescribed masses p,
+ R=(w+W)/2-F_U(B), and d=dist_F(B,regular centroid orbit).
+R is nonnegative by covariance concavity and permutation averaging.
+
+We give the exact three interfaces, with their full current reconstructions.
+These are statements about arbitrary fractional measurable assignments.
+They do not assume existence, stationarity, purity or interface regularity
+of a full-noise optimizer.
+
+A. COMPETITIVE LOCALIZATION
+If S_-r(f)<=S_-r(g_m), then, uniformly on the voting interval,
+ p_i in [1/(2m),3/(2m)],
+ 0<=D<=C r^2/m, delta<=2D, |W-w|<=D/r,
+ R<=J:=D/r.
+Proof: assembly/ASSEMBLY_LOCALIZATION_AND_QUANTIFIER_LEDGER_20261102.txt,
+Sections 2--4. The initial scalar Gaussian rearrangement/parity bound first
+puts masses in a fixed positive box. The regularized first-moment optimizer
+and cycle-refined mixed covariance/offset estimate yield
+ V(p)<=w+C L^2||p-U||^2.
+Keeping the universal positive-part degree-two perspective then improves
+the mass and norm bounds. Testing balanced offsets at p proves R<=D/r.
+The KKT/envelope and singular covariance limits are included in that source.
+
+B. LOCAL COMPARISON
+For every fixed A, all sufficiently large m, and any f with the displayed
+mass box and d<=A/m,
+ S_-r(f)-S_-r(g_m)>=delta/2+rR.
+Proof: local/LOCAL_FULL_VOTING_RECONSTRUCTION_AND_SCOPE_20261102.txt.
+This reconstructs the entire signed affine comparison, the weighted cap
+at all amplitudes, and the actual-to-affine routing estimate. Its decisive
+term is +r||M-B||^2, where M is the centroid of the affine assignment with
+f's masses and B's scores. It combines exactly with the affine term:
+ r(w-||M||^2)+r||M-B||^2=2r[(w+W)/2-F_p(B)].
+The offset bound ||h_U||^2<=C L^2 R then closes the comparison. The bound
+is not an additive approximation near the simplex. The cap covers arbitrarily
+tiny amplitudes with fixed moment exponents, and all constants are independent
+of N and positive r in the voting interval.
+
+C. EXTERIOR COMPARISON
+Under competitive localization and d>1/m,
+ J>=R>=c/(m^3 sqrt L),
+ A2(f)-A2(g_m)>=-C L^3 J,
+ |sum_(k>=3)(-r)^k[Ak(f)-Ak(g_m)]|
+                  <=C r^3 m^(7/4)L^(7/2) J.
+Here Ak is the squared L2 norm of Hermite degree k.
+Proof: exterior/EXTERIOR_FULL_VOTING_RECONSTRUCTION_AND_TERMINAL_AUDIT_20261102.txt.
+The hazard calculation retains all labels and moving offsets; its summed
+row bound constructs a centered equal-row TEST matrix. No assertion that
+this test matrix is an optimizer or centroid matrix is made. The credited
+Gaussian-maximum comparison, actual routing loss, and exact tensor
+certificate give the degree-two bound. A direct Gaussian order-statistic
+margin and rare-label hypercontractivity control every higher signed degree.
+The exterior floor pays the absolute Gaussian truncation tail.
+
+The floor and distance bound are also independently reconstructed in
+root/FINITE_GAP_BOOTSTRAP_AND_GLOBAL_PSD_RAY_RECONSTRUCTION_20261102.txt.
+The covariance argument runs along the initial part of a ray to ANY PSD
+endpoint. It does not assume the competitor covariance is full rank or
+Frobenius-close to the identity.
+
+3. THE COMPLETE ASSEMBLY AND RIGIDITY
+
+If f is noncompetitive, the theorem's inequality is already strict.
+Otherwise A applies. If d>1/m, Hermite orthogonality and C give exactly
+ S_-r(f)-S_-r(g_m)
+ >=D[1-CrL^3-Cr^2 m^(7/4)L^(7/2)].
+For every 0<r<=1/(m-1), the losses are bounded by constants times
+L^3/m and L^(7/2)/m^(1/4), which tend to zero. Choose m large enough to
+make their sum at most one half. Since D=rJ>0 in this exterior, this is a
+strict contradiction to competitiveness.
+
+Thus d<=1/m, and B applies with the single fixed choice A=1. Competitiveness
+forces delta=R=0. The finite covariance-gap theorem then gives d=0, so B is
+a regular centroid matrix with ||B||^2=w. Its pointwise linear winner is
+unique outside a Gaussian-null set. The nonnegative routing loss
+ max_i B_i.X-sum_i f_i(X)B_i.X
+has expectation w-||B||^2=0. Hence f is that regular indicator assignment
+almost surely. Conversely, orthogonal transformations and relabelings of
+a regular assignment leave its noise value unchanged.
+
+This exhausts all assignments; there is no annular gap between the branches.
+All constants depend on fixed absolute mass/row boxes or on A=1. Taking
+the maximum of their finitely many eventual thresholds gives one absolute
+m0, independent of f,N,r. The endpoint r=1/(m-1) is included; r=0 is excluded
+from rigidity, as it must be. This proves the Gaussian theorem.
+
+4. PRECISE COVARIANCE AND EXTERNAL DEPENDENCIES
+
+The independent classical-input Hodge successor supplies covariance
+concavity, the factor-1/2 derivative, and finite-simplex normal-strain
+curvature. Its reciprocal-coordinate reduction invokes published
+Colombo--Figalli--Jhaveri 2017 regularity, without the September2026
+regularity preprint. See ../classical-hodge-normal-strain-20261102/ in
+the public release, or completion_evidence_20261102/ in the local source.
+
+The FULL negative-voting proof still uses the stronger cycle-refined
+Ehrhard covariance/offset inequality through mass-window semiconcavity.
+It was reconstructed in the assembly review, Section 2b. The whole
+negative-voting proof is not being called independent of that original
+finite-fan machinery. Both dependencies and their roles are explicit.
+
+Mulgund, arXiv:2607.14087v4, Theorem2.1, is credited for the equal-threshold
+Gaussian CDF comparison. The transformed scores have unit diagonal and
+covariance at least the common-mode matrix 11^T/m, exactly as required.
+No unequal-threshold or unequal-variance extension is used. Singular
+covariances are covered by that source's continuity statement.
+https://arxiv.org/html/2607.14087v4
+Classical Gaussian isoperimetry, intrinsic Ehrhard, Brascamp--Lieb/Poincare,
+and OU hypercontractivity are the other cited external tools.
+
+5. DISCRETE AND ALGORITHMIC CONSEQUENCES
+
+For every fixed m>=m0, fixed rho in [-1/(m-1),0), and epsilon>0,
+Isaksson--Mossel's transfer gives low-degree influence thresholds independent
+of voter count under which every simplex-valued voting rule has agreement
+at least the limiting plurality value minus epsilon. Masses need not be
+balanced. This is the negative Plurality Is Stablest consequence for every
+sufficiently large alphabet.
+
+Put s_m(rho)=S_rho(g_m) and a_m=1-s_m(-1/(m-1)). The credited
+Garcia-Soriano--Miyauchi endpoint analysis identifies this as the
+Frieze--Jerrum rounding ratio. For every fixed m>=m0 and epsilon>0,
+randomized polynomial-time rounding achieves a_m-epsilon in expectation,
+or with high probability by repetition. Under the Unique Games Conjecture,
+achieving a_m+epsilon is NP-hard for nonnegative rational weighted MAX-m-CUT.
+Only the hardness statement is UGC-conditional. No deterministic
+derandomization or numerical m0 is asserted.
+
+The explicit endpoint verifier, one-rule averaging, influence decoder,
+error choices, dimension quantifiers, and absence of a minimax interchange
+are reconstructed in the prior public classical-Hodge supplement's
+algorithmic/ENDPOINT_ONLY_TRANSFER_QUANTIFIERS_AND_ERROR_ORDER_20261102.txt.
+The Gaussian endpoint alone suffices for that exact hardness consequence;
+the entire interval additionally gives the full negative-voting assertion.
+
+6. WHY THIS IS A SUBSTANTIAL TARGET, AND THE CLAIM LIMITS
+
+The original Gaussian/Plurality questions were formulated around 2004 and
+recorded by Isaksson--Mossel. KKMO's 2007 large-alphabet hardness result has
+an additive O(log log m/m^2) residual; for a fixed m that residual does not
+vanish by taking smaller influences. The theorem above removes that exact/
+asymptotic gap for every fixed m beyond one absolute threshold.
+
+Heilman's 2026 paper proves the three-label full-voting case. The September
+2026 Garcia-Soriano--Miyauchi paper explicitly identifies the general-alphabet
+Gaussian endpoint inequality as the remaining sufficient ingredient for
+matching UGC hardness. Its rounding-specific tightness is credited, and is
+not confused with all-algorithm hardness. These are positive primary-source
+locators for the recognized open regime; a claim of exclusive priority or
+of solving all remaining alphabet sizes is unnecessary and is not made.
+
+Primary locators:
+Isaksson--Mossel, Conjectures1.4(ii),1.9; Theorem7.1 and AppendixA:
+https://arxiv.org/html/0903.3362v3
+KKMO, Theorem11, Proposition11.4 and Section11.4:
+https://www.stat.berkeley.edu/~mossel/publications/max_cut_final.pdf
+Heilman, Theorem7.1 and Section1.4:
+https://arxiv.org/html/2608.00333v1
+Garcia-Soriano--Miyauchi, Theorems4.8--4.9 and Section7:
+https://arxiv.org/pdf/2609.35453v1
+
+Reproducible archives and algebra checks support inspection. They do not
+formally certify the analytic proof or guarantee press interest or research
+priority. The wider-correlation quantitative supplement is a separate
+strengthening; it is not needed to establish the theorem proved here.

@@ -1,0 +1,139 @@
+FINITE COVARIANCE GAP: FACET BOOTSTRAP AND GLOBAL PSD RAYS
+Root independent reconstruction, 2 November 2026
+
+Scope: the quantitative covariance remainder used by the exterior full-voting
+proof. This note reconstructs its finite bootstrap from the source, then
+makes the unbounded/singular covariance extension explicit. It uses the new
+classical-input Hodge theorem for concavity and normal strain. It does not
+claim to replace separate cycle-refined mass-window machinery.
+
+Read sources (relative to stochastic/):
+full_correlation_bridge_20261031/
+ BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt
+ ALL_INTERFACE_NEGATIVE_VOTING_SECOND_VARIATION_20261031.txt
+full_standard_simplex_20261031/completion_evidence_20261102/
+ HODGE_COVARIANCE_AND_SIMPLEX_CURVATURE_WITH_CLASSICAL_INPUTS_20261102.txt
+The first source also appears unchanged in the manuscript dependency archive.
+
+1. FACET TILT AND BALANCING, WITH DIMENSION-FREE CONSTANTS
+
+Work on H=1-perp. Put P=I-11^T/m, mu=E max_i G_i,
+alpha=mu/(m-1), w=alpha^2(m-1), L=1+log m, and b=Phi^-1(1-1/m).
+Throughout, m is larger than an absolute threshold, so b^2 is comparable
+with L. The regular score-facet weight is w0=alpha/m.
+
+The normalized regular facet Gaussian has mean mu_e with |mu_e|<=Cb
+and covariance S_e satisfying ||S_e-P||_F<=C. To check the latter
+without a dimension factor: the normal eigenvalue is zero; the one other
+distinguished eigenvalue lies in [0,1]; the m-3 remaining eigenvalues are
+V=1-O(b^2/m). Squaring and summing their deviations gives O(1+b^4/m).
+The formulas follow from the tied-max density proportional to
+phi(t)^2 Phi(t)^(m-2). The conditional remaining coordinates are iid
+Gaussians truncated at t before removal of the common coordinate.
+The covariance upper bound also follows directly from convex Gaussian
+conditioning on the facet cone. Its Poincare constant is at most one.
+
+For K=P+E, ||E||_F=epsilon<=1/8, and shifted score mean h in H, let
+D=P-K^-1 and ell=K^-1 h. On a fixed facet the density ratio is exp(c+q),
+q(y)=y^T D y/2+ell.y, c=-log det_H(K)/2-h^T K^-1 h/2.
+The deterministic trace terms cancel:
+ |tr_H(D)-log det_H(K)|<=C epsilon^2.
+Together with the facet mean/covariance bounds this yields
+ |c+E q|<=C(epsilon b^2+b|h|+|h|^2+epsilon^2).
+There is no uncancelled trace of size sqrt(m)*epsilon.
+
+For the exponential tilt exp(tq), 0<=t<=1, its tangent potential has
+Hessian at least 3I/4. Thus its covariance is at most 2I and
+ Var_t(q)<=C(epsilon^2+|D mu_t+ell|^2),
+ |mu'_t|<=sqrt(2 Var_t(q)).
+Writing v_t=D mu_t+ell gives
+ |v_t|'<=C epsilon(epsilon+|v_t|).
+Gronwall yields |v_t|<=C(epsilon b+|h|), and hence
+ Var_t(q)<=C(epsilon^2 b^2+|h|^2),
+ |mu_1-mu_0|<=C(epsilon b+|h|).
+These estimates justify both density-ratio bounds and the perturbed facet
+mean bound, with no unbounded-coordinate Taylor assumption. The quadratic
+potential remains uniformly confining, so Gaussian domination justifies
+the differentiations. Convex cone approximation gives the same inequalities
+for the nonsmooth boundary.
+
+Consequently, for every facet e,
+ exp(-A)<=w_e(K,h)/w0<=exp(A),
+ A=C(epsilon b^2+b|h|+|h|^2+epsilon^2 b^2).
+
+Along K_t=P+tE, balancing offsets h_t satisfy
+ L_t h'_t=-B_inc W_t c_t,
+ c_(t,e)=a_e^T E K_t^-1(mu_(t,e)-h_t)/2.
+The sign and factor come from the covariance heat identity and the outward
+normal -a_e/sqrt(2). When w_e is between w0/2 and 2w0, the offset Laplacian
+on H has eigenvalues between m w0/2 and 2m w0. Also
+ sum_e w_e c_e^2<=C m w0 b^2 epsilon^2,
+by sum_e a_e a_e^T=mP. Therefore |h'_t|<=C b epsilon.
+This estimate does not multiply the individual facet bounds by m^2.
+
+Choose a large fixed bootstrap coefficient K0 after the last C, then an
+absolute small c1 so epsilon<=c1/b^2 and |h|<=K0 b epsilon force A<log 2.
+Integration strictly improves the assumed offset bound and continues to
+t=1. Thus all weights are between w0/2 and 2w0 on the covariance ball
+||K-P||_F<=c1/b^2. Every constant is independent of ambient dimension.
+
+2. LOCAL CURVATURE INPUT AND NORMALIZATION
+
+Let F(K) be the balanced score value for Gaussian covariance K on H.
+The new Hodge/normal-strain theorem gives
+ -4 D2F(K)[E,E]>=sum_e w_e(K,h_K)(a_e^T E a_e)^2/(a_e^T K a_e).
+The score and physical facet weights agree by coarea. On the above ball,
+denominators are at most 3. The exact centered-matrix identity is
+ sum_e(a_e^T E a_e)^2=m sum_i E_ii^2+(tr E)^2+2||E||_F^2.
+It follows that
+ -D2F(K)[E,E]>=w0||E||_F^2/12.
+The derivative at P is DF(P)[E]=(alpha/2)tr_H E. In particular
+alpha F(P)=w and alpha DF(P)[E]=alpha^2 tr E/2. The 1/2 factor matters.
+
+3. ALL PSD COVARIANCES, NOT JUST A SMALL SCORE BALL
+
+For ANY centered score matrix B, in any finite N>=m-1, set
+ K=BB^T/alpha^2, E=K-P, e=||E||_F.
+K may be singular and e may be large. Invariance under isometries gives
+ F_U(B)=alpha F(K),
+ R_U(B)=(w+||B||_F^2)/2-F_U(B)
+       =alpha[F(P)+DF(P)[E]-F(P+E)].
+For 0<=t<1, P+tE is positive definite on H. Set
+ s=min(1/2,c1/(b^2 e)) if e>0.
+On [0,s], the preceding curvature estimate yields
+ -d2/dt2 [alpha F(P+tE)]>=alpha^2 e^2/(12m).
+On the rest of the ray, the concavity theorem ensures a nonnegative
+curvature measure. Integration of that measure with weight 1-t therefore
+gives, including singular K by continuity,
+ R_U(B)>=c alpha^2 e^2/m * min(1,c/(L e)).                 (A)
+For a fully elementary endpoint argument, first integrate up to any
+T<1 and use the tangent deficit at T; as T increases to one, the initial
+interval's weight T-t tends 1-t and the remainder stays nonnegative.
+No global positive lower eigenvalue of K is assumed.
+
+4. DISTANCE AND THE EXACT EXTERIOR SCALE
+
+Let d=inf_R||B-alpha Q R||_F, QQ^T=P, with R an orthonormal embedding.
+Procrustes gives q^2:=d^2/alpha^2=sum_i(sqrt(lambda_i(K))-1)^2.
+Since |lambda-1|=|sqrt(lambda)-1|(sqrt(lambda)+1), e>=q even if K is
+singular. The function x^2 min(1,c/(Lx)) is increasing for x>=0, so (A)
+implies the same lower bound with e replaced by q.
+
+Competitive norm localization gives ||B||_F^2=O(w), hence q<=C sqrt(m).
+For the exterior d>1/m, alpha is comparable to sqrt(L)/m, so
+ q>=c/sqrt(L). For all sufficiently large m, Lq exceeds the fixed
+transition constant, and therefore
+ R_U(B)>=c alpha^2 q/(mL)>=c q/m^3>=c/(m^3 sqrt(L)).       (B)
+Also d^2=alpha^2 q^2<=C L q^2/m^2 and (B) yields
+ d^2<=C m L q R_U(B)<=C m^(3/2)L R_U(B).                 (C)
+These are exactly the two exterior estimates used by the signed-tail
+assembly, with no missing rank or small-neighborhood hypothesis.
+
+VERDICT
+
+The finite facet-density bootstrap, normal-strain normalization, all-PSD
+ray propagation, global exterior floor and distance bound are established
+by the displayed arguments. The exterior constants have the stated
+m-dependence. The newer Hodge theorem replaces the old covariance calls in
+this chain. The separate mass-window cycle-refined inequality is outside
+this note; it is tracked explicitly by the assembly reviewer.

@@ -1,0 +1,106 @@
+IMMUTABLE RESEARCH SNAPSHOTS
+
+Automatic workflow: .github/workflows/release.yml
+Name: Publish immutable research snapshot
+
+WHEN IT RUNS
+A successful "Verify research release" push run on main triggers publication.
+Forks, pull requests, failed checks and other branches cannot trigger it.
+The verified source SHA must also equal the release workflow's GitHub context
+SHA. A quickly superseded main commit is skipped; the next current verified
+snapshot includes its changes. This guard keeps the attestation's source
+identity equal to the exact source that is packaged.
+
+You can also run this workflow manually on main from GitHub Actions or:
+  gh workflow run release.yml --ref main
+Manual publication first runs all scientific checks in a read-only job.
+Packaging integrity tests run in that read-only job for both triggers.
+Only the subsequent publication job can write releases or obtain attestation
+OIDC credentials. All third-party Actions are pinned to full commit IDs.
+
+WHAT IS RELEASED
+The tag is research- followed by the first 16 characters of the source commit.
+It carries seven assets:
+  research-<commit-prefix>.tar.gz
+  negative_gaussian_simplex_stability_v2.pdf
+  negative_voting_integrated_proof_20261102.txt
+  RELEASE_MANIFEST.json
+  SOURCE_METADATA.json
+  SHA256SUMS
+  build-provenance.sigstore.json
+
+The source archive contains the COMPLETE tracked tree at the exact commit,
+including current proof supplements, reviews and all prior released notes.
+It is built by reading Git blobs, not the working directory; untracked files,
+local tokens and uncommitted edits are excluded. Submodules and symlinks are
+rejected. Every tracked file except the manifest itself must be covered by
+its SHA-256 manifest. Archive ordering, modes, ownership and gzip timestamp
+are deterministic. The standalone PDF preserves the v2 manuscript. The integrated theorem is
+also attached as a standalone text asset; its supporting proof updates are
+in the archive's supplements.
+
+SOURCE_METADATA records the full commit and tree IDs, source URL, workflow
+run and manifest digest. SHA256SUMS covers the five primary assets. GitHub
+Actions attests those assets AND SHA256SUMS together; the signed Sigstore
+bundle is the seventh asset. A signature bundle is verified cryptographically,
+not through a circular checksum of itself.
+
+PUBLICATION AND RETRIES
+Repository release immutability must remain enabled. The workflow checks the
+setting when its token can read it. GitHub requires admin-read permission for
+that settings endpoint, which ordinary GITHUB_TOKEN does not have; in that
+case the workflow warns and enforces the published release's immutable:true
+status, exact tag commit, all asset digests, provenance and release attestation
+before reporting success. No administrator token is added to the workflow.
+
+The workflow creates a draft, uploads all assets, verifies their digests, and
+only then publishes it as a research prerelease. It never moves a tag, replaces
+an asset, uses --clobber, or changes an earlier release. A published matching
+snapshot is verified and treated as an idempotent no-op. A partial draft can
+resume only when its identity and existing asset bytes match. A previously
+uploaded provenance bundle may be reused only after verifying it against the
+entire rebuilt primary payload. Changed bytes fail closed and remain a draft.
+Rerunning the same Actions run keeps the metadata's run URL stable. Starting a
+new run for the same partial draft can conflict because its provenance URL
+changes; inspect the draft rather than overwriting its assets.
+
+VERIFY A DOWNLOADED RELEASE
+Set TAG to the desired tag shown on the Releases page:
+  gh release download "$TAG" --repo infinityscroll/jmlr-research-notes --dir downloaded-release
+  cd downloaded-release
+  sha256sum -c SHA256SUMS
+
+On macOS use shasum -a 256 -c SHA256SUMS instead of sha256sum.
+Read source_commit from SOURCE_METADATA.json, then verify each primary asset:
+  gh attestation verify "research-<commit-prefix>.tar.gz" \
+    --repo infinityscroll/jmlr-research-notes \
+    --signer-workflow infinityscroll/jmlr-research-notes/.github/workflows/release.yml \
+    --source-ref refs/heads/main --source-digest "<full-commit>" \
+    --signer-digest "<full-commit>"
+Repeat for the PDF, negative_voting_integrated_proof_20261102.txt,
+RELEASE_MANIFEST.json, SOURCE_METADATA.json and SHA256SUMS.
+For verification against the downloaded bundle, additionally pass:
+  --bundle build-provenance.sigstore.json
+Then verify GitHub's immutable release attestation:
+  gh release verify "$TAG" --repo infinityscroll/jmlr-research-notes
+
+WHAT THE TIMESTAMPS PROVE
+Use GitHub's server-recorded published_at and the cryptographically verified
+Sigstore transparency-log record as evidence that these bytes existed by the
+recorded time and were produced by this repository's specified workflow.
+Commit dates are author-controlled and explicitly labeled untrusted in the
+metadata. Filenames do not make a timestamp claim.
+
+This strengthens a public priority record; it does not guarantee exclusive
+scientific priority, prevent independent discoveries, establish mathematical
+correctness, or guarantee permanent hosting. Keep downloaded copies of the
+assets, signed bundle and release verification record. Internal mathematical
+audits remain distinct from build provenance and external expert review.
+
+OFFICIAL REFERENCES
+https://docs.github.com/en/code-security/concepts/supply-chain-security/immutable-releases
+https://docs.github.com/en/rest/repos/repos#check-if-immutable-releases-are-enabled-for-a-repository
+https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_run
+https://github.com/actions/attest
+https://cli.github.com/manual/gh_attestation_verify
+https://cli.github.com/manual/gh_release_verify

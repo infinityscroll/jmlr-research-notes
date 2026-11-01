@@ -1,0 +1,360 @@
+LOCAL FULL-VOTING COMPARISON: INDEPENDENT ANALYTIC RECONSTRUCTION
+2 November 2026
+
+VERDICT: PASS for the local branch, with the shared inputs listed below.
+This verdict follows from reconstructing the estimates, not from predecessor
+PASS labels or numerical tests. No failed local proof obligation was found.
+Two useful clarifications are supplied: an explicit two-coordinate construction
+for polynomial facet probabilities, and a shorter rigidity argument that avoids
+calling a separate global first-moment equality theorem.
+
+The local theorem is:
+For every fixed A, for all sufficiently large m (depending on A), all finite
+N>=m-1, all 0<r<=1/(m-1), and every measurable f:R^N->Delta_m with masses
+p_i in [1/(2m),3/(2m)] and ACTUAL centroid matrix B at distance d<=A/m from
+the regular orbit,
+
+  S_-r(f)-S_-r(g) >= ||p-U||^2/2 + r R_U(B).                 (L1)
+
+Here alpha=E max_i Z_i/(m-1), L=1+log m, w=alpha^2(m-1),
+R_U(B)=(w+||B||_F^2)/2-F_U(B), and U_i=1/m. The assertion is uniform in
+ambient dimension and in the entire voting interval, including arbitrarily
+small positive r. There is no purity, stationarity, interface, or L1-closeness
+assumption on f. The reference affine allocation used in the proof has full
+rank as a CONSEQUENCE of the centroid-score ball.
+
+SHARED INPUTS AND EXACT REVIEW SCOPE
+
+The classical-input Hodge covariance/finite-simplex normal-strain theorem is
+an independently supplied input. I inspected its exact use through [F] and
+[U]. [F]'s finite gap is also being reviewed by root. The required statement is
+  d^2 <= C_A m sqrt(L) R_U(B),
+plus the stronger diagonal normal energy retained in [U] Section 7.
+
+The global near-uniform first-moment envelope
+  V(p)<=w+C L^2||p-U||^2
+is used only through [O]'s deficit-relative offset certificate. Its global
+optimizer/compactness proof is assigned to the separate assembly audit; this
+local review does not pretend to reconstruct that global proof. Given the
+envelope, [O]'s entire conditioned-score deduction is reconstructed below.
+
+The equal-row second-chaos input imports Mulgund's equal-threshold Gaussian
+CDF comparison as explicitly credited in [Q]. I inspected the CDF-to-moment,
+offset-cancellation and unequal-row transfer, not the external theorem's proof.
+Classical Gaussian hypercontractivity, isoperimetry, and convex-restriction
+Brascamp--Lieb/Poincare are the other standard analytic inputs.
+
+Every local proof source listed at the end was read. In particular [S]'s tiny-
+amplitude cap, [V]'s fixed-exponent moderate cap, [T]'s affine trace, and [H]'s
+infinite signed-tail passage were checked directly. Their roles are different;
+none is being substituted for another by a favorable label or a finite test.
+
+1. CONDITIONING, OFFSETS AND A FACET CONSTRUCTION WITH NO sqrt(m) LOSS
+
+Align B with a regular B0. Since alpha is comparable to sqrt(L)/m,
+||B-B0||op<=A/m implies that the m-1 singular values lie in [alpha/2,2alpha]
+for all sufficiently large m. This applies to the aligned score segment and
+fixed enlargements needed for covariance projections. Thus rank loss is not
+being ignored inside this local branch.
+
+For a conditioned affine fan with masses in the positive box, M=mathcal L B
+by Gaussian integration by parts. Each centroid row has norm at most
+p_i sqrt(2log(1/p_i))<=C sqrt(L)/m, so the pseudoinverse gives bounded weighted
+graph degrees. Gaussian isoperimetry on a union of k cells gives cut weight
+at least c min(k,m-k)/sqrt(L). Counting-measure Cheeger with bounded maximum
+degree therefore gives lambda_2(mathcal L)>=c/L. This proves [O](3)--(6)
+and [U](4) in their required normalizations; no centroid optimality is used.
+
+Here is an explicit version of [U]'s facet probability argument. Normalize
+B and h by alpha, so singular values are in [1/2,2] and row norms are at most
+2. The two winning halfspaces, each containing a cell of probability >=1/(2m),
+give |h_i-h_j|/|B_i-B_j|<=C sqrt(L), hence H=max|h_i|<=C sqrt(L) in the mean-
+zero gauge. For a specified pair i,j, choose K=8 and T=H+4K sqrt(L), and set
+
+  q_i=T-h_i, q_j=T-h_j,
+  q_k=-(q_i+q_j)/(m-2),  k distinct from i,j.
+
+Then q is centered and ||q||^2<=6(T+H)^2=O(L). Its minimum-norm preimage
+x_* satisfies ||x_*||^2=O(L). At x_* the two selected utilities equal T,
+while every other utility is at most H. This uses only TWO large score
+coordinates; prescribing all other UTILITIES equal would unnecessarily
+introduce the norm of the entire offset vector.
+
+Let n be the pair normal and a its signed offset. Then n.x_*=a, |a|=O(sqrt L),
+and v=x_*-an is tangential with ||v||^2=O(L). On that tangent hyperplane,
+standard Gaussian Z satisfies max_k |B_k.Z|<=K sqrt(L) with probability >=1/2
+by the union bound and row norm bound. The event v+Z stays on the actual
+facet. Gaussian Cameron--Martin Cauchy gives its probability >=(1/4)e^-||v||².
+Hence every intrinsic facet probability is at least m^-C, with no ambient
+small-ball factor and no sqrt(m) offset cost.
+
+This implies [U](5): fixed-degree polynomial conditional moments cost at
+most L^(degree/2), by normal Hermite evaluation at a=O(sqrt L), tangential
+hypercontractivity at exponent C L, and conditioning on probability m^-C.
+The normalized facet law is a convex Gaussian restriction, so its mean has
+norm O(sqrt L) and its centered linear MGF is bounded by exp(|t|²/2).
+
+2. TRACE AND OU RESTRICTION: EXACT DIMENSION-FREE NORMALIZATIONS
+
+For a hyperplane at normal coordinate a, the normal Mehler row has squared
+L2 norm (1-t^4)^(-1/2) exp(t²a²/(1+t²)). Taking t²=1/(2q-1) gives the exact
+cancellation
+  phi(a)^(1/q) K_t(a)^2=(2pi)^(-1/(2q))(1-t^4)^(-1/2).
+The weighted row sum of facet areas is O(alpha); Holder over incident labels
+therefore bounds the effective degree sum mu_e^(1-1/q)/ell_e by O(1) for
+q=2+log(m/alpha). This proves [T](1) and its Hilbert dual [T](2), including
+arbitrary offsets and higher-degree boundary distributions.
+
+For [H](6), the facet normal and an arbitrary contracted normal n0 span at
+most two dimensions. Separate these from their orthogonal complement.
+Normal Cauchy uses only the one- or two-dimensional row norm; tangential
+hypercontractivity at Q=C L, followed by facet restriction, is bounded
+because the intrinsic probability is >=m^-C. A contraction D_theta cannot
+increase the row exponent. Derivatives use the exact identity
+  grad^j T_t=(2t)^j T_(2t) grad^j T_(1/2), j=1,2,
+and the bounded L2 derivative operators grad^j T_(1/2). Hilbert--Schmidt
+tensor norms retain dimension independence. There is no pointwise full-N
+Mehler determinant in these estimates.
+
+3. AFFINE SECOND CHAOS AND THE ENTIRE SIGNED TAIL
+
+[U] first proves the balanced score Hessian bound |D_B² A2[Z,Z]|<=C_A L^10||Z||².
+The balancing velocity k has energy sum_e w_e E l_e²<=C L||Z||² and norm
+||k||<=C L||Z||. The adjoint equation mathcal L c=div(w E(q_i-q_j)) removes
+the WHOLE coefficient of h'' from the actual fixed-mass second derivative.
+The coherent affine field V=-B^+(ZX+k) moves all facets and intersections.
+Its derivative of 1/ell combines with surface divergence to give div_gamma V;
+this yields [U](15), including the Z_e.V term. Junction terms cancel under
+one common field. For A2, the other term is ||Q'||², not a second copy of it.
+
+The Gaussian trace in div_gamma V cancels its quadratic mean. Conditional
+polynomial bounds therefore involve its Frobenius coefficients, not N. The
+regular reference difference factors as gamma(X_i-X_j)(X_i+X_j) and vanishes
+on regular facets. On the current facets, X_i-X_j=-delta l_e/alpha. This
+supplies the deficit factor in the adjoint and transport errors; summing
+edge-local factors with graph weights avoids an extra sqrt(m).
+
+A generic score Hessian bound alone would be insufficient. The actual
+unequal-row transfer keeps the diagonal term from the new normal-strain
+inequality. With normalized covariance K=P+E, decompose E=E_d+E_s, where
+E_s has zero diagonal and E_d=m/(m-2) P diag(diag E)P. Writing a=||E_d||,
+b=||E_s||, the initial covariance segment yields
+  R >= c_A alpha² (m a²+b²)/(m sqrt(L)).
+The covariance Hessian bounds give rectangle errors at most
+C_A alpha² L^10 a(a+b). Since a²<= (m a²+b²)/m and
+ab<= (m a²+b²)/(2sqrt(m)), these are affordable at cost
+C_A sqrt(m)L^13 R. The constant-diagonal projection has a fixed positive
+spectral bound, so [E]'s equal-row affine theorem applies exactly. Scaling
+B has the exact radial identity R(t Btilde)=w(t-1)²/2+tR(Btilde).
+
+I checked [E]'s nonzero-offset cancellation directly: its certificate numerator
+G_1-G'_1+A_1-1 equals G_0-1 minus
+int_0^1 s sum_e w_e h_e²(B_i+B_j).m_e ds. The offset path loss is
+F_0-F_1=int_0^1 s F''_s ds. Thus the terminal G'_1 is canceled, not set to zero.
+The facet conditional mean O(sqrt L) pays the correction. The free CDF gap
+is nonnegative by the credited external theorem; its tail has the same ||D||²
+amplitude as the covariance mean gap. This prevents an additive error floor.
+The tensor denominator is at most its regular value. [Q] and [E] therefore
+give the equal-row input used above without a CDF claim for affine maxima.
+
+The mass-path adjoint gives |A2(B,p)-A2(B,U)|<=C L³(d||p-U||+||p-U||²).
+Using d²<=C_A m sqrt(L)R pays this by R+C_A mL^7||p-U||². Consequently
+  A2(f0)-A2(g)>=-C_A sqrt(m)L^13 R-C_A mL^7||p-U||².
+
+For [H], the regular tail potential factors as q_i^0=T_t v_i^0 with
+||v_i^0||2<=C(rL)^3/m: hypercontractivity before projecting retains 1/m,
+not merely 1/sqrt(m). Its pair difference is odd in the reference normal.
+Normal integration plus the restriction lemma gives a quotient of size
+C r³ L^(5/2)/m and gradient C r³ L²/m on EVERY current facet.
+The change from the regular potential has input norm <=C r³ L^(7/2)d,
+and the adjoint norm is <=C r³ L^4 d. The coherent second variation then
+has absolute value <=C_A r³ L^10||Z||². The mass path obeys the same bound
+with d+||p-U||. Finite Hermite cutoffs have bounds uniform in the cutoff;
+the factors r/t² and ((r/t)² Lambda)^(1/2) are below 1, so potential,
+boundary quadratic and transport derivative tails all converge. This
+justifies the ENTIRE signed tail, rather than a formal finite truncation.
+
+Writing z=p-U and W(f0)=||M||², the resulting affine comparison is
+  S(f0)-S(g) >= [1-C_A(r²mL^7+r³L^10)]||z||²
+    +r[w-||M||²]-C_A[r²sqrt(m)L^13+r³mL^11]R.              (L2)
+
+4. EXACT ACTUAL-TO-AFFINE IDENTITY AND REGULAR REFERENCE GAP
+
+Take f0=g_(B,p), M=M_f0, v=f-f0, D=d+||z||, and
+L_route=F_p(B)-||B||²=<B,M-B>>=0. This relies on B=M_f and feasibility
+of f in the same mass class, not on stationarity. Put
+u=T_sqrt(r) Pi_(odd>=3)v, so ||u||<=sqrt(2)r^(3/2).
+Hermite orthogonality gives the exact first-chaos contribution
+r[2L_route+||M-B||²]. Replacing -||u||² by
+||u||²-2<v,T_sqrt(r)u>, and dropping only the nonnegative even square,
+gives [L](2):
+  S(f)-S(f0)>=r||M-B||²+||u||²
+               +2[rL_route+<v,q0+a>],
+  a=qB-q0-T_sqrt(r)u,  qB=T_-r Pi_(>=2)f0.
+The positive residual r||M-B||² is retained throughout.
+
+[R]'s pair-weight integral and two-label swap produce a positive divided
+coefficient k_ij with (T_-r g)_j-(T_-r g)_i=r k_ij c_ref. This is valid
+on either side of a reference face, not only at a reference winning label.
+On an old affine cell i,
+  r c_ij+q0_j-q0_i=r k_ij c_ij+r(1-k_ij)(delta l_i-delta l_j).
+With kappa=exp[-1-eta|P0x|²], eta=O(r²L), one has k_ij>=kappa. The explicit
+smooth log-sum-exp range majorant supplies |1-k_ij|<=e_r. Setting
+psi_i=kappa^-1[e_r|delta l_i|+|a_i|/r] gives the lower bound by
+-r times the cap max(0,max_(j!=i)[psi_i+psi_j-c_ij]). The diagonal is excluded;
+it would otherwise introduce an artificial zero-cost reward.
+
+5. THE CAP IS QUADRATIC EVEN AT ARBITRARILY TINY AMPLITUDES
+
+At q=C1 L, including every fixed multiple used in Holder, radial moments
+are bounded. Indeed, for a convex facet restriction and a projection P of
+rank <=m,
+E exp(b|PY|²)<=(1-2b)^(-m/2)exp[b|P EY|²/(1-2b)].
+Here b=q eta has b m=O(L²/m), and |EY|²=O(L). This is independent of N.
+The smooth range majorant satisfies ||e_r/r||q<=C L^(3/2). The same factors
+and their first two normal derivatives have polynomial-in-m L32 bounds on
+each entire pair plane and unit normal tube.
+
+By the affine trace and restriction estimates,
+  qB-q0=T_t vD, ||vD||<=C r²L^(5/2)D,
+  T_sqrt(r)u=T_t vu, ||vu||<=C r^(3/2)L^(3/2)||u||.
+Consequently the vector Lq norm of psi is at most
+C[r L^(5/2)D+sqrt(r)L^(3/2)||u||], and its weighted facet-square sum is
+at most C[r²L^5D²+rL³||u||²]. Choose
+  theta=C2 L^4[rD+sqrt(r)||u||].
+Then v_i=psi_i/theta has bounded vector Lq norm and weighted facet-square
+sum. If theta=0 the forcing vanishes. Otherwise theta<=C_A L^4 m^-3/2,
+hence <=m^-5/4 for all sufficiently large m.
+
+Moderate amplitudes theta>=m^-B use the separate source-exit and target-entry
+margins. Their small-sublevel measures are <=Cs up to c/m: shifting one
+offset is a Gaussian translation of size O(s/alpha); Cameron--Martin preserves
+rare cell masses, and M=mathcal L B bounds the mass derivative. The Lq
+bathtub estimate and label Holder sum give
+C[m^(1/(q+1))theta^(2q/(q+1))+(c/m)(C theta m/c)^q].
+With q=C1 L fixed independently of theta, this is O_B(theta²) throughout
+m^-B<=theta<=m^-5/4. It is not claimed quadratic by this argument alone
+for theta tending to zero at fixed m.
+
+For smaller theta, [S]'s normal-sup proof applies to the STRUCTURED forcing.
+After division by theta, the smoothed input norms divided by r are bounded:
+||vD||/(r theta)<=C and ||vu||/(r theta)<=C. For the polynomial term,
+rD/theta<=C L^-4. Thus no division by a vanishing r or label amplitude
+remains. Absolute values are locally Lipschitz; first derivatives are bounded
+by those of the analytic factors, and second analytic derivatives control
+the normal supremum of first derivatives. Entire-plane L32 norms are at most
+m^C, also after multiplying by the radial factor via Holder.
+
+With M_cut=theta^-1/8, good projected points have normal reward width
+O(theta M_cut/alpha). Taylor and Gaussian-density errors are O(m^C theta³M_cut³).
+A projection outside the actual facet that enters an old cell lies in a
+third-label strip of this width; tangent comparison altitudes are >=c alpha
+by the singular-value bound. Their union and the ordered-pair sum cost only
+a fixed polynomial in m. Bad projected points cost O(m^C theta M_cut^-31)
+and normal distances above 1 cost O(m^C theta^32). The main term is
+C theta² sum_e w_e E(v_i²+v_j²), bounded by C theta². Hence
+  Bcap <=C theta²+C m^K theta^(21/8).
+A fixed B>max(B0,8K/5), enlarged to absorb constants, pays the remainder
+for theta<=m^-B. Joining the two regimes proves the quadratic cap for ALL
+amplitudes with fixed exponents. There is no hidden amplitude floor or
+ambient-dimensional factor.
+
+Substitution in the exact identity yields, uniformly on voting r,
+  S(f)-S(f0)>=r||M-B||²-C r³L^8(d²+||z||²),                 (L3)
+because the remaining coefficient of ||u||² is at least 1-Cr²L^8>0.
+This estimate is relative in d and z, not an additive tail bound.
+
+6. FINAL CANCELLATION, OFFSETS AND UNIFORMITY
+
+Add (L2) and (L3). Since <B,M>=F_p(B),
+  r[w-||M||²]+r||M-B||²=2r R_p(B).
+The finite gap pays d² by C_A m sqrt(L)R, and its error is absorbed by
+r³mL^11R. The mass-square error is absorbed by r³L^10||z||².
+Balanced offsets h_U are a dual competitor for any p, giving
+R_p>=R+h_U.z.
+
+Given the shared mass envelope, [O]'s deficit-relative certificate is complete:
+the graph gap gives F_pp=-mathcal L^-1>=-CL I; combining this lower Taylor
+bound with the global upper envelope gives
+-h_U.z <=R+CL²||z||²/2. Pair halfspaces imply ||h_U||infinity<=CL/m, so
+z=-h_U/K with K comparable to L² stays in the positive mass box. Substitution
+gives ||h_U||²<=C L²R. Young then gives
+2h_U.z>=-R/2-C L²||z||².
+
+Therefore
+ S(f)-S(g)>=[1-C_A(rL²+r²mL^7+r³L^10)]||z||²
+   +[3/2-C_A(r sqrt(m)L^13+r²mL^11)]rR.                    (L4)
+Every displayed loss tends to zero uniformly for 0<r<=1/(m-1): the largest
+relevant forms are L^7/m and L^13/sqrt(m), with all constants independent
+of N and r. Choose one sufficiently large threshold depending on A to make
+the two brackets at least 1/2 and 1, respectively. This proves (L1).
+The threshold is existential; no small-alphabet result is claimed.
+
+7. A SHORTER EQUALITY ARGUMENT
+
+If f is competitive, (L1) forces z=0 and R=0. The finite gap already implies
+d=0, so B is a regular centroid matrix. Its unique pointwise linear argmax
+g_B is a regular partition and attains E max_i B_i.X=w. Since B=M_f,
+E sum_i f_i B_i.X=||B||²=w as well. The nonnegative pointwise routing loss
+thus has integral zero. The regular argmax is unique outside a Gaussian
+null set, so f=g_B almost surely. This also treats fractional f. There is
+no need here to invoke a separate global first-moment equality theorem.
+
+CONCLUSION AND LIMIT
+
+The local branch closes with the advertised coefficient and every original
+quantifier. The all-amplitude cap and full signed affine comparison are
+substantive ingredients, but their arguments survive reconstruction. The
+only additional clarification needed was spelling out the two-coordinate
+facet witness; [Q] already contains that construction. The shorter equality
+argument reduces a redundant dependency.
+
+This review proves the local implication. It does not establish that every
+competitive assignment enters the score ball, nor replace the exterior branch,
+global mass-envelope audit, or current-literature assessment. Those are named
+separate components of the whole theorem, not newly invented completion gates.
+No frozen source, public repository, email, or paid computation was changed.
+
+SOURCE KEY (all in the frozen dependency_review/proof_sources directory)
+[L] OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt
+[H] FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt
+[U] UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt
+[T] AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+[V] FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt
+[S] ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt
+[R] SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt
+[F] BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt
+[O] CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt
+[E] BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt
+[Q] CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt
+The direct main assembly DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt
+was also inspected for the exact interface at d<=1/m. For that application A=1
+is fixed once, so the local threshold is independent of the competitor.
+
+FROZEN SOURCE SHA256 PINS AT REVIEW TIME
+OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt
+1a489344ac28cfa562f110b4d1143d38e5262a0b61f04c5aa39cd558e3f9eedd
+FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt
+7388c94860fab24b1c033d4b52e1a2ed74a71622201a2abe0f0a430f3b5b764c
+UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt
+5f2ef775159f53f277d248995d17c138c2fbc53e27a089a2dea164aba7051432
+AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+3ee89046f356ae3232ee3d9e627ad66c62492a379a4bf036976c46f6f848e057
+FINITE_HIGH_CHAOS_PERTURBATIONS_OF_CONDITIONED_LINEAR_FANS_V2_20261031.txt
+3b6bd981d0508f8ce9487b27659b4203473266fb7721f4acb0f8c3d74793f3a1
+ALL_SMALL_AMPLITUDE_HIGH_CHAOS_CAP_FOR_CONDITIONED_FANS_V2_20261031.txt
+aca4da1519de156b684a61425e733eb7f1f9b58621f324ded01a0df2cf8ba58a
+SHARP_RESUMMED_NEGATIVE_SIMPLEX_GAP_AND_GAUSSIAN_DAMPING_20261031.txt
+f0f22a63d1b021ac51bd363622e2b36514043abf88575372727dc8ebadabba3f
+BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt
+47e441ee7aa0311c622a8726cd5d3fe917943fbe06a6b5185afd054cc388d21e
+CONDITIONED_SCORE_OFFSET_CERTIFICATE_AND_NEAR_BALANCED_FINITE_DUAL_20261031.txt
+111ac79daea5ed3659461c020f3caec174f68ebf50c2980ee9542c2d3d6ba9c7
+BALANCED_AFFINE_OFFSET_CANCELLATION_AND_EQUAL_ROW_SECOND_CHAOS_20261031.txt
+9abf2430423c2effd05b659ec2dca9d6e5ec456911fcf1940a055fa99d2678be
+CONDITIONED_EQUAL_ROW_CONICAL_FINITE_SECOND_CHAOS_COMPARISON_20261031.txt
+28c75e2e691e5b54c19bf3e8da1e69a3a6b84ed8aa7106dfad9d8db970ffa500
+DIRECT_COMPETITIVE_ASSIGNMENT_PROOF_WITHOUT_ATTAINMENT_20261031.txt
+c33cd021f18037d3e0d9ef32c6205aad593b31b58e844ae6e7ab0e60c3cc44f8
+Classical Hodge input HODGE_COVARIANCE_AND_SIMPLEX_CURVATURE_WITH_CLASSICAL_INPUTS_20261102.txt
+98050b4e300f5fa686d938428e1e4f46a8956ef0fc259dd791b15e0f7f85375d

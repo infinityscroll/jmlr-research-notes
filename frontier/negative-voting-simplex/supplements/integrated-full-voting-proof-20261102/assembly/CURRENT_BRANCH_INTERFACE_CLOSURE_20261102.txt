@@ -1,0 +1,66 @@
+CURRENT BRANCH INTERFACE CLOSURE
+2 November 2026. Addendum to the assembly/localization ledger.
+
+The contemporaneous local and exterior reconstruction notes are now available
+and have been read. Their statements and displayed derivations match the
+required interfaces (L), (E2), and (ET) in the assembly ledger.
+
+LOCAL: PASS. The local note applies to arbitrary fractional assignments with
+ACTUAL centroids, positive mass box, d<=A/m with A=1 fixed, all finite N>=m-1,
+and every 0<r<=1/(m-1). Its final bracket estimate is
+ [1-C(rL^2+r^2mL^7+r^3L^10)] delta
+ +[3/2-C(r sqrt(m)L^13+r^2mL^11)] rR,
+which gives delta/2+rR for one absolute eventual m threshold. The positive
+r||M-B||^2 term is kept until the exact affine cancellation. The structured
+cap treats both moderate and arbitrarily tiny amplitudes, so no competitor-
+dependent lower cutoff in r or distance has been introduced. The mass-envelope
+input shared with that note is established in Sections 2--3 of my ledger.
+
+EXTERIOR: PASS. The current note reconstructs the coordinatewise hazard
+remainder and summed-row support estimate, handles singular targets in the
+proxy construction, checks the exact modern external CDF theorem's scope,
+and derives both the quadratic certificate and the entire signed higher tail.
+Its final estimates are exactly (E2) and (ET). Its independent top-two-gap
+calculation supplies the margin used for fractional routing, with no reliance
+on the more delicate affine-cap theorem in the local branch. Its shared
+localization and mass-envelope inputs are established in my ledger.
+
+FINITE GAP: PASS. Root's new independent note gives the all-PSD lower bound
+and the two exterior scales. I checked its covariance derivative factor,
+centered-edge identity, initial-ray integral, singular endpoint passage, and
+Procrustes powers. The new classical-input Hodge theorem supplies its two
+covariance calls. The separate cycle-refined offset estimate retained by the
+mass envelope remains explicit and was reconstructed in my ledger.
+
+The dependency graph therefore closes: localization uses only first-moment
+optimization, geometric covariance/offset inputs and Hermite parity. The
+local and exterior branches use that localization or its mass envelope; neither
+is used circularly to prove the initial mass envelope. The exterior excludes
+d>1/m strictly. The local branch forces delta=R=0; the finite gap then forces
+regular centroids, and zero pointwise routing loss forces the regular indicator
+assignment even for originally fractional f. No full-noise minimizer existence,
+purity theorem, stationarity, or interface regularity of f is needed.
+
+The assembly proof with the stated classical and expressly credited external
+inputs now has all its listed analytic obligations supplied by current source
+reconstructions. My integrated assembly verdict is PASS. There is no specific
+failed analytic or quantifier obligation to report from this review.
+
+This is an internal analytic proof audit. It does not convert the result into
+formal verification, external expert endorsement, or a solution of every
+alphabet/all negative correlations. It does support the exact eventual-large-
+alphabet theorem and its fixed-alphabet consequences in their stated scope.
+The root's final goal assessment should use the actual reconstructed proof
+and the current primary significance evidence, without adding small alphabets
+or external endorsement as new mandatory gates.
+
+Current branch source pins (paths relative to full_standard_simplex_20261031):
+integrated_completion_audit_20261102/local/LOCAL_FULL_VOTING_RECONSTRUCTION_AND_SCOPE_20261102.txt
+SHA256 ec70dff1bef0f4ce3a4b9cc3367e546f87425ecb22e564f334a2e4f5e1ba59db
+
+integrated_completion_audit_20261102/exterior/EXTERIOR_FULL_VOTING_RECONSTRUCTION_AND_TERMINAL_AUDIT_20261102.txt
+SHA256 c9bdede73d517df7cf8644c3852d78307862a590ad84a51bbabedae762b33fec
+
+integrated_completion_audit_20261102/root/FINITE_GAP_BOOTSTRAP_AND_GLOBAL_PSD_RAY_RECONSTRUCTION_20261102.txt
+SHA256 506e48c4e7119f770602f8032196d480e0f3d40b0b17f8516ff6e716ab64a9ed
+

@@ -1,0 +1,345 @@
+ASSEMBLY, LOCALIZATION, AND QUANTIFIER LEDGER
+Independent reconstruction, 2 November 2026
+
+VERDICT AND SCOPE
+
+PASS for the theorem assembly, initial localization, mass-window transitive
+argument, equality classification, and uniform quantifiers reconstructed
+below. This is a modular analytic assessment: the current local and exterior
+reviewers supply separate full proofs of their two branch estimates. Their
+current results, rather than older PASS labels, must be combined with this
+record before a whole-proof completion decision. No new algebraic or
+quantifier obstruction was found in the obligations handled here.
+
+One dependency clarification matters. The new Hodge theorem replaces
+concavity and normal strain in the finite covariance-gap calculation.
+The full negative-voting proof ALSO uses the cycle-refined mixed covariance/
+offset inequality through mass-window semiconcavity. That refinement is not
+implied by the new normal-strain bound alone. Its existing finite-fan proof
+was read and reconstructed below; it remains an explicit valid input.
+Thus the full proof must not be described as independent of all original
+finite-fan/chain-complex machinery. No mathematical repair was needed for
+this clarification.
+
+This note assesses the preserved full voting range, not the later optional
+beyond-voting extension. It does not establish formal proof-assistant
+verification, exclusive priority, or external expert endorsement.
+
+1. EXACT STATEMENT AND REQUIRED BRANCH INTERFACES
+
+There must be ONE absolute integer m0 such that, for every m>=m0, every
+finite N>=m-1, every 0<r<=1/(m-1), and every measurable
+f:R^N -> Delta_m,
+  S_{-r}(f)>=S_{-r}(g),
+with equality exactly regular indicator assignments up to orthogonal maps,
+label permutations and null sets. g is the regular Gaussian m-simplex
+assignment in the same ambient space. No masses are prescribed for f.
+
+Put L=1+log m, mu=E max_i Z_i, alpha=mu/(m-1),
+w=alpha^2(m-1), beta^2=w/m. For actual assignment centroids
+B_i=E[X f_i], let p_i=E f_i, U=1/m,
+  delta=|p-U|^2, W=||B||_F^2, Delta=w-W,
+  D=delta+rDelta, R=(w+W)/2-F_U(B), J=D/r.
+Let d be the Frobenius distance of B from the regular centroid orbit.
+
+Required local interface, with A=1 fixed:
+  d<=1/m, p_i in [1/(2m),3/(2m)]
+  ==> S_{-r}(f)-S_{-r}(g)>=delta/2+rR.                 (L)
+It concerns actual centroids of arbitrary fractional f.
+
+Required exterior interfaces after competitive localization and d>1/m:
+  R<=J, J>=c/(m^3 sqrt L),
+  A2(f)-A2(g)>=-C L^3 J,                             (E2)
+  |sum_(k>=3)(-r)^k(Ak(f)-Ak(g))|
+                 <=C r^3 m^(7/4)L^(7/2) J.          (ET)
+There is no assumption that f is an affine maximizer, stationary, pure,
+or an attained full-noise minimizer in these interfaces.
+
+2. THE MASS-WINDOW ESTIMATE: TRANSITIVE PROOF RECONSTRUCTED
+
+The required bound is
+  V(p):=sup_(E f=p)||M_f||^2 <= w+C L^2 |p-U|^2
+on a fixed box c/m<=p_i<=Cbar/m, with c,Cbar fixed absolutely.
+The source represents V(p)=max_(C>=0) g(C,p),
+  g(C,p)=2 F_p(C)-tr C,
+where C is a covariance on H=1-perp. This representation also covers
+fractional assignments: square completion converts the centroid norm to
+sup_B(2< B,M_f >-||B||^2), and the finite prescribed-mass linear assignment
+support is the same for pure and fractional assignments. A pure maximizing
+linear assignment exists by the finite Gaussian dual, splitting duplicate-
+score ties measurably if needed. Hence every fractional actual W<=V(p).
+No full-noise purity assertion follows or is used.
+
+For C>=epsilon I_H, strict concavity gives a unique maximizer Ceps(p).
+The elementary bound F_p(C)<=sqrt(tr C) gives a common trace bound.
+Adding an independent Gaussian to a coupling gives F_p(C+epsilon I)>=F_p(C),
+so uniformly in p,
+  0<=V(p)-Veps(p)<=epsilon(m-1).                       (2.1)
+The mixed estimate at these optimizers is
+  |D_C h[A]|^2<=K(c,Cbar) L^2[-F_CC[A,A]].            (2.2)
+Here h is the mean-zero mass offset. I checked its source rather than
+assuming the source's historical audit status.
+
+2a. Why the regularized graph supplies (2.2)
+
+At every true covariance optimum, square completion gives B=M. Re-split
+any two cells, keeping their union fixed, along a direction perpendicular
+to B_i+B_j. The unnormalized projected union has density at most phi(0).
+Its upper/lower masses p_i,p_j then have projected centroid difference at
+least p_i p_j/phi(0). Since the old split maximizes the squared norm,
+  |B_i-B_j|>=sqrt(2pi) p_i p_j.
+The entropy centroid bound supplies the corresponding O(sqrt L/m) upper
+bound. Compactness of the CLOSED OPTIMIZER GRAPH transfers both estimates
+with slack to Ceps(p), uniformly in the fixed mass box for each fixed m.
+No continuity of individual optimizer fibers or positive rank of a limiting
+optimum is required.
+
+At a regularized optimizer, Price/envelope differentiation gives
+2 D_C F_p=mathcal L, and KKT gives
+  0<=mathcal L<=I_H,
+  (I_H-mathcal L)(Ceps-epsilon I_H)=0.
+Thus physical graph degrees are at most one. Gaussian isoperimetry for
+unions of cells and the upper edge-length bound give cut conductance
+h0=c/[4Cbar sqrt(pi L)]. Delete edges of weight less than m^-4. A cut
+loses at most |S|m^-3, so the retained graph still has conductance h0/2
+and counting-measure spectral gap
+  lambda_*>=c^2/[128 Cbar^2 pi L].
+All constants are dimension-free.
+
+For retained edges, pair separation implies the intrinsic facet probability
+pi_e>=pi c^2/m^6; positive cell masses imply normalized offset
+q_e^2<=2L. Intrinsic Ehrhard gives
+  a(pi_e)^-1<=[56 exp(3/2)]L,
+where a(p)=1+Phi^-1(p)p/phi(Phi^-1(p)). These are statements about actual
+facet probabilities, not cell masses substituted for facet probabilities.
+
+2b. The retained cycle-refined inequality
+
+The needed estimate is
+  -4F_CC[A,A]>=sum_e w_e {x_e^2
+                   +a(pi_e)[2h'_e-q_e x_e]^2},         (2.3)
+where x_e=d_e^T H d_e/|d_e| at a whitened covariance base and
+q_e=h_e/|d_e|. This is stronger than normal strain alone.
+
+In the original finite-fan proof, let E_e=w_e(P_e-Cov_e X),
+N_e T_e^T=E_e, B_e=N_e^-1 E_e N_e^-T, and triangle-weight matrix Dg.
+The boundary integration identities and global barycentric vectors give
+  A-B=-Dg partial_3 diag(mu_h/(6Vol_h)) partial_3^T Dg.
+I checked the off-diagonal shared-edge terms and diagonal outside-vertex
+sums in Sections 3--5 of that proof. All target simplex faces exist and
+have positive intrinsic Gaussian mass; every N_e is a square invertible
+tangent-space matrix. The identity uses no inverse covariance deficit.
+Choose the weighted gauge partial_3^T Dg lambda=0 while retaining the
+fixed cycle j=partial_2 lambda. This gives the exact cycle norm.
+
+For the actual least-squares minimizing offset b, put
+j_e=w_e(z_e.m_e+db_e), eta_(e,g)=(partial_2)_(e,g)lambda_g,
+and r_e=z_e-N_e^-T eta_e. The two exact identities are
+  sum_e r_e^T E_e r_e=sum_e z_e^T E_e z_e-CYC,
+  r_e.P_e m_e=-db_e-z_e.(I-P_e)m_e.
+The first follows by expansion using both cross and quadratic cycle terms;
+the second uses N_e^-1 P_e m_e=1/w_e and sum_g eta_(e,g)=j_e.
+Intrinsic Ehrhard bounds E_e below by
+w_e a(pi_e)(P_e m_e)(P_e m_e)^T. Applying it to r_e, not z_e, and taking
+z_i=H y_i, b_i=2h_i', gives (2.3) with its exact factor four.
+Thus the entire cycle energy has been retained and subtracted before the
+positive offset term is used. The source does not make the invalid move of
+replacing the corrected deficit by the uncorrected facet deficit.
+
+Now 4(h'_e)^2<=(a(pi_e)^-1+q_e^2)
+[x_e^2+a(pi_e)(2h'_e-q_e x_e)^2]. Sum over retained edges and use their
+gap lambda_* to obtain (2.2). This closes the mixed-estimate obligation.
+
+2c. Constrained envelope and singular limit
+
+For fixed epsilon, strict covariance curvature on the compact feasible
+region and smooth mixed derivatives make p->Ceps(p) Lipschitz. On a mass
+segment p(t)=p0+tu, differentiate almost everywhere. Optimality inequalities
+at two times give
+  E=-g_CC[C',C'] <= B=g_Cp[C',u],
+while (2.2) gives B^2<=2K L^2 |u|^2 E. Therefore B<=2K L^2|u|^2.
+The envelope first derivative is g_p, so
+  Veps''=g_pp[u,u]+g_Cp[C',u]<=2K L^2|u|^2,
+because F_pp=-mathcal L^-1 is negative. Its first derivative is Lipschitz
+for fixed epsilon, so integrating loses no singular positive measure.
+At U, permutation symmetry forces zero centered offsets and Veps'(U)=0.
+Pass epsilon down to zero using (2.1), then use V(U)=w to get the desired
+mass-window bound. Auxiliary epsilon0 may depend on m; this does not alter
+the uniform coefficient or the eventual m threshold of the noise theorem.
+
+3. UNIVERSAL COMPETITIVE LOCALIZATION, INCLUDING FRACTIONAL f
+
+Assume only S_{-r}(f)<=S_{-r}(g). First apply the scalar global tangent
+bound for H(p)=phi(Phi^-1(p))^2:
+  sum_i H(p_i)<=mH(1/m)+B_m delta, B_m=O(log m).
+The individual centroid rearrangement |B_i|<=sqrt(H(p_i)) is valid for
+0<=f_i<=1. Hermite parity gives
+  S_{-r}(f)>=sum_i p_i^2-rW-r^3,
+  S_{-r}(g)<=1/m-rw+r^2 A2(g)+r^4.
+The source's finite coefficient bound implies m^2 delta<=L_m, where
+L_m tends to 2-2 EulerGamma<1. The Mills/Gumbel argument includes both
+tail directions and uniform integrability of the centered maximum's
+first two moments. In particular one may fix c=.01, Cbar=2 absolutely,
+and all sufficiently large m give c/m<=p_i<=Cbar/m, uniformly in r.
+
+The assignment-independent inequality
+  A2(f)>=(W-P)_+^2/(2P), P=sum_i p_i^2,
+follows from conditional Jensen in each centroid direction and weighted
+Cauchy. The positive part makes this a globally convex perspective in
+(W,P); hence its tangent at (w,1/m) applies even when W<P.
+Write ell=mw-1. Its tangent yields
+  A2(f)>=F0-(ell/r)D+c_(m,r)delta,
+  F0=ell^2/(2m), c_(m,r)=ell[1/r-(ell+2)/2]>=0.
+The exact regular second-chaos formula and Var(max_i Z_i)=O(1/log m)
+give 0<=A2(g)-F0<=C/m. Keeping degree two in the parity bounds now gives
+  (1-r ell)D+r^2 c_(m,r)delta<=C r^2/m+r^3+r^4.
+The mass-window result proves
+  D>=delta/2+r(V(p)-W)>=0
+once r K L^2<=1/2. Therefore
+  delta<=2D, 0<=D<=C r^2/m, |W-w|<=D/r<=C r/m.        (3.1)
+Consequently max_i|mp_i-1|<=C sqrt(m)r<=C/sqrt(m), and the improved
+box [1/(2m),3/(2m)] follows. All steps concern arbitrary fractional f.
+No choice of a full-noise optimizer or optimizer sequence occurs.
+
+4. REMAINDER, ROW, AND GEOMETRY INTERFACES
+
+For every actual f, its score support satisfies F_p(B)>=W. Balanced
+optimal offsets and the rank-free offset certificate give
+  R<=Delta/2+C L sqrt(R delta).
+Young's inequality and r L^2=o(1) yield
+  0<=R<=Delta+C L^2 delta<=Delta+delta/r=J.             (4.1)
+The offset certificate itself uses the just-reconstructed mass-window
+bound and its rank-free Cheeger estimate; it does not assume its desired
+conclusion about full-noise assignments. Gaussian entropy bounds make
+all actual rows at most a fixed multiple of alpha after normalization,
+and conditional Cauchy gives B^T B<=p_max I. These caps have no N factor.
+
+I read and checked the root's new finite-gap/ray reconstruction. At the
+regular score covariance, all weights are w0=alpha/m. The facet tilt and
+balancing estimate keeps w_e between w0/2 and 2w0 on ||K-P||_F<=c/L.
+The exact centered edge identity is
+  sum_(i<j)(a_ij^T E a_ij)^2
+       =m sum_i E_ii^2+(tr E)^2+2||E||_F^2.
+New Hodge normal strain therefore gives -F''>=w0||E||_F^2/12.
+The derivative is (alpha/2)tr E. Concavity propagates this initial ray
+curvature to every centered PSD endpoint, including singular endpoints:
+  R>=c alpha^2 e^2/m min(1,c/(Le)),
+  e=||BB^T/alpha^2-P||_F.                             (4.2)
+This requires no rank lower bound for B and no trace normalization.
+
+Procrustes gives q=d/alpha and e>=q. Competitive (3.1) gives q<=C sqrt m;
+exterior d>1/m gives q>=c/sqrt L. Thus (4.2) yields
+  J>=R>=c q/m^3>=c/(m^3 sqrt L),
+  d^2<=C m^(3/2)L R.                                 (4.3)
+Both powers and logarithms agree with the exterior-tail proof.
+
+5. EXHAUSTION OF THE TWO BRANCHES AND STRICTNESS
+
+Every f is either noncompetitive, already strictly worse than g, or is
+competitive and satisfies all preceding inputs. Every competitive f has
+either d<=1/m or d>1/m. There is no annular region left between branches.
+
+In the exterior, the full Hermite expansion is absolutely summable since
+sum_k Ak(f)<=1 and |r|<1. Exactly,
+  S_{-r}(f)-S_{-r}(g)=D+r^2[A2(f)-A2(g)]+Htail(f)-Htail(g).
+Applying (E2),(ET) and J=D/r gives
+  S_{-r}(f)-S_{-r}(g)
+  >=D[1-CrL^3-Cr^2 m^(7/4)L^(7/2)]>=D/2>0.           (5.1)
+Strict positivity uses (4.3) and r>0, rather than assuming D>0 globally.
+This contradicts competitiveness. The endpoint losses are bounded by
+C L^3/(m-1) and C m^(7/4)L^(7/2)/(m-1)^2, both tending to zero.
+
+In the local branch, (L) and R>=0 imply delta=R=0 under competitiveness.
+Formula (4.2) then gives BB^T=alpha^2P. Its rows are an actual regular
+centroid matrix. The nonnegative routing loss
+  max_i B_i.X-sum_i f_i B_i.X
+has expectation w-W=0. Pairwise ties are Gaussian-null since every row
+difference has nonzero length. Thus f is the indicator of that regular
+winner almost surely. This argument includes fractional assignments and
+needs no regularity of their boundaries. Conversely every rotated or
+relabelled regular assignment has the same noise value. This proves the
+claimed equality classification once the two branch interfaces are proved.
+
+6. WHY ONE m0 SUFFICES
+
+Fix c=.01, Cbar=2, the consequent entropy row cap A, and local radius
+constant A_local=1 before choosing m. All source constants in Sections
+2--4 then depend on these fixed absolute values only. Set m0 to the maximum
+of their finitely many eventual thresholds, the local/exterior thresholds,
+and thresholds ensuring the two errors in (5.1) sum to at most one half.
+The only limiting statements used are powers of log m divided by positive
+powers of m, and the explicit Gaussian-max asymptotics in Section 3.
+None depends on f, N, or a positive lower bound for r.
+
+The finite-graph compactness parameter epsilon0 can depend on m, but is
+removed by a uniform-in-p value limit at that fixed m. It introduces no
+m-dependent loss into K L^2 and hence no extra quantifier into m0.
+All actual centroids have rank at most m-1; covariance calculations take
+place on the label space H. Gaussian isoperimetry, Poincare, and
+hypercontractivity are dimension-free. The residual assignment can depend
+on every ambient coordinate; no reduction pretending f depends only on
+its centroid span is used. N>=m-1 supplies the regular reference and the
+same-dimensional score approximations. Cylindrical embedding would give
+the inequality comparison below that dimension as well, but is not needed
+for the stated theorem.
+
+At r=1/(m-1), all bounds remain valid and Gaussian correlation has absolute
+value less than one for m>=3. At r down to zero, all divisions are by the
+fixed positive r and are paid by D=O(r^2/m); no absolute truncation error
+is left unscaled in (5.1). r=0 is intentionally excluded from rigidity.
+The function is a single-assignment stability throughout; no two-rule
+comparison or common-mass condition is silently introduced.
+
+7. DISCRETE/ALGORITHMIC CONSEQUENCE AND SIGNIFICANCE INTERFACE
+
+I read the current endpoint transfer note and the current primary-source
+scope assessment. The theorem's all-finite-N and unrestricted-mass
+quantifiers are exactly those used by Isaksson--Mossel's fixed-parameter
+invariance transfer. For each fixed m>=m0,r,epsilon there are influence
+parameters independent of voter count. There is no exchange of m->infinity
+with the arbitrary-slack limit epsilon->0.
+
+The Frieze--Jerrum edge normalization is (m-1)(1-rho)/m. At the negative
+endpoint it equals one; credited Garcia-Soriano--Miyauchi endpoint
+minimization therefore expresses the sharp constant as
+  a_m=1-s_m(-1/(m-1)).
+The whole-interval theorem also supplies the original compact-minimum
+formula without that later endpoint locator. Randomized polynomial-time
+rounding gives a_m-epsilon in expectation, or high probability by
+repetition; UGC is retained for hardness above a_m. No deterministic
+derandomization, variable-alphabet running-time guarantee, or numerical
+m0 is asserted.
+
+The primary scope note distinguishes the older additive O(log log m/m^2)
+residual from an exact threshold for every fixed sufficiently large m.
+The current result, if the combined proof package is accepted, addresses
+that recognized approximately twenty-year gap. It is a substantial proper
+regime of the named negative Standard Simplex/Plurality questions, not the
+entire all-alphabet/all-negative-correlation conjecture. This audit does
+not repeat the fresh literature search or claim exclusive priority.
+
+8. PROOF-OBLIGATION LEDGER
+
+Obligation                                      Evidence in this record
+Exact domain and one-rule convention             Sections 1,5,6: PASS
+Pure/fractional/unbalanced applicability          Sections 2,3,4,5: PASS
+First-moment optimum at arbitrary rank            Section 2: PASS
+Cycle-refined offset/mixed curvature              Sections 2a--2b: PASS
+KKT/envelope across active sets/singular limit    Section 2c: PASS
+Initial and improved mass/norm localization       Section 3: PASS
+Deficit-relative balanced-offset application      Section 4: PASS
+All-PSD finite gap and exterior floor             Section 4 + root note: PASS
+Local noise estimate itself                      Separate current local review
+Exterior proxy/hazard/A2 estimate itself          Separate current exterior review
+Entire-tail exponents and final endpoint loss     Sections 1,5 + exterior review
+Exhaustion and equality, without attainment       Section 5: PASS
+Uniform m0, ambient dimension, r including end     Section 6: PASS
+Exact fixed-alphabet transfer scope               Section 7 + current transfer note
+New theorem's relation to recognized target       Section 7 + current scope note
+
+This ledger does not replace the two detailed branch proofs by their names.
+It specifies exactly what they must prove and checks that those statements,
+with the reconstructed localization, imply the whole theorem. No narrower
+claim or new mandatory target has been substituted for the accepted large-
+alphabet theorem. No original source, publication, email, or paid run was
+changed by this review.

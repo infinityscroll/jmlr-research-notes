@@ -4,6 +4,16 @@ Substantial results and reproducible experiments through 2 November 2026.
 These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
 
+## 2 November — integrated negative-voting proof
+
+[The integrated theorem and proof](frontier/negative-voting-simplex/supplements/integrated-full-voting-proof-20261102/MAIN_THEOREM_INTEGRATED_PROOF_20261102.txt) establishes regular-simplex optimality throughout the negative voting interval for every sufficiently large alphabet, in every finite ambient dimension N >= m-1, allowing fractional rules and unequal masses. Its consequence is negative Plurality Is Stablest and the **exact fixed-alphabet Frieze–Jerrum MAX-m-CUT threshold**, with UGC retained for hardness.
+
+[Current proof reconstructions](frontier/negative-voting-simplex/supplements/integrated-full-voting-proof-20261102/README.txt) cover localization, both noise branches, singular covariance limits, equality and the single uniform alphabet threshold. The mass-envelope proof still uses the explicitly reconstructed cycle-refined Ehrhard estimate; the Hodge proof does not replace that stronger input. This is a complete internally audited proof manuscript. **External expert review remains pending.** The threshold is existential, and the full all-alphabet conjecture is not claimed solved.
+
+## Immutable release snapshots
+
+[The release workflow](RELEASING.txt) publishes verified source snapshots, the main manuscript PDF, checksums and signed build provenance after trusted main-branch verification. Published release assets and their tags are immutable. The public Sigstore record and GitHub publication time establish artifact identity and publication history; they do not establish mathematical validity or exclusive research priority.
+
 ## 2 November — Gaussian stability beyond the voting range
 
 [The new candidate theorem](frontier/negative-voting-simplex/supplements/beyond-voting-range-20261102/README.txt) extends the negative Gaussian interval to magnitude at most m^(-7/8)/(1+log m)^2 for every sufficiently large alphabet. This eventually exceeds the voting cutoff 1/(m-1) by a factor tending to infinity. It retains a quantitative bound on Gaussian-L1 distance to the regular simplex and allows arbitrary measurable fractional rules and unequal masses.

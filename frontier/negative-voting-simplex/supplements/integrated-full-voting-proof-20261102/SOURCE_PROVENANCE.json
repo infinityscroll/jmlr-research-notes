@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-11-01T20:18:04.993406+00:00",
+  "previous_public_main": "4d4f01d1d0d035862c486c78c128a9ef2a6b7bdc",
+  "source_files": {
+    "MAIN_THEOREM_INTEGRATED_PROOF_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/integrated_completion_audit_20261102/MAIN_THEOREM_INTEGRATED_PROOF_20261102.txt",
+      "sha256": "4c312a044e86d1948c455bfc43522fe5eb39071c945d6f3da4d24692cd35a196",
+      "copied_unchanged": true
+    },
+    "root/FINITE_GAP_BOOTSTRAP_AND_GLOBAL_PSD_RAY_RECONSTRUCTION_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/integrated_completion_audit_20261102/root/FINITE_GAP_BOOTSTRAP_AND_GLOBAL_PSD_RAY_RECONSTRUCTION_20261102.txt",
+      "sha256": "506e48c4e7119f770602f8032196d480e0f3d40b0b17f8516ff6e716ab64a9ed",
+      "copied_unchanged": true
+    },
+    "local/LOCAL_FULL_VOTING_RECONSTRUCTION_AND_SCOPE_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/integrated_completion_audit_20261102/local/LOCAL_FULL_VOTING_RECONSTRUCTION_AND_SCOPE_20261102.txt",
+      "sha256": "ec70dff1bef0f4ce3a4b9cc3367e546f87425ecb22e564f334a2e4f5e1ba59db",
+      "copied_unchanged": true
+    },
+    "exterior/EXTERIOR_FULL_VOTING_RECONSTRUCTION_AND_TERMINAL_AUDIT_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/integrated_completion_audit_20261102/exterior/EXTERIOR_FULL_VOTING_RECONSTRUCTION_AND_TERMINAL_AUDIT_20261102.txt",
+      "sha256": "c9bdede73d517df7cf8644c3852d78307862a590ad84a51bbabedae762b33fec",
+      "copied_unchanged": true
+    },
+    "assembly/ASSEMBLY_LOCALIZATION_AND_QUANTIFIER_LEDGER_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/integrated_completion_audit_20261102/assembly/ASSEMBLY_LOCALIZATION_AND_QUANTIFIER_LEDGER_20261102.txt",
+      "sha256": "a056b88317e870dbaa280cd4f4bb5688e982b94ac4ff75b617867fd6041c86a9",
+      "copied_unchanged": true
+    },
+    "assembly/CURRENT_BRANCH_INTERFACE_CLOSURE_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/integrated_completion_audit_20261102/assembly/CURRENT_BRANCH_INTERFACE_CLOSURE_20261102.txt",
+      "sha256": "5a97596c463e05a30b5cb48c2348b166dad6cc190a5ba8c6a84872994f292c1b",
+      "copied_unchanged": true
+    }
+  },
+  "private_correspondence_included": false
+}
