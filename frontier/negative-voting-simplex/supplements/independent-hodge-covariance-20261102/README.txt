@@ -1,3 +1,7 @@
+CURRENT SUCCESSOR: ../classical-hodge-normal-strain-20261102/README.txt removes
+the recent-preprint regularity dependency using published 2017 results and
+adds the finite-simplex normal-strain bound. This earlier record is preserved.
+
 INDEPENDENT HODGE ROUTE TO GAUSSIAN COVARIANCE CONCAVITY
 2 November 2026
 

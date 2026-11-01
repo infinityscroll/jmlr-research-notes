@@ -1,0 +1,275 @@
+INDEPENDENT CFJ REGULARITY AND NORMAL-STRAIN REVIEW
+2 November 2026
+
+VERDICT
+
+PASS for the classical regularity replacement at its stated target class.
+The exact CFJ2017 primary statements support the imports. The reciprocal
+coordinate change, both Hessian constants, the global inverse argument,
+full-space smoothness, and closure under invertible target transformations
+are valid. No misuse of composition of optimal maps was found.
+
+The two newly available normal-strain notes were then checked independently.
+No fatal flaw was found in their rank-one limit or lower-touching transfer.
+Their combination yields the stated finite-simplex curvature coefficient,
+conditional on the separate smooth Hodge/Peano estimate. This review does
+not independently audit that all-dimensional Hodge estimate or the rest of
+the negative-voting proof.
+
+Only this new TXT review was written. All inspected source files were left
+unchanged. No numerical experiment is used as proof evidence.
+
+1. PRIMARY STATEMENTS ACTUALLY CHECKED
+
+Colombo--Figalli--Jhaveri, Lipschitz changes of variables between
+perturbations of log-concave measures, Ann. Sc. Norm. Super. Pisa Cl. Sci.
+(5), XVII (2017),1491--1519, DOI10.2422/2036-2145.201510_009.
+
+Author-hosted primary manuscript, reopened and read 2 November 2026:
+https://people.math.ethz.ch/~afigalli/papers-pdf/Lipschitz-changes-of-variables-between-perturbations-of-log-concave-measures.pdf
+SHA256 8100cf954200536e3b178b1c08cd1820c362a46a767cdbe5a008dadb0f645dd1
+
+Theorem1.1, PDF p2, applies to a normalized compactly supported semiconvex
+perturbation of the SAME reference potential V, with V minimized at zero
+and two positive Hessian bounds. Its Lipschitz constant depends only on
+the support radius and the three stated Hessian parameters.
+
+Theorem3.2, PDF p5, assumes an upper Hessian bound on the source potential
+and a positive lower Hessian bound on the target potential. It does NOT
+assume convexity of the source. The introductory paragraph's narrower
+convex-source discussion must not be substituted for this theorem.
+
+Theorem2.2, PDF p4, supplies local regularity; the following paragraph
+explicitly extends it to full-space positive densities locally bounded
+above and away from zero. Smooth input densities give smooth potentials.
+
+The earlier primary arXiv PDF was also opened:
+https://arxiv.org/pdf/1510.03687
+The author-hosted version is the decisive source for this review.
+
+2. RECIPROCAL TRANSFORMATION: NO ANISOTROPIC-COST SUBSTITUTION
+
+Let A=Sigma^(1/4), symmetric positive definite. The two transformed
+reference covariances are
+
+  A I A=A^2,
+  A^(-1) Sigma A^(-1)=A^2.
+
+Thus x'=Ax and y'=A^(-1)y have the same Gaussian reference eta. Their
+cross term is unchanged:
+
+  (Ax) dot (A^(-1)y)=x dot y.
+
+The transformed squared cost differs from the original squared cost only
+by marginal integrals. These integrals are finite because exp(-q)/Z is
+bounded above and below and both reference Gaussians have finite moments.
+The bijection of coupling sets therefore preserves exactly the minimizers.
+
+There is also a direct gradient verification. If U=grad psi sends eta to
+nu'=A^(-1)#nu, then
+
+  T(x)=A U(Ax)=grad[psi(Ax)],
+  DT(x)=A DU(Ax) A.
+
+This sends standard gamma to nu and is a gradient of a convex potential.
+Brenier uniqueness identifies it as the intended optimizer. The two A
+factors form a congruence, not an unsupported chain of independently
+optimal maps. An arbitrary linear postcomposition BT is not asserted to
+be a Brenier map anywhere in the argument.
+
+3. UPPER AND LOWER HESSIAN CONSTANTS
+
+The transformed reference potential has Hessian A^(-2)=Sigma^(-1/2).
+With K_q=sup ||D^2q||op, the transformed perturbation q'(z)=q(Az) obeys
+
+  D^2q'(z)=A D^2q(Az) A >= -||A||op^2 K_q I.
+
+If supp q is compactly contained in B_R, then supp q' is compactly
+contained in B_(||A^(-1)||op R+1). The extra 1 is harmless. The reference
+normalization is correct, and c_(q')=-log Z has the required sign.
+CFJ1.1 therefore yields Lip(U)<=C_0 and
+
+  Lip(T)<=||A||op^2 C_0=:L.
+
+For the reverse transport nu->gamma, additive normalization constants
+do not affect Hessians. Its source Hessian is
+
+  Sigma^(-1)+D^2q <= [lambda_max(Sigma^(-1))+K_q] I,
+
+and its target Hessian is I. CFJ3.2 consequently yields
+
+  Lip(S)<=K=[lambda_max(Sigma^(-1))+K_q]^(1/2).
+
+No lower bound or convexity of the reverse source potential is required.
+This is the decisive reason the reverse application survives a possibly
+nonconvex compact perturbation q.
+
+Reversal of the optimal coupling makes S and T inverses almost everywhere.
+They have continuous global Lipschitz representatives, and their measures
+have full support. The inverse identities extend from dense full-measure
+sets to all points. Thus
+
+  |T(x)-T(z)|>=K^(-1)|x-z|.
+
+At differentiability points, DT is symmetric PSD and all singular values
+are >=K^(-1); hence all eigenvalues have that lower bound. The claimed
+constant
+
+  m=[lambda_max(Sigma^(-1))+K_q]^(-1/2)
+
+is correct. Forward Lipschitz regularity excludes a singular Hessian part,
+so the two Hessian inequalities also hold distributionally.
+
+As an analytic normalization check, when q=0 one has U=Id and
+T(x)=Sigma^(1/2)x. The proposed reverse bound becomes exactly
+m=sqrt(lambda_min(Sigma)); the forward congruence gives the corresponding
+sqrt(lambda_max(Sigma)) bound when C_0=1. No exponent or inverse is lost.
+
+4. EVERYWHERE SMOOTHNESS AND ALL-BASE CLOSURE
+
+Both original densities are smooth and strictly positive everywhere.
+Each is bounded above and away from zero on every compact set; no global
+positive lower density bound is needed. The full-space extension following
+CFJ2.2 therefore gives phi in C^infinity_loc(R^d). This means smooth at
+every finite point, not bounded higher derivatives on all of R^d.
+
+Continuity of D^2phi upgrades its almost-everywhere bounds to every point.
+The already established global inverse and the inverse function theorem
+then give a smooth global diffeomorphism. There is no circular use of
+diffeomorphism regularity to prove the inverse identities.
+
+For an invertible B, direct density transformation gives
+
+  B#nu=Z^(-1) exp[-q(B^(-1)z)] g_(B Sigma B^T)(z) dz.
+
+The covariance remains positive definite and the perturbation remains
+smooth and compactly supported. Applying the proposition anew at each
+target proves all-base closure. The constants may deteriorate with B,
+dimension, or the approximation index. No part of the pointwise Peano
+or subsequent touching argument demands uniformity of those constants.
+The note correctly makes no assertion of quadratic transport tails.
+
+Accordingly this replacement removes the specified 2026 regularity
+dependency for this density class and its invertible linear images.
+It does not extend the classical theorem to every globally Lipschitz
+perturbation, which is unnecessary here.
+
+5. RANK-ONE HESSIAN-MEASURE NOTE: THE MAIN ATTACK
+
+The dangerous potential error would be treating j_M(H), concave in M,
+as a generally lower-semicontinuous integrand under weak matrix-measure
+convergence. The submitted argument explicitly avoids that assertion.
+
+The skew minimization formula is correct: in an eigenbasis of M, minimizing
+lambda_i(H_ij+K_ij)^2+lambda_j(H_ij-K_ij)^2 gives coefficient
+4lambda_i lambda_j/(lambda_i+lambda_j), with K skew. The displayed
+minimizer satisfies ||K||F<=||H||F, including zero eigenvalues. Substitution
+into the two minimizing problems gives the stated nuclear-norm continuity
+bound with constant 4.
+
+For P=nn^T, tau=tr M, e=tr[(I-P)M], the block decomposition yields
+
+  ||M-tau P||_* <= 2e+2sqrt[(tau-e)e] <=4sqrt(tau e).
+
+Since j_(tau P)(H)=tau(n^THn)^2, the constant 16 in the resulting
+rank-one comparison follows. Integrating and using Cauchy--Schwarz gives
+the stated weighted estimate. All quantities discarded in the global
+liminf proof are nonnegative.
+
+On an interior facet patch, local weak convergence of PSD Hessian measures
+forces the tangential trace mass to zero, while total trace mass converges.
+The comparison estimate therefore gives actual local convergence of the
+j-integral, including a varying constant matrix H_k->H. This is stronger
+than the needed local lower limit and requires no uniform ellipticity.
+
+Strong L2(gamma) convergence of transport maps follows from W2 target
+convergence, uniqueness of the Gaussian-source optimizer, convergence in
+probability, and uniform integrability. Local distributional derivative
+convergence upgrades to vague Hessian-measure convergence because PSD
+trace mass controls every matrix component. Compact facet patches can be
+chosen with disjoint neighborhoods; finite Gaussian surface measure and
+nonnegativity justify exhaustion without a global-tail limit.
+
+The facet jump coefficient is |a'|nn^T, not |a'|^2nn^T. With
+a'=C_0^(1/2)a and H_0=C_0^(-1/2)Delta C_0^(-1/2),
+
+  n^T H_0 n=(a^TDelta a)/(a^TC_0a).
+
+Writing w=area_gamma/|a'| then gives exactly
+w(a^TDelta a)^2/(a^TC_0a). There is no missing factor of two because each
+unoriented facet is listed once. The intrinsic e_i sites should be read
+as their projections onto 1-perp, or equivalently as coordinate functionals
+restricted to that space; their common component does not affect any edge.
+
+6. LOWER-TOUCHING NOTE: SIGNS, SMOOTHNESS, AND MOVING BASES
+
+The claimed C^2 regularity is restricted to a full affinely independent
+simplex with positive masses. This restriction matters. Every offset
+vector modulo constants corresponds to a unique translation of that fan.
+The dual objective is the Gaussian convolution of its support function,
+plus the barycenter linear term, and is smooth jointly in translation
+and positive definite covariance. Positive masses put the barycenter in
+the simplex interior, making the objective coercive. All pair facets have
+positive Gaussian area; the offset Laplacian is positive on constants-
+orthogonal vectors. The implicit function theorem therefore does give
+smooth local minimizing offsets and a C^2 value. No assertion about
+arbitrary affinely dependent site families is needed.
+
+For f_n->f uniformly and q=f-eta t^4, interior minimizers t_n of f_n-q
+converge to zero. Differentiability gives equal first derivatives there.
+The minimum inequality gives the LOWER bound q''(t_n)/2 on the second
+quotient of f_n. Combining it with the smooth UPPER bound -J_n/8 yields
+
+  J_n<=-4q''(t_n).
+
+Thus the measure liminf has the needed sign and exact factor 4. The
+limits are first in the increment for each n, then in n; a uniform Peano
+remainder or convergence of second derivatives is not used.
+
+The moving-base identity follows from reciprocal linear transformations
+of the two marginals, preserving their dot product. It changes the
+target law; it does not compose an old Brenier map with a covariance
+square root. W2 stability and continuity of the positive square root
+give the required new target convergence.
+
+The auxiliary global trace estimate
+
+  integral tr(D^2phi_n) dgamma=E[X dot T_n(X)]
+     <=sqrt(d)||T_n||L2
+
+is valid by Gaussian integration by parts and radial cutoffs. Positivity
+of the trace and L2 moment control justify the limit even without a
+uniform Hessian bound. It controls the varying direction matrix error.
+The rank-one lemma already handles varying matrices locally, so this
+global estimate is a valid additional route rather than a hidden need.
+
+Finally, projection onto the affine span is exact: one marginal Gaussian
+can be lifted conditionally from its projection while preserving any
+coupling with the finite target. Only the intrinsic direction Q^THQ can
+have strict curvature. The audit correctly excludes ambient-null directions.
+
+These checks support the assembled finite-simplex normal-strain transfer.
+They leave the separate smooth Hodge/Peano hypothesis explicit.
+
+7. INPUT PINS
+
+All paths are relative to full_standard_simplex_20261031/.
+
+completion_evidence_20261102/regularity/
+CLASSICAL_CFJ_BRENIER_REGULARITY_REPLACEMENT_20261102.txt
+SHA256 dbda24a207a5e4ca9c9c9bebbd98b1ea0ab4df952adeb0585fca4361065ef998
+
+completion_evidence_20261102/normal_strain/
+RANK_ONE_HESSIAN_MEASURE_LIMIT_AND_NORMAL_STRAIN_20261102.txt
+SHA256 601241b59b7eed4bfe7d758e817e62c0144604e82a5e8aa92d24eb4fc8b33c3a
+
+completion_evidence_20261102/normal_strain_audit/
+LOWER_TOUCHING_AND_MOVING_BASE_NORMAL_STRAIN_AUDIT_20261102.txt
+SHA256 76a3f212779b97d5245813f2a51f571432ce4fbcbe34222dda4679ac3587704f
+
+weighted_partition_attack_20261102/proof/
+HODGE_TO_COVARIANCE_LOCAL_TRANSFER_20261102.txt
+SHA256 49ed5d34910e2e8f1d59b7578cb51d6c45c06f48cdf992bcb835db38bdfb2990
+
+This is an independent internal mathematical review, not external
+endorsement, peer review, formal verification, or a priority claim.

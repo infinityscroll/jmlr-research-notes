@@ -1,0 +1,285 @@
+RANK-ONE HESSIAN-MEASURE LIMIT AND THE NORMAL-STRAIN COEFFICIENT
+Date: 2026-11-02
+Status: PROVED local-to-global liminf and coefficient identification.
+Scope: the measure-theoretic passage from smooth Brenier Hessians to the
+normal strain of a finite polyhedral transport. Transfer of the resulting
+curvature bound through viscosity/barrier arguments is handled separately.
+
+TARGET
+
+The smooth Hodge route supplies the curvature quantity
+
+  j_M(H) = sum_i lambda_i H_ii^2
+           + sum_{i<j} [4 lambda_i lambda_j/(lambda_i+lambda_j)] H_ij^2,
+
+in an orthonormal eigenbasis of the positive matrix M. A zero-over-zero
+coefficient is defined as zero. H is symmetric.
+
+We prove that when smooth convex Brenier Hessians converge as measures
+to the Hessian of a finite polyhedral potential, the Gaussian integral
+of j has the required lower limit. The proof exploits rank-one facet
+measures. It does NOT claim weak lower semicontinuity of j for arbitrary
+positive matrix-valued measures; indeed j is concave in M.
+
+1. A MATRIX FORMULA AND TWO EXPLICIT ESTIMATES
+
+For every symmetric positive semidefinite M,
+
+  j_M(H) = min_{K^T=-K} tr[(H+K)^T M(H+K)].                 (1.1)
+
+To verify this, diagonalize M. The diagonal summands are lambda_i H_ii^2.
+For each i<j, minimize
+
+  lambda_i(H_ij+K_ij)^2 + lambda_j(H_ij-K_ij)^2.
+
+If lambda_i+lambda_j>0, a minimizer is
+
+  K_ij=(lambda_j-lambda_i)/(lambda_i+lambda_j) H_ij.
+
+If both eigenvalues vanish, choose K_ij=0. The minimum is the displayed
+harmonic coefficient in j, proving (1.1). This choice obeys
+
+  ||K||_F <= ||H||_F.                                      (1.2)
+
+It follows that for two PSD matrices M,N,
+
+  |j_M(H)-j_N(H)|
+    <= 4 ||H||_F^2 ||M-N||_*,                              (1.3)
+
+where ||.||_* is the trace/nuclear norm. For example, substitute an
+N-minimizer into the M-functional in (1.1), and bound its linear difference
+by ||M-N||_* ||(H+K)(H+K)^T||_op; (1.2) bounds the second factor by
+4||H||_F^2. Reverse M and N for the other inequality. This also proves
+continuity at singular PSD matrices without making eigenbasis choices.
+
+For fixed M, j_M is a nonnegative quadratic form in H, and
+
+  0 <= j_M(H) <= tr(M H^2) <= (tr M)||H||_op^2.             (1.4)
+
+The middle inequality follows either by choosing K=0 in (1.1), or by
+4ab/(a+b)<=a+b in the eigenbasis. Quadratic-form Cauchy--Schwarz yields
+
+  |j_M(H)-j_M(G)|
+    <= (tr M)(||H||_op+||G||_op)||H-G||_op.                (1.5)
+
+Fix a unit vector n, put P=nn^T, Q=I-P, tau=tr M, and e=tr(QM).
+In the splitting span(n) plus n-perp, write
+
+  M = [a  b^T; b  B],       a>=0, B>=0, tr B=e, a+e=tau.
+
+Positivity gives |b|^2<=a e: each squared component b_i^2 is at most
+a B_ii, and summation proves the claim. The block decomposition of
+M-tau P therefore gives
+
+  ||M-tau P||_* <= 2e+2|b| <= 4 sqrt(tau e).               (1.6)
+
+This includes a=0 or tau=0. Since j_{tau P}(H)=tau(n^T Hn)^2, (1.3)
+and (1.6) imply the pointwise estimate
+
+  |j_M(H)-tau(n^T Hn)^2|
+    <= 16 ||H||_F^2 sqrt(tau e).                           (1.7)
+
+Consequently, for any nonnegative weight f,
+
+  |integral f j_M(H) - (n^T Hn)^2 integral f tau|
+    <= 16 ||H||_F^2
+       sqrt[(integral f tau)(integral f e)].              (1.8)
+
+Only Cauchy--Schwarz is used to pass from (1.7) to (1.8).
+
+2. HESSIAN-MEASURE CONVERGENCE FROM TRANSPORT CONVERGENCE
+
+Let T_k=grad phi_k be smooth gradients of convex functions on R^d, and
+suppose T_k -> T=grad phi in L^2(gamma). Let M_k=D^2 phi_k and
+mu=D^2 phi, with the last Hessian interpreted as a PSD matrix-valued
+Radon measure. Then
+
+  M_k dx -> mu vaguely on compact sets.                    (2.1)
+
+Here is a direct justification. On every compact set the Gaussian density
+has a positive lower bound, so L^2(gamma) convergence implies local L^1
+convergence of T_k. Thus its distributional derivatives converge:
+
+  integral zeta (M_k)_ij dx
+    = -integral (T_k)_i partial_j zeta dx
+    -> -integral T_i partial_j zeta dx
+    = integral zeta d mu_ij
+
+for smooth compactly supported zeta. For a compact K choose a smooth
+nonnegative cutoff zeta equal to one on K. Positivity and the trace identity
+
+  integral zeta tr M_k dx = -integral grad zeta dot T_k dx
+
+give a uniform bound on trace mass over K. Every matrix component has
+total variation controlled locally by trace mass (by positivity). Smooth
+approximation of continuous test functions therefore upgrades distributional
+convergence to (2.1). No additional normalization or convergence theorem
+for the potentials is required.
+
+For completeness, the L^2 premise holds in the intended approximation.
+If eta_k -> eta in W2 and T_k,T are their Brenier maps from gamma, optimal
+couplings (Id,T_k)#gamma have only the unique coupling (Id,T)#gamma as a
+weak subsequential limit: tightness, continuity of the W2 optimal value,
+and lower semicontinuity of cost show that every limit is optimal.
+Concentration on this unique graph gives T_k -> T in gamma-probability.
+For a polyhedral T this last step also follows immediately from the
+continuous mapping theorem away from its finite union of facet hyperplanes,
+a gamma-null set. W2 convergence makes |T_k|^2 uniformly integrable, so
+Vitali's argument upgrades convergence in probability to L^2(gamma).
+
+If eta_k=C_k^{1/2}#nu_k, C_k -> C_0>0, and nu_k -> nu in W2, then
+eta_k -> C_0^{1/2}#nu in W2. Indeed, use any couplings with
+E|Y_k-Y|^2 -> 0 and estimate
+
+  ||C_k^{1/2}Y_k-C_0^{1/2}Y||_2
+    <= ||C_k^{1/2}||_op ||Y_k-Y||_2
+       + ||C_k^{1/2}-C_0^{1/2}||_op ||Y||_2.
+
+Thus (2.1) applies at varying positive definite covariance base points.
+
+3. LOCAL CONVERGENCE ON AN INTERIOR FACET PATCH
+
+Suppose that on an open set U the limiting Hessian measure is
+
+  mu|U = a nn^T H^{d-1}|(F intersect U),
+
+where a>0 and n is a fixed unit normal. There are no other facets in U.
+Let f>=0 be continuous with compact support in U, and H_k -> H in the
+space of symmetric matrices. Define
+
+  A_k=integral f tr M_k dx,
+  E_k=integral f tr[(I-nn^T)M_k] dx.
+
+By (2.1),
+
+  A_k -> a integral_F f dH^{d-1} =: A,
+  E_k -> 0.                                               (3.1)
+
+Applying (1.8), with ||H_k||_F bounded, shows
+
+  integral f j_{M_k}(H_k) dx
+    - (n^T H_k n)^2 A_k -> 0.
+
+Hence the following is an actual local limit, not just a liminf:
+
+  integral f j_{M_k}(H_k) dx
+    -> a(n^T Hn)^2 integral_F f dH^{d-1}.                 (3.2)
+
+This is the precise use of extremality of a rank-one PSD matrix. The
+tangential mass tends to zero, forcing the normalized approximating
+matrices into that rank-one direction in the quantitative sense (1.8).
+
+4. GLOBAL GAUSSIAN LIMINF FOR A POLYHEDRAL POTENTIAL
+
+For the application, let nu=sum_i p_i delta_{y_i} have affinely independent
+sites y_1,...,y_{d+1} and strictly positive masses p_i. The standard-Gaussian
+Brenier potential for any invertible linear image of these sites has the
+form
+
+  phi(x)=max_i [y_i' dot x+b_i].
+
+Let F_e denote each codimension-one interface between adjacent cells,
+listed once. Its jump vector is a_e'=y_i'-y_j', and choose
+
+  n_e=a_e'/|a_e'|.
+
+The distributional derivative of the piecewise constant gradient is
+
+  D^2 phi = sum_e |a_e'| n_e n_e^T H^{d-1}|F_e.             (4.1)
+
+To see the coefficient, the gradient jumps by a_e' in its normal direction;
+integration by parts in the two polyhedral cells gives a_e' tensor n_e.
+This equals |a_e'|n_e n_e^T. Cell interiors contribute zero. The lower
+dimensional intersection skeleton has H^{d-1} measure zero and carries
+no separate distributional Hessian mass. In dimension one (4.1) means
+the usual atomic derivative at jump points.
+
+Let g be the standard Gaussian density. Under (2.1) and H_k -> H,
+
+  liminf_k integral g(x) j_{M_k(x)}(H_k) dx
+    >= sum_e |a_e'|(n_e^T H n_e)^2
+           integral_{F_e} g dH^{d-1}.                    (4.2)
+
+Proof. For each facet choose a compact subset K_e of its relative interior,
+away from the intersection skeleton. There are finitely many facets, so
+the K_e have pairwise disjoint open neighborhoods U_e, each meeting only
+its own facet. Choose smooth cutoffs 0<=chi_e<=1, supported in U_e and
+equal to one on K_e. Then sum_e chi_e<=1. Positivity (1.4) gives
+
+  integral g j_{M_k}(H_k) >= sum_e integral chi_e g j_{M_k}(H_k).
+
+Each term converges by (3.2), with f=chi_e g. The resulting lower bound
+is at least the right side of (4.2) with F_e replaced by K_e. Exhaust
+each facet's relative interior by such compact subsets. Gaussian surface
+measure is finite on each facet and gives zero mass to its boundary, so
+inner regularity/monotone exhaustion proves (4.2).
+
+The argument neither assumes nor needs a uniform global Hessian bound
+in k, tightness of the full unweighted Hessian mass, or convergence of
+the Gaussian integral outside the compact patches. Its discarded terms
+are nonnegative. It is therefore applicable when the approximation's
+ellipticity constants deteriorate.
+
+5. IDENTIFICATION WITH THE NORMAL-STRAIN EXPRESSION AT C_0
+
+Take original sites y_i, a covariance C_0>0, and a covariance direction
+Delta=Delta^T. The transformed target sites and normalized direction are
+
+  y_i'=C_0^{1/2}y_i,
+  a_e=y_i-y_j,
+  a_e'=C_0^{1/2}a_e,
+  H_0=C_0^{-1/2}Delta C_0^{-1/2}.
+
+Writing d_e=a_e^T C_0 a_e=|a_e'|^2, one has
+
+  n_e^T H_0 n_e = (a_e^T Delta a_e)/d_e.
+
+Let s_e=integral_{F_e} g dH^{d-1} be the physical Gaussian facet area,
+and define the usual coarea weight
+
+  w_e=s_e/|a_e'|.
+
+Then each summand in (4.2) is exactly
+
+  s_e |a_e'|(n_e^T H_0 n_e)^2
+    = w_e (a_e^T Delta a_e)^2/(a_e^T C_0 a_e).              (5.1)
+
+More generally, if C_k -> C_0>0 and Delta_k -> Delta, set
+H_k=C_k^{-1/2}Delta_k C_k^{-1/2}; then H_k -> H_0 and the varying-base
+argument in Section 2 proves
+
+  liminf_k E_gamma j_{D^2 phi_k}(H_k)
+    >= sum_e w_e (a_e^T Delta a_e)^2/(a_e^T C_0 a_e).      (5.2)
+
+Here phi_k transports gamma to C_k^{1/2}#nu_k for any smooth approximants
+nu_k -> nu in W2 for which the smooth Hodge curvature estimate is valid.
+Such approximants can be taken from the compact log-Gaussian density class
+already treated by the classical regularity replacement note.
+
+For y_i=P e_i on the intrinsic space 1-perp, where P=I-11^T/m, and
+p_i=1/m, put C_0=K and Delta=H. These sites are the score labels e_i
+modulo their common constant direction, and their differences remain
+a_e=e_i-e_j. Formula (5.2) supplies exactly the coefficient on the right of
+equation (11) in
+
+  work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/
+  stochastic/full_correlation_bridge_20261031/
+  BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt:
+
+  sum_e w_e(K,h_K) (a_e^T H a_e)^2/(a_e^T K a_e).
+
+The equality of the physical coarea weights with the fixed-score-coordinate
+weights is the ordinary Gaussian linear-change/coarea identity used there.
+All spaces and matrices in this identification are restricted to 1-perp;
+K is positive definite on that intrinsic space.
+
+DEPENDENCY BOUNDARY
+
+Combining (5.2) with a separately justified transfer of the smooth curvature
+inequality -4F_k'' >= E j to the finite-target limit recovers the desired
+normal-strain curvature inequality. This note supplies the lower-limit
+step and its exact coefficients. It does not infer convergence of second
+derivatives, and it makes no unproved C^2 assertion for a finite-target
+value function. Those points belong to the separate viscosity/barrier
+transfer. No old finite-target normal-strain theorem is used in the proof
+of (1.1)--(5.2).

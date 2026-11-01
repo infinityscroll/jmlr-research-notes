@@ -1,0 +1,218 @@
+GAUSSIAN COVARIANCE CONCAVITY AND SIMPLEX CURVATURE VIA HODGE THEORY
+2 November 2026
+
+This successor removes the recent-preprint regularity dependency from the
+independent Hodge proof route. It also recovers the finite-simplex
+normal-strain inequality required by the quantitative negative-voting
+argument. The frozen original chain-complex proof is not an input here.
+This is an internally audited analytic proof package, not external review
+or a claim that the full named conjecture has been resolved.
+
+THEOREM 1: EVERY TARGET WITH FINITE SECOND MOMENT
+
+Let nu be a probability law on R^d with finite second moment, and set
+  F_nu(C)=sup E[X.Y],  X~N(0,C), Y~nu.
+Then F_nu is concave on the ordinary positive-semidefinite covariance cone.
+Consequently W2(N(0,C),nu)^2 is convex in C, since it equals
+  tr C + integral |y|^2 dnu(y) - 2F_nu(C).
+The covariance path here is an affine path in matrices, not a Bures
+geodesic. No log-concavity, finite support, or balance is assumed on nu.
+
+THEOREM 2: THE QUANTITATIVE FINITE-SIMPLEX INPUT
+
+Let nu=sum_(i=1)^(d+1) p_i delta_(y_i), with affinely independent sites
+y_i and positive masses p_i. At C>0 the Brenier map from standard gamma_d
+to C^(1/2)#nu is the gradient of
+  phi_C(x)=max_i[(C^(1/2)y_i).x+h_i].
+Let F_ij(C) be its physical i,j interface, s_ij its Gaussian surface area,
+a_ij=y_i-y_j, and
+  w_ij(C)=s_ij/|C^(1/2)a_ij|.
+The optimized finite-target value F_nu is smooth at C>0, with derivative
+  D F_nu(C)[H]=(1/2)sum_(i<j) w_ij(C) a_ij^T H a_ij,
+and satisfies
+
+  -4 D^2 F_nu(C)[H,H]
+    >= sum_(i<j) w_ij(C) (a_ij^T H a_ij)^2/(a_ij^T C a_ij)       (1)
+
+for every symmetric H. Every pair has positive facet weight. Simplex
+edge dyads span the symmetric matrices, so the Hessian is strictly
+negative in every nonzero symmetric direction. An affinely independent
+simplex of r+1 sites embedded in a larger ambient space is handled on its
+r-dimensional affine span; strictness is asserted only for nonzero
+compressed directions. No extension to an arbitrary affinely dependent
+family of sites is asserted here.
+
+For y_i=P e_i on 1-perp, P=I-11^T/m, and p_i=1/m, equation (1) is exactly
+the normal-strain input in equation (11) of the earlier finite covariance
+gap proof. Thus the new route supplies BOTH its concavity input and its
+quantitative curvature input. Claiming only concavity would not have
+replaced the latter dependency.
+
+PROOF MODULE A: THE WEAK GAUSSIAN HODGE ESTIMATE
+
+Let M=D^2 phi be smooth and mI<=M<=LI globally. For every weak L2
+Gaussian-solenoidal v there is a skew A with delta_gamma A=v and
+  J(A)=E tr(A^T M A)<=E v^T Mv.                              (2)
+The complete proof is in
+  weighted_partition_attack_20261102/primary/higher_dimension/
+  HESSIAN_HODGE_LOCAL_STABILITY_20261102.txt, Sections 2--4.
+
+Briefly, the exact integration-by-parts remainder separates into
+nonnegative repeated-index squares and three-index forms
+  q=-2(beta ab+gamma bc+alpha ca).
+The corresponding weighted exterior derivative is
+  k=(alpha+beta)a+(beta+gamma)b+(gamma+alpha)c.
+The matrix identity q+k^2/[2(alpha+beta+gamma)]>=0 gives an augmented
+Hodge estimate. Minimize J over delta_gamma A=v in its equivalent L2
+Hilbert norm. Feasibility follows from the Gaussian OU resolvent;
+variations by codifferentials of 3-forms give d(MA+AM)=0. Compact cutoffs
+and Friedrichs graph approximation pass the augmented estimate to this
+weak minimizer, proving (2). Only Hessian symmetry, not an unrelated
+matrix-weight inequality, cancels the derivative terms.
+
+PROOF MODULE B: LOCAL COVARIANCE CURVATURE WITHOUT MAP DIFFERENTIATION
+
+For symmetric H, (2) implies
+  |E(H grad phi).v|^2 <= c_* E v^T Mv,
+  c_*=E sum_(i<j) [(lambda_i-lambda_j)^2/(lambda_i+lambda_j)] H_ij^2.
+At each point the displayed matrix entries are taken in an eigenbasis
+of M only for algebra; no eigenvector field is differentiated.
+Put
+  j_M(H)=sum_i lambda_i H_ii^2
+          +sum_(i<j) [4lambda_i lambda_j/(lambda_i+lambda_j)] H_ij^2.
+Then E j_M(H)=E tr(H^2M)-c_*.
+
+For nu=(grad phi)#gamma and Q_t=sqrt(I+tH), the exact coupling identity is
+  F_nu(I+tH)=E grad phi(G).Q_t G
+     +sup_(G,S both gamma){E[(Q_t-I)grad phi(G)].(S-G)-E D_phi(S,G)}.
+Strong convexity forces optimizing displacements O(t) in L2. Their
+conditional velocities have weak Gaussian-solenoidal limits. Fenchel
+duality, with the uniform inverse-Hessian bound, gives the energy liminf
+E v^T Mv/2. This avoids any unjustified uniform Taylor remainder in random
+displacements. The resulting local upper Peano bound is
+  limsup_(t->0) [F_nu(I+tH)-F_nu(I)-(t/2)tr(H E M)]/t^2
+     <= -(1/8)E j_M(H).                                    (3)
+See the complete derivation in
+  weighted_partition_attack_20261102/proof/
+  HODGE_TO_COVARIANCE_LOCAL_TRANSFER_20261102.txt, Sections 1--5.
+
+PROOF MODULE C: ESTABLISHED REGULARITY, NOT THE 2026 PREPRINT
+
+For nu=Z^-1 exp(-q)g_Sigma, Sigma>0 and q smooth compactly supported,
+set A=Sigma^(1/4) and change coordinates reciprocally:
+  x'=Ax, y'=A^-1y.
+Both reference marginals become N(0,Sigma^(1/2)); x'.y'=x.y, so
+quadratic transport costs differ only by fixed marginal terms. The
+transformed optimizer therefore falls literally under CFJ2017 Theorem
+1.1, with one identical Gaussian reference. Returning to original
+coordinates preserves the convex-gradient property by congruence.
+The reverse classical Caffarelli estimate gives a positive lower
+Hessian bound; local smoothness follows from the cited full-space
+regularity statement. The complete reduction is in
+  regularity/CLASSICAL_CFJ_BRENIER_REGULARITY_REPLACEMENT_20261102.txt.
+The established source is Colombo--Figalli--Jhaveri (2017):
+  https://doi.org/10.2422/2036-2145.201510_009
+  https://people.math.ethz.ch/~afigalli/papers-pdf/Lipschitz-changes-of-variables-between-perturbations-of-log-concave-measures.pdf
+No theorem from arXiv:2609.04052 is used in this successor.
+
+PROOF MODULE D: THEOREM 1 BY DENSITY AND AN ELEMENTARY BARRIER
+
+The density class in Module C is closed under every invertible linear
+target transformation. At each C0>0 use
+  F_nu(C0^(1/2) D C0^(1/2))=F_((C0^(1/2))#nu)(D)
+and apply (3). On every covariance segment, the pointwise upper second
+quotient is nonpositive. If concavity failed, subtract a violated chord
+and a small positive quadratic. An interior minimum would give a
+positive lower second quotient, contradicting (3). No uniformity of
+ellipticity constants across base points is needed.
+
+Every P2 law is the W2 limit of densities
+  rho_n=(1-epsilon_n)f_n+epsilon_n gamma_density,
+where f_n are smooth compact probability densities and epsilon_n->0.
+Indeed rho_n=Z_n^-1 exp(-q_n)gamma_density with
+  q_n=-log[1+((1-epsilon_n)/epsilon_n) f_n/gamma_density]
+smooth and compactly supported. The inequality
+  |F_nu(C)-F_eta(C)|<=sqrt(tr C)W2(nu,eta)
+passes concavity to arbitrary targets. Source-Gaussian W2 continuity
+then includes singular covariance matrices. This proves Theorem 1.
+The full approximation and scalar argument are in Sections 8--9 of
+the transfer note; its former Section 7 is replaced by Module C here.
+
+PROOF MODULE E: RANK-ONE FACET MEASURES RETAIN NORMAL STRAIN
+
+The matrix quantity has the useful representation
+  j_M(H)=min_(K skew) tr[(H+K)^T M(H+K)]
+for every PSD M, with zero-over-zero terms defined as zero. A minimizer
+has ||K||_F<=||H||_F. Consequently j is continuous even at singular M.
+For a fixed unit normal n, let tau=tr M and e=tr[(I-nn^T)M]. Then
+  |j_M(H)-tau(n^T Hn)^2|<=16||H||_F^2 sqrt(tau e).          (4)
+
+Smooth Brenier maps to W2-approximating targets converge in L2(gamma).
+Their Hessians converge as local PSD matrix measures. On the interior
+of a polyhedral interface, the limit measure is
+  |C0^(1/2)a_ij| n_ij n_ij^T H^(d-1)|F_ij.
+Tangential trace mass on a compact facet patch tends to zero. Applying
+(4) and Cauchy--Schwarz gives the actual local limit of j; disjoint
+patch exhaustion and positivity give the global Gaussian liminf.
+This is a rank-one argument, not a false general weak-lower-semicontinuity
+claim for the concave function M -> j_M(H).
+
+The proof, including varying covariance bases, is in
+  normal_strain/RANK_ONE_HESSIAN_MEASURE_LIMIT_AND_NORMAL_STRAIN_20261102.txt.
+The resulting lower bound is exactly the right side of (1), because
+  |C0^(1/2)a| [n^T C0^-1/2 H C0^-1/2 n]^2
+    = (1/|C0^(1/2)a|) (a^T H a)^2/(a^T C0 a).
+
+PROOF MODULE F: PASSING CURVATURE TO THE SIMPLEX VALUE
+
+For affinely independent sites, varying all height offsets merely
+translates a fixed collection of simplex normal cones. Integrating
+their Gaussian densities gives smooth masses and values. The offset
+Laplacian is positive on the height gauge, so the implicit-function
+theorem makes the optimized finite-target value smooth at C>0.
+This smoothness assertion is made at simplex scope; no assertion about
+combinatorially degenerate arbitrary sites is required.
+
+The stated first derivative is the Gaussian heat identity followed by
+the envelope theorem. For fixed heights, differentiating the Gaussian
+covariance pairs H/2 with the distributional Hessian of the max-affine
+potential. On an i,j facet this Hessian is a_ij a_ij^T/|a_ij| times
+surface measure. Whitening converts its coefficient to
+s_ij/|C^(1/2)a_ij|=w_ij. The height derivative drops out at the balancing
+optimum. In score coordinates this is exactly the offset Laplacian/2.
+
+Write f(t)=F_nu(C0+tH), and approximate nu by the densities in Module D.
+Uniform W2 continuity gives f_n->f locally uniformly. Fix eta>0 and let
+  q(t)=f(t)-eta t^4.
+Minima t_n of f_n-q on a small closed interval are interior and tend to
+zero. At each minimum, first derivatives agree and
+  q''(t_n)/2 <= limsup_(h->0)
+     [f_n(t_n+h)-f_n(t_n)-h f_n'(t_n)]/h^2
+     <= -J_n/8,
+where J_n is the smooth Hodge curvature integral at the ACTUAL base
+C_n=C0+t_nH. Module E supplies its liminf. Passing to the limit gives
+  -4f''(0)>=liminf J_n>=the right side of (1).
+This proves Theorem 2, without convergence of second derivatives or
+differentiation of Brenier maps. The separate audit is
+  normal_strain_audit/LOWER_TOUCHING_AND_MOVING_BASE_NORMAL_STRAIN_AUDIT_20261102.txt.
+
+APPLICATION AND VERIFICATION LIMITS
+
+For balanced score labels P e_i, this supplies exactly the two uses of
+the old covariance theorem in
+  full_correlation_bridge_20261031/
+  BALANCED_FACET_DENSITY_BOOTSTRAP_AND_FINITE_COVARIANCE_GAP_20261031.txt:
+global concavity and equation (11). Its separate facet-density bootstrap,
+Procrustes comparison and other negative-noise estimates remain explicit
+proof inputs; this package does not silently reprove every noise estimate.
+Its Gaussian convex-set Brascamp--Lieb/Poincare input also remains an
+established external result; replacing the covariance calls does not remove
+that separate input.
+
+The Hodge algebra has a separate exact checker and multiple internal
+analytic reconstructions. The present successor has independent checks
+of the classical regularity reduction and the singular-limit/barrier
+steps. Computational checks are not formal verification of the analysis.
+This proof package improves the mathematical basis of the substantial
+negative-voting candidate; priority and the end-to-end named-result
+assessment remain separate from the two theorems stated here.

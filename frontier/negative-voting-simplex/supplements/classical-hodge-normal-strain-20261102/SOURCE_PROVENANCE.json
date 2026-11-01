@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-11-01T19:52:21.278010+00:00",
+  "source_files": {
+    "HODGE_COVARIANCE_AND_SIMPLEX_CURVATURE_WITH_CLASSICAL_INPUTS_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/HODGE_COVARIANCE_AND_SIMPLEX_CURVATURE_WITH_CLASSICAL_INPUTS_20261102.txt",
+      "sha256": "98050b4e300f5fa686d938428e1e4f46a8956ef0fc259dd791b15e0f7f85375d",
+      "copied_unchanged": true
+    },
+    "regularity/CLASSICAL_CFJ_BRENIER_REGULARITY_REPLACEMENT_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/regularity/CLASSICAL_CFJ_BRENIER_REGULARITY_REPLACEMENT_20261102.txt",
+      "sha256": "dbda24a207a5e4ca9c9c9bebbd98b1ea0ab4df952adeb0585fca4361065ef998",
+      "copied_unchanged": true
+    },
+    "normal_strain/RANK_ONE_HESSIAN_MEASURE_LIMIT_AND_NORMAL_STRAIN_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/normal_strain/RANK_ONE_HESSIAN_MEASURE_LIMIT_AND_NORMAL_STRAIN_20261102.txt",
+      "sha256": "601241b59b7eed4bfe7d758e817e62c0144604e82a5e8aa92d24eb4fc8b33c3a",
+      "copied_unchanged": true
+    },
+    "normal_strain_audit/LOWER_TOUCHING_AND_MOVING_BASE_NORMAL_STRAIN_AUDIT_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/normal_strain_audit/LOWER_TOUCHING_AND_MOVING_BASE_NORMAL_STRAIN_AUDIT_20261102.txt",
+      "sha256": "76a3f212779b97d5245813f2a51f571432ce4fbcbe34222dda4679ac3587704f",
+      "copied_unchanged": true
+    },
+    "regularity_audit/INDEPENDENT_CFJ_REGULARITY_AND_NORMAL_STRAIN_REVIEW_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/regularity_audit/INDEPENDENT_CFJ_REGULARITY_AND_NORMAL_STRAIN_REVIEW_20261102.txt",
+      "sha256": "41cb25fa10eebc0c2251dad14fad27d52f0694db8ee6cc842ae85bcf5e708fdc",
+      "copied_unchanged": true
+    },
+    "regularity_audit/BOUNDED_ASSEMBLY_SCOPE_AND_FINITE_GAP_REPLACEMENT_REVIEW_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/regularity_audit/BOUNDED_ASSEMBLY_SCOPE_AND_FINITE_GAP_REPLACEMENT_REVIEW_20261102.txt",
+      "sha256": "3c4db557adaad8c03df814e2b1da5d1b7550e6419c2e7c9d343a1b0a44300b3f",
+      "copied_unchanged": true
+    },
+    "regularity_audit/FINAL_ASSEMBLY_ADDENDUM_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/regularity_audit/FINAL_ASSEMBLY_ADDENDUM_20261102.txt",
+      "sha256": "2fecea4a3f37ad36f0224307bb0ca5f6951abd86ec4505a2bd16b7073de0f619",
+      "copied_unchanged": true
+    },
+    "algorithmic/ENDPOINT_ONLY_TRANSFER_QUANTIFIERS_AND_ERROR_ORDER_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/completion_evidence_20261102/algorithmic/ENDPOINT_ONLY_TRANSFER_QUANTIFIERS_AND_ERROR_ORDER_20261102.txt",
+      "sha256": "3973f5ebe9cf9174491aac43543e5823799af0c9db57cfcf7005b662d4e6b702",
+      "copied_unchanged": true
+    }
+  },
+  "previous_public_main": "0c9ada16577f07497a1c3a458a9634b5825fb0e7",
+  "private_correspondence_included": false
+}

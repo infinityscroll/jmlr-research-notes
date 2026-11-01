@@ -1,0 +1,228 @@
+CLASSICAL REPLACEMENT FOR THE 2026 BRENIER-REGULARITY DEPENDENCY
+Date: 2026-11-02
+Status: PROVED from established transport results stated and proved or cited
+in Colombo--Figalli--Jhaveri (2017), with an explicit reciprocal-coordinate
+reduction. This note makes no claim about the separate weighted Hodge lemma.
+
+PURPOSE AND RESULT
+
+Section 7 of
+  weighted_partition_attack_20261102/proof/
+  HODGE_TO_COVARIANCE_LOCAL_TRANSFER_20261102.txt
+uses Gwozdz2026, arXiv:2609.04052v1, for smoothness and two-sided global
+Brenier-Hessian bounds. That recent dependency can be removed for the exact
+target class needed there.
+
+Proposition. Fix d >= 1, Sigma > 0, and q in C_c^infinity(R^d). Put
+
+  d nu(y) = Z^{-1} exp(-q(y)) g_Sigma(y) dy,
+  Z = integral exp(-q(y)) g_Sigma(y) dy,
+
+where g_Sigma is the centered Gaussian density with covariance Sigma.
+The ordinary Euclidean quadratic-cost Brenier map T=grad phi from the
+standard Gaussian gamma to nu is a smooth global diffeomorphism. There
+are constants 0 < m <= L < infinity such that
+
+  m I <= D^2 phi(x) <= L I                         for every x in R^d. (P)
+
+The constants may depend on Sigma and q. No uniformity over an approximating
+sequence, over covariance base points, or over dimensions is required.
+
+ESTABLISHED INPUTS AND PRIMARY-SOURCE LOCATORS
+
+[CFJ] M. Colombo, A. Figalli, Y. Jhaveri, Lipschitz changes of variables
+between perturbations of log-concave measures, Ann. Sc. Norm. Super. Pisa
+Cl. Sci. (5), XVII (2017), 1491--1519.
+DOI: https://doi.org/10.2422/2036-2145.201510_009
+Author-hosted manuscript read for this note:
+https://people.math.ethz.ch/~afigalli/papers-pdf/Lipschitz-changes-of-variables-between-perturbations-of-log-concave-measures.pdf
+An earlier primary version, also checked:
+https://arxiv.org/pdf/1510.03687
+
+Three inputs are used:
+
+(A) CFJ Theorem 1.1, manuscript p. 2: the optimal map from exp(-V) to its
+normalized compactly supported semiconvex log-density perturbation is
+globally Lipschitz when V has two positive uniform Hessian bounds and is
+minimized at zero.
+
+(B) CFJ Theorem 3.2, manuscript p. 5: Caffarelli's estimate gives
+Lip(S) <= sqrt(Lambda/kappa) under D^2 V_source <= Lambda I and
+D^2 V_target >= kappa I. The statement does NOT require source convexity.
+
+(C) CFJ Theorem 2.2 and its following paragraph, manuscript p. 4: interior
+smooth transport regularity extends to positive smooth full-space densities
+locally bounded above and away from zero. CFJ attributes this to Caffarelli
+and the full-space observation to Alesker--Dar--Milman (1999).
+
+These are the only regularity imports below. In particular, no conclusion
+from the 2026 preprint is used.
+
+1. THE COORDINATE REDUCTION PRESERVES EUCLIDEAN QUADRATIC OPTIMALITY
+
+Let A=Sigma^{1/4}, the symmetric positive definite fourth root. Introduce
+different, reciprocal transformations on source and target:
+
+  x'=A x,                  y'=A^{-1} y.
+
+The transformed reference Gaussian measures coincide:
+
+  A#N(0,I)=N(0,A^2),
+  A^{-1}#N(0,Sigma)=N(0,A^{-1}Sigma A^{-1})=N(0,A^2).
+
+Write eta=N(0,A^2). The actual transformed target is
+
+  nu'=A^{-1}#nu=Z^{-1} exp(-q'(y')) eta,
+  q'(y')=q(A y').
+
+Thus q' is again smooth and compactly supported. The normalizing constant
+is the same Z by change of variables.
+
+The map pi -> (A,A^{-1})#pi is a bijection between the two coupling sets.
+Because A is symmetric,
+
+  (A x) dot (A^{-1} y)=x dot y.
+
+For any original coupling pi,
+
+  integral |x'-y'|^2 d pi'
+    = integral |A x|^2 d gamma + integral |A^{-1}y|^2 d nu
+      - 2 integral x dot y d pi,
+
+whereas its original quadratic cost is
+
+  integral |x-y|^2 d pi
+    = integral |x|^2 d gamma + integral |y|^2 d nu
+      - 2 integral x dot y d pi.
+
+Their difference depends only on the prescribed marginals. All moments
+are finite because exp(-q)/Z is bounded above and below. Therefore the
+same coupling minimizes the ordinary Euclidean squared distance in each
+coordinate problem. There is no substitution of an anisotropic cost.
+
+Equivalently, if U=grad psi is the Brenier map eta -> nu', then
+
+  T(x)=A U(A x)=grad[psi(A x)]
+
+pushes gamma to nu and is a gradient of a convex function. Brenier uniqueness
+identifies it with the original quadratic optimizer. This is a congruence
+of one potential; it is not a composition of unrelated optimal transports.
+
+2. THE FORWARD HESSIAN UPPER BOUND
+
+The common Gaussian reference has normalized potential
+
+  V(z)=(1/2) z^T A^{-2} z +(d/2)log(2 pi)+(1/2)log det(A^2).
+
+It is minimized at zero, and
+
+  lambda I <= D^2 V=A^{-2} <= Lambda I,
+  lambda=lambda_min(Sigma^{-1/2})>0,
+  Lambda=lambda_max(Sigma^{-1/2})<infinity.
+
+Choose R with supp q compactly contained in B_R, and set
+
+  K_q = sup_y ||D^2 q(y)||_op,
+  R' = ||A^{-1}||_op R + 1,
+  lambda_q' = ||A||_op^2 K_q.
+
+Then supp q' is compactly contained in B_R', and
+
+  D^2 q'(z)=A D^2 q(Az) A >= -lambda_q' I.
+
+Every hypothesis of CFJ Theorem 1.1 is now satisfied with the SAME reference
+potential V on both sides; its normalization parameter is c_{q'}=-log Z.
+It supplies a finite global Lipschitz constant C_0 for U. Hence
+
+  Lip(T) <= ||A||_op^2 C_0 =: L < infinity.                 (1)
+
+The convex Brenier potential consequently has a C^{1,1} representative,
+and 0 <= D^2 phi <= L I almost everywhere (also distributionally).
+
+3. THE REVERSE MAP SUPPLIES A POSITIVE LOWER BOUND
+
+Apply input (B) directly in the original coordinates to the Brenier map
+S from nu back to gamma. Up to additive normalization constants, the source
+and target potentials for this reverse problem are
+
+  V_rev(y)=(1/2)y^T Sigma^{-1}y+q(y),
+  W_rev(x)=|x|^2/2.
+
+Set Lambda_rev=lambda_max(Sigma^{-1})+K_q > 0. Then
+
+  D^2 V_rev <= Lambda_rev I,       D^2 W_rev=I.
+
+The first inequality is all that is required on the reverse source; q may
+make V_rev nonconvex. Thus
+
+  Lip(S) <= sqrt(Lambda_rev)=: K < infinity.                (2)
+
+Both T and S have everywhere-defined continuous Lipschitz representatives.
+Reversing the unique optimal coupling shows S(T(x))=x gamma-almost
+everywhere and T(S(y))=y nu-almost everywhere. Each measure has full support,
+so each of these sets of full measure is dense. Continuity extends both
+identities to every point. Thus S=T^{-1} globally, and
+
+  K^{-1}|x-z| <= |T(x)-T(z)| <= L|x-z|.                    (3)
+
+At every differentiability point of T, the lower metric inequality gives
+|DT(x)v| >= K^{-1}|v| for all v. Since DT=D^2 phi is symmetric positive
+semidefinite, all its eigenvalues are >= K^{-1}. Therefore
+
+  m I <= D^2 phi <= L I almost everywhere,
+  m = [lambda_max(Sigma^{-1})+K_q]^{-1/2} > 0.              (4)
+
+The C^{1,1} property means there is no singular Hessian part, so these bounds
+also hold distributionally. This argument obtains the lower bound without
+applying CFJ Theorem 1.1 to a nonconvex reference potential.
+
+4. SMOOTHNESS AND EVERYWHERE HESSIAN BOUNDS
+
+The original densities g_I and Z^{-1}exp(-q)g_Sigma are C^infinity and
+strictly positive on R^d. On each compact set they are bounded above and
+away from zero. Their supports are all of R^d, a convex set. Input (C)
+therefore gives phi in C^infinity_loc(R^d), hence C^infinity on R^d.
+The same applies to the reverse potential.
+
+By continuity of D^2 phi, the almost-everywhere bounds (4) hold at every
+point. In particular det D^2 phi>0 everywhere. The global inverse already
+constructed is smooth, either by inverse function theory and the global
+identities or by regularity of the reverse potential. This proves (P).
+
+The proof only needs ordinary local smoothness. No global bounds on third
+or higher derivatives and no assertion of exactly quadratic tails are made.
+
+5. LINEAR CLOSURE AND THE ALL-BASE COVARIANCE APPLICATION
+
+For every invertible linear map B,
+
+  B#nu = Z^{-1} exp(-q_B(z)) g_{B Sigma B^T}(z) dz,
+  q_B(z)=q(B^{-1}z) in C_c^infinity(R^d).
+
+Consequently the proposition applies independently to the standard-Gaussian
+Brenier map for each transformed target. In particular B=C_0^{1/2} is
+admissible at every positive definite base covariance C_0.
+
+This proves exactly the regularity closure needed in Sections 6--8 of the
+transfer note. It does not assert that B T is a Brenier map, or that the
+transport potential is quadratic outside a compact set. The density class,
+not a condition on Brenier-potential tails, is the closed object.
+
+The constants for different C_0 may differ. The transfer note's pointwise
+upper second quotient and one-dimensional concavity argument do not require
+a uniform bound over all C_0. Likewise its W2 approximation uses no uniform
+regularity constants over the approximating density sequence.
+
+DEPENDENCY CONSEQUENCE
+
+For this dense target class and all its invertible linear images, CFJ2017
+Theorem 1.1 plus classical Caffarelli reverse-map and local-smoothness results
+replace Gwozdz2026 completely. The 2026 theorem need not be accepted or
+audited for this application. This is a reduction to established results,
+not a new proof of those established regularity theorems.
+
+The separate remaining mathematical obligation in the Hodge route is the
+all-dimensional weighted Hodge estimate in the weak-L2 smooth-uniform-Hessian
+class specified in the transfer note. This regularity note does not establish
+that estimate, and does not turn an optional independent-proof route into a
+new completion requirement.

@@ -1,0 +1,299 @@
+LOWER-TOUCHING TRANSFER OF HODGE CURVATURE TO A FINITE SIMPLEX
+Date: 2 November 2026
+Scope: analytic audit of the proposed transfer, conditional on the smooth
+Hodge/Peano estimate and the separately supplied rank-one measure lemma.
+No global weighted-perimeter inequality (N), chain factorization,
+or differentiation of Brenier maps is used.
+
+VERDICT
+
+PASS at the required finite-simplex scope. The lower-touching sign is
+correct, no uniform-in-approximation Peano remainder is needed, moving
+covariance bases are harmless after an exact congruence transformation,
+and a fixed-direction rank-one measure lemma suffices. The constants give
+exactly the previous normal-strain bound, including its factor 4.
+
+This audit does not prove the separate rank-one measure lemma or the
+all-base smooth-target regularity input. With those inputs established,
+it removes the chain-complex proof from this particular curvature step.
+It does not by itself certify the whole negative-voting theorem.
+
+1. PRECISE HYPOTHESES
+
+Let nu=sum_(i=1)^m p_i delta_(y_i), all p_i>0, sum p_i=1.
+Initially take m=d+1 affinely independent sites in R^d.
+Put
+  F_nu(C)=sup E[X dot Y], X~N(0,C), Y~nu.
+Fix C0>0 and a symmetric H. Choose b>0 so C(t)=C0+tH>0
+for |t|<=b.
+
+Let nu_n be smooth positive target laws with nu_n->nu in W2 and
+finite second moments. Require, for EVERY base C on this segment,
+the applicability of the already proved smooth-target estimate to the
+actual Brenier map from standard gamma_d to (C^(1/2))#nu_n.
+It is enough that each such map has smooth positive Hessian with
+individual finite upper/lower bounds. Those bounds need NOT be uniform
+in n or C for the touching argument.
+
+Write
+  K_C=C^(-1/2) H C^(-1/2),
+  M_n,C=D^2 phi_n,C,
+  J_n(C,H)=integral j_(M_n,C)(K_C) dgamma_d,
+where, in an eigenbasis of a PSD matrix M with eigenvalues lambda_i,
+  j_M(K)=sum_i lambda_i K_ii^2
+       +sum_(i<j) 4 lambda_i lambda_j/(lambda_i+lambda_j) K_ij^2.
+The 0/0 coefficient is zero.
+
+The smooth input is differentiability and, at every such C,
+  limsup_(s->0) [F_nu_n(C+sH)-F_nu_n(C)
+                 -s DF_nu_n(C)[H]]/s^2 <= -J_n(C,H)/8.       (P)
+
+This is the exact hypothesis, not a smoothness assertion about a family
+of Brenier maps as C varies. The all-base regularity dependency in the
+existing Hodge note remains explicit.
+
+2. UNIFORM CONVERGENCE OF THE VALUES
+
+Gluing a target W2 coupling onto a covariance-maximizing coupling and
+applying Cauchy--Schwarz gives, in both directions,
+  |F_nu_n(C)-F_nu(C)| <= sqrt(tr C) W2(nu_n,nu).             (2.1)
+Therefore f_n(t)=F_nu_n(C(t)) converges uniformly to
+f(t)=F_nu(C(t)) on [-b,b]. Positive definiteness is not needed for (2.1);
+compactness of the covariance set supplies the uniform trace bound.
+
+No rate of W2 convergence and no second-derivative convergence is assumed.
+
+3. WHY f IS C^2 AT THE REQUIRED SIMPLEX TARGET
+
+For a full affinely independent simplex, offsets h modulo constants
+correspond bijectively to translations a through h_i=c-y_i dot a.
+The dual objective becomes
+  Phi(C,a)=E sigma_Y(X-a)+(sum_i p_i y_i) dot a,
+  sigma_Y(x)=max_i y_i dot x, X~N(0,C).
+It is smooth jointly for C>0 and a: move the translation to the Gaussian
+density and differentiate that density, integrating against the fixed
+support function sigma_Y, which has linear growth. All derivatives
+needed locally are dominated by a Gaussian times a polynomial.
+
+Positive masses make the offset minimizer finite. Its offset Hessian
+is the weighted adjacency Laplacian with weights
+  integral_(facet ij) gamma_C dH^(d-1) / |y_i-y_j|.
+For a simplex every pair facet is nonempty of dimension d-1; its Gaussian
+area is positive. The Laplacian is positive on the constant-orthogonal
+offset space. The implicit function theorem therefore supplies smooth
+optimal offsets and smooth F(C) locally. In particular f is C^2.
+
+This argument uses the translated fixed simplex fan. It does not silently
+assert C^2 for every affinely dependent finite target through a combinatorial
+transition. Such an extension is unnecessary for the dependency under audit.
+
+4. TOUCH FROM BELOW: SIGNS AND CONSTANTS
+
+Fix any eta>0 and set
+  q(t)=f(t)-eta t^4.
+This is a valid C^2 test function on a sufficiently small interval, and
+f-q has its unique minimum at 0. Also q''(0)=f''(0).
+Let t_n minimize f_n-q on that closed interval. Uniform convergence implies
+t_n->0. Thus for all sufficiently large n, t_n is an interior minimizer.
+
+At that minimum, f_n'(t_n)=q'(t_n), and for all small h,
+  f_n(t_n+h)-f_n(t_n)-h f_n'(t_n)
+    >= q(t_n+h)-q(t_n)-h q'(t_n).
+Consequently
+  q''(t_n)/2
+    <= liminf_(h->0) [f_n(t_n+h)-f_n(t_n)-h f_n'(t_n)]/h^2
+    <= limsup_(h->0) [same quotient]
+    <= -J_n(C(t_n),H)/8.                                  (4.1)
+
+Hence
+  J_n(C(t_n),H) <= -4 q''(t_n).                            (4.2)
+Since q''(t_n)->f''(0), any lower bound L<=liminf_n J_n gives
+  L <= liminf J_n <= limsup J_n <= -4 f''(0).               (4.3)
+
+Lower touching is essential. An upper touching test would reverse the
+minimum inequality and would NOT yield (4.1). The factor 1/2 in the
+test-function Taylor expansion converts -1/8 into -1/4 for F''.
+The limits are taken first in h for each fixed n, then in n; uniform
+Peano errors are unnecessary.
+
+An alternative quadratic test with curvature f''(0)-epsilon works with
+an epsilon limit. The quartic choice above is stronger and simpler because
+f is already C^2 on a neighborhood. It is legitimate for an existence
+argument even though q is defined using the unknown limiting function.
+
+5. MOVING BASES: EXACT TARGET TRANSFORMATION
+
+Put C_n=C(t_n), K_n=C_n^(-1/2) H C_n^(-1/2), and
+eta_n=(C_n^(1/2))#nu_n. Let eta_0=(C0^(1/2))#nu.
+The exact congruence identity is
+  F_nu_n(C_n+sH)=F_eta_n(I+sK_n).                          (5.1)
+It is not an assertion that the old Brenier map can be composed with
+C_n^(1/2); generally that composition need not be a gradient map.
+
+Since C_n->C0,
+  W2(eta_n,eta_0)
+   <= ||C_n^(1/2)||op W2(nu_n,nu)
+      +||C_n^(1/2)-C0^(1/2)||op (integral |y|^2 dnu)^(1/2)
+   ->0.                                                   (5.2)
+Also K_n->K0 in operator norm. The source in every problem remains the
+same standard Gaussian. The covariance segment stays in the open PD cone.
+
+6. TRANSPORT AND HESSIAN-MEASURE CONVERGENCE
+
+Let T_n=grad phi_n be the actual Brenier maps gamma_d->eta_n, and
+T the map gamma_d->eta_0. W2 convergence gives convergence of the
+optimal transport costs. Tightness of the couplings, lower semicontinuity
+of squared distance, and uniqueness of the optimal Gaussian-source
+coupling identify every subsequential limit as (Id,T)#gamma_d.
+This implies T_n->T in probability; Lusin approximation handles a
+measurable T, and in the finite-simplex case its discontinuities are
+only Gaussian-null facets. W2 convergence of eta_n also gives uniform
+integrability of |T_n|^2. Hence
+  T_n -> T strongly in L^2(gamma_d).                       (6.1)
+
+For each compact source set, the Gaussian density is bounded below.
+Thus (6.1) implies L^2_loc convergence of the gradients. Distributionally
+  D T_n = D^2 phi_n -> D T = D^2 phi.
+These are PSD matrix measures. If chi is a smooth compactly supported
+nonnegative cutoff equal to one on a compact K, then
+  integral chi tr(D^2 phi_n) = -integral grad chi dot T_n
+is bounded uniformly. Therefore distributional convergence upgrades to
+local weak-* convergence of the matrix measures. Gaussian-weighted
+versions follow by multiplying compact test functions by the continuous
+positive Gaussian density.
+
+Equivalently one may normalize potentials by their mean on a fixed ball,
+use anchored Poincare and convexity to get local uniform convergence,
+and then take Hessian measures. Neither route differentiates T_n with
+respect to C. No common compact support of the target approximants is
+required: W2 convergence is the needed moment/tightness condition.
+
+The finite-target potential has the form
+  phi(x)=max_i {z_i dot x+h_i}, z_i=C0^(1/2)y_i.
+Its Hessian measure is
+  D^2 phi = sum_(i<j) ell_ij n_ij n_ij^T
+             H^(d-1)|_(facet ij),
+  ell_ij=|z_i-z_j|, n_ij=(z_i-z_j)/ell_ij.                 (6.2)
+Each unoriented facet occurs once. Multiple junctions have codimension
+at least two and contribute no Hessian mass.
+
+7. REDUCING THE MOVING MATRIX K_n TO ONE FIXED MATRIX
+
+For PSD M, j_M is a nonnegative quadratic form. Its formula gives
+  j_M(K)<=tr(M K^2)<=tr(M)||K||op^2.
+Quadratic Cauchy--Schwarz then yields
+  |j_M(K_n)-j_M(K0)|
+    <=tr(M)(||K_n||op+||K0||op)||K_n-K0||op.               (7.1)
+
+There is a uniform GLOBAL Gaussian trace bound:
+  integral tr(M_n) dgamma_d
+     = E[X dot T_n(X)]
+     <= sqrt(d) ||T_n||_(L^2(gamma_d)).                   (7.2)
+To justify the identity without a uniform Hessian bound, integrate by
+parts with monotone radial cutoffs. The cutoff-gradient term vanishes
+by the L^2 bound; positivity of tr(M_n) permits the limiting passage.
+The RHS is uniformly bounded by (5.2).
+
+Integrating (7.1) and using (7.2) shows
+  integral j_(M_n)(K_n) dgamma_d
+   -integral j_(M_n)(K0) dgamma_d ->0.                    (7.3)
+Thus the separate measure lemma only needs the fixed K0. No hidden
+uniform ellipticity of M_n survives the atomic-target limit.
+
+8. THE EXACT REMAINING MEASURE INPUT AND THE RESULT
+
+The required independent lemma, in the notation above, is
+  liminf_n integral j_(M_n)(K0) dgamma_d
+    >= sum_(i<j) area_gamma(facet ij) ell_ij
+                    (n_ij^T K0 n_ij)^2.                 (8.1)
+
+It should be proved locally near compact portions of the regular facets,
+then extended by nonnegativity and exhaustion. This audit does NOT replace
+it by generic lower semicontinuity: j_M(K) is concave and homogeneous in M
+(as an infimum of linear functions), so ordinary convex-integrand measure
+lower-semicontinuity is not available. Rank-one structure of (6.2) is the
+substantive feature of the proposed lemma.
+
+Combining (8.1), (7.3), and (4.3), and writing a_ij=y_i-y_j, gives
+  -4 D^2 F_nu(C0)[H,H]
+    >= sum_(i<j) area_gamma(facet ij) |C0^(1/2)a_ij|
+        [n_ij^T C0^(-1/2)H C0^(-1/2)n_ij]^2
+     = sum_(i<j) [area_gamma(facet ij)/|C0^(1/2)a_ij|]
+        [(a_ij^T H a_ij)^2/(a_ij^T C0 a_ij)].             (8.2)
+
+The equality follows from
+  n_ij^T K0 n_ij=(a_ij^T H a_ij)/(a_ij^T C0 a_ij).
+This is exactly the old normal-strain expression, with no extra
+power of C0 or factor of two. At C0=I it becomes
+  -4 F'' >= sum_(i<j) (area_gamma/|a_ij|)
+                         (a_ij^T H a_ij)^2/|a_ij|^2.
+
+For a full simplex, all facet areas are positive. If every edge quadratic
+vanishes, take the basis y_i-y_0; the diagonal quadratics vanish, and the
+other edges force every cross term to vanish. Therefore H=0. Strict
+negative curvature in every nonzero symmetric direction follows.
+
+9. LOWER AFFINE RANK AND CENTERED SCORE COVARIANCES
+
+Suppose the same affinely independent sites are embedded in R^D with
+affine span dimension r=m-1<D. Let Q have orthonormal columns spanning
+their differences, y_i=y_0+Q b_i. The common y_0 contributes zero because
+the Gaussian source is centered. Conditional lifting of Gaussian couplings
+gives the exact identity
+  F_nu(C)=F_(sum p_i delta_bi)(Q^T C Q).                  (9.1)
+For C>0, Q^T C Q>0. Consequently the classical smoothness and curvature
+argument applies intrinsically in dimension r, with direction Q^T H Q.
+Full ambient strictness is not claimed: directions with Q^T H Q=0 leave
+the value unchanged and make every edge quadratic in (8.2) vanish.
+A one-point target has F=0 and an empty facet sum.
+
+For the manuscript's centered m-label covariance, work on 1^perp from
+the outset. A covariance positive definite on 1^perp is an ordinary
+PD matrix in r=m-1 orthonormal coordinates. The centered sites form
+a full simplex there. There is no need to invert the singular full
+m-by-m covariance, or to assert ambient strictness across its fixed null
+direction.
+
+This covers the actual lower-rank issue. Arbitrary affinely dependent
+site families with more than r+1 positive-mass sites are outside this
+classical C^2 assertion. They are not needed for the original strict
+normal-strain dependency.
+
+10. DEPENDENCY VERDICT
+
+Validated here:
+  - lower-touching direction, interior minimizing sequence, and factor 4;
+  - uniform target-value convergence on covariance compact sets;
+  - exact congruence at moving bases;
+  - W2-to-local-Hessian-measure convergence;
+  - the uniform Gaussian trace bound and K_n-to-K0 reduction;
+  - simplex C^2 regularity and intrinsic affine-span reduction;
+  - exact conversion of the facet expression to normal strain.
+
+Not supplied here:
+  - the separately requested rank-one measure lemma (8.1);
+  - proof of the smooth all-base regularity theorem used to obtain (P);
+  - the full Hodge proof, taken from the already audited source;
+  - the rest of the negative-voting theorem's dependency graph.
+
+No global N, cycle-gauge identity, or chain-complex factorization enters
+any validated step above. Subject to the explicitly isolated inputs,
+this is an independent route to the finite-simplex normal-strain bound.
+
+LOCAL SOURCES READ
+
+weighted_partition_attack_20261102/proof/
+HODGE_TO_COVARIANCE_LOCAL_TRANSFER_20261102.txt
+
+weighted_partition_attack_20261102/primary/higher_dimension/
+HESSIAN_HODGE_LOCAL_STABILITY_20261102.txt
+
+weighted_partition_attack_20261102/counter/higher_dimension_audit/
+INDEPENDENT_HODGE_AND_TRANSFER_AUDIT_20261102.txt
+
+negative_voting_simplex_manuscript_v2_20261031/sources/
+ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt
+
+Paths are relative to full_standard_simplex_20261031. This file is a
+new internal analytic audit, not external endorsement or a priority claim.
+
