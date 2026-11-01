@@ -1,0 +1,17 @@
+{
+  "source_sha256": "0aea989010a9d2ed9b1367792ac6b89475cf766a0b81f694266ab3b6b892a450",
+  "fresh_temporary_directory": true,
+  "result": {
+    "status": "PASS",
+    "exact_checks": 1603,
+    "rational_fixtures": 42,
+    "dimensions": [
+      2,
+      8
+    ],
+    "polynomial_identities": 7,
+    "scope": "Algebra only; no analytic or external-theorem verification."
+  },
+  "optimized_python_rejected": true,
+  "external_regularization_theorem_verified_by_code": false
+}

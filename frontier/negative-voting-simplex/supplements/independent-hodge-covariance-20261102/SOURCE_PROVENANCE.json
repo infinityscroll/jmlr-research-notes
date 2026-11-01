@@ -1,0 +1,47 @@
+{
+  "created_at_utc": "2026-11-01T19:32:04.271821+00:00",
+  "source_files": {
+    "ROOT_INDEPENDENT_HODGE_COVARIANCE_REVIEW_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/ROOT_INDEPENDENT_HODGE_COVARIANCE_REVIEW_20261102.txt",
+      "sha256": "b13a5e741909c1c7cb7fb807e15474fe7618fba42e0975ce3c02c9395e81d3e0",
+      "copied_unchanged": true
+    },
+    "primary/higher_dimension/HESSIAN_HODGE_LOCAL_STABILITY_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/primary/higher_dimension/HESSIAN_HODGE_LOCAL_STABILITY_20261102.txt",
+      "sha256": "75c7fa5969d625debc55d8b7acc2653a91c1d105b5a986767376dee45d05bf8c",
+      "copied_unchanged": true
+    },
+    "proof/HODGE_TO_COVARIANCE_LOCAL_TRANSFER_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/proof/HODGE_TO_COVARIANCE_LOCAL_TRANSFER_20261102.txt",
+      "sha256": "49ed5d34910e2e8f1d59b7578cb51d6c45c06f48cdf992bcb835db38bdfb2990",
+      "copied_unchanged": true
+    },
+    "counter/higher_dimension_audit/INDEPENDENT_HODGE_AND_TRANSFER_AUDIT_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/counter/higher_dimension_audit/INDEPENDENT_HODGE_AND_TRANSFER_AUDIT_20261102.txt",
+      "sha256": "6f9428145099fe4a14320aec980e1f4e2909f8d754e7b68e59503ec19a48e259",
+      "copied_unchanged": true
+    },
+    "counter/higher_dimension_audit/GLOBAL_EXTENSION_AND_GRAPH_DENSITY_ADDENDUM_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/counter/higher_dimension_audit/GLOBAL_EXTENSION_AND_GRAPH_DENSITY_ADDENDUM_20261102.txt",
+      "sha256": "56613801ca0e067f9bba2cc92043e66ce8d9b4ceecf17049b6ca70bd9de77abe",
+      "copied_unchanged": true
+    },
+    "proof/HODGE_CHECKER_REVIEW_20261102.txt": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/proof/HODGE_CHECKER_REVIEW_20261102.txt",
+      "sha256": "48b6e88278f20f484e67d693acace9baef9c57e03c3375ee5ce7d1f65b703e60",
+      "copied_unchanged": true
+    },
+    "verify_hodge_algebra.py": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/verify_hodge_algebra.py",
+      "sha256": "0aea989010a9d2ed9b1367792ac6b89475cf766a0b81f694266ab3b6b892a450",
+      "copied_unchanged": true
+    },
+    "ROOT_FRESH_HODGE_ALGEBRA_REPLAY_20261102.json": {
+      "workspace_relative_source": "work/field_breakthrough_targets_20261030/stature_reset/parallel_attacks/stochastic/full_standard_simplex_20261031/weighted_partition_attack_20261102/ROOT_FRESH_HODGE_ALGEBRA_REPLAY_20261102.json",
+      "sha256": "435e885740d3de4971249ccedfc546ba090a217845e12dfd2f7980dca6a603f8",
+      "copied_unchanged": true
+    }
+  },
+  "previous_public_main": "23c573d078fffab5f3bd4804a7d9fa97186b924b",
+  "private_correspondence_included": false
+}

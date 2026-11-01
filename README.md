@@ -12,6 +12,8 @@ not accepted papers or claims of author endorsement.
 
 [An independent hazard certificate](frontier/negative-voting-simplex/supplements/independent-hazard-certificate-20261102/README.txt) now reconstructs the central structured derivative estimate directly from Gaussian integrals, including the moving offsets and all threshold tails. It covers a larger variance box and mixed perturbations; the original proof sources remain unchanged.
 
+[A second covariance proof route](frontier/negative-voting-simplex/supplements/independent-hodge-covariance-20261102/README.txt) now derives the foundational concavity theorem through a Hessian-weighted Gaussian Hodge estimate and a Bregman coupling argument. It includes independent internal audits and 1,603 exact algebra checks. Its all-target extension explicitly imports a September 2026 regularity preprint; that external proof has not been audited here.
+
 Three internal reviews support the revised assembly. Its new ingredients handle empty labels, construct the equal-row comparison without individual row lower bounds, and extend the local proof to the larger range. **External mathematical validation and priority remain open.** The threshold is existential, the full conjecture remains open, and the discrete voting channel retains its original cutoff.
 
 ## 1 November — global stability for large alphabets

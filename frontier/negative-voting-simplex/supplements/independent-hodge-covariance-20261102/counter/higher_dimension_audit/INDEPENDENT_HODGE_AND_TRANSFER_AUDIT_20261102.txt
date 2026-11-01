@@ -1,0 +1,246 @@
+INDEPENDENT AUDIT: HIGHER-DIMENSIONAL HODGE ARGUMENT AND LOCAL COVARIANCE TRANSFER
+Date: 2026-11-02
+Verdict: the algebra is correct. The existence/regularity step can be closed
+under uniform Hessian bounds. The Bregman transfer supplied subsequently by
+the parent is valid under those same bounds and bypasses differentiable polar
+factorization. A global extension to arbitrary target laws still requires its
+own approximation and all-covariance-base regularity theorem.
+
+1. CONVENTIONS AND SAFE DOMAIN
+
+Use gamma=N(0,I_n), D_j^*=x_j-partial_j, and for a skew matrix field A set
+  (delta A)_i=sum_j D_j^* A_ij.
+For vectors delta v=sum_i D_i^* v_i=-div_gamma(v). Thus delta(delta A)=0.
+Let phi be smooth with Hessian M satisfying mI<=M(x)<=LI globally, 0<m<=L.
+Being quadratic outside a compact set is a sufficient stronger condition but
+is not needed in the algebra or cutoff proof below. Set T=grad(phi).
+
+The Hodge minimization below works for every v in L^2(gamma;R^n) satisfying
+delta v=0 weakly. For the literal local-flow theorem one may impose v smooth
+and compactly supported; its flow is then complete. For the quadratic-form
+inequality it suffices additionally that the antisymmetric derivative of Mv
+has finite displayed weighted energy.
+
+2. THE MINIMIZER EXISTS: NO HIDDEN FEASIBILITY ASSUMPTION
+
+On the Hilbert space of skew L^2(gamma) matrix fields, minimize
+  J(A)=E tr(A^T M A)
+subject to delta A=v in distributions. Uniform bounds on M make J a strictly
+positive quadratic Hilbert norm equivalent to the ordinary L^2 norm.
+The affine constraint is closed: each distributional test against a smooth
+compact vector field is a continuous linear functional of A in L^2(gamma).
+
+It is nonempty. Write L0=Delta-x dot grad for the componentwise OU operator,
+take u=(1-L0)^(-1)v, and set
+  A_ij=partial_j u_i-partial_i u_j.
+Gaussian Hermite expansion justifies this construction for L^2 data. On
+homogeneous chaos degree k, the resolvent multiplies by 1/(k+1). The operator
+delta raises degree by one, so delta v=0 implies delta u=0. Also Du is L^2.
+Directly, with these signs,
+  delta A=(1-L0)u-grad(delta u)=v.
+The formula can first be checked on polynomials and passed to distributions.
+Consequently a unique minimizer A exists.
+
+3. EULER EQUATION AND LOCAL REGULARITY
+
+For skew variations B with delta B=0, stationarity gives
+  E <MA+AM,B>_F=0.
+In particular use B=delta K for every smooth compactly supported alternating
+three-form K. Since delta^2=0 and the Gaussian adjoint of delta is ordinary
+exterior differentiation, the minimizer satisfies
+  d(MA+AM)=0                                                (3.1)
+weakly. In dimension two this closure equation is automatic, as expected.
+
+The coupled first-order system
+  delta A=v,       d(MA+AM)=0
+is elliptic in the injective-symbol sense. At a nonzero covector xi its
+homogeneous symbol is
+  i_xi A=0,       xi wedge (MA+AM)=0.
+The latter says MA+AM=xi wedge alpha for some one-form alpha. Pairing with A
+and using the former yields <MA+AM,A>=0. Uniform positivity gives A=0.
+Thus standard interior regularity for an overdetermined elliptic first-order
+system gives A in H^1_loc for L^2 v, and smooth A for smooth v. One can invoke
+the usual interior elliptic estimate, or apply the second-order operator
+P^*P, whose principal symbol is positive definite by this calculation.
+This is the precise regularity theorem being used; global weighted regularity
+is proved separately below and is not being assumed.
+
+4. HESSIAN SYMMETRY REMOVES ALL DERIVATIVES OF M
+
+Let F=MA+AM. In the cyclic sum
+  partial_k F_ij+partial_i F_jk+partial_j F_ki,
+every term containing a derivative of M cancels with its partner because
+partial_k M_ij is symmetric in all three indices and A is skew.
+At any fixed point choose a constant orthogonal coordinate system diagonalizing
+M there, with eigenvalues lambda_i. Do not differentiate a moving eigenframe.
+For each distinct triple i,j,k, define
+  a=partial_k A_ij, b=partial_i A_jk, c=partial_j A_ki.
+Equation (3.1) is precisely
+  (lambda_i+lambda_j)a+(lambda_j+lambda_k)b
+    +(lambda_k+lambda_i)c=0.                                (4.1)
+
+5. THE REMAINDER IS POSITIVE, WITH THE STATED INDEXING
+
+Define
+  R(x)=sum_{i,k,j,l} M_ik partial_l A_ij partial_j A_kl.
+In the diagonal coordinates above, this is
+  sum_{i,j,l} lambda_i partial_l A_ij partial_j A_il.
+Terms with j=l are positive squares
+  sum_{i!=j} lambda_i (partial_j A_ij)^2.
+Terms with i=j or i=l vanish. Every distinct unordered triple contributes
+  q=-2(lambda_j a b+lambda_k b c+lambda_i c a).
+
+Eliminate c using (4.1). The exact result is
+
+  q=2/(lambda_i+lambda_k) [
+       (lambda_i a+lambda_k b)^2
+       +lambda_j(lambda_i a^2+lambda_k b^2)].               (5.1)
+
+Thus q>=0, with equality only when a=b=c=0. Together with the repeated-index
+squares this shows R>=0, and, under m<=lambda_i<=L,
+  R>=c(m,L,n)|DA|_F^2                                     (5.2)
+for some c>0 on tensors satisfying closure. For example one may bound a,b
+from (5.1) and then c from (4.1); compactness of the finite-dimensional
+normalized coefficient/tensor set gives the same uniform conclusion.
+All derivatives of a skew A occur in this decomposition. Therefore R=0
+forces DA=0; there are no omitted repeated-index directions.
+
+6. GLOBAL H^1 AND THE ENERGY IDENTITY VIA CUTOFFS
+
+Formally, Gaussian integration by parts and
+  partial_j D_l^*=D_l^* partial_j+delta_jl
+give
+  E v^T Mv=J(A)+E R.                                      (6.1)
+The two possible derivative-of-M terms vanish separately by Hessian symmetry:
+  sum_{i,j} A_ij partial_j M_ik=0,
+  sum_{k,l} partial_l M_ik partial_j A_kl=0.
+
+For a smooth compact scalar cutoff chi the rigorous localized identity is
+
+  E chi^2 v^T Mv = E chi^2 tr(A^TMA)+E chi^2 R
+    +2 E chi (partial_j chi) A_ij M_ik v_k
+    +2 E chi (partial_l chi) M_ik A_ij partial_j A_kl,       (6.2)
+
+with repeated indices summed. H^1_loc suffices: justify first by local
+mollification, then pass to the H^1_loc/L^2 limit in these products.
+Use (5.2), Cauchy-Schwarz, and Young's inequality on the last term to obtain
+  E chi^2 |DA|^2 <= C E chi^2 |v|^2+C E |grad chi|^2 |A|^2.
+For standard radial chi_R, equal to one on radius R, vanishing beyond 2R,
+and |grad chi_R|<=C/R, the right side is uniformly bounded. Thus DA is
+globally L^2(gamma). Both boundary terms in (6.2) then vanish as R tends to
+infinity. This proves (6.1), hence
+  J(A)<=E v^T Mv.                                         (6.3)
+
+This cutoff argument is the needed global integration/regularity closure.
+There is no appeal to an unproved decay property of the minimizing A.
+
+7. LOCAL NUCLEAR-TV SECOND VARIATION IN EVERY DIMENSION
+
+For a compact smooth divergence-free v and its gamma-preserving flow S_t,
+let V(t)=E ||D(T composed with S_t)||_*. In an eigenbasis of M at each point,
+write
+  K_ij=partial_j(Mv)_i-partial_i(Mv)_j.
+The exact second-variation formula is
+  V'(0)=0,
+  V''(0)=E sum_{i<j} K_ij^2/(lambda_i+lambda_j)-E v^T Mv.  (7.1)
+The trace contribution is -E v^T Mv; the nuclear Hessian contributes the
+displayed sum with no additional factor of two.
+
+Integration by parts using delta A=v gives
+  E v^T Mv=E sum_{i<j} A_ij K_ij.
+Meanwhile
+  J(A)=E sum_{i<j}(lambda_i+lambda_j)A_ij^2.
+Weighted Cauchy-Schwarz and (6.3) yield
+  (E v^T Mv)^2
+     <=J(A) E sum_{i<j}K_ij^2/(lambda_i+lambda_j)
+     <=(E v^T Mv) E sum_{i<j}K_ij^2/(lambda_i+lambda_j).
+This proves V''(0)>=0. The zero-velocity case is immediate separately.
+
+Equality implies E R=0 and hence A constant, so v=A x is an infinitesimal
+rotation. Conversely such rotations preserve V exactly. Within the compact
+velocity class equality is possible only for v=0. This establishes local
+second-order stability; it is not a finite-perturbation global N inequality.
+
+8. A DIRECT BREGMAN TRANSFER, WITHOUT DIFFERENTIABLE POLAR FACTORIZATION
+
+The parent supplied the following route after the local audit began. It is
+valid under the same uniform Hessian bounds. Let nu=T#gamma and
+  F_nu(Sigma)=MCov(N(0,Sigma),nu).
+For symmetric positive A, coupling G,S with both marginals gamma gives the
+exact identity
+
+  F_nu(A^2)=E T(G) dot A G
+    +sup_{G,S~gamma} { E [(A-I)T(G) dot (S-G)]
+                       -E D_phi(S,G) },                  (8.1)
+
+where D_phi(s,g)=phi(s)-phi(g)-T(g) dot (s-g). The identity follows because
+the marginals make E[phi(S)-phi(G)]=0. Uniform Hessian bounds imply quadratic
+growth, so this cancellation is integrable.
+
+Take A_t=(I+tH)^(1/2), H symmetric. Since D_phi(S,G)>=m|S-G|^2/2 and the
+diagonal coupling gives zero remainder, optimizing couplings (or sufficiently
+accurate approximate optimizers) satisfy ||S-G||_2=O(|t|).
+The conditional velocities
+  v_t(G)=E[(S-G)/t | G]
+are L^2 bounded. Any weak subsequential limit v satisfies div_gamma(v)=0:
+use equality of marginals, Taylor expand a compact smooth test function, and
+bound its remainder by O(E|S-G|^2/|t|)=O(|t|).
+
+The Bregman energy lower bound does not require a uniform pointwise Taylor
+remainder along these couplings. For any square-integrable test vector r,
+Fenchel duality gives
+  D_phi(S,G)/t^2
+    >=r(G) dot (S-G)/t
+      -D_{phi*}(T(G)+t r(G),T(G))/t^2.
+The second term converges in expectation to
+  one-half E r^T M^(-1) r,
+by the uniform inverse-Hessian bound and dominated convergence. Consequently
+  liminf E D_phi(S,G)/t^2
+    >=sup_r {E r dot v-one-half E r^T M^(-1)r}
+    =one-half E v^T Mv.                                  (8.2)
+
+Set
+  a=E tr(H^2 M),
+  c*=E sum_{i<j} [(lambda_i-lambda_j)^2/(lambda_i+lambda_j)] H_ij^2.
+Here H_ij denotes H in an orthonormal eigenbasis of M at that point.
+For any weak divergence-free v use its minimizing A from Sections 2-6. Then
+  b:=E HT dot v
+    =E sum_{i<j} A_ij (lambda_j-lambda_i) H_ij,
+so
+  b^2<=c*J(A)<=c*E v^T Mv.                                (8.3)
+This pairing only uses the bounded derivative HM of HT, so it is justified
+for L^2 v and A by cutoffs even when the limiting velocity has no classical
+flow or classical derivative.
+
+Since A_t=I+tH/2-t^2H^2/8+o(t^2), (8.1)-(8.3) imply
+
+  limsup_{t->0} [F_nu(I+tH)-F_nu(I)
+                 -(t/2)tr(H E M)]/t^2
+    <=-(a-c*)/8.                                         (8.4)
+
+The constants check: maximizing b/2-e/2 with b^2<=c*e gives c*/8.
+The baseline term contributes -a/8. If a classical second derivative exists,
+its upper bound is -(a-c*)/4, twice the t^2 coefficient in (8.4).
+Finally
+  a-c*=E [sum_i lambda_i H_ii^2
+            +sum_{i<j} 4lambda_i lambda_j/(lambda_i+lambda_j) H_ij^2]
+       >=m ||H||_F^2.
+
+Thus the local covariance upper second quotient follows directly and even
+has strict curvature under uniform positive Hessian bounds. Differentiable
+polar factorization is unnecessary and should not be silently invoked.
+
+9. GLOBAL LIMIT: WHAT THIS AUDIT DOES AND DOES NOT CLOSE
+
+At another covariance base Sigma_0, one must apply the local result to the
+transformed target Sigma_0^(1/2)#nu, using the actual Brenier map from gamma
+to that target. Composing the old Brenier map with Sigma_0^(1/2) does not
+generally produce that Brenier map. Uniform Hessian bounds for the original
+map do not automatically establish them for every such transformed target.
+
+A global covariance-concavity theorem therefore still needs a rigorously
+specified target class whose Brenier maps have the requisite bounds at every
+positive covariance base, followed by a valid density/continuity passage to
+the desired arbitrary laws. This audit validates the local algebra, minimizer
+regularity, integration, and Bregman transfer. It does not independently
+validate an external all-base regularity theorem or the final global passage.

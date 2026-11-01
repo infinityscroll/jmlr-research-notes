@@ -1,0 +1,158 @@
+INDEPENDENT HODGE ROUTE TO GAUSSIAN COVARIANCE CONCAVITY: ROOT REVIEW
+Date: 2026-11-02
+
+RESULT AND VERIFICATION BOUNDARY
+
+The new argument supplies an independent route to the foundational statement
+that F_nu(C)=MCov(N(0,C),nu) is concave in ordinary positive-semidefinite C,
+for every finite-dimensional probability law nu with finite second moment.
+It does not use the original finite-target chain-complex proof, the proposed
+global nuclear-variation inequality, or numerical evidence of concavity.
+
+The analytic chain is internally audited. Its all-target extension imports
+the stated regularity theorem in Maja Gwozdz, arXiv:2609.04052v1 (2026), as
+an external theorem. We checked its statement and applicability, not its
+full proof. This is a recent preprint dependency, and is explicitly retained
+as such. The new route is therefore conditional on that external statement
+being correct. This review is not external mathematical validation or a
+novelty determination. The previously published main theorem is unchanged.
+
+1. THE HESSIAN-WEIGHTED HODGE ESTIMATE
+
+Let gamma=N(0,I_d), M=D^2 phi smooth, and mI<=M<=LI with 0<m<=L<infinity.
+For a skew field A set
+  (delta_gamma A)_i=sum_j (x_j-partial_j)A_ij,
+  J(A)=E tr(A^T M A).
+Use the exterior-form norm sum_{i<j} A_ij^2; S_p(M) denotes the additive
+action of M on p-forms, with eigenvalues equal to p-fold sums of those of M.
+
+The root independently reconstructed the identity
+  E[(delta_gamma A)^T M(delta_gamma A)] = J(A)+R(A),
+  R(A)=E sum_{i,k,j,l} M_ik (partial_l A_ij)(partial_j A_kl).
+Both derivative-of-M terms disappear by the full symmetry of D^3 phi and
+skew symmetry of A. Positivity of a matrix field alone would not suffice.
+
+In a fixed orthonormal frame diagonalizing M at one point, repeated-index
+terms in R are positive squares. A triple of distinct indices contributes
+  q=-2(beta*a*b+gamma*b*c+alpha*c*a),
+while the corresponding component of d(S_2(M)A) is
+  k=(alpha+beta)a+(beta+gamma)b+(gamma+alpha)c.
+The Hessian symmetry also cancels every derivative-of-M term in this last
+formula. No spatial derivative of a moving eigenvector basis is taken.
+
+For alpha,beta,gamma>0,
+  q+k^2/[2(alpha+beta+gamma)]>=0.
+The associated symmetric matrix has null vector (1,1,1), positive diagonal,
+and principal 2-by-2 minors alpha*beta*gamma/(alpha+beta+gamma)>0.
+This proves the augmented estimate
+  ||delta_gamma A||_M^2
+  +(1/2)||d(S_2(M)A)||_{S_3(M)^(-1)}^2 >= J(A).
+
+For an arbitrary L2 Gaussian-solenoidal v, minimize J(A) subject to
+delta_gamma A=v. The constraint is nonempty: with L_OU=Delta-x.grad,
+u=(1-L_OU)^(-1)v and A_ij=partial_j u_i-partial_i u_j give a feasible L2
+field by Gaussian Hermite expansion. In particular, the resolvent is
+(1-L_OU)^(-1), not (-L_OU)^(-1). The affine constraint is closed in L2,
+and J is an equivalent Hilbert norm. Thus a unique minimizer exists.
+
+Variations by Gaussian codifferentials of compact smooth 3-forms give
+d(S_2(M)A)=0 distributionally. To apply the augmented estimate, cut off A
+and use local Friedrichs graph approximation for
+  A -> (delta_gamma A,d(S_2(M)A)).
+The cutoff commutators are controlled by |grad chi_R||A| and
+|grad chi_R||M||A|, so they vanish in L2. On each compact set all
+coefficients and the Gaussian weight are smooth. Graph approximation
+therefore gives delta_gamma A_n->v and d(S_2(M)A_n)->0. The correction
+term is at most (6m)^(-1)||d(S_2(M)A_n)||_2^2. Passing to the limit yields
+  J(A)<=E v^T Mv.                                      (H)
+This closes the weak-L2 step, without assuming a smooth minimizer or a
+complete flow for an arbitrary polynomial vector field.
+
+2. THE DISCRIMINANT AND LOCAL COVARIANCE CURVATURE
+
+For a symmetric constant H and T=grad phi, the same weak integration by
+parts and (H) imply
+  |E(HT).v|^2 <= c_* E v^T Mv,
+  c_*=E sum_{i<j} [(lambda_i-lambda_j)^2/(lambda_i+lambda_j)] H_ij^2.
+Here H is expressed in the pointwise eigenbasis only for algebra. Put
+a=E tr(H^2 M). Then c_*<=a and
+  a-c_* = E[sum_i lambda_i H_ii^2
+             +sum_{i<j} 4lambda_i lambda_j H_ij^2/(lambda_i+lambda_j)]
+         >=m||H||_F^2.
+
+The root independently derived the exact coupling identity, with Q_t=sqrt(I+tH),
+  F_nu(I+tH)=E T(G).Q_t G
+    +sup_(G,S both gamma){E[(Q_t-I)T(G)].(S-G)-E D_phi(S,G)},
+where D_phi(S,G)=phi(S)-phi(G)-T(G).(S-G). This is the usual Bregman
+divergence, convex in S. Uniform convexity makes an optimizing displacement
+O(t) in L2. Conditional velocities E[(S-G)/t|G] have weak L2 subsequential
+limits v with div_gamma v=0, because the two marginals are equal.
+
+The second-order energy limit is justified by Fenchel duality, not by a
+uniform Taylor expansion in random displacements. For any q in L2, the
+dual Bregman remainder at T(G)+tq is dominated by t^2|q|^2/(2m) and tends
+to t^2 q^T M^-1 q/2. Optimizing the dual bound gives liminf energy at least
+E v^T Mv/2. Combining this with the discriminant proves
+  limsup_(t->0) [F_nu(I+tH)-F_nu(I)-(t/2)tr(H E M)]/t^2
+     <=-(a-c_*)/8.
+The coefficient refers to the t^2 quotient; a classical second derivative,
+when it exists, is bounded above by -(a-c_*)/4. No differentiation of a
+Brenier map with respect to covariance is used.
+
+3. GLOBALIZATION: THE EXPLICIT IMPORTED THEOREM
+
+The primary source checked is:
+  Maja Gwozdz, Caffarelli Estimates under Lipschitz Perturbations,
+  arXiv:2609.04052v1, 3 September 2026,
+  https://arxiv.org/html/2609.04052v1
+  Theorem 3.2, Corollary 3.6, Proposition 3.8.
+The stated forward and reverse Brenier estimates give uniform positive
+lower and finite upper Hessian bounds between Gaussian laws and smooth
+compact log-density perturbations of elliptical Gaussian laws. Smooth
+positive densities supply the required local smoothness. This is the only
+new external regularity input; its proof was not audited in this work.
+
+The target density class, rather than a class of transport potentials, is
+closed under invertible linear changes of variables. Consequently the
+local inequality applies at every positive-definite covariance by
+  F_nu(C0^(1/2) D C0^(1/2))=F_((C0^(1/2))#nu)(D).
+There is no claim that compositions of Brenier maps are Brenier, or that
+quadratic-outside-compact potentials are closed under target transforms.
+
+At every interior point of a covariance segment the upper Peano second
+quotient is nonpositive. This implies concavity: if a chord is violated,
+subtract it, then subtract a sufficiently small positive quadratic. An
+interior minimum gives a strictly positive lower second quotient, a
+contradiction. The local expansion itself supplies the first derivative.
+
+For an arbitrary P2 target, choose compact smooth probability densities
+f_n converging in W2 and set rho_n=(1-epsilon_n)f_n+epsilon_n gamma.
+This is exactly a smooth compact log perturbation of gamma, since
+  q_n=-log[1+((1-epsilon_n)/epsilon_n)f_n/gamma_density]
+is smooth and compactly supported. The second moments stay bounded and
+rho_n->nu in W2. The bound
+  |F_nu(C)-F_eta(C)|<=sqrt(tr C) W2(nu,eta)
+passes concavity to all targets. Gaussian-source W2 continuity extends
+the result to singular positive-semidefinite covariances. Strictness is
+not asserted to survive these limits.
+
+4. CHECKS AND WHAT THEY DO NOT ESTABLISH
+
+The core Hodge argument, the planar special case, and the Bregman transfer
+were derived independently by separate branches and reconstructed here.
+The separate audit gives an elliptic-regularity/cutoff proof of the same
+Hilbert-space closure; the graph-norm proof above is sufficient on its own.
+
+verify_hodge_algebra.py uses only the Python standard library. It checks
+seven polynomial identities with rational coefficients, plus rational
+tensor fixtures in dimensions 2 through 8: 1,603 exact checks in total.
+Those checks cover the three-index matrix minors and determinant, Codazzi
+cancellation, and the remainder decomposition. They do not formally verify
+the analytic proof or the external regularity theorem.
+
+No global weighted partition inequality, global nuclear-rearrangement
+theorem, new noise-correlation range, or new conjecture-resolution claim is
+made by this supplement. The original negative-voting candidate remains
+subject to mathematical validation and defensible priority assessment.
+The broad weighted-perimeter route is no longer needed for this independent
+covariance proof; its finite searches must not become another completion gate.

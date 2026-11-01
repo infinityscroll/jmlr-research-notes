@@ -1,0 +1,41 @@
+BOUNDED INDEPENDENT REVIEW OF verify_hodge_algebra.py
+Date: 2026-11-02
+
+The checker was read and rerun with ordinary python3. It reports PASS with
+1603 assertions, 42 deterministic rational fixtures, and 7 polynomial
+identities. No index/sign error or false-positive algebra was found.
+
+Checked correspondences:
+1. Poly uses exact Fraction coefficients, combines equal monomials, and
+   removes zero coefficients. Its equality is exact polynomial equality.
+2. For positive alpha,beta,gamma, the symbolic matrix has diagonal
+   (alpha+beta)^2, (beta+gamma)^2, (gamma+alpha)^2. The checked zero row sums,
+   three positive principal 2x2 minors 4(alpha+beta+gamma)alpha beta gamma,
+   and zero determinant correctly establish positive semidefiniteness.
+   Its quadratic form divided by 2(alpha+beta+gamma) is precisely
+   q+K^2/[2(alpha+beta+gamma)], with the stated triple q and weighted curl K.
+3. DA[k][i][j] consistently means partial_k A_ij. The raw remainder is
+   sum lambda_i (partial_l A_ij)(partial_j A_il), the correct diagonal-basis
+   form of sum M_ik (partial_l A_ij)(partial_j A_kl).
+4. The repeated-index terms are positive squares. Each distinct-index
+   triple contributes -2(beta*a*b+gamma*b*c+alpha*c*a), with a=partial_k A_ij,
+   b=partial_i A_jk, c=partial_j A_ki. The signs match skew symmetry.
+5. The sampled third-derivative tensor is fully symmetric, and dm is the
+   correct cyclic derivative-of-M contribution to d(MA+AM). Its cancellation
+   therefore tests the intended Codazzi identity, not an unrelated index sum.
+6. Count: 7 symbolic assertions; 6*sum_{d=2}^8 binomial(d,3)=756 sampled
+   triples with two assertions each; 42 fixtures with two additional
+   assertions each. Total 7+1512+84=1603.
+
+Scope remains exactly algebraic. The 42 rational fixtures are deterministic
+finite checks, not an exhaustive proof over all derivative tensors or
+functional-analytic data. The symbolic positive-semidefinite identity is
+universal algebra, but neither it nor the samples verify existence,
+regularity, cutoff limits, variational transfer, or the imported transport
+regularity theorem. The checker's existing scope statement is accurate.
+
+Minor operational safeguard: all checks use Python assert. Running with
+python -O or PYTHONOPTIMIZE would disable them while still printing PASS.
+For a public checker, add an explicit startup error when not __debug__, or
+replace assertions by unconditional checked exceptions. Ordinary python3
+(the command actually used for this review) executes all 1603 assertions.

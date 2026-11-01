@@ -1,0 +1,204 @@
+FINAL ADDENDUM: GLOBAL EXTENSION AND GRAPH-DENSITY AUDIT
+Date: 2026-11-02
+This supplements, and does not overwrite, the earlier independent audit.
+
+Audited local files:
+  proof/HODGE_TO_COVARIANCE_LOCAL_TRANSFER_20261102.txt, Sections 7-9;
+  primary/higher_dimension/HESSIAN_HODGE_LOCAL_STABILITY_20261102.txt,
+    especially its augmented estimate and graph-density proof.
+Paths above are relative to weighted_partition_attack_20261102/.
+
+VERDICT
+No mathematical gap was found in the requested global transfer, conditional
+on the explicitly imported 2026 regularity theorem. The graph-density proof
+is valid and simpler than the elliptic-regularity route in my earlier audit.
+The result remains dependent on the correctness of that imported theorem;
+this audit checks its stated applicability, not its full proof.
+
+1. EXACT IMPORT AND ITS APPLICATION
+
+Source inspected directly:
+  Maja Gwozdz, Caffarelli Estimates under Lipschitz Perturbations,
+  arXiv:2609.04052v1, dated 3 September 2026,
+  https://arxiv.org/html/2609.04052v1
+Relevant statements: Theorem 3.2, Corollary 3.6, Proposition 3.8.
+
+The first two provide an upper Brenier-Hessian bound for positive quadratic
+reference curvatures with globally Lipschitz perturbations, assuming finite
+normalizations and second moments. Proposition 3.8 supplies smooth invertible
+transport for the smooth positive full-space densities used here.
+
+For rho=Z^(-1)e^(-q)g_Sigma, q smooth compactly supported, use these parameters:
+
+  Forward: V=|x|^2/2, a=0; W=y^T Sigma^(-1)y/2, b=q;
+           Lambda=1, kappa=lambda_min(Sigma^(-1)).
+  Reverse: V=y^T Sigma^(-1)y/2, a=q; W=|x|^2/2, b=0;
+           Lambda=lambda_max(Sigma^(-1)), kappa=1.
+
+All stated hypotheses hold: q is globally Lipschitz and bounded; both
+densities are smooth, strictly positive, and have finite moments. The reverse
+map is the Brenier inverse. Its finite derivative upper bound K gives
+D^2 phi(x)>=K^(-1)I by differentiating the inverse identity. Smoothness makes
+the bounds pointwise. Thus 0<mI<=D^2 phi<=LI with finite constants.
+
+These are imported statements. Their full proofs were not independently
+audited, and this addendum does not present them as newly proved facts.
+
+2. THE DENSITY CLASS REALLY IS CLOSED AT EVERY COVARIANCE BASE
+
+Let L be any invertible linear map. Direct density transformation gives
+
+  L#(Z^(-1)e^(-q)g_Sigma)
+    = Z^(-1)e^(-q_L)g_{Sigma_L},
+  q_L(y)=q(L^(-1)y),       Sigma_L=L Sigma L^T.
+
+The support of q_L is the compact set L(supp q); q_L is smooth; and
+  Lip(q_L)<=||L^(-1)||_op Lip(q).
+The normalizer is unchanged by the same change of variables. Therefore
+the target class is invariant under the covariance congruences needed here.
+
+In particular, at C0>0 set L=C0^(1/2). For a covariance direction H, put
+K=C0^(-1/2) H C0^(-1/2). The exact cost transformation is
+  F_nu(C0+tH)=F_{L#nu}(I+tK).
+This is a change of Gaussian source coordinates and target labels in the
+bilinear cost. It does not assert that L composed with an existing Brenier
+map is itself a Brenier map.
+
+The imported theorem applies to the actual Brenier map for every transformed
+target. Its constants can depend on the base. The pointwise calculus below
+does not require a single bound uniform over the entire positive cone.
+The Hodge argument uses bounded positive Hessians, not constant tail Hessians,
+so the transformed potentials meet exactly the needed domain.
+
+3. DIFFERENTIABILITY AND THE ONE-DIMENSIONAL CONCAVITY STEP
+
+For completeness, differentiability does not require differentiating any
+optimal map. Fix nu in P2 and consider the set of cross-moment matrices
+  K_nu={E[X Y^T] : X~gamma, Y~nu}.
+It is compact in finite-dimensional matrix space. Couplings are weakly
+compact, and the cross-products are uniformly integrable: split a large
+product event into large-|X| and large-|Y| events and use Cauchy-Schwarz with
+the fixed marginal second-moment tails.
+
+The function A -> MCov(A#gamma,nu) is the support function of this compact
+set, up to the fixed transpose convention. At invertible A its maximizing
+coupling is unique by Gaussian-source quadratic OT uniqueness. Hence the
+maximizing cross-moment is unique and the support function is differentiable.
+Composition with the smooth positive-definite square root gives
+differentiability of C -> F_nu(C) on the positive-definite cone.
+
+Now take any covariance segment inside that cone and write f(s)=F(C0+sH).
+The local transfer gives at every interior s
+  limsup_{h->0} [f(s+h)-f(s)-h f'(s)]/h^2<=0.
+Suppose f failed concavity. Subtract a chord on some [alpha,beta], obtaining
+g with zero endpoints and a negative interior value. For sufficiently small
+epsilon>0, g(s)-epsilon s^2 has a global minimum at an interior s_*: its
+endpoint perturbations are arbitrarily small while the negative interior
+gap persists. At that minimum g'(s_*)=2epsilon s_*, and
+  g(s_*+h)-g(s_*)-h g'(s_*)>=epsilon h^2.
+This contradicts the local upper quotient. Section 8's calculus is correct.
+There is no assumption of second differentiability, nor an illicit uniform
+little-oh bound across base points.
+
+4. EXPLICIT P2 DENSITY APPROXIMATION
+
+Given X with law nu in P2, first replace X outside radius R by zero, then
+convolve its law with a smooth compactly supported mollifier whose scale
+tends to zero. This gives smooth compactly supported probability densities
+f_n with f_n dx ->nu in W2. Indeed the truncation error is bounded by
+(E |X|^2 1_{|X|>R})^(1/2), and the mollification coupling error tends to zero.
+In particular the second moments of f_n are uniformly bounded.
+
+For 0<epsilon_n<1 tending to zero, define
+  rho_n=(1-epsilon_n)f_n+epsilon_n g,
+where g is the standard Gaussian density. Then exactly
+  q_n=-log[1+((1-epsilon_n)/epsilon_n) f_n/g],
+  Z_n=1/epsilon_n,
+  rho_n=Z_n^(-1)e^(-q_n)g.
+
+Because g is positive and smooth and f_n is smooth with compact support,
+q_n is smooth and identically zero outside that compact support. The log
+argument is at least one. Thus q_n really belongs to C_c^infinity; there is
+no boundary-smoothness or positivity gap in this representation.
+
+Couple an f_n variable X_n to itself with probability 1-epsilon_n, and to
+an independent standard Gaussian G with probability epsilon_n. The second
+marginal is rho_n and
+  W2(rho_n dx,f_n dx)^2
+     <=epsilon_n E|X_n-G|^2
+     <=2epsilon_n(E|X_n|^2+d) ->0.
+Therefore this exact regularity class is W2 dense in all P2 laws. No uniform
+Lipschitz bound on q_n, or uniform transport Hessian bound in n, is required
+to pass a finite concavity inequality to the limit.
+
+5. TARGET CONTINUITY AND THE SEMIDEFINITE BOUNDARY
+
+For C>=0, gluing an optimal covariance coupling with a W2 target coupling
+and then applying Cauchy-Schwarz gives
+  |F_nu(C)-F_eta(C)|<=sqrt(tr C) W2(nu,eta).
+Symmetrizing the comparison gives the absolute value. Thus the three terms
+of every fixed concavity inequality pass from rho_n to nu. This first gives
+concavity for all P2 targets at positive-definite covariance matrices.
+
+For the source variable, the same gluing argument gives
+  |MCov(mu,nu)-MCov(mu',nu)|
+    <=sqrt(E_nu|Y|^2) W2(mu,mu').
+Coupling C^(1/2)G and D^(1/2)G therefore yields the explicit bound
+  |F_nu(C)-F_nu(D)|
+    <=sqrt(E_nu|Y|^2) ||C^(1/2)-D^(1/2)||_F.
+The positive-semidefinite square-root map is continuous in finite dimension.
+Apply the positive-definite concavity inequality to C+epsilon I and
+D+epsilon I and let epsilon decrease to zero. Its middle covariance is
+(1-t)C+tD+epsilon I, so every term converges correctly. This proves the
+extension to the entire closed positive-semidefinite cone, including zero
+and singular matrices. No uniqueness of a singular-source transport is used.
+
+6. GRAPH-DENSITY ALTERNATIVE: VALID AND PREFERABLE FOR THE CORE HODGE BOUND
+
+The primary note proves for every smooth compact skew A the augmented bound
+  I(delta A)+(1/2) E<d(S_2(M)A),S_3(M)^(-1)d(S_2(M)A)> >=J(A).
+I independently checked the three-index correction. If alpha,beta,gamma>0,
+  q=-2(beta ab+gamma bc+alpha ca),
+  k=(alpha+beta)a+(beta+gamma)b+(gamma+alpha)c,
+then q+k^2/[2(alpha+beta+gamma)] is positive semidefinite. Its symmetric
+matrix annihilates (1,1,1); its diagonal entries are positive; and each
+principal two-by-two minor is alpha beta gamma/(alpha+beta+gamma)>0.
+The displayed factor 1/2 and the bound 1/(6m) are correct.
+
+For the minimizing L2 field A, the graph data are
+  delta A=v in L2,       d(S_2(M)A)=0 in L2.
+Take radial cutoffs chi_R with |grad chi_R|<=C/R. Distributionally,
+  delta(chi_R A)=chi_R delta A-(grad chi_R) contracted with A,
+  d(S_2(M)chi_R A)=chi_R d(S_2(M)A)+dchi_R wedge S_2(M)A.
+Both commutators tend to zero in L2 since M is bounded and A is L2. There
+are no derivative-of-M terms in these cutoff commutators. The remaining
+cutoff errors in A and v vanish by ordinary L2 tail convergence.
+
+For each fixed cutoff, compact Friedrichs mollification converges in the
+graph norm of the first-order operator
+  P A=(delta A,d(S_2(M)A)).
+Its coefficients, including the relevant derivatives of M, are smooth and
+bounded on that compact neighborhood. Gaussian and Lebesgue L2 norms are
+equivalent there. The usual first-order Friedrichs commutator lemma therefore
+applies. Componentwise mollification preserves skew symmetry. No global
+bound on derivatives of M is required.
+
+A diagonal cutoff/mollification sequence A_n consequently satisfies
+  A_n->A, delta A_n->v, d(S_2(M)A_n)->0 in L2.
+Since mI<=M<=LI, J(A_n)->J(A) and I(delta A_n)->I(v). The correction term
+is bounded by ||d(S_2(M)A_n)||_2^2/(6m) and tends to zero. Passing to the
+limit in the augmented bound gives J(A)<=I(v).
+
+This method genuinely avoids assuming smoothness of the minimizer or proving
+its global H1 regularity. It supplies exactly the weak-L2 Hodge estimate
+needed by the transfer. My earlier ellipticity/cutoff proof remains a second
+route, useful for the stronger equality analysis, but is not necessary here.
+No substantive gap was found in the primary graph-density argument.
+
+FINAL SCOPE
+The internally supplied Hodge and transfer arguments, together with the
+explicit approximation and boundary passages, give the stated all-target
+ordinary-covariance concavity endpoint if the named 2026 preprint theorem is
+accepted. The endpoint must retain that external dependency; this audit is
+not an independent verification of the preprint's proof, a novelty claim,
+or a proof of the stronger global nuclear-Jacobian rearrangement assertion.

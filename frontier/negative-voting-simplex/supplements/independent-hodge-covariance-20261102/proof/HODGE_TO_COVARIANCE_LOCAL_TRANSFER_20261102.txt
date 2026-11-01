@@ -1,0 +1,267 @@
+FROM A WEIGHTED HODGE ESTIMATE TO LOCAL COVARIANCE CONCAVITY
+Date: 2026-11-02
+Scope: complete transfer conditional only on the specified all-dimensional
+weighted Hodge estimate. The planar estimate is proved separately. This note
+does not certify the all-dimensional Hodge lemma or its analytic realization.
+No differentiation of Brenier maps, global (N), or covariance concavity is
+assumed in this transfer.
+
+1. HYPOTHESES AND THE EXACT HODGE INPUT
+
+Let gamma be standard Gaussian measure on R^d. Let phi be smooth with
+
+    m I <= M(x)=D^2 phi(x) <= L I,  0<m<=L<infinity,
+    T=grad phi,  nu=T#gamma,  B=E M.
+
+Quadratic-outside-compact phi is permitted, but not necessary for this
+transfer. Let v in L^2(gamma;R^d) be Gaussian-solenoidal, meaning
+E[v dot grad psi]=0 for all smooth compactly supported psi. Put I_v=E v^T Mv.
+
+The required weighted Hodge input is:
+
+  For every such v there is a skew matrix field A with delta_gamma A=v,
+  in the weak sense, such that
+
+    J_A := E tr(A^T M A) <= I_v.                             (H)
+
+Here (delta_gamma A)_i=sum_j(x_j A_ij-partial_j A_ij), and finite J_A suffices
+for the integrations against smooth, square-integrable gradients below.
+Under uniform Hessian bounds, J_A is equivalent to the L^2 matrix norm.
+This is the exact analytic input being audited separately.
+
+2. THE DISCRIMINANT FOLLOWS DIRECTLY, WITH A SHARPER CONSTANT
+
+Let H be a fixed symmetric matrix. Define
+
+    b_v=E[(HT) dot v],   a=E tr(H^2 M).
+
+Weak Gaussian integration by parts, using delta_gamma A=v, yields
+
+    b_v=E sum_{i<j} A_ij [(HM)_ij-(HM)_ji].                  (2.1)
+
+At each point choose an orthonormal eigenbasis of M, with eigenvalues lambda_i,
+and write H-tilde for H in that basis. All following expressions are basis
+invariant; repeated eigenvalues cause no ambiguity. Define
+
+    c_* = E sum_{i<j} ((lambda_i-lambda_j)^2/(lambda_i+lambda_j))
+                       H-tilde_ij^2.
+
+Weighted Cauchy-Schwarz in (2.1), followed by (H), gives
+
+    |b_v|^2 <= J_A c_* <= I_v c_* <= I_v a.                 (2.2)
+
+The final comparison is pointwise: the off-diagonal coefficient in a is
+lambda_i+lambda_j, whereas (lambda_i-lambda_j)^2/(lambda_i+lambda_j) is at
+most that value. The diagonal contributions to a are nonnegative.
+
+The integration in (2.1) is legitimate by L^2 approximation/cutoffs: HT has
+at most linear growth, its derivative HM is bounded, and A,v are L^2.
+
+This proves the desired weighted-solenoidal discriminant directly. A local
+nuclear-variation theorem by itself is not silently substituted for (H).
+
+3. AN EXACT VARIATIONAL FORMULA REPLACES BRENIER-MAP DIFFERENTIATION
+
+Write F_nu(C)=MCov(N(0,C),nu). For C=I+tH>0 let
+
+    Q_t=(I+tH)^{1/2},   R_t=Q_t-I.
+
+Lift couplings through T as usual, and let (G,S) range over all couplings of
+two standard Gaussians. Since phi has at most quadratic growth,
+E phi(S)=E phi(G). Consequently, with the usual Bregman divergence
+
+    D_phi(S,G)=phi(S)-phi(G)-T(G) dot (S-G),
+
+one has the exact identity
+
+    F_nu(I+tH)
+      = E[T(G) dot Q_t G]
+        + sup_{G,S ~ gamma} {
+            E[(R_t T(G)) dot (S-G)] - E D_phi(S,G)
+          }.                                               (3.1)
+
+The baseline admits the expansion
+
+    E[T(G) dot Q_t G]
+      = tr B + (t/2)tr(BH) - (t^2/8)a + o(t^2).             (3.2)
+
+Optimal couplings exist. Their excess objective over the identity coupling
+is nonnegative. Since D_phi(S,G)>=(m/2)|S-G|^2, Cauchy-Schwarz in (3.1) gives
+
+    ||S-G||_2 <= (2/m)||R_t T||_2 = O(|t|).                  (3.3)
+
+For a sequence t->0, set u_t(G)=E[(S-G)/t | G]. A subsequence converges
+weakly in L^2 to v. Taylor expansion of each compactly supported smooth psi,
+using the equal Gaussian marginals and (3.3), shows
+
+    E[grad psi(G) dot v(G)]=0.
+
+Thus every such limit v is Gaussian-solenoidal.
+
+4. THE BREGMAN LOWER LIMIT IS RIGOROUS WITHOUT TAIL RESTRICTIONS ON u_t
+
+For any fixed q in L^2(gamma;R^d), Fenchel duality gives
+
+    D_phi(S,G) >= t q(G) dot (S-G)
+      - [phi^*(T(G)+t q(G))-phi^*(T(G))-t q(G) dot G].
+
+The bracket divided by t^2 converges pointwise to
+(1/2) q^T M^{-1}q. It is bounded by |q|^2/(2m), since phi is m-strongly
+convex. Dominated convergence and weak convergence of u_t yield
+
+    liminf E D_phi(S,G)/t^2
+      >= E q dot v - (1/2)E q^T M^{-1}q.
+
+Taking the supremum over q (or choosing q=Mv) gives
+
+    liminf E D_phi(S,G)/t^2 >= (1/2)E v^T Mv.                (4.1)
+
+This avoids an invalid uniform Taylor expansion of the random Bregman
+increment; rare large increments are fully covered by the dual argument.
+
+5. LOCAL COVARIANCE CURVATURE
+
+Equations (3.1)--(4.1), and R_t/t -> H/2, imply
+
+ limsup_{t->0}
+ [F_nu(I+tH)-tr B-(t/2)tr(BH)]/t^2
+   <= -a/8 + sup_{div_gamma v=0} { b_v/2-I_v/2 }.
+
+Using (2.2), the supremum is at most c_*/8. Therefore
+
+ limsup_{t->0}
+ [F_nu(I+tH)-F_nu(I)-(t/2)tr(BH)]/t^2
+   <= -(a-c_*)/8.                                         (5.1)
+
+Moreover
+
+    a-c_*
+      = E [sum_i lambda_i H-tilde_ii^2
+           +sum_{i<j} (4lambda_i lambda_j/(lambda_i+lambda_j))
+                         H-tilde_ij^2]
+      >= m ||H||_F^2.                                     (5.2)
+
+Thus the local upper covariance curvature is strictly negative in every
+nonzero symmetric direction. If a classical second derivative exists,
+
+    D^2 F_nu(I)[H,H] <= -(a-c_*)/4 <= -(m/4)||H||_F^2.
+
+For a positive definite quadratic phi, this is precisely the familiar
+Gaussian-to-Gaussian Hessian; the commutator expression reproduces the
+correct coefficients.
+
+6. WHAT IS STILL NEEDED FOR A FULL ALL-TARGET CONCAVITY THEOREM
+
+The transfer above is complete once (H) holds for the weak L^2 solenoidal
+limit fields. A proof only for smooth A or v must include its density/closure
+argument before it supplies (H) here.
+
+At a general covariance C0>0, the congruence identity transforms the target
+to (C0^{1/2})#nu. Applying (5.1) there requires the same regularity and Hodge
+hypotheses for that target's Brenier map, or a justified approximation theorem.
+The property that the initial phi is quadratic outside a compact set is NOT
+obviously preserved by this transformation of the target. This closure step
+must not be assumed. Likewise, (5.1) alone for one target at one covariance
+is not yet a proof of global concavity for all targets.
+
+7. ALL-BASE REGULARITY: AN EXPLICIT RECENT EXTERNAL DEPENDENCY
+
+The regularity boundary in Section 6 can be addressed by the following
+specific external statement, conditional on its correctness:
+
+  Maja Gwozdz, Caffarelli Estimates under Lipschitz Perturbations,
+  arXiv:2609.04052v1, 3 September 2026,
+  https://arxiv.org/html/2609.04052v1
+  Theorem 3.2 / Corollary 3.6, and Proposition 3.8.
+
+The stated theorem bounds the Brenier Hessian above when source/target
+reference potentials have the appropriate one-sided positive quadratic
+curvature bounds and both log-density perturbations are globally Lipschitz.
+Proposition 3.8 supplies smooth full-space diffeomorphism regularity for
+smooth positive densities. Applying the Hessian estimate forward and backward
+supplies positive lower and finite upper Hessian bounds. The actual theorem
+statements were read. This is a recent preprint, and its proof has not been
+independently audited here.
+
+Apply this to the class of targets with densities
+
+    rho(y)=Z^{-1} exp(-q(y)) g_Sigma(y),
+    Sigma>0,  q in C_c^infinity(R^d),
+
+where g_Sigma is a nondegenerate Gaussian density. Forward and reverse
+reference Hessians are positive definite constant matrices; q is globally
+Lipschitz. At every base covariance, the congruence-transformed target remains
+in this same class, since an invertible linear change of variables transforms
+g_Sigma into another elliptical Gaussian and q into another smooth compactly
+supported function. Thus the stated external result gives the uniform
+Hessian bounds required in Sections 1--5 at every positive definite base.
+It is the target-density class that is closed; no false closure assertion
+about quadratic-outside-compact Brenier potentials is needed.
+
+This step still requires the separately audited Hodge lemma to hold for
+smooth uniformly bounded positive Hessians, not merely Hessians that are
+constant outside a compact set. The external regularity theorem does not
+imply that a transport Hessian is constant in the tails.
+
+8. POINTWISE UPPER SECOND QUOTIENTS IMPLY GLOBAL CONCAVITY
+
+For targets in the class of Section 7, the usual uniqueness of the Brenier
+coupling makes F differentiable at every positive definite covariance. This
+also follows from the support-function argument and fixed-marginal uniform
+integrability; it does not require differentiating transport maps.
+
+Along any compact covariance segment in the positive definite cone, put
+f(s)=F(C_0+sH). Sections 5 and 7 give, at every interior s,
+
+    limsup_{h->0} [f(s+h)-f(s)-h f'(s)]/h^2 <= 0.             (8.1)
+
+An elementary one-dimensional argument now proves concavity. If concavity
+fails, subtract a chord on a subinterval [alpha,beta], obtaining g with zero
+endpoint values and a strictly negative interior value. For sufficiently
+small epsilon>0, g(s)-epsilon s^2 has its minimum at an interior point s_*.
+Differentiability gives g'(s_*)=2epsilon s_*. The minimum inequality then
+implies, for every sufficiently small h,
+
+    g(s_*+h)-g(s_*)-h g'(s_*) >= epsilon h^2,
+
+contradicting (8.1). No C^2 dependence of F and no uniform control of its
+pointwise little-oh remainders is required.
+
+9. AN EXPLICIT DENSE TARGET CLASS AND PASSAGE TO ALL P2 TARGETS
+
+Let nu be any probability measure with finite second moment. Choose smooth
+compactly supported probability densities f_n with f_n dx -> nu in W2,
+for instance by truncating and then mollifying. Let epsilon_n decrease to
+zero and let g be the standard Gaussian density. Define
+
+    rho_n=(1-epsilon_n)f_n+epsilon_n g.
+
+This is smooth and strictly positive, and it has the exact representation
+
+    rho_n=Z_n^{-1} exp(-q_n) g,
+    q_n=-log[1+((1-epsilon_n)/epsilon_n) f_n/g] in C_c^infinity,
+    Z_n=1/epsilon_n.
+
+Thus it belongs to the target class in Section 7. An independent mixture
+coupling gives
+
+    W2(rho_n dx,f_n dx)^2
+      <= epsilon_n E|X_n-G|^2 -> 0,
+
+because the second moments of f_n are bounded. Hence rho_n dx -> nu in W2.
+For every covariance C>=0, gluing a W2 target coupling with a maximal-
+covariance coupling and using Cauchy-Schwarz gives
+
+    |F_nu(C)-F_eta(C)| <= sqrt(tr C) W2(nu,eta).              (9.1)
+
+Concavity for rho_n therefore passes to nu at positive definite covariances.
+The Gaussian-source W2 continuity as C approaches a semidefinite covariance
+extends the inequality to the closed positive-semidefinite cone.
+
+CONDITIONAL ENDPOINT
+If the all-dimensional Hodge estimate (H) is rigorously established in the
+stated weak-L2, smooth-uniform-Hessian class, and the named 2026 regularity
+preprint is accepted, Sections 1--9 form a complete route to all-target
+ordinary-covariance concavity. The two inputs are explicit and separate.
+This note itself proves the transfer and approximation steps; it does not
+replace the analytic audit of (H) or an external review of the preprint.
