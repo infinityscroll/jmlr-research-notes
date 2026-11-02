@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Bundle the preprint, original proof companions, and partial Lean sources.
 
-No third-party paper, Lean installation, mathlib checkout, or build cache is
-redistributed. Archive times are normalized and make no priority assertion.
+Attributed proof-library sources are included with their licenses. No third-party
+paper, Lean installation, mathlib checkout, or build cache is redistributed. Archive times are normalized and make no priority assertion.
 """
 from __future__ import annotations
 import argparse
@@ -30,7 +30,7 @@ COMPANIONS = {
     'current-diagnostics': PROJECT / 'review',
 }
 PROOF_SUFFIXES = {'.txt', '.py'}
-LEAN_SUFFIXES = {'.lean', '.toml', '.json', '.txt', '.py', '.sh', '.md'}
+LEAN_SUFFIXES = {'.lean', '.toml', '.json', '.txt', '.py', '.sh', '.md', '.patch', '.cff'}
 EXCLUDED_PARTS = {'.lake', '.git', '__pycache__', 'output', 'tmp'}
 
 
@@ -47,7 +47,7 @@ def lean_files(root: Path) -> dict[str, bytes]:
         relative = path.relative_to(directory)
         if not path.is_file() or EXCLUDED_PARTS.intersection(relative.parts):
             continue
-        if path.name == 'lean-toolchain' or path.suffix in LEAN_SUFFIXES:
+        if path.name in {'lean-toolchain', 'LICENSE', 'NOTICE', 'COPYING'} or path.suffix in LEAN_SUFFIXES:
             if path.is_symlink():
                 raise ValueError('Symlinks are not distributable')
             files[relative.as_posix()] = path.read_bytes()
@@ -58,6 +58,8 @@ def lean_files(root: Path) -> dict[str, bytes]:
     receipt = json.loads(files['BUILD_RECEIPT.json'])
     if receipt.get('status') != 'passed':
         raise ValueError('The recorded Lean build did not pass')
+    if set(receipt['source_sha256']) != set(files) - {'BUILD_RECEIPT.json'}:
+        raise ValueError('Lean build receipt must cover every distributed file except itself')
     for name, expected in receipt['source_sha256'].items():
         if name not in files or digest(files[name]) != expected:
             raise ValueError('Lean build receipt does not match distributed source: ' + name)
@@ -98,7 +100,7 @@ def companion_files(root: Path) -> tuple[dict[str, bytes], dict]:
         }
     manifest = {
         'description': 'Byte-identical original proof companions and partial Lean sources. Hashes establish identity, not correctness.',
-        'formalization_scope': 'Partial formalization only. Gaussian analytic estimates and the full main theorem are not Lean-verified.',
+        'formalization_scope': 'Partial formalization only. Concrete Gaussian analytic components are checked; the remaining geometric estimates and the full main theorem are not Lean-verified.',
         'files': provenance,
     }
     files['anc/SOURCE_MANIFEST.json'] = (json.dumps(manifest, indent=2, sort_keys=True) + '\n').encode()

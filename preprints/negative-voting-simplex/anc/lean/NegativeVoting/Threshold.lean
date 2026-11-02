@@ -1,7 +1,4 @@
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.NormNum
+import Mathlib
 
 /-!
 # Uniform decay of the scalar remainder rates

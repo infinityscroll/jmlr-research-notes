@@ -41,8 +41,8 @@ kernel-checked declarations, hypotheses, and remaining obligations recorded
 in its own README. It does not formalize the full Gaussian theorem.
 Internal analytic reconstructions were performed by separate AI-agent
 runs. The assistance is disclosed in Appendix A; no external expert
-endorsement or independent proof-assistant verification of the analytic
-interfaces is claimed.
+endorsement is claimed. The checked analytic components are identified
+individually; the remaining interfaces and full theorem are unproved in Lean.
 
 SUBMISSION
 See SUBMISSION.txt and submission.json for arXiv metadata and the remaining

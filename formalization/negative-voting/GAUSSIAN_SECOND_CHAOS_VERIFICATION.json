@@ -1,0 +1,124 @@
+{
+  "checked_at_utc": "2026-11-01T23:29:38.083771+00:00",
+  "status": "passed",
+  "lean_version": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_sha256": "030b4cc1fca671017e1f6921abb490f51b7aade54da810203102fde9a43f3dbf",
+  "source_files_sha256": {
+    "GaussianSecondChaos.lean": "030b4cc1fca671017e1f6921abb490f51b7aade54da810203102fde9a43f3dbf",
+    "GaussianSpectralBridge.lean": "6a06c68a17eb334a1c14b3f810d337918cf964e3891fdc5d423f384efb96fa13",
+    "SlowEquilibration/GaussianNoiseL2.lean": "9fc2cec9062be30f9538cffded831c23a4ad7535f359533dc169c7e5fa9a335e",
+    "SlowEquilibration/Upstream/OAI/Computability/MinUncut/GaussianHermite.lean": "ad978785737df60d3fcaf588f4efd20e20e08f36d8e8d7eb4b2d4a0f6a3ad2af",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
+  },
+  "declaration_count": 17,
+  "declarations": [
+    "NegativeVotingModern.quadraticCoordinate_symm",
+    "NegativeVotingModern.quadraticMoment_symm",
+    "NegativeVotingModern.quadraticCoordinate_memLp",
+    "NegativeVotingModern.quadratic_moment_integrable",
+    "NegativeVotingModern.degreeTwoEquiv_pair",
+    "NegativeVotingModern.normalized_hermite_two",
+    "NegativeVotingModern.psi_single_two",
+    "NegativeVotingModern.psi_two_distinct",
+    "NegativeVotingModern.coefficient_degreeTwo_pair",
+    "NegativeVotingModern.coefficient_degreeTwo_pair_sq",
+    "NegativeVotingModern.symmetric_upper_triangle_half",
+    "NegativeVotingModern.chaosEnergy_two",
+    "NegativeVotingModern.quadratic_test_pairing_eq",
+    "NegativeVotingModern.quadratic_moment_tensor_cauchy",
+    "NegativeVotingModern.quadratic_test_pairing_bound",
+    "NegativeVotingModern.quadratic_test_tensor_certificate",
+    "NegativeVotingModern.ae_simplex_quadratic_test_tensor_certificate"
+  ],
+  "axioms_by_declaration": {
+    "NegativeVotingModern.quadraticCoordinate_symm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.quadraticMoment_symm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.quadraticCoordinate_memLp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.quadratic_moment_integrable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.degreeTwoEquiv_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.normalized_hermite_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.psi_single_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.psi_two_distinct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.coefficient_degreeTwo_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.coefficient_degreeTwo_pair_sq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.symmetric_upper_triangle_half": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.chaosEnergy_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.quadratic_test_pairing_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.quadratic_moment_tensor_cauchy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.quadratic_test_pairing_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.quadratic_test_tensor_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingModern.ae_simplex_quadratic_test_tensor_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "main_result": "Actual second Gaussian chaos equals one half of the squared quadratic Gaussian moment tensor; actual quadratic test-tensor certificate, including AE-measurable AE-simplex inputs.",
+  "not_established": "No local cap estimate, affine comparison, uniform exterior estimate, or final large-alphabet optimality theorem is asserted by this module."
+}

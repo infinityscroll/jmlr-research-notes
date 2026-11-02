@@ -1,0 +1,4 @@
+import MarkovSemigroups.Instances.WorkInProgress.EuclideanHypercontractive
+set_option pp.universes true in
+#check @GaussianFin.stdGaussianFin_isHypercontractive
+#print MarkovSemigroup.IsHypercontractive

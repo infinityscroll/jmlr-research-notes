@@ -111,7 +111,7 @@ def build(repo: Path, commit: str, repository: str, workflow_url: str, output: P
         'primary_documents': {PDF_ASSET: PDF_PATH, INTEGRATED_ASSET: INTEGRATED_PATH, **EXTRA_ASSETS},
         'release_manifest_sha256': sha256(files['RELEASE_MANIFEST.json'][1]),
         'scientific_status': 'Research manuscript with internal audits; provenance is not mathematical verification or an exclusive-priority certificate.',
-        'formalization_status': 'Partial Lean formalization only; Gaussian analytic estimates and the full main theorem are not kernel-verified.',
+        'formalization_status': 'Partial Lean formalization only; concrete Gaussian analytic components are checked, while the remaining geometric estimates and the full main theorem are not kernel-verified.',
     }
     payload = {
         archive_name: archive_bytes(files, tag, epoch),

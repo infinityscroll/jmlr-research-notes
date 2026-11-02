@@ -121,93 +121,817 @@
       "repository_path": "frontier/negative-voting-simplex/supplements/integrated-full-voting-proof-20261102/root/FINITE_GAP_BOOTSTRAP_AND_GLOBAL_PSD_RAY_RECONSTRUCTION_20261102.txt",
       "sha256": "506e48c4e7119f770602f8032196d480e0f3d40b0b17f8516ff6e716ab64a9ed"
     },
+    "anc/lean/AuditGaussianDependency.lean": {
+      "repository_path": "formalization/negative-voting/AuditGaussianDependency.lean",
+      "sha256": "d8322ebdf078103c737dd8287b3ec24c92df85bc20fb8685db3c378fed32471a"
+    },
+    "anc/lean/AuditHypercontractivity.lean": {
+      "repository_path": "formalization/negative-voting/AuditHypercontractivity.lean",
+      "sha256": "97c92aea04970120442797dffb3e8a8c0d087bf3251f52031c33a5679643c46e"
+    },
+    "anc/lean/AuditMulgund.lean": {
+      "repository_path": "formalization/negative-voting/AuditMulgund.lean",
+      "sha256": "bd166671ae31721e1f6c1ff8a7397b47cf4e9ca99a4d5ccb971dde386a8b4aa4"
+    },
     "anc/lean/AxiomAudit.lean": {
       "repository_path": "formalization/negative-voting/AxiomAudit.lean",
-      "sha256": "240bf00394e3885b193d85365cd5e6b22190dc813e80cfb41e4edb721815f963"
+      "sha256": "6fd23fdfa987c0281eefd7a1dac64dd6381a2b0e6be5fac9c3af44250f4471b8"
     },
     "anc/lean/BUILD_RECEIPT.json": {
       "repository_path": "formalization/negative-voting/BUILD_RECEIPT.json",
-      "sha256": "09375928b7cff596b0a2bc0438a7a86d828018f5e93e50e8b0c2f5ded79e39d2"
+      "sha256": "c079e89efd72088bf78e18b10c82ad7c65657798079dc48b73e6cebd71931beb"
     },
     "anc/lean/BUILD_TRANSCRIPT.txt": {
       "repository_path": "formalization/negative-voting/BUILD_TRANSCRIPT.txt",
-      "sha256": "893537adad6d03ebbaa65e424ab909ed41b25c3cc3b5b4e6bb12d574e6ca0fc7"
+      "sha256": "37d0f31ecf2d244ba428298f58e8978fb0d8b40975b3c58f91be0ab4ad5fffff"
     },
-    "anc/lean/GAUSSIAN_ROUTING_COVERAGE.txt": {
-      "repository_path": "formalization/negative-voting/GAUSSIAN_ROUTING_COVERAGE.txt",
-      "sha256": "76766169e90a0bd61266d69c58e383b3400762f1b772c407f285a3bddf3a5e44"
+    "anc/lean/COVERAGE.md": {
+      "repository_path": "formalization/negative-voting/COVERAGE.md",
+      "sha256": "9e6334bc7f8cd7c3866ff60ee932f9dc36b82c2b2e146bc29b1b17d7ddab264f"
+    },
+    "anc/lean/GAUSSIAN_DEPENDENCY_BUILD_RECEIPT.json": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_DEPENDENCY_BUILD_RECEIPT.json",
+      "sha256": "5950880392ca99fd0be164ec657428eeec342c62d0c4be2eb98a2ab6b46193b5"
+    },
+    "anc/lean/GAUSSIAN_DEPENDENCY_BUILD_TRANSCRIPT.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_DEPENDENCY_BUILD_TRANSCRIPT.txt",
+      "sha256": "b0f15864d080a92623ec01f67d31e4e967eb462099679b9c7de8debae253d2df"
+    },
+    "anc/lean/GAUSSIAN_DEPENDENCY_README.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_DEPENDENCY_README.txt",
+      "sha256": "d98ca048ce52763825d1396c82d67283d58164ecb9d2c0dcea1e1e17ead5fbc0"
+    },
+    "anc/lean/GAUSSIAN_NORMAL_TRACE_COVERAGE.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_NORMAL_TRACE_COVERAGE.txt",
+      "sha256": "8cd695fa6479d2f7ac7b38da4de2cd8d20bec90f72b5d29f360258f6a33e50a7"
+    },
+    "anc/lean/GAUSSIAN_SECOND_CHAOS_AXIOMS.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SECOND_CHAOS_AXIOMS.txt",
+      "sha256": "e1585b16ce66add243b117580d1981504e4e6c9000aa121751623d04834ab8e8"
+    },
+    "anc/lean/GAUSSIAN_SECOND_CHAOS_BUILD.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SECOND_CHAOS_BUILD.txt",
+      "sha256": "30342133fe610c69fca931b4c756a17fc52ed021ac45ba995fd9069cf72c073a"
+    },
+    "anc/lean/GAUSSIAN_SECOND_CHAOS_COVERAGE.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SECOND_CHAOS_COVERAGE.txt",
+      "sha256": "12c27c9e453c4104a05996e954b90fd54b688cc3dba0fb9579e22db200a44fbc"
+    },
+    "anc/lean/GAUSSIAN_SECOND_CHAOS_VERIFICATION.json": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SECOND_CHAOS_VERIFICATION.json",
+      "sha256": "28f29a9ca28264935ddb0759135b34800f133c1b45139e98de75cb7a1d66dbd7"
+    },
+    "anc/lean/GAUSSIAN_SPECTRAL_BRIDGE_AXIOMS.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SPECTRAL_BRIDGE_AXIOMS.txt",
+      "sha256": "1ba61f49856c1d6bfca427f2232794e94e061dbe10b03d3a1395983639453f7e"
+    },
+    "anc/lean/GAUSSIAN_SPECTRAL_BRIDGE_BUILD.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SPECTRAL_BRIDGE_BUILD.txt",
+      "sha256": "01113d45f83707c2214d958c7585161ebb4f61496132ca1949107d04492e0837"
+    },
+    "anc/lean/GAUSSIAN_SPECTRAL_BRIDGE_COVERAGE.txt": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SPECTRAL_BRIDGE_COVERAGE.txt",
+      "sha256": "0d46cb433a9086ae60f2aca9c5889aabc2a1228cc7034970c1a0b8826819a032"
+    },
+    "anc/lean/GAUSSIAN_SPECTRAL_BRIDGE_VERIFICATION.json": {
+      "repository_path": "formalization/negative-voting/GAUSSIAN_SPECTRAL_BRIDGE_VERIFICATION.json",
+      "sha256": "2d50b03194f6117684fe4b1516af212d88d8e51fc2dd0346c236825a0842ad8e"
+    },
+    "anc/lean/GaussianAffineComparison.lean": {
+      "repository_path": "formalization/negative-voting/GaussianAffineComparison.lean",
+      "sha256": "07334cf55ebc317beb6acd81c4ac036a2c2ec1a885ae8a5cb0341db3488496d6"
+    },
+    "anc/lean/GaussianCapTailAndStrip.lean": {
+      "repository_path": "formalization/negative-voting/GaussianCapTailAndStrip.lean",
+      "sha256": "25ed1fa35fd09dc1fd97630e51ee5b5af47ee8038ce0405ae6b37d77bb43732e"
+    },
+    "anc/lean/GaussianHypercontractivityBridge.lean": {
+      "repository_path": "formalization/negative-voting/GaussianHypercontractivityBridge.lean",
+      "sha256": "7462575223723cd082addb32a873ec780e0ecca54c69f1bc96e4429e4a792545"
+    },
+    "anc/lean/GaussianNormalTrace.lean": {
+      "repository_path": "formalization/negative-voting/GaussianNormalTrace.lean",
+      "sha256": "bfe30effbb36628c42aac724d7d5abd32a58225b7055ccbf7df0fcaa7b82bc32"
+    },
+    "anc/lean/GaussianSecondChaos.lean": {
+      "repository_path": "formalization/negative-voting/GaussianSecondChaos.lean",
+      "sha256": "030b4cc1fca671017e1f6921abb490f51b7aade54da810203102fde9a43f3dbf"
+    },
+    "anc/lean/GaussianSmallCap.lean": {
+      "repository_path": "formalization/negative-voting/GaussianSmallCap.lean",
+      "sha256": "90e1062d7a46a0a5bef9495cf8e211c84a54a0ae2328a7a88e2a4e8de447dfad"
+    },
+    "anc/lean/GaussianSpectralBridge.lean": {
+      "repository_path": "formalization/negative-voting/GaussianSpectralBridge.lean",
+      "sha256": "6a06c68a17eb334a1c14b3f810d337918cf964e3891fdc5d423f384efb96fa13"
+    },
+    "anc/lean/GeneratedHypercontractivityAudit.lean": {
+      "repository_path": "formalization/negative-voting/GeneratedHypercontractivityAudit.lean",
+      "sha256": "60dda0c0d85e3131b1d1f45aab3107259fd3423c01a33685d10a359e2600aafc"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_ACTIVE_SOURCE_FILES.txt": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_ACTIVE_SOURCE_FILES.txt",
+      "sha256": "8a74848efb84f782074c548fe30e2deba752e7e7bdf34f99d3cc3423661b1083"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_CLEAN_RECEIPT.json": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_CLEAN_RECEIPT.json",
+      "sha256": "af16c26fe9ede85623a16aecc34b5ae3acbc794fa42d0271c2220e61a1935c79"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_CLEAN_TRANSCRIPT.txt": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_CLEAN_TRANSCRIPT.txt",
+      "sha256": "d3cfacf2766f9115e3b019e3e3ceedb687e98058c9b3e4679acdef6071b83852"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_DECLARATION_HEADER_COMPARISON.json": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_DECLARATION_HEADER_COMPARISON.json",
+      "sha256": "46bd24e0184bea36407638689e27cfdd2b2c75092c8a7f336d3d3d878d4bb99d"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_ENDPOINT_TYPE_AFTER.txt": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_ENDPOINT_TYPE_AFTER.txt",
+      "sha256": "f70dd96634ca0cbc1b83101729fc145d3bc1f1d2bd8ad2c9f3ab65cb0cc5a220"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_ENDPOINT_TYPE_BEFORE.txt": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_ENDPOINT_TYPE_BEFORE.txt",
+      "sha256": "f70dd96634ca0cbc1b83101729fc145d3bc1f1d2bd8ad2c9f3ab65cb0cc5a220"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_LEGACY_AXIOM_REMOVAL.patch": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_LEGACY_AXIOM_REMOVAL.patch",
+      "sha256": "e9a7af93a0645f629a8271a37dcf7cefa6d6c216bbeaa55180ca47f19825143f"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_LEGACY_PRESENT_RECEIPT.json": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_LEGACY_PRESENT_RECEIPT.json",
+      "sha256": "a17d35375640dc9d474324a2624ff96b89e3efa9add7e31fe24d24b591a78f79"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_LEGACY_PRESENT_TRANSCRIPT.txt": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_LEGACY_PRESENT_TRANSCRIPT.txt",
+      "sha256": "41066251376d329d37c6fde77ff1a9b8671fbc85ecfeea3d58ef2dea68668c02"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_PORT.patch": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_PORT.patch",
+      "sha256": "b4528bfbd8209b41524c8ac4833464194d231f921e3b39cd1d213f0267f58909"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_PROVENANCE.json": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_PROVENANCE.json",
+      "sha256": "84837976829ac5364c9264202528e540560d01e29b1a7b43f80f268cdb7cbe56"
+    },
+    "anc/lean/HYPERCONTRACTIVITY_README.txt": {
+      "repository_path": "formalization/negative-voting/HYPERCONTRACTIVITY_README.txt",
+      "sha256": "371edcfb95a65a6e6ab217c2beba7b579bebdbcc98b35adf1978f3a4d47f8ea9"
+    },
+    "anc/lean/HypercontractivityEndpointType.lean": {
+      "repository_path": "formalization/negative-voting/HypercontractivityEndpointType.lean",
+      "sha256": "07345c4cee85b5c5664579ca0ce4f4a4a55cab4f94ca6fbe251b0d37f4f3fae7"
     },
     "anc/lean/Inventory.lean": {
       "repository_path": "formalization/negative-voting/Inventory.lean",
-      "sha256": "857777097e6d76d492a5d46ab0de935a24d24a7ef13a7e9ae03572a261663b9c"
+      "sha256": "01a00436a650408944ffcc1b464cc02060e998685d506d9a601e4795b3f75d75"
+    },
+    "anc/lean/LOCAL_COMPARISON_AUDIT_20261102.txt": {
+      "repository_path": "formalization/negative-voting/LOCAL_COMPARISON_AUDIT_20261102.txt",
+      "sha256": "80ebdcee29cbf5232a49a168d04cc7dfe201c21c55f963fd31aa86a66c9dc116"
+    },
+    "anc/lean/MULGUND_BUILD_RECEIPT.json": {
+      "repository_path": "formalization/negative-voting/MULGUND_BUILD_RECEIPT.json",
+      "sha256": "ab4480cdd974f8c211b569a83388189bbea56f32351379152be2799573b75490"
+    },
+    "anc/lean/MULGUND_BUILD_TRANSCRIPT.txt": {
+      "repository_path": "formalization/negative-voting/MULGUND_BUILD_TRANSCRIPT.txt",
+      "sha256": "33c803b641fd40db78c05225f658c41d1683766758e128b0b25414e6e2e1f5d2"
+    },
+    "anc/lean/MULGUND_PORT.patch": {
+      "repository_path": "formalization/negative-voting/MULGUND_PORT.patch",
+      "sha256": "a89978874758685adc77a09dd98564d3e61b9c70ae7b8e632e0acd09e2d9219f"
+    },
+    "anc/lean/MULGUND_PROVENANCE.json": {
+      "repository_path": "formalization/negative-voting/MULGUND_PROVENANCE.json",
+      "sha256": "1901bee516d695046ff79c4fc8614e4c9a46a14aba01122d7d1a981853f0bfe6"
+    },
+    "anc/lean/MarkovSemigroups/Abstract/DirichletForm.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Abstract/DirichletForm.lean",
+      "sha256": "c085dfbdc6ff56aba00907f699f1d997c797909a4660eb0abef13cbf1fc9cc46"
+    },
+    "anc/lean/MarkovSemigroups/Abstract/GrossODE.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Abstract/GrossODE.lean",
+      "sha256": "c27bac503b64be69f09b8c8d1330f9e4192e0510bc4c77f8ff1f9d7211b2d3d4"
+    },
+    "anc/lean/MarkovSemigroups/Abstract/Hypercontractivity.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Abstract/Hypercontractivity.lean",
+      "sha256": "44be55e4e435300860332b876a259d0b04fcedb20e802091f8a31f1a79b49d0f"
+    },
+    "anc/lean/MarkovSemigroups/Diffusion/CarreDuChamp.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Diffusion/CarreDuChamp.lean",
+      "sha256": "734a2684be88a7d2c7d5ec5d2dc31d1f9f0f925f2ade1f42cdb117de7769bf54"
+    },
+    "anc/lean/MarkovSemigroups/Diffusion/StroockVaropoulos.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Diffusion/StroockVaropoulos.lean",
+      "sha256": "b75e7ebe154e68070af78284e75975ba8b27593b6fc1bab6144762ce893b7142"
+    },
+    "anc/lean/MarkovSemigroups/General/OUEntropyDecomposition.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/General/OUEntropyDecomposition.lean",
+      "sha256": "27b8abb1f0673968782b19863449e14fff53184f81ffc4ed63fd916084ae8ac5"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean",
+      "sha256": "5e693d092721eaaa845ec7e5c2c3e050161440b88d5a14c0a59a28e11698b7a4"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean",
+      "sha256": "0b68c99b85b3be8e95b1d4f808dc5394333e0a43d657d6fd1a1eee59264e1dfe"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean",
+      "sha256": "c883ce9a1b13ae8018d54c2e2d3440e4bc4adf83b2fc81db74a1bf2cd8d9ff31"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean",
+      "sha256": "bbaa99dac505445ccb543678eff9ba5b86dabe781673004caad9d8123b2477e2"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean",
+      "sha256": "8670fc9d39a2730a965731ce9c1df478e4e375044aa8f4a8c84215e11227dc42"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean",
+      "sha256": "ceec1aecefd4ae5132685a0f7d0f48e07dd0dafe7db6e020d6e315884e5b1998"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean",
+      "sha256": "3caaf6ceeec042f4707a94ec741ca0f721d81a6187194c02e54ce7d7486b6dd2"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean",
+      "sha256": "899c38a096d8852781d696fd31bfd1d07084bb0636b9ffcb203c0629d12fb9da"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean",
+      "sha256": "dc98c0f4ca18bb65b2a66d9e33536dea6b22aeb833149b1377287cc07d2cf2e2"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean",
+      "sha256": "530be6a241a7194ff8b7a9936ad86cceb5e3f08b8a6725457dcff06d5da5c692"
+    },
+    "anc/lean/MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean": {
+      "repository_path": "formalization/negative-voting/MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean",
+      "sha256": "1587d69e4bf8bf481f4659f1dfaa7eb02733b99b61098fa2ff9e2ed04bfe22c1"
+    },
+    "anc/lean/MulgundGaussianComparison.lean": {
+      "repository_path": "formalization/negative-voting/MulgundGaussianComparison.lean",
+      "sha256": "626c1cba6ee55bd43e44fe13c9fd19242db9c7ebd7d64251d912524568c3740f"
     },
     "anc/lean/NegativeVoting.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting.lean",
-      "sha256": "52b324b140265a1fdda84165837d2d9914e109caf031edd298f372a517295c61"
+      "sha256": "59510be0a993a4ff5ea8be725bc50d18cf8e9757baaa018b0127b8d8b5a563bb"
+    },
+    "anc/lean/NegativeVoting/Admissible.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/Admissible.lean",
+      "sha256": "9e25dfe7895fc0f76116635a6bde5b468026c9bbee9a7829b0d23c054201aa98"
     },
     "anc/lean/NegativeVoting/Assembly.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/Assembly.lean",
-      "sha256": "4ac683120c4ef1321b1f8ae0b7702341561900c7de5cf7dc3f9f867da269255f"
+      "sha256": "f4e80019f4c4aa3cd822b45669dbbb4b662464b498a8ffbf4e1fc4d165dd81bb"
     },
     "anc/lean/NegativeVoting/Centroid.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/Centroid.lean",
-      "sha256": "0fb2d7b470432b0af939a0ab5e75d3d616626c57eceb99fe73508c153885fd68"
+      "sha256": "00b9cc259921ccd51b6d555b8bbac82f52eb2a151f79ca6e02daeca111a48d61"
     },
     "anc/lean/NegativeVoting/EdgeEnergy.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/EdgeEnergy.lean",
-      "sha256": "f0cd7276eb283387aeb837b1752779a75857d318740eb06a671b33e08c8d1d84"
+      "sha256": "5990fd763868e1d0f3a0e24ae9bb16d1ae3a316af67180aad303aea543cc27a2"
     },
     "anc/lean/NegativeVoting/GaussianCentroid.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/GaussianCentroid.lean",
-      "sha256": "e6d6bdbf9c86fcdacd541ec2fa57b81e00fe5b884d269cdf477df6622ee608cc"
+      "sha256": "f2f8d1645d268bc344ed6de1b4699571ff1007a7a7f42728b2d3190c96965c67"
     },
     "anc/lean/NegativeVoting/GaussianMoments.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/GaussianMoments.lean",
-      "sha256": "a7ffeeb4e8a3641fe7319657426bc91978237b457d479eb7b1ccccabcd6f513a"
+      "sha256": "3fa960b1f4a0233ebcf5b6eb517305b713ce99ce15fff3815906b421600d2207"
     },
     "anc/lean/NegativeVoting/GaussianRouting.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/GaussianRouting.lean",
-      "sha256": "863bdc18e3eb8b892b72fcb98348e22ef021ad1eecc79decf1d5504c6f6aea1c"
+      "sha256": "debfc8af92f119782ab22c6d990ad8ec70b8ca0f8758e88f93220080a6f9b4f6"
+    },
+    "anc/lean/NegativeVoting/GaussianSpectral.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/GaussianSpectral.lean",
+      "sha256": "fec0fbeee06961b53043bca70bbad7f1e2fb59708f8960ae3c56c499d31b188d"
+    },
+    "anc/lean/NegativeVoting/HermiteTail.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/HermiteTail.lean",
+      "sha256": "e738bf594caae3504ca27fbe475f1db46a6e679deb79a123c34d9c0e6f7ed1ae"
     },
     "anc/lean/NegativeVoting/Integrability.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/Integrability.lean",
-      "sha256": "3d8cb14ebe9a76db5ffbfd19466b0e89261909a038e35392c209183be2ee800a"
+      "sha256": "421410bfbb3a1fc4f93f6aa06e93a49b75c10c1491244aa002ba58b571cc3226"
+    },
+    "anc/lean/NegativeVoting/MainGoal.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/MainGoal.lean",
+      "sha256": "fe8f21515f4af803af7cbd14c3741377e6a4dcd508aeaf749a2821544c6c86c6"
+    },
+    "anc/lean/NegativeVoting/NoiseStability.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/NoiseStability.lean",
+      "sha256": "f0544fc04fd58d75e624c7fd7929ffc71e758c2ead42f8800c958da0998f6aec"
+    },
+    "anc/lean/NegativeVoting/RegularSimplex.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/RegularSimplex.lean",
+      "sha256": "39f0347728ea26e228bda19dcf3c3766b912ad63c623c0558e9d9eff96cce9d8"
+    },
+    "anc/lean/NegativeVoting/RegularSimplexCentroid.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/RegularSimplexCentroid.lean",
+      "sha256": "eed5595cbd9ee4f34313767ff17bdef3988800a8f22729489bc2d84f1ffd3e58"
+    },
+    "anc/lean/NegativeVoting/RegularSimplexExistence.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/RegularSimplexExistence.lean",
+      "sha256": "5e1418d50a4823ab672f1e4a9f7dc48ab2de739fcbee68da0b3f06f6052c2dec"
+    },
+    "anc/lean/NegativeVoting/RegularSimplexMoments.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/RegularSimplexMoments.lean",
+      "sha256": "201728484dbac68af1331e45398bbe79b2381b2f16f6616f2644f5bfa46c895a"
     },
     "anc/lean/NegativeVoting/Routing.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/Routing.lean",
-      "sha256": "245b2f08c1faaccd20e28f26a6cd0c33aab18e1dbd172d87327e64e742d437ee"
+      "sha256": "c3cecd94f119728c0d07c2e5c74459b8dbcec1b395f6d536ffe6009f30d629a2"
     },
     "anc/lean/NegativeVoting/Threshold.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/Threshold.lean",
-      "sha256": "d6dc2d0fe94f65d6b9aad2fe4a86524a582ae8ed6cf4470fc39dee6341c6400b"
+      "sha256": "f10042a9744d51688e3c486de6856d52a23ccb0323c6ae0953655bc877c1eacb"
     },
     "anc/lean/NegativeVoting/VotingRange.lean": {
       "repository_path": "formalization/negative-voting/NegativeVoting/VotingRange.lean",
-      "sha256": "49993ece9d3e5eed51a39dfb283fedd0e6aafdd92619ffd5ce4f9e959d4d7afe"
+      "sha256": "e9fb64541c47bd8c0e00b5d4cb507458f5807d2992192311596f5e7bf0ad2a78"
+    },
+    "anc/lean/NegativeVoting/WeightedGauge.lean": {
+      "repository_path": "formalization/negative-voting/NegativeVoting/WeightedGauge.lean",
+      "sha256": "20e006a74bd7e41d4e2001c1d609ca46afdbdd3a8c8cb9ea6c2769a90ea9df4b"
     },
     "anc/lean/README.md": {
       "repository_path": "formalization/negative-voting/README.md",
-      "sha256": "4ec489e461c53f95450b85e0425e1ba195953e4a0ea8a70ec65724667c877280"
+      "sha256": "6119653f7c76cc488715c86ccd6cb86b59985441750190df25b8d5535417e440"
     },
-    "anc/lean/VOTING_RANGE_COVERAGE.txt": {
-      "repository_path": "formalization/negative-voting/VOTING_RANGE_COVERAGE.txt",
-      "sha256": "1fd0a348c6b0d6f91e58f83391695cd43891829434df9050629ac55708b7aa02"
+    "anc/lean/SlowEquilibration/GaussianNoiseL2.lean": {
+      "repository_path": "formalization/negative-voting/SlowEquilibration/GaussianNoiseL2.lean",
+      "sha256": "9fc2cec9062be30f9538cffded831c23a4ad7535f359533dc169c7e5fa9a335e"
+    },
+    "anc/lean/SlowEquilibration/LICENSE": {
+      "repository_path": "formalization/negative-voting/SlowEquilibration/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "anc/lean/SlowEquilibration/Upstream/OAI/Computability/MinUncut/GaussianHermite.lean": {
+      "repository_path": "formalization/negative-voting/SlowEquilibration/Upstream/OAI/Computability/MinUncut/GaussianHermite.lean",
+      "sha256": "ad978785737df60d3fcaf588f4efd20e20e08f36d8e8d7eb4b2d4a0f6a3ad2af"
+    },
+    "anc/lean/UPSTREAM_PROVENANCE.json": {
+      "repository_path": "formalization/negative-voting/UPSTREAM_PROVENANCE.json",
+      "sha256": "eb4eae28780806b4728b3b3a440b4c4d9d62c0fe4dc4e8f39a13b10be561b001"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Core/Correlation.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Core/Correlation.lean",
+      "sha256": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Core/Euclidean.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Core/Euclidean.lean",
+      "sha256": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Core/Finite.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Core/Finite.lean",
+      "sha256": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Core/Matrix.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Core/Matrix.lean",
+      "sha256": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean",
+      "sha256": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Gaussian/DensityRatio.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Gaussian/DensityRatio.lean",
+      "sha256": "7368c792b8016fba4b1932715e33a65725edce3550f74f2ee4ccb2689bbc8e02"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Gaussian/Regularization.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Gaussian/Regularization.lean",
+      "sha256": "f85b3f3c2ef30c9f379d670b44b4687cb8abf9dfc2b27b1f58ebeab5a79c2d2b"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Gaussian/Shift.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Gaussian/Shift.lean",
+      "sha256": "9b6ff54ab5d1325f7a69736308b516b44f32db71c940e44132b9d3775441d650"
+    },
+    "anc/lean/WeakSimplexConjectureLean/LogConcavity/Basic.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/LogConcavity/Basic.lean",
+      "sha256": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155"
+    },
+    "anc/lean/WeakSimplexConjectureLean/LogConcavity/Indicators.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/LogConcavity/Indicators.lean",
+      "sha256": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96"
+    },
+    "anc/lean/WeakSimplexConjectureLean/LogConcavity/Prekopa.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/LogConcavity/Prekopa.lean",
+      "sha256": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Normal/Mills.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Normal/Mills.lean",
+      "sha256": "92b5f4e74b4bc1f94ee816097dc8ba149d335cf1c7f50bd7c7020ca3ceaf3e96"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Normal/PDFCDF.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Normal/PDFCDF.lean",
+      "sha256": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Normal/TiltFunctions.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Normal/TiltFunctions.lean",
+      "sha256": "9284ca8388a39c58ef41eb20f08008f1611ef3d99e894b2bfecba6bef70897d6"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Normal/TruncatedMoments.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Normal/TruncatedMoments.lean",
+      "sha256": "f768dfa4a020b9c2232163bc80ee13773313a5787d39021fe239ec741eb59456"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean",
+      "sha256": "6bc0bffe7831534b6589da78d2f7dbd9f03bfd14ca515fe22673ec397217e2ac"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Orthant/PositiveDefinite.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Orthant/PositiveDefinite.lean",
+      "sha256": "18221504713084f7d3d291b695a26f2648904e1b7552e383631fb1e999303666"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Orthant/PositiveDefiniteConditional.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Orthant/PositiveDefiniteConditional.lean",
+      "sha256": "fd6c29541016c1cce98b20afbecc512114b2e4806766ba1644ad64cecc8b0e9a"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Orthant/Singular.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Orthant/Singular.lean",
+      "sha256": "66bde5a06a0d37e376c2fd55452d7fd1372b29da9304a1c54dea6f473ac3c6f8"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/CenteredProduct.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/CenteredProduct.lean",
+      "sha256": "15112132ec00eab7a4d97c4950a2efe1f5f4431f27ad9c6b608d40d19784dc2f"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/CenteredProperty.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/CenteredProperty.lean",
+      "sha256": "a152f2a98fe80b1f06b83d06fd32cf24025dde38750785b0b690cf143edd6eae"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/DyadicCLT.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/DyadicCLT.lean",
+      "sha256": "3c887168cde21698971e9e4f78d10767f63682e37f3b4a1f241152b2f6dc9f1e"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/EvenLayerCake.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/EvenLayerCake.lean",
+      "sha256": "149b5838856e14de59ede11d55bfe99cc5284f327535c5cb100766faaa493b61"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/NormalizedSelfConvolution.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/NormalizedSelfConvolution.lean",
+      "sha256": "c8016f63db59ec73e06dafa5aa79fbebf3d1bb4de2bd618acdce73da3234090f"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/PositiveLowerBound.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/PositiveLowerBound.lean",
+      "sha256": "64b911990215a05e452b65b74c99c643122fbf6aa4897c2c1bdfab4eb6421b34"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/SumDifference.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/SumDifference.lean",
+      "sha256": "70f5ca8a72360b2f5154ac7b04a4b9d4b63edb3d48c528982e1c0cb4b04bf76e"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Product/SymmetricRectangle.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Product/SymmetricRectangle.lean",
+      "sha256": "879e7cbfc86ffb1496620dbad438d28032ba8fd2aaa6f3dd0b180e6b871b7d82"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Tilt/AdaptiveWitnesses.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Tilt/AdaptiveWitnesses.lean",
+      "sha256": "a1f30ac0013820cb52b3d451b18b4f226ecd74ce54f3e0426d318fa9d0ce79d2"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Tilt/CompactMaximizer.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Tilt/CompactMaximizer.lean",
+      "sha256": "bf547a3547d453dc30d3dfedec881bd60b37e419dcd9f0dc91da32f45141f161"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Tilt/EventShift.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Tilt/EventShift.lean",
+      "sha256": "2c7b2e3ac4c1443fad4871a371cfca1f9d2537f2b7e1072063c57f1f6922188e"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Tilt/Potential.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Tilt/Potential.lean",
+      "sha256": "c657ac02d2014bf2db61acb785985a768e3a9c4d12c82fb1bddac9df607d6902"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Tilt/RankOneInverse.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Tilt/RankOneInverse.lean",
+      "sha256": "c483e66ed373337a32ef739a48d1ea8fa60a086fbff98be91389617a1f6f8bda"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Tilt/Stationarity.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Tilt/Stationarity.lean",
+      "sha256": "35096c95e697716a63f65fa79f9296701b1a2e04219a1cba4daa6a65c3165ecf"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Tilt/TiltedHalfLine.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Tilt/TiltedHalfLine.lean",
+      "sha256": "26b5565edbe6a32ff883af664062257c5c36fe55171a5017f60e57a7e7bbf54d"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Vendor/StatLean/GaussianMGFShift.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Vendor/StatLean/GaussianMGFShift.lean",
+      "sha256": "92e52fc007d5bb510709e00f8424c4b6de7eeb8c11bb4972c6cb36bd0cc2153c"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Vendor/StatLean/LICENSE": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Vendor/StatLean/LICENSE",
+      "sha256": "d5945fe0f38866a919940212b0e3b5b0c30629b923c3e26dcce026571a29cd93"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean",
+      "sha256": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean",
+      "sha256": "62fae25bff4f147a7565793479bc9146d6094ca7949c0fd18bfae627e560e985"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean",
+      "sha256": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04"
+    },
+    "anc/lean/WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean": {
+      "repository_path": "formalization/negative-voting/WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean",
+      "sha256": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4"
+    },
+    "anc/lean/compare_hypercontractivity_headers.py": {
+      "repository_path": "formalization/negative-voting/compare_hypercontractivity_headers.py",
+      "sha256": "6f9732037641126d0373554e5f035cf8ef00d3958f18dd2da8c8f094ff68e996"
     },
     "anc/lean/lake-manifest.json": {
       "repository_path": "formalization/negative-voting/lake-manifest.json",
-      "sha256": "2f6bda5ed982b1c856dcf6b11a98958e826a31a0a4c1404a6f50866895a28630"
+      "sha256": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
     },
     "anc/lean/lakefile.toml": {
       "repository_path": "formalization/negative-voting/lakefile.toml",
-      "sha256": "68ccd4a59bd5bd7f2ba0461be5d933f988630d00a3a8ef183bca00fdff2d6f76"
+      "sha256": "f55774a38c2678cc4d9740dc603b88df09834b1ac1f47c83aa8a61712a4c362f"
     },
     "anc/lean/lean-toolchain": {
       "repository_path": "formalization/negative-voting/lean-toolchain",
-      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      "sha256": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
+    },
+    "anc/lean/third_party/markov-semigroups/LICENSE": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/LICENSE",
+      "sha256": "8ebdd6164d5245aba45342f898b1a9f1c1509246a22fdf3002a66bbbe5d70089"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Abstract/DirichletForm.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Abstract/DirichletForm.lean",
+      "sha256": "c085dfbdc6ff56aba00907f699f1d997c797909a4660eb0abef13cbf1fc9cc46"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Abstract/GrossODE.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Abstract/GrossODE.lean",
+      "sha256": "0dea71288d60d0fb5147aed89a37c03b4dcc6a90f22c15d5e2d027de2f8521f6"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Abstract/Hypercontractivity.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Abstract/Hypercontractivity.lean",
+      "sha256": "8b701c87b800e96f83b5b731861634b1b38730335824584fc0381f3d938397c0"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Diffusion/CarreDuChamp.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Diffusion/CarreDuChamp.lean",
+      "sha256": "734a2684be88a7d2c7d5ec5d2dc31d1f9f0f925f2ade1f42cdb117de7769bf54"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Diffusion/StroockVaropoulos.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Diffusion/StroockVaropoulos.lean",
+      "sha256": "b75e7ebe154e68070af78284e75975ba8b27593b6fc1bab6144762ce893b7142"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/General/OUEntropyDecomposition.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/General/OUEntropyDecomposition.lean",
+      "sha256": "ee320cc431211d415d260b48fb751621cad91c21c507231e1b6049dd42c4d732"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean",
+      "sha256": "44d0b521e44aab4461939362ec4555efc314cff022b48566c38d40645ae8ab2a"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean",
+      "sha256": "66a0a38713515f1d1f65eaf54d5464e88048c908fe9cbe249bfa633a4055f9d7"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean",
+      "sha256": "6d59b3c5a02c2e6e74ffb6431edf55b397d75548bd4e9b8c0b31fc61272d6753"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean",
+      "sha256": "2e011c66e19cf4b702fcfec41905fe8d89f878f6bf47cfffc13fca694d436527"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean",
+      "sha256": "2b538000b04edd9e2c8df0b719da8b321e7a2c07347828853e7f3445b4687fa6"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean",
+      "sha256": "ceec1aecefd4ae5132685a0f7d0f48e07dd0dafe7db6e020d6e315884e5b1998"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean",
+      "sha256": "1eabd86deead32276050c0c1610713246ac0cbe8d85cfe12939442bf33dbb12b"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean",
+      "sha256": "67d90091804d0172103964c202bda3eff13c03919dade185be4c2f79f4cf2789"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean",
+      "sha256": "1116a32b9c732971114f6ab91f1104fdeeae8d91c94ea21c5a0dc5fb42c82060"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean",
+      "sha256": "a7092a7196652ffd2a1e65d1923fadaf0a3758844481579f6f515cf1a4614189"
+    },
+    "anc/lean/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean": {
+      "repository_path": "formalization/negative-voting/third_party/markov-semigroups/originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean",
+      "sha256": "352ee23719410aecc2620d2bb92e1df22026cf1f57fdeee0f5d3a6e934a10b26"
+    },
+    "anc/lean/third_party/mulgund/originals/CITATION.cff": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/CITATION.cff",
+      "sha256": "8d2ed16e75439fa7a4105c428a92fec55ff100d626b6bdfa1abe2c22494ffe08"
+    },
+    "anc/lean/third_party/mulgund/originals/LICENSE": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/LICENSE",
+      "sha256": "305599e72205097629760507f8f5b91f951cb5bbf6871554fe7450adabf1a2db"
+    },
+    "anc/lean/third_party/mulgund/originals/PROVENANCE.md": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/PROVENANCE.md",
+      "sha256": "698bb21bbe1338620f0a8c32dd3bf72cf934e63518b39471321fc45457c4921f"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Correlation.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Correlation.lean",
+      "sha256": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Euclidean.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Euclidean.lean",
+      "sha256": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Finite.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Finite.lean",
+      "sha256": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Matrix.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Matrix.lean",
+      "sha256": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean",
+      "sha256": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/DensityRatio.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/DensityRatio.lean",
+      "sha256": "c0a1f5e66f030ec5fcff5388449b5a77952cb6ee207d7616a6ac33000880faa4"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/Regularization.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/Regularization.lean",
+      "sha256": "f85b3f3c2ef30c9f379d670b44b4687cb8abf9dfc2b27b1f58ebeab5a79c2d2b"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/Shift.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/Shift.lean",
+      "sha256": "9b6ff54ab5d1325f7a69736308b516b44f32db71c940e44132b9d3775441d650"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Basic.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Basic.lean",
+      "sha256": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Indicators.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Indicators.lean",
+      "sha256": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Prekopa.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Prekopa.lean",
+      "sha256": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/Mills.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/Mills.lean",
+      "sha256": "92b5f4e74b4bc1f94ee816097dc8ba149d335cf1c7f50bd7c7020ca3ceaf3e96"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/PDFCDF.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/PDFCDF.lean",
+      "sha256": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/TiltFunctions.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/TiltFunctions.lean",
+      "sha256": "9284ca8388a39c58ef41eb20f08008f1611ef3d99e894b2bfecba6bef70897d6"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/TruncatedMoments.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/TruncatedMoments.lean",
+      "sha256": "f768dfa4a020b9c2232163bc80ee13773313a5787d39021fe239ec741eb59456"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean",
+      "sha256": "bdce79431cec6d4e0ac0da7201ff74adb0a5950f71df1b1090f57ed1d119d67b"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/PositiveDefinite.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/PositiveDefinite.lean",
+      "sha256": "18221504713084f7d3d291b695a26f2648904e1b7552e383631fb1e999303666"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/PositiveDefiniteConditional.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/PositiveDefiniteConditional.lean",
+      "sha256": "fd6c29541016c1cce98b20afbecc512114b2e4806766ba1644ad64cecc8b0e9a"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/Singular.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/Singular.lean",
+      "sha256": "29ad9d4983500fbfba1d3b0c43651fd9d334cd51c5071f9a4da3f99bad5f76ac"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/CenteredProduct.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/CenteredProduct.lean",
+      "sha256": "15112132ec00eab7a4d97c4950a2efe1f5f4431f27ad9c6b608d40d19784dc2f"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/CenteredProperty.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/CenteredProperty.lean",
+      "sha256": "a152f2a98fe80b1f06b83d06fd32cf24025dde38750785b0b690cf143edd6eae"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/DyadicCLT.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/DyadicCLT.lean",
+      "sha256": "efe8fa9e8ce7b1a2fabdf82f8e39cf3fa54f1b7f30b506248275af0a572de314"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/EvenLayerCake.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/EvenLayerCake.lean",
+      "sha256": "ab78a81689d5678767667ce9b8e937a880ba718a3a023ebc6614c738696c48f5"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/NormalizedSelfConvolution.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/NormalizedSelfConvolution.lean",
+      "sha256": "c8016f63db59ec73e06dafa5aa79fbebf3d1bb4de2bd618acdce73da3234090f"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/PositiveLowerBound.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/PositiveLowerBound.lean",
+      "sha256": "dc88f66d01221786f8cd1761bd8d39ebb0791ab83db31de93604e817d0f3dfd1"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/SumDifference.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/SumDifference.lean",
+      "sha256": "70f5ca8a72360b2f5154ac7b04a4b9d4b63edb3d48c528982e1c0cb4b04bf76e"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/SymmetricRectangle.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Product/SymmetricRectangle.lean",
+      "sha256": "3c335ea0b2b81658d1cf23384e3e7117d6774ff2fe549c02714d15dc8b37bc78"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/AdaptiveWitnesses.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/AdaptiveWitnesses.lean",
+      "sha256": "a1f30ac0013820cb52b3d451b18b4f226ecd74ce54f3e0426d318fa9d0ce79d2"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/CompactMaximizer.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/CompactMaximizer.lean",
+      "sha256": "bf547a3547d453dc30d3dfedec881bd60b37e419dcd9f0dc91da32f45141f161"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/EventShift.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/EventShift.lean",
+      "sha256": "2c7b2e3ac4c1443fad4871a371cfca1f9d2537f2b7e1072063c57f1f6922188e"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/Potential.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/Potential.lean",
+      "sha256": "8fc447f5e7d617a46d0bc7d88e41d6db453167966a5e06ea5e168ab84a34bd89"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/RankOneInverse.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/RankOneInverse.lean",
+      "sha256": "c483e66ed373337a32ef739a48d1ea8fa60a086fbff98be91389617a1f6f8bda"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/Stationarity.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/Stationarity.lean",
+      "sha256": "35096c95e697716a63f65fa79f9296701b1a2e04219a1cba4daa6a65c3165ecf"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/TiltedHalfLine.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/TiltedHalfLine.lean",
+      "sha256": "26b5565edbe6a32ff883af664062257c5c36fe55171a5017f60e57a7e7bbf54d"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/GaussianMGFShift.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/GaussianMGFShift.lean",
+      "sha256": "92e52fc007d5bb510709e00f8424c4b6de7eeb8c11bb4972c6cb36bd0cc2153c"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/LICENSE": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/LICENSE",
+      "sha256": "d5945fe0f38866a919940212b0e3b5b0c30629b923c3e26dcce026571a29cd93"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean",
+      "sha256": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean",
+      "sha256": "348d915e5d3b758ed057feb8a3cc13066e99d09b9287f95f8c8f9cb0cff07b7e"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean",
+      "sha256": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04"
+    },
+    "anc/lean/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean",
+      "sha256": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4"
+    },
+    "anc/lean/third_party/mulgund/originals/lake-manifest.json": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/lake-manifest.json",
+      "sha256": "c08dfeb10b01dfbc67282b8249de39e45e71f0ace894724546ac497fab511140"
+    },
+    "anc/lean/third_party/mulgund/originals/lakefile.toml": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/lakefile.toml",
+      "sha256": "469a4229ae697da0a8db9683f929a65f65bb71b28b1555e86f254eebbe976b2b"
+    },
+    "anc/lean/third_party/mulgund/originals/lean-toolchain": {
+      "repository_path": "formalization/negative-voting/third_party/mulgund/originals/lean-toolchain",
+      "sha256": "efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee"
+    },
+    "anc/lean/third_party/slow-equilibration/LICENSE": {
+      "repository_path": "formalization/negative-voting/third_party/slow-equilibration/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
     },
     "anc/lean/verify.py": {
       "repository_path": "formalization/negative-voting/verify.py",
-      "sha256": "bf7f3f3d4e2e68803247432b48785ee491e2b4b42ef90fcbe9446bbcd83b5f77"
+      "sha256": "3574543c4442c32ca03800263a68cdad9f74337531ddc40d4d59b4df8ba86575"
+    },
+    "anc/lean/verify_dependency.py": {
+      "repository_path": "formalization/negative-voting/verify_dependency.py",
+      "sha256": "50e53cfaf3946822d6a83faf07c211bb148f9f031408bcc5b4d67f11e98e833d"
+    },
+    "anc/lean/verify_hypercontractivity.py": {
+      "repository_path": "formalization/negative-voting/verify_hypercontractivity.py",
+      "sha256": "ca8ffbacc2793c845e4c7d1f6e2c0e053bd4e750116a72846d39c9c73773e609"
+    },
+    "anc/lean/verify_mulgund.py": {
+      "repository_path": "formalization/negative-voting/verify_mulgund.py",
+      "sha256": "1c007a773ea8658263a0515d51ca9ea1397b1845ba72cef640c9a4e2fb06775e"
     },
     "anc/original/AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt": {
       "repository_path": "frontier/negative-voting-simplex/dependency_review/proof_sources/AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt",
@@ -346,5 +1070,5 @@
       "sha256": "5f2ef775159f53f277d248995d17c138c2fbc53e27a089a2dea164aba7051432"
     }
   },
-  "formalization_scope": "Partial formalization only. Gaussian analytic estimates and the full main theorem are not Lean-verified."
+  "formalization_scope": "Partial formalization only. Concrete Gaussian analytic components are checked; the remaining geometric estimates and the full main theorem are not Lean-verified."
 }

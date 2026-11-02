@@ -1,0 +1,4 @@
+$ lake build GaussianSecondChaos
+Build completed successfully (8935 jobs).
+
+exit_code=0

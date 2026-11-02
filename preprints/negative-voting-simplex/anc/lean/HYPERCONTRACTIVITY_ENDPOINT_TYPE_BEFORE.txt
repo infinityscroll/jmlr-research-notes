@@ -1,0 +1,16 @@
+GaussianFin.stdGaussianFin_isHypercontractive : ∀ (n : ℕ),
+  MarkovSemigroup.IsHypercontractive.{0}
+    (DirichletMarkovSemigroup.toMarkovSemigroup.{0} (GaussianFin.stdGaussianFin_dirichletMarkovSemigroup n)) 1
+def MarkovSemigroup.IsHypercontractive.{u_1} : {X : Type u_1} →
+  [inst : MeasurableSpace X] → MarkovSemigroup X → ℝ → Prop :=
+fun {X} [MeasurableSpace X] S ρ =>
+  0 < ρ ∧
+    ∀ (p q t : ℝ),
+      1 < p →
+        p ≤ q →
+          0 < t →
+            q ≤ 1 + (p - 1) * Real.exp (2 * ρ * t) →
+              ∀ (f : ↥(MeasureTheory.Lp ℝ 2 S.μ)),
+                MeasureTheory.MemLp (↑↑f) (ENNReal.ofReal p) S.μ →
+                  MeasureTheory.eLpNorm (↑↑((S.P t) f)) (ENNReal.ofReal q) S.μ ≤
+                    MeasureTheory.eLpNorm (↑↑f) (ENNReal.ofReal p) S.μ

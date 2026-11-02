@@ -1,0 +1,159 @@
+{
+  "method": "Whitespace-normalized declaration headers before top-level := or where; comments stripped with nesting. Public theorem/lemma/def/abbrev/opaque headers, plus private headers; structures and anonymous instances are outside this source-level comparison.",
+  "files": [
+    {
+      "path": "MarkovSemigroups/Abstract/DirichletForm.lean",
+      "original_count": 18,
+      "ported_count": 18,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Abstract/GrossODE.lean",
+      "original_count": 43,
+      "ported_count": 43,
+      "changed": [
+        {
+          "name": "lemma integral_abs_eq_eLpNorm_one_toReal #1",
+          "before": {
+            "private": false,
+            "header": "lemma integral_abs_eq_eLpNorm_one_toReal {Y : Type*} [MeasurableSpace Y] {\u03bd : Measure Y} {f : Y \u2192 \u211d} (hf : Integrable (fun y => |f y|) \u03bd) : \u222b y, |f y| \u2202\u03bd = (eLpNorm f 1 \u03bd).toReal"
+          },
+          "after": {
+            "private": false,
+            "header": "lemma integral_abs_eq_eLpNorm_one_toReal {Y : Type*} [MeasurableSpace Y] {\u03bd : Measure Y} {f : Y \u2192 \u211d} (hfm : AEStronglyMeasurable f \u03bd) (hf : Integrable (fun y => |f y|) \u03bd) : \u222b y, |f y| \u2202\u03bd = (eLpNorm f 1 \u03bd).toReal"
+          }
+        }
+      ],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Abstract/Hypercontractivity.lean",
+      "original_count": 19,
+      "ported_count": 16,
+      "changed": [],
+      "removed": [
+        "theorem hypercontractive_of_logSobolev #1",
+        "theorem logSobolev_of_hypercontractive #1",
+        "theorem gross_equivalence #1"
+      ],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Diffusion/CarreDuChamp.lean",
+      "original_count": 7,
+      "ported_count": 7,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Diffusion/StroockVaropoulos.lean",
+      "original_count": 2,
+      "ported_count": 2,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/General/OUEntropyDecomposition.lean",
+      "original_count": 7,
+      "ported_count": 7,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean",
+      "original_count": 28,
+      "ported_count": 28,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean",
+      "original_count": 6,
+      "ported_count": 6,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean",
+      "original_count": 166,
+      "ported_count": 166,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean",
+      "original_count": 23,
+      "ported_count": 23,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean",
+      "original_count": 42,
+      "ported_count": 42,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean",
+      "original_count": 4,
+      "ported_count": 4,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean",
+      "original_count": 14,
+      "ported_count": 15,
+      "changed": [],
+      "removed": [],
+      "added": [
+        "theorem partialDeriv_as_function #1"
+      ]
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean",
+      "original_count": 6,
+      "ported_count": 6,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean",
+      "original_count": 31,
+      "ported_count": 31,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean",
+      "original_count": 20,
+      "ported_count": 20,
+      "changed": [],
+      "removed": [],
+      "added": []
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean",
+      "original_count": 19,
+      "ported_count": 19,
+      "changed": [],
+      "removed": [],
+      "added": []
+    }
+  ]
+}

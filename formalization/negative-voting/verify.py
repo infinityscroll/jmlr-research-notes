@@ -13,7 +13,7 @@ ALLOWED_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
 def verify(lake: str) -> dict:
-    sources = sorted((ROOT / 'NegativeVoting').rglob('*.lean')) + [ROOT / 'NegativeVoting.lean']
+    sources = sorted((ROOT / 'NegativeVoting').rglob('*.lean')) + [ROOT / 'NegativeVoting.lean', ROOT / 'GaussianSpectralBridge.lean', ROOT / 'GaussianSecondChaos.lean', ROOT / 'GaussianAffineComparison.lean', ROOT / 'MulgundGaussianComparison.lean', ROOT / 'GaussianHypercontractivityBridge.lean', ROOT / 'GaussianSmallCap.lean', ROOT / 'GaussianCapTailAndStrip.lean', ROOT / 'GaussianNormalTrace.lean']
     authored_count = 0
     for path in sources:
         text = path.read_text()
@@ -21,7 +21,7 @@ def verify(lake: str) -> dict:
         clean = re.sub(r'/\-.*?\-/', '', text, flags=re.S)
         clean = re.sub(r'--[^\n]*', '', clean)
         authored_count += len(re.findall(r'(?m)^\s*(?:(?:private|protected|noncomputable)\s+)*(?:theorem|lemma)\s+[\w.]+', clean))
-        forbidden = re.search(r'\b(sorry|admit|axiom|unsafe|native_decide)\b', clean)
+        forbidden = re.search(r'\b(sorry|admit|axiom|unsafe|native_decide|implemented_by|extern)\b', clean)
         if forbidden:
             raise RuntimeError(f'Forbidden proof escape in {path.name}: {forbidden.group()}')
     audit_source = (ROOT / 'AxiomAudit.lean').read_text()
@@ -36,10 +36,10 @@ def verify(lake: str) -> dict:
     if inventory.returncode:
         print(inventory.stdout)
         raise RuntimeError('Compiled-environment inventory failed')
-    theorem_names = re.findall(r'NV_THEOREM (NegativeVoting\.[\w.]+)', inventory.stdout)
+    theorem_names = re.findall(r'NV_THEOREM ([^\r\n]+)', inventory.stdout)
     if sorted(audited) != sorted(theorem_names):
         raise RuntimeError('The axiom audit must cover every compiled project theorem exactly once')
-    imported_modules = set(re.findall(r'NV_MODULE (NegativeVoting[\w.]*)', inventory.stdout))
+    imported_modules = set(re.findall(r'NV_MODULE (\S+)', inventory.stdout))
     expected_modules = {'.'.join(p.relative_to(ROOT).with_suffix('').parts) for p in sources}
     if not expected_modules <= imported_modules:
         raise RuntimeError(f'Unimported project sources: {sorted(expected_modules - imported_modules)}')
@@ -64,7 +64,7 @@ def verify(lake: str) -> dict:
     return {'status': 'passed', 'theorem_count': len(theorem_names),
             'named_theorem_count': authored_count,
             'allowed_logical_axioms': sorted(ALLOWED_AXIOMS),
-            'scope': 'partial components and conditional scalar assembly; not the Gaussian theorem'}
+            'scope': 'actual Gaussian spectral, moment, reference, affine comparison, trace and local cap components; the full Gaussian theorem remains unproved'}
 
 
 def main() -> None:

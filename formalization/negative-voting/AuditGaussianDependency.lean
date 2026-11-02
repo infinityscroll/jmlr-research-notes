@@ -1,0 +1,11 @@
+import SlowEquilibration.GaussianNoiseL2
+
+#print axioms OAI.MinUncut.GaussianHermite.hermiteBasis
+#print axioms OAI.MinUncut.GaussianHermite.productHermiteBasis
+#print axioms OAI.MinUncut.GaussianHermite.ae_zero_of_integral_mvpoly_eq_zero
+#print axioms OAI.MinUncut.GaussianHermite.rotation_preserves
+#print axioms OAI.MinUncut.GaussianHermite.psi_noise
+#print axioms OAI.MinUncut.GaussianHermite.noise_coefficient
+#print axioms SlowEquilibration.GaussianMaximalCorrelation.coupled_memLp
+#print axioms SlowEquilibration.GaussianMaximalCorrelation.memLp_noise_L2
+#print axioms SlowEquilibration.GaussianMaximalCorrelation.noise_coefficient_L2

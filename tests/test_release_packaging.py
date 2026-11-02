@@ -167,8 +167,11 @@ class FormalSourceBundleIntegrity(unittest.TestCase):
             directory.mkdir(parents=True)
             files = {'lean-toolchain': b'leanprover/lean4:v4.19.0\n',
                      'lake-manifest.json': b'{}\n',
-                     'Proof.lean': b'theorem identity (P : Prop) (h : P) : P := h\n'}
+                     'Proof.lean': b'theorem identity (P : Prop) (h : P) : P := h\n',
+                     'third_party/dependency/LICENSE': b'Preserved upstream license\n',
+                     'PORT.patch': b'Preserved compatibility diff\n'}
             for name, content in files.items():
+                (directory / name).parent.mkdir(parents=True, exist_ok=True)
                 (directory / name).write_bytes(content)
             receipt = {'status': 'passed', 'source_sha256':
                        {name: hashlib.sha256(data).hexdigest() for name, data in files.items()}}
@@ -177,6 +180,10 @@ class FormalSourceBundleIntegrity(unittest.TestCase):
             (directory / '.lake' / 'untracked.lean').write_text('Not a distributed proof')
             bundled = preprint.lean_files(root)
             self.assertEqual(set(bundled), set(files) | {'BUILD_RECEIPT.json'})
+            (directory / 'Unrecorded.lean').write_text('Added after verification')
+            with self.assertRaisesRegex(ValueError, 'cover every distributed file'):
+                preprint.lean_files(root)
+            (directory / 'Unrecorded.lean').unlink()
             (directory / 'Proof.lean').write_text('Changed source after the build')
             with self.assertRaisesRegex(ValueError, 'does not match distributed source'):
                 preprint.lean_files(root)

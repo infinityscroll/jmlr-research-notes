@@ -24,7 +24,7 @@ jobs:
           PYTHONDONTWRITEBYTECODE: '1'
   lean-kernel-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -36,6 +36,12 @@ jobs:
           build: 'true'
           test: 'false'
           lint: 'false'
+      - name: Audit pinned analytic dependencies and their exact endpoints
+        working-directory: formalization/negative-voting
+        run: |
+          python3 verify_dependency.py
+          python3 verify_mulgund.py
+          python3 verify_hypercontractivity.py
       - name: Audit every project theorem and its axioms
         working-directory: formalization/negative-voting
         run: python3 verify.py

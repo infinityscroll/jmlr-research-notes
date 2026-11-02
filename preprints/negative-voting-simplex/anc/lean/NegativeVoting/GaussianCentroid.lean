@@ -1,3 +1,4 @@
+import Mathlib
 import NegativeVoting.GaussianMoments
 
 /-!
@@ -37,7 +38,7 @@ theorem gaussian_centroid_pairing
     integrable_weighted_score ν p (fun x _ => x j) i hp (hpmeas i)
       (gaussian_product_coordinate_integrable means variances j)
   have hinner (i : ι) : Integrable (fun x => ∑ j, a i j * (p x i * x j)) ν :=
-    integrable_finset_sum Finset.univ (fun j _ => (hint i j).const_mul (a i j))
+    integrable_finsetSum Finset.univ (fun j _ => (hint i j).const_mul (a i j))
   calc
     _ = ∫ x, ∑ i, ∑ j, a i j * (p x i * x j) ∂ν := by
       congr 1
@@ -49,11 +50,11 @@ theorem gaussian_centroid_pairing
       intro j _
       ring
     _ = ∑ i, ∫ x, ∑ j, a i j * (p x i * x j) ∂ν :=
-      integral_finset_sum Finset.univ (fun i _ => hinner i)
+      integral_finsetSum Finset.univ (fun i _ => hinner i)
     _ = _ := by
       apply Finset.sum_congr rfl
       intro i _
-      rw [integral_finset_sum Finset.univ (fun j _ => (hint i j).const_mul (a i j))]
+      rw [integral_finsetSum Finset.univ (fun j _ => (hint i j).const_mul (a i j))]
       apply Finset.sum_congr rfl
       intro j _
       rw [integral_const_mul]

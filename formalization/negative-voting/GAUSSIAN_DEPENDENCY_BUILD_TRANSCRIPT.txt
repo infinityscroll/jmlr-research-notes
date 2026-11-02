@@ -1,0 +1,14 @@
+Build completed successfully (8932 jobs).
+'OAI.MinUncut.GaussianHermite.hermiteBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.MinUncut.GaussianHermite.productHermiteBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.MinUncut.GaussianHermite.ae_zero_of_integral_mvpoly_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.MinUncut.GaussianHermite.rotation_preserves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.MinUncut.GaussianHermite.psi_noise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.MinUncut.GaussianHermite.noise_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SlowEquilibration.GaussianMaximalCorrelation.coupled_memLp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SlowEquilibration.GaussianMaximalCorrelation.memLp_noise_L2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SlowEquilibration.GaussianMaximalCorrelation.noise_coefficient_L2' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

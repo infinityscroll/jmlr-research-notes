@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/pmaronow/slowequilibration-palomar",
+  "commit": "a28aaa336343c4caf43791ababd8ed0ee5c7b58e",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "SlowEquilibration/Upstream/OAI/Computability/MinUncut/GaussianHermite.lean",
+      "sha256": "ad978785737df60d3fcaf588f4efd20e20e08f36d8e8d7eb4b2d4a0f6a3ad2af",
+      "modified": false
+    },
+    {
+      "path": "SlowEquilibration/GaussianNoiseL2.lean",
+      "sha256": "9fc2cec9062be30f9538cffded831c23a4ad7535f359533dc169c7e5fa9a335e",
+      "modified": false
+    }
+  ],
+  "original_gaussian_hermite_source": {
+    "repository": "https://github.com/openai/math",
+    "commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "path": "lean/OAI/Computability/MinUncut/Estimates/Basic.lean"
+  },
+  "lean": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "local_toolchain_asset": {
+    "name": "lean-4.35.0-rc2-darwin_aarch64.tar.zst",
+    "source": "https://github.com/leanprover/lean4/releases/download/v4.35.0-rc2/lean-4.35.0-rc2-darwin_aarch64.tar.zst",
+    "bytes": 571725203,
+    "sha256": "e721cf30671d3830fa6120c7b1a4e6b22624650ce1d618c0ca28a4889f5ef324",
+    "verified_against_github_release_digest": true
+  }
+}

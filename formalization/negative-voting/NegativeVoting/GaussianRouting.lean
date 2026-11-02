@@ -1,7 +1,5 @@
+import Mathlib
 import NegativeVoting.Routing
-import Mathlib.Probability.Distributions.Gaussian
-import Mathlib.MeasureTheory.Constructions.Pi
-import Mathlib.Data.Finset.Max
 
 /-!
 # Gaussian score ties and finite-product routing rigidity
@@ -26,7 +24,7 @@ theorem gaussian_singleton_null (mean : ℝ) {variance : ℝ≥0}
 
 /-- Nondegenerate scalar Gaussian measures are atomless. -/
 theorem gaussian_noAtoms (mean : ℝ) {variance : ℝ≥0}
-    (hvariance : variance ≠ 0) : NoAtoms (gaussianReal mean variance) :=
+    (hvariance : variance ≠ 0) : NullSingletonClass (gaussianReal mean variance) :=
   ⟨gaussian_singleton_null mean hvariance⟩
 
 /-- A proper affine linear equation has zero product-measure mass whenever
@@ -35,7 +33,7 @@ have sigma-finite measures. -/
 theorem product_linear_hyperplane_null {n : ℕ}
     (μ : Fin (n + 1) → Measure ℝ) [∀ j, SigmaFinite (μ j)]
     (a : Fin (n + 1) → ℝ) (c : ℝ) (i : Fin (n + 1))
-    [NoAtoms (μ i)] (ha : a i ≠ 0) :
+    [NullSingletonClass (μ i)] (ha : a i ≠ 0) :
     Measure.pi μ {x | ∑ j, a j * x j = c} = 0 := by
   let e := MeasurableEquiv.piFinSuccAbove (fun _ : Fin (n + 1) => ℝ) i
   let s : Set (ℝ × (Fin n → ℝ)) :=
@@ -81,7 +79,7 @@ theorem gaussian_product_linear_hyperplane_null {n : ℕ}
     Measure.pi (fun i => gaussianReal (means i) (variances i))
       {x | ∑ j, a j * x j = c} = 0 := by
   obtain ⟨i, hai, hvi⟩ := ha
-  letI : NoAtoms (gaussianReal (means i) (variances i)) := gaussian_noAtoms (means i) hvi
+  letI : NullSingletonClass (gaussianReal (means i) (variances i)) := gaussian_noAtoms (means i) hvi
   exact product_linear_hyperplane_null
     (fun j => gaussianReal (means j) (variances j)) a c i hai
 

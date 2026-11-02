@@ -1,9 +1,4 @@
-import Mathlib.Data.Real.Basic
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Algebra.BigOperators.Group.Finset.Sigma
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.Linarith
+import Mathlib
 
 /-!
 # Exact finite-simplex normal-strain algebra

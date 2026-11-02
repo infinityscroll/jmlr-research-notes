@@ -1,80 +1,67 @@
-# Lean verification of negative-voting proof components
+# Negative Gaussian simplex formalization
 
-This package contains **54 named theorem declarations**, checked by Lean 4.19.0
-against an exact mathlib commit. The audit covers **64 compiled theorem constants**,
-including compiler-generated proof and definition-equation constants.
+This project checks concrete parts of the negative-voting manuscript in Lean.
+The complete Gaussian optimality and equality theorem is **not proved here**.
+Its exact quantifiers and admissible class are recorded in
+[MainGoal.lean](NegativeVoting/MainGoal.lean) as `FullNegativeVotingStatement`.
 
-The checked mathematics includes actual finite-product Gaussian hyperplane null
-sets, almost-everywhere unique linear-score maxima, exponential and first moments,
-finite-max and fractional-score integrability, exact centroid pairing, and Gaussian
-zero-routing-gap rigidity. It also covers the centered covariance strain identity,
-retained centroid-square cancellation, logarithmic remainder decay, and one
-threshold uniform over the entire negative voting interval for fixed coefficients.
+The development now connects the actual correlated-Gaussian integral to the
+complete signed Hermite expansion, identifies the mass, centroid and quadratic
+terms, constructs regular references in the required dimensions, and proves
+reference symmetries and moments. It also checks the actual affine-reference
+comparison and local Gaussian cap estimates. [COVERAGE.md](COVERAGE.md) records
+which analytic obligations remain and the hypotheses of each checked component.
 
-The full Gaussian simplex inequality, Negative Plurality Is Stablest, and MAX-m-CUT
-hardness are not formalized here. The local/exterior analytic comparisons remain
-explicit hypotheses of the scalar assembly lemmas. The Gaussian zero-gap rigidity
-result proves a genuine first-moment statement; it does not establish that gap is
-zero from full-noise competitiveness.
+## Rebuild and audit
 
-No custom axioms, `sorry`, `admit`, or `native_decide` are used in the project proofs.
-Every audited constant depends only on the standard logical axioms `propext`,
-`Classical.choice`, and `Quot.sound`.
-
-## Reproduce
-
-Install [Lean's elan toolchain manager](https://lean-lang.org/install/), then run
-from this directory:
+Lean 4.35.0-rc2 and mathlib commit
+`065356127b1dc0016f66b7283ce0ce2c4055aa55` are pinned, together with every Lake
+dependency. With the pinned toolchain available:
 
 ```sh
-lake exe cache get
-lake build
+lake exe cache get Mathlib
+python3 verify_dependency.py
+python3 verify_mulgund.py
+python3 verify_hypercontractivity.py
 python3 verify.py
 ```
 
-The exact Lean version is in `lean-toolchain`; mathlib and all transitive packages
-are pinned in `lake-manifest.json`. `verify.py` rebuilds, reads the compiled Lean
-environment, verifies that every project theorem constant is audited and every
-source module is imported, and rejects unexpected transitive axiom dependencies.
-It does not use a cloud service or a language model.
+Each verifier accepts `--lake /absolute/path/to/lake`. Dependency verifiers are
+read-only by default; `--write-evidence` deliberately refreshes their saved
+receipts and transcripts. The first-party inventory is taken from the compiled
+modules, not a count of theorem names in the source. Every theorem constant
+from those modules, including generated helpers, must appear exactly once in
+`AxiomAudit.lean`. The allowed logical axioms are `propext`, `Classical.choice`,
+and `Quot.sound`; proof admissions and additional mathematical axioms are
+rejected. `BUILD_RECEIPT.json` pins the distributed proof inputs.
 
-On macOS hosts whose loader rejects the old native cache executable, the cache can
-instead be fetched through the Lean interpreter:
+## Attributed foundations
 
-```sh
-lake env lean --run .lake/packages/mathlib/Cache/Main.lean get
-```
+- **Gaussian Hermite basis and noise action:** unchanged files from
+  [pmaronow/slowequilibration-palomar](https://github.com/pmaronow/slowequilibration-palomar),
+  with the original Gaussian Hermite development credited to
+  [openai/math](https://github.com/openai/math). Exact revisions and hashes:
+  [UPSTREAM_PROVENANCE.json](UPSTREAM_PROVENANCE.json).
+- **Gaussian hypercontractivity:** the actual Gaussian instance from Michael R.
+  Douglas's [markov-semigroups](https://github.com/mrdouglasny/markov-semigroups),
+  ported to the common toolchain. Its L²-to-Lq and Lp-to-L² integral statements
+  are connected to raw square-integrable functions, including unbounded
+  projections. [Provenance](HYPERCONTRACTIVITY_PROVENANCE.json) and
+  [compatibility notes](HYPERCONTRACTIVITY_README.txt).
+- **Equal-threshold Gaussian comparison:** Abhijeet Mulgund's
+  [weak-simplex-conjecture-lean](https://github.com/abhmul/weak-simplex-conjecture-lean).
+  The independent boundary statement displays the covariance, diagonal,
+  rank-one domination and Gaussian event explicitly.
+  [Provenance](MULGUND_PROVENANCE.json).
 
-`BUILD_TRANSCRIPT.txt` and `BUILD_RECEIPT.json` record the successful local check.
-The receipt pins the released proof and audit sources. Downloaded packages and
-build outputs under `.lake/` are excluded from the release.
+These are prior results and attributed software dependencies. Their original
+licenses and preserved sources are included under `third_party/`; the StatLean
+material retains its own Apache-2.0 notice. The Markov source history contains
+three legacy axioms and wrappers, preserved verbatim only in the archival
+originals. They were unused by the concrete Gaussian endpoint and removed from
+the active source. Transitive audits before and after removal agree, and the
+endpoint type is identical. Active dependencies introduce no extra axioms.
 
-## Coverage
-
-| Module | Kernel-checked content | Remaining connection to the full manuscript |
-| --- | --- | --- |
-| `Routing.lean` | Exact simplex routing decomposition; nonnegativity; a quantitative score-margin bound; zero-loss purity; zero integral implies almost-everywhere purity | The full-noise theorem must supply the relevant equality |
-| `Integrability.lean` | Finite maxima and measurable simplex-weighted mixtures of integrable scores are integrable; routing integrability is derived | Applied to Gaussian scores by the next module |
-| `GaussianRouting.lean` | Actual Gaussian singleton and finite-product hyperplane nullness; distinct linear rows tie with probability zero; unique maxima almost everywhere | Distinctness of the regular centroid rows follows from the manuscript's geometric classification |
-| `GaussianMoments.lean` | Actual Gaussian exponential/id integrability, product-coordinate laws, linear-score and maximum integrability; zero expected maximum-minus-mixture gap forces an almost-everywhere unique indicator rule, with a maximizer constructed internally | Deriving zero gap from full-noise competitiveness remains analytic |
-| `GaussianCentroid.lean` | Expected fractional linear score equals the score/centroid pairing; self-centroid score equals squared Frobenius norm; exact expected self-centroid routing-gap identity | The sharp upper bound for the expected maximum and its equality classification remain analytic |
-| `Centroid.lean` | Exact retained-square cancellation for finite centroid arrays; zero squared mass defect characterizes the mass vector | The local analytic comparison must supply the retained positive square term |
-| `EdgeEnergy.lean` | Exact centered symmetric ordered-edge energy identity; Frobenius lower bound; zero energy forces zero matrix | Gaussian facet weights and covariance Hessian bounds remain analytic |
-| `Threshold.lean` | Decay of `(1+log x)^p/x^q` for fixed `p >= 0`, `q > 0`; one eventual threshold for the two concrete exterior rates | Constants must be supplied with the claimed uniformity |
-| `VotingRange.lean` | Exact endpoint scaling and a single natural threshold valid for every `0 < r <= 1/(m-1)`; conditional assembly with that quantifier order | The Gaussian localization, local comparison and exterior estimates remain explicit hypotheses |
-| `Assembly.lean` | Signed-Hermite scalar bound, strict exterior exclusion, zero-deficit local rigidity, and complete scalar two-region closure | Hermite expansion, Gaussian estimates, covariance classification and discrete/UGC transfer are not proved by this module |
-
-## Source mapping
-
-The reference is
-[the integrated theorem and proof](https://github.com/infinityscroll/jmlr-research-notes/blob/main/frontier/negative-voting-simplex/supplements/integrated-full-voting-proof-20261102/MAIN_THEOREM_INTEGRATED_PROOF_20261102.txt),
-Sections 2B and 3. The formalization now proves the routing-integrability and
-Gaussian no-tie facts directly, together with the actual centroid expectation
-calculation, the covariance edge-strain identity, and uniform scalar threshold
-selection. `GAUSSIAN_ROUTING_COVERAGE.txt` and `VOTING_RANGE_COVERAGE.txt` give the
-module-level statements and proof routes.
-
-Completing the full theorem still requires formal versions of the covariance,
-optimal-transport, moving-boundary, and Hermite estimates; the discrete consequences
-also require invariance and complexity-theoretic transfer. This package exposes
-those interfaces rather than turning the desired conclusion into a custom axiom.
+The manuscript's new geometric comparison, uniform constants and final theorem
+require further formal proof. Compilation of the components does not establish
+those remaining obligations.

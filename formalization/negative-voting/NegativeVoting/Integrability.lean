@@ -1,5 +1,5 @@
+import Mathlib
 import NegativeVoting.Routing
-import Mathlib.Data.Finset.Lattice.Fold
 
 /-!
 # Integrability of finite scores and fractional routing
@@ -29,7 +29,7 @@ theorem integrable_weighted_score (μ : Measure Ω) (p s : Ω → ι → ℝ) (i
     (hpmeas : AEMeasurable (fun x => p x i) μ)
     (hs : Integrable (fun x => s x i) μ) :
     Integrable (fun x => p x i * s x i) μ := by
-  apply hs.bdd_mul' hpmeas.aestronglyMeasurable
+  apply hs.bdd_mul hpmeas.aestronglyMeasurable
   filter_upwards [hp] with x hx
   rw [Real.norm_eq_abs, abs_of_nonneg (hx.1 i)]
   exact simplex_weight_le_one (p x) hx i
@@ -40,7 +40,7 @@ theorem integrable_score_mixture (μ : Measure Ω) (p s : Ω → ι → ℝ)
     (hpmeas : ∀ i, AEMeasurable (fun x => p x i) μ)
     (hs : ∀ i, Integrable (fun x => s x i) μ) :
     Integrable (fun x => ∑ i, p x i * s x i) μ := by
-  exact integrable_finset_sum Finset.univ (fun i _ =>
+  exact integrable_finsetSum Finset.univ (fun i _ =>
     integrable_weighted_score μ p s i hp (hpmeas i) (hs i))
 
 /-- The maximum of any nonempty finite collection of integrable scores is
@@ -55,7 +55,7 @@ theorem integrable_finite_max (μ : Measure Ω) (s : Ω → ι → ℝ)
     by_cases ht : t.Nonempty
     · have hi := ih ht (fun i hi => hs i (Finset.mem_insert_of_mem hi))
       have hai := hs a (Finset.mem_insert_self a t)
-      simpa only [Finset.sup'_insert ht, Pi.sup_apply] using hai.sup hi
+      simpa only [Finset.sup'_insert ht, Pi.sup_def] using hai.sup hi
     · have hempty : t = ∅ := Finset.not_nonempty_iff_eq_empty.mp ht
       subst t
       simpa using hs a (Finset.mem_singleton_self a)

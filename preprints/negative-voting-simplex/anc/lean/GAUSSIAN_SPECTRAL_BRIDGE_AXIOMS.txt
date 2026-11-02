@@ -1,0 +1,27 @@
+'NegativeVotingModern.hermite_basis_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.gaussian_noise_pairing_spectral_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.gaussian_coupling_spectral_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.gaussian_coefficient_energy_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.labelCoefficientEnergy_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.chaosEnergy_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.degree_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.coefficient_zero_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.chaosEnergy_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.degree_single_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.degree_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.coefficient_single_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.chaosEnergy_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.label_coefficient_energy_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.chaos_energy_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.gaussian_label_coupling_spectral_hasSum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingModern.gaussian_label_chaos_hasSum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.simplex_component_memLp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.simplex_chaos_energy_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.actual_simplex_noise_stability_spectral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingModern.actual_simplex_noise_series_absolutely_summable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

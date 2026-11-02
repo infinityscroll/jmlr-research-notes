@@ -1,0 +1,116 @@
+--- legacy-present/MarkovSemigroups/Abstract/Hypercontractivity.lean
++++ clean/MarkovSemigroups/Abstract/Hypercontractivity.lean
+@@ -592,73 +592,13 @@
+ 
+ end DirichletMarkovSemigroup
+ 
+-/-! ## Stroock–Varopoulos inequality (intermediate-step lemma) -/
+-
+-/-- **Stroock–Varopoulos inequality.** AXIOM
+-(textbook bridge, restated on the `L²(μ)`-carrier-based bundled
+-structure).
+-
+-For a `DirichletMarkovSemigroup` `D`, any nonnegative `f ∈ D.IsCore`,
+-any `p > 1`, and assuming `f^{p/2}` and `f^{p-1}` lie in the core:
+-
+-  `(4(p − 1) / p²) · E(f^{p/2}, f^{p/2}) ≤ E(f, f^{p−1})`.
+-
+-(The exponent range is `p > 1` — the full range the Gross interpolation
+-path `q(s) = 1+(p₀-1)e^{2ρs}` visits for `p₀ > 1`. S–V holds throughout
+-`p > 1`; for diffusion/gradient forms it is in fact an equality. The
+-`2 ≤ p → 1 < p` relaxation is deep-think vetted, rating Standard — see
+-`plans/archive/sv-q-relaxation-vetting.md`, which vetted the matching
+-`StroockVaropoulos._hq` predicate relaxation.)
+-
+-In operator form (using `E(f, g) = -⟨[f], L[g]⟩` on the core):
+-  `-⟨[f^{p−1}], L[f]⟩ ≥ (4(p − 1) / p²) · ⟨-[L(f^{p/2})], [f^{p/2}]⟩`.
+-
+-This is the key intermediate-step lemma in Gross's proof that LSI
+-implies hypercontractivity. Combined with LSI applied to `f^{p/2}`
+-and the chain rule for `(d/dt) ‖P_t f‖_p^p`, it closes the
+-differential inequality `(d/dt) ‖P_t f‖_{q(t)} ≤ 0` along the path
+-`q(t) = 1 + (p − 1) · e^{2ρt}`. -/
+-axiom stroock_varopoulos {X : Type*} [MeasurableSpace X]
+-    (D : DirichletMarkovSemigroup X) (p : ℝ) (hp : 1 < p)
+-    (f : X → ℝ) (hf : D.IsCore f) (hf_nonneg : ∀ x, 0 ≤ f x)
+-    (hf_p_half : D.IsCore (fun x => f x ^ (p / 2)))
+-    (hf_p_one : D.IsCore (fun x => f x ^ (p - 1))) :
+-    (4 * (p - 1) / p ^ 2) *
+-      D.energy (fun x => f x ^ (p / 2)) (fun x => f x ^ (p / 2)) ≤
+-    D.energy f (fun x => f x ^ (p - 1))
+-
+-/-! ## Gross's theorem (postulated as textbook axioms) -/
+-
+-/-- **Postulated (Gross 1975, Theorem 1).** LSI implies
+-hypercontractivity for the bundled `L²(μ)` semigroup.
+-
+-The proof uses the semigroup interpolation method: differentiate
+-`‖P_t f‖_{L^{q(t)}}` along `q(t) = 1 + (p − 1) e^{2ρt}` and show the
+-derivative is `≤ 0` via LSI applied to `|f|^{q/2}`. The Dirichlet form
+-enters through the compatibility field `energy_eq_deriv`, with
+-Stroock–Varopoulos supplying the key energy comparison.
+-
+-**Note on `hρ`**: the explicit `0 < ρ` hypothesis is required to
+-firewall against a soundness trap. `SatisfiesLogSobolev D ρ` is
+-**trivially true** for `ρ ≤ 0` (the LSI inequality `ρ · Ent(f²) ≤ 2 · E(f, f)`
+-has LHS `≤ 0` and RHS `≥ 0`), while `IsHypercontractive` bakes in
+-`0 < ρ`. Without `hρ` the axiom would prove `0 < ρ` from a vacuous
+-hypothesis (i.e. `0 < ρ` for any `ρ`), yielding `False`. Flagged by
+-gemini-3.1-pro-preview 2026-05-13 re-vet of the Lp-carrier refactor. -/
+-axiom gross_lsi_implies_hypercontractive {X : Type*} [MeasurableSpace X]
+-    (D : DirichletMarkovSemigroup X) (ρ : ℝ) (hρ : 0 < ρ)
+-    (h_lsi : D.SatisfiesLogSobolev ρ) :
+-    D.toMarkovSemigroup.IsHypercontractive ρ
+-
+-/-- **Postulated (Gross 1975, Theorem 2).** Hypercontractivity of the
+-bundled `L²(μ)` semigroup implies LSI for the bundled Dirichlet form.
+-
+-The proof differentiates the hypercontractive bound at `t = 0` with
+-`p = 2`, `q = 2 + ε`, and takes `ε → 0`. -/
+-axiom gross_hypercontractive_implies_lsi {X : Type*} [MeasurableSpace X]
+-    (D : DirichletMarkovSemigroup X) (ρ : ℝ)
+-    (h_hyp : D.toMarkovSemigroup.IsHypercontractive ρ) :
+-    D.SatisfiesLogSobolev ρ
++/-!
++The compatibility port omits the three unused legacy analytic axioms and their
++three wrapper theorems. The original file is preserved under originals/ and the
++exact removal is recorded in LEGACY_AXIOM_REMOVAL.patch. The concrete Gaussian
++endpoint was independently audited before and after this removal; it uses the
++proved Gross theorem with its Gaussian hypotheses discharged.
++-/
+ 
+ /-! ## H0 — hypothesis-parameterised Gross (Route A scaffold)
+ 
+@@ -767,32 +707,6 @@
+ 
+ variable {X : Type*} [MeasurableSpace X]
+ 
+-/-- Gross's theorem (forward direction): LSI ⇒ hypercontractivity.
+-
+-The `hρ : 0 < ρ` hypothesis firewalls the `ρ ≤ 0` soundness trap
+-documented at `gross_lsi_implies_hypercontractive`. -/
+-theorem hypercontractive_of_logSobolev (D : DirichletMarkovSemigroup X)
+-    (ρ : ℝ) (hρ : 0 < ρ) (h_lsi : D.SatisfiesLogSobolev ρ) :
+-    D.IsHypercontractive ρ := by
+-  show D.toMarkovSemigroup.IsHypercontractive ρ
+-  exact gross_lsi_implies_hypercontractive D ρ hρ h_lsi
+-
+-/-- Gross's theorem (reverse direction): hypercontractivity ⇒ LSI. -/
+-theorem logSobolev_of_hypercontractive (D : DirichletMarkovSemigroup X)
+-    (ρ : ℝ) (h_hyp : D.IsHypercontractive ρ) :
+-    D.SatisfiesLogSobolev ρ := by
+-  change D.toMarkovSemigroup.IsHypercontractive ρ at h_hyp
+-  exact gross_hypercontractive_implies_lsi D ρ h_hyp
+-
+-/-- The Gross equivalence: LSI ↔ hypercontractivity for a
+-`DirichletMarkovSemigroup`. The forward direction requires `0 < ρ`
+-(see `hypercontractive_of_logSobolev`); the reverse derives `ρ > 0`
+-from the `IsHypercontractive` predicate's built-in `0 < ρ` field. -/
+-theorem gross_equivalence (D : DirichletMarkovSemigroup X) (ρ : ℝ) (hρ : 0 < ρ) :
+-    D.SatisfiesLogSobolev ρ ↔ D.IsHypercontractive ρ :=
+-  ⟨D.hypercontractive_of_logSobolev ρ hρ,
+-   D.logSobolev_of_hypercontractive ρ⟩
+-
+ /-! ## Direct consequence: the semigroup improves integrability -/
+ 
+ /-- Direct application of hypercontractivity to an `L²(μ)` function

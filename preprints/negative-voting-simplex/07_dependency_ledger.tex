@@ -68,30 +68,41 @@ this manuscript neither reproves it nor claims a new result for $m=3$.
 
 \subsection{What the Lean development establishes}
 The accompanying Lean project is a partial formalization. Its individual
-theorems and explicit hypotheses, pinned toolchain, and coverage ledger
-determine its precise scope. Its concrete Gaussian components prove
-hyperplane nullness for product Gaussians, almost-everywhere unique winning
-linear scores, exponential and first-moment integrability, and integrability
-of finite linear scores and their maximum. These facts support fractional
-routing rigidity from a zero expected maximum gap. Finite centroid-pairing
-and covariance edge-strain identities are also formalized. The scalar
-analysis includes shifted-logarithm decay, the exact endpoint power
-comparison, and a single threshold uniform over the voting interval for
-fixed supplied constants. A conditional local/exterior assembly consumes
-the analytic estimates explicitly. Gaussian transport, hypercontractivity,
-facet regularity, and the source papers' transfer theorems are not supplied
-by these component proofs. A checked implication from analytic estimates
-does not prove those estimates.
+theorems, explicit hypotheses, pinned dependencies, and coverage ledger
+determine its precise scope. It proves the actual Gaussian noise integral's
+infinite signed Hermite expansion for almost-everywhere measurable simplex
+assignments. The first three levels are identified with label masses,
+centroids, and the full quadratic moment tensor. The regular reference is
+constructed in the exact dimensions used by the theorem; its winning
+probabilities, full centroid vectors, and centroid energy are also checked.
 
-In particular, this manuscript does not claim a Lean proof of
-Theorem~\ref{thm:main}, its analytic interfaces, the uniformity of their
-constants in dimension and noise, or the UGC reduction. Scalar eventual
-threshold statements concern fixed supplied constants; they do not
-establish the Gaussian estimates or the uniformity of their constants.
-The formal development is a foundation for further work, with its
-unformalized obligations stated explicitly. Source checksums certify file
-identity. Compiling this PDF certifies typesetting. Neither operation
-certifies the analysis.
+The actual-to-affine comparison retains the positive centroid square and
+the complete odd residual. The affine-routing identity derives offset
+cancellation from equal masses. Local one-dimensional Gaussian cap lemmas
+prove the short-fibre integral, its explicit cubic error, and the
+large-perturbation contribution under their stated normal regularity and
+moment hypotheses. The exact Gaussian kernel row norm and actual $L^{32}$ normal
+trace bound are proved for arbitrary square-integrable inputs; normal
+derivative and supremum estimates remain separate obligations. Actual
+Gaussian slab and third-label tangent-strip bounds are also checked.
+Finite covariance algebra, weighted gauge selection,
+scalar asymptotics, and conditional assembly are also supplied.
+
+The development imports attributed, checked proofs of the Gaussian Hermite
+basis and noise action, Gaussian hypercontractivity, and Mulgund's
+common-threshold comparison. These are prior mathematical results, not
+contributions of this manuscript. The vendored sources, exact revisions,
+licenses, compatibility changes, and independent statement and axiom audits
+are included in the source package. Every first-party theorem is audited by
+its compiled source module, including generated helpers; only the standard
+Lean axioms are permitted.
+
+The full statement of Theorem~\ref{thm:main} is recorded as an unproved
+proposition. The Gaussian covariance/offset geometry, weighted facet-energy
+bounds, complete facet/cap assembly, dimension-and-noise-uniform localization,
+and discrete transfer still require formal proofs. A conditional assembly
+or a fixed-constant eventual threshold does not establish these inputs.
+Neither source checksums nor PDF compilation certify the analytic argument.
 
 \subsection{Research status and assistance}
 The author used AI assistance to develop and organize the arguments,

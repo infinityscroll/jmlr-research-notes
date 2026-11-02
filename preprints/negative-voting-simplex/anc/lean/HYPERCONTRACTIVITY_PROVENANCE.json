@@ -1,0 +1,104 @@
+{
+  "repository": "https://github.com/mrdouglasny/markov-semigroups",
+  "commit": "0b5dd80ad918f7e8ab23bb2fac5eb9c7d373a795",
+  "license": "Apache-2.0",
+  "upstream_lean": "leanprover/lean4:v4.30.0",
+  "upstream_mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "pilot_lean": "leanprover/lean4:v4.35.0-rc2",
+  "pilot_mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "files": [
+    {
+      "path": "MarkovSemigroups/Abstract/DirichletForm.lean",
+      "original_sha256": "c085dfbdc6ff56aba00907f699f1d997c797909a4660eb0abef13cbf1fc9cc46",
+      "original_lines": 1021
+    },
+    {
+      "path": "MarkovSemigroups/Abstract/GrossODE.lean",
+      "original_sha256": "0dea71288d60d0fb5147aed89a37c03b4dcc6a90f22c15d5e2d027de2f8521f6",
+      "original_lines": 2435
+    },
+    {
+      "path": "MarkovSemigroups/Abstract/Hypercontractivity.lean",
+      "original_sha256": "8b701c87b800e96f83b5b731861634b1b38730335824584fc0381f3d938397c0",
+      "original_lines": 817
+    },
+    {
+      "path": "MarkovSemigroups/Diffusion/CarreDuChamp.lean",
+      "original_sha256": "734a2684be88a7d2c7d5ec5d2dc31d1f9f0f925f2ade1f42cdb117de7769bf54",
+      "original_lines": 317
+    },
+    {
+      "path": "MarkovSemigroups/Diffusion/StroockVaropoulos.lean",
+      "original_sha256": "b75e7ebe154e68070af78284e75975ba8b27593b6fc1bab6144762ce893b7142",
+      "original_lines": 105
+    },
+    {
+      "path": "MarkovSemigroups/General/OUEntropyDecomposition.lean",
+      "original_sha256": "ee320cc431211d415d260b48fb751621cad91c21c507231e1b6049dd42c4d732",
+      "original_lines": 1959
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean",
+      "original_sha256": "44d0b521e44aab4461939362ec4555efc314cff022b48566c38d40645ae8ab2a",
+      "original_lines": 1398
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean",
+      "original_sha256": "66a0a38713515f1d1f65eaf54d5464e88048c908fe9cbe249bfa633a4055f9d7",
+      "original_lines": 1069
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean",
+      "original_sha256": "6d59b3c5a02c2e6e74ffb6431edf55b397d75548bd4e9b8c0b31fc61272d6753",
+      "original_lines": 5401
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean",
+      "original_sha256": "2e011c66e19cf4b702fcfec41905fe8d89f878f6bf47cfffc13fca694d436527",
+      "original_lines": 866
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean",
+      "original_sha256": "2b538000b04edd9e2c8df0b719da8b321e7a2c07347828853e7f3445b4687fa6",
+      "original_lines": 1380
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean",
+      "original_sha256": "ceec1aecefd4ae5132685a0f7d0f48e07dd0dafe7db6e020d6e315884e5b1998",
+      "original_lines": 93
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean",
+      "original_sha256": "1eabd86deead32276050c0c1610713246ac0cbe8d85cfe12939442bf33dbb12b",
+      "original_lines": 1189
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean",
+      "original_sha256": "67d90091804d0172103964c202bda3eff13c03919dade185be4c2f79f4cf2789",
+      "original_lines": 493
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean",
+      "original_sha256": "1116a32b9c732971114f6ab91f1104fdeeae8d91c94ea21c5a0dc5fb42c82060",
+      "original_lines": 912
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean",
+      "original_sha256": "a7092a7196652ffd2a1e65d1923fadaf0a3758844481579f6f515cf1a4614189",
+      "original_lines": 492
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean",
+      "original_sha256": "352ee23719410aecc2620d2bb92e1df22026cf1f57fdeee0f5d3a6e934a10b26",
+      "original_lines": 1377
+    }
+  ],
+  "target": "GaussianFin.stdGaussianFin_isHypercontractive",
+  "legacy_axioms_to_reject": [
+    "stroock_varopoulos",
+    "gross_lsi_implies_hypercontractive",
+    "gross_hypercontractive_implies_lsi"
+  ],
+  "pilot_lean_commit": "11acb17ec6b07a8f9e9173e6845197929540936b",
+  "port_note": "Lean 4.35 compatibility port. Existing theorem/lemma/def headers unchanged except GrossODE.integral_abs_eq_eLpNorm_one_toReal now explicitly assumes AEStronglyMeasurable f, supplied at its existing caller. Three unused legacy axioms and three wrappers removed only after endpoint transitive axiom audit. Verbatim upstream originals and both patches are retained."
+}

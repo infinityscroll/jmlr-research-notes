@@ -23,7 +23,7 @@ jobs:
        github.event.workflow_run.head_repository.full_name == github.repository &&
        github.event.workflow_run.head_sha == github.sha)
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     permissions:
       contents: read
     steps:
@@ -50,7 +50,11 @@ jobs:
       - name: Audit Lean theorem axioms for manual publication
         if: github.event_name == 'workflow_dispatch'
         working-directory: formalization/negative-voting
-        run: python3 verify.py
+        run: |
+          python3 verify_dependency.py
+          python3 verify_mulgund.py
+          python3 verify_hypercontractivity.py
+          python3 verify.py
       - name: Install scientific dependencies for manual verification
         if: github.event_name == 'workflow_dispatch'
         run: python -m pip install -r requirements.txt

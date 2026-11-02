@@ -1,0 +1,150 @@
+--- upstream/WeakSimplexConjectureLean/Gaussian/DensityRatio.lean
++++ ported/WeakSimplexConjectureLean/Gaussian/DensityRatio.lean
+@@ -89,6 +89,7 @@
+   rw [Real.map_matrix_volume_pi_eq_smul_volume_pi hM, Measure.map_smul,
+     (PiLp.volume_preserving_toLp ι).map_eq]
+   rw [abs_inv]
++  all_goals fun_prop
+ 
+ private def sqrtInvDensity (R : Matrix ι ι ℝ) (x : EuclideanSpace ℝ ι) : ℝ≥0∞ :=
+   stdDensity ((Matrix.toEuclideanCLM (𝕜 := ℝ) (CFC.sqrt R)⁻¹) x)
+--- upstream/WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean
++++ ported/WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean
+@@ -66,7 +66,7 @@
+     induction S using Finset.induction_on with
+     | empty => exact measurable_const
+     | @insert i S hi ih =>
+-        simpa only [Finset.prod_insert hi, Function.comp_apply] using
++        simpa only [Finset.prod_insert hi, Function.comp_def, Pi.mul_def] using
+           ((measurable_centeredTiltedHalfLine (w.s i)).comp (by
+             simpa only [EuclideanSpace.coe_proj] using
+               (EuclideanSpace.proj (𝕜 := ℝ) i).measurable)).mul ih
+@@ -81,7 +81,7 @@
+   · exact (measurable_adaptiveProduct w).aestronglyMeasurable
+   · filter_upwards with x
+     rw [Real.norm_eq_abs, abs_of_nonneg (adaptiveProduct_nonneg w x)]
+-    exact Finset.prod_le_prod
++    exact Finset.prod_le_prod₀
+       (fun i _ ↦ centeredTiltedHalfLine_nonneg (w.s i) (x i))
+       (fun i _ ↦ centeredTiltedHalfLine_le (w.s i) (x i))
+ 
+--- upstream/WeakSimplexConjectureLean/Orthant/Singular.lean
++++ ported/WeakSimplexConjectureLean/Orthant/Singular.lean
+@@ -66,7 +66,7 @@
+     {m : ℕ} (R : Matrix (Fin m) (Fin m) ℝ) (hR : IsWeakSimplexCov R)
+     (i : Fin m) (c : ℝ) :
+     multivariateGaussian (0 : Coord m) R {x : Coord m | x i = c} = 0 := by
+-  letI : NoAtoms (gaussianReal 0 1) := noAtoms_gaussianReal one_ne_zero
++  letI : NullSingletonClass (gaussianReal 0 1) := nullSingletonClass_gaussianReal one_ne_zero
+   have hmap := (measurePreserving_eval_multivariateGaussian
+     (μ := (0 : Coord m)) hR.1.1 (i := i)).map_eq
+   have happly := congrArg (fun μ : Measure ℝ ↦ μ {c}) hmap
+--- upstream/WeakSimplexConjectureLean/Product/DyadicCLT.lean
++++ ported/WeakSimplexConjectureLean/Product/DyadicCLT.lean
+@@ -182,9 +182,9 @@
+     (hh_bounded : Bornology.IsBounded (Set.range h))
+     (hh_mass : ∫ x, h x ∂gaussianReal 0 1 = 1) :
+     Var[id; gaussianDensityMeasure h] ≠ 0 := by
+-  letI : NoAtoms (gaussianReal 0 1) := noAtoms_gaussianReal one_ne_zero
++  letI : NullSingletonClass (gaussianReal 0 1) := nullSingletonClass_gaussianReal one_ne_zero
+   let ν := gaussianDensityMeasure h
+-  letI : NoAtoms ν := by
++  letI : NullSingletonClass ν := by
+     dsimp only [ν, gaussianDensityMeasure]
+     infer_instance
+   have hν : IsProbabilityMeasure ν := by
+@@ -464,11 +464,11 @@
+       (fun r ↦ ⟨Measure.map id
+           ((gaussianReal 0 1).withDensity
+             (fun x ↦ ENNReal.ofReal (iteratedNormalizedSelfConvolution h r x))),
+-          Measure.isProbabilityMeasure_map measurable_id.aemeasurable⟩ :
++          inferInstance⟩ :
+         ℕ → ProbabilityMeasure ℝ) =
+       (fun r ↦ ⟨P.map (fun omega ↦ (Real.sqrt ((2 ^ r : ℕ) : ℝ))⁻¹ *
+           ∑ k ∈ Finset.range (2 ^ r), X k omega),
+-          Measure.isProbabilityMeasure_map (hdyadic'.forall_aemeasurable r)⟩) := by
++          inferInstance⟩) := by
+     funext r
+     apply Subtype.ext
+     change Measure.map id _ = P.map _
+--- upstream/WeakSimplexConjectureLean/Product/EvenLayerCake.lean
++++ ported/WeakSimplexConjectureLean/Product/EvenLayerCake.lean
+@@ -15,7 +15,7 @@
+     (hS_symm : ∀ x, -x ∈ S ↔ x ∈ S) :
+     S = Set.univ ∨
+       ∃ r : ℝ, 0 ≤ r ∧ S =ᵐ[gaussianReal 0 1] Set.Icc (-r) r := by
+-  letI : NoAtoms (gaussianReal 0 1) := noAtoms_gaussianReal one_ne_zero
++  letI : NullSingletonClass (gaussianReal 0 1) := nullSingletonClass_gaussianReal one_ne_zero
+   rcases S.eq_empty_or_nonempty with hS_empty | hS_nonempty
+   · right
+     refine ⟨0, le_rfl, ?_⟩
+@@ -57,9 +57,8 @@
+         exact houter hxS
+       · intro hxclosed
+         apply hinner
+-        change Set.Ioo (-sSup S) (sSup S) x
+-        rw [hx]
+-        exact hxclosed
++        change x ∈ Set.Ioo (-sSup S) (sSup S)
++        exact hx.mpr hxclosed
+     · left
+       apply Set.eq_univ_of_forall
+       intro x
+--- upstream/WeakSimplexConjectureLean/Product/PositiveLowerBound.lean
++++ ported/WeakSimplexConjectureLean/Product/PositiveLowerBound.lean
+@@ -25,7 +25,7 @@
+ private theorem gaussianReal_frontier_Icc_eq_zero
+     {v : ℝ≥0} (hv : v ≠ 0) {L : ℝ} (hL : 0 ≤ L) :
+     gaussianReal 0 v (frontier (Icc (-L) L)) = 0 := by
+-  letI : NoAtoms (gaussianReal 0 v) := noAtoms_gaussianReal (μ := 0) hv
++  letI : NullSingletonClass (gaussianReal 0 v) := nullSingletonClass_gaussianReal (μ := 0) hv
+   rw [frontier_Icc (neg_le_self hL)]
+   exact ((finite_singleton L).insert (-L)).measure_zero _
+ 
+--- upstream/WeakSimplexConjectureLean/Product/SymmetricRectangle.lean
++++ ported/WeakSimplexConjectureLean/Product/SymmetricRectangle.lean
+@@ -851,9 +851,9 @@
+   let p : (Fin n → ℝ) → ℝ := fun y ↦ y j
+   let η := Measure.map p ν
+   letI : IsProbabilityMeasure ν :=
+-    Measure.isProbabilityMeasure_map (regressionResidualCLM R).measurable.aemeasurable
++    inferInstance
+   letI : IsProbabilityMeasure η :=
+-    Measure.isProbabilityMeasure_map (measurable_pi_apply j).aemeasurable
++    inferInstance
+   have harg :
+       Tendsto (fun t : ℝ ↦ rad j - t * (e * regressionSlope R j)) atTop atBot := by
+     rw [tendsto_atBot]
+--- upstream/WeakSimplexConjectureLean/Tilt/Potential.lean
++++ ported/WeakSimplexConjectureLean/Tilt/Potential.lean
+@@ -37,7 +37,7 @@
+     apply continuous_pi
+     intro i
+     exact continuous_H.comp (PiLp.continuous_apply 2 (fun _ : Fin m ↦ ℝ) i)
+-  exact hmap.sub (continuous_const.smul continuous_const)
++  exact hmap.sub continuous_const
+ 
+ lemma continuous_adaptivePotential {m : ℕ}
+     (R : Matrix (Fin m) (Fin m) ℝ) (c : ℝ) :
+--- upstream/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean
++++ ported/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean
+@@ -1,6 +1,10 @@
+ import Mathlib.MeasureTheory.Constructions.Pi
+ import Mathlib.MeasureTheory.Measure.WithDensity
+ import Mathlib.MeasureTheory.Integral.Lebesgue.Map
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
++
+ 
+ /-!
+ Vendored from StatLean commit `31c61ed887bf3be0def314a3b3e5375d203b5ba1`, original path
+@@ -78,7 +82,7 @@
+             rw [← mp.symm.lintegral_comp h_prod_meas]
+             simp_rw [MeasurableEquiv.piFinSuccAbove_symm_apply, Fin.insertNthEquiv,
+               Fin.prod_univ_succ, Fin.insertNth_zero, Equiv.coe_fn_mk, Fin.cons_succ,
+-              Fin.zero_succAbove, cast_eq, Fin.cons_zero]
++              Fin.zero_succAbove, Fin.cons_zero]
+             rfl
+         _ = (∫⁻ x, f 0 x ∂μ 0)
+               * ∫⁻ y : (i : Fin n) → E i.succ,

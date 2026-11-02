@@ -1,0 +1,296 @@
+{
+  "status": "passed",
+  "upstream_repository": "https://github.com/abhmul/weak-simplex-conjecture-lean",
+  "upstream_commit": "dcf1a45bc22ec54775314927b2a95fbe7c630edf",
+  "observed_lean": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "observed_mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "audit": {
+    "WeakSimplex.lowerOrthant_ge_iid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "NegativeVotingDependencies.equalThreshold_gaussian_comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "sources": [
+    {
+      "path": "WeakSimplexConjectureLean/Core/Correlation.lean",
+      "sha256": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007",
+      "upstream_sha256": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Correlation.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Core/Euclidean.lean",
+      "sha256": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c",
+      "upstream_sha256": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Euclidean.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Core/Finite.lean",
+      "sha256": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a",
+      "upstream_sha256": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Finite.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Core/Matrix.lean",
+      "sha256": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e",
+      "upstream_sha256": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Core/Matrix.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean",
+      "sha256": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff",
+      "upstream_sha256": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Gaussian/DensityRatio.lean",
+      "sha256": "7368c792b8016fba4b1932715e33a65725edce3550f74f2ee4ccb2689bbc8e02",
+      "upstream_sha256": "c0a1f5e66f030ec5fcff5388449b5a77952cb6ee207d7616a6ac33000880faa4",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/DensityRatio.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Gaussian/Regularization.lean",
+      "sha256": "f85b3f3c2ef30c9f379d670b44b4687cb8abf9dfc2b27b1f58ebeab5a79c2d2b",
+      "upstream_sha256": "f85b3f3c2ef30c9f379d670b44b4687cb8abf9dfc2b27b1f58ebeab5a79c2d2b",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/Regularization.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Gaussian/Shift.lean",
+      "sha256": "9b6ff54ab5d1325f7a69736308b516b44f32db71c940e44132b9d3775441d650",
+      "upstream_sha256": "9b6ff54ab5d1325f7a69736308b516b44f32db71c940e44132b9d3775441d650",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Gaussian/Shift.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/LogConcavity/Basic.lean",
+      "sha256": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155",
+      "upstream_sha256": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Basic.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/LogConcavity/Indicators.lean",
+      "sha256": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96",
+      "upstream_sha256": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Indicators.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/LogConcavity/Prekopa.lean",
+      "sha256": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896",
+      "upstream_sha256": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/LogConcavity/Prekopa.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Normal/Mills.lean",
+      "sha256": "92b5f4e74b4bc1f94ee816097dc8ba149d335cf1c7f50bd7c7020ca3ceaf3e96",
+      "upstream_sha256": "92b5f4e74b4bc1f94ee816097dc8ba149d335cf1c7f50bd7c7020ca3ceaf3e96",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/Mills.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Normal/PDFCDF.lean",
+      "sha256": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec",
+      "upstream_sha256": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/PDFCDF.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Normal/TiltFunctions.lean",
+      "sha256": "9284ca8388a39c58ef41eb20f08008f1611ef3d99e894b2bfecba6bef70897d6",
+      "upstream_sha256": "9284ca8388a39c58ef41eb20f08008f1611ef3d99e894b2bfecba6bef70897d6",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/TiltFunctions.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Normal/TruncatedMoments.lean",
+      "sha256": "f768dfa4a020b9c2232163bc80ee13773313a5787d39021fe239ec741eb59456",
+      "upstream_sha256": "f768dfa4a020b9c2232163bc80ee13773313a5787d39021fe239ec741eb59456",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Normal/TruncatedMoments.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean",
+      "sha256": "6bc0bffe7831534b6589da78d2f7dbd9f03bfd14ca515fe22673ec397217e2ac",
+      "upstream_sha256": "bdce79431cec6d4e0ac0da7201ff74adb0a5950f71df1b1090f57ed1d119d67b",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Orthant/PositiveDefinite.lean",
+      "sha256": "18221504713084f7d3d291b695a26f2648904e1b7552e383631fb1e999303666",
+      "upstream_sha256": "18221504713084f7d3d291b695a26f2648904e1b7552e383631fb1e999303666",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/PositiveDefinite.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Orthant/PositiveDefiniteConditional.lean",
+      "sha256": "fd6c29541016c1cce98b20afbecc512114b2e4806766ba1644ad64cecc8b0e9a",
+      "upstream_sha256": "fd6c29541016c1cce98b20afbecc512114b2e4806766ba1644ad64cecc8b0e9a",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/PositiveDefiniteConditional.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Orthant/Singular.lean",
+      "sha256": "66bde5a06a0d37e376c2fd55452d7fd1372b29da9304a1c54dea6f473ac3c6f8",
+      "upstream_sha256": "29ad9d4983500fbfba1d3b0c43651fd9d334cd51c5071f9a4da3f99bad5f76ac",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Orthant/Singular.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/CenteredProduct.lean",
+      "sha256": "15112132ec00eab7a4d97c4950a2efe1f5f4431f27ad9c6b608d40d19784dc2f",
+      "upstream_sha256": "15112132ec00eab7a4d97c4950a2efe1f5f4431f27ad9c6b608d40d19784dc2f",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/CenteredProduct.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/CenteredProperty.lean",
+      "sha256": "a152f2a98fe80b1f06b83d06fd32cf24025dde38750785b0b690cf143edd6eae",
+      "upstream_sha256": "a152f2a98fe80b1f06b83d06fd32cf24025dde38750785b0b690cf143edd6eae",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/CenteredProperty.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/DyadicCLT.lean",
+      "sha256": "3c887168cde21698971e9e4f78d10767f63682e37f3b4a1f241152b2f6dc9f1e",
+      "upstream_sha256": "efe8fa9e8ce7b1a2fabdf82f8e39cf3fa54f1b7f30b506248275af0a572de314",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/DyadicCLT.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/EvenLayerCake.lean",
+      "sha256": "149b5838856e14de59ede11d55bfe99cc5284f327535c5cb100766faaa493b61",
+      "upstream_sha256": "ab78a81689d5678767667ce9b8e937a880ba718a3a023ebc6614c738696c48f5",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/EvenLayerCake.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/NormalizedSelfConvolution.lean",
+      "sha256": "c8016f63db59ec73e06dafa5aa79fbebf3d1bb4de2bd618acdce73da3234090f",
+      "upstream_sha256": "c8016f63db59ec73e06dafa5aa79fbebf3d1bb4de2bd618acdce73da3234090f",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/NormalizedSelfConvolution.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/PositiveLowerBound.lean",
+      "sha256": "64b911990215a05e452b65b74c99c643122fbf6aa4897c2c1bdfab4eb6421b34",
+      "upstream_sha256": "dc88f66d01221786f8cd1761bd8d39ebb0791ab83db31de93604e817d0f3dfd1",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/PositiveLowerBound.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/SumDifference.lean",
+      "sha256": "70f5ca8a72360b2f5154ac7b04a4b9d4b63edb3d48c528982e1c0cb4b04bf76e",
+      "upstream_sha256": "70f5ca8a72360b2f5154ac7b04a4b9d4b63edb3d48c528982e1c0cb4b04bf76e",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/SumDifference.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Product/SymmetricRectangle.lean",
+      "sha256": "879e7cbfc86ffb1496620dbad438d28032ba8fd2aaa6f3dd0b180e6b871b7d82",
+      "upstream_sha256": "3c335ea0b2b81658d1cf23384e3e7117d6774ff2fe549c02714d15dc8b37bc78",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Product/SymmetricRectangle.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Tilt/AdaptiveWitnesses.lean",
+      "sha256": "a1f30ac0013820cb52b3d451b18b4f226ecd74ce54f3e0426d318fa9d0ce79d2",
+      "upstream_sha256": "a1f30ac0013820cb52b3d451b18b4f226ecd74ce54f3e0426d318fa9d0ce79d2",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/AdaptiveWitnesses.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Tilt/CompactMaximizer.lean",
+      "sha256": "bf547a3547d453dc30d3dfedec881bd60b37e419dcd9f0dc91da32f45141f161",
+      "upstream_sha256": "bf547a3547d453dc30d3dfedec881bd60b37e419dcd9f0dc91da32f45141f161",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/CompactMaximizer.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Tilt/EventShift.lean",
+      "sha256": "2c7b2e3ac4c1443fad4871a371cfca1f9d2537f2b7e1072063c57f1f6922188e",
+      "upstream_sha256": "2c7b2e3ac4c1443fad4871a371cfca1f9d2537f2b7e1072063c57f1f6922188e",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/EventShift.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Tilt/Potential.lean",
+      "sha256": "c657ac02d2014bf2db61acb785985a768e3a9c4d12c82fb1bddac9df607d6902",
+      "upstream_sha256": "8fc447f5e7d617a46d0bc7d88e41d6db453167966a5e06ea5e168ab84a34bd89",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/Potential.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Tilt/RankOneInverse.lean",
+      "sha256": "c483e66ed373337a32ef739a48d1ea8fa60a086fbff98be91389617a1f6f8bda",
+      "upstream_sha256": "c483e66ed373337a32ef739a48d1ea8fa60a086fbff98be91389617a1f6f8bda",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/RankOneInverse.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Tilt/Stationarity.lean",
+      "sha256": "35096c95e697716a63f65fa79f9296701b1a2e04219a1cba4daa6a65c3165ecf",
+      "upstream_sha256": "35096c95e697716a63f65fa79f9296701b1a2e04219a1cba4daa6a65c3165ecf",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/Stationarity.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Tilt/TiltedHalfLine.lean",
+      "sha256": "26b5565edbe6a32ff883af664062257c5c36fe55171a5017f60e57a7e7bbf54d",
+      "upstream_sha256": "26b5565edbe6a32ff883af664062257c5c36fe55171a5017f60e57a7e7bbf54d",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Tilt/TiltedHalfLine.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/GaussianMGFShift.lean",
+      "sha256": "92e52fc007d5bb510709e00f8424c4b6de7eeb8c11bb4972c6cb36bd0cc2153c",
+      "upstream_sha256": "92e52fc007d5bb510709e00f8424c4b6de7eeb8c11bb4972c6cb36bd0cc2153c",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/GaussianMGFShift.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean",
+      "sha256": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890",
+      "upstream_sha256": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean",
+      "sha256": "62fae25bff4f147a7565793479bc9146d6094ca7949c0fd18bfae627e560e985",
+      "upstream_sha256": "348d915e5d3b758ed057feb8a3cc13066e99d09b9287f95f8c8f9cb0cff07b7e",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean",
+      "modified": true
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean",
+      "sha256": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04",
+      "upstream_sha256": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean",
+      "modified": false
+    },
+    {
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean",
+      "sha256": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4",
+      "upstream_sha256": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4",
+      "original_path": "third_party/mulgund/originals/WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean",
+      "modified": false
+    }
+  ],
+  "bridge_sha256": "626c1cba6ee55bd43e44fe13c9fd19242db9c7ebd7d64251d912524568c3740f",
+  "scope": "External equal-threshold Gaussian comparison, not the negative-voting theorem"
+}

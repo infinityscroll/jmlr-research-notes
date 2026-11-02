@@ -1,0 +1,113 @@
+GAUSSIAN FIXED-NORMAL TRACE: CHECKED COVERAGE
+
+Source: GaussianNormalTrace.lean
+Namespace: NegativeVotingNormalTrace
+Lean: leanprover/lean4:v4.35.0-rc2
+mathlib: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+Source SHA256: bfe30effbb36628c42aac724d7d5abd32a58225b7055ccbf7df0fcaa7b82bc32
+
+ACTUAL MATHEMATICAL ENDPOINT
+
+Let gamma_n be the finite product of n standard real Gaussians. For an arbitrary
+completed-Gaussian-measurable f in L2(gamma_n x gamma_1), let
+
+  U_a(x) = integral f(tau*x + sqrt(1-tau^2)*z,
+                      tau*a + sqrt(1-tau^2)*y) d(gamma_n x gamma_1)(z,y).
+
+If 0 < tau and tau^2 <= 1/31, the kernel-checked theorem
+actual_product_normalTrace_l32_bound_sharp proves
+
+  ||U_a||_32 <= sqrt(C(tau,a)) ||f||_2,
+
+  C(tau,a) = 1/[sqrt(1-tau^2)*sqrt(1+tau^2)]
+             * exp(tau^2*a^2/(1+tau^2)).
+
+The coefficient has no dependence on n. No boundedness, continuity, Borel-only
+representative, or a pre-assumed trace estimate is required. The input is exactly
+MemLp f 2 under the actual product measure. The theorem also covers n=0.
+
+PROVED STRUCTURE
+
+1. The actual one-dimensional Gaussian density ratio
+   K(tau,a,y)=density(N(tau*a,1-tau^2))/density(N(0,1)).
+2. Its exact exponential formula, positivity, measurability, normalization,
+   membership in L2, and the change-of-Gaussian-measure identity.
+3. Its exact squared row norm: integral K^2 dgamma_1 = C(tau,a).
+   The proof completes the square and identifies a Gaussian of mean
+   2*tau*a/(1+tau^2) and variance (1-tau^2)/(1+tau^2).
+4. Genuine L2 Cauchy-Schwarz and a Gaussian normal-section bound.
+5. Actual Gaussian tangential averaging, combined with the separately compiled
+   GaussianHypercontractivityBridge, to obtain the L32 bound.
+6. The normal affine change of variables, full changed-measure integrability,
+   almost-everywhere integrability of the product kernel, and Fubini. Thus the
+   final statement concerns the single actual product integral displayed above,
+   rather than an unconnected auxiliary operator.
+
+STATUS AND PRECISE BOUNDARY
+
+The module supplies the fixed-coordinate analytic trace input needed for the
+local comparison argument. It does not prove normal derivative bounds, a normal
+supremum estimate, arbitrary-normal orthogonal transport, a two-normal estimate,
+polyhedral face counting, or the full negative-voting main theorem. These are
+separate mathematical steps; none is encoded as a custom axiom in this module.
+
+VERIFICATION
+
+lake build GaussianNormalTrace: success, exit 0.
+Standalone lake env lean GaussianNormalTrace.lean: success, exit 0, no diagnostics.
+All 45 declared exports (38 theorems and 7 definitions) were separately checked
+with #print axioms. Every transitive axiom belongs to the exact allowlist
+{propext, Classical.choice, Quot.sound}; no sorryAx, custom axiom, or native_decide
+trust is used. Source and dependency build are from the pinned project above.
+
+The parent project's exhaustive compiled-environment audit is the reproducible
+publication audit. The individual local audit consisted of importing this
+module and running #print axioms for each declaration below.
+
+DECLARATION INVENTORY
+
+def NegativeVotingNormalTrace.normalVariance
+def NegativeVotingNormalTrace.normalKernel
+def NegativeVotingNormalTrace.normalRowBound
+theorem NegativeVotingNormalTrace.normalVariance_coe
+theorem NegativeVotingNormalTrace.normalVariance_pos
+theorem NegativeVotingNormalTrace.normalKernel_nonneg
+theorem NegativeVotingNormalTrace.normalKernel_measurable
+theorem NegativeVotingNormalTrace.normalKernel_exp
+theorem NegativeVotingNormalTrace.normalKernel_le_rowBound
+theorem NegativeVotingNormalTrace.normalRowBound_nonneg
+theorem NegativeVotingNormalTrace.normalKernel_memLp
+theorem NegativeVotingNormalTrace.integral_normalKernel
+theorem NegativeVotingNormalTrace.integral_normalKernel_one
+theorem NegativeVotingNormalTrace.integral_normalKernel_sq_le
+theorem NegativeVotingNormalTrace.l2_inner_toLp_eq_integral_mul
+theorem NegativeVotingNormalTrace.integral_mul_sq_le
+theorem NegativeVotingNormalTrace.eLpNorm_two_eq_sqrt_integral_sq
+theorem NegativeVotingNormalTrace.eLpNorm_normalKernel_le
+def NegativeVotingNormalTrace.normalSection
+theorem NegativeVotingNormalTrace.normalSection_memLp_and_integral_sq_le
+theorem NegativeVotingNormalTrace.eLpNorm_normalSection_le
+def NegativeVotingNormalTrace.normalTrace
+theorem NegativeVotingNormalTrace.normalTrace_l32_bound
+theorem NegativeVotingNormalTrace.normalShift_map
+theorem NegativeVotingNormalTrace.integral_normalKernel_eq_shift
+theorem NegativeVotingNormalTrace.normalSection_eq_shift_ae
+theorem NegativeVotingNormalTrace.normalTrace_eq_iterated_ae
+theorem NegativeVotingNormalTrace.actual_normalTrace_l32_bound
+def NegativeVotingNormalTrace.normalSquareVariance
+def NegativeVotingNormalTrace.normalRowSquare
+theorem NegativeVotingNormalTrace.normalSquareVariance_coe
+theorem NegativeVotingNormalTrace.normalSquareVariance_pos
+theorem NegativeVotingNormalTrace.normalRowSquare_nonneg
+theorem NegativeVotingNormalTrace.normalKernel_sq_density
+theorem NegativeVotingNormalTrace.integral_normalKernel_sq_eq
+theorem NegativeVotingNormalTrace.eLpNorm_normalKernel_eq
+theorem NegativeVotingNormalTrace.normalSection_integral_sq_le_sharp
+theorem NegativeVotingNormalTrace.eLpNorm_normalSection_le_sharp
+theorem NegativeVotingNormalTrace.normalTrace_l32_bound_sharp
+theorem NegativeVotingNormalTrace.actual_normalTrace_l32_bound_sharp
+theorem NegativeVotingNormalTrace.normalKernel_withDensity
+theorem NegativeVotingNormalTrace.integrable_shifted_normal_product
+theorem NegativeVotingNormalTrace.actual_normal_kernel_integrable_ae
+theorem NegativeVotingNormalTrace.normalTrace_eq_product_ae
+theorem NegativeVotingNormalTrace.actual_product_normalTrace_l32_bound_sharp

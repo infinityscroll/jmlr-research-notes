@@ -1,0 +1,81 @@
+ACTUAL SIGNED GAUSSIAN SPECTRAL BRIDGE
+2 November 2026
+
+Owned source: GaussianSpectralBridge.lean
+Namespace: NegativeVotingModern
+Toolchain: Lean 4.35.0-rc2
+mathlib: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+
+Both standalone Lean and lake build GaussianSpectralBridge succeeded.
+The source contains 21 proved theorem declarations.
+
+MAIN RESULT
+
+Let kappa be any finite coordinate type and iota any finite label type.
+Let gamma be the finite product of actual standard Gaussian measures.
+For measurable functions f_i with f_i(x)>=0 and sum_i f_i(x)=1, and
+every real rho with |rho|<=1, the file proves
+
+  integral_(x,y) sum_i f_i(x) f_i(rho*x + sqrt(1-rho^2)*y) d(gamma*gamma)
+    = sum_(k>=0) rho^k A_k(f).
+
+A_k(f) is DEFINED as the sum of squares of the actual normalized tensor
+Hermite coefficients of the components f_i over multiindices of total
+degree k. It is not a free parameter or an assumed spectral expansion.
+
+The proof derives:
+  * square-integrability of each simplex coordinate;
+  * the actual Gaussian L2 noise coefficient identity;
+  * the full series identity from the constructed complete Hermite basis;
+  * nonnegative A_k, summability, and sum_k A_k <= 1;
+  * absolute convergence of the signed noise series;
+  * A_0 = sum_i (integral f_i)^2;
+  * A_1 = sum_i sum_j (integral x_j f_i(x))^2.
+
+The degree-one identification proves that degree-one multiindices are
+exactly the coordinate unit multiindices. Empty coordinate spaces are
+allowed; their degree-one fiber is empty.
+
+NEGATIVE CORRELATION
+
+The imported coefficient theorem requires only rho^2+s^2=1 for real rho,s.
+It has no nonnegative-rho restriction. Instantiating s=sqrt(1-rho^2)
+therefore proves the representation throughout [-1,1], with the factor
+rho^k unchanged. For negative rho, every odd degree retains its negative
+sign. Neither absolute rho nor an unsigned spectral sum replaces it.
+
+DEPENDENCIES AND ATTRIBUTION
+
+This file imports SlowEquilibration/GaussianNoiseL2.lean, which imports
+SlowEquilibration/Upstream/OAI/Computability/MinUncut/GaussianHermite.lean.
+These are the unchanged Apache-2.0 sources from
+pmaronow/slowequilibration-palomar at
+a28aaa336343c4caf43791ababd8ed0ee5c7b58e. The GaussianHermite source credits
+openai/math fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb,
+lean/OAI/Computability/MinUncut/Estimates/Basic.lean.
+
+The imported source constructs Gaussian Hermite orthonormality and
+completeness; it does not posit a Hilbert basis with the desired spectral
+properties. The L2 noise extension proves its coefficients using actual
+Gaussian rotation. The new file composes those results with Parseval,
+finite-label summation, grouping by degree, and simplex energy bounds.
+It does not claim authorship of the imported Gaussian foundations.
+
+SCOPE STILL OUTSIDE THIS FILE
+
+The final simplex wrapper assumes everywhere measurable, everywhere
+simplex-valued representatives. Transport to the original almost-
+everywhere-measurable/AE-simplex formulation belongs to the separately
+developed admissible-representative bridge.
+
+This proves the Gaussian spectral representation and its low-degree
+interpretation. It does NOT prove the simplex optimality comparison,
+Gaussian hypercontractivity, mass/covariance localization, affine-facet
+comparison, or the manuscript's quantitative deficit-relative bounds.
+Those remain genuine further obligations. This source is not a complete
+formalization of the manuscript's main theorem.
+
+There are no sorry/admit terms, custom axioms, or native_decide calls.
+All 21 declarations were individually audited with #print axioms. Each
+depends only on [propext, Classical.choice, Quot.sound], including all
+transitive imported dependencies used by that declaration.

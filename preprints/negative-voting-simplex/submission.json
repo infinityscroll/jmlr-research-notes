@@ -18,7 +18,7 @@
   "source_archive": "../../archives/negative-voting-simplex-arxiv-source-2026-11-02.tar.gz",
   "arxiv_license": null,
   "license_status": "Author must select an arXiv submission license; no new license grant is made by this metadata.",
-  "formalization_scope": "Partial Lean formalization; Gaussian analytic estimates and the full main theorem remain unformalized.",
+  "formalization_scope": "Partial Lean formalization: concrete Gaussian analytic components are checked; remaining geometric estimates and the full main theorem remain unformalized.",
   "repository": "https://github.com/infinityscroll/jmlr-research-notes",
   "author_information_source": "Name and ORCID explicitly supplied by the user; no affiliation supplied."
 }

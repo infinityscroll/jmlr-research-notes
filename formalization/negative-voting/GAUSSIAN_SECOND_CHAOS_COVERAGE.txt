@@ -1,0 +1,68 @@
+ACTUAL SECOND GAUSSIAN CHAOS: FORMAL COVERAGE
+
+Source: GaussianSecondChaos.lean
+Namespace: NegativeVotingModern
+Build: lake build GaussianSecondChaos
+Independent declaration audit: GAUSSIAN_SECOND_CHAOS_AXIOMS.txt
+Machine-readable receipt: GAUSSIAN_SECOND_CHAOS_VERIFICATION.json
+
+The measure is the actual finite product of standard normal measures,
+OAI.MinUncut.GaussianHermite.γpi. The coefficients and chaosEnergy are the
+concrete normalized tensor-Hermite coefficients from GaussianSpectralBridge.
+No orthonormal-basis premise or second-chaos representation is assumed.
+
+For a finite label family f, set
+  Q_i(j,k) = integral f_i(x) (x_j x_k - delta_jk) dγ(x).
+The main theorem chaosEnergy_two proves exactly
+  chaosEnergy f 2 = (1/2) sum_i sum_j sum_k Q_i(j,k)^2.
+The coordinate type is finite and linearly ordered; in particular every
+Fin N is allowed. No positivity, equal-mass, dimension lower bound, or
+correlation-sign hypothesis is used in this tensor identity.
+
+The proof explicitly computes H_2(x)=(x^2-1)/sqrt(2), the degree-two
+diagonal basis function, and the distinct-coordinate product H_1(x_j)H_1(x_k).
+Sym2 identifies unordered pairs with multiindices of total degree two.
+Reindexing by sorted pairs proves the exact off-diagonal multiplicity:
+diagonal terms contribute Q_i(j,j)^2/2 and each unordered off-diagonal pair
+contributes Q_i(j,k)^2. Thus the complete ordered tensor sum has factor 1/2.
+
+Integrability is proved, not included as an unexplained moment assumption.
+quadraticCoordinate_memLp derives L2 membership of x_j x_k-delta_jk from
+the concrete Gaussian polynomial integrability theorem.
+quadratic_moment_integrable then derives integrability of its product with
+each L2 coordinate f_i by Holder/Cauchy--Schwarz. The finite coefficient
+identity is also algebraically valid using Lean's total Bochner integral;
+the L2 and AE-simplex results establish genuine integrability for the
+intended applications.
+
+For any real finite test tensor T define the actual Gaussian integral
+  P(f,T) = integral sum_i,j,k T_i(j,k) f_i(x)
+                         (x_j x_k-delta_jk) dγ(x).
+quadratic_test_pairing_eq identifies it with sum_i,j,k T_i(j,k)Q_i(j,k).
+quadratic_test_pairing_bound proves
+  P(f,T)^2 <= 2 chaosEnergy f 2 sum_i,j,k T_i(j,k)^2.
+For a nonzero tensor, quadratic_test_tensor_certificate proves the lower
+certificate
+  P(f,T)^2 / (2 sum_i,j,k T_i(j,k)^2) <= chaosEnergy f 2.
+No symmetry assumption on T is needed. Antisymmetric components simply do
+not improve this certificate.
+
+ae_simplex_quadratic_test_tensor_certificate requires only that each f_i
+is AE-measurable, all f_i are nonnegative almost everywhere, and their sum
+is one almost everywhere. It derives L2 membership from the resulting
+0<=f_i<=1 bound, then applies the actual Gaussian certificate. It does not
+require an everywhere-defined simplex representative or a separate L2
+premise.
+
+Dependency attribution follows GaussianSpectralBridge: the concrete
+Gaussian Hermite basis is imported unchanged from the Apache-2.0-licensed
+pmaronow/slowequilibration-palomar commit
+a28aaa336343c4caf43791ababd8ed0ee5c7b58e, whose upstream file credits
+openai/math commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb.
+The existing project provenance and license files apply.
+
+This addition identifies and tests the actual quadratic coefficient in the
+signed Gaussian noise expansion. It does not prove the local cap estimate,
+affine covariance comparison, dimension-uniform exterior estimate, or the
+final large-alphabet simplex optimality theorem. Those remain separate
+geometric and analytic obligations.

@@ -1,0 +1,22 @@
+$ lake env lean /tmp/negative_voting_second_chaos_axiom_audit.lean
+'NegativeVotingModern.quadraticCoordinate_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.quadraticMoment_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.quadraticCoordinate_memLp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.quadratic_moment_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.degreeTwoEquiv_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.normalized_hermite_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.psi_single_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.psi_two_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.coefficient_degreeTwo_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.coefficient_degreeTwo_pair_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.symmetric_upper_triangle_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.chaosEnergy_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.quadratic_test_pairing_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.quadratic_moment_tensor_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.quadratic_test_pairing_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.quadratic_test_tensor_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingModern.ae_simplex_quadratic_test_tensor_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+exit_code=0

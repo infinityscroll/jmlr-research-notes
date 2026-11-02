@@ -1,0 +1,72 @@
+{
+  "lean": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "observed_lean": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "observed_mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "upstream_commit": "a28aaa336343c4caf43791ababd8ed0ee5c7b58e",
+  "sources": [
+    {
+      "path": "SlowEquilibration/Upstream/OAI/Computability/MinUncut/GaussianHermite.lean",
+      "sha256": "ad978785737df60d3fcaf588f4efd20e20e08f36d8e8d7eb4b2d4a0f6a3ad2af",
+      "modified": false
+    },
+    {
+      "path": "SlowEquilibration/GaussianNoiseL2.lean",
+      "sha256": "9fc2cec9062be30f9538cffded831c23a4ad7535f359533dc169c7e5fa9a335e",
+      "modified": false
+    }
+  ],
+  "build_succeeded": true,
+  "audit": {
+    "OAI.MinUncut.GaussianHermite.hermiteBasis": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OAI.MinUncut.GaussianHermite.productHermiteBasis": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OAI.MinUncut.GaussianHermite.ae_zero_of_integral_mvpoly_eq_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OAI.MinUncut.GaussianHermite.rotation_preserves": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OAI.MinUncut.GaussianHermite.psi_noise": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OAI.MinUncut.GaussianHermite.noise_coefficient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "SlowEquilibration.GaussianMaximalCorrelation.coupled_memLp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "SlowEquilibration.GaussianMaximalCorrelation.memLp_noise_L2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "SlowEquilibration.GaussianMaximalCorrelation.noise_coefficient_L2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "upstream_commit": "0b5dd80ad918f7e8ab23bb2fac5eb9c7d373a795",
+  "observed_lean": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "stage": "LEGACY_PRESENT",
+  "sources": [
+    {
+      "path": "MarkovSemigroups/Abstract/DirichletForm.lean",
+      "original_sha256": "c085dfbdc6ff56aba00907f699f1d997c797909a4660eb0abef13cbf1fc9cc46",
+      "compiled_sha256": "c085dfbdc6ff56aba00907f699f1d997c797909a4660eb0abef13cbf1fc9cc46",
+      "modified": false
+    },
+    {
+      "path": "MarkovSemigroups/Abstract/GrossODE.lean",
+      "original_sha256": "0dea71288d60d0fb5147aed89a37c03b4dcc6a90f22c15d5e2d027de2f8521f6",
+      "compiled_sha256": "c27bac503b64be69f09b8c8d1330f9e4192e0510bc4c77f8ff1f9d7211b2d3d4",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Abstract/Hypercontractivity.lean",
+      "original_sha256": "8b701c87b800e96f83b5b731861634b1b38730335824584fc0381f3d938397c0",
+      "compiled_sha256": "8b701c87b800e96f83b5b731861634b1b38730335824584fc0381f3d938397c0",
+      "modified": false
+    },
+    {
+      "path": "MarkovSemigroups/Diffusion/CarreDuChamp.lean",
+      "original_sha256": "734a2684be88a7d2c7d5ec5d2dc31d1f9f0f925f2ade1f42cdb117de7769bf54",
+      "compiled_sha256": "734a2684be88a7d2c7d5ec5d2dc31d1f9f0f925f2ade1f42cdb117de7769bf54",
+      "modified": false
+    },
+    {
+      "path": "MarkovSemigroups/Diffusion/StroockVaropoulos.lean",
+      "original_sha256": "b75e7ebe154e68070af78284e75975ba8b27593b6fc1bab6144762ce893b7142",
+      "compiled_sha256": "b75e7ebe154e68070af78284e75975ba8b27593b6fc1bab6144762ce893b7142",
+      "modified": false
+    },
+    {
+      "path": "MarkovSemigroups/General/OUEntropyDecomposition.lean",
+      "original_sha256": "ee320cc431211d415d260b48fb751621cad91c21c507231e1b6049dd42c4d732",
+      "compiled_sha256": "27b8abb1f0673968782b19863449e14fff53184f81ffc4ed63fd916084ae8ac5",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean",
+      "original_sha256": "44d0b521e44aab4461939362ec4555efc314cff022b48566c38d40645ae8ab2a",
+      "compiled_sha256": "5e693d092721eaaa845ec7e5c2c3e050161440b88d5a14c0a59a28e11698b7a4",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean",
+      "original_sha256": "66a0a38713515f1d1f65eaf54d5464e88048c908fe9cbe249bfa633a4055f9d7",
+      "compiled_sha256": "0b68c99b85b3be8e95b1d4f808dc5394333e0a43d657d6fd1a1eee59264e1dfe",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean",
+      "original_sha256": "6d59b3c5a02c2e6e74ffb6431edf55b397d75548bd4e9b8c0b31fc61272d6753",
+      "compiled_sha256": "c883ce9a1b13ae8018d54c2e2d3440e4bc4adf83b2fc81db74a1bf2cd8d9ff31",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean",
+      "original_sha256": "2e011c66e19cf4b702fcfec41905fe8d89f878f6bf47cfffc13fca694d436527",
+      "compiled_sha256": "bbaa99dac505445ccb543678eff9ba5b86dabe781673004caad9d8123b2477e2",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean",
+      "original_sha256": "2b538000b04edd9e2c8df0b719da8b321e7a2c07347828853e7f3445b4687fa6",
+      "compiled_sha256": "8670fc9d39a2730a965731ce9c1df478e4e375044aa8f4a8c84215e11227dc42",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean",
+      "original_sha256": "ceec1aecefd4ae5132685a0f7d0f48e07dd0dafe7db6e020d6e315884e5b1998",
+      "compiled_sha256": "ceec1aecefd4ae5132685a0f7d0f48e07dd0dafe7db6e020d6e315884e5b1998",
+      "modified": false
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean",
+      "original_sha256": "1eabd86deead32276050c0c1610713246ac0cbe8d85cfe12939442bf33dbb12b",
+      "compiled_sha256": "3caaf6ceeec042f4707a94ec741ca0f721d81a6187194c02e54ce7d7486b6dd2",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean",
+      "original_sha256": "67d90091804d0172103964c202bda3eff13c03919dade185be4c2f79f4cf2789",
+      "compiled_sha256": "899c38a096d8852781d696fd31bfd1d07084bb0636b9ffcb203c0629d12fb9da",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean",
+      "original_sha256": "1116a32b9c732971114f6ab91f1104fdeeae8d91c94ea21c5a0dc5fb42c82060",
+      "compiled_sha256": "dc98c0f4ca18bb65b2a66d9e33536dea6b22aeb833149b1377287cc07d2cf2e2",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean",
+      "original_sha256": "a7092a7196652ffd2a1e65d1923fadaf0a3758844481579f6f515cf1a4614189",
+      "compiled_sha256": "530be6a241a7194ff8b7a9936ad86cceb5e3f08b8a6725457dcff06d5da5c692",
+      "modified": true
+    },
+    {
+      "path": "MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean",
+      "original_sha256": "352ee23719410aecc2620d2bb92e1df22026cf1f57fdeee0f5d3a6e934a10b26",
+      "compiled_sha256": "1587d69e4bf8bf481f4659f1dfaa7eb02733b99b61098fa2ff9e2ed04bfe22c1",
+      "modified": true
+    },
+    {
+      "path": "GaussianHypercontractivityBridge.lean",
+      "compiled_sha256": "7462575223723cd082addb32a873ec780e0ecca54c69f1bc96e4429e4a792545"
+    }
+  ],
+  "source_axioms_present": [
+    "stroock_varopoulos",
+    "gross_lsi_implies_hypercontractive",
+    "gross_hypercontractive_implies_lsi"
+  ],
+  "audit": {
+    "GaussianFin.stdGaussianFin_isHypercontractive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GaussianFin.ouSemigroupFinLp_coeFn_ae": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "GaussianFin.stdGaussianFin_satisfiesLogSobolev": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.gross_l2_exponent_relation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.actual_gaussian_ou_l2_hypercontractive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.gaussianAverage_eq_ouSemigroupFin": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.actual_gaussian_average_l2_hypercontractive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.gaussianAverage_congr_ae": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.memLp_gaussian_average_l2_hypercontractive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.actual_gaussian_ou_l2_to_lq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.actual_gaussian_average_l2_to_lq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.memLp_gaussian_average_l2_to_lq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.memLp_gaussian_average_higher_integrability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingHypercontractivity.bounded_gaussian_average_l2_hypercontractive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "no_unexpected_transitive_axioms": true,
+  "endpoint_scope": "Actual Gaussian OU semigroup on L2, with Lp source condition; bounded measurable specialization when bridge included"
+}

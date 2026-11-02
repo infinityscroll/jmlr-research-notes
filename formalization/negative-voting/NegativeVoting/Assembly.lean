@@ -1,8 +1,4 @@
-import Mathlib.Data.Real.Basic
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.NormNum
+import Mathlib
 
 /-!
 # The finite algebra of the local/exterior assembly

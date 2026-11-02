@@ -1,0 +1,4 @@
+import MarkovSemigroups.Instances.WorkInProgress.EuclideanHypercontractive
+#print axioms GaussianFin.stdGaussianFin_isHypercontractive
+#print axioms GaussianFin.ouSemigroupFinLp_coeFn_ae
+#print axioms GaussianFin.stdGaussianFin_satisfiesLogSobolev

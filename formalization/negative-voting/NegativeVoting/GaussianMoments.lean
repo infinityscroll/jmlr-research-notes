@@ -1,7 +1,6 @@
+import Mathlib
 import NegativeVoting.Integrability
 import NegativeVoting.GaussianRouting
-import Mathlib.Probability.Distributions.Gaussian
-import Mathlib.MeasureTheory.Constructions.Pi
 
 /-! Genuine Gaussian integrability facts used by finite linear-score routing. -/
 
@@ -14,10 +13,7 @@ open scoped BigOperators NNReal
 including the zero-variance (Dirac) case. -/
 theorem gaussian_exp_integrable (μ : ℝ) (v : ℝ≥0) (t : ℝ) :
     Integrable (fun x : ℝ => Real.exp (t * x)) (gaussianReal μ v) := by
-  apply Integrable.of_integral_ne_zero
-  change mgf id (gaussianReal μ v) t ≠ 0
-  rw [mgf_gaussianReal (μ := μ) (v := v) (by simp)]
-  exact Real.exp_ne_zero _
+  exact integrable_exp_mul_gaussianReal t
 
 /-- The Gaussian identity random variable is integrable, proved by exponential
 moment domination rather than assumed as a routing input. -/
@@ -67,7 +63,7 @@ theorem gaussian_linear_score_integrable {κ : Type*} [Fintype κ] [DecidableEq 
     (μ : κ → ℝ) (v : κ → ℝ≥0) (a : κ → ℝ) :
     Integrable (fun x : κ → ℝ => ∑ j, a j * x j)
       (Measure.pi (fun i => gaussianReal (μ i) (v i))) := by
-  exact integrable_finset_sum Finset.univ (fun j _ =>
+  exact integrable_finsetSum Finset.univ (fun j _ =>
     (gaussian_product_coordinate_integrable μ v j).const_mul (a j))
 
 /-- The maximum of finitely many linear Gaussian scores is integrable without

@@ -1,7 +1,4 @@
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.NormNum
-import Mathlib.MeasureTheory.Integral.Bochner.Basic
+import Mathlib
 
 /-!
 # Exact finite-simplex routing loss

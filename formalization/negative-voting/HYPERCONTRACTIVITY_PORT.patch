@@ -1,0 +1,1208 @@
+--- originals/MarkovSemigroups/Abstract/GrossODE.lean
++++ MarkovSemigroups/Abstract/GrossODE.lean
+@@ -54,6 +54,10 @@
+ import Mathlib.Analysis.Calculus.ParametricIntegral
+ import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
+ 
++-- Compatibility with Lean 4.35 elaboration; all proof terms remain kernel checked.
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
++
+ open MeasureTheory ENNReal Set
+ open scoped ENNReal InnerProductSpace
+ 
+@@ -90,7 +94,7 @@
+     simpa using ((hasDerivAt_id s).const_mul (2 * ρ))
+   have hexp : HasDerivAt (fun s : ℝ => Real.exp (2 * ρ * s))
+       (Real.exp (2 * ρ * s) * (2 * ρ)) s := by
+-    simpa using (Real.hasDerivAt_exp (2 * ρ * s)).comp s hbase
++    simpa [Function.comp_def] using (Real.hasDerivAt_exp (2 * ρ * s)).comp s hbase
+   have hcomb : HasDerivAt (fun s : ℝ => 1 + (p - 1) * Real.exp (2 * ρ * s))
+       ((p - 1) * (Real.exp (2 * ρ * s) * (2 * ρ))) s :=
+     (hexp.const_mul (p - 1)).const_add 1
+@@ -388,8 +392,7 @@
+     have hmul : HasDerivAt (fun σ => Real.log |c| * a σ)
+         (Real.log |c| * a') s := ha.const_mul _
+     have hexp := (Real.hasDerivAt_exp (Real.log |c| * a s)).comp s hmul
+-    convert hexp using 1
+-    rw [Real.rpow_def_of_pos hc]; ring
++    convert hexp using 1 <;> simp [Function.comp_def, Real.rpow_def_of_pos hc] <;> ring
+ 
+ /-- **General (Mathlib-native): parametric `rpow`-exponent Leibniz.**
+ For a bounded measurable `w` on a finite measure space and a
+@@ -634,10 +637,10 @@
+ 
+ /-- For a real-valued function, the integral of the absolute value is the `L¹` seminorm. -/
+ lemma integral_abs_eq_eLpNorm_one_toReal {Y : Type*} [MeasurableSpace Y] {ν : Measure Y}
+-    {f : Y → ℝ} (hf : Integrable (fun y => |f y|) ν) :
++    {f : Y → ℝ} (hfm : AEStronglyMeasurable f ν) (hf : Integrable (fun y => |f y|) ν) :
+     ∫ y, |f y| ∂ν = (eLpNorm f 1 ν).toReal := by
+   rw [integral_eq_lintegral_of_nonneg_ae (Filter.Eventually.of_forall fun _ => abs_nonneg _) hf.aestronglyMeasurable,
+-    eLpNorm_one_eq_lintegral_enorm]
++    eLpNorm_one_eq_lintegral_enorm hfm]
+   congr 1
+   apply lintegral_congr_ae
+   filter_upwards with y
+@@ -657,12 +660,12 @@
+       exact bot_le
+     · intro i
+       exact eLpNorm_le_eLpNorm_of_exponent_le (μ := ν) (p := (1 : ℝ≥0∞)) (q := (2 : ℝ≥0∞))
+-        (by norm_num) (hF_meas i)
++        (by norm_num)
+   have hF_one_real : Filter.Tendsto (fun i => (eLpNorm (F i) 1 ν).toReal) l (nhds 0) := by
+     exact (ENNReal.continuousAt_toReal ENNReal.zero_ne_top).tendsto.comp hF_one
+   have heq : ∀ᶠ i in l, ∫ y, |F i y| ∂ν = (eLpNorm (F i) 1 ν).toReal := by
+     filter_upwards [hF_int] with i hi
+-    exact integral_abs_eq_eLpNorm_one_toReal hi
++    exact integral_abs_eq_eLpNorm_one_toReal (hF_meas i) hi
+   exact hF_one_real.congr' <| heq.mono fun i hi => hi.symm
+ 
+ /-- **Pointwise derivative of `v ↦ v^r · log v` for `v > 0`.**
+@@ -892,7 +895,7 @@
+     eLpNorm ({x : Y | K + 1 ≤ ‖f i x‖₊}.indicator (f i)) 2 ν
+         = eLpNorm (0 : Y → ℝ) 2 ν := eLpNorm_congr_ae hempty
+     _ = 0 := by simp
+-    _ ≤ ENNReal.ofReal ε := by positivity
++    _ ≤ ε := bot_le
+ 
+ /-- **Pointwise FTC: averaged-derivative form of the increment.** For `ψ : ℝ → ℝ`
+ of class `C¹` and any two reals `a, b`,
+@@ -1348,7 +1351,7 @@
+   -- UnifIntegrable + UnifTight from UI / finite measure.
+   have hui_τ : UnifIntegrable
+       (fun n => (averagedDerivField u ψ (σ_seq (n + N)) s : Y → ℝ)) 2 ν :=
+-    hUI.2.1
++    hUI.1
+   have hut_τ : UnifTight
+       (fun n => (averagedDerivField u ψ (σ_seq (n + N)) s : Y → ℝ)) 2 ν := by
+     intro ε _
+@@ -1676,7 +1679,7 @@
+   have h_d2H' : HasDerivAt
+       (fun τ : ℝ => ∫ y, |u_s_func y| ^ grossExponent ρ p τ ∂D.μ)
+       (2 * ρ * (grossExponent ρ p s - 1) * grossLogIntegral D hf ρ p s) s := by
+-    convert h_d2H using 1
++    simpa only [grossLogIntegral, u_s_func] using h_d2H
+   -- Step ∂₁H: varying orbit, frozen exponent. Use ψ := Real.rpow · q(s)
+   -- (which is ContDiff ℝ 1 globally for q(s) ≥ 1; on the positive-orbit set,
+   -- it equals |·|^{q(s)} a.e.).
+@@ -1822,7 +1825,7 @@
+               ((MemLp.sub (Lp.memLp _) (Lp.memLp _)).eLpNorm_lt_top.ne)]
+             rfl
+           rw [heq]
+-          simpa using (ENNReal.continuous_ofReal.tendsto 0).comp h_dist
++          simpa [Function.comp_def] using (ENNReal.continuous_ofReal.tendsto 0).comp h_dist
+         exact tendsto_integral_abs_of_tendsto_eLpNorm_two_zero D.μ
+           (fun σ y => ((D.P σ (D.coreToL2 hf) : Lp ℝ 2 D.μ) : X → ℝ) y
+             - ((D.P s (D.coreToL2 hf) : Lp ℝ 2 D.μ) : X → ℝ) y)
+@@ -2049,7 +2052,7 @@
+   -- 1/q has within-derivative `-(q')/q²`.
+   have hinv : HasDerivWithinAt (fun s => (grossExponent ρ p s)⁻¹)
+       (-(2 * ρ * (q - 1)) / q ^ 2) (Set.Ici 0) s := by
+-    simpa using hq.inv hqne
++    simpa only [Pi.inv_def, hq_def] using hq.inv hqne
+   -- F = grossPow has within-derivative `F' = grossPowDeriv`.
+   have hF : HasDerivWithinAt (grossPow D hf ρ p)
+       (grossPowDeriv D hf h_core ρ p s) (Set.Ici 0) s :=
+@@ -2059,7 +2062,7 @@
+       (fun s => Real.log (grossPow D hf ρ p s))
+       ((grossPow D hf ρ p s)⁻¹ * grossPowDeriv D hf h_core ρ p s)
+       (Set.Ici 0) s := by
+-    simpa [mul_comm] using
++    simpa [Function.comp_def, mul_comm] using
+       (Real.hasDerivAt_log hFne).comp_hasDerivWithinAt s hF
+   -- Λ = (1/q) · log F by the product rule; reconcile the chain value
+   -- with `grossLogNormDeriv` via the entropy identity.
+@@ -2078,7 +2081,7 @@
+         + (grossExponent ρ p s)⁻¹
+           * ((grossPow D hf ρ p s)⁻¹ * grossPowDeriv D hf h_core ρ p s))
+       (Set.Ici 0) s := by
+-    simpa [grossLogNorm] using hmul
++    convert hmul using 1 <;> rfl
+   rwa [hval] at this
+ 
+ /-! ## P3 — algebraic closure -/
+@@ -2288,7 +2291,6 @@
+       ≤ eLpNorm ((D.P t (D.coreToL2 hf) : X → ℝ))
+           (ENNReal.ofReal (grossExponent ρ p t)) D.μ :=
+         eLpNorm_le_eLpNorm_of_exponent_le (ENNReal.ofReal_le_ofReal hqt)
+-          (Lp.aestronglyMeasurable _)
+     _ = ENNReal.ofReal (Real.exp (grossLogNorm D hf ρ p t)) := h_id t ht.le
+     _ ≤ ENNReal.ofReal (Real.exp (grossLogNorm D hf ρ p 0)) :=
+         ENNReal.ofReal_le_ofReal (Real.exp_le_exp.mpr
+@@ -2342,9 +2344,12 @@
+         = eLpNorm ((f : X → ℝ)) (ENNReal.ofReal p) D.μ := by
+       have h1 : (((|f| : Lp ℝ 2 D.μ)) : X → ℝ) =ᵐ[D.μ] fun x => ‖(f : X → ℝ) x‖ := by
+         filter_upwards [Lp.coeFn_abs f] with x hx; rw [hx, Real.norm_eq_abs]
+-      exact (eLpNorm_congr_ae h1).trans (eLpNorm_norm _)
++      exact (eLpNorm_congr_ae h1).trans (eLpNorm_norm _ (Lp.aestronglyMeasurable f))
+     have habs_mem : MemLp (((|f| : Lp ℝ 2 D.μ)) : X → ℝ) (ENNReal.ofReal p) D.μ :=
+-      ⟨Lp.aestronglyMeasurable _, by rw [heq_abs]; exact hf_mem.2⟩
++      by
++        change eLpNorm _ _ _ < ∞
++        rw [heq_abs]
++        exact hf_mem
+     -- `P_t` is monotone (positivity-preserving + linear).
+     have hP_mono : ∀ {a b : Lp ℝ 2 D.μ}, a ≤ b → D.P t a ≤ D.P t b := by
+       intro a b hab
+@@ -2363,7 +2368,7 @@
+       exact ⟨by linarith, h1⟩
+     calc eLpNorm ((D.P t f : Lp ℝ 2 D.μ) : X → ℝ) (ENNReal.ofReal q) D.μ
+         ≤ eLpNorm ((D.P t |f| : Lp ℝ 2 D.μ) : X → ℝ) (ENNReal.ofReal q) D.μ :=
+-          eLpNorm_mono_ae_real hae
++          eLpNorm_mono_ae_real (Lp.aestronglyMeasurable _) hae
+       _ ≤ eLpNorm (((|f| : Lp ℝ 2 D.μ)) : X → ℝ) (ENNReal.ofReal p) D.μ :=
+           hmain |f| habs_mem (abs_nonneg f)
+       _ = eLpNorm ((f : X → ℝ)) (ENNReal.ofReal p) D.μ := heq_abs
+@@ -2387,8 +2392,9 @@
+   obtain ⟨ns, hns_mono, hns_ae⟩ :=
+     (tendstoInMeasure_of_tendsto_Lp h_orbit).exists_seq_tendsto_ae
+   -- Fatou / lower semicontinuity of `eLpNorm` under a.e. convergence.
+-  have hconv : ∀ z : X → ℝ, eLpNorm z (ENNReal.ofReal q) D.μ = eLpNorm' z q D.μ := fun z => by
+-    rw [eLpNorm_eq_eLpNorm' (by positivity) ENNReal.ofReal_ne_top, ENNReal.toReal_ofReal hq_pos.le]
++  have hconv : ∀ z : Lp ℝ 2 D.μ, eLpNorm (z : X → ℝ) (ENNReal.ofReal q) D.μ =
++      eLpNorm' (z : X → ℝ) q D.μ := fun z => by
++    rw [eLpNorm_eq_eLpNorm' (by positivity) ENNReal.ofReal_ne_top (Lp.aestronglyMeasurable z), ENNReal.toReal_ofReal hq_pos.le]
+   have h_fatou := Lp.eLpNorm'_lim_le_liminf_eLpNorm' (μ := D.μ) (p := q) hq_pos
+     (fun k => Lp.aestronglyMeasurable (D.P t (D.coreToL2 (hg (ns k))))) hns_ae
+   simp_rw [← hconv] at h_fatou
+@@ -2414,8 +2420,8 @@
+       ≤ eLpNorm ((f₀ : X → ℝ)) (ENNReal.ofReal p) D.μ
+         + eLpNorm ((f₀ : X → ℝ) - g (ns k)) (ENNReal.ofReal p) D.μ := by
+     intro k
+-    have hsub := eLpNorm_sub_le (μ := D.μ) (p := ENNReal.ofReal p) (Lp.aestronglyMeasurable f₀)
+-      ((Lp.aestronglyMeasurable f₀).sub (D.IsCore_memLp (hg (ns k))).aestronglyMeasurable) hp1'
++    have hsub := eLpNorm_sub_le (μ := D.μ) (p := ENNReal.ofReal p) (f := (f₀ : X → ℝ))
++      (g := (f₀ : X → ℝ) - g (ns k)) hp1'
+     rwa [show (f₀ : X → ℝ) - ((f₀ : X → ℝ) - g (ns k)) = g (ns k) from sub_sub_cancel _ _] at hsub
+   -- `b k → ‖f₀‖_p` since `‖f₀ - g (ns k)‖_p → 0`.
+   have hb_tendsto : Filter.Tendsto
+--- originals/MarkovSemigroups/Abstract/Hypercontractivity.lean
++++ MarkovSemigroups/Abstract/Hypercontractivity.lean
+@@ -592,73 +592,13 @@
+ 
+ end DirichletMarkovSemigroup
+ 
+-/-! ## Stroock–Varopoulos inequality (intermediate-step lemma) -/
+-
+-/-- **Stroock–Varopoulos inequality.** AXIOM
+-(textbook bridge, restated on the `L²(μ)`-carrier-based bundled
+-structure).
+-
+-For a `DirichletMarkovSemigroup` `D`, any nonnegative `f ∈ D.IsCore`,
+-any `p > 1`, and assuming `f^{p/2}` and `f^{p-1}` lie in the core:
+-
+-  `(4(p − 1) / p²) · E(f^{p/2}, f^{p/2}) ≤ E(f, f^{p−1})`.
+-
+-(The exponent range is `p > 1` — the full range the Gross interpolation
+-path `q(s) = 1+(p₀-1)e^{2ρs}` visits for `p₀ > 1`. S–V holds throughout
+-`p > 1`; for diffusion/gradient forms it is in fact an equality. The
+-`2 ≤ p → 1 < p` relaxation is deep-think vetted, rating Standard — see
+-`plans/archive/sv-q-relaxation-vetting.md`, which vetted the matching
+-`StroockVaropoulos._hq` predicate relaxation.)
+-
+-In operator form (using `E(f, g) = -⟨[f], L[g]⟩` on the core):
+-  `-⟨[f^{p−1}], L[f]⟩ ≥ (4(p − 1) / p²) · ⟨-[L(f^{p/2})], [f^{p/2}]⟩`.
+-
+-This is the key intermediate-step lemma in Gross's proof that LSI
+-implies hypercontractivity. Combined with LSI applied to `f^{p/2}`
+-and the chain rule for `(d/dt) ‖P_t f‖_p^p`, it closes the
+-differential inequality `(d/dt) ‖P_t f‖_{q(t)} ≤ 0` along the path
+-`q(t) = 1 + (p − 1) · e^{2ρt}`. -/
+-axiom stroock_varopoulos {X : Type*} [MeasurableSpace X]
+-    (D : DirichletMarkovSemigroup X) (p : ℝ) (hp : 1 < p)
+-    (f : X → ℝ) (hf : D.IsCore f) (hf_nonneg : ∀ x, 0 ≤ f x)
+-    (hf_p_half : D.IsCore (fun x => f x ^ (p / 2)))
+-    (hf_p_one : D.IsCore (fun x => f x ^ (p - 1))) :
+-    (4 * (p - 1) / p ^ 2) *
+-      D.energy (fun x => f x ^ (p / 2)) (fun x => f x ^ (p / 2)) ≤
+-    D.energy f (fun x => f x ^ (p - 1))
+-
+-/-! ## Gross's theorem (postulated as textbook axioms) -/
+-
+-/-- **Postulated (Gross 1975, Theorem 1).** LSI implies
+-hypercontractivity for the bundled `L²(μ)` semigroup.
+-
+-The proof uses the semigroup interpolation method: differentiate
+-`‖P_t f‖_{L^{q(t)}}` along `q(t) = 1 + (p − 1) e^{2ρt}` and show the
+-derivative is `≤ 0` via LSI applied to `|f|^{q/2}`. The Dirichlet form
+-enters through the compatibility field `energy_eq_deriv`, with
+-Stroock–Varopoulos supplying the key energy comparison.
+-
+-**Note on `hρ`**: the explicit `0 < ρ` hypothesis is required to
+-firewall against a soundness trap. `SatisfiesLogSobolev D ρ` is
+-**trivially true** for `ρ ≤ 0` (the LSI inequality `ρ · Ent(f²) ≤ 2 · E(f, f)`
+-has LHS `≤ 0` and RHS `≥ 0`), while `IsHypercontractive` bakes in
+-`0 < ρ`. Without `hρ` the axiom would prove `0 < ρ` from a vacuous
+-hypothesis (i.e. `0 < ρ` for any `ρ`), yielding `False`. Flagged by
+-gemini-3.1-pro-preview 2026-05-13 re-vet of the Lp-carrier refactor. -/
+-axiom gross_lsi_implies_hypercontractive {X : Type*} [MeasurableSpace X]
+-    (D : DirichletMarkovSemigroup X) (ρ : ℝ) (hρ : 0 < ρ)
+-    (h_lsi : D.SatisfiesLogSobolev ρ) :
+-    D.toMarkovSemigroup.IsHypercontractive ρ
+-
+-/-- **Postulated (Gross 1975, Theorem 2).** Hypercontractivity of the
+-bundled `L²(μ)` semigroup implies LSI for the bundled Dirichlet form.
+-
+-The proof differentiates the hypercontractive bound at `t = 0` with
+-`p = 2`, `q = 2 + ε`, and takes `ε → 0`. -/
+-axiom gross_hypercontractive_implies_lsi {X : Type*} [MeasurableSpace X]
+-    (D : DirichletMarkovSemigroup X) (ρ : ℝ)
+-    (h_hyp : D.toMarkovSemigroup.IsHypercontractive ρ) :
+-    D.SatisfiesLogSobolev ρ
++/-!
++The compatibility port omits the three unused legacy analytic axioms and their
++three wrapper theorems. The original file is preserved under originals/ and the
++exact removal is recorded in LEGACY_AXIOM_REMOVAL.patch. The concrete Gaussian
++endpoint was independently audited before and after this removal; it uses the
++proved Gross theorem with its Gaussian hypotheses discharged.
++-/
+ 
+ /-! ## H0 — hypothesis-parameterised Gross (Route A scaffold)
+ 
+@@ -767,32 +707,6 @@
+ 
+ variable {X : Type*} [MeasurableSpace X]
+ 
+-/-- Gross's theorem (forward direction): LSI ⇒ hypercontractivity.
+-
+-The `hρ : 0 < ρ` hypothesis firewalls the `ρ ≤ 0` soundness trap
+-documented at `gross_lsi_implies_hypercontractive`. -/
+-theorem hypercontractive_of_logSobolev (D : DirichletMarkovSemigroup X)
+-    (ρ : ℝ) (hρ : 0 < ρ) (h_lsi : D.SatisfiesLogSobolev ρ) :
+-    D.IsHypercontractive ρ := by
+-  show D.toMarkovSemigroup.IsHypercontractive ρ
+-  exact gross_lsi_implies_hypercontractive D ρ hρ h_lsi
+-
+-/-- Gross's theorem (reverse direction): hypercontractivity ⇒ LSI. -/
+-theorem logSobolev_of_hypercontractive (D : DirichletMarkovSemigroup X)
+-    (ρ : ℝ) (h_hyp : D.IsHypercontractive ρ) :
+-    D.SatisfiesLogSobolev ρ := by
+-  change D.toMarkovSemigroup.IsHypercontractive ρ at h_hyp
+-  exact gross_hypercontractive_implies_lsi D ρ h_hyp
+-
+-/-- The Gross equivalence: LSI ↔ hypercontractivity for a
+-`DirichletMarkovSemigroup`. The forward direction requires `0 < ρ`
+-(see `hypercontractive_of_logSobolev`); the reverse derives `ρ > 0`
+-from the `IsHypercontractive` predicate's built-in `0 < ρ` field. -/
+-theorem gross_equivalence (D : DirichletMarkovSemigroup X) (ρ : ℝ) (hρ : 0 < ρ) :
+-    D.SatisfiesLogSobolev ρ ↔ D.IsHypercontractive ρ :=
+-  ⟨D.hypercontractive_of_logSobolev ρ hρ,
+-   D.logSobolev_of_hypercontractive ρ⟩
+-
+ /-! ## Direct consequence: the semigroup improves integrability -/
+ 
+ /-- Direct application of hypercontractivity to an `L²(μ)` function
+--- originals/MarkovSemigroups/General/OUEntropyDecomposition.lean
++++ MarkovSemigroups/General/OUEntropyDecomposition.lean
+@@ -772,7 +772,7 @@
+     have h_comp := h_log_deriv.comp x h_Ptg_deriv
+     have h_comp' : HasDerivAt (fun y => Real.log (ouSemigroup t g y))
+         (deriv (ouSemigroup t g) x / ouSemigroup t g x) x := by
+-      convert h_comp using 1; field_simp
++      simpa [Function.comp_def, div_eq_mul_inv, mul_comm] using h_comp
+     exact h_comp'.add_const 1
+   -- Bound on |(log P_t g + 1)'| ≤ M/ε.
+   have h_logPtg'_bd : ∀ x,
+@@ -1095,7 +1095,7 @@
+       intro s y z hs
+       have h_α : HasDerivAt (fun u : ℝ => a u * y) (-a s * y) s := by
+         have h1 : HasDerivAt (fun u : ℝ => -u) (-1 : ℝ) s := by
+-          simpa using (hasDerivAt_id s).neg
++          exact hasDerivAt_neg' s
+         have h2 : HasDerivAt (fun u : ℝ => Real.exp (-u)) (Real.exp (-s) * (-1)) s := h1.exp
+         have h3 : HasDerivAt (fun u : ℝ => Real.exp (-u) * y)
+             (Real.exp (-s) * (-1) * y) s := h2.mul_const y
+@@ -1444,7 +1444,7 @@
+       -- The RHS is measurable: P_t g is C², log P_t g + 1 is C¹.
+       have h_dd_meas : Measurable (deriv (deriv (ouSemigroup t g))) := by
+         have h_C1' : ContDiff ℝ 1 (deriv (ouSemigroup t g)) := by
+-          have h2 : ContDiff ℝ (1 + 1) (ouSemigroup t g) := by simpa using h_Ptg_C2
++          have h2 : ContDiff ℝ (1 + 1) (ouSemigroup t g) := by convert h_Ptg_C2 using 1 <;> norm_num
+           exact h2.deriv'
+         exact (h_C1'.continuous_deriv (le_refl 1)).measurable
+       have h_d_meas : Measurable (deriv (ouSemigroup t g)) :=
+@@ -1510,7 +1510,7 @@
+       have h_log_comp : HasDerivAt (fun u => Real.log (ouSemigroup u g y))
+           (hPsy s y * (ouSemigroup s g y)⁻¹) s := by
+         have := h_log_at.comp s h_inner_at_s
+-        simpa [mul_comm] using this
++        simpa [Function.comp_def, mul_comm] using this
+       -- Now d/ds [P_s g y * log(P_s g y)] = hPsy s y * log(P_s g y) + P_s g y * (hPsy s y / P_s g y)
+       --                                    = hPsy s y * (log(P_s g y) + 1).
+       have h_prod : HasDerivAt (fun u => ouSemigroup u g y * Real.log (ouSemigroup u g y))
+--- originals/MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean
++++ MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean
+@@ -46,6 +46,9 @@
+ open MeasureTheory Filter Set Real ProbabilityTheory
+ 
+ open scoped ContDiff
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
+ 
+ noncomputable section
+ 
+@@ -101,7 +104,7 @@
+     (indepFun_prod measurable_id measurable_id).comp
+       (measurable_const.mul measurable_id) (measurable_const.mul measurable_id)
+   -- Sum has law N(0, a²+b²)
+-  have hmap := gaussianReal_add_gaussianReal_of_indepFun hindep haX.map_eq hbY.map_eq
++  have hmap := gaussianReal_add_gaussianReal_of_indepFun hindep haX hbY
+   -- Key: a² + b² = 1 (as ℝ)
+   have hab_real : a ^ 2 + b ^ 2 = 1 := by
+     simp only [a, b]
+@@ -460,13 +463,13 @@
+           (Measure.map (WithLp.toLp 2)
+             (Measure.map (fun p : ℝ × ℝ => (a * p.1 + b * p.2, b * p.1 - a * p.2)) (γ.prod γ))) =
+         Measure.map (fun p : ℝ × ℝ => (a * p.1 + b * p.2, b * p.1 - a * p.2)) (γ.prod γ) := by
+-    simpa [ew] using
++    simpa [ew, WithLp.homeomorphProd, WithLp.equiv] using
+       (MeasurableEquiv.map_map_symm
+         (ν := Measure.map (fun p : ℝ × ℝ => (a * p.1 + b * p.2, b * p.1 - a * p.2)) (γ.prod γ))
+         ew)
+   have hback_right :
+       Measure.map WithLp.ofLp (Measure.map (WithLp.toLp 2) (γ.prod γ)) = γ.prod γ := by
+-    simpa [ew] using (MeasurableEquiv.map_map_symm (ν := γ.prod γ) ew)
++    simpa [ew, WithLp.homeomorphProd, WithLp.equiv] using (MeasurableEquiv.map_map_symm (ν := γ.prod γ) ew)
+   calc
+     Measure.map (fun p : ℝ × ℝ => (a * p.1 + b * p.2, b * p.1 - a * p.2)) (γ.prod γ)
+         = Measure.map WithLp.ofLp
+@@ -546,7 +549,7 @@
+     have h_f : HasDerivAt f (deriv f (a * x + b * y)) (a * x + b * y) :=
+       (hf_C1.differentiable (by simp)).differentiableAt.hasDerivAt
+     have := h_f.comp x h_inner
+-    simpa [mul_comm a (deriv f _)] using this
++    simpa [Function.comp_def, mul_comm a (deriv f _)] using this
+   obtain ⟨_, h_deriv⟩ :=
+     hasDerivAt_integral_of_dominated_loc_of_deriv_le hs
+       (Filter.Eventually.of_forall hF_meas) hF_int hF'_meas h_bound h_bound_int h_diff
+@@ -960,7 +963,7 @@
+     (indepFun_prod measurable_id measurable_id).comp
+       (measurable_const.mul measurable_id) (measurable_const.mul measurable_id)
+   -- Sum has law gaussianReal 0 ((at_*bs)²·1 + bt²·1)
+-  have hΨ_law := gaussianReal_add_gaussianReal_of_indepFun hindep h1.map_eq h2.map_eq
++  have hΨ_law := gaussianReal_add_gaussianReal_of_indepFun hindep h1 h2
+   -- Convert to N(0, 1 - exp(-2(s+t)))
+   have h_eq : gaussianReal ((at_ * bs) * 0 + bt * 0)
+       (⟨(at_ * bs) ^ 2, sq_nonneg _⟩ * 1 + ⟨bt ^ 2, sq_nonneg _⟩ * 1) =
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean
+@@ -42,6 +42,9 @@
+ open MeasureTheory Filter Set Real ProbabilityTheory Topology
+ 
+ open scoped ContDiff
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
+ 
+ noncomputable section
+ 
+@@ -96,7 +99,7 @@
+     have hf_deriv : HasDerivAt f (deriv f x) x := hf_diff.hasDerivAt
+     -- HasDerivAt (f^2) at x with value 2 * f x * deriv f x.
+     have hf_sq : HasDerivAt (fun y => f y ^ 2) (2 * f x ^ 1 * deriv f x) x := by
+-      simpa using hf_deriv.pow 2
++      convert hf_deriv.pow 2 using 1 <;> norm_num <;> rfl
+     -- Adding the constant ε.
+     have hf_sq_add : HasDerivAt (fun y => f y ^ 2 + ε) (2 * f x ^ 1 * deriv f x) x :=
+       hf_sq.add_const ε
+@@ -549,7 +552,7 @@
+         intro x
+         have hf_deriv : HasDerivAt f (deriv f x) x := (hf_diff x).hasDerivAt
+         have hf_sq : HasDerivAt (fun y => f y ^ 2) (2 * f x ^ 1 * deriv f x) x := by
+-          simpa using hf_deriv.pow 2
++          convert hf_deriv.pow 2 using 1 <;> norm_num <;> rfl
+         have h := hf_sq.add_const ε
+         have := h.deriv
+         show deriv g_ε x = 2 * f x * deriv f x
+@@ -1058,6 +1061,8 @@
+     ouSemigroup_l2_decay_bound f t ht hf
+   semigroup_l2_sq_hasDerivWithinAt := fun f t ht hf => by
+     have h := ouSemigroup_l2_sq_hasDerivWithinAt_proved f t ht hf
++    change HasDerivWithinAt (fun s => ∫ x, (ouSemigroup s f x) ^ 2 ∂γ)
++      (-2 * ∫ x, ouGamma (ouSemigroup t f) (ouSemigroup t f) x ∂γ) (Set.Ici 0) t
+     simpa [ouGamma] using h
+   semigroup_ergodic := fun f hf => ouSemigroup_ergodic f hf
+   semigroup_entropy_sq_decay_bound := fun f t ht hf =>
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean
+@@ -25,6 +25,9 @@
+ open MeasureTheory Filter Set Real ProbabilityTheory
+ 
+ noncomputable section
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
+ 
+ /-! ### General lemmas (Mathlib-PR candidates)
+ 
+@@ -113,7 +116,7 @@
+           simpa using
+             (he.integral_comp' (g := fun p : ℝ × (Fin n → ℝ) => f (e.symm p)))
+     _ = ∫ s, ∫ y, f (i.insertNth s y) ∂γFin n ∂Gaussian1D.γ := by
+-          simpa [e] using
++          simpa [e, Fin.insertNthEquiv] using
+             (integral_prod (f := fun p : ℝ × (Fin n → ℝ) => f (e.symm p)) hcomp)
+ 
+ /-- The affine Mehler shift on `(Fin n → ℝ)`. -/
+@@ -230,8 +233,8 @@
+ 
+ theorem IsCoreFin.secondPartial_contDiff {f : (Fin n → ℝ) → ℝ} (hf : IsCoreFin f) (i : Fin n) :
+     ContDiff ℝ ∞ (secondPartial i f) := by
+-  unfold secondPartial partialDeriv
+-  simpa using
++  unfold secondPartial
++  exact
+     ((hf.partial_contDiff i).fderiv_right (m := ∞) (by simp)).clm_apply contDiff_const
+ 
+ theorem IsCoreFin.secondPartial_continuous {f : (Fin n → ℝ) → ℝ} (hf : IsCoreFin f)
+@@ -264,7 +267,7 @@
+   have h_update := hasDerivAt_update x i s
+   have h_f : HasFDerivAt f (fderiv ℝ f (Function.update x i s)) (Function.update x i s) :=
+     ((hf.differentiable (by simp)).differentiableAt).hasFDerivAt
+-  simpa [partialDeriv] using h_f.comp_hasDerivAt s h_update
++  simpa [partialDeriv, Function.comp_def] using h_f.comp_hasDerivAt s h_update
+ 
+ theorem section_deriv {f : (Fin n → ℝ) → ℝ} (hf : ContDiff ℝ ∞ f)
+     (i : Fin n) (x : Fin n → ℝ) :
+@@ -282,7 +285,7 @@
+       (fderiv ℝ (partialDeriv i f) (Function.update x i s))
+       (Function.update x i s) :=
+     ((hf.partial_differentiable i).differentiableAt).hasFDerivAt
+-  simpa [secondPartial] using h_f.comp_hasDerivAt s h_update
++  simpa [secondPartial, partialDeriv, Function.comp_def] using h_f.comp_hasDerivAt s h_update
+ 
+ theorem section_secondDeriv {f : (Fin n → ℝ) → ℝ} (hf : IsCoreFin f)
+     (i : Fin n) (x : Fin n → ℝ) :
+@@ -312,7 +315,7 @@
+   have h_f : HasFDerivAt f (fderiv ℝ f (Function.update x i s))
+       (Function.update x i s) :=
+     (hf (Function.update x i s)).hasFDerivAt
+-  simpa [partialDeriv] using h_f.comp_hasDerivAt s h_update
++  simpa [partialDeriv, Function.comp_def] using h_f.comp_hasDerivAt s h_update
+ 
+ /-- `C¹`-order companion of `section_deriv`. -/
+ theorem section_deriv_of_differentiable {f : (Fin n → ℝ) → ℝ}
+@@ -344,10 +347,10 @@
+     intro j
+     by_cases hji : j = i
+     · subst hji
+-      simpa [φ, a, b] using
++      simpa [φ, a, b, Pi.add_def, Pi.mul_def] using
+         ((measurable_const).add ((measurable_const).mul measurable_fst))
+     · rcases Fin.exists_succAbove_eq hji with ⟨k, rfl⟩
+-      simpa [φ, x', a, b, ouShiftFin] using
++      simpa [φ, x', a, b, ouShiftFin, Pi.add_def, Pi.mul_def, Function.comp_def] using
+         ((measurable_const).add ((measurable_const).mul ((measurable_pi_apply k).comp measurable_snd)))
+   have hG_int : Integrable G (Gaussian1D.γ.prod (γFin n)) := by
+     refine Integrable.mono' (integrable_const M) ?_ ?_
+@@ -431,7 +434,7 @@
+         section_contDiff (IsCoreFin.partial_contDiff hf_core i) i base
+       have h_aff : ContDiff ℝ 1 (fun u : ℝ => a * x i + b * u) := by
+         exact contDiff_const.add (contDiff_const.mul contDiff_id)
+-      simpa [g] using (hsec.of_le (by simp)).comp h_aff
++      simpa [g, Function.comp_def] using (hsec.of_le (by simp)).comp h_aff
+     have hg_bd : ∀ u, |g u| ≤ M := by
+       intro u
+       simp [g, coordSection]
+@@ -446,7 +449,7 @@
+           HasDerivAt (coordSection i base (partialDeriv i f))
+             (secondPartial i f (Function.update base i (a * x i + b * u))) (a * x i + b * u) :=
+         section_hasDerivAt (IsCoreFin.partial_contDiff hf_core i) i base (a * x i + b * u)
+-      simpa [g, mul_comm] using (h_part.comp u h_aff).deriv
++      simpa [g, mul_comm, Function.comp_def] using (h_part.comp u h_aff).deriv
+     have hg'_bd : ∀ u, |deriv g u| ≤ M := by
+       intro u
+       rw [hderiv_eq u, abs_mul]
+@@ -590,7 +593,7 @@
+     have hmeas_sum : Measurable (fun y : Fin n → ℝ =>
+         ∑ i : Fin n, v i * partialDeriv i f (ouShiftFin t x y)) :=
+       Finset.measurable_sum Finset.univ (fun i _ => hmeas_term i)
+-    simpa [F', a] using (measurable_const.mul hmeas_sum).aestronglyMeasurable
++    simpa [F', a, Pi.mul_def] using (measurable_const.mul hmeas_sum).aestronglyMeasurable
+   have h_bound_int : Integrable (fun _ : Fin n → ℝ => |a| * (n * M * ‖v‖)) (γFin n) :=
+     integrable_const _
+   have h_bound :
+@@ -656,7 +659,7 @@
+       rw [fderiv_apply_eq_sum_partial hf_smooth (ouShiftFin t (x + s • v) y) (a • v)]
+       simp [a, Finset.mul_sum, smul_eq_mul]
+       ring
+-    simpa [F, F', htarget] using h_comp
++    simpa [F, F', htarget, Function.comp_def] using h_comp
+   obtain ⟨_, h_deriv⟩ :=
+     hasDerivAt_integral_of_dominated_loc_of_deriv_le hs
+       (Filter.Eventually.of_forall hF_meas) hF_int hF'_meas h_bound h_bound_int h_diff
+@@ -870,7 +873,7 @@
+           (HasFDerivAt.comp s
+             (hasFDerivAt_update z (i := i) (a * s + b * y i))
+             h_affine.hasFDerivAt).hasDerivAt
+-        convert hraw using 1
++        convert hraw using 1 <;> try rfl
+         ext j
+         by_cases hji : j = i
+         · subst hji
+@@ -894,7 +897,7 @@
+         · simp [Pi.single_eq_of_ne hji]
+       rw [hsingle, ContinuousLinearMap.map_smul]
+       simp [smul_eq_mul]
+-    simpa [F, F', htarget] using h_comp
++    simpa [F, F', htarget, Function.comp_def] using h_comp
+   obtain ⟨_, h_deriv⟩ :=
+     hasDerivAt_integral_of_dominated_loc_of_deriv_le hs
+       (Filter.Eventually.of_forall hF_meas) hF_int hF'_meas h_bound h_bound_int h_diff
+@@ -966,7 +969,7 @@
+           have hscaled : HasDerivAt
+               (fun s => exp (-t) * ouSemigroupFin t (partialDeriv i f) (Function.update x i s))
+               (exp (-t) * (exp (-t) * ouSemigroupFin t (secondPartial i f) (Function.update x i s))) s := by
+-            simpa [secondPartial] using h.const_mul (exp (-t))
++            convert h.const_mul (exp (-t)) using 1 <;> rfl
+           have hdscaled := hscaled.deriv
+           rw [show exp (-2 * t) = exp (-t) * exp (-t) by
+             rw [show (-2 * t : ℝ) = -t + -t by ring, exp_add]]
+@@ -998,7 +1001,7 @@
+   have heval : MeasurePreserving (Function.eval i) (γFin n) Gaussian1D.γ := by
+     simpa [γFin] using
+       (MeasureTheory.measurePreserving_eval (μ := fun _ : Fin n => Gaussian1D.γ) i)
+-  simpa [Function.comp, Function.eval] using
++  simpa [Function.comp_def, Function.eval] using
+     heval.integrable_comp_of_integrable (((memLp_id_gaussianReal 1).integrable le_rfl).abs)
+ 
+ theorem integrable_sum_abs_γFin :
+@@ -1201,7 +1204,7 @@
+     set v : (Fin n → ℝ) → ℝ := fun y => f y * partialDeriv i g y
+     change ‖(fderiv ℝ (u + v) x) (Pi.single i 1)‖ ≤ Mf * Mg + 2 * (Mf * Mg) + Mf * Mg
+     have hadd : fderiv ℝ (u + v) x = fderiv ℝ u x + fderiv ℝ v x := by
+-      simpa [u, v] using fderiv_add (hdf'.mul hdg) (hdf.mul hdg')
++      simpa [u, v, Pi.mul_def] using fderiv_add (hdf'.mul hdg) (hdf.mul hdg')
+     rw [hadd]
+     rw [ContinuousLinearMap.add_apply]
+     have hmul1' : fderiv ℝ ((partialDeriv i f) * g) x =
+@@ -1373,7 +1376,8 @@
+ theorem IsCoreFin.integrable_gamma {f g : (Fin n → ℝ) → ℝ}
+     (hf : IsCoreFin f) (hg : IsCoreFin g) :
+     Integrable (ouGammaFin f g) (γFin n) := by
+-  simpa [ouGammaFin] using
++  unfold ouGammaFin
++  exact
+     (integrable_finset_sum (s := Finset.univ)
+       (f := fun i x => partialDeriv i f x * partialDeriv i g x)
+       (fun i _ => hf.integrable_partial_mul hg i))
+@@ -2955,7 +2959,7 @@
+               (f := fun j u => Real.exp (s j * u))
+               (μ := fun _ => Gaussian1D.γ) (fun j => ?_)
+             show Integrable (fun u => Real.exp (s j * u)) Gaussian1D.γ
+-            simpa using
++            simpa [Gaussian1D.γ] using
+               (ProbabilityTheory.integrable_exp_mul_gaussianReal (μ := 0) (v := 1) (s j))
+           have hrewrite : (fun w : Fin (m+1) → ℝ =>
+                 G w * Real.exp ((∑ j, s j * w j) - (∑ j, s j ^ 2) / 2))
+@@ -3046,9 +3050,9 @@
+ theorem exp_abs_gamma_integrable (K : ℝ) :
+     Integrable (fun u : ℝ => Real.exp (K * |u|)) Gaussian1D.γ := by
+   have h1 : Integrable (fun u : ℝ => Real.exp (K * u)) Gaussian1D.γ := by
+-    simpa using ProbabilityTheory.integrable_exp_mul_gaussianReal (μ := 0) (v := 1) K
++    simpa [Gaussian1D.γ] using ProbabilityTheory.integrable_exp_mul_gaussianReal (μ := 0) (v := 1) K
+   have h2 : Integrable (fun u : ℝ => Real.exp (-K * u)) Gaussian1D.γ := by
+-    simpa using ProbabilityTheory.integrable_exp_mul_gaussianReal (μ := 0) (v := 1) (-K)
++    simpa [Gaussian1D.γ] using ProbabilityTheory.integrable_exp_mul_gaussianReal (μ := 0) (v := 1) (-K)
+   refine (h1.add h2).mono ?_ ?_
+   · exact (Real.continuous_exp.comp (continuous_const.mul continuous_abs)).aestronglyMeasurable
+   · filter_upwards with u
+@@ -3213,7 +3217,8 @@
+     intro j _
+     have hproj : HasFDerivAt (fun x : Fin n → ℝ => x j)
+         (ContinuousLinearMap.proj j : (Fin n → ℝ) →L[ℝ] ℝ) x := by
+-      simpa using (ContinuousLinearMap.proj j : (Fin n → ℝ) →L[ℝ] ℝ).hasFDerivAt
++      convert (ContinuousLinearMap.proj j : (Fin n → ℝ) →L[ℝ] ℝ).hasFDerivAt using 1
++      rfl
+     simpa [mul_comm] using hproj.mul_const (w j)
+   have hlin : HasFDerivAt (fun x : Fin n → ℝ => α * ∑ i, x i * w i)
+       (α • ∑ j, w j • (ContinuousLinearMap.proj j : (Fin n → ℝ) →L[ℝ] ℝ)) x := by
+@@ -3223,6 +3228,7 @@
+       (Real.exp (α * ∑ i, x i * w i) • (α • ∑ j, w j •
+         (ContinuousLinearMap.proj j : (Fin n → ℝ) →L[ℝ] ℝ))) x := by
+     convert hcomp using 1
++    rfl
+   simpa [lapDir] using this
+ 
+ -- ‖lapDir α w‖ ≤ |α| * n * ‖w‖
+@@ -3268,8 +3274,13 @@
+   have hFn_int : Integrable (Fn x₀) (γFin n) := laplace_integrable ⟨hFc,Cf,d,hCf,hbd⟩ α x₀
+   have hcont_lapDir : Continuous (fun w : Fin n → ℝ => lapDir α w) := by
+     unfold lapDir
+-    exact continuous_const.smul (continuous_finset_sum _
+-      (fun j _ => (continuous_apply j).smul continuous_const))
++    have hsum : Continuous (fun w : Fin n → ℝ =>
++        ∑ j, w j • (ContinuousLinearMap.proj j : (Fin n → ℝ) →L[ℝ] ℝ)) := by
++      refine continuous_finsetSum _ (fun j _ => ?_)
++      exact (show Continuous (fun w : Fin n → ℝ => w j) from continuous_apply j).smul
++        (show Continuous (fun _ : Fin n → ℝ =>
++          (ContinuousLinearMap.proj j : (Fin n → ℝ) →L[ℝ] ℝ)) from continuous_const)
++    exact hsum.const_smul α
+   have hcont_expInner_x0 : Continuous
+       (fun w : Fin n → ℝ => Real.exp (α * ∑ i, x₀ i * w i)) :=
+     Real.continuous_exp.comp (continuous_const.mul (continuous_finset_sum _
+@@ -3341,7 +3352,7 @@
+     show HasFDerivAt (fun x : Fin n → ℝ => F w * Real.exp (α * ∑ i, x i * w i))
+       (F w • (Real.exp (α * ∑ i, x i * w i) • lapDir α w)) x
+     have hd := (hasFDerivAt_expInner α w x).const_smul (F w)
+-    simpa [smul_eq_mul] using hd
++    simpa [smul_eq_mul, Pi.smul_def] using hd
+ 
+ -- The integral derivative equals ∑ⱼ J_{α wⱼ F}(x₀) • projⱼ.
+ set_option maxHeartbeats 800000 in
+@@ -3543,14 +3554,14 @@
+       have h_f : HasFDerivAt g (fderiv ℝ g (Function.update x i r))
+           (Function.update x i r) :=
+         ((hg.differentiable (by simp)).differentiableAt).hasFDerivAt
+-      simpa [partialDeriv] using (h_f.comp_hasDerivAt r h_update).deriv
++      simpa [partialDeriv, Function.comp_def] using (h_f.comp_hasDerivAt r h_update).deriv
+     rw [hsd]
+     have h_update := hasDerivAt_update x i s
+     have h_f : HasFDerivAt (partialDeriv i g)
+         (fderiv ℝ (partialDeriv i g) (Function.update x i s))
+         (Function.update x i s) :=
+       ((hpartial_C1.differentiable (by simp)).differentiableAt).hasFDerivAt
+-    simpa [secondPartial] using (h_f.comp_hasDerivAt s h_update).deriv
++    simpa [secondPartial, Function.comp_def] using (h_f.comp_hasDerivAt s h_update).deriv
+   rw [hsec]
+   simp
+ 
+@@ -3691,7 +3702,7 @@
+     have : Measurable (fun p : ℝ × (Fin n → ℝ) =>
+         h (Fin.insertNth (α := fun _ => ℝ) i p.1 p.2)) :=
+       hh_meas.comp hcont.measurable
+-    simpa [Function.uncurry, hF] using this
++    convert this using 1 <;> rfl
+   have hF_int : Integrable (Function.uncurry F)
+       (Gaussian1D.γ.prod (γFin n)) := by
+     refine Integrable.mono' (integrable_const C)
+@@ -3844,7 +3855,6 @@
+               (Fin.removeNth i z) := (Fin.insertNth_self_removeNth i z).symm
+           conv_lhs => rw [hz]
+           rw [ouCoord_insertNth_eq i t g (z i) (Fin.removeNth i z)]
+-        simp only []
+         rw [hval]
+         have hb := hPG_bd (Fin.removeNth i z) (z i)
+         rw [hG] at hb
+@@ -3891,7 +3901,7 @@
+     have hj : Measurable (fun p : (Fin n → ℝ) × ℝ =>
+         G p.1 p.2 * Real.log (G p.1 p.2)) := by
+       have hgj : Measurable (fun p : (Fin n → ℝ) × ℝ => G p.1 p.2) := by
+-        simpa [hG] using hg_meas.comp h_insert_cont.measurable
++        simpa [hG, Function.comp_def] using hg_meas.comp h_insert_cont.measurable
+       exact hgj.mul (Real.measurable_log.comp hgj)
+     simpa [Gaussian1D.boltzmannEntropy] using
+       hj.stronglyMeasurable.integral_prod_right'.measurable
+@@ -3913,7 +3923,7 @@
+             ((continuous_const.mul (continuous_snd.comp continuous_fst)).add
+               (continuous_const.mul continuous_snd))
+             (continuous_fst.comp continuous_fst)).measurable
+-        simpa [hG] using hg_meas.comp this
++        simpa [hG, Function.comp_def] using hg_meas.comp this
+       have hP : Measurable (fun p : (Fin n → ℝ) × ℝ =>
+           Gaussian1D.ouSemigroup t (G p.1) p.2) := by
+         simpa [Gaussian1D.ouSemigroup] using
+@@ -3935,7 +3945,7 @@
+         rw [this]
+         exact hD_meas.comp h_insert_cont.measurable
+       have hgj : Measurable (fun p : (Fin n → ℝ) × ℝ => G p.1 p.2) := by
+-        simpa [hG] using hg_meas.comp h_insert_cont.measurable
++        simpa [hG, Function.comp_def] using hg_meas.comp h_insert_cont.measurable
+       exact (hd.pow_const 2).div hgj
+     simpa [Gaussian1D.fisherInfo] using
+       hj.stronglyMeasurable.integral_prod_right'.measurable
+@@ -4587,7 +4597,7 @@
+   have hsetShift_meas : ∀ (z : Fin (m + 1) → ℝ),
+       Measurable (fun y => setShift (insert j S) t z y) := by
+     intro z
+-    refine measurable_pi_lambda _ (fun i => ?_)
++    refine Measurable.of_eval (fun i => ?_)
+     by_cases hi : i ∈ insert j S
+     · simp only [setShift, hi, if_true]
+       exact measurable_const.add
+@@ -4625,7 +4635,7 @@
+ /-- `setShift` is measurable in its displacement argument. -/
+ theorem measurable_setShift {n : ℕ} (S : Finset (Fin n)) (t : ℝ)
+     (x : Fin n → ℝ) : Measurable (fun y => setShift S t x y) := by
+-  refine measurable_pi_lambda _ (fun i => ?_)
++  refine Measurable.of_eval (fun i => ?_)
+   by_cases hi : i ∈ S
+   · simp only [setShift, hi, if_true]
+     exact measurable_const.add (measurable_const.mul (measurable_pi_apply i))
+@@ -4788,7 +4798,7 @@
+       HasDerivAt (fun r => F r y) (F' r y) r := by
+     intro y r
+     have := section_hasDerivAt_of_differentiable hg_diff k (setShift S t x y) r
+-    simpa [hF, hF', coordSection] using this
++    convert this using 1 <;> rfl
+   have hF_int : Integrable (F (x k)) (γFin n) := by
+     have hmeas : Measurable (F (x k)) := by
+       have : Measurable (fun y => Function.update (setShift S t x y) k (x k)) :=
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean
+@@ -1,4 +1,7 @@
+ import MarkovSemigroups.Instances.WorkInProgress.EuclideanGeneratorLimit
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
+ 
+ open MeasureTheory Filter Set
+ open scoped BigOperators InnerProductSpace
+@@ -32,7 +35,7 @@
+         (fun y => f (mixCLM (n := n) (Real.exp (-t)) (Real.sqrt (1 - Real.exp (-2 * t))) (x, y)))
+           =ᵐ[γFin n]
+         (fun y => g (mixCLM (n := n) (Real.exp (-t)) (Real.sqrt (1 - Real.exp (-2 * t))) (x, y))) := by
+-    simpa [Function.curry] using MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod
++    exact MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod
+   filter_upwards [hsec] with x hx
+   rw [ouSemigroupFin, ouSemigroupFin]
+   exact integral_congr_ae hx
+@@ -842,7 +845,9 @@
+   ρ := 1
+   hρ := one_pos
+   gradient_decay := fun f t ht hf => by
+-    simpa using GaussianFin.ouSemigroupFin_gradient_decay (n := n) f t ht hf
++    change (∫ x, ouGammaFin (ouSemigroupFin t f) (ouSemigroupFin t f) x ∂γFin n) ≤
++      Real.exp (-2 * 1 * t) * ∫ x, ouGammaFin f f x ∂γFin n
++    simpa only [mul_one] using GaussianFin.ouSemigroupFin_gradient_decay (n := n) f t ht hf
+   semigroup_zero := fun f => GaussianFin.ouSemigroupFin_zero (n := n) f
+   semigroup_add := fun s t f hs ht hf =>
+     GaussianFin.ouSemigroupFin_compose (n := n) s t hs ht hf
+@@ -853,7 +858,10 @@
+   semigroup_selfAdjoint := fun f g t ht hf hg =>
+     GaussianFin.ouSemigroupFin_selfAdjoint (n := n) f g t ht hf hg
+   semigroup_l2_decay_bound := fun f t ht hf => by
+-    simpa using GaussianFin.ouSemigroupFin_l2_decay_bound (n := n) f t ht hf
++    change (∫ x, (f x) ^ 2 ∂γFin n) -
++      (∫ x, (ouSemigroupFin t f x) ^ 2 ∂γFin n) ≤
++      (1 - Real.exp (-2 * 1 * t)) / 1 * ouEnergyFin f f
++    simpa only [mul_one, div_one] using GaussianFin.ouSemigroupFin_l2_decay_bound (n := n) f t ht hf
+   semigroup_l2_sq_hasDerivWithinAt := fun f t ht hf =>
+     GaussianFin.ouSemigroupFin_l2_sq_hasDerivWithinAt f t ht hf
+   semigroup_ergodic := fun f hf =>
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean
+@@ -15,6 +15,9 @@
+ import Mathlib.MeasureTheory.Integral.Prod
+ import Mathlib.MeasureTheory.Measure.Prod
+ import Mathlib.Probability.HasLaw
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
+ 
+ open MeasureTheory Filter Set Real ProbabilityTheory
+ open scoped ENNReal Topology InnerProductSpace
+@@ -481,7 +484,7 @@
+           Prod.fst ⁻¹' s = s ×ˢ (Set.univ : Set (Fin n → ℝ)) := by
+         ext z
+         simp
+-      simpa [fstPullL2, hs_prod, hpre]
++      simpa [fstPullL2, hs_prod, hpre, MeasureTheory.Lp.compMeasurePreservingₗᵢ]
+         using
+           (MeasureTheory.Lp.indicatorConstLp_compMeasurePreserving
+             (p := 2) (f := Prod.fst) (μ := (γFin n).prod (γFin n)) (μb := γFin n)
+@@ -541,15 +544,14 @@
+       ((mixPullL2 (n := n) t ht f : Lp ℝ 2 ((γFin n).prod (γFin n))) :
+           ((Fin n → ℝ) × (Fin n → ℝ)) → ℝ) =ᵐ[((γFin n).prod (γFin n))]
+         fun z => f (mixCLM (n := n) (exp (-t)) (sqrt (1 - exp (-2 * t))) z) := by
+-    simpa [mixPullL2, hmp] using
++    simpa [mixPullL2, hmp, Function.comp_def] using
+       (MeasureTheory.Lp.coeFn_compMeasurePreserving (g := f) (hf := hmp))
+   have hsec :
+     ∀ᵐ x ∂γFin n,
+       (fun y => ((mixPullL2 (n := n) t ht f :
+         Lp ℝ 2 ((γFin n).prod (γFin n))) : ((Fin n → ℝ) × (Fin n → ℝ)) → ℝ) (x, y)) =ᵐ[γFin n]
+         (fun y => f (mixCLM (n := n) (exp (-t)) (sqrt (1 - exp (-2 * t))) (x, y))) := by
+-    simpa [Function.curry] using
+-      (MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod)
++    exact MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod
+   filter_upwards [hsec] with x hx
+   rw [ouSemigroupFin]
+   exact integral_congr_ae hx
+@@ -1020,7 +1022,7 @@
+       ∀ᵐ x ∂γFin n,
+         (fun y => f (mixCLM (n := n) (exp (-t)) (sqrt (1 - exp (-2 * t))) (x, y))) =ᵐ[γFin n]
+         (fun y => g (mixCLM (n := n) (exp (-t)) (sqrt (1 - exp (-2 * t))) (x, y))) := by
+-    simpa [Function.curry] using MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod
++    exact MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod
+   filter_upwards [hsec] with x hx
+   rw [ouSemigroupFin, ouSemigroupFin]
+   exact integral_congr_ae hx
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean
+@@ -17,6 +17,9 @@
+ 
+ import MarkovSemigroups.Instances.WorkInProgress.EuclideanGeneratorLp
+ 
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
++
+ open MeasureTheory Filter
+ open scoped BigOperators Topology InnerProductSpace ContDiff
+ 
+@@ -25,6 +28,10 @@
+ namespace GaussianFin
+ 
+ variable {n : ℕ}
++
++private theorem partialDeriv_as_function (i : Fin n) (f : (Fin n → ℝ) → ℝ) :
++    partialDeriv i f = fun x => fderiv ℝ f x (Pi.single i 1) := rfl
++
+ 
+ /-- **`Fin n`-generic Stein/Gaussian-IBP wrapper** (Codex, 2026-05-16).
+ `EuclideanFin.stein_partialDeriv_ouShiftFin` is stated only for
+@@ -113,7 +120,7 @@
+         (fun y => f (mixCLM (n := n) (Real.exp (-t)) (Real.sqrt (1 - Real.exp (-2 * t))) (x, y)))
+           =ᵐ[γFin n]
+         (fun y => g (mixCLM (n := n) (Real.exp (-t)) (Real.sqrt (1 - Real.exp (-2 * t))) (x, y))) := by
+-    simpa [Function.curry] using MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod
++    exact MeasureTheory.Measure.ae_ae_eq_curry_of_prod hprod
+   filter_upwards [hsec] with x hx
+   rw [ouSemigroupFin, ouSemigroupFin]
+   exact integral_congr_ae hx
+@@ -265,7 +272,7 @@
+         ∀ i : Fin n, Integrable (fun y : Fin n → ℝ => M * (|x i| + (1 / B) * |y i|)) (γFin n) := by
+       intro i
+       have h_eval : Integrable (fun y : Fin n → ℝ => |y i|) (γFin n) := integrable_abs_eval_γFin i
+-      simpa [mul_add, add_comm, add_left_comm, add_assoc, mul_comm, mul_left_comm, mul_assoc]
++      simpa [mul_add, add_comm, add_left_comm, add_assoc, mul_comm, mul_left_comm, mul_assoc, Pi.add_def]
+         using (integrable_const (M * |x i|)).add (h_eval.const_mul (M * (1 / B)))
+     refine integrable_finset_sum (s := Finset.univ)
+       (f := fun i (y : Fin n → ℝ) => M * (|x i| + (1 / B) * |y i|)) ?_
+@@ -282,14 +289,14 @@
+       intro i
+       have h1 : HasDerivAt (fun s : ℝ => Real.exp (-s) * x i) (-Real.exp (-t) * x i) t := by
+         have hneg : HasDerivAt (fun s : ℝ => -s) (-1 : ℝ) t := by
+-          simpa using (hasDerivAt_id t).neg
++          exact hasDerivAt_neg' t
+         have hexp : HasDerivAt (fun s : ℝ => Real.exp (-s)) (Real.exp (-t) * (-1)) t := hneg.exp
+         convert hexp.mul_const (x i) using 1 <;> ring
+       have h2 :
+           HasDerivAt (fun s : ℝ => Real.sqrt (1 - Real.exp (-2 * s)) * y i)
+             ((Real.exp (-2 * t) / Real.sqrt (1 - Real.exp (-2 * t))) * y i) t := by
+         exact (Gaussian1D.hasDerivAt_b t (lt_trans hε_pos ht.1)).mul_const (y i)
+-      simpa [ouShiftFin] using h1.add h2
++      simpa [ouShiftFin, Pi.add_def] using h1.add h2
+     have h_f :
+         HasFDerivAt f (fderiv ℝ f (ouShiftFin t x y)) (ouShiftFin t x y) :=
+       ((hf_smooth.differentiable (by simp)).differentiableAt).hasFDerivAt
+@@ -298,7 +305,7 @@
+       (fun i => -Real.exp (-t) * x i
+         + (Real.exp (-2 * t) / Real.sqrt (1 - Real.exp (-2 * t))) * y i)
+     rw [hsum] at h_comp
+-    simpa [F, F'] using h_comp
++    simpa [F, F', Function.comp_def] using h_comp
+   have hF_meas_ev : ∀ᶠ t in 𝓝 t₀, AEStronglyMeasurable (F t) (γFin n) :=
+     Filter.eventually_of_mem h_nbhd hF_meas
+   obtain ⟨_, h_deriv⟩ :=
+@@ -632,10 +639,8 @@
+       (Set.Ici 0) 0 := by
+   have hf : IsCoreFin f := by
+     refine ⟨hf_smooth, M, ?_⟩
+-    simpa [partialDeriv, secondPartial] using hf_bd
+-  simpa only [ouSemigroupFin, ouShiftFin, γFin, Gaussian1D.γ,
+-    ouGeneratorFin_apply, secondPartial, partialDeriv] using
+-    hasDerivWithinAt_t_ouSemigroupFin_zero_core hf x
++    exact hf_bd
++  exact hasDerivWithinAt_t_ouSemigroupFin_zero_core hf x
+ 
+ /-- **The precise blocker (Codex 2026-05-16): the nD pointwise OU
+ heat equation at `t = 0⁺`.** The branch controls *spatial*
+@@ -714,7 +719,7 @@
+       refine add_le_add ?_ ?_
+       · refine Finset.sum_le_sum ?_
+         intro i hi
+-        simpa [secondPartial, partialDeriv, Real.norm_eq_abs] using (hM x).2.2 i
++        simpa [secondPartial, partialDeriv, partialDeriv_as_function, Real.norm_eq_abs] using (hM x).2.2 i
+       · refine Finset.sum_le_sum ?_
+         intro i hi
+         have hpi : |partialDeriv i f x| ≤ M := by
+@@ -976,7 +981,7 @@
+   have hcoord : ∀ i : Fin n, MemLp (fun x : Fin n → ℝ => |x i|) 2 μ := by
+     intro i
+     have heval : MeasurePreserving (Function.eval i) μ Gaussian1D.γ := by
+-      simpa [μ, γFin] using
++      simpa [μ, γFin, Gaussian1D.γ] using
+         (MeasureTheory.measurePreserving_eval (μ := fun _ : Fin n => Gaussian1D.γ) i)
+     have hid : MemLp (id : ℝ → ℝ) 2 Gaussian1D.γ := by
+       have hid0 : MemLp (id : ℝ → ℝ) 2 (ProbabilityTheory.gaussianReal (0 : ℝ) 1) :=
+@@ -995,11 +1000,11 @@
+   have hH_mem : MemLp H 2 μ := by
+     have hconst : MemLp (fun _ : Fin n → ℝ => (n : ℝ) * M) 2 μ := memLp_const ((n : ℝ) * M)
+     have hsum : MemLp (fun x : Fin n → ℝ => M * ∑ i : Fin n, |x i|) 2 μ := hsumabs_mem.const_mul M
+-    simpa [H] using hconst.add hsum
++    simpa [H, Pi.add_def] using hconst.add hsum
+   have h2H_mem : MemLp (fun x : Fin n → ℝ => 2 * H x) 2 μ := hH_mem.const_mul 2
+   have hLf_bd : ∀ x : Fin n → ℝ, ‖Lf x‖ ≤ H x := by
+     intro x
+-    simpa [Lf, H, ouGeneratorFin_apply, secondPartial, partialDeriv] using
++    simpa [Lf, H, ouGeneratorFin_apply, secondPartial, partialDeriv, partialDeriv_as_function] using
+       (norm_ouGeneratorFin_le_of_coreBound (n := n) M hf_bd x)
+   have hquot_bd : ∀ x : Fin n → ℝ, ∀ ⦃t : ℝ⦄, 0 < t →
+       ‖t⁻¹ * (ouSemigroupFin t f x - f x)‖ ≤ H x := by
+@@ -1065,7 +1070,7 @@
+         have hq :
+             Tendsto (fun t : ℝ => t⁻¹ * (ouSemigroupFin t f x - f x))
+               (nhdsWithin (0 : ℝ) (Set.Ioi 0)) (nhds (Lf x)) := by
+-          simpa [Lf, ouGeneratorFin_apply, secondPartial, partialDeriv] using
++          simpa [Lf, ouGeneratorFin_apply, secondPartial, partialDeriv, partialDeriv_as_function] using
+             (tendsto_diffQuot_ouSemigroupFin_zero (n := n) hcore x)
+         have hconst : Tendsto (fun _ : ℝ => Lf x)
+             (nhdsWithin (0 : ℝ) (Set.Ioi 0)) (nhds (Lf x)) := tendsto_const_nhds
+@@ -1078,14 +1083,14 @@
+   have hPow :
+       Tendsto (fun t : ℝ => (∫ x, (D t x) ^ 2 ∂μ) ^ (1 / (2 : ℝ)))
+         (nhdsWithin (0 : ℝ) (Set.Ioi 0)) (nhds 0) := by
+-    simpa using
++    simpa [Function.comp_def] using
+       (Real.continuous_rpow_const (by positivity : 0 ≤ (1 / (2 : ℝ)))).continuousAt.tendsto.comp
+         hIntLim
+   have hRhs :
+       Tendsto
+         (fun t : ℝ => ENNReal.ofReal ((∫ x, (D t x) ^ 2 ∂μ) ^ (1 / (2 : ℝ))))
+         (nhdsWithin (0 : ℝ) (Set.Ioi 0)) (nhds 0) := by
+-    simpa using (ENNReal.continuous_ofReal.tendsto 0).comp hPow
++    simpa [Function.comp_def] using (ENNReal.continuous_ofReal.tendsto 0).comp hPow
+   have hConcrete :
+       Tendsto
+         (fun t : ℝ => eLpNorm
+@@ -1121,7 +1126,7 @@
+         ((((P t) (hf_mem.toLp f)) : Lp ℝ 2 μ) : (Fin n → ℝ) → ℝ) =ᵐ[μ]
+             ouSemigroupFin t ((((hf_mem.toLp f) : Lp ℝ 2 μ) : (Fin n → ℝ) → ℝ)) := hPrep
+         _ =ᵐ[μ] ouSemigroupFin t f :=
+-          by simpa [μ, γFin] using
++          by simpa [μ, γFin, Gaussian1D.γ] using
+             (ouSemigroupFin_ae_eq_of_aeEq_local (n := n) t ht.le hf_mem.coeFn_toLp)
+     have hEq1 :
+         eLpNorm (⇑(t⁻¹ • (P t (hf_mem.toLp f) - hf_mem.toLp f)) - Lf) 2 μ
+@@ -1174,9 +1179,7 @@
+       (nhdsWithin (0 : ℝ) (Set.Ioi 0)) (nhds (ouGeneratorFinLp hf)) := by
+   obtain ⟨hsm, M, hM⟩ := hf
+   have hfc : IsCoreFin f := ⟨hsm, M, hM⟩
+-  simpa only [γFin, Gaussian1D.γ, ouGeneratorFin_apply, secondPartial,
+-    partialDeriv] using
+-    gaussianFin_diffQuot_tendsto_Lp (n := n) f hsm M hM
++  exact gaussianFin_diffQuot_tendsto_Lp (n := n) f hsm M hM
+       (isCoreFin_memLp f hfc) (memLp_ouGeneratorFin hfc)
+       (ouSemigroupFinLp (n := n))
+       (fun t ht φ => by
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean
+@@ -17,6 +17,9 @@
+ 
+ import MarkovSemigroups.Instances.WorkInProgress.EuclideanFinLp
+ import MarkovSemigroups.Instances.WorkInProgress.EuclideanGenerator
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
+ 
+ open MeasureTheory ProbabilityTheory
+ open scoped BigOperators ENNReal NNReal InnerProductSpace ContDiff
+@@ -190,7 +193,7 @@
+                   exact mul_le_mul_of_nonneg_left hpartial hMg0
+       _ = (Mg * Mf) * |p.1| := by ring
+   have hA_int : Integrable A (Gaussian1D.γ.prod (γFin n)) := by
+-    simpa [A, mul_sub] using hA1_int.sub hA2_int
++    simpa [A, mul_sub, Pi.sub_def] using hA1_int.sub hA2_int
+   have hB_int : Integrable B (Gaussian1D.γ.prod (γFin n)) := by
+     refine Integrable.mono' (integrable_const (Mg * Mf))
+       ((((IsCoreFin.partial_measurable hg_core i).comp hφ_meas).mul
+@@ -334,10 +337,10 @@
+               (fun _ : Fin n => ProbabilityTheory.gaussianReal 0 1)) := by
+   have hf : IsCoreFin f := by
+     refine ⟨hf_smooth, Mf, ?_⟩
+-    simpa [partialDeriv, secondPartial] using hf_bd
++    exact hf_bd
+   have hg : IsCoreFin g := by
+     refine ⟨hg_smooth, Mg, ?_⟩
+-    simpa [partialDeriv, secondPartial] using hg_bd
++    exact hg_bd
+   have hMf0 : (0 : ℝ) ≤ Mf := le_trans (norm_nonneg _) ((hf_bd (fun _ => 0)).1)
+   have hMg0 : (0 : ℝ) ≤ Mg := le_trans (norm_nonneg _) ((hg_bd (fun _ => 0)).1)
+   change ∫ x, g x *
+@@ -391,7 +394,7 @@
+                   _ ≤ Mg * (|x i| * Mf) := by
+                           exact mul_le_mul_of_nonneg_left hpartial hMg0
+             _ = (Mg * Mf) * |x i| := by ring
+-        simpa [mul_sub] using hA.sub hB
++        simpa [mul_sub, Pi.sub_def] using hA.sub hB
+       have hsum_int :
+           ∀ i ∈ (Finset.univ : Finset (Fin (m + 1))),
+             Integrable (fun x => g x * (secondPartial i f x - x i * partialDeriv i f x))
+@@ -450,9 +453,7 @@
+     ∫ x, g x * ouGeneratorFin f x ∂γFin n = - ouEnergyFin g f := by
+   obtain ⟨hsf, Mf, hMf⟩ := hf
+   obtain ⟨hsg, Mg, hMg⟩ := hg
+-  simpa only [ouGeneratorFin_apply, ouEnergyFin, ouGammaFin, γFin,
+-    Gaussian1D.γ, secondPartial, partialDeriv] using
+-    gaussianFin_integrationByParts (n := n) f g hsf Mf hMf hsg Mg hMg
++  convert gaussianFin_integrationByParts (n := n) f g hsf Mf hMf hsg Mg hMg using 1 <;> rfl
+ 
+ /-- **G4 — nD Gaussian integration by parts (inner-product form).**
+ For core `f, g`: `⟪g, ouGeneratorFin f⟫_{L²(γFin n)} = -ouEnergyFin g f`.
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean
+@@ -560,7 +560,7 @@
+     have h_f : HasDerivAt f (deriv f (a * x + b * y)) (a * x + b * y) :=
+       hf_diff.differentiableAt.hasDerivAt
+     have := h_f.comp y h_inner
+-    simpa [mul_comm b (deriv f _)] using this
++    simpa [Function.comp_def, mul_comm b (deriv f _)] using this
+   have hf_xy_contDiff : ∀ x, ContDiff ℝ 1 (fun y => f (a * x + b * y)) := by
+     intro x
+     have h_inner : ContDiff ℝ 1 (fun y : ℝ => a * x + b * y) :=
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean
+@@ -16,6 +16,9 @@
+ import MarkovSemigroups.Diffusion.StroockVaropoulos
+ import MarkovSemigroups.Instances.WorkInProgress.EuclideanFinBE
+ import Mathlib.Analysis.SpecialFunctions.SmoothTransition
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
+ 
+ open MeasureTheory Filter
+ open scoped ENNReal InnerProductSpace
+@@ -269,7 +272,8 @@
+   have hf_r : MemLp ((f : (Fin n → ℝ) → ℝ)) r (γFin n) := by
+     by_cases hp2 : ENNReal.ofReal p ≤ 2
+     · simpa [r, max_eq_right hp2] using hf_two
+-    · simpa [r, max_eq_left (le_of_not_ge hp2)] using hf_p
++    · change MemLp (f : (Fin n → ℝ) → ℝ) (ENNReal.ofReal p) (γFin n) at hf_p
++      simpa [r, max_eq_left (le_of_not_ge hp2)] using hf_p
+   let fr : Lp ℝ r (γFin n) := hf_r.toLp ((f : (Fin n → ℝ) → ℝ))
+   let δ : ℕ → ℝ := fun m => (((m : ℝ) + 1)⁻¹)
+   have hδ_pos : ∀ m, 0 < δ m := by
+@@ -279,7 +283,7 @@
+     simpa [δ, one_div] using (tendsto_one_div_add_atTop_nhds_zero_nat : Tendsto
+       (fun m : ℕ => 1 / ((m : ℝ) + 1)) atTop (nhds 0))
+   have hδ_enn_tendsto : Tendsto (fun m => ENNReal.ofReal (δ m)) atTop (nhds 0) := by
+-    simpa using (ENNReal.continuous_ofReal.tendsto 0).comp hδ_tendsto
++    simpa [Function.comp_def] using (ENNReal.continuous_ofReal.tendsto 0).comp hδ_tendsto
+   let S : Set (Lp ℝ r (γFin n)) := smoothCoreSet n r
+   choose u huS huDist using fun m : ℕ =>
+     (smoothCoreSet_dense (n := n) (r := r) hr_top).exists_dist_lt fr (hδ_pos m)
+@@ -302,7 +306,7 @@
+     simpa using max_eq_left hx3
+   have hpos_tendsto :
+       Tendsto (fun m => MeasureTheory.Lp.posPart ((hh_mem m).toLp (h m))) atTop (nhds fr) := by
+-    simpa [hfr_posPart] using
++    simpa [hfr_posPart, Function.comp_def] using
+       (MeasureTheory.Lp.continuous_posPart.tendsto fr).comp hh_tendsto
+   let hpos : ℕ → (Fin n → ℝ) → ℝ := fun m x => max (h m x) 0
+   have hpos_mem : ∀ m, MemLp (hpos m) r (γFin n) := by
+@@ -334,7 +338,7 @@
+   let k : ℕ → (Fin n → ℝ) → ℝ := fun m x => smoothPosApprox (δ m) (h m x)
+   have hk_supp : ∀ m, HasCompactSupport (k m) := by
+     intro m
+-    simpa [k] using (hh_supp m).comp_left (smoothPosApprox_zero (hδ_pos m))
++    simpa [k, Function.comp_def] using (hh_supp m).comp_left (smoothPosApprox_zero (hδ_pos m))
+   have hk_smooth : ∀ m, ContDiff ℝ (⊤ : ℕ∞) (k m) := by
+     intro m
+     exact (smoothPosApprox_contDiff (ne_of_gt (hδ_pos m))).comp (hh_smooth m)
+@@ -353,7 +357,9 @@
+     calc
+       eLpNorm (hpos m - k m) r (γFin n)
+           ≤ eLpNorm (fun _ : Fin n → ℝ => δ m) r (γFin n) :=
+-        eLpNorm_mono_ae_real <| Filter.Eventually.of_forall hbound
++        eLpNorm_mono_ae_real
++          ((hpos_mem m).aestronglyMeasurable.sub (hk_mem m).aestronglyMeasurable)
++          (Filter.Eventually.of_forall hbound)
+       _ = ENNReal.ofReal (δ m) := by
+         rw [eLpNorm_const' (c := δ m) hr_zero hr_top]
+         simp [measure_univ, Real.enorm_of_nonneg (hδ_pos m).le]
+@@ -381,17 +387,14 @@
+               rw [hsplit]
+         _ ≤ eLpNorm (((f : (Fin n → ℝ) → ℝ)) - hpos m) r (γFin n)
+               + eLpNorm (hpos m - k m) r (γFin n) :=
+-            eLpNorm_add_le
+-              ((hf_r.aestronglyMeasurable.sub (hpos_mem m).aestronglyMeasurable))
+-              ((hpos_mem m).aestronglyMeasurable.sub (hk_mem m).aestronglyMeasurable)
+-              hr_one
++            eLpNorm_add_le hr_one
+         _ ≤ eLpNorm (((f : (Fin n → ℝ) → ℝ)) - hpos m) r (γFin n) + ENNReal.ofReal (δ m) := by
+             gcongr
+             exact hk_err_le m
+   let g : ℕ → (Fin n → ℝ) → ℝ := fun m x => k m x + δ m
+   have hg_core : ∀ m, IsCoreFin (g m) := by
+     intro m
+-    simpa [g] using IsCoreFin_add (hk_core m) (IsCoreFin_const (n := n) (δ m))
++    simpa [g, Pi.add_def] using IsCoreFin_add (hk_core m) (IsCoreFin_const (n := n) (δ m))
+   have hg_mem_r : ∀ m, MemLp (g m) r (γFin n) := by
+     intro m
+     refine MemLp.of_bound (hg_core m).stronglyMeasurable.aestronglyMeasurable ?B ?hB
+@@ -433,9 +436,7 @@
+               rw [hsplit]
+         _ ≤ eLpNorm (((f : (Fin n → ℝ) → ℝ)) - k m) r (γFin n)
+               + eLpNorm (fun _ : Fin n → ℝ => -δ m) r (γFin n) :=
+-            eLpNorm_add_le
+-              ((hf_r.aestronglyMeasurable.sub (hk_mem m).aestronglyMeasurable))
+-              aestronglyMeasurable_const hr_one
++            eLpNorm_add_le hr_one
+         _ = eLpNorm (((f : (Fin n → ℝ) → ℝ)) - k m) r (γFin n)
+               + eLpNorm (fun _ : Fin n → ℝ => δ m) r (γFin n) := by
+             rw [hconst_neg]
+@@ -451,7 +452,6 @@
+             ≤ eLpNorm (((f : (Fin n → ℝ) → ℝ)) - g m) r (γFin n) := by
+       intro m
+       exact eLpNorm_le_eLpNorm_of_exponent_le hp_le_r
+-        ((hf_r.aestronglyMeasurable.sub (hg_core m).stronglyMeasurable.aestronglyMeasurable))
+     exact
+       tendsto_of_tendsto_of_tendsto_of_le_of_le tendsto_const_nhds hg_r_tendsto
+         (fun m => bot_le) hp_tendsto_le
+@@ -461,7 +461,6 @@
+             ≤ eLpNorm (((f : (Fin n → ℝ) → ℝ)) - g m) r (γFin n) := by
+       intro m
+       exact eLpNorm_le_eLpNorm_of_exponent_le h2_le_r
+-        ((hf_r.aestronglyMeasurable.sub (hg_core m).stronglyMeasurable.aestronglyMeasurable))
+     exact
+       tendsto_of_tendsto_of_tendsto_of_le_of_le tendsto_const_nhds hg_r_tendsto
+         (fun m => bot_le) htwo_tendsto_le
+--- originals/MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean
++++ MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean
+@@ -143,7 +143,7 @@
+ theorem integrable_abs_mul_gaussianPDF :
+     Integrable (fun y : ℝ => |y| * gaussianPDFReal 0 1 y) := by
+   refine Integrable.mono' integrable_id_mul_gaussianPDF.abs
+-    ((measurable_id.abs.mul (measurable_gaussianPDFReal _ _)).aestronglyMeasurable) ?_
++    ((show Measurable (fun y : ℝ => |y| * gaussianPDFReal 0 1 y) by fun_prop).aestronglyMeasurable) ?_
+   filter_upwards with y
+   rw [Real.norm_eq_abs, abs_mul, abs_abs,
+       abs_of_nonneg (gaussianPDFReal_nonneg _ _ _),
+@@ -393,7 +393,7 @@
+     have h_α : HasDerivAt (fun s : ℝ => Real.exp (-s) * x)
+         (-Real.exp (-τ) * x) τ := by
+       have h1 : HasDerivAt (fun s : ℝ => -s) (-1 : ℝ) τ := by
+-        simpa using (hasDerivAt_id τ).neg
++        exact hasDerivAt_neg' τ
+       have h2 : HasDerivAt (fun s : ℝ => Real.exp (-s))
+           (Real.exp (-τ) * (-1)) τ := h1.exp
+       have h3 : HasDerivAt (fun s : ℝ => Real.exp (-s) * x)
+@@ -464,7 +464,7 @@
+       ((IsCore.contDiff_deriv hf_core).differentiable
+         (by simp)).differentiableAt.hasDerivAt
+     have := h_outer.comp y h_inner
+-    simpa [mul_comm (deriv (deriv f) _)] using this.deriv
++    simpa [Function.comp_def, mul_comm (deriv (deriv f) _)] using this.deriv
+   have hg'_bd : ∀ y, ‖deriv g y‖ ≤ M := fun y => by
+     rw [hg'_eq y]
+     show |b₀ * deriv (deriv f) (a₀ * x + b₀ * y)| ≤ M
+@@ -720,7 +720,7 @@
+   have hh_C1 : ContDiff ℝ 1 h := hh.of_le (by norm_num : (1 : WithTop ℕ∞) ≤ 2)
+   have hh_diff : Differentiable ℝ h := hh_C1.differentiable (by norm_num)
+   have hh' : ContDiff ℝ 1 (deriv h) := by
+-    have h2 : ContDiff ℝ (1 + 1) h := by simpa using hh
++    have h2 : ContDiff ℝ (1 + 1) h := by convert hh using 1 <;> norm_num
+     exact h2.deriv'
+   have hh'_diff : Differentiable ℝ (deriv h) := hh'.differentiable (by norm_num)
+   -- Measurability.
+@@ -988,7 +988,7 @@
+         (ouSemigroup s f x) := by
+       simpa using hasDerivAt_pow 2 (ouSemigroup s f x)
+     have := h_sq.comp s h_heat
+-    convert this using 1
++    simpa only [Function.comp_def] using this
+   have hF_meas_ev : ∀ᶠ s in nhds t₀, AEStronglyMeasurable (F s) γ :=
+     Filter.eventually_of_mem h_nbhd hF_meas
+   obtain ⟨_, h_deriv⟩ :=
