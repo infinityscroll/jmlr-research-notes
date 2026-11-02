@@ -1,0 +1,3 @@
+Actual quartic fan calculus and quadratic-transport bulk
+
+The actual joint Frechet derivative and intrinsic/ambient surface formulas are proved for every continuous quartic-growth test on a genuine Gaussian fan. A finite algebraic growth calculus then proves that the actual coherent quadratic-transport bulk is quartic, and derives its actual joint row/offset Frechet derivative. Thus this transport bulk is differentiable without a supplied growth, integrability, or derivative hypothesis. The nondegeneracy assumption is the existing actual positive centered singular-value bound.

@@ -1,0 +1,26 @@
+{
+  "module": "GaussianRegularizedMassConcavity",
+  "source_sha256": "4c00988f507a15d5e4b1e4a5fba0e4e2ff19546502dbe6922c91d8e9fcfc0fbf",
+  "source_lines": 259,
+  "source_theorem_declarations": 10,
+  "compiled_constants_audited": 18,
+  "compiled_theorem_constants_audited": 16,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T07:40:31.399925+00:00",
+  "build_transcript": "GAUSSIAN_REGULARIZED_MASS_CONCAVITY_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_REGULARIZED_MASS_CONCAVITY_AUDIT.lean",
+    "GAUSSIAN_REGULARIZED_MASS_CONCAVITY_AXIOMS.txt",
+    "GAUSSIAN_REGULARIZED_MASS_CONCAVITY_COVERAGE.txt"
+  ]
+}

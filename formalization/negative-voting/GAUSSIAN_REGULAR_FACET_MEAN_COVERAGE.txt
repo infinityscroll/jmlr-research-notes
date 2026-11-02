@@ -1,0 +1,18 @@
+GaussianRegularFacetMean: actual dimension-independent conditional facet means
+
+For every measurable set in any finite-dimensional standard Gaussian space,
+if its probability is at least m^-2 and m>=1, the actual conditional mean has
+norm at most 2 sqrt(log m)+(sqrt(2 pi))^-1. This follows from the proved sharp
+Gaussian mass-centroid inequality, with the actual measure and Bochner integral.
+
+For a regular m-cell facet, the previous exact Gaussian surface normalization
+and the actual maximum-mean lower bound yield probability >=m^-2. Consequently
+the actual normalized intrinsic facet mean obeys the same explicit bound.
+The eventual endpoint chooses one threshold before dimension, regular rows,
+and facet indices. No conditional mean or face mass estimate is assumed.
+
+The quantitative perturbation stability of these facets is a separate task.
+This module provides its true regular reference first-moment input.
+
+Source-backed Lake build and exhaustive compiled-module axiom audit passed.
+Only propext, Classical.choice and Quot.sound occur transitively.

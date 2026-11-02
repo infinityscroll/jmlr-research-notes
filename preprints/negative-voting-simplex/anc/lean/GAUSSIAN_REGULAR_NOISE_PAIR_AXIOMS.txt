@@ -1,0 +1,10 @@
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.regular_noise_fractional_loss_lower","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.regular_noise_routing_lower._simp_1_1","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.regular_noise_pair_separation","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.regular_noise_routing_lower","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.projectedNoiseWeight_pos","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.gaussianNoiseOperator_negative_projected","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularNoisePair.projectedNoiseWeight._proof_1","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.noise_ratio_bounds","theorem":true}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.projectedNoiseWeight","theorem":false}
+GAUSSIAN_REGULAR_NOISE_PAIR_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.scoreOffsets_frame_smul","theorem":true}

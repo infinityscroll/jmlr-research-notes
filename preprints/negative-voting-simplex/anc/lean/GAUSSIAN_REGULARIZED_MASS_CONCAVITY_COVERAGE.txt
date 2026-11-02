@@ -1,0 +1,26 @@
+GaussianRegularizedMassConcavity — actual regularized mass semiconcavity
+
+Source-backed Lake build and exhaustive source-module constant audit passed.
+All transitive axioms are propext, Classical.choice, Quot.sound only.
+
+uniform_regularized_path_concavity proves one positive floor threshold works
+for every smaller positive floor and EVERY closed mass segment contained in
+[1/(100m),2/m]. The literal selected maximum of 2 Gamma-trace, minus
+mixedConstant*(1+log m)^2*(sum_i v_i^2)*t^2, is concave on the whole segment.
+The threshold is before floor, masses, direction, and segment quantifiers.
+The centered Parseval affine basis, dimension>=2, and the explicit large-m
+threshold are retained. No mixed-bound, optimizer-continuity, optimizer-
+differentiability, or Hessian-sign premise is assumed in this final endpoint.
+Zero mass directions are included.
+
+The argument pulls the actual common covariance/mass neighborhood back along
+the mass line, uses the checked actual Hessian/offset identity and the generic
+joint-concavity partial-maximization theorem, and invokes LocalConcavity for
+the closed interval. probabilityChart has a globally defined fallback, but its
+agreement with the true affine mass segment is established at every point
+where it is used. No behavior outside the positive simplex enters the bound.
+
+regularized_path_bound_of_stationary_anchor converts that concrete concavity
+and a genuine zero derivative of the selected value into the quadratic bound.
+The balanced-anchor derivative is not proved here; GaussianBalancedFloorAnchor
+supplies it. This module is not the full negative-voting theorem.

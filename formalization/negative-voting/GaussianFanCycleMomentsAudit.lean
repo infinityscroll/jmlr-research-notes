@@ -1,0 +1,14 @@
+import GaussianFanCycleMoments
+
+#print axioms NegativeVotingFanCycle.coordinateCap_independent_anchor
+#print axioms NegativeVotingFanCycle.capMass_independent_anchor
+#print axioms NegativeVotingFanCycle.stratumMassAt_independent_anchor
+#print axioms NegativeVotingFanCycle.stratumMeanPairing_independent_anchor
+#print axioms NegativeVotingFanCycle.coordinateCapNormal_coordinateDual
+#print axioms NegativeVotingFanCycle.stratum_tangent_first_moment
+#print axioms NegativeVotingFanCycle.stratum_mean_boundary
+#print axioms NegativeVotingFanCycle.stratum_mean_barycentric_mass
+#print axioms NegativeVotingFanCycle.stratum_mean_barycentric
+#print axioms NegativeVotingFanCycle.stratumMeanPairing_zero
+#print axioms NegativeVotingFanCycle.stratumMeanPairing_sum
+#print axioms NegativeVotingFanCycle.sum_stratumMeanPairing_barycentric

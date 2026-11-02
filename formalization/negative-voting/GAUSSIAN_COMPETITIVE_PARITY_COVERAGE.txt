@@ -1,0 +1,24 @@
+For an arbitrary finite ambient dimension and any completed-measurable,
+almost-everywhere simplex-valued fractional assignment f, the actual
+Gaussian noise integral has proved lower and upper parity bounds. These use
+the actual signed Hermite expansion, nonnegative chaos energies, and total
+energy at most one; the latter is derived via a Borel representative.
+
+The literal canonical max-rule comparison and its actual first/second chaos
+coefficients imply, for 0 <= r <= 1,
+
+ A0(f)-1/m <= r(W(f)-w_m)+r^2 A2(reference)+r^3+r^4
+
+whenever the actual competitor noise integral is no larger than the actual
+canonical reference noise integral. A0 and W are expanded into literal
+Gaussian mass and coordinate-centroid integrals in the main endpoint.
+No asserted series representation, spectral coefficient formula, or tail
+estimate remains an input.
+
+The competitive comparison is an appropriate premise in a localization
+lemma. This source alone does not prove the full minimum-noise theorem or
+the final mass window, and does not identify arbitrary equal-Gram reference
+representations with the canonical reference.
+
+Source-backed Lake build and exhaustive transitive audit passed for all
+9 source-module constants (9 theorem constants), standard three axioms only.

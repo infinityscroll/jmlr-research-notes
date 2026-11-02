@@ -1,0 +1,7 @@
+Actual strict covariance concavity; frozen after successful source build and exhaustive owned-constant transitive axiom audit.
+
+For a genuine finite affine basis b and a positive probability vector p, the literal optimized Gaussian covariance value is strictly concave on the positive-definite operator cone. The proof derives that every nonzero symmetric direction has strictly positive actual normal-edge energy, by positive Gaussian facet weights and affine-basis edge polarization. The actual first and second intrinsic covariance derivatives are then transported through a concrete invertible symmetric covariance factor; the second derivative is strictly negative. No strict-Hessian or energy-rigidity premise is assumed.
+
+The actual penalized objective is 2*operatorValue(b,p,C)-trace(C), and its strict concavity is also proved. This is operator trace; no equality to physical row-energy trace is silently assumed for arbitrary b. Existence of a maximizer and covariance/mass stability are not proved by this module.
+
+This component is not the full negative-voting theorem.

@@ -1,0 +1,3 @@
+AFFINE_POSITIVE_MASS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePositiveMass.nearIdentity_affineMass_pos","module":"GaussianAffinePositiveMass","theorem":true}
+AFFINE_POSITIVE_MASS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePositiveMass.cap_strict_point_of_positive","module":"GaussianAffinePositiveMass","theorem":true}
+AFFINE_POSITIVE_MASS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePositiveMass.affineMass_pos","module":"GaussianAffinePositiveMass","theorem":true}

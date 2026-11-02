@@ -1,0 +1,4 @@
+CYCLE_FLUX_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycleFlux.jointMassDerivativeAt_eq_flux","theorem":true}
+CYCLE_FLUX_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycleFlux.edgeBoundary_cycleFlux_eq","theorem":true}
+CYCLE_FLUX_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycleFlux.canonicalOffset_cycle","theorem":true}
+CYCLE_FLUX_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycleFlux.edgeBoundary_zero_of_mass_derivatives","theorem":true}

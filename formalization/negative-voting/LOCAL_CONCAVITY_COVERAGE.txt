@@ -1,0 +1,1 @@
+Continuous real functions on a closed interval that are locally concave at every interior point are globally concave there. The proof derives a minimum principle by adding a small strictly concave quadratic, then subtracts arbitrary affine chords. No differentiability or optimizer regularity is assumed. Source-backed build and every compiled owned constant audited.

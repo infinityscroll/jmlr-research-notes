@@ -1,0 +1,34 @@
+Finite-fan cycle route: dependency and circularity audit
+2026-11-02
+
+Finding
+The finite-fan route is independent of the infinite-dimensional weighted Gaussian Hodge/CFJ route. The refined estimate implies covariance concavity and normal strain for the required finite simplex targets once its actual finite identities and optimized Hessian are proved. Those implications do not require a prior general-target covariance-concavity theorem. This is a dependency conclusion and bounded mathematical source read, not a claim that the remaining analytic identities have already been kernel-checked.
+
+Inspected sources
+Canonical preprint: work/github_publish_20261031/jmlr-research-notes/preprints/negative-voting-simplex/02_foundation_localization.tex.
+Ancillary original EHRHARD_REFINED_COVARIANCE_HESSIAN_WITH_CYCLE_CANCELLATION_20261031.txt, all sections.
+Ancillary original ALL_DIMENSIONAL_COVARIANCE_CONCAVITY.txt, all sections, pinned SHA225db53f4489bf513926eead05cc5ec8c40962991246ac5036a897faa2d8130b.
+Ancillary integrated assembly/ASSEMBLY_LOCALIZATION_AND_QUANTIFIER_LEDGER_20261102.txt, Section2b.
+Earlier adversarial cleanroom audit was consulted after independently reading the original finite derivation; its bounded conclusions agree with the sign/normalization checks below. Its verdict is not used as a theorem.
+
+Equation-level dependency map
+1. Fixed affinely independent finite sites, prescribed strictly positive masses: dual offset minimizer and actual winning masses. GaussianFanMassExistence now proves this (indeed distinctness suffices for existence). Affine independence is subsequently needed for complete simplex-face geometry and square tangent bases.
+2. Actual offset Jacobian and positive weighted graph Laplacian: separate GaussianFanMassJacobian work. Joint covariance/offset smoothness and the implicit function theorem still need their concrete covariance-parameter bridge.
+3. Gaussian first/second boundary moments and covariance domination on each affine stratum. Current cap modules prove concrete Euclidean-polyhedron versions; the coordinate/projector and physical Hausdorff-density transfer to every winner stratum remains a separate geometric construction.
+4. Barycentric vectors v_k=-grad l_k satisfy sum v_k=0 and <v_k,y_i-y_j>=delta(k,j)-delta(k,i). On facet e, these identify N_e^{-1} rows and give E_e=N_e T_e^T, B_e=N_e^{-1}E_e N_e^{-T}, and (B_e)_(g,g')=1/w_e-D_g<v_k,m_g'>.
+5. Concrete simplex boundaries partial2 and partial3: partial2 partial3=0; every edge cycle has a triangle filling; ker partial2=im partial3. These follow from explicit coning identities, independently of Gaussian geometry or concavity.
+6. First moments on triangle strata and target triangle/tetrahedron height identities give the exact assembled factorization A-B=-D partial3 diag(mu_h/(6V_h)) partial3^T D. This is the central still-unformalized geometric matrix equality. It uses the local Gaussian boundary identities, not Hodge or covariance concavity.
+7. Finite weighted gauge: keep partial2 lambda=j while arranging partial3^T D lambda=0. The abstract finite-dimensional projection theorem is already kernel-checked in NegativeVoting.WeightedGauge; the actual chain operators and diagonal weights must be instantiated. Step6 then gives exact equality of the B-energy and the cycle norm. No covariance-deficit inverse is needed.
+8. Cell-vector differences telescope on each triangle, giving j.c=sum_e z_e.T_e eta_e. With the actual least-squares offset, both this cross term and the quadratic cycle term equal CYC. Expanding r_e=z_e-N_e^{-T}eta_e gives sum r_e^T E_e r_e=sum z_e^T E_e z_e-CYC exactly.
+9. The actual square-root covariance/offset Hessian is 4F''=min_b sum_e w_e E[(d_e.HX+db_e)^2]-sum_e w_e|Hd_e|^2. Its factor4 and negative interior term come from sqrt(I+tH)'=H/2 and sqrt(I+tH)''=-H^2/4. This Hessian identity still requires a concrete differentiated optimized Gaussian objective; it must not be inserted as an assumed interface and counted as completed analysis.
+10. Steps3,7,8,9 already imply -4F''>=sum_e w_e(d_e^T H d_e)^2/|d_e|^2. Thus ordinary covariance concavity and normal strain for simplex targets are downstream conclusions, not inputs to the cycle calculation.
+11. The now-checked actual Ehrhard covariance-mean correction applied to r_e gives the retained offset term. N_e^{-1}P_e m_e=1/w_e yields r_e.P_e m_e=-db_e-z_e.(I-P_e)m_e. With z_i=Hy_i and b=2h', this is the bracket 2h'_e-h_e(d_e^THd_e)/|d_e|^2, up to an irrelevant square sign.
+12. Whitening handles positive definite bases; continuity handles singular covariance limits. For the negative-voting proof only finite simplex targets are needed. General-target lifting, P2 approximation, CFJ regularity, and infinite-dimensional Hodge can therefore be omitted from this Lean route. Their broader claims in the manuscript are separate.
+
+Independent sign and normalization checks
+Off-diagonal shared-edge term: D_g<v_k,m_g'> = D_g*mu_h*A_g'/(3V_h*mu_g') = D_g D_g' mu_h/(6V_h). The two incidence signs equal minus the corresponding tetrahedron-boundary signs. Diagonal term uses sum_{k in g}v_k=-sum_{k outside g}v_k and gives -D_g^2 sum_{h containing g}mu_h/(6V_h). Neither calculation invokes concavity.
+The residual r_e as written may retain a normal component; E_e and P_e m_e annihilate it, so only P_e r_e enters the estimates. Calling r_e itself tangential without projecting is imprecise but does not change either identity.
+The Ehrhard probability is the intrinsic facet probability pi_e=mu_e/phi(h_e/|d_e|), not a cell mass. The coefficient and derivative scaling must retain this distinction.
+
+Actual next finite theorem
+GaussianFanCycleComplex.lean constructs alternating edge/triangle/tetrahedron coefficient arrays, their literal boundary sums, and explicit cone fillings. It proves boundary-of-boundary zero and the two positive-degree exactness statements from those formulas. This instantiates the combinatorial part of Step5 and enables the existing weighted gauge. It does not assume or claim the stratum factorization or optimized Hessian.

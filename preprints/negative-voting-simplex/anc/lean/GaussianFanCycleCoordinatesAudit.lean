@@ -1,0 +1,29 @@
+import GaussianFanCycleCoordinates
+
+#print axioms NegativeVotingFanCycle.FaceCoordinates
+#print axioms NegativeVotingFanCycle.faceCoordinates
+#print axioms NegativeVotingFanCycle.coordinateCapNormal
+#print axioms NegativeVotingFanCycle.coordinateEmbed
+#print axioms NegativeVotingFanCycle.coordinateCap
+#print axioms NegativeVotingFanCycle.coordinateCapNormal_norm
+#print axioms NegativeVotingFanCycle.coordinateCapNormal_NoCoincident
+#print axioms NegativeVotingFanCycle.coordinateCap_mem_iff
+#print axioms NegativeVotingFanCycle.coordinateEmbed_mem_winnerStratum_iff
+#print axioms NegativeVotingFanCycle.coordinateEmbed_isometry
+#print axioms NegativeVotingFanCycle.coordinateCap_gaussian_pos
+#print axioms NegativeVotingFanCycle.coordinateCap_mass_pos
+#print axioms NegativeVotingFanCycle.coordinateCap_first_moment
+#print axioms NegativeVotingFanCycle.coordinateDual
+#print axioms NegativeVotingFanCycle.coordinateDual_pairing
+#print axioms NegativeVotingFanCycle.coordinateDual_norm
+#print axioms NegativeVotingFanCycle.coordinateEmbed_pairing
+#print axioms NegativeVotingFanCycle.coordinateEmbed_pairing_integrable
+#print axioms NegativeVotingFanCycle.coordinateEmbed_integral_pairing
+#print axioms NegativeVotingFanCycle.stratumMeanPairing
+#print axioms NegativeVotingFanCycle.stratumDirectionalVariance
+#print axioms NegativeVotingFanCycle.stratumMeanPairing_eq
+#print axioms NegativeVotingFanCycle.stratumDirectionalVariance_le_projector
+#print axioms NegativeVotingFanCycle.coordinateEmbed_norm_sq
+#print axioms NegativeVotingFanCycle.stratumDensityFactor
+#print axioms NegativeVotingFanCycle.stratumDensityFactor_pos
+#print axioms NegativeVotingFanCycle.coordinateEmbed_gaussian_density

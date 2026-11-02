@@ -1,0 +1,9 @@
+GaussianCovarianceOptimizerLipschitz
+
+The actual unique global maximizing covariance for g(C,p)=2 operatorValue(b,p,C)-trace(C), over the entire fixed closed cone C>=epsilon I, is locally Lipschitz on the open probability simplex for each epsilon>0. The result is in the original operator norm and actual mass subtype metric. It allows boundary maximizers and arbitrary actual affine bases; no Parseval normalization is assumed.
+
+The actual full state Hessian is proved negative definite by uniqueness against the established scalar second derivatives; the trace penalty is an explicit continuous linear functional. Full joint C2 and already proved optimizer continuity discharge every premise of the generic constrained stability theorem. The positive probability chart is used only in its proved neighborhood, then removed in the final endpoint.
+
+No optimizer differentiability premise is assumed. The Lipschitz constant is local and may depend on epsilon; no uniform epsilon-to-zero constant is asserted. This module is a prerequisite for optimized-value stability, not the main negative-voting theorem.
+
+Source-backed build and exhaustive source-module audit passed; only propext, Classical.choice, Quot.sound occur transitively.

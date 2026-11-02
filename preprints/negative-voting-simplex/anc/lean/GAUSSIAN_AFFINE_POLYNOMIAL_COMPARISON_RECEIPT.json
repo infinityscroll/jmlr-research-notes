@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianAffinePolynomialComparison",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_POLYNOMIAL_COMPARISON_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 7,
+  "theorem_count": 7,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffinePolynomialComparison.lean": "990806832b74f7828c5c4ca0596c71fa071095d5c8ab8f3723f5dc2b18772dd8",
+    "GaussianAffineMassComparison.lean": "e7d67e3af2cf11b8c01d9bc0b565b6ac562416602ad743658a5ad21bf8b22d95",
+    "GAUSSIAN_AFFINE_POLYNOMIAL_COMPARISON_AUDIT.lean": "a0ba6597f1f62790eaf6b2722d43d6bf132a3ab2047c860daf3f6727832ee85d",
+    "GAUSSIAN_AFFINE_POLYNOMIAL_COMPARISON_AXIOMS.txt": "5c9a5a5799ad35544031278677ba042ab86149495793607b56cd891191c41895",
+    "GAUSSIAN_AFFINE_POLYNOMIAL_COMPARISON_BUILD.txt": "c472985c97918a15867c733cc1e963bc3b0eaeb5e1e6f8c1a73c1e1c5efc70f8",
+    "GAUSSIAN_AFFINE_POLYNOMIAL_COMPARISON_COVERAGE.txt": "a623129f49f5d43016b1663b603358d42b67cb8d601ea30e3e08c36a1ebb09d4"
+  }
+}

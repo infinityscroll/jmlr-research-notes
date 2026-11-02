@@ -1,0 +1,52 @@
+Canonical pseudoinverse bridge for the actual Gaussian fan mass Jacobian
+Source: GaussianFanJacobianPseudoInverse.lean
+Namespace: NegativeVotingFanPseudoInverse
+
+Object and source closure
+The matrix J is NegativeVotingFanJacobian.offsetJacobian B h, whose entries
+are the actual intrinsic Gaussian facet weights divided by pair-edge lengths.
+Its positive semidefiniteness, symmetry, and actual Gaussian mass derivative
+were proved in GaussianFanMassJacobian.lean. The new source does not substitute
+an arbitrary graph Laplacian or assume that a matrix equals this derivative.
+The pseudoinverse is Matrix.covariancePseudoInverse, imported from the pinned
+Apache-2.0 Tau Ceti port through TauCeti.Analysis.Matrix.SchurComplement.
+The bridge uses its proved commutation and both Penrose equations.
+
+New conclusions
+1. For affinely independent sites, range(toLin' J) is exactly centeredGauge,
+   and kernel(toLin' J) is the span of the constant-one vector.
+2. J J+ = J+ J = I - (1/card(labels)) 11^T as literal matrix equalities.
+   No range compatibility, inverse, or projection identity is assumed.
+3. The canonical pseudoinverse has centered output and defines an actual
+   continuous linear map on the zero-sum gauge.
+4. Under the previously used positive centered singular lower bound, this
+   map equals the inverse of the actual centered mass derivative.
+5. For every existing chart of the actual mass map, at every point q of its
+   open target, the inverse is Frechet differentiable with derivative J+ at
+   the corresponding actual offset. The pointwise fderiv theorem reads
+     (fderiv R e.symm q v : labels -> R) = J(B,e.symm q)+ *v v.
+6. The final existence endpoint combines the independently proved Gaussian
+   prescribed-mass construction and C1 inverse theorem: every strictly
+   positive probability vector has an actual chart with this derivative.
+   The final endpoint has no assumed chart or assumed differentiable inverse.
+
+Hypotheses
+Labels are finite and nonempty; sites are in FSC.Coord d. The range/kernel
+and projection statements use affine independence. The derivative and chart
+statements retain a positive centered singular lower bound on the sites,
+from which affine independence is derived. Positive masses summing to one
+are required only for the prescribed-mass existence endpoint.
+
+Boundary
+This source identifies the canonical inverse of the actual offset block.
+It does not identify the moving-row/offset joint Gaussian score Hessian,
+prove the optimized covariance Hessian or its cycle-refined estimate, or
+prove the full negative-voting theorem. Those remain separate obligations.
+
+Verification
+The source builds with Lean 4.35.0-rc2 and the pinned mathlib commit
+065356127b1dc0016f66b7283ce0ce2c4055aa55. The accompanying receipt records the
+final source hash, source-module-wide compiled-constant audit, and build
+transcript. The audit examines every compiled constant owned by this module,
+including generated/private declarations, and rejects nonstandard transitive
+axioms. It permits only propext, Classical.choice, and Quot.sound.

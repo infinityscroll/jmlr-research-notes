@@ -1,0 +1,14 @@
+ACTUAL GLOBAL COVARIANCE CONCAVITY THROUGH RANK LOSS
+
+Principal theorem operatorValue_concaveOn_psd:
+For every actual affine basis b: Fin m -> R^d (m nonzero), and every strictly positive probability vector p, the literal optimized Gaussian covariance value
+  Phi(C)=covarianceValue(K_b(C),p), K_b(C)_ij=<b_i,C b_j>,
+is concave on the full cone of symmetric positive-semidefinite operators C on R^d.
+
+The covarianceValue is the previously proved intrinsic Gaussian infimum over centered offsets, with actual Gaussian score-law and row-value identities. This theorem is for a fixed genuine affine basis; it does not silently quantify arbitrary redundant row systems.
+
+At C positive definite, a genuine symmetric square-root equivalence R is constructed, b is transported to the genuine affine basis Rb, and the symmetric direction is conjugated as R^{-1} D R^{-1}. Exact Gram identities identify the actual linear covariance path. The previously proved first and second Price derivatives are both transferred, and nonpositive second derivative is obtained from actual normal/cycle energies. Differentiability is not inferred merely from a derivative-of-derivative assertion.
+
+Every positive covariance segment is concave by the scalar second-derivative criterion. Singular and zero covariance operators are reached through C+epsilon*Id using actual covarianceValue continuity on the PSD cone. Positive regularization, the cone membership, the limits, and the limiting Jensen inequality are all proved. No square-root, inverse, derivative, covariance concavity, or boundary-continuity premise is supplied.
+
+This establishes the global covariance-concavity component of the manuscript, not the full negative-voting theorem or a novelty claim.

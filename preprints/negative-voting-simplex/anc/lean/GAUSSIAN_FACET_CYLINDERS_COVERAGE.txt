@@ -1,0 +1,3 @@
+Actual fixed-cylinder facet representation
+
+GaussianFacetFixedCylinder proves the exact actual mapped-row facetWeight formula from the literal affineFacet and FSC.sliceLaw. The normal threshold is -<n,h>/||S n|| and the denominator is ||b_i-b_j|| times ||S n||. GaussianRegularFacetCylinder derives ||b_i-b_j||=sqrt(2) from the displayed regular Gram matrix. Its fixed cylindrical event is exactly the finite cap with normalized normals (sqrt(3/2))^-1 (b_k-(b_i+b_j)/2), with k different from i and j. Unit norms, cross products 1/3 and FSC.NoCoincident are proved. The ordinary Gaussian affine probability is actual; its PSD invertible factor is obtained from the proved positive normal extension. Quantitative near-regular perturbation bounds are subsequent work.

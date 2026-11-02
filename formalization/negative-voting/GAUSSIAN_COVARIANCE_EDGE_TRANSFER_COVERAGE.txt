@@ -1,0 +1,11 @@
+Actual uniform covariance optimizer edge geometry
+
+The three new modules derive a common compact trace region for every optimizing covariance with floor between zero and one, uniformly over all positive probability vectors. Closedness of the actual optimizer graph then gives uniform transfer of any open property from all zero-floor maximizers over a compact positive mass set. There is no continuous optimizer-selection premise.
+
+The final theorem uniform_small_floor_edge_bounds applies to the actual mass box p_i in [p0,A/M] and proves, simultaneously for every mass vector and every optimizer at sufficiently small nonnegative floor,
+  sqrt(2*pi)*p0^2/2 < edge_ij < 4*(A*sqrt(2*log M)+1/sqrt(2*pi))/M.
+The zero-floor geometry uses actual covariance/centroid realization, constructed two-cell re-splitting and the actual Gaussian centroid entropy estimate. Edges are the actual Gram quantities sqrt(<b_i-b_j,C(b_i-b_j)>). A separate proved factor identity identifies them with row distances.
+
+The fixed reference affine basis retains explicit centered-simplex Gram and Parseval assumptions; the dimension is at least two. These are exact geometric properties of the reference, not premises about an optimizer. No supplied compactness, density, split, zero-floor edge bound or chosen-root continuity remains.
+
+Source-backed build and exhaustive transitive audits passed for all 24 owned compiled constants (18 theorem constants), including private/generated declarations; permitted axioms only propext, Classical.choice, Quot.sound. All 203 local source dependencies are SHA256 pinned in the receipt. The full negative-voting theorem remains separate and unfinished.

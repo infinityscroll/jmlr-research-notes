@@ -1,0 +1,7 @@
+JOINT_VALUE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValue.jointValueDerivative","theorem":false}
+JOINT_VALUE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValue.jointValueDerivative_apply","theorem":true}
+JOINT_VALUE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValue.massPerturbation","theorem":false}
+JOINT_VALUE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValue.jointValue_C1_and_derivative","theorem":true}
+JOINT_VALUE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValue.massPerturbation_apply","theorem":true}
+JOINT_VALUE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValue.jointValueDerivative.eq_1","theorem":true}
+JOINT_VALUE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValue.massPerturbation._proof_1","theorem":true}

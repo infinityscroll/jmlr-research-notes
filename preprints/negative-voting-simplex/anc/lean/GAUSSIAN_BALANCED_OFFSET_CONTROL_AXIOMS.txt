@@ -1,0 +1,11 @@
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffset.intrinsic_offset_l2_bound","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingBalancedOffset.row_quadratic_upper._simp_1_1","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffset.pair_norm_energy_bound","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingBalancedOffset.pair_norm_energy_bound._simp_1_1","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffset.jacobian_complete_gap","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingBalancedOffset.intrinsic_offset_l2_bound._simp_1_1","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffset.operator_offset_derivative_centered","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffset.operator_offset_l2_bound","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffset.canonical_offset_l2_bound","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffset.row_quadratic_upper","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_CONTROL_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingBalancedOffset.operator_offset_derivative_centered._simp_1_1","theorem":true}

@@ -1,0 +1,16 @@
+GaussianAffineNormControl: actual dimension-independent operator control
+
+This module identifies the coordinate Hilbert--Schmidt norm with the sum of
+squared images of the standard orthonormal basis, bounds the operator norm by
+it, and proves ||M A||HS <= ||M||op ||A||HS. For ||A||op <= 1/2 and |t| <= 1,
+it proves the lower bound ||(I+tA)x|| >= ||x||/2, constructs the actual
+continuous linear equivalence I+tA by finite-dimensional surjectivity, and
+derives the inverse operator norm bound <=2. The results include dimension0.
+
+These are finite-dimensional norm and invertibility facts; the following
+positive-mass and path modules apply them to actual Gaussian probabilities.
+No inverse-norm estimate or invertibility hypothesis is inserted into the
+near-identity conclusions.
+
+The source-backed Lake build and exhaustive compiled-module axiom audit pass,
+including private/generated constants; only the standard three axioms occur.

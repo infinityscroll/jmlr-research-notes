@@ -1,0 +1,23 @@
+GaussianRegularFacetStability: finite dimension-independent facet estimate
+
+For actual regular rows B, any symmetric invertible S, and actual score
+shift h_i=<B_i,h>, write epsilon=||S^2-I||HS and L=1+log m. If the actual
+Gaussian maximum mean is >=1 and 32e epsilon<=1, the module proves
+  |log(w_ij/w0)| <=4096e^3[epsilon L+||h||sqrt(L)+||h||^2],
+where w_ij is the literal Gaussian facetWeight and w0=alpha/m.
+It also proves positivity and strict w0/2<w_ij<2w0 when this explicit
+right-hand side is <log2.
+
+The conditional mean, covariance, positive factor existence, factor distance,
+normal-density/edge prefactor, actual fixed-cap probability, and finite mass
+comparison are all derived in the checked source closure. No factor,
+conditional moment bound, derivative formula, probability ratio, or facet
+weight estimate is a premise of the final theorem. Only a concrete
+covariance-size restriction and the actual shift vector remain.
+
+The subsequent neighborhood theorem fixes an explicit c(q)/L radius and
+||h||<=q sqrt(L)epsilon. The actual balanced-offset response and continuation
+are later steps; this module does not claim to have performed them.
+
+Source-backed Lake build and exhaustive compiled-module transitive axiom audit
+passed, including the private scalar log helper. Only standard3 occur.

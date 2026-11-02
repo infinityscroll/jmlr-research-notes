@@ -1,0 +1,68 @@
+ACTUAL JOINT SCORE/OFFSET GAUSSIAN FAN HESSIAN
+
+Sources: GaussianFanQuadraticHessian.lean and GaussianFanSecondVariation.lean.
+Namespace: NegativeVotingFanHessian.
+
+Let X have the concrete standard Gaussian law on FSC.Coord d, and set
+  L(t) = E max_i( <B_i+t D_i,X> + h_i+t v_i ).
+Assume sigma>0 and CenteredSingularLowerBound B sigma. This quantitative
+condition supplies affine independence, distinct rows, and the no-coincident
+boundary condition used in the derived moving-cell theorem. There is no
+assumed Hessian formula, no assumed boundary derivative, and no assumed
+Gaussian integration identity in the exported theorem.
+
+hasDerivAt_deriv_expectedMax_line_quadraticForm proves the actual assertion
+  HasDerivAt (deriv L) Q 0,
+where Q is the concrete expression
+  (1/2) sum_i sum_j phi(a_ij)/||B_i-B_j|| *
+    integral_{actual shared affine facet ij}
+      (<D_i-D_j,x> + v_i-v_j)^2 d gamma_plane_ij(x).
+Diagonal terms vanish because their reciprocal edge factor is zero. Thus
+this is the usual sum over unordered distinct pairs, without requiring a
+linear order on the finite label type.
+
+deriv_deriv_expectedMax_line identifies the literal second derivative with
+Q. deriv_deriv_expectedMax_line_nonneg derives its nonnegativity. The law
+under the surface integral is FSC.sliceLaw for the actual unit pair normal
+and support, restricted to the genuine affine facet.
+
+The stronger mixed result hasDerivAt_jointDerivative_line_mixedForm derives
+an actual mixed second variation for arbitrary two row/offset directions.
+secondDerivative_apply_eq_mixedForm evaluates the genuine Frechet derivative
+of the first derivative on one fixed direction. The mixed surface expression
+is symmetric, and its diagonal is Q.
+
+quadraticForm_offsets identifies Q for zero score-row increments with
+  sum_i v_i * (offsetJacobian B h * v)_i,
+where offsetJacobian is the already checked actual mass Jacobian.
+
+Proof dependencies and attribution:
+- GaussianFanScoreHessian: actual joint first derivative of E max.
+- GaussianFanTestedCells: actual weighted-cell indicator and integral identities.
+- GaussianMovingSlab + GaussianMovingCap: actual Frechet differentiation of
+  weighted Gaussian polyhedra in all normals and supports, derived from FTC,
+  dominated differentiation, null boundary intersections, and Gaussian slicing.
+- GaussianFanMovingCells: fixed-base normalized affine parameter map; exact
+  moving winning-cell integral; actual ambient facet derivative.
+- GaussianCapTelescoping: exact finite halfspace-indicator difference identity.
+- The attributed FSC library supplies Gaussian slicing/support definitions;
+  GaussianCapSecondMoment supplies actual Gaussianity of the slice law.
+
+Both orientations use the same full Gaussian surface measure, proved by
+reversing the normal and support and identifying the literal facet sets.
+Their tested responses pair algebraically to the square. All affine products
+under the surface laws are proved integrable from Gaussian second moments.
+
+This closes the joint score/offset expected-max Hessian identity. It does not
+by itself prove the optimized covariance-coordinate Hessian after offsets
+are eliminated, the global quantitative comparison, or the full negative-
+voting inequality. Those are separate mathematical targets.
+
+Verification inventories every compiled constant in the two source modules,
+including private/generated helpers. Lean.collectAxioms rejects all axioms
+outside propext, Classical.choice, Quot.sound. See the companion receipt for
+exact hashes, counts, and build/audit results.
+
+Reproduce:
+  lake build GaussianFanSecondVariation
+  lake env lean GAUSSIAN_FAN_HESSIAN_AUDIT.lean

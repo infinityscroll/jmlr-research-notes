@@ -1,0 +1,8 @@
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceMoments.slicePoint_norm_bound","theorem":true}
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceMoments.continuousAt_sliceMass_joint","theorem":true}
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceMoments.slicePoint","theorem":false}
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceMoments.continuousAt_sliceFirstMoment_joint","theorem":true}
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceMoments.sliceFirstMoment","theorem":false}
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceMoments.ae_eventually_slicePreimage_iff","theorem":true}
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceMoments.sliceFirstMoment_eq_stdGaussian","theorem":true}
+MOVING_FACE_MOMENTS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingMovingFaceMoments.slicePoint._proof_1","theorem":true}

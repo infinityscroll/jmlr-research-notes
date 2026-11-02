@@ -1,0 +1,29 @@
+[
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingCovariancePrice.hasDerivAt_penalizedValue_factor",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingCovariancePrice.conjugate_pairing",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingCovariancePrice.hasDerivAt_operatorValue_factor",
+    "theorem": true
+  }
+]

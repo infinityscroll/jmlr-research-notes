@@ -1,0 +1,25 @@
+For actual completed-measurable fractional Gaussian assignments f competing
+against the actual canonical regular max rule, the mass-deficit coefficient
+is proved to control the literal squared mass deviations. It combines the
+actual parity estimate, actual profile-centroid envelope, positive reference
+energy gap, and the already established finite maximum-moment coefficient.
+
+One eventual n-threshold precedes every finite ambient coordinate type,
+every fractional competitor, and every 0 <= r <= 1/(n+1). With m=n+2:
+
+ m^2 sum_i(p_i-1/m)^2 <= 49/50,
+ 1/(100m) <= p_i <= 2/m for every cell.
+
+This is a genuine first mass window with no assumed maximum asymptotics,
+localization inequality, Gaussian-profile bound, or reference chaos formula.
+It uses explicit finite Gaussian tail/moment estimates; it does not require
+formalizing the exact Gumbel/Euler-gamma limit. The canonical realization is
+removed by the separately proved GaussianRegularScoreLaw adapter.
+The sharper second-stage localization and full negative-voting theorem are
+not asserted here.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for all 12 compiled constants (12 theorem constants). Only propext,
+Classical.choice and Quot.sound occur. A bounded independent endpoint/assembly
+review found no quantifier or competitor-scope defect; it was not a second
+proof of every analytic estimate.

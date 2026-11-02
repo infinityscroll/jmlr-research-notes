@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianBalancedReference",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_BALANCED_REFERENCE_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 25,
+  "theorem_count": 22,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianBalancedReference.lean": "46fb48b69cd948baa6e00d47c8d3286a847a43be8672fbb2e8f58d7424ad1d16",
+    "GaussianCovarianceRealization.lean": "6d172d5aa631386850eda1e10dcfcfba387a65603d6ec2c72a83e55b4dd03da7",
+    "GaussianRegularScoreLaw.lean": "dc708f4cf14fd511d436b795c42bb16cca0fc8c2a91ca4f083b904154e4641aa",
+    "NegativeVoting/RegularSimplexCentroid.lean": "eed5595cbd9ee4f34313767ff17bdef3988800a8f22729489bc2d84f1ffd3e58",
+    "GAUSSIAN_BALANCED_REFERENCE_AUDIT.lean": "cf48e282ee847ddaa855850f6acd25b9468f28e2fc3657e0a50c1d2328089c50",
+    "GAUSSIAN_BALANCED_REFERENCE_AXIOMS.txt": "9ca7ba2ee5d1488cfdcfbd9fcc8bee09b20e057fcc5f3cc92ce910003e6df4ac",
+    "GAUSSIAN_BALANCED_REFERENCE_BUILD.txt": "c240b1771642f62a87d7cbe290281fd7d6e7cb451208b2a918165b84ee9f2989",
+    "GAUSSIAN_BALANCED_REFERENCE_COVERAGE.txt": "2c7858b409f947d6cb014ace842392d5c2ea71d5952ecafaed8b2e754be7cfb1"
+  }
+}

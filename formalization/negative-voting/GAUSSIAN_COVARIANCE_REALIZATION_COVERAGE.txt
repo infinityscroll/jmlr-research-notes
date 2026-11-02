@@ -1,0 +1,32 @@
+For an actual normalized Parseval affine basis b (whose existence is proved
+in GaussianCenteredParsevalBasis), rectangular linear factors A give exactly
+operatorValue(b,p,A* A)=optimizedValue(A b,p) and
+penalizedValue(b,p,A* A)=2 optimizedValue(A b,p)-sum_i||A b_i||^2.
+Conversely every centered row family B in any finite ambient dimension is
+reconstructed by A x=sum_i inner(b_i,x) B_i. Its actual PSD covariance A* A
+has trace=sum_i||B_i||^2 and exactly the same actual Gaussian dual value.
+
+A genuine PSD square root is constructed spectrally, including zero eigenvalues.
+No invertibility is required. The actual row optimizer from
+GaussianCentroidEnergyAttainment yields an actual global covariance maximizer
+on the entire PSD cone (epsilon=0).
+
+For EVERY such covariance maximizer C, the module constructs an actual Borel,
+pointwise-simplex rule f of the prescribed positive masses and an actual PSD
+root R with R^2=C. The rows R b_i equal the literal Gaussian centroids of f;
+operatorValue(C)=trace C and penalizedValue(C)=centroidEnergy(f).
+Every AEMeasurable AE-simplex competitor of those masses in EVERY finite ambient
+dimension has centroidEnergy <= centroidEnergy(f).
+
+The centroid identity follows by exact square completion and weak duality,
+using covariance maximality at the reconstructed actual centroid rows. It is
+not an assumed stationarity condition. The explicit existence endpoint has no
+maximizer premise. Rank loss and duplicate rows are retained; injectivity or
+quantitative edge separation must be derived by subsequent arguments.
+
+This is a covariance/centroid optimization theorem, not the full Gaussian
+negative-noise stability minimization theorem.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for all 35 compiled constants (33 theorem constants), using only
+propext, Classical.choice and Quot.sound.

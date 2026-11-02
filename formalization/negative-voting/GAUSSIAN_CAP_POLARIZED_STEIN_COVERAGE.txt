@@ -1,0 +1,3 @@
+Actual bilinear and trilinear Gaussian polyhedral Stein identities
+
+The module derives L2 membership of every linear-score power on actual Gaussian caps and Gaussian face laws. It proves finite linear-combination closure of the all-order power Stein identity, then explicitly polarizes degree two and degree three. Both final identities retain the literal cap integral, actual face event, density, and Gaussian slice law. All algebra, moment integrability, and exchange of finite sums/integrals are proved. These supply quadratic-test affine transport without an assumed integration-by-parts formula.

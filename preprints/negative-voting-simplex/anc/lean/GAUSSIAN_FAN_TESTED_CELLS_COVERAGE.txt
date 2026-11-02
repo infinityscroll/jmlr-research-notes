@@ -1,0 +1,38 @@
+Actual tested winning cells for Gaussian fan differentiation
+Source: GaussianFanTestedCells.lean
+Namespace: NegativeVotingFanTestedCells
+
+The source extracts and generalizes the actual Gaussian tie-nullness argument
+from the frozen mass_eq_winningCell proof without editing that predecessor.
+For injective rows B, each uniform-on-maximizers weight agrees almost everywhere
+with the indicator of the literal closed winningCell B h i.
+
+Verified endpoints
+* weights_eq_winningCell_indicator_ae is an actual Gaussian AE statement.
+* weights_smul_eq_winningCell_indicator_ae permits any normed real vector-space
+  valued test F. No regularity or integrability premise is needed for AE equality.
+* integral_weights_smul_eq_cell proves the corresponding Bochner integral
+  identity; integral_weights_mul_eq_cell is its scalar specialization.
+  These equalities respect Lean's usual integral convention, including the
+  nonintegrable case. They do not claim that every arbitrary test is integrable.
+* centroid_eq_cell_integral identifies the centroid already used in the joint
+  expected-maximum derivative with the actual unnormalized cell first moment.
+* affine_test_integrable and weighted_affine_test_integrable discharge actual
+  Gaussian integrability for affine tests, rather than assume it.
+* integral_weighted_affine_test evaluates an affine test as
+    <D, centroid_i> + v * mass_i.
+  It holds even for tied rows with their fractional weights.
+* integral_cell_affine_test gives the same formula on the literal winning cell
+  for injective rows.
+* jointDerivative_eq_cell_affine_tests expresses the previously proved actual
+  joint expected-maximum derivative as a sum of integrals over actual cells.
+
+No positive-mass, affine-independence, centered-singular, moving-boundary
+formula, differentiable-cell, or Hessian-identification premise is used in
+this source. Distinct rows are enough for the AE weight/cell identification.
+The source does not itself differentiate a moving cell or assert the joint
+score Hessian or the main negative-voting theorem.
+
+Build and source-module-wide transitive axiom evidence are recorded in the
+accompanying receipt and audit files. The audit permits only propext,
+Classical.choice, and Quot.sound, and checks generated/private declarations.

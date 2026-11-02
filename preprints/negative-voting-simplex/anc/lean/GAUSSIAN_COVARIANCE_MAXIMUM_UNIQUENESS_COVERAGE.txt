@@ -1,0 +1,11 @@
+Every positive actual covariance maximizer is unique among ALL PSD
+covariances, including singular competitors. The proof combines the proved
+PSD concavity with strict concavity on the positive cone; a midpoint of a
+positive covariance and a PSD covariance remains positive.
+
+Consequently the balanced scalar covariance (mu/(m-1))^2 I is the unique
+actual balanced PSD maximizer. This adds uniqueness to the previously frozen
+exact maximum value without changing any frozen source.
+
+Source-backed Lake build and exhaustive transitive audit passed for all
+3 compiled constants (3 theorem constants), standard three axioms only.

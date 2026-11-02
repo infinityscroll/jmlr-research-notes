@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianBalancedFloorAnchor",
+  "sourceBackedBuild": true,
+  "constants": 31,
+  "theoremConstants": 28,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianBalancedFloorAnchor.lean": "30af508933c6e601f897f07d1339870ecf36729fe3bc4c6bbc5145d56d82f05f",
+    "GAUSSIAN_BALANCED_FLOOR_ANCHOR_AUDIT.lean": "27545f8e79015e1332d08be1a58a3808128781fcd7e1c47581c51d202baa0b6c",
+    "GAUSSIAN_BALANCED_FLOOR_ANCHOR_AXIOMS.txt": "6dc06f45bb6f1630dea523a71bc86cc66e32d709ed19d05465be364be1fd2d79",
+    "GAUSSIAN_BALANCED_FLOOR_ANCHOR_BUILD.txt": "6ecb3f18cb6f76084b0be6b3214ac072bb83808022d2b989cb037dd8769ede71"
+  }
+}

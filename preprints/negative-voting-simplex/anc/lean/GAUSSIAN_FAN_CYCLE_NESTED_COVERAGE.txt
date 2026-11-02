@@ -1,0 +1,11 @@
+Exact nested-face geometry and Gaussian density ratio
+
+For a genuine target affine basis, nonempty face S with anchor i∈S, and a new vertex k∉S, this file proves the actual child tangent is the parent tangent intersected with the normal-orthogonal hyperplane. The child face-direction space is the orthogonal sum of the parent direction and the true inward projected-gap normal line; its finrank increases by exactly1.
+
+The actual perpendicular affine origins satisfy q_(S+k)=q_S+β_k w_k, where w_k and β_k are the previously constructed OUTWARD intrinsic cap normal and cap offset. Thus squared norm(q_child)=squared norm(q_parent)+β_k². The exact normal Gaussian factor consequently satisfies c_(S+k)=c_S*normalPDF(β_k). All geometric, dimension, and normal-density premises are derived from the actual simplex construction; the identity is not supplied as an interface.
+
+All10 theorems are transitive-axiom audited; complete34-file local import closure pinned. Only standard propext/Classical.choice/Quot.sound axioms permitted. Earlier frozen source files unchanged.
+
+Still separate: the actual child slice Gaussian law, identification of restricted boundary measures/moments and shared child masses/means, and the assembled A-B identity.
+
+Reproduce: python3 verify_fan_cycle_nested.py --lake /absolute/path/to/lake

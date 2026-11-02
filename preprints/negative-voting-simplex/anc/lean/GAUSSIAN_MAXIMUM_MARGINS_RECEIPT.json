@@ -1,0 +1,44 @@
+{
+  "build_commands": [
+    "lake build GaussianMaximumTailMargins",
+    "lake build GaussianDoubleExponentialIntegral"
+  ],
+  "build_exit_codes": [
+    0,
+    0
+  ],
+  "audit_command": "lake env lean GAUSSIAN_MAXIMUM_MARGINS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 33,
+  "theorem_count": 32,
+  "module_counts": {
+    "GaussianMaximumTailMargins": {
+      "constants": 18,
+      "theorems": 18
+    },
+    "GaussianDoubleExponentialIntegral": {
+      "constants": 15,
+      "theorems": 14
+    }
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianMaximumTailMargins.lean": "01496d8b8ea0a8f35b4954b5a4bb642f61a50e18184cae885630af22055f2924",
+    "GaussianDoubleExponentialIntegral.lean": "8d8fb410b3cb324927cbe8833e37a2d81b1be8c2af2db39894d2e707fb0bc63b",
+    "GaussianMaximum.lean": "1c83884ce61786f8efc96d91adf4dd3ac19650363771842b100326afe39398ea",
+    "GaussianTailRatio.lean": "180214d311c08738eb2410399bea424804eeec76bb8d2eb373bf1b348bd99529",
+    "GAUSSIAN_MAXIMUM_MARGINS_AUDIT.lean": "1d15c6b0f38984c6bc7cc2c30f832a121d1077bdd5f8d784093ab5733d3ecca6",
+    "GAUSSIAN_MAXIMUM_MARGINS_AXIOMS.txt": "188f124bbb492de5958465df5a3aa4c45635d9f1344915f17377a5f4131f3434",
+    "GAUSSIAN_MAXIMUM_MARGINS_TAIL_BUILD.txt": "b1aaee9a15189f3a4db6d0a79e883be38dd19baa442ca59b36f2ef4156b6f26e",
+    "GAUSSIAN_MAXIMUM_MARGINS_INTEGRAL_BUILD.txt": "8413f1daa04c6379b22e8fedc7bf49401582095cd178c16f1256bb256a746a1b",
+    "GAUSSIAN_MAXIMUM_MARGINS_COVERAGE.txt": "1470eb1b28c06f1ec68d4a0d2c7be0a90b686416bece2c89f4204e3edc6401c2",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
+  }
+}

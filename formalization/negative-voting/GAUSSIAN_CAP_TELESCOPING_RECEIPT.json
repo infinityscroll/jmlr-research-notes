@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source_sha256": "8c094d04138132d23817457ffc467f8d3a111b944f81b90c85535019c47d7c76",
+  "compiled_constants_audited": 14,
+  "compiled_theorems_audited": 13,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Exact finite product and cap-indicator replacement, preserving arbitrary finite constraint indices; no Gaussian differentiation claimed."
+}

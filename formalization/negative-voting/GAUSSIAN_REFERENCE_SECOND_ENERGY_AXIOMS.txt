@@ -1,0 +1,4 @@
+REFERENCE_SECOND_ENERGY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingReferenceSecondEnergy.secondChaos_eq_of_noise_and_low_modes","module":"GaussianReferenceSecondEnergy","theorem":true}
+REFERENCE_SECOND_ENERGY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingReferenceSecondEnergy.regular_chaosEnergy_two_eq_reference","module":"GaussianReferenceSecondEnergy","theorem":true}
+REFERENCE_SECOND_ENERGY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingReferenceSecondEnergy.regular_chaosEnergy_zero","module":"GaussianReferenceSecondEnergy","theorem":true}
+REFERENCE_SECOND_ENERGY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingReferenceSecondEnergy.eventually_uniform_regular_second_gap","module":"GaussianReferenceSecondEnergy","theorem":true}

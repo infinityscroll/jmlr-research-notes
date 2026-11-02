@@ -1,0 +1,101 @@
+{
+  "frozen_modules_added": [
+    "GaussianBalancedOffsetPath",
+    "GaussianBalancedCovariancePath",
+    "GaussianCovarianceSegmentGeometry",
+    "GaussianBalancedFacetBootstrap",
+    "GaussianUniformLocalCurvature",
+    "GaussianConditionedFacetCap",
+    "GaussianConditionedFacetWitness",
+    "GaussianFanOffsetRange",
+    "GaussianConditionedFacetLower",
+    "GaussianRegularMassSymmetry",
+    "GaussianRegularOUPotential",
+    "GaussianRegularScoreProjection",
+    "GaussianRegularNoisePair",
+    "GaussianBalancedOffsetEstimate",
+    "GaussianExteriorReferenceBounds",
+    "GaussianExteriorOrbitBounds",
+    "GaussianGlobalCovarianceDeficit",
+    "GaussianRegularFacetGaussianLower",
+    "GaussianRegularMassSeparation"
+  ],
+  "sources": [
+    {
+      "path": "GaussianBalancedOffsetPath.lean",
+      "sha256": "979e080dda5620fd739bb36c15ef94cdb9d7f52268bf72aefad5e67f1ece7388"
+    },
+    {
+      "path": "GaussianBalancedCovariancePath.lean",
+      "sha256": "c7cd348fc51c385b35815bd929043f6077f19b25e2baf1b1db3d47f596c6c823"
+    },
+    {
+      "path": "GaussianCovarianceSegmentGeometry.lean",
+      "sha256": "48892980ac5581d9d78a281f25bf39a7e5dda028ce5a49d4d7c8eb6b67b40e7c"
+    },
+    {
+      "path": "GaussianBalancedFacetBootstrap.lean",
+      "sha256": "9215bc98921531587956acf7f1152408a32e7a48fe9b31a0fa90998338db19dd"
+    },
+    {
+      "path": "GaussianUniformLocalCurvature.lean",
+      "sha256": "99c1cc69a28c13267bb7df53969abdbdff3847295326196f18be930e1938959d"
+    },
+    {
+      "path": "GaussianConditionedFacetCap.lean",
+      "sha256": "d3193766b92712a33e4c36a81e2ae3abc070489f55684b0e5230172d553dc02b"
+    },
+    {
+      "path": "GaussianConditionedFacetWitness.lean",
+      "sha256": "6ccd4b71b0034c5c1198e8ad4a9bd46b454c0411d328ffb7c22c1e6713c3fe64"
+    },
+    {
+      "path": "GaussianFanOffsetRange.lean",
+      "sha256": "08e6208479f8f64584065961675b926e51ed244f642ecfecca0061d61c0cd9ba"
+    },
+    {
+      "path": "GaussianConditionedFacetLower.lean",
+      "sha256": "69c996afbec38bf36853b759f89acdc1c9579e17f5bad074e674fbebc548b70e"
+    },
+    {
+      "path": "GaussianRegularMassSymmetry.lean",
+      "sha256": "3220de7f035f2897968d284766e377340d665c9268cdf3fdfefe385a18027992"
+    },
+    {
+      "path": "GaussianRegularOUPotential.lean",
+      "sha256": "d968b31717bdd4d9932f12e4f9802362c7250a0f1e7d1a01745af2dba9d229de"
+    },
+    {
+      "path": "GaussianRegularScoreProjection.lean",
+      "sha256": "9274a1cf59559fc1904e54d990065e076ea12080f6f522d06531c3b6e8315688"
+    },
+    {
+      "path": "GaussianRegularNoisePair.lean",
+      "sha256": "3d0f010796d23290d3afe66b09753011af2cc95cd79d8501248480bc08f4e073"
+    },
+    {
+      "path": "GaussianBalancedOffsetEstimate.lean",
+      "sha256": "8b3f9629bab935649b7017b8f1a5dcd2b907cce1902f04c9d3ea41e99fc6b154"
+    },
+    {
+      "path": "GaussianExteriorReferenceBounds.lean",
+      "sha256": "e0540654ceb282a8d90b346c819a6f01129a805fbdc2da7474cbe788375bf527"
+    },
+    {
+      "path": "GaussianExteriorOrbitBounds.lean",
+      "sha256": "fac6b4870cd8e189e1b43dea541be7999b490f576fb511ffad2946a3c2d28c15"
+    },
+    {
+      "path": "GaussianGlobalCovarianceDeficit.lean",
+      "sha256": "4aca6f682be69a02abcbe434a06bb3ed3a56b4722854ae6c25bec8ef8c72094b"
+    },
+    {
+      "path": "GaussianRegularFacetGaussianLower.lean",
+      "sha256": "84383bf7cf32fd64c8b6e163dce4d49f5ccf9cc6423f2ad3db5a18c4e25c6aca"
+    },
+    {
+      "path": "GaussianRegularMassSeparation.lean",
+      "sha256": "7f268b313522f248d1a9a420d878b765cb67ab2e6830540a8957ef271dba7778"
+    }
+  ]
+}

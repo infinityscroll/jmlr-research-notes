@@ -1,0 +1,20 @@
+GaussianBalancedOffsetPath: canonical physical offset reconstruction
+
+The module constructs a genuine continuous linear map from the zero-sum
+label gauge to the regular score space, u |-> sum_i u_i b_i. For the actual
+regular Gram it proves exact score recovery and ||map(u)||^2=sum_i u_i^2;
+there is no Pi-norm or dimension factor. The globally selected actual
+Gaussian balancing offset is reconstructed through this map.
+
+It proves actual balanced masses for every invertible factor, the zero
+offset at the identity covariance, and C1 regularity along a genuine C1
+row-factor path. Centered singular lower bounds are derived from the
+regular Gram and an actual inverse norm bound. The physical derivative
+is identified exactly with the reconstruction of the selected label
+derivative. Gaussian mass selection regularity is supplied by the
+previously proved actual inverse-function theorem, not assumed.
+
+The covariance-coordinate path used in the final continuation is handled
+in the following module. This file preserves the reusable row-path facts.
+Source-backed Lake build and exhaustive compiled-module axiom audit passed;
+all constants, including generated/private helpers, use only standard3.

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianFanMassConcavity",
+  "sourceBackedBuild": true,
+  "constants": 10,
+  "theoremConstants": 9,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianFanMassConcavity.lean": "979494aa3be5aabcc874ce53e805732dc72e3fec17200603d21e1d9cee731a81",
+    "GAUSSIAN_FAN_MASS_CONCAVITY_AUDIT.lean": "8e619e323d38ae96111148af20646489cae8a10dd88dbc58d61f23608f7bdc34",
+    "GAUSSIAN_FAN_MASS_CONCAVITY_AXIOMS.txt": "02870cc69a2e0c1dadbb5cd94e19743f3c0e6eec46cd8dc0294ec5a49e54c582",
+    "GAUSSIAN_FAN_MASS_CONCAVITY_BUILD.txt": "aaf56aa093339027caaa5c93efd1f943ef89265fa7e0ea11ee2379a5e3c00bd9"
+  }
+}

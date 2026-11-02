@@ -1,0 +1,26 @@
+{
+  "build_command": "lake build GaussianReferenceSecondEnergy",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REFERENCE_SECOND_ENERGY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 4,
+  "theorem_count": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianReferenceSecondEnergy.lean": "bb90103f050d330036ca5cdc768515958723ac05d4ab48edd59c107734981933",
+    "GaussianRegularSecondGap.lean": "b4861d2d2723f09b8188dda711de1fbe64e82f21632b95e3addd23fe7fba81d5",
+    "GaussianRegularScoreLaw.lean": "dc708f4cf14fd511d436b795c42bb16cca0fc8c2a91ca4f083b904154e4641aa",
+    "GaussianCompetitiveParity.lean": "8ce82d13882c50f766c1dcda337f8ade78c3238a89238db34a0b8129ffbb17aa",
+    "GaussianRegularChaosCoefficients.lean": "d75d800e30b89e880a49e2bcb437f5bc3da388af29141f4d0135eb3f2ff0787c",
+    "GAUSSIAN_REFERENCE_SECOND_ENERGY_AUDIT.lean": "91091b1a3ee6f61d49fb3355999c883928cb706829d073a27703a8e1d2ca1247",
+    "GAUSSIAN_REFERENCE_SECOND_ENERGY_AXIOMS.txt": "1f31bd805200bc33015fd1f3292238118c20265b4fa87bfde64aa26ac4788365",
+    "GAUSSIAN_REFERENCE_SECOND_ENERGY_BUILD.txt": "d8ba00505edfb2f727ac41ac6e98e4e62d8ba2e03e93fece31a6de21b1595c9f",
+    "GAUSSIAN_REFERENCE_SECOND_ENERGY_COVERAGE.txt": "8beb059da5cb8f234b92052fb86dd6ea277cd1776662bed8241540f75d8a730f"
+  }
+}

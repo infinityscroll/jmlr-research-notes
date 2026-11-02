@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianRegularCapProbability",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_CAP_PROBABILITY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 6,
+  "theorem_count": 6,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularCapProbability.lean": "c9936104ef14b82f4b54d694ab06769490a1b24d5cfa9afe3a4fced93c520f91",
+    "GaussianRegularFacetCylinder.lean": "806b93f4f9c7df94fc658fb7ca0b86166fc9056b3135355cb6a651921724a5e3",
+    "GaussianRegularFacetMean.lean": "21d0fdcd29e5e8fb77fe624818df9faf95b6aca1f842092afd5ad9ab8c7e8b79",
+    "GaussianAffinePolynomialComparison.lean": "990806832b74f7828c5c4ca0596c71fa071095d5c8ab8f3723f5dc2b18772dd8",
+    "GAUSSIAN_REGULAR_CAP_PROBABILITY_AUDIT.lean": "0d0b63a02c6c81919129caedd78d632588d1f3d84c0cd758917eae4d3ee7e51f",
+    "GAUSSIAN_REGULAR_CAP_PROBABILITY_AXIOMS.txt": "62d51ab53cb99163a5e1e44c981b770690e00785b4073bdd2397213dbcc4b704",
+    "GAUSSIAN_REGULAR_CAP_PROBABILITY_BUILD.txt": "ba1dab604c38cf30aebbefd4affe437eab0f5cd054a56d0542a1539ed72712e8",
+    "GAUSSIAN_REGULAR_CAP_PROBABILITY_COVERAGE.txt": "5007d96213a798f884173cbe285faa4b60b2ec81ac2d5924f57b7a75ae12460a"
+  }
+}

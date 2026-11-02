@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianSwitchingFibreIntegration",
+  "sourceBackedBuild": true,
+  "constants": 9,
+  "theoremConstants": 9,
+  "sha256": {
+    "GaussianSwitchingFibreIntegration.lean": "06e62e374d92ca8e431b0be5b4f0eee8631178eedda7ba95f042198b1325a306",
+    "GAUSSIAN_SWITCHING_FIBRE_INTEGRATION_AUDIT.lean": "95144d3e1a144000ad6f758f4437a13c82615d3f1db063733115f6b52f160c72",
+    "GAUSSIAN_SWITCHING_FIBRE_INTEGRATION_AXIOMS.txt": "32a029e9d7fd0eaeb53c3feedf88fde96a7feb973bdc2c4ea067b08cf5ef1ffa",
+    "GAUSSIAN_SWITCHING_FIBRE_INTEGRATION_BUILD.txt": "5fce8ac89677c5e929accd27fb27ac890cd4f7cfeff0cefce637fdae2fe29f15"
+  }
+}

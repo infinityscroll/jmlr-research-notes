@@ -1,0 +1,7 @@
+Actual coherent quadratic affine Gaussian transport
+
+The module derives the literal affine pullback derivative for F(x)=<v,x><y,x> under x -> x+t A x+t z. Its derivative is the actual cap integral of F(x)(<x,A x>+<z,x>-tr A)-<v,A x+z><y,x>-<v,x><y,A x+z>. The operator A is arbitrary, including nonsymmetric maps, and zero-mass caps are allowed.
+
+The proof begins with the already checked actual moving-cap derivative, derives the rank-one bulk expression from exact polarized Gaussian Stein boundary identities, assembles one global affine field through a finite orthonormal basis, and proves all quadratic/cubic/quartic integrability. The final hasDerivAt_affine_bilinear_gaussian_integral concerns the literal Gaussian integral over the affine preimage of the original polyhedron. No transport identity, selected-offset acceleration, C2 regularity, or junction-cancellation conclusion is assumed.
+
+This is the first transport identity needed before differentiating the quadratic test again. The second derivative and quantitative A2 Hessian bound remain subsequent steps.

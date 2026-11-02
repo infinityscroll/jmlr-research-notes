@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianCapUnionLower",
+  "sourceBackedBuild": true,
+  "constants": 8,
+  "theoremConstants": 8,
+  "sha256": {
+    "GaussianCapUnionLower.lean": "729aed77cdd8c5d350a56855afb91d39f994fab951fd536a4ffac17715f9b6dc",
+    "GAUSSIAN_CAP_UNION_LOWER_AUDIT.lean": "2c1039d6ba42f1c6503c32e4dd6d69ad503b4d19d76f5307f24b873122ff81e1",
+    "GAUSSIAN_CAP_UNION_LOWER_AXIOMS.txt": "11167740cda2827761137e8544ae5542bbaa6e950a91a037c253edc75ec02729",
+    "GAUSSIAN_CAP_UNION_LOWER_BUILD.txt": "1dae4eb62137be8b0cd737c60480e94c4dcfcf7a098121c14c6c38f5836a0364"
+  }
+}

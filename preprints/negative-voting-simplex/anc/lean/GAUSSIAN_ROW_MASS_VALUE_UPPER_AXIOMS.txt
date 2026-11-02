@@ -1,0 +1,5 @@
+GAUSSIAN_ROW_MASS_VALUE_UPPER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRowMassValueUpper.rowObjective_bound_in_mass_window","theorem":true}
+GAUSSIAN_ROW_MASS_VALUE_UPPER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRowMassValueUpper.rowObjective_bound_in_mass_window._proof_1_1","theorem":true}
+GAUSSIAN_ROW_MASS_VALUE_UPPER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRowMassValueUpper.eventually_uniform_rowObjective_bound","theorem":true}
+GAUSSIAN_ROW_MASS_VALUE_UPPER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRowMassValueUpper.rowObjective_bound_in_mass_window._proof_1_2","theorem":true}
+GAUSSIAN_ROW_MASS_VALUE_UPPER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRowMassValueUpper.eventually_uniform_rowObjective_bound._proof_1_1","theorem":true}

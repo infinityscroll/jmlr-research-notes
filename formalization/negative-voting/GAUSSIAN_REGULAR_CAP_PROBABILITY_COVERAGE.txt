@@ -1,0 +1,21 @@
+GaussianRegularCapProbability: actual regular-facet cap specialization
+
+The fixed full-dimensional cylindrical cap supplied by the conditional-plane
+geometry has actual Gaussian mass
+  p0=alpha sqrt(2)/(m phi(0)), m=n+2, alpha=E max(G_1,...,G_m)/(m-1).
+This is derived by applying the literal transported facet-weight formula at
+S=R=I, h=0 and the previously checked exact regular surface weight alpha/m.
+The module proves p0>0 and, once the actual Gaussian maximum mean is >=1,
+p0>=m^-2 and 1+log(1/p0)<=2(1+log m).
+
+Its final theorem specializes the actual finite affine comparison to this
+precise cap, automatically discharging unit normals and NoCoincident. Under
+4e||A||HS<=1 it derives
+  |log(p1/p0)| <=128e^3[||A||HS L+||z||sqrt(L)+||z||^2], L=1+log m,
+with p1 the literal Gaussian mass after (I+A)X+z. Neither a facet probability
+formula nor a moment/regularity estimate is supplied as a premise.
+
+Source-backed Lake build and exhaustive compiled-module transitive audit
+passed; all constants, including private/generated helpers, use only the
+standard three axioms. The following module restores the density/edge
+normalization to obtain a literal relative surface-weight bound.

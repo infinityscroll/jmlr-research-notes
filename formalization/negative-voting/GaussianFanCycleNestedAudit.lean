@@ -1,0 +1,12 @@
+import GaussianFanCycleNested
+
+#print axioms NegativeVotingFanCycle.faceDirection_mono
+#print axioms NegativeVotingFanCycle.mem_face_tangent_iff_anchor_edges
+#print axioms NegativeVotingFanCycle.mem_child_tangent_iff
+#print axioms NegativeVotingFanCycle.faceDirection_insert
+#print axioms NegativeVotingFanCycle.faceBoundaryNormal_mem_child_direction
+#print axioms NegativeVotingFanCycle.faceAnchor_insert
+#print axioms NegativeVotingFanCycle.faceDirection_rank_insert
+#print axioms NegativeVotingFanCycle.faceAnchor_insert_outward
+#print axioms NegativeVotingFanCycle.faceAnchor_norm_sq_insert
+#print axioms NegativeVotingFanCycle.stratumDensityFactor_insert

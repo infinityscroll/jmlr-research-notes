@@ -1,0 +1,4 @@
+AFFINE_BASIS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineBasisLower.centered_coefficients_bound","theorem":true}
+AFFINE_BASIS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineBasisLower.centered_coefficient_pairing","theorem":true}
+AFFINE_BASIS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineBasisLower.exists_centeredSingularLowerBound","theorem":true}
+AFFINE_BASIS_AXIOMS {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingAffineBasisLower.centered_coefficient_pairing._simp_1_1","theorem":true}

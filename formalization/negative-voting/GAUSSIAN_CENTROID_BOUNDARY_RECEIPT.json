@@ -1,0 +1,28 @@
+{
+  "build_command": "lake build GaussianFanCentroidBoundary",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_CENTROID_BOUNDARY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 6,
+  "theorem_count": 6,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanCentroidBoundary.lean": "5644dca1efe29383052d8b9e03a3f7434bd3c226510748046855c989e49dcb5e",
+    "GaussianFanTestedCells.lean": "ab1bf11f30855f11d16939b633948f86106f96e27ca10f1f99d9ac506efb0f7c",
+    "GaussianCapFirstMoment.lean": "8df4d3ae61c27ecf856e938c69c7bd837dc895c3eaf89d530d6ed7a17c5c03b3",
+    "GaussianFacetDegree.lean": "06f8af387de6141114904d4073c9df44d0d0c18b002fb27d7527bf2658a95642",
+    "GaussianFanMassJacobian.lean": "74ecc4012d2575b0729fb554427c6228f322c867aa43a4396206e95b103de18e",
+    "GAUSSIAN_CENTROID_BOUNDARY_AUDIT.lean": "4e876bd22b544a091036c8e326ffcaed4b0cdd89d376fba541bf81cc60c68d0e",
+    "GAUSSIAN_CENTROID_BOUNDARY_AXIOMS.txt": "c59434f62bf521321f787b313bf5477b67afdb3980746e704283ade46e6f03a6",
+    "GAUSSIAN_CENTROID_BOUNDARY_BUILD.txt": "0b6e1f96a554145b64d423d492c28dd32a63c0201b5434797ab4d53a1646cc1d",
+    "GAUSSIAN_CENTROID_BOUNDARY_COVERAGE.txt": "6fbbb0f65b4c1df9f3cd786d81d0345e2c878a2c79dfd4d0532b8303f3eaeab1",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
+  }
+}

@@ -1,0 +1,46 @@
+ACTUAL GAUSSIAN SURFACE OFFSET MINIMIZATION
+
+Source: GaussianFanOffsetMinimization.lean.
+Namespace: NegativeVotingFanOffsetMinimization.
+
+The actual Gaussian mixed surface form is proved additive and homogeneous
+in both parameters by identifying it with the already-derived Frechet
+second variation of expectedMax. The literal square-facet form has the
+resulting exact quadratic expansion and quadratic scaling law.
+
+hasDerivAt_mass_line identifies every actual Gaussian cell-mass directional
+derivative with the coordinate mixedForm(D,v;0,e_i).
+mass_derivatives_zero_of_joint_derivative is a general chain-rule adapter:
+an actual joint Frechet derivative L of the cell-mass vector, with L(D,v)=0,
+implies zero derivatives of every cell mass along the corresponding line.
+No particular matrix or derivative formula is assumed by this adapter.
+
+When every actual cell-mass derivative along (D,v) is zero,
+mixedForm_offset_eq_zero_of_mass_derivatives derives
+  mixedForm(D,v;0,k) = 0
+for every single common offset vector k. The proof differentiates the
+actual offset-gradient test sum_i mass_i k_i; orthogonality is a conclusion,
+not a supplied Schur-complement assumption.
+
+Consequently, for every competing global offset w,
+  Q(D,w) = Q(D,v) + Q(0,w-v)
+         = Q(D,v) + (w-v)^T J(B,h) (w-v).
+Here Q is the literal Gaussian square-facet integral and J is the actual
+Gaussian mass Jacobian. Its previously derived positive semidefiniteness
+proves that v minimizes Q(D,w) over all w. The actual constant-kernel theorem
+proves equality exactly when w-v is constant; fixing the zero-sum gauge
+makes the minimizer unique.
+
+The geometric input is the actual positive centered singular bound on B.
+The zero-mass tangent is an explicit first-variation input, to be supplied
+by the constructed mass-preserving parameter path. This module does not
+assume a surface Hessian formula, a Schur-data matrix, a minimizing offset,
+or the final covariance concavity inequality.
+
+Verification inventories every compiled source-module constant (including
+private/generated constants), computes its transitive Lean axiom closure,
+and rejects anything beyond propext, Classical.choice, Quot.sound.
+
+Reproduce:
+  lake build GaussianFanOffsetMinimization
+  lake env lean GAUSSIAN_OFFSET_MINIMIZATION_AUDIT.lean

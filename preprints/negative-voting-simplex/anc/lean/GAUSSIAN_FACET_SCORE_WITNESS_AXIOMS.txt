@@ -1,0 +1,10 @@
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.sum_two_spikes._simp_1_1","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.twoHighScores_sq_sum","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.twoHighScores.eq_1","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.twoHighScores.congr_simp","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.sum_two_spikes","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.exists_facet_score_witness","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.exists_dominant_facet_point","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingFacetScoreWitness.twoHighScores._proof_1","theorem":true}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.twoHighScores","theorem":false}
+FACET_SCORE_WITNESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetScoreWitness.twoHighScores_sum","theorem":true}

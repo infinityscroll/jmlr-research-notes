@@ -1,0 +1,13 @@
+Actual Gram contents and exact reciprocal-height ratios
+
+Definitions use the genuine Mathlib.Matrix.gram determinant: triangleContent(a,b,c)=sqrt(det Gram(b-a,c-a)) and tetrahedronContent(a,b,c,d)=sqrt(det Gram(b-a,c-a,d-a)). These are the twice-area and six-volume normalization quantities used internally by the cycle proof. No separate theorem identifying these with Hausdorff volume of a convex hull is asserted or needed by the target comparison.
+
+The actual projection decomposition supplies both height identities, including potentially degenerate vector tuples. The proof derives an expansion of the projected vector in the span, proves shear invariance by Gram algebra, and uses actual orthogonality of the residual. Nonnegativity comes from Mathlib's Gram-positive-semidefinite theorem. All vertex permutations preserve each content, proved via adjacent swaps and full finite permutation induction.
+
+On a genuine affinely independent target basis, distinct triples and quadruples have positive content. Actual faceDirection is identified with the span of the edge differences. Consequently the exact source quantities satisfy T_g=ell_e*height(g,e), U_h=T_g*height(h,g), and reciprocal_height(h,g)=T_g/U_h. The last endpoint pairs the Riesz barycentric vector with the actual normalized projected-gap INWARD Gaussian stratum normal and proves its coefficient is T_g/U_h, equivalently A_g/(3V_h). The normal has the opposite sign to an outward cap normal.
+
+30 audited public exports:26 theorems and4 definitions. Complete local closure consists of GaussianFanCycleGram.lean and frozen GaussianFanCycleGeometry.lean. No assumed height, area-ratio, volume-ratio, or permutation identity; no sorry/admit/custom axiom/native_decide. Only standard propext/Classical.choice/Quot.sound axioms permitted.
+
+Still separate: construction of actual translated Gaussian strata and density normalization, their boundary first/second moments in the physical affine subspaces, the assembled A-B matrix factorization, and the optimized covariance Hessian.
+
+Reproduce: python3 verify_fan_cycle_gram.py --lake /absolute/path/to/lake

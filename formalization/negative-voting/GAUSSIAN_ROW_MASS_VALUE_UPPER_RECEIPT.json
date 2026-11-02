@@ -1,0 +1,19 @@
+{
+  "module": "GaussianRowMassValueUpper",
+  "source_sha256": "f2ef24e71e72fa565878a0521fc4391920061d8a7c3a0490eff69d4aa92837e3",
+  "source_lines": 52,
+  "source_theorem_declarations": 2,
+  "compiled_constants_audited": 5,
+  "compiled_theorem_constants_audited": 5,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual arbitrary centered row systems, across every finite ambient dimension and including singular/duplicate systems, satisfy2 Gamma_p(B)-rowEnergy(B)<=referenceFirstWeight+mixedConstant (1+log m)^2 sum(p_i-1/m)^2 in the actual mass window, eventually uniformly in m. Uses actual positive-floor bounds and zero-floor continuity. No row-energy normalization, rank, factor, curvature or selected-offset premise."
+}

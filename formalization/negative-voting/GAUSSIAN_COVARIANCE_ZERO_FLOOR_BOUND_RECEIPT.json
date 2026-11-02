@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianCovarianceZeroFloorBound",
+  "sourceBackedBuild": true,
+  "constants": 2,
+  "theoremConstants": 2,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianCovarianceZeroFloorBound.lean": "6285eb1c70b6db94afdc5340d831902b7c30321f63d5f3b630b7b4ae986dcd33",
+    "GAUSSIAN_COVARIANCE_ZERO_FLOOR_BOUND_AUDIT.lean": "60f8bcb4df284f247248ad4ce5056692a28be1e500b893c715f465512e379632",
+    "GAUSSIAN_COVARIANCE_ZERO_FLOOR_BOUND_AXIOMS.txt": "2b03fe8b470ae4fdbb9da5c63dbd2e1b51d1132dd8e2e01e328a7359802ba78b",
+    "GAUSSIAN_COVARIANCE_ZERO_FLOOR_BOUND_BUILD.txt": "2b9192a346ecc62351df2b253b85b95d3885709510f393962a620294847c9f02"
+  }
+}

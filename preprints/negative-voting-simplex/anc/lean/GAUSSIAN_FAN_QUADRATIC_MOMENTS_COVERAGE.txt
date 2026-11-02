@@ -1,0 +1,25 @@
+GaussianFanQuadraticMoments: actual cell tensors and second-chaos derivatives
+
+This module extends actual tested-cell differentiation to continuous
+quadratic-growth tests, with both score rows and offsets moving. It derives
+the literal intrinsic and ambient Gaussian facet formula, including the
+normal density and edge-length denominator. The geometric hypotheses are
+just the actual positive centered singular bound; no derivative or surface
+formula is supplied.
+
+secondMomentTensor(B,h,i,j,k) is literally the Gaussian winning-cell integral
+of x_j*x_k-delta_jk. secondEnergy is one half of the full squared tensor sum.
+Its actual joint Frechet derivative is derived by differentiating those
+cell integrals and the finite square sum.
+
+The product/Euclidean Gaussian coordinate map and actual AE winning-cell
+identity prove secondEnergy equals the checked Hermite chaosEnergy(...,2),
+with every diagonal and off-diagonal normalization retained. The same
+actual Frechet derivative is proved directly for that genuine chaosEnergy
+function on an open neighborhood of the full-rank rows, not just for a
+parallel tensor definition.
+
+This is first-derivative calculus, not the final Hessian estimate. It
+supplies the actual tensor and gradient used by the mass adjoint next.
+Source-backed Lake build and exhaustive compiled-module transitive axiom
+audit passed, with only the standard three axioms.

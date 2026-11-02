@@ -1,0 +1,30 @@
+FINITE POSITIVE GAUSSIAN MARGIN AND NEGATIVE ENVELOPE INTEGRAL
+
+GaussianMaximumTailMargins.lean derives, for the actual independent Gaussian
+maximum scaled by its actual upper 1/m quantile b, whenever b^2>=10^6:
+  P(Z>t) >= (999/1000)exp(-t) - exp(-2t)/2,  0<=t<=8.
+This is a finite inequality. Its proof combines both checked Mills bounds,
+the actual finite maximum CDF and the proved Bonferroni inequality; it has
+no assumed limiting law or moment-convergence premise. The far lower tail
+is also proved directly:
+  P(M_m<=-s) <= 2^(-m)exp(-m s^2/2),  s>=0.
+
+GaussianDoubleExponentialIntegral.lean proves the actual integral bound
+  integral_[0,infinity) exp(-exp((99/100)t)) dt < 23/99.
+It derives the half-line substitution u=exp(t), then bounds the actual
+exponential integral integral_[1,infinity) exp(-u)/u du by reciprocal
+secants on [1,3/2], [3/2,2], [2,3] and the constant upper bound 1/3 on
+[3,infinity). Certified mathlib exponential bounds yield the rational
+upper bound 23/100 before rescaling. The exact substitution and all
+integrability premises are proved; no special-function constant is assumed.
+
+These are the two strict-margin ingredients for an eventual positive
+mean/quantile gap. The remaining middle/far-tail integrals and signed
+expectation assembly are separate tasks. No completed mass-localization
+or Gumbel-convergence theorem is claimed here.
+
+Reproduce:
+  lake build GaussianMaximumTailMargins GaussianDoubleExponentialIntegral
+  lake env lean GAUSSIAN_MAXIMUM_MARGINS_AUDIT.lean
+The compiled-module inventory includes every private/generated constant;
+transitive axioms must be among propext, Classical.choice, Quot.sound only.

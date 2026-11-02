@@ -1,0 +1,14 @@
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineMass_le_one","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.one_le_lineLogScale","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.differentiableAt_lineLogMass","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.hasDerivAt_lineLogScale","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineLogScale","module":"GaussianAffineLogScale","theorem":false}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.line_shift_identity","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineLogScale_derivative_bound","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineLogMass","module":"GaussianAffineLogScale","theorem":false}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineMass_nonneg","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineLogMass_nonpos","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineLogMass_derivative_bound","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineLogScale_sq","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineLogMass.eq_1","module":"GaussianAffineLogScale","theorem":true}
+AFFINE_LOG_SCALE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogScale.lineMass","module":"GaussianAffineLogScale","theorem":false}

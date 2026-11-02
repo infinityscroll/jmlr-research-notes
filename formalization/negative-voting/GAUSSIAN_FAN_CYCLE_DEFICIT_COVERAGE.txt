@@ -1,0 +1,13 @@
+ACTUAL GAUSSIAN CYCLE B FORM AS COVARIANCE-DEFICIT ENERGY
+
+The actual cap first/second moment identities yield a centered boundary identity. Exact parent-to-child Gaussian slice transport then proves
+  mu_S Deficit_S(u,v) = sum_child mu_child <u,n_inward> (mean_S(v)-mean_child(v)).
+Here every mass, mean and covariance is a literal Gaussian integral; Deficit uses the intrinsic tangent coordinates and the actual normalized cap conditional covariance.
+
+For a barycentric dual vector, the sum collapses to its single genuine child face. Combining this with the derived triangle coefficient normalization gives
+  D_k E_e(v_k,v) = mean_edge(v)-mean_triangle_k(v).
+The pair identity is exactly the coefficient defining cycleB. Therefore cycleB(lam,eta) equals one half the ordered-edge sum of actual covariance-deficit pairings of the corresponding correction vectors. The factor one half and the repeated-vertex zero terms are proved explicitly.
+
+The diagonal deficit is exactly tangent-projector norm squared minus actual conditional directional variance; PSD follows from the already proved Gaussian conditional variance bound. No inverse covariance-deficit, assumed boundary identity, Gaussian factorization, or supplied PSD premise is used.
+
+This module identifies B and proves its actual geometric/analytic meaning. Weighted gauge choice and A-B are separate proved predecessor/sibling endpoints; the residual cross-term, actual optimizer cycle, and Ehrhard assembly are subsequent work. No full negative-voting theorem is asserted here.

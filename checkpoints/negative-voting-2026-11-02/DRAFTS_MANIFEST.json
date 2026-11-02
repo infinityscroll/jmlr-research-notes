@@ -1,0 +1,29 @@
+{
+  "stopped_at_user_request": true,
+  "drafts": [
+    {
+      "path": "drafts/GaussianQuadraticBulkDifferential.lean",
+      "source_sha256": "2d86deda24e61251a6df3a63b5926dc9908f3b98bf1844827d347b899a4dc3e2",
+      "status": "Source-backed build fails: nested continuous-linear-map metric/typeclass obligations remain.",
+      "included_in_verified_project": false
+    },
+    {
+      "path": "drafts/GaussianSquareExponential.lean",
+      "source_sha256": "0c9ffccafe2a08c79649154557b06e7d1b38df76b0db052dcc4946f253e6deeb",
+      "status": "Standalone Lean compilation passed; not source-built or axiom-audited.",
+      "included_in_verified_project": false
+    },
+    {
+      "path": "drafts/GaussianPolynomialHermiteDegree.lean",
+      "source_sha256": "aebe5640413330893f163e357febdec42f3fb02d490ffb0d416c1773709436b3",
+      "status": "Source-backed build passed; axiom audit not started.",
+      "included_in_verified_project": false
+    },
+    {
+      "path": "drafts/GaussianPolynomialFacetTrace.lean",
+      "source_sha256": "1ead97b865d7a64e72dbd25378c028f19351d0f7fb727b5acdbfb0316fa76a1e",
+      "status": "Build fails; explicit integrability, Holder and real-exponent elaboration repairs remain.",
+      "included_in_verified_project": false
+    }
+  ]
+}

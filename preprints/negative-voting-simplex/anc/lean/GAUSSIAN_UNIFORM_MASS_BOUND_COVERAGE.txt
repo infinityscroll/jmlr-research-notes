@@ -1,0 +1,25 @@
+GaussianUniformMassBound — unconditional actual competitive localization
+
+Source-backed Lake build and exhaustive source-module constant audit passed.
+All transitive axioms are propext, Classical.choice, Quot.sound only.
+
+assignmentFirstEnergy_bound_in_mass_window constructs an actual centered
+Parseval affine basis, invokes the actual quantitative covariance mass bound,
+and uses the proved singular-boundary/ambient-coordinate bridge. It proves
+W(f)<=w+mixedConstant*(1+log m)^2*massDeficit(f) for any completed-measurable
+AE fractional Gaussian rule with masses in [1/(100m),2/m] and sufficiently
+large m. There is no supplied affine basis, covariance, rank, derivative,
+optimizer, stationarity, or mass-value hypothesis.
+
+eventually_uniform_mass_value_bound places its alphabet threshold before all
+finite ambient types and assignments. The two final competitive endpoints
+also put the threshold before the regular reference orientation and the
+entire range 0<=r<=1/(m-1). For actual competitors they prove:
+  massDeficit <= 512/m^3;
+  0<=D, massDeficit<=2D, r*|W-w|<=D, D<=128*r^2/m,
+where D=massDeficit+r*(w-W).
+The mass-value premise of GaussianCompetitiveSharpMass and
+GaussianCompetitiveDeficit is discharged, and r=0 is included.
+
+The final negative-voting theorem still needs the remaining geometric and
+local/noise comparison stages; these endpoints do not assert it.

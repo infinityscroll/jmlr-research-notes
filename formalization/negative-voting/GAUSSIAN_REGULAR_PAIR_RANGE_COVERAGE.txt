@@ -1,0 +1,3 @@
+Actual regular pair-path score-range contraction
+
+utilityRange is sign-invariant and scales by a positive scalar. The literal regular pairPath score coordinates are derived from the exact Gram matrix; the two moving coordinates are convex interpolations of the original pair and all other coordinates remain fixed. pairPath_utilityRange_le therefore derives contraction of the actual score range on t in [0,1]. No range-contraction premise is assumed. This file supplies the finite path input for the divided-noise coefficient; it does not assert that coefficient or its Gaussian moment bound.

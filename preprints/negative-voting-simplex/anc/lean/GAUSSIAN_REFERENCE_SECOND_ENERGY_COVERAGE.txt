@@ -1,0 +1,21 @@
+The actual second Hermite energy of a normalized regular simplex assignment
+in any finite ambient dimension equals referenceSecondWeight n (m=n+2,n>0).
+
+The proof starts from literal Gaussian noise-law equality across equal-Gram
+realizations. The proved actual spectral series and absolute cubic-tail bound
+show that any difference in A2, after equal A0 and A1 are subtracted, is at most
+2r for every 0<r<=1. Choosing a small r forces that difference to vanish.
+This is an actual coefficient identification, not a supplied tensor formula.
+
+The final eventual_uniform_regular_second_gap has one threshold before the
+ambient finite type and regular rows. It gives 0 <= A2-referenceJensenFloor
+and A2-referenceJensenFloor <= 50/m for the literal regular assignment.
+The proof uses the previously proved numerical maximum-moment gap.
+
+This does not assert full noise-stability minimality. It closes the ambient
+realization dependence of the actual regular second-chaos reference used in
+localization and later affine-tangent estimates.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for all 4 compiled constants (4 theorem constants),
+using only propext, Classical.choice and Quot.sound.

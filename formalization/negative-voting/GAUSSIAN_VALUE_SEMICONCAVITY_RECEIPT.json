@@ -1,0 +1,26 @@
+{
+  "module": "GaussianValueSemiconcavity",
+  "source_sha256": "e11e764b48e55dffb7da5444fcabb81f7ca778965e48570c209e99d90ae59f67",
+  "source_lines": 212,
+  "source_theorem_declarations": 10,
+  "compiled_constants_audited": 14,
+  "compiled_theorem_constants_audited": 13,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T05:46:40.463462+00:00",
+  "build_transcript": "GAUSSIAN_VALUE_SEMICONCAVITY_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT.lean",
+    "GAUSSIAN_VALUE_SEMICONCAVITY_AXIOMS.txt",
+    "GAUSSIAN_VALUE_SEMICONCAVITY_COVERAGE.txt"
+  ]
+}

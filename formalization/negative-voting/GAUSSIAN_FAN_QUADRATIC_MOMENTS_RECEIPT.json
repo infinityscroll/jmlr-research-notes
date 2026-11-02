@@ -1,0 +1,26 @@
+{
+  "build_command": "lake build GaussianFanQuadraticMoments",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_FAN_QUADRATIC_MOMENTS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 24,
+  "theorem_count": 19,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanQuadraticMoments.lean": "ee89456a9d66a3c2eab747b0f29719021e9dab7391a8c3aab984dea729445e76",
+    "GaussianQuadraticMovingCap.lean": "1007a7852124c68b593f2549d0075ffb96f7fc463ccabbd920ddb71454136195",
+    "GaussianFanMovingCells.lean": "61a492d93167d58269f2f2be5c728bb63fff225233649541989587de7949c745",
+    "GaussianConditionalSecondMoment.lean": "a7bb768b228c4f307d8b41ede13cc658ea3fb3b8f7d77eaf98ca826a41e29197",
+    "GaussianFanJointMass.lean": "d09b38b9fe746aff7b8ccda51cb6ebd4a9bdca6cbacd7fe5d0796a9c67fde03e",
+    "GAUSSIAN_FAN_QUADRATIC_MOMENTS_AUDIT.lean": "0b37ffcfbc535584de8662703f9811fd2928d143a3afbde86b9e1b676fc8f4a4",
+    "GAUSSIAN_FAN_QUADRATIC_MOMENTS_AXIOMS.txt": "563a1b595cad11ced098f73964064064a278b8dce0247644e401642a47de4d65",
+    "GAUSSIAN_FAN_QUADRATIC_MOMENTS_BUILD.txt": "b11f367f367f4d1b1adebe9df9894c15d8cc4c8d57ca00442723e16f0e677d78",
+    "GAUSSIAN_FAN_QUADRATIC_MOMENTS_COVERAGE.txt": "46ffbe9032baff80f669b3a2cf6c64f507c2be44c88e20a4f8e3650b16b537ae"
+  }
+}

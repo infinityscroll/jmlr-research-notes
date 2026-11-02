@@ -1,0 +1,451 @@
+⚠ [8931/8976] Replayed WeakSimplexConjectureLean.Core.Euclidean
+warning: WeakSimplexConjectureLean/Core/Euclidean.lean:73:20: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8935/8976] Replayed FSC.Definitions
+warning: FSC/Definitions.lean:34:22: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Definitions.lean:52:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8937/8976] Replayed FSC.Support.Definitions
+warning: FSC/Support/Definitions.lean:40:11: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8939/8976] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PiGaussian
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean:49:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8942/8976] Replayed FSC.Support.Dilation
+warning: FSC/Support/Dilation.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FSC/Support/Dilation.lean:62:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8944/8976] Replayed FSC.Gaussian.PinDefinitions
+warning: FSC/Gaussian/PinDefinitions.lean:85:19: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Gaussian/PinDefinitions.lean:96:17: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8946/8976] Replayed FSC.Support.Slicing
+warning: FSC/Support/Slicing.lean:120:11: `ProbabilityTheory.noAtoms_gaussianReal` has been deprecated: Use `ProbabilityTheory.nullSingletonClass_gaussianReal` instead
+
+Hint: Replace the deprecated name:
+  n̵o̵A̵t̵o̵m̵s̵_̵g̵a̵u̵s̵s̵i̵a̵n̵R̵e̵a̵l̵n̲u̲l̲l̲S̲i̲n̲g̲l̲e̲t̲o̲n̲C̲l̲a̲s̲s̲_̲g̲a̲u̲s̲s̲i̲a̲n̲R̲e̲a̲l̲
+warning: FSC/Support/Slicing.lean:120:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8949/8976] Replayed FSC.Support.Differentiation
+warning: FSC/Support/Differentiation.lean:24:28: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:32:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:43:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:176:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:186:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FSC/Support/Differentiation.lean:191:20: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [8951/8976] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PrekopaLeindler
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:90:26: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:473:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:492:31: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:909:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8953/8976] Replayed WeakSimplexConjectureLean.Core.QuadraticCoercivity
+warning: WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean:63:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean:74:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8955/8976] Replayed FSC.Support.QuadraticTangent
+warning: FSC/Support/QuadraticTangent.lean:55:23: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/QuadraticTangent.lean:116:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8956/8976] Replayed PolyhedralSupportBoundary
+warning: PolyhedralSupportBoundary.lean:100:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.convex_positive_mass_supports`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8957/8976] Replayed GaussianCapCovariance
+warning: GaussianCapCovariance.lean:59:22: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianCapCovariance.lean:55:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.translated_cap_membership`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapCovariance.lean:104:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [FSC.capMass, hz] at hb
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: GaussianCapCovariance.lean:99:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_restrict_ne_zero`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapCovariance.lean:114:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_integrableExpSet`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8958/8976] Replayed GaussianCapFirstMoment
+warning: GaussianCapFirstMoment.lean:79:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.gaussian_cap_vector_integrable`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8960/8976] Replayed GaussianFanCycleGeometry
+warning: GaussianFanCycleGeometry.lean:62:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.eq_of_inner_basis_edges`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleGeometry.lean:84:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: GaussianFanCycleGeometry.lean:181:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: GaussianFanCycleGeometry.lean:176:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.projectedFaceGap_eq_projection_sub`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8961/8976] Replayed GaussianFanCycleGram
+warning: GaussianFanCycleGram.lean:17:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.pairGram_formula`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleGram.lean:20:47: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pairGram, Matrix.det_fin_two, Matrix.gram_apply, Matrix.cons_val_zero, Matrix.cons_val_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFanCycleGram.lean:24:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.tripleGram_formula`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleGram.lean:29:47: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [tripleGram, Matrix.det_fin_three, Matrix.gram_apply, Matrix.cons_val_zero, Matrix.cons_val_one,
+    Matrix.cons_val, Fin.reduceFinMk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFanCycleGram.lean:30:21: This simp argument is unused:
+  Fin.reduceFinMk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [tripleGram, Matrix.det_fin_three, Matrix.gram_apply, Matrix.cons_val_zero, Matrix.cons_val_one,
+    Matrix.head_cons, Matrix.cons_val]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFanCycleGram.lean:34:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.pairGram_nonneg`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleGram.lean:37:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.tripleGram_nonneg`:
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleGram.lean:194:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.faceDirection_pair`:
+  [FiniteDimensional ℝ E]
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleGram.lean:199:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.faceDirection_triple`:
+  [FiniteDimensional ℝ E]
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleGram.lean:235:19: Variable name `hki` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hki
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: GaussianFanCycleGram.lean:235:33: Variable name `hkj` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hkj
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8962/8976] Replayed GaussianFanCycleStrata
+warning: GaussianFanCycleStrata.lean:32:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.apex_sub_faceAnchor_mem`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleStrata.lean:36:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.target_face_edge_mem`:
+  [Fintype V]
+  [DecidableEq V]
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleStrata.lean:57:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianFanCycleStrata.lean:107:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.faceBoundaryNormal_mem_tangent`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleStrata.lean:112:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.faceBoundaryNormal_inner_tangent`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleStrata.lean:206:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.embedFace_isometry`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleStrata.lean:217:13: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: GaussianFanCycleStrata.lean:243:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: GaussianFanCycleStrata.lean:293:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8963/8976] Replayed GaussianFanCycleCoordinates
+warning: GaussianFanCycleCoordinates.lean:85:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: GaussianFanCycleCoordinates.lean:117:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.coordinateDual_pairing`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleCoordinates.lean:127:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.coordinateDual_norm`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleCoordinates.lean:196:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.coordinateEmbed_norm_sq`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanCycleCoordinates.lean:214:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.stratumDensityFactor_pos`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8964/8976] Replayed GaussianFanCycleNested
+warning: GaussianFanCycleNested.lean:13:0: automatically included section variable(s) unused in theorem `NegativeVotingFanCycle.faceDirection_mono`:
+  [Fintype V]
+  [DecidableEq V]
+  [FiniteDimensional ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [FiniteDimensional ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8966/8976] Replayed NegativeVoting.Routing
+warning: NegativeVoting/Routing.lean:26:0: automatically included section variable(s) unused in theorem `NegativeVoting.routingLoss_eq_sum`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: NegativeVoting/Routing.lean:55:50: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+⚠ [8967/8976] Replayed NegativeVoting.Integrability
+warning: NegativeVoting/Integrability.lean:20:0: automatically included section variable(s) unused in theorem `NegativeVoting.simplex_weight_le_one`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: NegativeVoting/Integrability.lean:48:0: automatically included section variable(s) unused in theorem `NegativeVoting.integrable_finite_max`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8968/8976] Replayed NegativeVoting.GaussianRouting
+warning: NegativeVoting/GaussianRouting.lean:53:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: NegativeVoting/GaussianRouting.lean:82:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8970/8976] Replayed NegativeVoting.NoiseStability
+warning: NegativeVoting/NoiseStability.lean:45:8: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵a̵s̵u̵r̵a̵b̵l̵e̵_̵p̵i̵_̵l̵a̵m̵b̵d̵a̵M̲e̲a̲s̲u̲r̲a̲b̲l̲e̲.̲o̲f̲_̲e̲v̲a̲l̲
+warning: NegativeVoting/NoiseStability.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: NegativeVoting/NoiseStability.lean:152:4: This simp argument is unused:
+  Complex.ofReal_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [charFun_gaussianReal, Complex.ofReal_zero, mul_zero, zero_mul, one_mul, zero_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NegativeVoting/NoiseStability.lean:152:24: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [charFun_gaussianReal, Complex.ofReal_zero, mul_zero, zero_mul, Complex.ofReal_one, zero_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8972/8976] Replayed NegativeVoting.RegularSimplex
+warning: NegativeVoting/RegularSimplex.lean:116:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8975/8976] Built GaussianFanCycleSlice (26s)
+warning: GaussianFanCycleSlice.lean:121:13: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+Build completed successfully (8976 jobs).

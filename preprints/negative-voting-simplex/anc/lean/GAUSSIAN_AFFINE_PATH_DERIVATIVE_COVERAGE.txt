@@ -1,0 +1,22 @@
+GaussianAffinePathDerivative: actual log-mass rates at every invertible point
+
+The affineMass definition is the literal Gaussian probability of the affine
+pullback of a finite cap. For every invertible base map M and shift v, the
+module derives differentiability and an explicit logarithmic derivative bound
+along M+tA, v+tz. The bound uses exactly the relative velocities M^-1 A and
+M^-1 z, with the actual base mass p=affineMass(M,v):
+  |deriv_0 log p(t)| <= 4e(1+log(1/p)) ||M^-1 A||HS
+      + ||M^-1 z|| (2 sqrt(log(1/p))+1/sqrt(2 pi)).
+
+The normalized base cap, its unit normals and NoCoincident property, adjoint
+injectivity, and exact relative-velocity pullback identity are derived. The
+base assumptions are concrete: unit original normals, NoCoincident supports,
+an actual continuous linear equivalence M, and positive actual base mass.
+No differentiability or derivative bound is assumed.
+
+The following norm and positivity modules remove the supplied inverse and
+pathwise positivity when specializing to an actual near-identity line.
+This module does not yet assert the finite-interval comparison.
+
+Source-backed Lake build and exhaustive compiled-module axiom audit passed;
+only the standard three axioms occur, including generated helpers.

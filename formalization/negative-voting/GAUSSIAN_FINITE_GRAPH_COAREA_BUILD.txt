@@ -1,0 +1,45 @@
+⚠ [8931/8932] Built GaussianFiniteGraphCoarea (6.9s)
+warning: GaussianFiniteGraphCoarea.lean:31:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: GaussianFiniteGraphCoarea.lean:45:8: This simp argument is unused:
+  Measure.restrict_apply_univ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Real.volume_Ico, ENNReal.toReal_ofReal']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFiniteGraphCoarea.lean:45:36: This simp argument is unused:
+  Real.volume_Ico
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Measure.restrict_apply_univ, ENNReal.toReal_ofReal']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFiniteGraphCoarea.lean:45:52: This simp argument is unused:
+  ENNReal.toReal_ofReal'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Measure.restrict_apply_univ, Real.volume_Ico]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFiniteGraphCoarea.lean:50:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: GaussianFiniteGraphCoarea.lean:52:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: GaussianFiniteGraphCoarea.lean:61:39: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: GaussianFiniteGraphCoarea.lean:115:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraph.weighted_absolute_sum_eq_twice`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (8932 jobs).

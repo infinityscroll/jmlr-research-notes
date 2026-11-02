@@ -1,0 +1,5 @@
+[
+  "GaussianCovarianceUniformCompact",
+  "GaussianCovarianceUniformTransfer",
+  "GaussianCovarianceOptimizerEdges"
+]

@@ -1,0 +1,13 @@
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regularFacetNormal_inner_conditionalMean_id","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regular_facetWeight_range_bounds","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.conditionalMean_id_eq_projection","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regular_facetWeight_shift_log_eq","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.rangeFacetConstant_pos","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regular_facetWeight_shift_formula","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regular_facetWeight_shift_pos","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regularCap_translation_log_bound_of_norm","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularFacetRange.rangeFacetConstant._proof_1","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.rangeFacetConstant","theorem":false}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.normal_density_range_bound","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regular_facetWeight_range_log_bound","theorem":true}
+GAUSSIAN_REGULAR_FACET_RANGE_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.regularCap_range_log_bound","theorem":true}

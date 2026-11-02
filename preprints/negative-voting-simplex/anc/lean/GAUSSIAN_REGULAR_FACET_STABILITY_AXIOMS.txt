@@ -1,0 +1,4 @@
+REGULAR_FACET_STABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetStability.regular_facetWeight_strict_comparable","module":"GaussianRegularFacetStability","theorem":true}
+REGULAR_FACET_STABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetStability.regular_facetWeight_log_stability","module":"GaussianRegularFacetStability","theorem":true}
+REGULAR_FACET_STABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianRegularFacetStability.0.NegativeVotingRegularFacetStability.strict_weight_bounds_of_abs_log","module":"GaussianRegularFacetStability","theorem":true}
+REGULAR_FACET_STABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetStability.regular_transported_facetWeight_pos","module":"GaussianRegularFacetStability","theorem":true}

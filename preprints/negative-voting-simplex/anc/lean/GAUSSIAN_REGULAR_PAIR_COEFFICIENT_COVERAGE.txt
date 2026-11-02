@@ -1,0 +1,3 @@
+Actual continuous divided regular-noise coefficient
+
+negativePairCoefficient is the integral of the actual Gaussian mass Jacobian along the pair midpoint path, divided only by alpha*sqrt(1-r^2). It never divides by a score gap. Its continuity in the ambient point follows from the actual C1 mass theorem and compact parametric integration. mass_pair_difference_eq_gap_mul_average is an exact FTC identity for either sign of the score gap. negativePairCoefficient_gap_identity proves T_{-r}g_j-T_{-r}g_i=r*k_ij*alpha*<B_i-B_j,x> for every point, including ties, under exact regular Gram and 0<r<1. No full-span or derivative-existence premise is used. The error envelope and Lq moments belong to subsequent modules.

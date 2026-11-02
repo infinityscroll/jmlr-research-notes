@@ -1,0 +1,7 @@
+Actual all-order polynomial Gaussian Stein boundary calculus
+
+GaussianPolynomialTiltDerivatives derives weighted exponential derivatives at every real tilt and every polynomial order from L2 weights and all exponential moments. The fixed integrable two-sided exponential majorant is proved.
+
+GaussianCapPolynomialStein discharges these inputs for the actual standard Gaussian restricted to a finite polyhedron and its actual Gaussian face laws. Differentiating the already checked exponential-tilt boundary identity inductively proves every polynomial-order Stein identity, retaining the literal face probability measure and Gaussian density normalization. The result requires unit normals and the existing NoCoincident geometric condition, and has no assumed differentiation, boundary, or integrability conclusion.
+
+This is classical Gaussian integration-by-parts infrastructure for the actual affine second-chaos transport calculation, not a new Stein theorem or the final A2 Hessian estimate.

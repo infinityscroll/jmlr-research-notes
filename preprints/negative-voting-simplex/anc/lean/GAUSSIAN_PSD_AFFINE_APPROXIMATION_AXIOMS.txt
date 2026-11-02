@@ -1,0 +1,11 @@
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positiveOperatorEquiv._proof_5","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positiveOperatorEquiv_apply","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positiveOperatorEquiv._proof_2","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positiveOperatorEquiv._proof_1","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positive_operator_injective","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positiveOperatorEquiv._proof_3","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positiveOperatorEquiv._proof_4","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.exists_bounded_affine_approximation._simp_1_2","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.positiveOperatorEquiv","theorem":false}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.exists_bounded_affine_approximation._simp_1_1","theorem":true}
+GAUSSIAN_PSD_AFFINE_APPROXIMATION_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPSDAffineApproximation.exists_bounded_affine_approximation","theorem":true}

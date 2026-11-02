@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianCompetitiveDeficit",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_COMPETITIVE_DEFICIT_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 4,
+  "theorem_count": 3,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCompetitiveDeficit.lean": "9492a86f0fa9b8e1fc5b6a30d397c2c31d698351993133cf95e0d8ef387d1963",
+    "GaussianCompetitiveSharpMass.lean": "73005bec119765ba01c4ae03e59d43611da73e6e394147dd54c70d1f0cb9e227",
+    "GAUSSIAN_COMPETITIVE_DEFICIT_AUDIT.lean": "d2fe952761d402f3463252446f6c332c9cd7bfb0ac50c5f5bc66f4211fd8b4d4",
+    "GAUSSIAN_COMPETITIVE_DEFICIT_AXIOMS.txt": "3636a77977328492587219449895b58cf4ed9086a0d0efccf97e5baccad0d5e3",
+    "GAUSSIAN_COMPETITIVE_DEFICIT_BUILD.txt": "6ae03e1c25562c5fe54994723b4e309e0486613d5360645846f4f2c29da70c45",
+    "GAUSSIAN_COMPETITIVE_DEFICIT_COVERAGE.txt": "dd610052fb00e34d33895686c3c87c836e3072ee9b7ffd63c122466dc9d49a87"
+  }
+}

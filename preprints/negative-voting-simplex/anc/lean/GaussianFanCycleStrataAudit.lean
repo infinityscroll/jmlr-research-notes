@@ -1,0 +1,33 @@
+import GaussianFanCycleStrata
+
+#print axioms NegativeVotingFanCycle.affineFanApex
+#print axioms NegativeVotingFanCycle.affineFanApex_edge
+#print axioms NegativeVotingFanCycle.affineFanApex_scores_tie
+#print axioms NegativeVotingFanCycle.faceAnchor
+#print axioms NegativeVotingFanCycle.apex_sub_faceAnchor_mem
+#print axioms NegativeVotingFanCycle.target_face_edge_mem
+#print axioms NegativeVotingFanCycle.faceAnchor_scores_tie
+#print axioms NegativeVotingFanCycle.winnerStratum
+#print axioms NegativeVotingFanCycle.mem_winnerStratum_iff_apex
+#print axioms NegativeVotingFanCycle.mem_winnerStratum_tangent
+#print axioms NegativeVotingFanCycle.mem_winnerStratum_iff_tangent_gaps
+#print axioms NegativeVotingFanCycle.faceBoundaryNormal_mem_tangent
+#print axioms NegativeVotingFanCycle.faceBoundaryNormal_inner_tangent
+#print axioms NegativeVotingFanCycle.intrinsicCapNormal
+#print axioms NegativeVotingFanCycle.intrinsicCapOffset
+#print axioms NegativeVotingFanCycle.intrinsicWinnerCap
+#print axioms NegativeVotingFanCycle.embedFace
+#print axioms NegativeVotingFanCycle.intrinsicCapNormal_norm
+#print axioms NegativeVotingFanCycle.embedFace_sub_apex_mem
+#print axioms NegativeVotingFanCycle.intrinsicCap_inequality_iff_gap
+#print axioms NegativeVotingFanCycle.embedFace_mem_winnerStratum_iff
+#print axioms NegativeVotingFanCycle.winnerStratum_eq_image_intrinsicWinnerCap
+#print axioms NegativeVotingFanCycle.embedFace_isometry
+#print axioms NegativeVotingFanCycle.intrinsicWinnerCap_isClosed
+#print axioms NegativeVotingFanCycle.intrinsicReciprocal
+#print axioms NegativeVotingFanCycle.intrinsicReciprocal_capNormal
+#print axioms NegativeVotingFanCycle.intrinsicCapNormal_ne_smul
+#print axioms NegativeVotingFanCycle.intrinsicStrictPoint
+#print axioms NegativeVotingFanCycle.intrinsicStrictPoint_strict
+#print axioms NegativeVotingFanCycle.intrinsicWinnerCap_nonempty
+#print axioms NegativeVotingFanCycle.intrinsicStrictPoint_mem_interior

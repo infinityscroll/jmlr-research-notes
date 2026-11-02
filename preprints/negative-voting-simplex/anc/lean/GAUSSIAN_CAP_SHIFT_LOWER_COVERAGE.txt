@@ -1,0 +1,2 @@
+For every actual finite Gaussian cap and every shift t*v, capMass(b - t*inner(w,v)) >= capMass(b)^2 exp(-t^2 norm(v)^2). Zero masses are included. No positivity, covariance, path regularity or dimensional factor is assumed.
+All owned constants audited; only standard three axioms. This is an ingredient, not the full noise theorem.

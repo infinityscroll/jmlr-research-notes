@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianBalancedOffsetPath",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_BALANCED_OFFSET_PATH_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 18,
+  "theorem_count": 16,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianBalancedOffsetPath.lean": "979e080dda5620fd739bb36c15ef94cdb9d7f52268bf72aefad5e67f1ece7388",
+    "GaussianCovarianceSegment.lean": "893cbf659210103d75697a1248d76bd33e47cea7fdad0b5f8f0ff9bc0a12a678",
+    "GaussianFanSelectedOffsets.lean": "7a3e9e5efc960bc3f2ae06403ae0b5ed6f06b44e53acf15ecf47bbfbbbe5d500",
+    "GaussianRegularFacetNeighborhood.lean": "c9134a909a4fa394627911994339f835665f42e01723999d3a01157f2f29513d",
+    "GAUSSIAN_BALANCED_OFFSET_PATH_AUDIT.lean": "11e73cb95f8a511a84ee81aef23102de6c063337a415341743ffc2d53202a0f3",
+    "GAUSSIAN_BALANCED_OFFSET_PATH_AXIOMS.txt": "b4363c282af950ba0ace4478aede8ee38f588ecdb93c7260bbbcd7190bb675ed",
+    "GAUSSIAN_BALANCED_OFFSET_PATH_BUILD.txt": "a2baffac64e6a1f1cc9a5582ebcd61fc212250ed51efc955b11d19b70a87d7ac",
+    "GAUSSIAN_BALANCED_OFFSET_PATH_COVERAGE.txt": "52343a323889b1d2900d862650ffdbe4832b778b104a9d724d0fd2a7d79974b7"
+  }
+}

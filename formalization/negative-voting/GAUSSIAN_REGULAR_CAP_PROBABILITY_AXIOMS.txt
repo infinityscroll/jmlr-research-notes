@@ -1,0 +1,6 @@
+REGULAR_CAP_PROBABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularCapProbability.regularCap_mass_pos","module":"GaussianRegularCapProbability","theorem":true}
+REGULAR_CAP_PROBABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularCapProbability.regularCap_affine_log_ratio_bound","module":"GaussianRegularCapProbability","theorem":true}
+REGULAR_CAP_PROBABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularCapProbability.regularCap_mass_lower","module":"GaussianRegularCapProbability","theorem":true}
+REGULAR_CAP_PROBABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularCapProbability.regularCap_log_bound","module":"GaussianRegularCapProbability","theorem":true}
+REGULAR_CAP_PROBABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetConditionalPlane.transportedLevel.eq_1","module":"GaussianRegularCapProbability","theorem":true}
+REGULAR_CAP_PROBABILITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularCapProbability.regularCap_mass_eq","module":"GaussianRegularCapProbability","theorem":true}

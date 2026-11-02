@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBoundedRowGap",
+  "source_sha256": "0e445d6a06cebf4fe015a3ce2ea8b9326f8652afe699fa188e833a8404aeff3c",
+  "source_lines": 148,
+  "source_theorem_declarations": 5,
+  "compiled_constants_audited": 7,
+  "compiled_theorem_constants_audited": 6,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual Gaussian affine-basis fans in the mass box [1/(2m),3/(2m)] with row norm at most8 sqrt(1+log m)/m have centered offset-Jacobian spectral gap at least1/(32768 pi^2 (1+log m)). Actual physical cut expansion and Gaussian centroid bounds are proved and inserted. No quantitative condition number, minimum edge length or degree premise. Qualitative affine-basis hypothesis remains; no singular differential chart, limiting dual offset, offset-energy certificate or full theorem is asserted."
+}

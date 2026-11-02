@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianSwitchingFarTail",
+  "sourceBackedBuild": true,
+  "constants": 17,
+  "theoremConstants": 15,
+  "sha256": {
+    "GaussianSwitchingFarTail.lean": "cc555604bdf23f77500426624dee30c2852f36da40c41e2d8603c94cd3079819",
+    "GAUSSIAN_SWITCHING_FAR_TAIL_AUDIT.lean": "509627c6c67d55d66aaac774c00c0640416990f24d5446969e47e60d75c6cb3e",
+    "GAUSSIAN_SWITCHING_FAR_TAIL_AXIOMS.txt": "86dafe17f14abe8d25290063d5e82157e7c2c49b7a5640b74bf5766c370b5d15",
+    "GAUSSIAN_SWITCHING_FAR_TAIL_BUILD.txt": "e79ad0e18ed1a6abda1be7e123e87ed3c92be91de8215bb7c2ada13c63558a7e"
+  }
+}

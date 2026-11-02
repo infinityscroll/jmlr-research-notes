@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianFanMassValueGradient",
+  "sourceBackedBuild": true,
+  "constants": 11,
+  "theoremConstants": 10,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianFanMassValueGradient.lean": "1caf9d73330ab4c413e8cc58bd226b5e7f1de12ddc5b27e69f004b7c3f24985e",
+    "GAUSSIAN_MASS_VALUE_GRADIENT_AUDIT.lean": "ab9cc73751fb222d16745fad44f91ad9061f949df2935de112d7fe2a48126698",
+    "GAUSSIAN_MASS_VALUE_GRADIENT_AXIOMS.txt": "a61fc2b83760b7f7a6e19be7abdb2352350c19dd91aa24e27eca763446523506",
+    "GAUSSIAN_MASS_VALUE_GRADIENT_BUILD.txt": "d5e7aa5c213ef69ae35461d9c3334ee478bf5c2830d527a15bd1c7f56b566fbb"
+  }
+}

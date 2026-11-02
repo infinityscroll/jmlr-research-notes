@@ -1,0 +1,7 @@
+GAUSSIAN_BOUNDED_ROW_GAP_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedRowGap.uniform_box_rayleigh","theorem":true}
+GAUSSIAN_BOUNDED_ROW_GAP_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedRowGap.centroidCap","theorem":false}
+GAUSSIAN_BOUNDED_ROW_GAP_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedRowGap.gaussian_bounded_row_rayleigh","theorem":true}
+GAUSSIAN_BOUNDED_ROW_GAP_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedRowGap.physical_cut_expansion","theorem":true}
+GAUSSIAN_BOUNDED_ROW_GAP_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedRowGap.centroidCap_three_halves","theorem":true}
+GAUSSIAN_BOUNDED_ROW_GAP_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedRowGap.centroid_norm_le_cap","theorem":true}
+GAUSSIAN_BOUNDED_ROW_GAP_AUDIT {"axioms":["propext"],"constant":"NegativeVotingBoundedRowGap.centroidCap._proof_1","theorem":true}

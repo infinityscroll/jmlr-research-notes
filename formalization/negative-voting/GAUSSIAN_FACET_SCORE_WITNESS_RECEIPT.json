@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianFacetScoreWitness",
+  "sourceBackedBuild": true,
+  "constants": 10,
+  "theoremConstants": 9,
+  "sha256": {
+    "GaussianFacetScoreWitness.lean": "c26ed67a6708d3cb086bae6160d42abb6be68d3c0ecfcd35a051153baaa12c64",
+    "GAUSSIAN_FACET_SCORE_WITNESS_AUDIT.lean": "a68be979ddd3f31578a3469a9515973bd7df20618a4cef9716ec64dab199e0cd",
+    "GAUSSIAN_FACET_SCORE_WITNESS_AXIOMS.txt": "938938535d66c7ac403818c5468f1ca549be3411bb7dd0edfe09a7feaa6dcda7",
+    "GAUSSIAN_FACET_SCORE_WITNESS_BUILD.txt": "2b457ff62f3253792617cd0e05e64827e8070f2b0b1cb9364c22f45158a9c10f"
+  }
+}

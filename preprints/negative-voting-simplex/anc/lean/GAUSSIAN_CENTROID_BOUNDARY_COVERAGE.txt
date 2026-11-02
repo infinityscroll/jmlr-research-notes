@@ -1,0 +1,47 @@
+ACTUAL GAUSSIAN CENTROID-BOUNDARY AND INTERIOR IDENTITIES
+
+Source: GaussianFanCentroidBoundary.lean.
+Namespace: NegativeVotingFanCentroid.
+
+For actual Gaussian winning cells under a positive centered singular bound,
+centroid_eq_boundary_laplacian proves
+  centroid_i = sum_j facetWeight_ij * (B_i-B_j).
+Both centroid and facetWeight are the existing concrete Gaussian integrals.
+The theorem derives this identity from GaussianCapFirstMoment's vector
+boundary formula, the actual cap=winning-cell identity, and the checked
+normalization/plane transport to the intrinsic facet weight. It does not
+assume a boundary identity.
+
+centroid_pairing proves, for every vector family V_i,
+  sum_i <centroid_i,V_i>
+   = (1/2) sum_ij facetWeight_ij <B_i-B_j,V_i-V_j>.
+
+centroid_linear_pairing gives the corresponding formula with V_i=Q(B_i)
+for any actual linear operator Q. In particular, for a genuine symmetric
+linear operator H, centroid_symmetric_square_pairing proves
+  sum_i <centroid_i,H(H(B_i))>
+   = (1/2) sum_ij facetWeight_ij ||H(B_i-B_j)||^2.
+
+centroid_symmetric_mixed_pairing retains a second arbitrary linear operator K:
+  sum_i <centroid_i,H(K(B_i))>
+   = (1/2) sum_ij facetWeight_ij <H(B_i-B_j),K(B_i-B_j)>.
+Only H is required to be symmetric. This is the polarized interior term
+needed when differentiating a covariance factorization.
+
+The finite summation-by-parts identity is separately proved for arbitrary
+symmetric real weights and arbitrary vector families. For the concrete
+application, weight symmetry is the previously proved actual Gaussian
+facet-weight symmetry.
+
+This module does not supply the covariance square-root path, optimized
+offset derivatives, or full negative-voting theorem. Its exported inputs
+are concrete Gaussian geometry and actual linear-operator symmetry.
+
+Verification enumerates every compiled source-module constant, including
+private/generated helpers, and uses Lean.collectAxioms to reject any axiom
+other than propext, Classical.choice, Quot.sound. The receipt records exact
+source hashes and build/audit exit statuses.
+
+Reproduce:
+  lake build GaussianFanCentroidBoundary
+  lake env lean GAUSSIAN_CENTROID_BOUNDARY_AUDIT.lean

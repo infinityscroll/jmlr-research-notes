@@ -1,0 +1,3 @@
+Actual Gaussian conditional-plane transport
+
+For a symmetric invertible S and unit n, the module starts with the literal FSC.sliceLaw for u=S n/||S n|| and a=-<n,h>/||S n|| and pushes it by x -> S x+h. It derives its actual Gaussian law, mean beta=h-<n,h> K n/<n,K n>, covariance K-(K n tensor K n)/<n,K n>, and AE support in n-perp, where K=S squared. All moments and covariance identities are proved, not hypotheses. The positive ambient extension and actual fixed-facet weight normalization are subsequent modules.

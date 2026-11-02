@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "module": "GaussianSwitchingPairBound",
+  "sourceBackedBuild": true,
+  "fullProjectAudit": "PHASE13_INTEGRATED_VERIFICATION_RECEIPT.json",
+  "constants": 7,
+  "theoremConstants": 4,
+  "sha256": {
+    "GaussianSwitchingPairBound.lean": "1af348ca1dadb30baea7cdbeaa5788856af2e139db82448d37985d8404160c7f",
+    "GAUSSIAN_SWITCHING_PAIR_BOUND_AUDIT.lean": "1ab93b092c7fae9d37e0a6fac170e4062d046b9c5e8db6e612162ce1dce1ee6d",
+    "GAUSSIAN_SWITCHING_PAIR_BOUND_AXIOMS.txt": "ca74710b697905682dc4bc735e24d59f6d8c05e1c38fc1ec1107f1f8a22c19c3",
+    "GAUSSIAN_SWITCHING_PAIR_BOUND_BUILD.txt": "4f05a6cf3ba63d9d7afe348088787d86ff0030a56504678e7075ca5c510c9f49"
+  }
+}

@@ -1,0 +1,9 @@
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.negative_series_upper","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.gaussian_negative_upper","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.canonical_chaosEnergy_zero","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.bounded_energy_tail","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.gaussian_chaosEnergy_le_one_of_ae","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.negative_series_lower","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.canonical_negative_upper","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.competitive_mass_first_energy_bound","module":"GaussianCompetitiveParity","theorem":true}
+COMPETITIVE_PARITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveParity.gaussian_negative_lower","module":"GaussianCompetitiveParity","theorem":true}

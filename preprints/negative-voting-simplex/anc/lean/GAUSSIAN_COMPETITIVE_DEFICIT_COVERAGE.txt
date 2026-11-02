@@ -1,0 +1,19 @@
+GaussianCompetitiveDeficit: the actual deficit at vanishing correlation
+
+Define D = delta + r(w-W), where delta is the actual Gaussian assignment's
+squared mass deficit and W is its literal first-chaos energy. The endpoint
+proves, eventually in m=n+2 and simultaneously for every finite ambient
+space, regular reference, completed-measurable fractional competitor and
+0 <= r <= 1/(m-1):
+  0 <= D, delta <= 2D, r |W-w| <= D, D <= 128 r^2/m.
+This keeps the required r^2 scaling, including r=0 without any division by r.
+
+The only pending analytic premise is the same fixed-constant mass-value
+bound W <= w + K(1+log m)^2 delta, K>=0. Actual competitiveness refers to
+the real Gaussian noise integral; the regular second-chaos gap, affine
+second-chaos tangent, signed spectral remainder and uniform threshold are
+derived by the checked imported lemmas. The threshold precedes ambient
+space, reference, assignment and r. No other localization estimate is assumed.
+
+Source-backed Lake build and exhaustive compiled-source-constant axiom audit
+both passed. Only propext, Classical.choice and Quot.sound are permitted.

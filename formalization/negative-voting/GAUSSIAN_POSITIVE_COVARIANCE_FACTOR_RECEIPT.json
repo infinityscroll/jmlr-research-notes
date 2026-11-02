@@ -1,0 +1,26 @@
+{
+  "module": "GaussianPositiveCovarianceFactor",
+  "source_sha256": "2e84bd73452e5329769c29118f25cd70373fb085904217078acd40f11373c59b",
+  "source_lines": 175,
+  "source_theorem_declarations": 10,
+  "compiled_constants_audited": 17,
+  "compiled_theorem_constants_audited": 14,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T04:06:22.777024+00:00",
+  "build_transcript": "GAUSSIAN_COVARIANCE_CONCAVITY_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT.lean",
+    "GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AXIOMS.txt",
+    "GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_COVERAGE.txt"
+  ]
+}

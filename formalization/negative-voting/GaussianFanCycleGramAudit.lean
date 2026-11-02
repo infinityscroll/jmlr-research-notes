@@ -1,0 +1,32 @@
+import GaussianFanCycleGram
+
+#print axioms NegativeVotingFanCycle.pairGram
+#print axioms NegativeVotingFanCycle.tripleGram
+#print axioms NegativeVotingFanCycle.pairGram_formula
+#print axioms NegativeVotingFanCycle.tripleGram_formula
+#print axioms NegativeVotingFanCycle.pairGram_nonneg
+#print axioms NegativeVotingFanCycle.tripleGram_nonneg
+#print axioms NegativeVotingFanCycle.pairGram_shear
+#print axioms NegativeVotingFanCycle.tripleGram_shear
+#print axioms NegativeVotingFanCycle.pairGram_projection_factor
+#print axioms NegativeVotingFanCycle.tripleGram_projection_factor
+#print axioms NegativeVotingFanCycle.triangleContent
+#print axioms NegativeVotingFanCycle.tetrahedronContent
+#print axioms NegativeVotingFanCycle.triangleContent_projection_factor
+#print axioms NegativeVotingFanCycle.tetrahedronContent_projection_factor
+#print axioms NegativeVotingFanCycle.triangleContent_swap_first
+#print axioms NegativeVotingFanCycle.triangleContent_swap_last
+#print axioms NegativeVotingFanCycle.tetrahedronContent_swap_first
+#print axioms NegativeVotingFanCycle.tetrahedronContent_swap_middle
+#print axioms NegativeVotingFanCycle.tetrahedronContent_swap_last
+#print axioms NegativeVotingFanCycle.triangleContent_perm
+#print axioms NegativeVotingFanCycle.tetrahedronContent_perm
+#print axioms NegativeVotingFanCycle.faceDirection_pair
+#print axioms NegativeVotingFanCycle.faceDirection_triple
+#print axioms NegativeVotingFanCycle.triangleContent_eq_edge_mul_height
+#print axioms NegativeVotingFanCycle.tetrahedronContent_eq_face_mul_height
+#print axioms NegativeVotingFanCycle.triangleContent_pos
+#print axioms NegativeVotingFanCycle.tetrahedronContent_pos
+#print axioms NegativeVotingFanCycle.reciprocal_pair_height
+#print axioms NegativeVotingFanCycle.reciprocal_triple_height
+#print axioms NegativeVotingFanCycle.barycentricOutwardVector_tetrahedron_normal

@@ -1,0 +1,29 @@
+[
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingCovarianceOffsetResponse.hasDerivAt_covarianceOffsets_line",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingCovarianceOffsetResponse.intrinsic_offset_derivative_control",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingCovarianceOffsetResponse.hasDerivAt_deriv_covarianceValue_selected",
+    "theorem": true
+  }
+]

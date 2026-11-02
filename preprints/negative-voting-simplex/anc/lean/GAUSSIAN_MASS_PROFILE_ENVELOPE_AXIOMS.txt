@@ -1,0 +1,6 @@
+GAUSSIAN_MASS_PROFILE_ENVELOPE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassProfileEnvelope.gaussianMassProfile_square_envelope","theorem":true}
+GAUSSIAN_MASS_PROFILE_ENVELOPE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassProfileEnvelope.gaussianMassProfile_attained","theorem":true}
+GAUSSIAN_MASS_PROFILE_ENVELOPE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassProfileEnvelope.gaussianMassProfile_threshold_tangent","theorem":true}
+GAUSSIAN_MASS_PROFILE_ENVELOPE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassProfileEnvelope.gaussianMassProfile_square_quantile_envelope","theorem":true}
+GAUSSIAN_MASS_PROFILE_ENVELOPE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassProfileEnvelope.gaussianMassProfile_nonneg","theorem":true}
+GAUSSIAN_MASS_PROFILE_ENVELOPE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassProfileEnvelope.gaussianMassProfile_uniform","theorem":true}

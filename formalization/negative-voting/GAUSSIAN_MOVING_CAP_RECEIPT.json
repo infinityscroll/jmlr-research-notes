@@ -1,0 +1,41 @@
+{
+  "build_command": "lake build GaussianMovingCap",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_MOVING_CAP_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 109,
+  "theorem_count": 92,
+  "module_counts": {
+    "GaussianFanScoreHessian": {
+      "constants": 32,
+      "theorems": 28
+    },
+    "GaussianMovingSlab": {
+      "constants": 5,
+      "theorems": 5
+    },
+    "GaussianMovingCap": {
+      "constants": 72,
+      "theorems": 59
+    }
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanScoreHessian.lean": "b4953166ce720bb16187aedb2bdc8414ad99d8e3912447026122d5da1e2e116f",
+    "GaussianMovingSlab.lean": "aecc1fc483dc91c02c709e41fb57a8dcef8f591b1a86340a23e06f970f78a5f3",
+    "GaussianMovingCap.lean": "cb83db8b81d03087beed5fb899c3d06d27fdcf934bf95231518ca4096c47fe65",
+    "GaussianCapTelescoping.lean": "8c094d04138132d23817457ffc467f8d3a111b944f81b90c85535019c47d7c76",
+    "GAUSSIAN_MOVING_CAP_AUDIT.lean": "744afb4a6589834e0d16575c8416afeb7a82c6f535b196cbd458bfda054b828b",
+    "GAUSSIAN_MOVING_CAP_AXIOMS.txt": "ef5129fbf29541f3bbb14dae58886d74d3866aeddb28cff55380e54b4f92076c",
+    "GAUSSIAN_MOVING_CAP_BUILD.txt": "fc1570f1198bf28f32bb802d5bc04c31265b282980fccbdf3ed1c448957385f4",
+    "GAUSSIAN_MOVING_CAP_COVERAGE.txt": "6a1bec7880b3d6997e257d158608d3ffd8fb87e0c1efa6db5ea7eeb397fb5610",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
+  }
+}

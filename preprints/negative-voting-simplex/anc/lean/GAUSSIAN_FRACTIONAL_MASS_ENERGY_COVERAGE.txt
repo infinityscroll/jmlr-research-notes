@@ -1,0 +1,21 @@
+Completed-measurable, almost-everywhere simplex assignments in any finite
+Gaussian coordinate space have actual integrable coordinates, masses in
+[0,1], and total mass one. Their literal squared mass deviation is exactly
+the zero-chaos mass-square excess.
+
+A coordinate Euclidean Gaussian transport is proved. Actual coordinate
+first-moment integrals are identified with the vector Gaussian centroid.
+The previously checked sharp Gaussian mass-profile inequality then yields
+
+ W(f) <= sum_i I(p_i)^2 <= F_m+B_m sum_i(p_i-1/m)^2.
+
+This applies to all fractional cells, including mass zero or one, and
+requires no assumed centroid formula, positive mass, or Borel representative
+hypothesis beyond the explicit AEMeasurable input. The Gaussian transport
+preserves null sets and handles completed-measure inputs correctly.
+
+This module provides real first-energy localization data; the noise
+competition and eventual uniform mass window are in separate modules.
+
+Source-backed Lake build and exhaustive transitive audit passed for all
+20 compiled source constants (17 theorem constants), standard three axioms only.

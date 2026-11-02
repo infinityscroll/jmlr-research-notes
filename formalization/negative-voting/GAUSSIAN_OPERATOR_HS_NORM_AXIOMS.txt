@@ -1,0 +1,8 @@
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOperatorHS.operatorHilbertSchmidt_add_le","theorem":true}
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOperatorHS.operatorVector","theorem":false}
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingOperatorHS.operatorVector._proof_1","theorem":true}
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOperatorHS.operatorVector_sub","theorem":true}
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOperatorHS.operatorVector_add","theorem":true}
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOperatorHS.operatorHilbertSchmidt_sub_le","theorem":true}
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOperatorHS.operatorHilbertSchmidt_eq_norm","theorem":true}
+GAUSSIAN_OPERATOR_HS_NORM_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOperatorHS.operatorHilbertSchmidt_rankOne","theorem":true}

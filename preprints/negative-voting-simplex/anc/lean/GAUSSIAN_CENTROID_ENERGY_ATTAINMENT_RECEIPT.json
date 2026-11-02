@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianCentroidEnergyAttainment",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_CENTROID_ENERGY_ATTAINMENT_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 32,
+  "theorem_count": 27,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCentroidEnergyAttainment.lean": "a1af75be52752974f7eea91507cc3178010ec506473de65bd716048f6ba6702d",
+    "GaussianAssignmentDuality.lean": "0b4187dd807506b9fcc455c26e14d499757cd2ffd4f96250736acfcbae5bdcfb",
+    "GaussianFanOptimizedValue.lean": "c91c818a974f3a4c95053c9261696068524345c3b3e6eb8e3c21b0a8471c9cc7",
+    "GaussianMassCentroid.lean": "8de11a80bd0c5ee12aff209f28ffe5f014877c329b321a6d80dea96820e21e29",
+    "GAUSSIAN_CENTROID_ENERGY_ATTAINMENT_AUDIT.lean": "201c78f23f7e2aaf5cb2f75da3b2abf5ab9990fb97e62eedb9c4e60d4e846a67",
+    "GAUSSIAN_CENTROID_ENERGY_ATTAINMENT_AXIOMS.txt": "81c07f62765c2ac72fe6d721b5a8d1624c3ae6ad7a1847c6e0bf5e450109c2d4",
+    "GAUSSIAN_CENTROID_ENERGY_ATTAINMENT_BUILD.txt": "6fbd5266809379f07eca8e8bd32e55bb0a180d52fe51309c3e2e6bdd8dec8f24",
+    "GAUSSIAN_CENTROID_ENERGY_ATTAINMENT_COVERAGE.txt": "d48e59c5fb007df5844e064546f5c88d9aa06fff221e8dcd1f452debb88edbf0"
+  }
+}

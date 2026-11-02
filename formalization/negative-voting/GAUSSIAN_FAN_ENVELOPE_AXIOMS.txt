@@ -1,0 +1,16 @@
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.offsetFunctional._proof_4","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFan.potential.eq_1","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.rowLift","theorem":false}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.Rows","theorem":false}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.offsetFunctional._proof_3","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.hasDerivAt_deriv_potential_path","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.offsetFunctional._proof_2","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.offsetFunctional","theorem":false}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.offsetFunctional.eq_1","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.potential_derivative_at_prescribed_mass","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.hessian_offset_zero_of_mass_path","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.hessian_row_eq_quadratic_of_mass_path","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.hasFDerivAt_potential_joint","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.rowLift_apply","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.offsetFunctional_apply","theorem":true}
+FAN_ENVELOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanEnvelope.offsetFunctional._proof_1","theorem":true}

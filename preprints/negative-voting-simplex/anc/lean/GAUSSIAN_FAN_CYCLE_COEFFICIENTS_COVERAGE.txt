@@ -1,0 +1,20 @@
+Frozen actual Gaussian cycle coefficients
+
+The two substantive identities are derived from actual Gaussian stratum means,
+not postulated as algebraic input:
+- cycleMean_barycentric_outside:
+    mean_{a,j,k}(v_l)=D_{a,j,k} c_{a,j,k,l} for four distinct vertices.
+- cycleTriangleWeight_facet_mean:
+    D_{a,j,k} mean_{a,j}(v_k)=1/w_{a,j} for three distinct vertices.
+
+The exact normalizations are D=triangleContent/mu and c=mu/tetrahedronContent,
+where the contents are2A and6V. The source derives the coefficients using the
+literal Gaussian first-moment formula and the proved reciprocal target heights.
+It also proves positive edge/triangle weights (including positive repeated-index
+extensions), nonnegative tetrahedron weights, all required permutation symmetries,
+and preservation of alternating chains under the actual symmetric weights.
+
+All15 theorem exports passed transitive standard3 axiom audit; complete51-file
+local source closure is pinned. The following remaining claims are not asserted:
+A-B factorization, realization of B as an actual covariance-deficit form, or the
+final negative-voting theorem. Each is a separately owned subsequent proof.

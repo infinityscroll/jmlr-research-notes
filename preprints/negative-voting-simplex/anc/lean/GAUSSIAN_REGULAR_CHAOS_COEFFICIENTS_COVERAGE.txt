@@ -1,0 +1,18 @@
+The actual canonical Gaussian max-rule second Hermite energy is proved equal to
+
+ (n+2) (E M_(n+2)^2 - 1)^2 / (2(n+1)n),  n > 0.
+
+The route uses actual Gaussian quadratic tensor geometry (row sums and trace),
+actual permutation equivariance and maximum observable moments, the separately
+checked finite stabilizer algebra, and the previously checked actual second-
+Hermite-weight identity. No asserted moment formula or covariance symmetry is
+an input. The actual second chaos energy therefore tends to zero by the
+already established maximum second-moment bounds.
+
+This is a canonical regular reference coefficient theorem, not a proof of the
+full negative-voting inequality. Arbitrary reference orientation/dimension
+requires the separate equal-Gram Gaussian-law transport.
+
+Source-backed Lake build passed. All 18 compiled source constants
+(18 theorem constants) were transitively audited; only the standard three
+axioms occur.

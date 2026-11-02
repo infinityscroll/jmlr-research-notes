@@ -1,0 +1,1 @@
+Actual feasible Gaussian assignments with coordinate masses at most2/m satisfy R(centroidRows f)<=referenceFirstWeight-centroidEnergy f+4 C(1+log m)^2 sum(p_i-1/m)^2. The row cap, centered centroids, actual primal value and singular/duplicate optimal dual certificate are derived; no row-rank or offset premise. C=mixedConstant+32768 pi^2.

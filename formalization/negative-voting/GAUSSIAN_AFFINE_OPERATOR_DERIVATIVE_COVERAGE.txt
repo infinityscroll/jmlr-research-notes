@@ -1,0 +1,21 @@
+GaussianAffineOperatorDerivative: genuine Gaussian affine-transport score
+
+For an arbitrary continuous linear operator A and translation z, and a
+finite Gaussian cap C with unit base normals and NoCoincident base supports,
+the actual mass t -> gamma{x : x+t A x+t z belongs to C} has derivative
+  integral_C <x,A x> - gamma(C) trace(A) + integral_C <z,x>
+at zero. For gamma(C)>0 the actual logarithmic mass derivative is the same
+quantity divided by gamma(C).
+
+The module proves the velocity decomposition, actual finite operator trace,
+quadratic integral assembly, and literal affine pullback event identity.
+It invokes the checked rank-one cap derivative, not an assumed Gaussian
+score identity. No symmetry or invertibility of A is required; dimension
+zero is included. All Gaussian moment integrability is derived.
+
+These are local derivative identities; quantitative finite-interval facet
+stability requires the subsequent logarithmic derivative bounds and path
+geometry/bootstrap. No such finite-interval conclusion is asserted here.
+
+Source-backed Lake build and exhaustive compiled-module axiom audit passed,
+including all generated helpers, using only the standard three axioms.

@@ -1,0 +1,14 @@
+{
+  "module": "GaussianFanCycleQuadratic",
+  "sha256": "7d53ee656da863012e1586de018ae3f57fc65fc83f8a333a003b5688950f2710",
+  "compiled_constants": 11,
+  "theorem_constants": 11,
+  "status": "passed",
+  "source_backed_build": "GAUSSIAN_CYCLE_QUADRATIC_BUILD.txt",
+  "audit": "GAUSSIAN_CYCLE_QUADRATIC_AXIOMS.txt",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

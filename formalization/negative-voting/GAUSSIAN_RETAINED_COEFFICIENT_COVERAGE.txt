@@ -1,0 +1,10 @@
+Actual retained Gaussian coefficient ceiling
+
+Frozen source SHA256: 2029aa992602e10f7e7b128d076b67f81297046e491b595be0d79a4f7ea877b1
+Kernel build: passed. All 14 owned compiled constants (13 theorem constants), including generated names, have only propext, Classical.choice, Quot.sound. Full local dependency closure: 152 files.
+
+The file derives the actual cell halfspace inequalities and the pair-offset square bound 2 log(1/p0), identifies the actual cycle facet probability with its tangent Gaussian probability, and derives pi >= sqrt(2*pi)*tau*ellMin from the literal Gaussian density normalization. It then proves the explicit positive ceiling
+K = 2 exp(4) (1+2 max(log(1/(sqrt(2*pi)*tau*ellMin)),0)) + 2 max(log(1/p0),0).
+The final canonicalOffset_control_from_mass_edge_geometry combines the actual cut conductance, finite coarea/Rayleigh argument, deletion bound, and coefficient ceiling. Its remaining hypotheses are actual positive cell masses, lower/upper edge-length bounds, a degree bound, and a small enough retention threshold. It assumes neither a Rayleigh bound nor the coefficient inequality.
+
+The cut constant remains the proved 2*pi and the Rayleigh denominator remains 32D. No sharper manuscript constant is substituted. This does not yet prove that global centroid optimizers satisfy all geometric hypotheses; that is the next outstanding application.

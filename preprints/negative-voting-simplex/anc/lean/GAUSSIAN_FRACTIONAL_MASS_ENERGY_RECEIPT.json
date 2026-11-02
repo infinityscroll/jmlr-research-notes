@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianFractionalMassEnergy",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_FRACTIONAL_MASS_ENERGY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 20,
+  "theorem_count": 17,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFractionalMassEnergy.lean": "ff2190783c392d77270fcc94a2383b595067905ac25d5298464a0eb4c1355bf0",
+    "GaussianCompetitiveParity.lean": "8ce82d13882c50f766c1dcda337f8ade78c3238a89238db34a0b8129ffbb17aa",
+    "GaussianMassProfileEnvelope.lean": "843af111db1f7671ae2849177b8d74f82977983b129b62f774bc76845eeaacff",
+    "GaussianMassCentroid.lean": "8de11a80bd0c5ee12aff209f28ffe5f014877c329b321a6d80dea96820e21e29",
+    "GAUSSIAN_FRACTIONAL_MASS_ENERGY_AUDIT.lean": "5334030dbf5bd01594ceb9fb02ce60be254a329b9e8df74e354d38c5085ea3b3",
+    "GAUSSIAN_FRACTIONAL_MASS_ENERGY_AXIOMS.txt": "3a4cb402d203ba69ffd2bfecb8a0e8f508af73895ff8f29ebbc5fd9d1a5c6313",
+    "GAUSSIAN_FRACTIONAL_MASS_ENERGY_BUILD.txt": "07b8538e092736e0a057d344ce8192dce1192550aee59b5c4e1f9ca5f52f97e5",
+    "GAUSSIAN_FRACTIONAL_MASS_ENERGY_COVERAGE.txt": "0e7b98559a97ee391422e9adb70971fbabb466e595ebfb942f1cd0124bebb66d"
+  }
+}

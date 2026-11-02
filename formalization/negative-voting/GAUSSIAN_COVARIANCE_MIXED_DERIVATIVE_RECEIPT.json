@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianCovarianceMixedDerivative",
+  "sourceBackedBuild": true,
+  "constants": 2,
+  "theoremConstants": 2,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianCovarianceMixedDerivative.lean": "6fc1296d06da1e92788f382a9cf23075ecc21a954e5d2928c0abfb37c77a5367",
+    "GAUSSIAN_COVARIANCE_MIXED_DERIVATIVE_AUDIT.lean": "690a5c7bcdefe83e559bc1ce064055810072217813baac391f11c3e851f29497",
+    "GAUSSIAN_COVARIANCE_MIXED_DERIVATIVE_AXIOMS.txt": "77bef983ca4ea0afcec830d0b16d7699263fcf2cde9f765fdf9b44cb0d8fb28c",
+    "GAUSSIAN_COVARIANCE_MIXED_DERIVATIVE_BUILD.txt": "0efea71b05c83c8cb38cfbe9ff8805ef59f3118b01edbe84b6eb0693b48d7a7d"
+  }
+}

@@ -1,0 +1,11 @@
+Actual affine score strata and intrinsic cap coordinates
+
+For an actual full target affine basis b and any offsets h, affineFanApex=Σh_k v_k is proved to make every affine score equal. faceAnchor is its actual orthogonal projection onto the face-direction subspace. winnerStratum is the literal set where all selected scores tie for the maximum.
+
+The file proves that winnerStratum is exactly the isometric image z↦faceAnchor+z of the constructed intrinsic cap on the actual orthogonal-complement tangent subspace. This is an equality of actual sets, not a premise. Its cap normals are the NEGATIVES of the inward Gaussian stratum normals, so they are outward cap normals. All norms are1, and distinct normals are never scalar multiples; no boundary separation or noncoincidence hypothesis remains as an input to these geometric results.
+
+An explicit strictly feasible point is the tangent component of the apex plus the sum of the excluded barycentric reciprocal vectors. Its normal inequalities have margin1/height. The cap is closed and that point lies in its interior, including the vacuous all-vertices case where the outside index is empty. Only a genuine nonempty face (specified by i∈S) is needed for the final equivalence/interior endpoints.
+
+31 public exports:22 theorems and9 concrete definitions. All standard-only axiom-audited. Complete local closure is Strata, Gram and Geometry. Earlier frozen source files remain unchanged. Gaussian probabilities and density normalization are not yet introduced here; those, the physical boundary-moment transfer and assembled A-B factorization remain the next steps.
+
+Reproduce: python3 verify_fan_cycle_strata.py --lake /absolute/path/to/lake

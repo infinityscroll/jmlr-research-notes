@@ -1,0 +1,48 @@
+{
+  "checked_at_utc": "2026-11-02T01:52:58.388313+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_sha256": "357e5948c574cf19e0bc1416925d95aa699e31caa807bce1098929c9828e5ee2",
+  "audit_sha256": "6066f05e1760d2d171e5b0033e9071f39531fc4a759ce3666401841a060dbb59",
+  "source_closure": {
+    "GaussianFanCycleGauge.lean": "357e5948c574cf19e0bc1416925d95aa699e31caa807bce1098929c9828e5ee2",
+    "GaussianFanCycleComplex.lean": "034b7690005971fd7ff623e75b23dfecdbfd2436fbe408e5e38e2d2a0e614bfd",
+    "NegativeVoting/WeightedGauge.lean": "20e006a74bd7e41d4e2001c1d609ca46afdbdd3a8c8cb9ea6c2769a90ea9df4b"
+  },
+  "frozen_complex_receipt_sha256": "e8dd201016fbd130190f7a5b6f159a33aa3f312f1a10bbe3bba7e2ab6b67ff8c",
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_exports": [
+    "NegativeVotingFanCycle.EdgeSpace",
+    "NegativeVotingFanCycle.TriangleSpace",
+    "NegativeVotingFanCycle.TetrahedronSpace",
+    "NegativeVotingFanCycle.asTriangle",
+    "NegativeVotingFanCycle.asTetrahedron",
+    "NegativeVotingFanCycle.fromTriangle",
+    "NegativeVotingFanCycle.fromTetrahedron",
+    "NegativeVotingFanCycle.alternatingTriangle_add",
+    "NegativeVotingFanCycle.tetrahedronChains",
+    "NegativeVotingFanCycle.triangleBoundaryLinear",
+    "NegativeVotingFanCycle.tetrahedronBoundaryLinear",
+    "NegativeVotingFanCycle.boundaryLinear_comp_zero",
+    "NegativeVotingFanCycle.positiveDiagonalEquiv",
+    "NegativeVotingFanCycle.normalizedTrianglePairing",
+    "NegativeVotingFanCycle.triangleWeightEquiv",
+    "NegativeVotingFanCycle.triangleWeightEquiv_inner",
+    "NegativeVotingFanCycle.exists_concrete_weighted_cycle_gauge",
+    "NegativeVotingFanCycle.full_triangle_pairing_eq_three",
+    "NegativeVotingFanCycle.normalized_boundary_pairing",
+    "NegativeVotingFanCycle.triangleCoboundary",
+    "NegativeVotingFanCycle.triangleCoboundary_alternating",
+    "NegativeVotingFanCycle.tetrahedron_rotate",
+    "NegativeVotingFanCycle.sum_four_rotate",
+    "NegativeVotingFanCycle.triangle_tetrahedron_adjoint",
+    "NegativeVotingFanCycle.exists_weighted_cycle_gauge_components"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Concrete finite-simplex weighted gauge, exact signed-face component equation, and explicit factor3/factor4 pairing normalizations. Gaussian A-B stratum factorization and covariance Hessian remain unproved here."
+}

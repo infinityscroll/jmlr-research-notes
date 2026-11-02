@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianCenteredParsevalBasis",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_CENTERED_PARSEVAL_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 38,
+  "theorem_count": 36,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCenteredParsevalBasis.lean": "a2cc5884f928302df1ef2f615fae62962d1f9b192cbd28ef724b3466985a5d1f",
+    "NegativeVoting/RegularSimplexExistence.lean": "5e1418d50a4823ab672f1e4a9f7dc48ab2de739fcbee68da0b3f06f6052c2dec",
+    "NegativeVoting/RegularSimplexCentroid.lean": "eed5595cbd9ee4f34313767ff17bdef3988800a8f22729489bc2d84f1ffd3e58",
+    "GaussianFanMassJacobian.lean": "74ecc4012d2575b0729fb554427c6228f322c867aa43a4396206e95b103de18e",
+    "GAUSSIAN_CENTERED_PARSEVAL_AUDIT.lean": "640916e5faa02c8b3cc05073269bd414b7eaaa550b4ef7dd9bbc206ec060ff4c",
+    "GAUSSIAN_CENTERED_PARSEVAL_AXIOMS.txt": "f785cf9a2eb82dda944db3a66882921d859fca5a6809799f1bb4a4d0dcb5b0f2",
+    "GAUSSIAN_CENTERED_PARSEVAL_BUILD.txt": "2cc0c1ef02ddfa44289bb25bd50278d020dd481f318e6b5265702c50f57d54e0",
+    "GAUSSIAN_CENTERED_PARSEVAL_COVERAGE.txt": "10e49b72ca8b9a8c8def421c2f6337d5714388b198e1e9257007318def55500f"
+  }
+}

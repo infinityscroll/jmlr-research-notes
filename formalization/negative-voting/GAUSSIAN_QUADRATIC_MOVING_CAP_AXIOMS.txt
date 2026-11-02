@@ -1,0 +1,12 @@
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.maskSlabDerivative_integrable","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.sq_mul_normalPDF_le","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.hasFDerivAt_capTest","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.capJointDerivative_apply","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.normal_density_test_bound","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.hasFDerivAt_maskSlab","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.hasFDerivAt_singleChange_integral","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.slabIntegrand_bound","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.gaussian_norm_sq_memLp_two","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.maskSlabDerivative_apply","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.hasFDerivAt_maskSlab._simp_1_1","module":"GaussianQuadraticMovingCap","theorem":true}
+QUADRATIC_MOVING_CAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingQuadraticMovingCap.quadratic_growth_integrable","module":"GaussianQuadraticMovingCap","theorem":true}

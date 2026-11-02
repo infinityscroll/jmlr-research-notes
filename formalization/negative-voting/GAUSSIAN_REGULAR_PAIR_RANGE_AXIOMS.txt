@@ -1,0 +1,9 @@
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.utilityRange_le_of_between","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.pairPath_score_coordinate","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.utilityRange_neg_mul_pos","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.pairPath_scores_between","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.utilityRange_mul_pos","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianRegularPairRange.0.NegativeVotingRegularFacetRange.pair_interpolation_mem_Icc","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.pairPath_utilityRange_le","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.utilityRange_neg","theorem":true}
+GAUSSIAN_REGULAR_PAIR_RANGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetRange.utilityRange.eq_1","theorem":true}

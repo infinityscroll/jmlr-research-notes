@@ -1,0 +1,11 @@
+Actual barycentric and reciprocal-height geometry
+
+GaussianFanCycleGeometry.lean imports only Mathlib. An actual affine basis in a finite-dimensional real inner-product space supplies its coordinate affine maps. Their negative Riesz derivatives are the concrete outward vectors; no vector-field, coordinate-gradient, height, or normal identity is assumed.
+
+Proved: sum of these vectors is zero; their pairing with every target edge is the correct Kronecker difference; each vector annihilates every edge of the opposite face. For the actual mathlib simplex, the vector is minus its vertex-to-altitudeFoot vector divided by height squared, and its norm is exactly1/height. Mathlib defines that height using the actual orthogonal projection onto the opposite affine face.
+
+For every subset of target vertices, the direction space is the actual vectorSpan of that face. Every excluded barycentric vector lies in its orthogonal complement. The projected target gap, its strictly positive norm, and its unit normal are constructed by the actual starProjection. Their pairing with any excluded barycentric vector is delta(k,l)/height(S,l). The projected-gap norm equals distance to the actual affine-face projection and is independent of the chosen anchor vertex. Thus reciprocal heights and all other-boundary annihilation terms are derived rather than assumed.
+
+Scope:23 public exports,16 theorems and7 definitions. The ambient space of the affine basis is its full target affine span, as needed for the whitened simplex geometry; generic embeddings into a larger Gaussian ambient space still require the stratum transfer. Triangle area/tetrahedron volume Gram normalization and actual Gaussian face-density factors are not supplied by this file. Neither the A-B matrix factorization nor covariance Hessian is claimed here.
+
+Reproduce: python3 verify_fan_cycle_geometry.py --lake /absolute/path/to/lake

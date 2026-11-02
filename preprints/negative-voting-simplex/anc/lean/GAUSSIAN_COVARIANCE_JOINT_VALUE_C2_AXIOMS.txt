@@ -1,0 +1,1 @@
+GAUSSIAN_COVARIANCE_JOINT_VALUE_C2_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceJointValueC2.operatorValue_joint_C2","theorem":true}

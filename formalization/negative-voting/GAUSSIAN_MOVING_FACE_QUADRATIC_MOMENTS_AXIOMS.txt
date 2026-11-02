@@ -1,0 +1,6 @@
+GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceQuadratic.sliceTest","theorem":false}
+GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceQuadratic.sliceTest_eq_stdGaussian","theorem":true}
+GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceQuadratic.continuousAt_slice_affine_product","theorem":true}
+GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceQuadratic.continuousAt_sliceTest_quadratic_growth","theorem":true}
+GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingFaceQuadratic.affine_abs_bound","theorem":true}
+GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingMovingFaceQuadratic.sliceTest._proof_1","theorem":true}

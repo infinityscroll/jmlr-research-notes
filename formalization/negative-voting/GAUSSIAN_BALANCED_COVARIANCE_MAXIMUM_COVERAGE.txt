@@ -1,0 +1,26 @@
+For m=n+2>=3 and an actual normalized Parseval affine basis, the actual
+balanced covariance maximum on the ENTIRE PSD cone is mu^2/(m-1), attained at
+C0=(mu/(m-1))^2 I. Here mu is the literal iid standard-Gaussian maximum mean.
+Both Gamma(C0) and trace(C0) equal mu^2/(m-1).
+
+The actual intrinsic Price derivative at C0 is trace(H)/2 in every symmetric
+direction H. This is derived from the proved actual regular fan masses and
+centroid vectors, the actual optimized covariance derivative theorem, and the
+exact Parseval trace normalization. Thus the actual penalized objective has
+zero derivative. Proved global PSD covariance concavity yields its supporting
+tangent bound against every PSD competitor, including singular ones.
+
+The maximum is also packaged as IsGreatest for the literal set of covariance
+objective values. The final balanced_centroidEnergy_le_reference transports
+it to every AEMeasurable AE-simplex balanced Gaussian assignment in every
+finite ambient dimension via the actual covariance/centroid realization.
+
+No balanced-max bound, permutation-averaging identity, asymptotic positivity,
+or desired derivative is supplied as a premise. The regular frame hypotheses
+are discharged by GaussianCenteredParsevalBasis. This closes the balanced
+reference value within the proof chain; it does not itself prove the full
+negative-noise stability theorem or assert novelty of this balanced bound.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for all 37 compiled constants (36 theorem constants), using only
+propext, Classical.choice and Quot.sound.

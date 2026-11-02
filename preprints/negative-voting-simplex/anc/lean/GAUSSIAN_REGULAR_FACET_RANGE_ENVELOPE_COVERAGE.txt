@@ -1,0 +1,8 @@
+Actual global regular facet-weight range envelope
+
+For n>0, maximumMean(n)>=1 and exact regular-Gram rows in any finite ambient dimension, let R be the literal utility range of scoreOffsets B h and L=1+log(n+2). regular_facetWeight_range_log_bound proves
+ |log(w_ij(h)/(referenceScale(n)/(n+2)))| <= C*(R*sqrt(L)+R^2),
+ C=512*exp(1)^3+1.
+regular_facetWeight_range_bounds gives both multiplicative exponential sides. All physical shifts h and distinct labels i,j are covered. At R=0 the error is zero.
+
+The actual cap probability is sandwiched between common shifts of norm<=2R. The frozen Gaussian affine log-probability theorem controls those two probabilities. The exact surface normalization is proved separately: the literal facet weight equals phi(-<normal,h>)/sqrt(2) times the actual fixed unit-normal cap probability after translation by h. Its normal-density logarithm is controlled by the actual pair-score gap, hence R. No full ambient or score-span norm appears, no full affine basis is assumed, and no independent-utility representation is used. The subsequent divided-pair continuity and smooth-majorant moment bounds are not claimed in this file.

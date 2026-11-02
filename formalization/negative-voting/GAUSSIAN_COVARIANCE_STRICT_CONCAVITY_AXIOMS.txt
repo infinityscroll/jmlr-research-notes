@@ -1,0 +1,13 @@
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.exists_line_derivatives_strict","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.normalEdgeEnergy_eq_zero_iff","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.penalizedValue","theorem":false}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.normalEdgeEnergy_pos","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.penalizedValue.eq_1","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext"],"constant":"NegativeVotingCovarianceStrict.penalizedValue._proof_1","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.operatorValue_strictConcaveOn_positive","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.symmetric_eq_zero_of_edge_quadratics","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.operatorValue_segment_strictConcave","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycleHessian.normalEdgeEnergy.eq_1","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.exists_derivatives_positive_strict","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.penalizedValue_strictConcaveOn_positive","theorem":true}
+GAUSSIAN_COVARIANCE_STRICT_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceStrict.penalizedValue._proof_2","theorem":true}

@@ -1,0 +1,5 @@
+[
+  "GaussianFanMassContinuity",
+  "GaussianCovarianceBoundaryContinuity",
+  "GaussianCovarianceClosedGraph"
+]

@@ -1,0 +1,24 @@
+GaussianUniformLocalCurvature: unconditional near-regular Gaussian curvature
+
+The module derives the actual selected facet-weight comparison for every
+symmetric invertible factor of a positive covariance C near identity. The
+physical offset is the genuine global Gaussian balancing offset, controlled
+by the proved continuation; no facet, mean, response, or offset bound is a
+premise. The factor need not be a canonical selected square root.
+
+For m=n+2, L=1+log m and alpha=E(max_m Z)/(m-1), it proves the literal local
+second-derivative statement packaged by LocalGaussianCurvature:
+  D^2 Gamma_U(C)[H,H] <= -alpha/(12m) HS(H)^2
+whenever C is positive definite and HS(C-I)<=c/L. Here c=facetRadius(64)>0
+is an explicit absolute constant. The theorem applies to every actual
+centered Parseval regular affine frame; those finite geometric properties
+are its structural input, not an assumed analytic estimate.
+
+The eventual endpoint places c and the alphabet threshold before ambient
+dimension, frame, covariance, and direction. Its sole sufficiently-large
+alphabet fact, E(max_m Z)>=1, is derived from the actual Gaussian maximum.
+The previously proved all-PSD ray and Procrustes statements can therefore
+be applied with their local-curvature premise fully discharged.
+
+Source-backed Lake build and exhaustive compiled-module transitive axiom
+audit passed. Only propext, Classical.choice, and Quot.sound occur.

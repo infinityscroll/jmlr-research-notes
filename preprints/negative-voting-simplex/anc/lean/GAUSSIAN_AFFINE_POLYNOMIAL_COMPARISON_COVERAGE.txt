@@ -1,0 +1,21 @@
+GaussianAffinePolynomialComparison: explicit actual finite mass bound
+
+Let C be a finite Gaussian cap with unit normals and NoCoincident supports,
+p0=Gaussian(C)>0, and p1=Gaussian{x:(I+A)x+z belongs to C}. The module proves,
+under the single deformation-size condition 4 exp(1)||A||HS<=1,
+  |log(p1/p0)| <= 64 exp(1)^3 [||A||HS L0 + ||z|| sqrt(L0) + ||z||^2],
+  L0=1+log(1/p0).
+The bound is independent of ambient dimension and the number of constraints.
+The operator-norm/invertibility condition is derived from the Hilbert--Schmidt
+condition. The actual inverse control, positive masses, log derivatives,
+conditional moment inequalities, Gronwall integration, and the two-sided
+mean-value comparison are all proved in the source closure.
+
+The elementary polynomial helper is also kernel checked. This is a genuine
+finite probability comparison, with no supplied derivative, ODE, moment,
+pathwise positivity, or asymptotic estimate premise. It is specialized to
+the actual regular-facet cylindrical cap in the next geometry module.
+
+Source-backed Lake build and exhaustive compiled-module axiom audit passed,
+including the private algebra helper and generated constants. Only the
+standard three axioms occur.

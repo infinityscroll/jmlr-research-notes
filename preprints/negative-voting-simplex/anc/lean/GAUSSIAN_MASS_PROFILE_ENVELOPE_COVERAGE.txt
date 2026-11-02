@@ -1,0 +1,13 @@
+ACTUAL GLOBAL GAUSSIAN MASS-PROFILE ENVELOPE
+
+For I(p)=phi(Phi^{-1}(p)) with I(0)=I(1)=0, the module proves the global supporting bound
+ I(p)<=phi(t)+t[p-(1-Phi(t))]
+for every p in [0,1] and every real threshold t. This is derived from literal Gaussian integrals: a half-line attains I(p) in the interior and the constant weights 0 and 1 attain the endpoints. The checked fractional threshold remainder inequality then gives the bound. Concavity of I and derivatives of the inverse CDF are not assumed.
+
+At a=1/(n+2), t=upperQuantile(n), both sides of the supporting inequality are nonnegative. Squaring gives the stronger exact bound
+ I(p)^2 <= I(a)^2+2t phi(t)(p-a)+t^2(p-a)^2.
+This holds for every natural n, including n=0, and every p in [0,1]. No large-n or endpoint-separation premise appears.
+
+The endpoint gaussianMassProfile_square_envelope then uses the already proved t^2<=2 log(n+2) for n>0 to obtain exactly the manuscript curvatureBound(n)=max(2 log(n+2)+1,6), with the requested unchanged API. This removes the need for the manuscript's H-second-derivative case split while proving a strictly stronger intermediate inequality.
+
+The module supplies the scalar envelope needed in the first mass window. It does not itself assert the complete fractional spectral comparison or the full negative-voting theorem.

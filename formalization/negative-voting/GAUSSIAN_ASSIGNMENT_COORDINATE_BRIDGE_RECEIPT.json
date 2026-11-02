@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianAssignmentCoordinateBridge",
+  "sourceBackedBuild": true,
+  "constants": 8,
+  "theoremConstants": 7,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianAssignmentCoordinateBridge.lean": "19a1ab70350638e41a3c4fc0a6ca2b79ee38583bad9a7d086c7251f85df6dfb3",
+    "GAUSSIAN_ASSIGNMENT_COORDINATE_BRIDGE_AUDIT.lean": "529bdf1eba00116904744eab242ecdb433da6eb94640f500309c01245269e0dc",
+    "GAUSSIAN_ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS.txt": "5665f24a5add7c6bb81a0c441aeb98b3d70914d1f84e05e745878a18b2613eb1",
+    "GAUSSIAN_ASSIGNMENT_COORDINATE_BRIDGE_BUILD.txt": "7193f184c80ba6af14fda4e9cf49a5e7806e4b5950a35c4a3fcf562c3565f190"
+  }
+}

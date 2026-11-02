@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianCompetitiveMassWindow",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_COMPETITIVE_MASS_WINDOW_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 12,
+  "theorem_count": 12,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCompetitiveMassWindow.lean": "81b0e02119d4641fea4f5526a3aac36b61f166e1dd80f7cad044350a99157ead",
+    "GaussianFractionalMassEnergy.lean": "ff2190783c392d77270fcc94a2383b595067905ac25d5298464a0eb4c1355bf0",
+    "GaussianCompetitiveParity.lean": "8ce82d13882c50f766c1dcda337f8ade78c3238a89238db34a0b8129ffbb17aa",
+    "GaussianMaximumLocalization.lean": "8335c140d25c4af824c8b97d805591e65462b3b5ab74858a7fd7afe4aa8f90a0",
+    "GAUSSIAN_COMPETITIVE_MASS_WINDOW_AUDIT.lean": "bfe0f8bc9eb17c9b0b950da5358951e272efdb75d693806435719ddc2962c9c3",
+    "GAUSSIAN_COMPETITIVE_MASS_WINDOW_AXIOMS.txt": "d519c1909439fedd560152c6572237f1a2e49e09b6da08ce3070fa9c9fd1ea2b",
+    "GAUSSIAN_COMPETITIVE_MASS_WINDOW_BUILD.txt": "f3c2d2228a7789deaa05528e1d57f7ea057d5b6452f67eda1eceb7a0f8bf95fa",
+    "GAUSSIAN_COMPETITIVE_MASS_WINDOW_COVERAGE.txt": "9e44235108ac0134219d3bd25fcf54cdb099b8b674f0e642c50ccdf3113b55b1"
+  }
+}

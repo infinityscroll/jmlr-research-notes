@@ -1,0 +1,12 @@
+GaussianCovarianceSegmentGeometry: genuine covariance factors on a segment
+
+For every actual symmetric H with operator norm at most1/8 and t in[0,1],
+the module derives a symmetric invertible factor M of I+tH, symmetry of
+M inverse, inverse norm at most2, factor distance at most1/4, and positive
+definiteness of the covariance. It then derives the actual mapped regular
+simplex edge lower bound1 from the regular Gram matrix. No factor existence,
+invertibility, or edge-length lower bound is supplied as a premise.
+
+The result is a pointwise geometric adapter to the previously proved
+spectral C1 covariance segment. All compiled source constants, including
+helpers, passed the exhaustive standard-three transitive axiom audit.

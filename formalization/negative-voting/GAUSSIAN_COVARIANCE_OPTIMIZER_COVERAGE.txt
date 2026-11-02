@@ -1,0 +1,7 @@
+Actual existence and uniqueness of the regularized penalized covariance optimizer.
+
+For every genuine finite affine basis b, every epsilon>0 and every nonnegative probability vector p, a maximizer of g(C,p)=2Gamma(C,p)-trace C exists over the entire unbounded cone C>=epsilon I. Every constructed maximizer lies in the concrete compact region trace C <= 4||b||_Pi^2+2trace(epsilon I)+2. This region is independent of p. The cutoff follows from actual coercivity, and points outside it have smaller objective than epsilon I. The cone is proved closed and convex; norm<=trace gives actual compactness.
+
+For strictly positive p, strict concavity proves literal unique existence on the full domain. The endpoint does not assume a maximizer, restrict the problem to fixed trace, or identify operator trace with a differently normalized row energy. Existence even allows zero components; uniqueness here is stated for positive p.
+
+Continuity and Lipschitz stability of the maximizing covariance in p are subsequent work. This is a component, not the full negative-voting theorem.

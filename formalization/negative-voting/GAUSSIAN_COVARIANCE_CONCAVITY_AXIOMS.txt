@@ -1,0 +1,13 @@
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue_regularization_tendsto","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.continuous_gramVelocity","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue_segment_concave","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue_concaveOn_positive","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue","theorem":false}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.hasDerivAt_of_const_add_zero","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.exists_derivatives_positive","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.exists_line_derivatives","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.gramVelocity_add_smul","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext"],"constant":"NegativeVotingCovarianceConcavity.operatorValue._proof_1","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue_concaveOn_psd","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue.congr_simp","theorem":true}
+GAUSSIAN_COVARIANCE_CONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue_continuousOn","theorem":true}

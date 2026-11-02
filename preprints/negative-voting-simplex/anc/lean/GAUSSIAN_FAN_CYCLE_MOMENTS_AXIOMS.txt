@@ -1,0 +1,14 @@
+'NegativeVotingFanCycle.coordinateCap_independent_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.capMass_independent_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratumMassAt_independent_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratumMeanPairing_independent_anchor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.coordinateCapNormal_coordinateDual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratum_tangent_first_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratum_mean_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratum_mean_barycentric_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratum_mean_barycentric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratumMeanPairing_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratumMeanPairing_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.sum_stratumMeanPairing_barycentric' depends on axioms: [propext, Classical.choice, Quot.sound]

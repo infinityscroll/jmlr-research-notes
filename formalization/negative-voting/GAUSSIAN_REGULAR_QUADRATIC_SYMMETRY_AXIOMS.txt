@@ -1,0 +1,7 @@
+REGULAR_QUADRATIC_SYMMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularQuadratic.moment_swap_invariant","module":"GaussianRegularQuadraticSymmetry","theorem":true}
+REGULAR_QUADRATIC_SYMMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularQuadratic.moment_perm","module":"GaussianRegularQuadraticSymmetry","theorem":true}
+REGULAR_QUADRATIC_SYMMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularQuadratic.moment_distinguished","module":"GaussianRegularQuadraticSymmetry","theorem":true}
+REGULAR_QUADRATIC_SYMMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularQuadratic.moment_distinguished_eq","module":"GaussianRegularQuadraticSymmetry","theorem":true}
+REGULAR_QUADRATIC_SYMMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularQuadratic.maxWeights_observable","module":"GaussianRegularQuadraticSymmetry","theorem":true}
+REGULAR_QUADRATIC_SYMMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularQuadratic.canonical_component_memLp","module":"GaussianRegularQuadraticSymmetry","theorem":true}
+REGULAR_QUADRATIC_SYMMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGaussianMaximumSecondMoment.maximumSecondMoment.eq_1","module":"GaussianRegularQuadraticSymmetry","theorem":true}

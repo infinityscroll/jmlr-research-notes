@@ -1,0 +1,11 @@
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound._simp_1_6","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound._simp_1_5","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound._simp_1_3","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_operator_offset_l2_bound","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound._simp_1_7","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_operator_offset_l2_sq_bound","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound._simp_1_1","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound._simp_1_2","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.operatorOffsets.congr_simp","theorem":true}
+GAUSSIAN_BALANCED_OFFSET_ESTIMATE_AUDIT {"axioms":["propext"],"constant":"NegativeVotingBalancedOffsetEstimate.balanced_response_coefficient_bound._simp_1_4","theorem":true}

@@ -1,0 +1,22 @@
+ACTUAL FIRST-CHAOS TRANSFER FOR THE REGULAR MAXIMUM
+
+The canonical regular rows e_i - (1/m)1 have their Gram matrix proved.
+Their tie-weighted assignment is pointwise exactly maxWeights of the iid
+coordinates, and its Gaussian mass is exactly 1/m. Its actual expected
+winning score equals the actual iid maximum mean, since the removed common
+coordinate average has Gaussian mean zero.
+
+The module proves a general first-chaos identity for every regular Gram
+realization, using the already-checked regular centroid theorem and the
+actual degree-one Hermite coefficient identity. It then specializes to the
+canonical assignment, proving
+
+ chaosEnergy(maxWeights,1) = referenceFirstWeight n = mu_m^2/(m-1), m=n+2.
+
+This discharges the first coefficient transfer for the canonical regular
+model. The second-coefficient identity and transfer across arbitrary
+ambient regular Gram realizations are not claimed here.
+
+Lake build passed. All 21 compiled source-module constants, including
+19 theorem constants, passed exhaustive transitive audit with only
+propext, Classical.choice, and Quot.sound.

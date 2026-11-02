@@ -1,0 +1,126 @@
+{
+  "frozen_modules_added": [
+    "GaussianCapShiftLower",
+    "GaussianScoreRealization",
+    "GaussianFacetScoreWitness",
+    "GaussianCapUnionLower",
+    "GaussianLocalCurvatureAlgebra",
+    "GaussianAffinePositiveMass",
+    "GaussianAffineLogScale",
+    "GaussianAffineMassComparison",
+    "GaussianAffinePolynomialComparison",
+    "GaussianRegularCapProbability",
+    "GaussianRegularFacetLogComparison",
+    "GaussianRegularFacetStability",
+    "GaussianRegularFacetNeighborhood",
+    "GaussianCovarianceSegment",
+    "GaussianFacetNormalExtension",
+    "GaussianFacetFixedCylinder",
+    "GaussianRegularFacetCylinder",
+    "GaussianOperatorHSNorm",
+    "GaussianFacetSchurBounds",
+    "GaussianFacetNormalPrefactor",
+    "GaussianRayDeficit",
+    "GaussianProcrustesDistance",
+    "GaussianFacetMeanBound",
+    "GaussianBalancedOffsetControl"
+  ],
+  "sources": [
+    {
+      "path": "GaussianCapShiftLower.lean",
+      "sha256": "69acfb271425c2d0fac0a688033647ef09bc07b3bcae1cbe33fe9c3e0543ca82"
+    },
+    {
+      "path": "GaussianScoreRealization.lean",
+      "sha256": "67ecd9ca8122282af77d94f3e9598e9ed9784a75aedbda49b784c8873b7ad505"
+    },
+    {
+      "path": "GaussianFacetScoreWitness.lean",
+      "sha256": "c26ed67a6708d3cb086bae6160d42abb6be68d3c0ecfcd35a051153baaa12c64"
+    },
+    {
+      "path": "GaussianCapUnionLower.lean",
+      "sha256": "729aed77cdd8c5d350a56855afb91d39f994fab951fd536a4ffac17715f9b6dc"
+    },
+    {
+      "path": "GaussianLocalCurvatureAlgebra.lean",
+      "sha256": "a79b134ee3c18ef279e9a0a4679347982d363af36389d0f171518ee11ea17b51"
+    },
+    {
+      "path": "GaussianAffinePositiveMass.lean",
+      "sha256": "d5d13aa95c904012952889a2efca0aee63f3b6e592ffbc8d236e0ed9c306bb59"
+    },
+    {
+      "path": "GaussianAffineLogScale.lean",
+      "sha256": "5e0156237815cda5eb17d80d9d3307ff66dc150b7f69f25894357066fade3866"
+    },
+    {
+      "path": "GaussianAffineMassComparison.lean",
+      "sha256": "e7d67e3af2cf11b8c01d9bc0b565b6ac562416602ad743658a5ad21bf8b22d95"
+    },
+    {
+      "path": "GaussianAffinePolynomialComparison.lean",
+      "sha256": "990806832b74f7828c5c4ca0596c71fa071095d5c8ab8f3723f5dc2b18772dd8"
+    },
+    {
+      "path": "GaussianRegularCapProbability.lean",
+      "sha256": "c9936104ef14b82f4b54d694ab06769490a1b24d5cfa9afe3a4fced93c520f91"
+    },
+    {
+      "path": "GaussianRegularFacetLogComparison.lean",
+      "sha256": "8f221f384d55a0ea45750a87659cb232cccbf2b671c1cb6efca1d4da6a9fb950"
+    },
+    {
+      "path": "GaussianRegularFacetStability.lean",
+      "sha256": "cc23c1f9452e236add0ce16136cceb3f1ac0075f31091ea8bd31253b4cc6c0ae"
+    },
+    {
+      "path": "GaussianRegularFacetNeighborhood.lean",
+      "sha256": "c9134a909a4fa394627911994339f835665f42e01723999d3a01157f2f29513d"
+    },
+    {
+      "path": "GaussianCovarianceSegment.lean",
+      "sha256": "893cbf659210103d75697a1248d76bd33e47cea7fdad0b5f8f0ff9bc0a12a678"
+    },
+    {
+      "path": "GaussianFacetNormalExtension.lean",
+      "sha256": "cfeebafa680bbd74068cddc05de57ab50e3dff05112e46f58773f61229a1f20c"
+    },
+    {
+      "path": "GaussianFacetFixedCylinder.lean",
+      "sha256": "6c5137a2bbd93258e25bb9d1e42096a7b1b607adf5dee9b34f50d1d475a50e93"
+    },
+    {
+      "path": "GaussianRegularFacetCylinder.lean",
+      "sha256": "806b93f4f9c7df94fc658fb7ca0b86166fc9056b3135355cb6a651921724a5e3"
+    },
+    {
+      "path": "GaussianOperatorHSNorm.lean",
+      "sha256": "a34ef1314f5b4bb8876b91c36f8fd361173b74cf62e321356ec4714ac28803a2"
+    },
+    {
+      "path": "GaussianFacetSchurBounds.lean",
+      "sha256": "92a9d7ddde45fc27dd04a52e3a3a7e536170c5d239a7b8c4efa975802fa39aba"
+    },
+    {
+      "path": "GaussianFacetNormalPrefactor.lean",
+      "sha256": "cc7c98c8f82820eaf348058e18d41515cec05bbb79b9dda516a2ce1521c29b8e"
+    },
+    {
+      "path": "GaussianRayDeficit.lean",
+      "sha256": "3ec96c9f474cc7b4ae0afdbaa715807a735f2ee9add5c56694c1c1a5e1bf9816"
+    },
+    {
+      "path": "GaussianProcrustesDistance.lean",
+      "sha256": "ee2eec3cc1a01e8c6ff23974ef7fba6787754f793341fab2f48d776177465a58"
+    },
+    {
+      "path": "GaussianFacetMeanBound.lean",
+      "sha256": "dac4cc16013c08822a47a3b8e2d5051d1f8c712165ed22b516719fb6304c3307"
+    },
+    {
+      "path": "GaussianBalancedOffsetControl.lean",
+      "sha256": "42c7de00a3051463fc88b1df9432680bbb54b96d22464607224571160af62a0d"
+    }
+  ]
+}

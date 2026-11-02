@@ -1,0 +1,17 @@
+Coordinate permutations preserve the actual finite-product Gaussian.
+The implemented tie weights and the actual quadratic tensor are equivariant
+under those permutations. Stabilizer-swap invariance is derived.
+
+The pointwise observable selection identity holds even on ties. Integrating
+its quadratic instance, with Gaussian integrability proved, gives the exact
+distinguished entry
+
+ moment(n,i,i,i) = (E M_(n+2)^2 - 1)/(n+2).
+
+This supplies the actual scalar moment needed by the finite tensor algebra.
+No symmetry-of-moments or distinguished-entry hypothesis is assumed.
+
+Source-backed Lake build passed. Exhaustive source-module transitive audit
+checked 7 compiled constants, including 7 theorem constants. Only
+propext, Classical.choice, and Quot.sound occur. The full negative-voting
+theorem is not asserted by this module.

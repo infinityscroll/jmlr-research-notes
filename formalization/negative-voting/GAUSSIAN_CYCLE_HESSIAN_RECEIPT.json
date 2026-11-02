@@ -1,0 +1,14 @@
+{
+  "module": "GaussianFanCycleHessian",
+  "sha256": "b04a2517219ed4c366dcfdb1d1deb1eab4423a9ba54fdf832fcd180954b59a81",
+  "compiled_constants": 30,
+  "theorem_constants": 27,
+  "status": "passed",
+  "source_backed_build": "GAUSSIAN_CYCLE_HESSIAN_BUILD.txt",
+  "audit": "GAUSSIAN_CYCLE_HESSIAN_AXIOMS.txt",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

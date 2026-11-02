@@ -1,0 +1,9 @@
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.scoreLift_scores._simp_1_1","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.centered_linear_coefficients","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.scoreLift.congr_simp","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.scoreLift_scores","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.exists_centered_score_vector","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.scoreLift_edge","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.scoreLift_norm_sq","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.scoreLift.eq_1","theorem":true}
+SCORE_REALIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingScoreRealization.scoreLift","theorem":false}

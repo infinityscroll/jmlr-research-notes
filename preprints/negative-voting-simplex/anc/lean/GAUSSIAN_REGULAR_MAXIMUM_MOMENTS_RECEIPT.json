@@ -1,0 +1,26 @@
+{
+  "build_command": "lake build GaussianRegularMaximumMoments",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_MAXIMUM_MOMENTS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 21,
+  "theorem_count": 19,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularMaximumMoments.lean": "9de6407a1ee4bdb2d4a45be6111ed64d1af5fcb027f98de165c2ddc0820048ad",
+    "GaussianMaximumLocalization.lean": "8335c140d25c4af824c8b97d805591e65462b3b5ab74858a7fd7afe4aa8f90a0",
+    "NegativeVoting/RegularSimplexCentroid.lean": "eed5595cbd9ee4f34313767ff17bdef3988800a8f22729489bc2d84f1ffd3e58",
+    "NegativeVoting/RegularSimplexMoments.lean": "201728484dbac68af1331e45398bbe79b2381b2f16f6616f2644f5bfa46c895a",
+    "GaussianSpectralBridge.lean": "6a06c68a17eb334a1c14b3f810d337918cf964e3891fdc5d423f384efb96fa13",
+    "GAUSSIAN_REGULAR_MAXIMUM_MOMENTS_AUDIT.lean": "d8f663658f27e9bce7e93564e054fb877f2b5b0474cac1453c79180a36f34bc2",
+    "GAUSSIAN_REGULAR_MAXIMUM_MOMENTS_AXIOMS.txt": "37753cd7d5cc4f83488893f31d87b1c2fefc0382c53f750b20cf5777896ae49b",
+    "GAUSSIAN_REGULAR_MAXIMUM_MOMENTS_BUILD.txt": "355a2ecfe72fc51d42781a8078719e12a271ce16d34e7c56309855882d870e7c",
+    "GAUSSIAN_REGULAR_MAXIMUM_MOMENTS_COVERAGE.txt": "e491dcb4ca1285d6b5aadc090af1fd8a1468f6b5ad94608fc54595b837fb794b"
+  }
+}

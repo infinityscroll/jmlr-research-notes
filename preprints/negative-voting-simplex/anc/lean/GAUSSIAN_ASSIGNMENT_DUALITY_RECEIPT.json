@@ -1,0 +1,27 @@
+{
+  "build_command": "lake build GaussianAssignmentDuality",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_ASSIGNMENT_DUALITY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 46,
+  "theorem_count": 37,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAssignmentDuality.lean": "0b4187dd807506b9fcc455c26e14d499757cd2ffd4f96250736acfcbae5bdcfb",
+    "GaussianFanOptimizedValue.lean": "c91c818a974f3a4c95053c9261696068524345c3b3e6eb8e3c21b0a8471c9cc7",
+    "GaussianFanMassExistence.lean": "2c4a6cb9e6c18e479fe5298b4d7702ad53a5bcd3253f0db04045f3f545c8c95a",
+    "GaussianFanMassInverse.lean": "61b0c46e8293d305d084402cf39c4fc9b2090db72d0629371561f156aa6cf002",
+    "GaussianRegularMaximumMoments.lean": "9de6407a1ee4bdb2d4a45be6111ed64d1af5fcb027f98de165c2ddc0820048ad",
+    "GaussianMassCentroid.lean": "8de11a80bd0c5ee12aff209f28ffe5f014877c329b321a6d80dea96820e21e29",
+    "GAUSSIAN_ASSIGNMENT_DUALITY_AUDIT.lean": "5bbc4ab2c706bed4a634d2824e600ecf8cf18277c77b56785e6bf15529e67321",
+    "GAUSSIAN_ASSIGNMENT_DUALITY_AXIOMS.txt": "4a78686804e7ef4aa5efb58e18dc8651b308cc1eb1eea21fdcc0b20c68d3645d",
+    "GAUSSIAN_ASSIGNMENT_DUALITY_BUILD.txt": "9d2be30bfc476e781993c08a862c9f7126da32b18f23a266a19218023b794253",
+    "GAUSSIAN_ASSIGNMENT_DUALITY_COVERAGE.txt": "e1e3d0b422f073e9745094fa6b5c14b89479f4c71caa6cd5e2d4804450ed0ebe"
+  }
+}

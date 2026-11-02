@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianRegularFacetGaussianLower",
+  "sourceBackedBuild": true,
+  "constants": 7,
+  "theoremConstants": 5,
+  "sha256": {
+    "GaussianRegularFacetGaussianLower.lean": "84383bf7cf32fd64c8b6e163dce4d49f5ccf9cc6423f2ad3db5a18c4e25c6aca",
+    "GAUSSIAN_REGULAR_FACET_GAUSSIAN_LOWER_AUDIT.lean": "8315ebeda4c35f89eb919a582aab1133c75bb5b3588a0f249ab61886c963084f",
+    "GAUSSIAN_REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS.txt": "98b62e926f4eb094823c376df1a54ddd0d1d506dbd65e7fc6c74a51ac1b33feb",
+    "GAUSSIAN_REGULAR_FACET_GAUSSIAN_LOWER_BUILD.txt": "9f7e72d5d0fb5c73bced677566b28e2a2885010be807be9ffb5d1129fe60b7df"
+  }
+}

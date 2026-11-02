@@ -1,0 +1,26 @@
+{
+  "module": "GaussianFanHessianContinuity",
+  "source_sha256": "ab599ed369a4af06c0e0962630b388bb4937cceb12bec791b8c98fca297361cf",
+  "source_lines": 167,
+  "source_theorem_declarations": 10,
+  "compiled_constants_audited": 31,
+  "compiled_theorem_constants_audited": 27,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T05:09:21.213881+00:00",
+  "build_transcript": "GAUSSIAN_FAN_HESSIAN_CONTINUITY_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_FAN_HESSIAN_CONTINUITY_AUDIT.lean",
+    "GAUSSIAN_FAN_HESSIAN_CONTINUITY_AXIOMS.txt",
+    "GAUSSIAN_FAN_HESSIAN_CONTINUITY_COVERAGE.txt"
+  ]
+}

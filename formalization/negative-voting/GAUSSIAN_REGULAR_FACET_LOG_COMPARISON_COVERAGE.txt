@@ -1,0 +1,23 @@
+GaussianRegularFacetLogComparison: literal relative surface-weight bound
+
+For regular reference rows B, symmetric invertible S, actual score shifts
+h_i=<B_i,h>, and an actual symmetric factor R^2=C_ext of the conditional
+Schur covariance plus normal identity, the module derives
+  |log(w_ij(SB,h)/w0)| <= a^2/2+|log ||S n_ij|||
+      +128e^3[||R-I||HS L+||beta||sqrt(L)+||beta||^2],
+where w_ij is the literal Gaussian fan facetWeight, w0=alpha/m,
+a=transportedLevel, beta=conditionalMean, and L=1+log m.
+The size condition is 4e||R-I||HS<=1; the actual Gaussian maximum mean must
+be >=1. Factor existence is already proved in the frozen cylinder closure.
+The next metric module removes the displayed factor-size/mean quantities
+in favor of ||S^2-I||HS and ||h||.
+
+The proof uses the actual fixed-cap probability comparison and exact
+Gaussian density ratio. It derives positivity of both relevant cap masses
+and restores every Gaussian normal-density and edge-length factor; no
+surface probability, derivative, or log-ratio estimate is a premise.
+
+Source-backed Lake build and exhaustive compiled-module transitive axiom
+audit passed for all constants, including generated helpers. Only the
+standard three axioms occur. The balanced-offset continuation and local
+curvature are subsequent steps, not conclusions of this module.

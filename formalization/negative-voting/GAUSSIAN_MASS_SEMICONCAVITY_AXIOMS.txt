@@ -1,0 +1,7 @@
+GAUSSIAN_MASS_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassSemiconcavity.uniformMass_mem_window","theorem":true}
+GAUSSIAN_MASS_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingOptimizerConstants.actualMassLower.eq_1","theorem":true}
+GAUSSIAN_MASS_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassSemiconcavity.uniform_positive_floor_mass_bound._abel_1_2","theorem":true}
+GAUSSIAN_MASS_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassSemiconcavity.uniform_positive_floor_mass_bound._proof_1_1","theorem":true}
+GAUSSIAN_MASS_SEMICONCAVITY_AUDIT {"axioms":["propext"],"constant":"NegativeVotingMassSemiconcavity.massValueUpperBound._proof_1","theorem":true}
+GAUSSIAN_MASS_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassSemiconcavity.uniform_positive_floor_mass_bound","theorem":true}
+GAUSSIAN_MASS_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMassSemiconcavity.massValueUpperBound","theorem":false}

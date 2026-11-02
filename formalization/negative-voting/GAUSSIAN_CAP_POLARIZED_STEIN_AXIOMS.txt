@@ -1,0 +1,5 @@
+CAP_POLARIZED_STEIN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapPolarizedStein.gaussian_cap_trilinear_stein","module":"GaussianCapPolarizedStein","theorem":true}
+CAP_POLARIZED_STEIN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapPolarizedStein.face_inner_pow_memLp_two","module":"GaussianCapPolarizedStein","theorem":true}
+CAP_POLARIZED_STEIN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapPolarizedStein.gaussian_cap_power_combination_stein","module":"GaussianCapPolarizedStein","theorem":true}
+CAP_POLARIZED_STEIN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapPolarizedStein.cap_inner_pow_memLp_two","module":"GaussianCapPolarizedStein","theorem":true}
+CAP_POLARIZED_STEIN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapPolarizedStein.gaussian_cap_bilinear_stein","module":"GaussianCapPolarizedStein","theorem":true}

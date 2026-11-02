@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBalancedOffsetControl",
+  "source_sha256": "42c7de00a3051463fc88b1df9432680bbb54b96d22464607224571160af62a0d",
+  "source_lines": 210,
+  "source_theorem_declarations": 7,
+  "compiled_constants_audited": 11,
+  "compiled_theorem_constants_audited": 11,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual intrinsic covariance offset derivative, with literal Euclidean label sum of squares, is bounded using actual facet-weight lower and upper bounds, actual edge lower bound and inverse-factor norm. No mean, covariance, canonical-response or derivative premise is assumed; the local facet bounds remain geometric inputs."
+}

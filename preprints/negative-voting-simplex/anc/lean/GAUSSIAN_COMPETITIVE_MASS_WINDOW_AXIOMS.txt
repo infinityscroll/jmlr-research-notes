@@ -1,0 +1,12 @@
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveMassWindow.competitive_mass_deficit_coefficient","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveMassWindow.reference_first_energy_le_envelope","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit._simp_1_2","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit._simp_1_4","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit._simp_1_3","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit._simp_1_6","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit._simp_1_1","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveMassWindow.competitive_mass_deficit_parity","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit._simp_1_5","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit._simp_1_7","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveMassWindow.eventually_uniform_competitive_mass_window","module":"GaussianCompetitiveMassWindow","theorem":true}
+COMPETITIVE_MASS_WINDOW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveMassWindow.mass_window_of_scaled_deficit","module":"GaussianCompetitiveMassWindow","theorem":true}

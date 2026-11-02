@@ -1,0 +1,14 @@
+{
+  "module": "GaussianFiniteGraphRayleigh",
+  "sha256": "8c23cf88b8d08faef2ff3328dceff1c4f4d8a57ce69627d444ddc19933da3666",
+  "compiled_constants": 18,
+  "theorem_constants": 18,
+  "status": "passed",
+  "source_backed_build": "GAUSSIAN_FINITE_GRAPH_RAYLEIGH_BUILD.txt",
+  "audit": "GAUSSIAN_FINITE_GRAPH_RAYLEIGH_AXIOMS.txt",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

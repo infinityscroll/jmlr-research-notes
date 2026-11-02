@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianAssignmentEquality",
+  "sourceBackedBuild": true,
+  "constants": 11,
+  "theoremConstants": 11,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianAssignmentEquality.lean": "99b08df52cb80ec59345c99f0d97c2683fb6c259916b79ce6c737e1057061941",
+    "GAUSSIAN_ASSIGNMENT_EQUALITY_AUDIT.lean": "5b23311c97d39c7c86d2b28d2d48a25f0d03c27ccd39b9b288edadc80d25df17",
+    "GAUSSIAN_ASSIGNMENT_EQUALITY_AXIOMS.txt": "a9ac6f57bb4d81eae2cf3fd0e1ebff9a9f2590b73d6ea28ab711f97fece5ea3c",
+    "GAUSSIAN_ASSIGNMENT_EQUALITY_BUILD.txt": "a3e86ff06cd4caeec114bec02e80712b6178775a7f86833da3d49cf326fe3ecb"
+  }
+}

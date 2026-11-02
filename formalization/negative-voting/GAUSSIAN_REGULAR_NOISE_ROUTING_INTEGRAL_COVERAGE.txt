@@ -1,0 +1,7 @@
+Actual AE-simplex Gaussian routing integral
+
+The Euclidean endpoint ae_simplex_integral_routing_lower and the finite-product endpoint ae_simplex_product_integral_routing_lower apply to coordinatewise completed-measurable competitors whose values lie in the finite probability simplex only almost everywhere. No positive mass, prescribed mass, Borel representative, or integrability premise is supplied.
+
+The projected comparison weight is exactly referenceScale(n)*r*exp(-1-2*facetGaussianConstant*(1+log(n+2))*r^2*||frameOperator(B)x||^2). The score loss uses the unit regular score rows; referenceScale is already included in the weight. The right-hand side is the actual integral pairing sum_i(f_i-g_i)T_{-r}g_i. It does not include the factor2 appearing in the first variation of noise stability.
+
+All integrability is derived: Gaussian linear scores give the ordinary routing loss, the continuous weight is bounded above by referenceScale*r, and bounded simplex coordinates give the potential pairing. The actual measure-preserving coordinate equivalence transports the result to the finite-product Gaussian coordinates used by MainGoal, including arbitrary finite ambient dimension. Hypotheses remain n>0, actual maximumMean(n)>=1, exact regular Gram, and 0<r<=1/2. This is a concrete analytic input, not the complete main theorem.

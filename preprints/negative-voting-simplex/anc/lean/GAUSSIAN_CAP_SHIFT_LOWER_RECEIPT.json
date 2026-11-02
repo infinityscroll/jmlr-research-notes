@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianCapShiftLower",
+  "sourceBackedBuild": true,
+  "constants": 5,
+  "theoremConstants": 5,
+  "sha256": {
+    "GaussianCapShiftLower.lean": "69acfb271425c2d0fac0a688033647ef09bc07b3bcae1cbe33fe9c3e0543ca82",
+    "GAUSSIAN_CAP_SHIFT_LOWER_AUDIT.lean": "a4012d7834985b8b0738825d7f13d97ab69413465f3425baed243f6b4b0bf48e",
+    "GAUSSIAN_CAP_SHIFT_LOWER_AXIOMS.txt": "10d689b6075ae12243a91c66ddce98199b7abca21d5ef91ef99309828e3b8a2d",
+    "GAUSSIAN_CAP_SHIFT_LOWER_BUILD.txt": "33ae020b594818098463eea68d9b95650e951d5c2a480b26605e9e4706846f82"
+  }
+}

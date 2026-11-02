@@ -1,0 +1,20 @@
+GaussianAffineLogScale: actual entropy-variable differential inequality
+
+For a finite cap C with unit normals and NoCoincident supports, positive
+original mass, ||A||op<=1/2, and every |t|<=1, define the actual probability
+p(t)=Gaussian{x:(I+tA)x+tz belongs to C}. Positivity on the entire interval
+has been derived in GaussianAffinePositiveMass. The present module proves
+actual differentiability of log p and of F(t)=sqrt(1-log p(t)), and proves
+  |F'(t)| <= 4 exp(1) ||A||HS F(t) + 3 ||z||.
+All coefficients are dimension independent. The separate square-root-log
+translation scale is preserved; replacing it by log would lose the intended
+regular-neighborhood scale. The real probability is also proved <=1, giving
+F>=1 with no separate scalar premise.
+
+The derivative theorem is for the literal Gaussian pullback probability.
+No differentiability, integrability, inverse bound, pathwise positivity,
+conditional moment estimate, or ODE inequality is assumed.
+
+Source-backed Lake build and exhaustive source-module transitive axiom audit
+passed, including all generated/private constants; only the standard three
+axioms occur. The finite-interval integration is in the next module.

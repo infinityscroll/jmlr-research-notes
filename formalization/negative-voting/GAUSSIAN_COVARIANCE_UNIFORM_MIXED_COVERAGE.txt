@@ -1,0 +1,19 @@
+Actual uniform logarithmic mixed-curvature bound
+
+Numerical specialization
+Actual masses stay in [1/(100m),2/m]. The mixed estimate uses the relaxed mass floor p0=1/(200m), degree cap 2, retained weight threshold tau=m^-4, edge lower bound sqrt(2*pi)/(20000*m^2), and edge upper bound 4*(2*sqrt(2*log m)+1/sqrt(2*pi))/m. The already-proved actual optimizer edges are strict and its degrees are at most 1, leaving open slack for a neighborhood argument.
+
+One numerical alphabet threshold is ceil(9600*pi+3). Above this threshold, tau*m <= p0/(4*pi*edgeUpper), and the actual retained coefficient ceiling divided by the retained gap is at most C*(1+log m)^2, where
+  C = 2949120000*pi^2*(40026*exp(4)+402).
+These constants are deliberately loose. This is an intermediate threshold for the mixed estimate, not a claimed final threshold for the negative-voting theorem.
+
+The nearby-point endpoint offset_derivative_bound_of_relaxed_geometry states all its geometric assumptions explicitly. The main endpoint uniform_optimizer_offset_derivative_bound derives them for every actual optimizer of 2*Gamma-trace on C>=epsilon*I, uniformly over the full mass box, for all sufficiently small positive epsilon. Its conclusion is
+  sum_i (directional derivative of actual operatorOffsets_i)^2
+    <= C*(1+log m)^2 * (negative second directional derivative of actual operatorValue).
+No factorization, degree, edge, density, selected-optimizer differentiability, or optimizer stability premise is supplied to that final endpoint. The exact centered Parseval reference identities and dimension at least two remain explicit.
+
+The proof uses the actual covariance/centroid correspondence, constructed two-cell re-splitting, uniform closed-graph transfer, one-sided optimizer Price inequality, actual Gaussian Cheeger/frontier and retained graph inequalities, and the concrete cycle/Ehrhard covariance Hessian refinement. It does not replace any of these with a scalar hypothesis equivalent to the desired conclusion.
+
+See GAUSSIAN_COVARIANCE_UNIFORM_MIXED_VERIFICATION.json for the source-backed build, exact compiler/mathlib pins, full source closure and all-owned-constant transitive axiom audit. The full negative-voting theorem is a separate unfinished target.
+
+Final verification passed: 33 owned compiled constants, 24 theorem constants, 237 pinned local source files. Only propext, Classical.choice and Quot.sound occur transitively.

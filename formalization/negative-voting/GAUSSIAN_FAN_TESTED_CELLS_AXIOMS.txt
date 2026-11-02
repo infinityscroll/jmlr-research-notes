@@ -1,0 +1,10 @@
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.integral_weights_mul_eq_cell","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.affine_test_integrable","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.integral_cell_affine_test","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.weighted_affine_test_integrable","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.weights_smul_eq_winningCell_indicator_ae","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.integral_weighted_affine_test","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.jointDerivative_eq_cell_affine_tests","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.integral_weights_smul_eq_cell","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.weights_eq_winningCell_indicator_ae","theorem":true}
+FAN_TESTED_CELLS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanTestedCells.centroid_eq_cell_integral","theorem":true}

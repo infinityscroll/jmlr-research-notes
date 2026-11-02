@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianFanJointOffsets",
+  "sourceBackedBuild": true,
+  "constants": 7,
+  "theoremConstants": 7,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianFanJointOffsets.lean": "2b813881558c366513b9d9105b50d22034a0407be6b66340270e84f40e071a2a",
+    "GAUSSIAN_JOINT_OFFSETS_AUDIT.lean": "a4d7a1c9cf090a80f4bcb529ceedc6cb1508990f806ba85263eecd1545e028c2",
+    "GAUSSIAN_JOINT_OFFSETS_AXIOMS.txt": "09d4816b758eb4308908f5a166defe12706bc1ba3c694d7f1ec7d70f7b853680",
+    "GAUSSIAN_JOINT_OFFSETS_BUILD.txt": "d28c85b4d262e83c56e933175683772cd1170744e966ce08a19d7c7e49877cd1"
+  }
+}

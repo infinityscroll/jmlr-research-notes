@@ -1,0 +1,17 @@
+GaussianRegularFacetSeed: exact actual Gaussian regular-facet normalization
+
+For any actual regular score rows with Gram delta_ij-1/m, m>=3, the literal
+Gaussian facet weights are exactly alpha/m for i!=j, with alpha=mu/(m-1).
+For the actual self-centroid rows alpha B_i, the weights are exactly 1/m.
+These equalities are derived by pairing the actual Gaussian centroid-boundary
+identity with a different regular row, isolating one facet. No face symmetry
+or Gaussian surface weight formula is assumed.
+
+The module also proves the regular edge length sqrt(2), and the exact
+intrinsic Gaussian facet probability
+  P_facet = alpha sqrt(2)/(m gaussianPDFReal(0,1,0)).
+This is the genuine measure on the tangent Gaussian space, with its normal
+PDF normalization derived from the literal facetWeight definition.
+
+These are seed identities for the later quantitative covariance/facet
+perturbation argument. They are not a neighborhood stability estimate.

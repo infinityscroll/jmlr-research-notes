@@ -1,0 +1,14 @@
+{
+  "module": "GaussianCovarianceMixedEstimate",
+  "sha256": "495047f3b15685c732885291ff378418a0b7e520bb18ee0a060326d647bd1f20",
+  "compiled_constants": 13,
+  "theorem_constants": 11,
+  "status": "passed",
+  "source_backed_build": "GAUSSIAN_COVARIANCE_MIXED_BUILD.txt",
+  "audit": "GAUSSIAN_COVARIANCE_MIXED_AXIOMS.txt",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

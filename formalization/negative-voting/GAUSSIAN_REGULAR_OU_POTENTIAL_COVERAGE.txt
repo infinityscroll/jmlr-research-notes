@@ -1,0 +1,7 @@
+Actual regular Gaussian mass symmetry and negative-noise potential
+
+GaussianRegularMassSymmetry proves exact label-permutation equivariance of actual masses for arbitrary rows and the exact equal-offset symmetry for any regular Gram matrix (delta_ij-a). The argument uses the previously checked equal-Gram Gaussian expected-max/mass law and the pointwise symmetric tie rule. It does not assume an ambient affine basis or label independence.
+
+GaussianRegularOUPotential proves the actual negative-correlation identity at every input x: T_{-r}(regularAssignment B)(x) equals the mass vector of the Gaussian fan with offsets -r/sqrt(1-r^2) times the score vector Bx, for 0<r<1. The operator itself has parameter -r, not its absolute value. A positive sqrt(1-r^2) factor is removed using the exact maxWeights scaling identity. The finite-product and Euclidean Gaussian integrals are identified by the already checked measure-preserving coordinate equivalence. Ties are preserved pointwise; no almost-everywhere tie exclusion is needed.
+
+The OU identity is stronger in scope than the regular application: arbitrary finite rows and every finite ambient dimension are allowed. Final endpoints are gaussianAverage_negative_regularAssignment and gaussianNoiseOperator_negative_regularAssignment. This package does not assert the full negative-voting theorem.

@@ -1,0 +1,5 @@
+Actual second-Gaussian-chaos facet gradient and mass-adjoint source
+
+The module proves the literal A2 derivative as a sum of tested Gaussian facet integrals. The quadratic label tests are the actual cell second-moment tensors paired against x_j x_k-delta_jk. Gaussian L2 membership, face integrability, opposite-plane identification, and finite integral linearity are derived. The offset gradient is exactly the divergence of the differences of these quadratic label tests. Thus the checked Jc=g adjoint uses the actual facet source from the manuscript.
+
+This is a first-variation and adjoint-source result. The second derivative, coherent affine transport, polynomial facet estimates, and the final numerical A2 Hessian bound are separate steps. No second-derivative or C2 premise is concealed in this module.

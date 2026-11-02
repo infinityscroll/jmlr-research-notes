@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianRegularFacetStability",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_FACET_STABILITY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 4,
+  "theorem_count": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularFacetStability.lean": "cc23c1f9452e236add0ce16136cceb3f1ac0075f31091ea8bd31253b4cc6c0ae",
+    "GaussianRegularFacetLogComparison.lean": "8f221f384d55a0ea45750a87659cb232cccbf2b671c1cb6efca1d4da6a9fb950",
+    "GaussianFacetNormalPrefactor.lean": "cc7c98c8f82820eaf348058e18d41515cec05bbb79b9dda516a2ce1521c29b8e",
+    "GaussianProcrustesDistance.lean": "ee2eec3cc1a01e8c6ff23974ef7fba6787754f793341fab2f48d776177465a58",
+    "GAUSSIAN_REGULAR_FACET_STABILITY_AUDIT.lean": "f06ee4a2a08a6eda7a451dc9d11b60c80a9e31cea171af10fa960fcb9522eaad",
+    "GAUSSIAN_REGULAR_FACET_STABILITY_AXIOMS.txt": "e52078b4e07ac601237b4bf114dc7108d13cd625f7b65049f7c47c16469d49b5",
+    "GAUSSIAN_REGULAR_FACET_STABILITY_BUILD.txt": "7c26e420249dba914606df675deab77e0d81b8ed0eccc63629946668c78894c4",
+    "GAUSSIAN_REGULAR_FACET_STABILITY_COVERAGE.txt": "8445f7ef8a0af54d98d37e73d7d45279bbb973451a56490fdf1bfe063bcc6155"
+  }
+}

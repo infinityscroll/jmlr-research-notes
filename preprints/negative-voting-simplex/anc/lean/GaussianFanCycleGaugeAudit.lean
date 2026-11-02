@@ -1,0 +1,27 @@
+import GaussianFanCycleGauge
+
+#print axioms NegativeVotingFanCycle.EdgeSpace
+#print axioms NegativeVotingFanCycle.TriangleSpace
+#print axioms NegativeVotingFanCycle.TetrahedronSpace
+#print axioms NegativeVotingFanCycle.asTriangle
+#print axioms NegativeVotingFanCycle.asTetrahedron
+#print axioms NegativeVotingFanCycle.fromTriangle
+#print axioms NegativeVotingFanCycle.fromTetrahedron
+#print axioms NegativeVotingFanCycle.alternatingTriangle_add
+#print axioms NegativeVotingFanCycle.tetrahedronChains
+#print axioms NegativeVotingFanCycle.triangleBoundaryLinear
+#print axioms NegativeVotingFanCycle.tetrahedronBoundaryLinear
+#print axioms NegativeVotingFanCycle.boundaryLinear_comp_zero
+#print axioms NegativeVotingFanCycle.positiveDiagonalEquiv
+#print axioms NegativeVotingFanCycle.normalizedTrianglePairing
+#print axioms NegativeVotingFanCycle.triangleWeightEquiv
+#print axioms NegativeVotingFanCycle.triangleWeightEquiv_inner
+#print axioms NegativeVotingFanCycle.exists_concrete_weighted_cycle_gauge
+#print axioms NegativeVotingFanCycle.full_triangle_pairing_eq_three
+#print axioms NegativeVotingFanCycle.normalized_boundary_pairing
+#print axioms NegativeVotingFanCycle.triangleCoboundary
+#print axioms NegativeVotingFanCycle.triangleCoboundary_alternating
+#print axioms NegativeVotingFanCycle.tetrahedron_rotate
+#print axioms NegativeVotingFanCycle.sum_four_rotate
+#print axioms NegativeVotingFanCycle.triangle_tetrahedron_adjoint
+#print axioms NegativeVotingFanCycle.exists_weighted_cycle_gauge_components

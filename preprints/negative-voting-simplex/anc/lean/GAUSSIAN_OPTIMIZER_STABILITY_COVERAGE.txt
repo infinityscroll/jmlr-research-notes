@@ -1,0 +1,7 @@
+GaussianOptimizerStability
+
+Actual mathematical content: a continuous selection of true maximizers of a C2 objective over a fixed convex subset of a finite-dimensional real normed space is locally Lipschitz in the parameter when its actual state Hessian is negative definite. Compactness of the unit sphere derives a coercivity constant; Hessian continuity makes it locally uniform; a real mean-value argument proves strong gradient decrease. Actual constrained variational inequalities and local C1-gradient Lipschitz estimates prove optimizer stability, including boundary maxima. No differentiability of the optimizer is assumed.
+
+Also identifies the actual state Hessian quadratic form with the literal scalar second derivative along a line, and proves the second derivative rule after an affine penalty. These are generic analysis tools; GaussianCovarianceOptimizerLipschitz separately discharges their hypotheses for the actual covariance problem. This module alone does not assert a Gaussian optimizer stability result or a uniform constant as epsilon tends to zero.
+
+Source-backed build and exhaustive source-module audit passed; only propext, Classical.choice, Quot.sound occur transitively.

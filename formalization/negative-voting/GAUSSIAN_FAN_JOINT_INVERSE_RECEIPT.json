@@ -1,0 +1,27 @@
+{
+  "module": "GaussianFanJointInverse",
+  "source_sha256": "c96265b353103bb22321e4b0201c9add3a273774c696fe04ccf2494b3cb156c5",
+  "source_lines": 227,
+  "source_theorem_declarations": 13,
+  "compiled_constants_audited": 28,
+  "compiled_theorem_constants_audited": 21,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T02:48:17.539611+00:00",
+  "evidence": [
+    "GAUSSIAN_FAN_JOINT_INVERSE_BUILD.txt",
+    "GAUSSIAN_FAN_JOINT_INVERSE_AUDIT.lean",
+    "GAUSSIAN_FAN_JOINT_INVERSE_AXIOMS.txt",
+    "GAUSSIAN_FAN_JOINT_INVERSE_COVERAGE.txt"
+  ],
+  "mathematical_boundary": "Actual joint local C1 inverse and derived anchored/prescribed mass-preserving C1 offset curves; no full negative-voting conclusion."
+}

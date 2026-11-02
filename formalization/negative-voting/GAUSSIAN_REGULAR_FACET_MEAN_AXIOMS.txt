@@ -1,0 +1,5 @@
+REGULAR_FACET_MEAN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetMean.regular_facet_conditional_mean_bound","module":"GaussianRegularFacetMean","theorem":true}
+REGULAR_FACET_MEAN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetMean.regular_intrinsicFacet_mass_lower","module":"GaussianRegularFacetMean","theorem":true}
+REGULAR_FACET_MEAN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetMean.gaussian_set_conditional_mean_bound","module":"GaussianRegularFacetMean","theorem":true}
+REGULAR_FACET_MEAN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetMean.eventually_regular_facet_conditional_mean_bound","module":"GaussianRegularFacetMean","theorem":true}
+REGULAR_FACET_MEAN_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetMean.normalPDF_zero_le_one","module":"GaussianRegularFacetMean","theorem":true}

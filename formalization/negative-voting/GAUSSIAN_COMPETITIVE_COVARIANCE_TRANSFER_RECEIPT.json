@@ -1,0 +1,19 @@
+{
+  "module": "GaussianCompetitiveCovarianceTransfer",
+  "source_sha256": "0d3e649b339c219a37d452cfa38850dec8858fb88539784260ad9b5f711d0008",
+  "source_lines": 89,
+  "source_theorem_declarations": 2,
+  "compiled_constants_audited": 3,
+  "compiled_theorem_constants_audited": 3,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "One eventual alphabet threshold precedes every finite ambient type, actual regular reference, completed-measurable AE fractional competitor, all0<r<=1/(m-1), and every Euclidean coordinate isometry. Proves actual R(centroidRows(coordinateRule coord f))<=competitiveDeficit/r and <=128r/m from actual negative-noise competitiveness. No bounded-row, rank/distinctness, offset, curvature, approximate inverse, mass-value, or positive lower correlation cutoff premise remains. This is the R<=D/r bridge, not the full noise-comparison theorem."
+}

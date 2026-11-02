@@ -1,0 +1,143 @@
+⚠ [3091/3092] Replayed GaussianFiniteGraphRayleigh
+warning: GaussianFiniteGraphRayleigh.lean:42:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraphRayleigh.centered_pair_energy`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFiniteGraphRayleigh.lean:52:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraphRayleigh.weighted_difference_cauchy`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFiniteGraphRayleigh.lean:73:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraphRayleigh.absolute_pair_energy_le_degree`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFiniteGraphRayleigh.lean:164:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8932/8934] Replayed GaussianFiniteGraphCoarea
+warning: GaussianFiniteGraphCoarea.lean:31:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: GaussianFiniteGraphCoarea.lean:45:8: This simp argument is unused:
+  Measure.restrict_apply_univ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Real.volume_Ico, ENNReal.toReal_ofReal']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFiniteGraphCoarea.lean:45:36: This simp argument is unused:
+  Real.volume_Ico
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Measure.restrict_apply_univ, ENNReal.toReal_ofReal']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFiniteGraphCoarea.lean:45:52: This simp argument is unused:
+  ENNReal.toReal_ofReal'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Measure.restrict_apply_univ, Real.volume_Ico]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianFiniteGraphCoarea.lean:50:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: GaussianFiniteGraphCoarea.lean:52:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: GaussianFiniteGraphCoarea.lean:61:39: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: GaussianFiniteGraphCoarea.lean:115:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraph.weighted_absolute_sum_eq_twice`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8933/8934] Built GaussianBoundedRowGraph (18s)
+warning: GaussianBoundedRowGraph.lean:25:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.row_metric_degree_identity`:
+  [Nonempty V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:35:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.scalar_edge_pairing`:
+  [Nonempty V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:62:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.norm_squared_difference_le`:
+  [Fintype V]
+  [Nonempty V]
+  [DecidableEq V]
+  [InnerProductSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Nonempty V] [DecidableEq V] [InnerProductSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:72:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.labelEnergy_nonneg`:
+  [Nonempty V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:77:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.metricPairEnergy_nonneg`:
+  [Nonempty V]
+  [DecidableEq V]
+  [InnerProductSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [DecidableEq V] [InnerProductSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:82:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.mixedMagnitude_nonneg`:
+  [Nonempty V]
+  [DecidableEq V]
+  [InnerProductSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [DecidableEq V] [InnerProductSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:88:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.mixedMagnitude_cauchy`:
+  [Nonempty V]
+  [DecidableEq V]
+  [InnerProductSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [DecidableEq V] [InnerProductSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:138:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.metricPairEnergy_le_degree`:
+  [Nonempty V]
+  [DecidableEq V]
+  [InnerProductSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] [DecidableEq V] [InnerProductSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianBoundedRowGraph.lean:181:18: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: GaussianBoundedRowGraph.lean:223:0: automatically included section variable(s) unused in theorem `NegativeVotingBoundedRowGraph.centered_l1_le_mixed`:
+  [DecidableEq V]
+  [InnerProductSpace ℝ E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [InnerProductSpace ℝ E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (8934 jobs).

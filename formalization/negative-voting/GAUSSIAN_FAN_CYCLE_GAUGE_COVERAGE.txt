@@ -1,0 +1,19 @@
+Concrete finite-simplex weighted gauge and exact normalization
+
+GaussianFanCycleGauge.lean constructs actual Euclidean coefficient spaces, the alternating tetrahedron subspace, the second and third boundary linear maps, their zero composition, and the positive diagonal square-root weight map. Finite-dimensional weighted projection then gives a triangle filling of any divergence-free alternating edge flow, orthogonal to every actual tetrahedron boundary.
+
+For permutation-invariant positive triangle weights D, the final endpoint exists_weighted_cycle_gauge_components proves a literal filling partial2(lam)=j and, for every ordered quadruple(a,b,c,d),
+ D(b,c,d)lam(b,c,d)-D(a,c,d)lam(a,c,d)+D(a,b,d)lam(a,b,d)-D(a,b,c)lam(a,b,c)=0.
+This is exactly the signed-face equation partial3^T D lam=0. No chain-complex identity, filling, orthogonality, component equation, covariance or Gaussian factorization is assumed.
+
+Counting factors are proved explicitly:
+1. Full three-edge pairing on every ordered triangle equals3 times the distinguished-edge pairing.
+2. The normalized boundary pairing consequently has factors1/6 for triangles and1/2 for edges.
+3. Triangle/tetrahedron adjunction has a raw factor4, equivalently normalized factors1/6 and1/24. The component gauge is derived using this exact factor and a nonnegative sum of squares.
+4. The weighted Hilbert pairing is sum_(ordered triples) (D/6)*lam*eta. Permutation invariance is explicit in the final component theorem. Physical weights originally defined only on distinct unordered triples can be extended by any positive symmetric values on repeated tuples; alternating coefficients on those tuples vanish.
+
+All25 public exports are audited:11 theorems,11 concrete definitions and3 space abbreviations. Their complete local import closure is this file, frozen GaussianFanCycleComplex.lean, and the already checked NegativeVoting/WeightedGauge.lean; Mathlib is pinned. No sorry/admit/custom axiom/native_decide. Only propext, Classical.choice and Quot.sound are permitted.
+
+Scope: this completes the concrete finite-cycle gauge and normalization block. It does not prove the Gaussian stratum matrix equality A-B=-D partial3 diag(c) partial3^T D, or the optimized covariance Hessian. Those remain separate actual analytic/geometric obligations.
+
+Reproduce: python3 verify_fan_cycle_gauge.py --lake /absolute/path/to/lake

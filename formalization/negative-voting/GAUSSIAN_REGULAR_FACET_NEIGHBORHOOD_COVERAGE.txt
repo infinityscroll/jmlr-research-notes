@@ -1,0 +1,21 @@
+GaussianRegularFacetNeighborhood: explicit dimension-independent improvement region
+
+For each q>=0, the module constructs the explicit positive radius
+ c(q)=min(1/(64e),1/2,log2/[4*4096e^3*(1+q+q^2)]).
+The numerical bounds on this radius are proved in Lean.
+
+For every actual regular Gaussian fan, epsilon=||S^2-I||HS, L=1+log m,
+epsilon<=c(q)/L and ||h||<=q sqrt(L)epsilon imply, on every facet,
+  w0/2 < w_ij(SB,h) < 2 w0.
+The actual Gaussian maximum mean must be >=1; the earlier maximum theorem
+supplies one eventual threshold. The radius is chosen before dimension,
+rows, covariance, offsets and facet labels, and it is independent of them.
+
+This is the strict facet improvement needed for continuation. The remaining
+offset-size premise is an actual geometric condition; it has not been
+silently identified with the balanced-offset response. The next path/response
+modules derive that condition along the genuine balancing path.
+
+Source-backed Lake build and exhaustive compiled-module transitive audit
+passed, including the scalar algebra helper and generated constants. Only
+the standard three axioms occur.

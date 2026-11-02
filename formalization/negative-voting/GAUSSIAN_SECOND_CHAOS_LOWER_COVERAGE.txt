@@ -1,0 +1,27 @@
+For every finite-dimensional completed-measurable, AE-simplex fractional
+Gaussian assignment f, let P=sum_i p_i^2 and W be the literal coordinate
+centroid squared norm. Total mass one proves P>0. The actual second Hermite
+energy satisfies
+
+ (max(W-P,0))^2/(2P) <= A2(f).
+
+For every ell>=0, the global affine tangent is also proved:
+
+ ell W - ell(ell+2)P/2 <= A2(f).
+
+The actual weighted Cauchy/Jensen inequality is derived from nonnegativity
+of the integrated quadratic polynomial by its discriminant, without dividing
+by a cell mass. The test tensor is T_i=p_i u_i tensor u_i, where u_i is the
+normalized actual centroid and is zero if the centroid is zero. Its actual
+quadratic pairing is >=W-P and its squared tensor norm is <=P. The checked
+Gaussian second-chaos tensor identity and finite Cauchy inequality complete
+the proof. Zero masses, zero centroids, and W<=P require no extra hypotheses.
+A finite linear order is constructed internally; no ordering requirement is
+added to the arbitrary finite ambient coordinate type.
+
+This is the assignment-independent second-chaos localization ingredient.
+It does not assert the full negative-voting theorem or the later mass-value
+semiconcavity estimate.
+
+Source-backed Lake build and exhaustive transitive audit passed for all
+29 compiled constants (24 theorem constants), standard three axioms only.

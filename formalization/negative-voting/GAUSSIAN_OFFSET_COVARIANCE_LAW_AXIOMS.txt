@@ -1,0 +1,3 @@
+OFFSET_COVARIANCE_LAW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetCovarianceLaw.injective_of_gram","theorem":true}
+OFFSET_COVARIANCE_LAW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetCovarianceLaw.centered_offsets_eq_of_gram","theorem":true}
+OFFSET_COVARIANCE_LAW_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetCovarianceLaw.mass_eq_of_gram","theorem":true}

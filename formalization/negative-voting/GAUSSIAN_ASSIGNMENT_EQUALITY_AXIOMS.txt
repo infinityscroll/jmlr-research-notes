@@ -1,0 +1,11 @@
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram._simp_1_4","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentEquality.ae_eq_weights_of_zero_integral_gap","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram._simp_1_1","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram._simp_1_2","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentEquality.product_regular_of_zero_covariance_deficit","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_zero_covariance_deficit","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram._simp_1_3","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram._simp_1_6","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram._simp_1_7","theorem":true}
+ASSIGNMENT_EQUALITY_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAssignmentEquality.ae_regular_of_centroid_gram._simp_1_5","theorem":true}

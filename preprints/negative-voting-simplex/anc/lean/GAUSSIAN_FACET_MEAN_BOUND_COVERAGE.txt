@@ -1,0 +1,5 @@
+Actual Gaussian facet mean bound
+
+For any actual affine-basis fan and distinct labels i,j, θ>0 and θ≤facetWeight(i,j)*||b_i-b_j|| imply the directional conditional mean bound |stratumMeanPairing(v)|≤5 sqrt(1+log(1/θ))||v||. The actual product equals normalPDF(pairOffset) times intrinsic facet mass. This identity controls both the normal anchor and tangential conditional centroid. The proof derives θ≤1; no offset bound or assumed conditional mean is used.
+
+All 7 owned compiled constants, including generated/private constants, were audited transitively. Only propext, Classical.choice and Quot.sound occur. The actual facet-weight lower premise remains geometric input for the ongoing local bootstrap; this is not the full negative-voting theorem.

@@ -1,0 +1,131 @@
+{
+  "frozen_modules_added": [
+    "GaussianFanCovarianceLaw",
+    "GaussianFanCovarianceValue",
+    "GaussianFanValueDerivative",
+    "GaussianMaximum",
+    "GaussianTailRatio",
+    "GaussianMaximumTailMargins",
+    "GaussianDoubleExponentialIntegral",
+    "GaussianMaximumMeanBounds",
+    "GaussianMaximumSecondMoment",
+    "GaussianMaximumLocalization",
+    "GaussianFanCycleForms",
+    "GaussianFanCycleMoments",
+    "GaussianFanCycleCoefficients",
+    "GaussianFanCycleFactorization",
+    "GaussianFanCycleBalance",
+    "GaussianFanCycleDeficit",
+    "GaussianFanCycleResidual",
+    "GaussianFanCycleEhrhard",
+    "GaussianFanCycleAnalyticBridge",
+    "GaussianFanCycleFlux",
+    "GaussianFanCycleQuadratic",
+    "GaussianFanCycleHessian",
+    "GaussianAffineBasisLower",
+    "GaussianCovarianceRefinedCurvature",
+    "GaussianL1Variance"
+  ],
+  "sources": [
+    {
+      "path": "GaussianFanCovarianceLaw.lean",
+      "sha256": "578eeae94abf091086e3e7b626cb90a3faca8edfb9f94410e4cb6a059390395c"
+    },
+    {
+      "path": "GaussianFanCovarianceValue.lean",
+      "sha256": "56a29b531acad81f5a5d4a42aab8c44ac843a38e99b50f9597f87b081f7df714"
+    },
+    {
+      "path": "GaussianFanValueDerivative.lean",
+      "sha256": "aa1be8776ed55bbea00a9d9ba1e11b1175bd6cf05544bd1ddcf2c54cd449bed5"
+    },
+    {
+      "path": "GaussianMaximum.lean",
+      "sha256": "1c83884ce61786f8efc96d91adf4dd3ac19650363771842b100326afe39398ea"
+    },
+    {
+      "path": "GaussianTailRatio.lean",
+      "sha256": "180214d311c08738eb2410399bea424804eeec76bb8d2eb373bf1b348bd99529"
+    },
+    {
+      "path": "GaussianMaximumTailMargins.lean",
+      "sha256": "01496d8b8ea0a8f35b4954b5a4bb642f61a50e18184cae885630af22055f2924"
+    },
+    {
+      "path": "GaussianDoubleExponentialIntegral.lean",
+      "sha256": "8d8fb410b3cb324927cbe8833e37a2d81b1be8c2af2db39894d2e707fb0bc63b"
+    },
+    {
+      "path": "GaussianMaximumMeanBounds.lean",
+      "sha256": "40023dc8f24586bb9f802242f2b6fa4c40b6ebe71a9e6f9fed80ac4443b93691"
+    },
+    {
+      "path": "GaussianMaximumSecondMoment.lean",
+      "sha256": "05e98a06056f329b89258cbaf1e8c3a17f19ca6e8f4e98601ef5269be3df8f1c"
+    },
+    {
+      "path": "GaussianMaximumLocalization.lean",
+      "sha256": "8335c140d25c4af824c8b97d805591e65462b3b5ab74858a7fd7afe4aa8f90a0"
+    },
+    {
+      "path": "GaussianFanCycleForms.lean",
+      "sha256": "cf28e6e5edfcbabb484599dec30e1453ab381addecf3728ad44b1c6f181afd39"
+    },
+    {
+      "path": "GaussianFanCycleMoments.lean",
+      "sha256": "f69b4812377960064289925a0203f1eadb920b30926f484139f63074f5b42734"
+    },
+    {
+      "path": "GaussianFanCycleCoefficients.lean",
+      "sha256": "0b2fd92b1528ff018fa30094913d2880b03efde88c7ea5bc360b65551659302f"
+    },
+    {
+      "path": "GaussianFanCycleFactorization.lean",
+      "sha256": "9c2308809406fda0936e29dbe61eda74c0301bbf8b2d4ee276a4c495e7af0de8"
+    },
+    {
+      "path": "GaussianFanCycleBalance.lean",
+      "sha256": "77bdc4c96ea12fd3cc2b21683ee76da0e54cda8d4c466dbc082188b47a576152"
+    },
+    {
+      "path": "GaussianFanCycleDeficit.lean",
+      "sha256": "81f2945b95858abdb4c22dc57466add9ed87bd3b4498c4af50b5608cf17267f9"
+    },
+    {
+      "path": "GaussianFanCycleResidual.lean",
+      "sha256": "c0ba1da9d793262388f5f94b5bccc92a1e5d01f86e85f09110dfc5772876e621"
+    },
+    {
+      "path": "GaussianFanCycleEhrhard.lean",
+      "sha256": "24723d1fb6e5cd9906c23f177f5a5b309d608e2983812b4cdad17e605ab134d5"
+    },
+    {
+      "path": "GaussianFanCycleAnalyticBridge.lean",
+      "sha256": "94831a417d72e356be19259757232134aa4906f44aa701586ea89c59203d8037"
+    },
+    {
+      "path": "GaussianFanCycleFlux.lean",
+      "sha256": "40d18787c5738dfa25f638dd01ade52ad7a9e00d11fcd0d05c1e5faa89788f2f"
+    },
+    {
+      "path": "GaussianFanCycleQuadratic.lean",
+      "sha256": "7d53ee656da863012e1586de018ae3f57fc65fc83f8a333a003b5688950f2710"
+    },
+    {
+      "path": "GaussianFanCycleHessian.lean",
+      "sha256": "b04a2517219ed4c366dcfdb1d1deb1eab4423a9ba54fdf832fcd180954b59a81"
+    },
+    {
+      "path": "GaussianAffineBasisLower.lean",
+      "sha256": "2fdc1d4efc06ca233afd1f7f67c950407483619e2319e9330ae352238b64528c"
+    },
+    {
+      "path": "GaussianCovarianceRefinedCurvature.lean",
+      "sha256": "b978b70e25fcb3d11775593fd2613c38bc14bee6bfe4b16980801fb0e66d365d"
+    },
+    {
+      "path": "GaussianL1Variance.lean",
+      "sha256": "1c778e6aaa5274321f1d664c11843aa88ceb3fcabea36c266fcbf942ff2494ee"
+    }
+  ]
+}

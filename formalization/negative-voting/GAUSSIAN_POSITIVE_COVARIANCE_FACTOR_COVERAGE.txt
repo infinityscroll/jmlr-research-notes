@@ -1,0 +1,5 @@
+ACTUAL POSITIVE COVARIANCE CHANGE OF COORDINATES
+
+Defines the literal cones of symmetric positive-semidefinite and positive-definite continuous linear operators, proves convexity and positive epsilon-identity regularization. At every positive operator C, an orthonormal eigenbasis constructs an actual symmetric invertible square-root equivalence R, its symmetric inverse, and R composed with R=C. No inverse or factorization premise is assumed.
+
+An affine basis is transported through the actual linear equivalence, deriving both independence and spanning. The actual operator Gram matrix K_B(C)_ij=<B_i,C B_j> is PSD. The exact identities are Gram(RB)=K_B(C) and K_(RB)(R^{-1} D R^{-1})=K_B(D); conjugate symmetry is derived. These are the concrete changes of variables needed for covariance curvature, including arbitrary symmetric directions.

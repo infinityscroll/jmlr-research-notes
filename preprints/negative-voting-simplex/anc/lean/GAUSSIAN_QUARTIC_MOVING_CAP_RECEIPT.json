@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianQuarticMovingCap",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_QUARTIC_MOVING_CAP_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 13,
+  "theorem_count": 13,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianQuarticMovingCap.lean": "f8bd6245703d5d0fa34abb80fc5378f3cc6f33aac3c2dd7d672a09a76066f32b",
+    "GaussianQuadraticMovingCap.lean": "1007a7852124c68b593f2549d0075ffb96f7fc463ccabbd920ddb71454136195",
+    "GAUSSIAN_QUARTIC_MOVING_CAP_AUDIT.lean": "8a98f772bd33212e1009fe33dc90d67f54fc24d57217260503d62a3ba0fc5fae",
+    "GAUSSIAN_QUARTIC_MOVING_CAP_AXIOMS.txt": "0fffb1b0efd43fe5799f1c279897b7c879aefcbffd1a38de140af3f5f727e763",
+    "GAUSSIAN_QUARTIC_MOVING_CAP_BUILD.txt": "9b21690b18f22376e8c54da28e000a098cef8abca1c9221e6f93ddfc31793b2f",
+    "GAUSSIAN_QUARTIC_MOVING_CAP_COVERAGE.txt": "a4aadae3459c68ca513d9782b18961c37c36f4c794a5b92586e904c13895032a"
+  }
+}

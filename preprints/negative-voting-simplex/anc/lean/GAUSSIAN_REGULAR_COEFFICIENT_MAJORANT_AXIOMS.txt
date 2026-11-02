@@ -1,0 +1,16 @@
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothUtilityRange_nonneg","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.negativePairCoefficient_error_le","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothUtilityRange_contDiff","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.maxScore_le_log_sum_exp","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.scalar_pair_error","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothUtilityRange_le_max_abs","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.noise_prefactor_bounds","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothPairError_scores_contDiff","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.log_sum_exp_le_card_max","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.sum_exp_pos","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularPairCoefficient.smoothPairError._proof_1","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothUtilityRange","theorem":false}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothPairError_nonneg","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothPairError_contDiff","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.utilityRange_le_smooth","theorem":true}
+GAUSSIAN_REGULAR_COEFFICIENT_MAJORANT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularPairCoefficient.smoothPairError","theorem":false}

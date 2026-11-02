@@ -1,0 +1,9 @@
+GaussianValueSemiconcavity
+
+For a genuine C2 function F(x,t), the actual full-Hessian bounds F_tt<=0 and F_xt[D]^2<=K(-F_xx[D,D]), K>0, imply joint concavity of F(x,t)-K*t^2/2 on a convex region. Full Hessian symmetry is derived from C2; the scalar line second derivatives and quadratic penalty are proved. Partial maximization over a fixed convex state set preserves the corrected concavity whenever true attained maximizers exist.
+
+The main local_penalty_value_concave endpoint combines an open neighborhood of those actual Hessian inequalities, a continuous selection of genuine constrained maxima, and a fixed convex feasible set to obtain local concavity of the corrected optimized value. No optimizer differentiability, almost-everywhere assertion, Hessian-factorization assumption, or conclusion-equivalent semiconcavity premise is supplied.
+
+This is a generic calculus/optimization theorem. The actual Gaussian mixed-Hessian conversion, uniform retained constants, balanced anchor, and local-to-global interval transfer are separate tasks.
+
+Source-backed build and exhaustive source-module audit passed; only propext, Classical.choice, Quot.sound occur transitively.

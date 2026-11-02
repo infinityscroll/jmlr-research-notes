@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianFanSelectedOffsets",
+  "sourceBackedBuild": true,
+  "constants": 10,
+  "theoremConstants": 9,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianFanSelectedOffsets.lean": "7a3e9e5efc960bc3f2ae06403ae0b5ed6f06b44e53acf15ecf47bbfbbbe5d500",
+    "GAUSSIAN_SELECTED_OFFSETS_AUDIT.lean": "77baa7705d0442e57b6640975e7578b841f5b7e7fe48261fe18d5527f109cef6",
+    "GAUSSIAN_SELECTED_OFFSETS_AXIOMS.txt": "a22504ffbba6f64a41cd1b7c1b787db6add9f90c5df25549f0db08e4c4515654",
+    "GAUSSIAN_SELECTED_OFFSETS_BUILD.txt": "d7624020a6f06fb7e582a4da9b324b885af71773d8d950409c01e052f1d5e649"
+  }
+}

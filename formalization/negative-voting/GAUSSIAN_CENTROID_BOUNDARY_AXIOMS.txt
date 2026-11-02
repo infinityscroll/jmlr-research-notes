@@ -1,0 +1,6 @@
+CENTROID_BOUNDARY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCentroid.centroid_linear_pairing","theorem":true}
+CENTROID_BOUNDARY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCentroid.weighted_edge_pairing","theorem":true}
+CENTROID_BOUNDARY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCentroid.centroid_pairing","theorem":true}
+CENTROID_BOUNDARY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCentroid.centroid_eq_boundary_laplacian","theorem":true}
+CENTROID_BOUNDARY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCentroid.centroid_symmetric_mixed_pairing","theorem":true}
+CENTROID_BOUNDARY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCentroid.centroid_symmetric_square_pairing","theorem":true}

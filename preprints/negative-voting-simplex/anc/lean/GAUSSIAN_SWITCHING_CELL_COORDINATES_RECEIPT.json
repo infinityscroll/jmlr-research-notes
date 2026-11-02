@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianSwitchingCellCoordinates",
+  "sourceBackedBuild": true,
+  "constants": 18,
+  "theoremConstants": 16,
+  "sha256": {
+    "GaussianSwitchingCellCoordinates.lean": "967af0f554ec866e2a597d5ba90b133dd50bebe738fa5f3a4e4206987bc9ce21",
+    "GAUSSIAN_SWITCHING_CELL_COORDINATES_AUDIT.lean": "f61ae09c5c38c9d921edc53cdfcc01aea680180695943fecb3910d56a10a683a",
+    "GAUSSIAN_SWITCHING_CELL_COORDINATES_AXIOMS.txt": "39e898b37907680d5656de2b4204765203b7fb788d099b0fb7add3ec3bbf72cf",
+    "GAUSSIAN_SWITCHING_CELL_COORDINATES_BUILD.txt": "add58d52ce103ab12bb377931e258b2ab50aaf9229cb707b6e9d2cc3ebb85a4f"
+  }
+}

@@ -1,0 +1,14 @@
+ACTUAL DIMENSION-FREE GAUSSIAN L1 VARIANCE ESTIMATE
+
+The principal endpoint gaussian_bounded_lipschitz_variance proves, for every n (including n=0), every globally Lipschitz real function f on EuclideanSpace R (Fin n), and every B>=0 with |f(x)|<=B everywhere,
+  variance(f, stdGaussian) <= (pi/2) B integral ||gradient f|| d(stdGaussian).
+The gradient is the literal mathlib total gradient. Its measurability, pointwise norm bound and integrability are derived; no smoothness, AE derivative or gradient-integrability premise is supplied.
+
+Proof chain:
+1. A genuine bounded-measurable probability-space variance identity gives Var(f)<=B E|f(X)-f(Y)| for independent identical X,Y. All square integrability is derived from boundedness.
+2. The attributed actual Gaussian product rotation law is transported to Euclidean coordinates. The second coordinate is minus the derivative of the first; the sign is retained until taking its absolute value.
+3. Rademacher's theorem is transferred from Haar volume using the actual Gaussian density. Joint measurability and Fubini give the actual chain rule for almost every rotation path and almost every time.
+4. Each rotation path is smooth and its composition with globally Lipschitz f is absolutely continuous. The literal fundamental theorem of calculus proves its endpoint difference bound. No C1 approximation or FTC premise is assumed.
+5. The Gaussian directional absolute first moment is bounded by the direction norm using the actual second moment and variance nonnegativity. Joint integrability is proved by a Gaussian norm dominator. Rotation invariance and Fubini then give E|f(X)-f(Y)|<=(pi/2) E||gradient f||.
+
+The constant pi/2 is sufficient and not claimed sharp. The theorem covers the genuine globally Lipschitz distance ramps in the separately audited Cheeger adapter; it does not purport to prove the stronger all-locally-Lipschitz conversion premise. No full negative-voting theorem is asserted here.

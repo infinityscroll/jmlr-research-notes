@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianFanOffsetCovarianceLaw",
+  "sourceBackedBuild": true,
+  "constants": 3,
+  "theoremConstants": 3,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianFanOffsetCovarianceLaw.lean": "ed21524340a151a21e25c8f7d5d25e5ec70bb2f7e735efb2e8f481a614364653",
+    "GAUSSIAN_OFFSET_COVARIANCE_LAW_AUDIT.lean": "d460721c4881901946a5778a170fa1409253fcfbec7633bd37c98cecf1748c3f",
+    "GAUSSIAN_OFFSET_COVARIANCE_LAW_AXIOMS.txt": "957ef217cbfe10c3dc8593a602cade74e92284eb79728c9ee922da029d4105f9",
+    "GAUSSIAN_OFFSET_COVARIANCE_LAW_BUILD.txt": "63feb9f3b5cf8b983647b01113711d2e9cdee4db0a7637114a6fcce4dfd28796"
+  }
+}

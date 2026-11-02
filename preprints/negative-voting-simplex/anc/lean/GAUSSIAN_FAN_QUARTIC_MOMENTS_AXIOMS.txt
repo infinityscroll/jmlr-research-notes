@@ -1,0 +1,16 @@
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.quartic_bound","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.inner","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.const_mul","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.mul","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.affineBulk_growth","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth","module":"GaussianFanQuarticMoments","theorem":false}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.rankOneBulk_growth","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.mono_degree","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.hasFDerivAt_testedCell","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.testedCellDerivative_apply_ambient","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.testedCellDerivative_apply","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.const","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.sub","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.hasFDerivAt_affineBulk_testedCell","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.add","module":"GaussianFanQuarticMoments","theorem":true}
+FAN_QUARTIC_MOMENTS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanQuarticMoments.PolynomialGrowth.finsetSum","module":"GaussianFanQuarticMoments","theorem":true}

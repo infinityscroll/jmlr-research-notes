@@ -1,0 +1,26 @@
+{
+  "module": "GaussianOptimizerStability",
+  "source_sha256": "62025750ed45e523381b87bc3e9f6c159e2cf35b5df7d2e45b5a3c7fb77783e9",
+  "source_lines": 259,
+  "source_theorem_declarations": 11,
+  "compiled_constants_audited": 20,
+  "compiled_theorem_constants_audited": 18,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T05:32:15.167475+00:00",
+  "build_transcript": "GAUSSIAN_OPTIMIZER_STABILITY_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_OPTIMIZER_STABILITY_AUDIT.lean",
+    "GAUSSIAN_OPTIMIZER_STABILITY_AXIOMS.txt",
+    "GAUSSIAN_OPTIMIZER_STABILITY_COVERAGE.txt"
+  ]
+}

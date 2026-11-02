@@ -1,0 +1,2 @@
+GAUSSIAN_BOUNDED_MASS_TAYLOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedMassTaylor.hasDerivAt_massLine_value","theorem":true}
+GAUSSIAN_BOUNDED_MASS_TAYLOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedMassTaylor.mass_value_lower_taylor","theorem":true}

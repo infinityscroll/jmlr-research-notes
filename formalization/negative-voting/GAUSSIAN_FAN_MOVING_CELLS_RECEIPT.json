@@ -1,0 +1,31 @@
+{
+  "module": "GaussianFanMovingCells",
+  "source_sha256": "61a492d93167d58269f2f2be5c728bb63fff225233649541989587de7949c745",
+  "source_lines": 244,
+  "source_theorem_declarations": 13,
+  "compiled_constants_audited": 22,
+  "compiled_theorem_constants_audited": 19,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "dependency_source_hashes": {
+    "GaussianMovingCap.lean": "cb83db8b81d03087beed5fb899c3d06d27fdcf934bf95231518ca4096c47fe65",
+    "GaussianFanTestedCells.lean": "ab1bf11f30855f11d16939b633948f86106f96e27ca10f1f99d9ac506efb0f7c"
+  },
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T02:11:29.028852+00:00",
+  "evidence": [
+    "GAUSSIAN_FAN_MOVING_CELLS_BUILD.txt",
+    "GAUSSIAN_FAN_MOVING_CELLS_AUDIT.lean",
+    "GAUSSIAN_FAN_MOVING_CELLS_AXIOMS.txt",
+    "GAUSSIAN_FAN_MOVING_CELLS_COVERAGE.txt"
+  ],
+  "mathematical_boundary": "Actual moving tested-cell Frechet derivative and explicit Gaussian facet formula; not yet derivative continuity, joint inverse regularity or the main theorem."
+}

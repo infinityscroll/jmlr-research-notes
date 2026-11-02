@@ -1,0 +1,21 @@
+GaussianCovarianceMassPath — actual Gaussian mass-line Hessian bridge
+
+Source-backed Lake build and exhaustive source-module constant audit passed.
+All transitive axioms are propext, Classical.choice, Quot.sound only.
+
+For an actual affine basis, positive prescribed masses of sum one, a centered
+mass direction, and a positive definite symmetric covariance, this module
+proves genuine C2 regularity of Gamma and F=2 Gamma-trace along the mass line.
+It identifies the literal time derivative as minus twice the actual selected
+offset pairing, the actual state Hessian as twice Gamma's covariance second
+derivative, and the pure time Hessian as nonpositive from actual mass concavity.
+The mixed Hessian is proved equal to minus twice the actual covariance derivative
+of the globally selected offsets paired with the mass direction. The first
+mass-derivative identity is proved on an actual open neighborhood before it is
+differentiated. No mixed Hessian identity is assumed.
+
+objective_mixed_bound converts the literal vector offset-response inequality
+with constant L into H_F(D,time)^2 <= (2 L sum_i v_i^2)(-H_F(D,D)).
+The vector inequality remains an explicit input to this adapter; the separate
+GaussianCovarianceMixedNeighborhood module supplies it near actual optimizers.
+This is not the full negative-voting theorem or the final mass semiconcavity bound.

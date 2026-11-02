@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source_sha256": "3d706e8bd9ef74698d18fa72971ef88f98a82a4c16dba24adaabc80552d0d78b",
+  "compiled_constants_audited": 36,
+  "compiled_theorems_audited": 33,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Actual positive symmetric covariance factor near identity for every finite-dimensional symmetric H, with exact square I+tH and first/second derivatives H/2 and -H\u00b2/4."
+}

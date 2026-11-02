@@ -1,0 +1,25 @@
+For every strictly positive probability vector p and finite FSC.Coord d,
+there exists an actual Borel pointwise-simplex assignment f with masses p
+that maximizes the literal sum of squared Gaussian centroid norms over all
+AEMeasurable AE-simplex assignments of those masses.
+
+The maximizing rows B equal the actual centroidRows(f). They satisfy sum B=0,
+optimizedValue(B,p)=sum_i||B_i||^2, and global maximality of the actual row
+objective 2 optimizedValue(B,p)-sum_i||B_i||^2.
+
+The proof derives the actual Gaussian integral pairing and exact square
+completion. Continuity and the existing uniform row Lipschitz bound imply
+coercivity of the row objective. A finite-dimensional compact ball gives an
+actual global maximum; its radius depends on d and is used only for existence.
+The already proved assignment duality provides an attained fractional rule.
+Weak duality at its own actual centroid rows forces the square-completion
+error to vanish, and then proves global centroid-energy maximality.
+
+Duplicate rows and d=0 are retained. No purity, injectivity, full rank,
+assumed optimizer, or supplied square-completion formula is used. The endpoint
+is intended for subsequent actual row-separation and covariance-optimizer
+arguments; it is not the full negative-voting theorem.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for all 32 compiled constants (27 theorem constants). Only propext,
+Classical.choice and Quot.sound occur.

@@ -1,0 +1,20 @@
+The literal regular Gaussian fan is identified with the previously checked
+finite-product regular assignment. Its actual masses are 1/m, its expected
+maximum is the iid Gaussian maximum mean mu, and its actual vector centroid
+is mu/(m-1) times the normalized regular score row (m>=3).
+
+Strict positivity mu>0 for every m>=2 is proved directly: the nonnegative
+maximum-minus-first-coordinate is strictly positive on a nonempty open
+Gaussian event of positive measure. No asymptotic positivity premise is used.
+
+Positive scaling preserves the literal max-score tie convention. Scaling the
+regular rows by alpha=mu/(m-1) therefore makes them exactly their own actual
+Gaussian centroids. Their centered singular lower bound is exactly alpha.
+These are true Gaussian mass/centroid facts, not supplied stationarity data.
+
+The module prepares, but does not itself assert, the balanced global covariance
+optimum or the full negative-noise stability theorem.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for 25 compiled constants (22 theorem constants), using only
+propext, Classical.choice and Quot.sound.

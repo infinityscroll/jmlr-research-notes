@@ -1,0 +1,3 @@
+Actual smooth common divided-noise error majorant
+
+W(u)=log(sum exp u_i)+log(sum exp(-u_i)) is proved C-infinity, nonnegative, above the actual utility range and below 2log(m)+2max_i|u_i|. For tau=r/sqrt(1-r^2), Q=(512e^3+1)*(tau W sqrt(1+log m)+tau^2 W^2), smoothPairError=(2r^2+Q)exp Q. negativePairCoefficient_error_le proves |1-k_ij|<=smoothPairError for every distinct pair, including score ties, whenever 0<r<=1/2 and the retained actual regular-reference hypotheses hold. smoothPairError_scores_contDiff proves actual ambient C-infinity smoothness for arbitrary finite rows; no full-span premise. The Gaussian Lq bound and normal-derivative moment bounds remain outstanding and are not claimed here.

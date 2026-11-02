@@ -1,0 +1,10 @@
+Actual conditioned-facet probability lower bound
+
+Scope: centered affine-basis rows B in FSC.Coord d, m=card(V)>=3, centered affine offsets h, actual cell masses at least 1/(2m), row-pair distances at most D>0, and CenteredSingularLowerBound B sigma with sigma>0. The explicit endpoint proves
+  pi >= (1/4) exp(-(6(2H+U)^2+2H^2)/sigma^2),
+  H=D sqrt(2log(2m)), U=D sqrt(2log(2(m+1))).
+Under D/sigma<=4, pi>=m^(-4096). This exponent is intentionally generous.
+
+GaussianConditionedFacetCap derives the actual intrinsic-to-cylindrical-cap law and the lower bound from a literal margin point, using the actual Gaussian shift inequality and finite union estimate. GaussianConditionedFacetWitness constructs the point from score coordinates. Its call uses -h because the score-witness convention is inner-h while affineScore is inner+h. GaussianFanOffsetRange derives pair and centered offset bounds from actual Gaussian cell masses. GaussianConditionedFacetLower removes the intermediate offset/point premises and proves both the explicit exp-bound and the polynomial bound, including the cycleIntrinsicProbability convention. No independence between cap inequalities or noncoincident-boundary premise is needed. The final source does not assert the complete negative-voting theorem.
+
+Reused frozen root inputs: GaussianCapShiftLower, GaussianCapUnionLower, GaussianScoreRealization and GaussianFacetScoreWitness. GaussianFanRetainedCoefficient supplies the two-cell mass-to-pair-offset estimate. All dependencies are pinned in the source-closure manifest.

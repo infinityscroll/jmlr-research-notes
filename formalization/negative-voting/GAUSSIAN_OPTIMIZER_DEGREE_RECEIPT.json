@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianCovarianceOptimizerDegree",
+  "sourceBackedBuild": true,
+  "constants": 16,
+  "theoremConstants": 15,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianCovarianceOptimizerDegree.lean": "2a83b983867355cbfd094af2fd261e476fa63c67bffa8c0ce63db0d6e2e6369d",
+    "GAUSSIAN_OPTIMIZER_DEGREE_AUDIT.lean": "ccc0f84e8f3cd355e5f7ad4f174592a714efd60cd6535c8bb7d4fbe3d8fa6dd6",
+    "GAUSSIAN_OPTIMIZER_DEGREE_AXIOMS.txt": "418df1747ed833e6246e31b2285790fe67b3a524fa7ea39932d9ed7cd5e9c9ad",
+    "GAUSSIAN_OPTIMIZER_DEGREE_BUILD.txt": "aa91e65905e0fbd57085e53d33980be025e94623f40b265276301d01bf3dd65d"
+  }
+}

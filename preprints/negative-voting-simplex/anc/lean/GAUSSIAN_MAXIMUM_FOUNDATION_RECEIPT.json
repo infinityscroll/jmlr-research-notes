@@ -1,0 +1,37 @@
+{
+  "build_command": "lake build GaussianTailRatio",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_MAXIMUM_FOUNDATION_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 51,
+  "theorem_count": 46,
+  "module_counts": {
+    "GaussianMaximum": {
+      "constants": 29,
+      "theorems": 25
+    },
+    "GaussianTailRatio": {
+      "constants": 22,
+      "theorems": 21
+    }
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianMaximum.lean": "1c83884ce61786f8efc96d91adf4dd3ac19650363771842b100326afe39398ea",
+    "GaussianTailRatio.lean": "180214d311c08738eb2410399bea424804eeec76bb8d2eb373bf1b348bd99529",
+    "GaussianMassCentroid.lean": "8de11a80bd0c5ee12aff209f28ffe5f014877c329b321a6d80dea96820e21e29",
+    "WeakSimplexConjectureLean/Normal/Mills.lean": "92b5f4e74b4bc1f94ee816097dc8ba149d335cf1c7f50bd7c7020ca3ceaf3e96",
+    "GAUSSIAN_MAXIMUM_FOUNDATION_AUDIT.lean": "fa49d0d19b3c9c027671e879257db44f3b0d1e29e064b883364641028ce180e5",
+    "GAUSSIAN_MAXIMUM_FOUNDATION_AXIOMS.txt": "37b158cb562bf3e6ea837cf3160fa937ae666f88d5b6c87db1eb2c5e879ca752",
+    "GAUSSIAN_MAXIMUM_FOUNDATION_BUILD.txt": "8d4d47ea4ae40bba5b48dcff672c29214c49969ee6b1821fff6e3f3f7e2fdb65",
+    "GAUSSIAN_MAXIMUM_FOUNDATION_COVERAGE.txt": "659cd4ebff26df0709129f400e01f0064b8a0453d80c4cbb5272b88654fe91db",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
+  }
+}

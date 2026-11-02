@@ -1,0 +1,32 @@
+Actual nested Gaussian stratum slices: frozen coverage
+
+GaussianFanCycleSlice.lean constructs the linear isometry from the parent
+cap-normal orthogonal complement to the actual child tangent space. Its
+pushforward takes the actual standard Gaussian to the child's standard
+Gaussian. The parent pinned affine embedding equals the child embedding,
+and the literal boundary event equals the child score cap under this map.
+
+Consequences proved without conditional-law or matching-moment assumptions:
+- FSC.sliceMass of each actual parent face equals the child capMass.
+- Every continuous ambient test integral on that parent face transfers
+  exactly to the child cap integral, under the true Gaussian slice law.
+- The previously proved normal-density ratio supplies exactly one normalPDF
+  factor and yields the same child mass and test moments from every parent.
+- All actual intrinsic stratum masses are strictly positive.
+
+The test-integral identity uses total Bochner integrals; change of variables
+holds for continuous test functions without assuming integrability. Actual
+linear/quadratic moments have separate derived Gaussian integrability.
+The coordinate normalization is fixed by the previously proved ambient
+Gaussian density factorization. No general Hausdorff-measure theorem is
+claimed or needed by this interface.
+
+Build and transitive axiom audit passed for all20 public definitions/theorems.
+The complete45-file local source closure is pinned. The permitted axioms
+are only propext, Classical.choice and Quot.sound. No sorry, custom axiom,
+unsafe declaration or native_decide is introduced.
+
+Remaining finite-cycle work: derive the Gaussian mean reciprocal identities,
+assemble the exact A-B factorization with ordered 2/6/24 normalization, then
+combine its weighted gauge with the actual optimized covariance Hessian.
+This module is not a proof of the full negative-voting theorem.

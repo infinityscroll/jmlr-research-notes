@@ -1,0 +1,7 @@
+Actual penalized covariance coercivity.
+
+For every genuine finite affine basis b, every nonnegative probability vector p and every positive-definite covariance operator C, the literal optimized Gaussian value obeys Gamma(C,p) <= ||b||_Pi sqrt(trace C). This is proved from the actual Gaussian second-moment identity integral ||RX||^2 = trace C for C=R^2, an actual variance/Cauchy inequality, and the pointwise maximum score bound.
+
+Consequently, g(C,p)=2Gamma(C,p)-trace C <= 2||b||_Pi^2 - trace C/2. The coefficient is independent of p; the base-basis norm is explicit. Operator trace is not silently identified with physical row-energy trace. A separate finite-dimensional spectral decomposition proves ||C|| <= trace C on the PSD cone and trace continuity.
+
+No assumed coercivity, Gaussian moment identity or optimizing row system appears as an input. Optimizer existence/uniqueness is proved in the next module, not asserted here. This is a component, not the full negative-voting theorem.

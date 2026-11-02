@@ -1,0 +1,3 @@
+GAUSSIAN_COMPETITIVE_COVARIANCE_TRANSFER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveCovarianceTransfer.eventually_uniform_actual_covariance_deficit_transfer","theorem":true}
+GAUSSIAN_COMPETITIVE_COVARIANCE_TRANSFER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveCovarianceTransfer.eventually_uniform_actual_covariance_deficit_transfer._proof_1_1","theorem":true}
+GAUSSIAN_COMPETITIVE_COVARIANCE_TRANSFER_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveCovarianceTransfer.eventually_uniform_offset_absorption","theorem":true}

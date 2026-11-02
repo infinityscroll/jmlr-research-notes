@@ -1,0 +1,30 @@
+Frozen exact Gaussian finite-fan cycle factorization
+
+Final theorem: NegativeVotingFanCycle.actual_fan_cycle_factorization.
+For any actual finite affine basis b, offsets h and alternating triangle
+arrays lambda,eta, it proves cycleA-cycleB=cycleFactorizationRHS, where every
+weight and mean is the literal Gaussian stratum datum defined in Forms.
+
+Proof dependency chain:
+1. Actual Gaussian parent-child slice law and first-moment formula establish
+   the reciprocal-height mean coefficients; genuine Gram geometry supplies
+   triangle/tetrahedron normalization. No mean coefficient is postulated.
+2. The raw A-B expansion is cyclically averaged over the three edges.
+3. Actual barycentric centering removes its constant triangle term.
+4. Alternation removes repeated-face terms; the actual outside Gaussian
+   mean coefficient turns the rest into the tetrahedron boundary pairing.
+5. The previously proved raw factor4 adjoint identity yields
+   -(1/24) sum c * delta(D lambda) * delta(D eta).
+
+Thus the diagonal and off-diagonal contributions are handled together.
+No covariance-concavity theorem, general-target Hodge theorem, prior A-B
+factorization or cycle cancellation estimate appears as a premise.
+The normalizations are exactly1/2 on ordered edges and1/24 on tetrahedra;
+the intermediate cyclic average supplies1/6 on ordered triangles.
+
+All8 exported theorems passed the transitive standard3 axiom audit. The
+complete52-file local source closure is pinned, as are compiler and mathlib.
+No proof placeholder, custom axiom, unsafe declaration or native_decide was
+introduced. This remains a component of the full negative-voting proof:
+actual covariance-deficit realization of B and the global comparison assembly
+are separate endpoints. No full-theorem claim is made by this receipt.

@@ -1,0 +1,16 @@
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.projectedNoiseWeight_le_scale","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.weightedRegularRoutingLoss_integrable","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.regularPotentialPairing","theorem":false}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.ae_simplex_product_integral_routing_lower","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.weightedRegularRoutingLoss.eq_1","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularNoiseIntegral.regularScoreLoss._proof_2","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.regularScoreLoss.eq_1","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.projectedNoiseWeight_continuous","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.regularScoreLoss_nonneg","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularNoiseIntegral.regularScoreLoss._proof_1","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.regularScoreLoss_integrable","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.regularPotentialPairing_integrable","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.weightedRegularRoutingLoss","theorem":false}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoisePair.projectedNoiseWeight.eq_1","theorem":true}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.regularScoreLoss","theorem":false}
+GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularNoiseIntegral.ae_simplex_integral_routing_lower","theorem":true}

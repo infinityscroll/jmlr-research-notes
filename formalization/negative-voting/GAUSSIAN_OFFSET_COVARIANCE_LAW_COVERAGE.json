@@ -1,0 +1,29 @@
+[
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanOffsetCovarianceLaw.injective_of_gram",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanOffsetCovarianceLaw.centered_offsets_eq_of_gram",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanOffsetCovarianceLaw.mass_eq_of_gram",
+    "theorem": true
+  }
+]

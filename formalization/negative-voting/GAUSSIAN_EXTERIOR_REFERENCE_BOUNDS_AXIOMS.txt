@@ -1,0 +1,10 @@
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds._simp_1_7","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds._simp_1_5","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds._simp_1_3","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds._simp_1_2","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds._simp_1_4","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds._simp_1_1","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingExteriorReference.quantile_logarithmic_lower","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingExteriorReference.eventually_reference_scale_bounds._simp_1_6","theorem":true}
+GAUSSIAN_EXTERIOR_REFERENCE_BOUNDS_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingExteriorReference.eventually_uniform_competitive_row_energy_bound","theorem":true}

@@ -1,0 +1,26 @@
+{
+  "module": "GaussianUniformMassBound",
+  "source_sha256": "37d3aa6f98d7fe46364a8f0afb1857e79e441c684c1248ba03dff8fc8ae696c5",
+  "source_lines": 106,
+  "source_theorem_declarations": 4,
+  "compiled_constants_audited": 7,
+  "compiled_theorem_constants_audited": 7,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T07:58:43.581992+00:00",
+  "build_transcript": "GAUSSIAN_UNIFORM_MASS_BOUND_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT.lean",
+    "GAUSSIAN_UNIFORM_MASS_BOUND_AXIOMS.txt",
+    "GAUSSIAN_UNIFORM_MASS_BOUND_COVERAGE.txt"
+  ]
+}

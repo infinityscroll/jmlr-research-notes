@@ -1,0 +1,14 @@
+{
+  "module": "GaussianFanCycleFlux",
+  "sha256": "40d18787c5738dfa25f638dd01ade52ad7a9e00d11fcd0d05c1e5faa89788f2f",
+  "compiled_constants": 4,
+  "theorem_constants": 4,
+  "status": "passed",
+  "source_backed_build": "GAUSSIAN_CYCLE_FLUX_BUILD.txt",
+  "audit": "GAUSSIAN_CYCLE_FLUX_AXIOMS.txt",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

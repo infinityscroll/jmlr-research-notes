@@ -1,0 +1,3 @@
+COVARIANCE_MAXIMUM_UNIQUENESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMaximumUniqueness.positive_maximizer_unique","module":"GaussianCovarianceMaximumUniqueness","theorem":true}
+COVARIANCE_MAXIMUM_UNIQUENESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMaximumUniqueness.half_positive_half_psd","module":"GaussianCovarianceMaximumUniqueness","theorem":true}
+COVARIANCE_MAXIMUM_UNIQUENESS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMaximumUniqueness.balanced_reference_unique","module":"GaussianCovarianceMaximumUniqueness","theorem":true}

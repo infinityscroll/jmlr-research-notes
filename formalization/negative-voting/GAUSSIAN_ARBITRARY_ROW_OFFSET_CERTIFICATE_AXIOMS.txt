@@ -1,0 +1,2 @@
+GAUSSIAN_ARBITRARY_ROW_OFFSET_CERTIFICATE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingArbitraryOffsetCertificate.exists_balanced_optimal_dual_with_energy_bound._proof_1_1","theorem":true}
+GAUSSIAN_ARBITRARY_ROW_OFFSET_CERTIFICATE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingArbitraryOffsetCertificate.exists_balanced_optimal_dual_with_energy_bound","theorem":true}

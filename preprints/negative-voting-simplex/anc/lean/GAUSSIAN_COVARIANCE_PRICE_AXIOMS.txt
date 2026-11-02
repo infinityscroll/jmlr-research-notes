@@ -1,0 +1,3 @@
+COVARIANCE_PRICE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovariancePrice.hasDerivAt_penalizedValue_factor","theorem":true}
+COVARIANCE_PRICE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovariancePrice.conjugate_pairing","theorem":true}
+COVARIANCE_PRICE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovariancePrice.hasDerivAt_operatorValue_factor","theorem":true}

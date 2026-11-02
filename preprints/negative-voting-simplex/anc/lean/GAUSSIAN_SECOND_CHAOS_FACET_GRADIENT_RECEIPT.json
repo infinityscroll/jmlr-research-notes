@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianSecondChaosFacetGradient",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_SECOND_CHAOS_FACET_GRADIENT_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 16,
+  "theorem_count": 14,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianSecondChaosFacetGradient.lean": "298784e65a9ade7bc4ae2c6426f03edecfdb4c9f74f109e7b1f46060afe0bb1c",
+    "GaussianSecondChaosMassAdjoint.lean": "86494ba1ca6f7d6484552c30fc04f4e8c1ffe1c0fa98c89dad805c12ff269769",
+    "GaussianFanQuadraticHessian.lean": "cdedc59beb018598c7d29b418fdc3aff638d221ba34ca9aac6ae3caa068b9e72",
+    "GAUSSIAN_SECOND_CHAOS_FACET_GRADIENT_AUDIT.lean": "05a290251e5e2781471334d9f3debfa7ae3427ecaf3b7cc8afefc4d88d1f42f4",
+    "GAUSSIAN_SECOND_CHAOS_FACET_GRADIENT_AXIOMS.txt": "22bbd76e7a9536596143fd9395f2d4f4b96fba5a3121f42c093bdf47efe608a3",
+    "GAUSSIAN_SECOND_CHAOS_FACET_GRADIENT_BUILD.txt": "b9b75f5e95f20ee17415db10090d166942029dd43a31ed0274887509a939bd59",
+    "GAUSSIAN_SECOND_CHAOS_FACET_GRADIENT_COVERAGE.txt": "f1e58d08f1a01a8c2e8155376640e5bff64f54d45df7b5c2526a8b1f669b37a9"
+  }
+}

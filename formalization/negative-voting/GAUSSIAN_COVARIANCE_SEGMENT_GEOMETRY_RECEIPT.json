@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianCovarianceSegmentGeometry",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_COVARIANCE_SEGMENT_GEOMETRY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 5,
+  "theorem_count": 5,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCovarianceSegmentGeometry.lean": "48892980ac5581d9d78a281f25bf39a7e5dda028ce5a49d4d7c8eb6b67b40e7c",
+    "GaussianBalancedCovariancePath.lean": "c7cd348fc51c385b35815bd929043f6077f19b25e2baf1b1db3d47f596c6c823",
+    "GAUSSIAN_COVARIANCE_SEGMENT_GEOMETRY_AUDIT.lean": "36115289570af501cdc6b61aee06d026a63f91a2d007af23f4414d763ea6553e",
+    "GAUSSIAN_COVARIANCE_SEGMENT_GEOMETRY_AXIOMS.txt": "0fddd1538758aef2522821dbec4ddbf171a29c897105d751fb8a3666417d52ff",
+    "GAUSSIAN_COVARIANCE_SEGMENT_GEOMETRY_BUILD.txt": "648859da31d43d99ef9aaebddfc0e0944adb4e898712acd2461b8e2e35ac591d",
+    "GAUSSIAN_COVARIANCE_SEGMENT_GEOMETRY_COVERAGE.txt": "2a4d3da2af0224d221d6d408bac079fd3dc5785511ebcfacc114eb52e95b966c"
+  }
+}

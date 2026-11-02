@@ -1,0 +1,10 @@
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.covarianceValue_mass_concave","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.potential_affine_masses._simp_1_1","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.probabilityVectors_convex","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.operatorValue_mass_concave","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.probabilityVectors","theorem":false}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.potential_affine_masses","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.second_deriv_nonpos_of_concave_near","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.optimizedValue_mass_line_second_nonpos","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.optimizedValue_mass_concave","theorem":true}
+FAN_MASS_CONCAVITY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanMassConcavity.operatorValue_mass_line_second_nonpos","theorem":true}

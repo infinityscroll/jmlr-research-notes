@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianFanQuadraticTransport",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_FAN_QUADRATIC_TRANSPORT_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 36,
+  "theorem_count": 35,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanQuadraticTransport.lean": "bda9c5da1f80098e1f66d09de871ef44ca10ffe733c855d8c443f2063b3bc31d",
+    "GaussianQuadraticAffineTransport.lean": "fd00a35366fec0b3259cec73a16fb1f45625dcea42daa84858869745f8a6691d",
+    "GaussianFanCoherentChart.lean": "8dd1c749ebbce7ac3336f2288eed45ec142c7c3deaf7ebb983d8d70557d244b6",
+    "GaussianFanQuadraticMoments.lean": "ee89456a9d66a3c2eab747b0f29719021e9dab7391a8c3aab984dea729445e76",
+    "GAUSSIAN_FAN_QUADRATIC_TRANSPORT_AUDIT.lean": "df4188bcb625f8ca62b3275291b9c26f379c7d4a7219d30ffe28c11690b2a34a",
+    "GAUSSIAN_FAN_QUADRATIC_TRANSPORT_AXIOMS.txt": "50d7d57259de09a62beb14b8827649cddfc5e62b9a0403f2e42145f8aa302a6e",
+    "GAUSSIAN_FAN_QUADRATIC_TRANSPORT_BUILD.txt": "5cf9c117f2d3bdc9f72ce95e50ffd3c5f01c4b3670d7b0c2c573935b8f4d6f23",
+    "GAUSSIAN_FAN_QUADRATIC_TRANSPORT_COVERAGE.txt": "e1561aaac05178be98d0d8f59e3df2195648b36a78595287486f907b60d3cebe"
+  }
+}

@@ -1,0 +1,14 @@
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.quadraticForm_offset_remainder","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.mass_derivatives_zero_of_joint_derivative","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.quadraticForm_add","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.quadraticForm_offset_eq_iff_of_centered","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.mixedForm_add_left","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.mixedForm_offset_eq_zero_of_mass_derivatives","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.quadraticForm_smul","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.quadraticForm_offset_eq_iff_constant","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.quadraticForm_offset_minimizes","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.mixedForm_add_right","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.mixedForm_smul_right","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.hasDerivAt_mass_line","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.quadraticForm_offset_remainder_jacobian","theorem":true}
+OFFSET_MINIMIZATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanOffsetMinimization.mixedForm_smul_left","theorem":true}

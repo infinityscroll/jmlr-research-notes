@@ -1,0 +1,7 @@
+Actual joint C1 covariance/mass value.
+
+operatorValue_joint_C1 proves ContDiffAt real 1 of the literal intrinsic optimized Gaussian value in all symmetric covariance entries and all centered mass increments simultaneously, at every positive-definite covariance and positive probability vector for an actual affine basis.
+
+The proof constructs a smooth multivariable row factor, derives its base centered singular lower bound from the actual mapped affine basis, selects actual prescribed offsets, and composes the proved joint row/mass value theorem. Equality to the covariance functional is obtained from the literal Gram identity and Gaussian covariance-law theorem. No differentiable covariance factor, invertible Jacobian, mass-preserving offsets or Frechet regularity is assumed.
+
+This module does not assert C2, optimizer differentiability, or the full negative-voting theorem.

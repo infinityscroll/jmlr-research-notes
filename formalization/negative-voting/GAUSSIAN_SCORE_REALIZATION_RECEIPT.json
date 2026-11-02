@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianScoreRealization",
+  "sourceBackedBuild": true,
+  "constants": 9,
+  "theoremConstants": 8,
+  "sha256": {
+    "GaussianScoreRealization.lean": "67ecd9ca8122282af77d94f3e9598e9ed9784a75aedbda49b784c8873b7ad505",
+    "GAUSSIAN_SCORE_REALIZATION_AUDIT.lean": "ae61e048aec6bd4cdd253069ba620101952b02beefcc235426ea9a6ffbd6b4a1",
+    "GAUSSIAN_SCORE_REALIZATION_AXIOMS.txt": "024a5f68a829a590bae96cf2acd8f1a1a23e9a7516b13dc60491e37f7642ffe3",
+    "GAUSSIAN_SCORE_REALIZATION_BUILD.txt": "4d74853a99e41cfce045432a5e8d5cd6c56c8f9d96887b63498a8289d5dc2e02"
+  }
+}

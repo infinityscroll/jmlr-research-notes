@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianBalancedCovariancePath",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_BALANCED_COVARIANCE_PATH_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 14,
+  "theorem_count": 12,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianBalancedCovariancePath.lean": "c7cd348fc51c385b35815bd929043f6077f19b25e2baf1b1db3d47f596c6c823",
+    "GaussianBalancedOffsetPath.lean": "979e080dda5620fd739bb36c15ef94cdb9d7f52268bf72aefad5e67f1ece7388",
+    "GaussianCovarianceOffsets.lean": "2aba9eadb4e56868363fa30ba13745f4e8f21d4a0c1ec6f5adf7f9d66e7b74cf",
+    "GAUSSIAN_BALANCED_COVARIANCE_PATH_AUDIT.lean": "d6f0bf6370ded7975dc856ea430c98dad29990f805e8ecbfbb61cbd714a6256d",
+    "GAUSSIAN_BALANCED_COVARIANCE_PATH_AXIOMS.txt": "6bd9d8912dea83517223b1ba1b1bf1cdfa4cd00a985707b5ba85e635362844f6",
+    "GAUSSIAN_BALANCED_COVARIANCE_PATH_BUILD.txt": "bb02da0ca766a74be2c64c749122b211c1080fb01079d72c948238ef02682b14",
+    "GAUSSIAN_BALANCED_COVARIANCE_PATH_COVERAGE.txt": "3d4218a66b748f365379a9afbf6425efa7d2dc5a05c8eb9ff0a87c1cad3da95b"
+  }
+}

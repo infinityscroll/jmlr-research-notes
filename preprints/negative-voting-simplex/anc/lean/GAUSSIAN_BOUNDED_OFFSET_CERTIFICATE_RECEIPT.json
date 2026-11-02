@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBoundedOffsetCertificate",
+  "source_sha256": "75540df334677ac1564377e280a7ebbcacbad6b6999d58aaa20af3311e228b0d",
+  "source_lines": 205,
+  "source_theorem_declarations": 5,
+  "compiled_constants_audited": 16,
+  "compiled_theorem_constants_audited": 15,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "For actual centered affine-basis rows bounded by8 sqrt(1+log m)/m, the actual selected balanced dual offset satisfies sum(h_i^2)<=4 C(1+log m)^2 R(B), C=mixedConstant+32768 pi^2. No row-energy normalization, supplied offset, inverse bound or energy hypothesis. Built from actual halfspace offset range, rank-uniform Gaussian Jacobian, integrated mass lower Taylor, and arbitrary-row mass upper bound. Qualitative affine independence remains here; singular limiting dual offsets and the final competitive R<=D/r bridge are separate modules."
+}

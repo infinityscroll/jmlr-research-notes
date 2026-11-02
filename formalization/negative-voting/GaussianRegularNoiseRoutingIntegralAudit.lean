@@ -1,0 +1,21 @@
+import GaussianRegularNoiseRoutingIntegral
+import Lean
+open Lean
+run_cmd do
+  let env ← getEnv
+  let _ ← env.constants.foldM (init := ()) fun _ name info => do
+    let own := match env.getModuleIdxFor? name with
+      | some idx => #[`GaussianRegularNoiseRoutingIntegral].contains env.header.moduleNames[idx.toNat]!
+      | none => false
+    if own then
+      if info.isAxiom then throwError "Custom axiom in regular Gaussian mass symmetry and negative-noise potential: {name}"
+      let axioms ← collectAxioms name
+      for a in axioms do
+        unless #[`propext, `Classical.choice, `Quot.sound].contains a do
+          throwError "Disallowed axiom {a} in {name}"
+      let record := Json.mkObj [
+        ("constant", toJson name.toString), ("theorem", toJson info.isTheorem),
+        ("axioms", toJson (axioms.toList.map Name.toString))]
+      logInfo m!"GAUSSIAN_REGULAR_NOISE_ROUTING_INTEGRAL_AXIOMS {record.compress}"
+    pure ()
+  pure ()

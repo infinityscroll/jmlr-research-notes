@@ -1,0 +1,15 @@
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.exists_vertex_outside_pair","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.cycleDeficit_ehrhard","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.coordinateCap_mass_lt_one","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.exists_vertex_outside_pair._simp_1_3","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.cycleIntrinsicProbability.eq_1","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext"],"constant":"NegativeVotingFanCycle.exists_vertex_outside_pair._simp_1_2","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.actual_cycle_log_ehrhard_bound","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.cycleIntrinsicProbability","theorem":false}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.coordinateCap.eq_1","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.actual_cycle_ehrhard_bound","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.exists_vertex_outside_pair._proof_1_5","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext"],"constant":"NegativeVotingFanCycle.exists_vertex_outside_pair._simp_1_1","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.cycleIntrinsicProbability_mem_Ioo","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.exists_vertex_outside_pair._simp_1_4","theorem":true}
+FAN_CYCLE_EHRHARD_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCycle.stratumDeficit_ehrhard","theorem":true}

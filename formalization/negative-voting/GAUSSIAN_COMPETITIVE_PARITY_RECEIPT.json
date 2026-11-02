@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianCompetitiveParity",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_COMPETITIVE_PARITY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 9,
+  "theorem_count": 9,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCompetitiveParity.lean": "8ce82d13882c50f766c1dcda337f8ade78c3238a89238db34a0b8129ffbb17aa",
+    "GaussianRegularChaosCoefficients.lean": "d75d800e30b89e880a49e2bcb437f5bc3da388af29141f4d0135eb3f2ff0787c",
+    "NegativeVoting/GaussianSpectral.lean": "fec0fbeee06961b53043bca70bbad7f1e2fb59708f8960ae3c56c499d31b188d",
+    "NegativeVoting/HermiteTail.lean": "e738bf594caae3504ca27fbe475f1db46a6e679deb79a123c34d9c0e6f7ed1ae",
+    "GAUSSIAN_COMPETITIVE_PARITY_AUDIT.lean": "b49b9ce0379c000cb4d981451a135acada012cd81a8c6e34c896a50e3f865b90",
+    "GAUSSIAN_COMPETITIVE_PARITY_AXIOMS.txt": "9d9b5b9b18c303ee8f44f4f484be81d3affbc1891eb80043b421d0be6831d8f6",
+    "GAUSSIAN_COMPETITIVE_PARITY_BUILD.txt": "86cadbc626b741fd14488adaf92711e6e2f42b92b368a216029d87de554a62a3",
+    "GAUSSIAN_COMPETITIVE_PARITY_COVERAGE.txt": "f20e98f04b0a7c8b7325788e8bd65f8217b333e2dcd578188106b6d37eaf6463"
+  }
+}

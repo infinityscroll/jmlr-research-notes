@@ -1,0 +1,9 @@
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibreIntegration.unitCellReward_le_supremum","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibreIntegration.unitCellReward_measurable","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibreIntegration.unitCellReward_nonneg","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingSwitchingFibreIntegration.integral_unit_cell_reward_bound._simp_1_1","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibreIntegration.integral_unit_cell_reward_bound","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingSwitchingFibreIntegration.unitCellReward_nonneg._simp_1_1","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibreIntegration.unitCellReward_integrable","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.unitCellReward.eq_1","theorem":true}
+SWITCHING_FIBRE_INTEGRATION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibreIntegration.integral_unit_cell_reward_explicit_bound","theorem":true}

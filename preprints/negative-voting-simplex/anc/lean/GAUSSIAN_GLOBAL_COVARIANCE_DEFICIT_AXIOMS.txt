@@ -1,0 +1,16 @@
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_uniform_global_orbit_bound","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_canonical_local_curvature","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.referenceBasis._proof_1","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.globalRadius","theorem":false}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.referenceBasis.eq_1","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_uniform_actual_competitive_exterior_bounds._proof_1_1","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_uniform_global_covariance_ray_bound","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_uniform_actual_competitive_exterior_bounds","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.referenceBasis._proof_2","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_uniform_global_exterior_bounds._proof_1_1","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext"],"constant":"NegativeVotingGlobalCovarianceDeficit.globalRadius._proof_1","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.globalRadius_bounds","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_uniform_global_exterior_bounds","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.referenceBasis_spec","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.eventually_uniform_global_orbit_bound._proof_1_1","theorem":true}
+GAUSSIAN_GLOBAL_COVARIANCE_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingGlobalCovarianceDeficit.referenceBasis","theorem":false}

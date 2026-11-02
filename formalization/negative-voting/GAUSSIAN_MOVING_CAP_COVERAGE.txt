@@ -1,0 +1,68 @@
+ACTUAL JOINT GAUSSIAN POLYHEDRON DIFFERENTIATION
+
+The source modules are GaussianFanScoreHessian.lean, GaussianMovingSlab.lean,
+and GaussianMovingCap.lean. They build on the attributed FSC Gaussian slicing
+and support library, the checked Gaussian facet transport, and the finite
+cap telescoping identity in GaussianCapTelescoping.lean.
+
+Checked mathematical endpoints:
+
+1. NegativeVotingFanScore.hasFDerivAt_expectedMax_joint proves the full Frechet
+   derivative of E max_i(<B_i,X>+h_i), jointly in every score row and offset,
+   whenever the base rows are distinct. The derivative is an actual Gaussian
+   integral. jointDerivative_apply evaluates it as
+      sum_i (<D_i, centroid_i> + mass_i*v_i).
+   Gaussian tie nullness and the integrable Lipschitz dominator ||X||+1 are
+   derived. Centroids are the actual unnormalized Gaussian integrals.
+
+2. NegativeVotingMovingSlab.hasFDerivAt_integral_moving_slab is a proved
+   differentiation-under-the-integral lemma for genuinely moving normal
+   intervals. Local freezing of the other inequalities, endpoint Frechet
+   derivatives, and the integrable displacement bound are its explicit
+   hypotheses. These hypotheses are all discharged in the concrete Gaussian
+   polyhedron result below; they are not assumed boundary-derivative formulas.
+
+3. NegativeVotingMovingCap.hasFDerivAt_capTest proves the full Frechet
+   derivative of
+      (W,b) |-> integral_{<W_j,x> <= b_j for all j} F(x) d gamma_d(x)
+   in every normal-vector and support parameter. Base normals have norm one,
+   and FSC.NoCoincident excludes coincident boundary hyperplanes. The test F
+   is continuous with |F(x)| <= C*(1+||x||), C>=0. This includes the constant
+   mass test, every centroid coordinate, and every affine score test. The
+   finite constraint type is arbitrary and may be empty. There is no positive
+   cell-mass assumption. Updated normals are not required to remain unit.
+
+4. NegativeVotingMovingCap.capJointDerivative_apply evaluates that derived
+   derivative on an increment (deltaW,deltaB) as
+      sum_j phi(b_j) * integral_{actual tangent face j}
+        F(y+b_j W_j) * (deltaB_j-<deltaW_j,y+b_j W_j>) d gamma_tangent(y).
+   The face, density, tangent Gaussian, and test integral are concrete.
+   Derivative-integrand integrability is proved with Gaussian second moments.
+
+Proof chain for (3)--(4): exact finite indicator telescoping; actual Gaussian
+normal/tangent disintegration; rational normal threshold; its Frechet
+quotient derivative; a neighborhood uniform over all tangent fibers; null
+intersections with the other boundaries; local freezing on shrinking normal
+intervals; FTC; and dominated Frechet differentiation. The two Gaussian bounds
+phi(s)<=phi(0) and |s|*phi(s)<=phi(0) are proved directly from the density.
+The polynomial dominator requires only the Gaussian second moment.
+
+Scope:
+These modules establish actual joint first derivatives of expected maxima
+and of weighted polyhedral Gaussian integrals. The latter is the moving-face
+input for the second derivative of a Gaussian fan expected maximum. The
+paired square-facet Hessian, covariance-coordinate transformation, and the
+full negative-voting inequality are not asserted by these modules.
+
+Verification:
+GAUSSIAN_MOVING_CAP_AUDIT.lean inventories every compiled constant whose
+source module is one of the three files, including private helpers and
+compiler-generated declarations. For each it invokes Lean.collectAxioms,
+rejects any local axiom declaration, and fails unless every transitive axiom
+is among propext, Classical.choice, Quot.sound. It does not rely on a hand
+maintained list of theorem names. The accompanying receipt records the exact
+source and environment hashes, counts, and build/audit exit statuses.
+
+Reproduce from the pinned project:
+  lake build GaussianMovingCap
+  lake env lean GAUSSIAN_MOVING_CAP_AUDIT.lean

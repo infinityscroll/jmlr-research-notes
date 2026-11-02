@@ -1,0 +1,6 @@
+REGULAR_FACET_SEED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetSeed.regular_facetWeight._simp_1_1","module":"GaussianRegularFacetSeed","theorem":true}
+REGULAR_FACET_SEED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetSeed.scaled_regular_facetWeight","module":"GaussianRegularFacetSeed","theorem":true}
+REGULAR_FACET_SEED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetSeed.regular_intrinsicFacet_mass","module":"GaussianRegularFacetSeed","theorem":true}
+REGULAR_FACET_SEED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetSeed.regular_edge_norm","module":"GaussianRegularFacetSeed","theorem":true}
+REGULAR_FACET_SEED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetSeed.regular_facetWeight","module":"GaussianRegularFacetSeed","theorem":true}
+REGULAR_FACET_SEED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetSeed.scaled_regular_facetWeight._simp_1_1","module":"GaussianRegularFacetSeed","theorem":true}

@@ -1,0 +1,4 @@
+COMPETITIVE_DEFICIT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveDeficit.quadratic_remainder_bound","module":"GaussianCompetitiveDeficit","theorem":true}
+COMPETITIVE_DEFICIT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveDeficit.eventually_uniform_competitive_deficit_bounds","module":"GaussianCompetitiveDeficit","theorem":true}
+COMPETITIVE_DEFICIT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveDeficit.actual_competitive_deficit_bounds","module":"GaussianCompetitiveDeficit","theorem":true}
+COMPETITIVE_DEFICIT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCompetitiveDeficit.competitiveDeficit","module":"GaussianCompetitiveDeficit","theorem":false}

@@ -1,0 +1,43 @@
+Actual moving Gaussian fan cells
+Source: GaussianFanMovingCells.lean
+Namespace: NegativeVotingFanMovingCells
+
+The new fixed-base continuous linear map sends varying rows/offsets (B',h')
+to comparison normals (B'_j-B'_i)/||B_j-B_i|| and supports
+(h'_i-h'_j)/||B_j-B_i||. All denominator lengths are fixed at the base point.
+The represented polyhedron equals the literal winningCell(B',h',i) for EVERY
+varying parameter, assuming only distinct base rows. The proof does not
+normalize the varying rows and silently omit the derivative of a norm.
+
+Actual derivative
+hasFDerivAt_testedCell composes the proved GaussianMovingCap derivative with
+this concrete linear map. Unit normals and NoCoincident are derived from a
+positive centered singular lower bound on B; no boundary derivative identity
+is an input. F is continuous with the explicit global linear-growth bound
+|F(x)| <= C(1+||x||), C>=0. The affine-test corollary derives that growth bound
+for F(x)=<E,x>+e using C=||E||+|e|.
+
+Evaluated endpoints
+testedCellDerivative_apply gives the actual intrinsic Gaussian tangent-face
+integral. testedCellDerivative_apply_ambient transports it to the ambient
+conditional Gaussian law on the same literal affineFacet, with the exact
+coefficient gaussianPDFReal(0,1,pairOffset(B,h,j,i))/||B_j-B_i|| and integrand
+  F(x) [<delta B_i-delta B_j,x> + delta h_i-delta h_j].
+The chart pushforward law and chart preimage of the actual facet are proved
+separately. There is one Gaussian density and one edge-length denominator;
+no extra conditional face-probability factor is inserted.
+
+Meaningful remaining boundary
+This source proves a first Frechet derivative of the tested moving cells.
+It does not yet establish continuity of that derivative as base rows/offsets
+vary, a joint C1 prescribed-mass offset choice, the paired expected-maximum
+Hessian, the optimized covariance Hessian, or the main negative-voting theorem.
+The paired-Hessian and joint-regularity modules can now use these actual
+identities rather than assume boundary variation formulas.
+
+Verification
+The final source-backed Lake build uses Lean4.35.0-rc2 and pinned mathlib
+065356127b1dc0016f66b7283ce0ce2c4055aa55. The accompanying source-module-wide
+compiled-constant audit checks every owned declaration, including generated
+or private constants, and permits only propext, Classical.choice, Quot.sound.
+Exact source hash and completed audit/build status are in the receipt.

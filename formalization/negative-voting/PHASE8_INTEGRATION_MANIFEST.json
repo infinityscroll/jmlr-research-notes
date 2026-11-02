@@ -1,0 +1,86 @@
+{
+  "frozen_modules_added": [
+    "GaussianFanJointValue",
+    "GaussianFanOffsetCovarianceLaw",
+    "GaussianFanMassValueGradient",
+    "GaussianFanSelectedOffsets",
+    "GaussianCovarianceOffsets",
+    "GaussianCovarianceJointValue",
+    "GaussianCovarianceOptimizerContinuity",
+    "GaussianAssignmentDuality",
+    "GaussianCentroidEnergyAttainment",
+    "GaussianReferenceSecondEnergy",
+    "GaussianCenteredParsevalBasis",
+    "GaussianMovingFaceQuadraticMoments",
+    "GaussianTwoCellScalar",
+    "GaussianTwoCellMeasure",
+    "GaussianTwoCellSplit",
+    "GaussianTwoCellSeparation"
+  ],
+  "sources": [
+    {
+      "path": "GaussianFanJointValue.lean",
+      "sha256": "f1a5374cbddcd7f6045f379f4863cc2fc6e8a4ee28c659bf455888f0de03b4dd"
+    },
+    {
+      "path": "GaussianFanOffsetCovarianceLaw.lean",
+      "sha256": "ed21524340a151a21e25c8f7d5d25e5ec70bb2f7e735efb2e8f481a614364653"
+    },
+    {
+      "path": "GaussianFanMassValueGradient.lean",
+      "sha256": "1caf9d73330ab4c413e8cc58bd226b5e7f1de12ddc5b27e69f004b7c3f24985e"
+    },
+    {
+      "path": "GaussianFanSelectedOffsets.lean",
+      "sha256": "7a3e9e5efc960bc3f2ae06403ae0b5ed6f06b44e53acf15ecf47bbfbbbe5d500"
+    },
+    {
+      "path": "GaussianCovarianceOffsets.lean",
+      "sha256": "2aba9eadb4e56868363fa30ba13745f4e8f21d4a0c1ec6f5adf7f9d66e7b74cf"
+    },
+    {
+      "path": "GaussianCovarianceJointValue.lean",
+      "sha256": "6b9671979ed3596bea177b8e76a6c85f787f1d56a1e3e99991fcb89c795d30cc"
+    },
+    {
+      "path": "GaussianCovarianceOptimizerContinuity.lean",
+      "sha256": "5f8b082d5497215d70aa38d51f7f88571f22a526c761fe72e84a1ba32f78315c"
+    },
+    {
+      "path": "GaussianAssignmentDuality.lean",
+      "sha256": "0b4187dd807506b9fcc455c26e14d499757cd2ffd4f96250736acfcbae5bdcfb"
+    },
+    {
+      "path": "GaussianCentroidEnergyAttainment.lean",
+      "sha256": "a1af75be52752974f7eea91507cc3178010ec506473de65bd716048f6ba6702d"
+    },
+    {
+      "path": "GaussianReferenceSecondEnergy.lean",
+      "sha256": "bb90103f050d330036ca5cdc768515958723ac05d4ab48edd59c107734981933"
+    },
+    {
+      "path": "GaussianCenteredParsevalBasis.lean",
+      "sha256": "a2cc5884f928302df1ef2f615fae62962d1f9b192cbd28ef724b3466985a5d1f"
+    },
+    {
+      "path": "GaussianMovingFaceQuadraticMoments.lean",
+      "sha256": "8537848399b3d377bc63027c7ab6b3e06fe4a08a8da98faa7c87236bf6f8c6da"
+    },
+    {
+      "path": "GaussianTwoCellScalar.lean",
+      "sha256": "397d6cb87ab4dff1458dc96c7c94aafb786be3d79c6bfce004fb45d39f971944"
+    },
+    {
+      "path": "GaussianTwoCellMeasure.lean",
+      "sha256": "105646d2bf32abed1c6456b7794e3202c6f33e90a444baf4d0bfa43fd93119e2"
+    },
+    {
+      "path": "GaussianTwoCellSplit.lean",
+      "sha256": "d1f86ee39e06d100b852f95edae180e8428d0e4b7a60562a5f1953198811ce15"
+    },
+    {
+      "path": "GaussianTwoCellSeparation.lean",
+      "sha256": "a15aa0bd8e4248908fb97eb1454d82f67f4202a57af9deba98ba5b0c86820f75"
+    }
+  ]
+}

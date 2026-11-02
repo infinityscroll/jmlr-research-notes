@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianAffinePositiveMass",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_POSITIVE_MASS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 3,
+  "theorem_count": 3,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffinePositiveMass.lean": "d5d13aa95c904012952889a2efca0aee63f3b6e592ffbc8d236e0ed9c306bb59",
+    "GaussianAffineNormControl.lean": "3922f7b9c492e002233b2413d0f0de5894fa631279f9f641f5d72167197e88ce",
+    "GAUSSIAN_AFFINE_POSITIVE_MASS_AUDIT.lean": "d831d4146146df7ccd70b818a6fe94a67eb275291680760d2827d0f930b83259",
+    "GAUSSIAN_AFFINE_POSITIVE_MASS_AXIOMS.txt": "1a53ce1a7265259ed8c0ae903e40589b4e2e355b5271dfe27f4368a990126136",
+    "GAUSSIAN_AFFINE_POSITIVE_MASS_BUILD.txt": "e17570200afa9ec9880f9e10597c17654eaacde6d42067bf57599f68d1dbaaed",
+    "GAUSSIAN_AFFINE_POSITIVE_MASS_COVERAGE.txt": "190e42895163834b1b170e968014d43dd1655993b9351e90cdfdecfd42fc3f85"
+  }
+}

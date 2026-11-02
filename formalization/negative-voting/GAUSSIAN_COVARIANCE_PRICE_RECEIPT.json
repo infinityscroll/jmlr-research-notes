@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianCovariancePriceDerivative",
+  "sourceBackedBuild": true,
+  "constants": 3,
+  "theoremConstants": 3,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianCovariancePriceDerivative.lean": "1a4682d5aeb9c262176c9979dc8e662929761bc2e1b18d92e349d3926b7ad450",
+    "GAUSSIAN_COVARIANCE_PRICE_AUDIT.lean": "a1fdaa28ef7268d0f2a34a85c9fde88576a2c85d9db0dbf9d8d0d4166b692904",
+    "GAUSSIAN_COVARIANCE_PRICE_AXIOMS.txt": "d547874ecc82acffb0d03b0c457b4d30ac8855617e0118b607e090f072263291",
+    "GAUSSIAN_COVARIANCE_PRICE_BUILD.txt": "33f3d27fd8023b62d6be76a65e41ef452f83235f0f8d66720a7c46458fa73b1e"
+  }
+}

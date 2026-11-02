@@ -1,0 +1,11 @@
+Actual mixed-curvature neighborhood at optimizing covariances
+
+The final theorem uniform_optimizer_mixed_neighborhood produces a single positive regularization threshold, uniform over the complete mass box [1/(100m),2/m]. For each actual optimizer below that threshold, it constructs an eventual neighborhood in SymmetricOperators times centeredGauge at (C0,0). Throughout that neighborhood the actual masses are positive, the actual covariance is positive definite, and the same absolute C*(1+log m)^2 mixed-curvature bound holds for every symmetric covariance direction. The neighborhood precedes the universal direction quantifier; it does not depend on the direction.
+
+The degree identity is literal: the sum of actual facet weights adjacent to label i equals twice the Frechet derivative of the actual Gaussian objective in rankOne(b_i). It is proved using the actual covariance Price formula and exact centered reference Gram. Joint C2 regularity supplies continuity of this scalar degree, while optimizer degrees at most one leave room below the nearby cap two. Actual optimizer masses at least 1/(100m) leave room above the relaxed floor 1/(200m). Strict edge bounds supply the remaining open slack.
+
+Positive definiteness is proved open in the symmetric covariance space by the actual smooth row factor, openness of invertibility, and its proved Gram identity. There is no claim that the self-adjoint positive cone is open in the entire operator space. No continuity of a chosen symmetric square root or individual moving facets is assumed. Pointwise symmetric factors are constructed only after all neighborhood properties are established. No differentiability of an optimizer selection is assumed.
+
+All 25 compiled owned constants (21 theorem constants, including private/generated declarations) passed exhaustive transitive standard-axiom checks. The source-backed build passed. The receipt pins all 242 local source dependencies and exact compiler/mathlib revisions. Only propext, Classical.choice and Quot.sound occur transitively.
+
+This supplies the actual local hypotheses for the separate partial-maximization semiconcavity argument. It does not assert that the entire negative-voting theorem has been formalized.

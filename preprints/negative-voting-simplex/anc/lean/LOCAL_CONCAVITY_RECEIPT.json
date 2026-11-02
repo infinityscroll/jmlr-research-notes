@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "LocalConcavity",
+  "sourceBackedBuild": true,
+  "constants": 10,
+  "theoremConstants": 10,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "LocalConcavity.lean": "668a569401ea1bb6938b7f1581b5cb5266fa545d38e4cf056efb7a457cc0aad6",
+    "LOCAL_CONCAVITY_AUDIT.lean": "8bd2640c6475822b1027ab066e1d1ea5c9b8dccebfd8ad3423c831d111f9e5ca",
+    "LOCAL_CONCAVITY_AXIOMS.txt": "efcab0a55831f22e41c0ca9d090f86b4d194df33255bc071d238e6f0eda186ec",
+    "LOCAL_CONCAVITY_BUILD.txt": "c47d31ff0b221fde556d9e4a6be1f7cb29b00195b9c24a831551af75517a46c3"
+  }
+}

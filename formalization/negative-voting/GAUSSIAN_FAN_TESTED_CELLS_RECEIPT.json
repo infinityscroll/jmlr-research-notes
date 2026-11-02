@@ -1,0 +1,30 @@
+{
+  "module": "GaussianFanTestedCells",
+  "source_sha256": "ab1bf11f30855f11d16939b633948f86106f96e27ca10f1f99d9ac506efb0f7c",
+  "source_lines": 131,
+  "source_theorem_declarations": 10,
+  "compiled_constants_audited": 10,
+  "compiled_theorem_constants_audited": 10,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "dependency_registered_and_built_from_source": true,
+  "GaussianFanScoreHessian_source_sha256": "b4953166ce720bb16187aedb2bdc8414ad99d8e3912447026122d5da1e2e116f",
+  "toolchain": "Lean 4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "audit_scope": "Every compiled constant owned by this source module, including generated/private declarations.",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T01:54:34.809331+00:00",
+  "evidence": [
+    "GAUSSIAN_FAN_TESTED_CELLS_BUILD.txt",
+    "GAUSSIAN_FAN_TESTED_CELLS_AUDIT.lean",
+    "GAUSSIAN_FAN_TESTED_CELLS_AXIOMS.txt",
+    "GAUSSIAN_FAN_TESTED_CELLS_COVERAGE.txt"
+  ],
+  "mathematical_boundary": "Actual tested-cell and affine-test identities, not a moving-boundary derivative or score Hessian."
+}

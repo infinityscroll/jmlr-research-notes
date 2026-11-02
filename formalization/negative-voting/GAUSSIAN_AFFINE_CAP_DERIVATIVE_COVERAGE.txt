@@ -1,0 +1,21 @@
+GaussianAffineCapDerivative: actual rank-one affine Gaussian transport
+
+For a finite unit-normal Gaussian polyhedron C with the concrete NoCoincident
+base condition, the module derives the actual derivative of
+  t -> gamma {x : x+t <v,x> u+t z belongs to C}
+at zero, equal to
+  integral_C <u,x><v,x> - gamma(C)<u,v> + integral_C <z,x>.
+It proves the actual set pullback identity, rather than replacing the event
+by a formal normal variation. Differentiability follows from the checked
+moving-cap theorem; the quadratic and linear terms follow from the checked
+actual Gaussian first/second-moment boundary identities. The tangent-plane
+integrals and ambient Gaussian slice integrals are identified explicitly.
+No density-ratio, integration-by-parts, or derivative formula is assumed.
+No invertibility or full-dimensional probability premise is needed at zero.
+
+The following operator module assembles rank-one directions into arbitrary
+linear perturbations. This module alone does not give a quantitative
+finite-interval facet stability estimate.
+
+Source-backed Lake build and exhaustive compiled-module axiom audit passed,
+including private/generated helpers, with only the standard three axioms.

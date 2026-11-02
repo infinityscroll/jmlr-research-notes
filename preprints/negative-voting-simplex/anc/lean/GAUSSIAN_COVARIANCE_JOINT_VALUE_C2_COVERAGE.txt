@@ -1,0 +1,7 @@
+GaussianCovarianceJointValueC2
+
+The actual intrinsic operatorValue is jointly C2 in every symmetric covariance coordinate and centered mass coordinate at each positive covariance and positive probability vector, for any actual affine basis. A genuine local smooth row factor transfers the actual row/mass C2 theorem. Covariance Gram identities and all offsets are derived; no factor, offset or Hessian-continuity premise is supplied.
+
+This proves full multivariable C2 regularity, not merely directional second derivatives. It does not yet prove local Lipschitz regularity or differentiability of the penalized covariance optimizer.
+
+Source-backed build and exhaustive source-module audit passed; only propext, Classical.choice, Quot.sound appear transitively.

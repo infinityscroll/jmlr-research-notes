@@ -1,0 +1,2 @@
+Every centered score vector q is realized by an explicit barycentric-dual vector x for the actual centered affine basis. The actual singular lower bound sigma gives norm(x)^2 <= sum(q_i^2)/sigma^2. The singular bound is an explicit geometric premise; score surjectivity and inverse norm are proved, not assumed.
+All owned constants audited; only standard three axioms. This is an ingredient, not the full noise theorem.

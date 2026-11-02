@@ -1,0 +1,17 @@
+GaussianProcrustesDistance coverage
+
+Proved actual geometric content:
+- Equal norms of two linear realizations give an actual ambient linear isometry via a range right inverse and mathlib LinearIsometry.extend. Nontrivial kernels are retained.
+- The zero-padding coordinate embedding requires only d<=e.
+- Every actual rectangular A with d<=e has a PSD factor S and isometry Q with S^2=A* A and A=QS, including singular A.
+- For PSD S, ||(S-I)x||<=||(S^2-I)x|| and HS(S-I)<=HS(S^2-I), with no inverse bound.
+- Parseval score-Gram Frobenius norm equals operator Hilbert--Schmidt norm exactly.
+- For every centered rectangular row system B, there is an actual scaled regular row system R with sum_i||B_i-R_i||^2<=alpha^2 e^2. Here e=HS(alpha^-2 rowCovariance-I).
+- The literal infimum distance to the complete regular orbit is nonnegative and <=alpha e. The exact normalized actual Gram entry-square formula is also proved.
+- The monotone profile x^2 min(1,radius/x)=min(x^2,radius*x) transfers the ray deficit estimate to q=distance/alpha.
+
+Scope boundary:
+This proves the sufficient Procrustes inequality and constructs a genuine regular witness. It does not claim an exact singular-value formula for the minimizing orbit distance. The final regularCovarianceDeficit_orbit_bound retains only the explicit local Gaussian curvature predicate from the audited ray module; the purely geometric endpoints do not need it.
+
+Audit:
+All constants owned by the source, including generated/private theorem constants, were audited. Only propext, Classical.choice, and Quot.sound occur transitively. No proof escapes occur in the source.

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianSwitchingFibreGeometry",
+  "sourceBackedBuild": true,
+  "constants": 13,
+  "theoremConstants": 10,
+  "sha256": {
+    "GaussianSwitchingFibreGeometry.lean": "1db85d24329da855e377adc3513069f769771862516dc13dadf37c6e432a79e5",
+    "GAUSSIAN_SWITCHING_FIBRE_GEOMETRY_AUDIT.lean": "f0f1b3994c9cd77b5412aa9a121c5e7edb9103a23090c7fb9f11cafad0d2d9d0",
+    "GAUSSIAN_SWITCHING_FIBRE_GEOMETRY_AXIOMS.txt": "3ba8a84734fd45e757e0ea41fa71d726ffdb58ad41dd4bc3af3b7d76a6eb1216",
+    "GAUSSIAN_SWITCHING_FIBRE_GEOMETRY_BUILD.txt": "390f1cc5ab105c7e4e2b47ef33401403bbbef79add682f5dbac0bac5207d345b"
+  }
+}

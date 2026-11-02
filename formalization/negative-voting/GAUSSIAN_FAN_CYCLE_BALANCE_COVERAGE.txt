@@ -1,0 +1,14 @@
+Frozen actual Gaussian cycle gauge and exact balance
+
+exists_actual_gaussian_cycle_balance constructs an alternating triangle
+representative for every alternating divergence-free edge flow j. It uses the
+proved positivity/permutation symmetry of the actual Gaussian D weights and
+the concrete finite-cycle gauge theorem. The chosen lambda satisfies
+boundary(lambda)=j, delta(D lambda)=0, and
+cycleB(lambda,lambda)=(1/2)sum_ab j_ab^2/w_ab.
+No minimizing representative, gauge, A-B factorization or energy balance is
+assumed. cycleA_eq_cycleB_of_actual_gauge is its bilinear cancellation helper.
+
+Both theorem exports passed transitive standard3 axiom audit. Complete53-file
+local source closure is pinned. The covariance-deficit interpretation of B,
+Cauchy energy estimate and Ehrhard remainder are separate subsequent modules.

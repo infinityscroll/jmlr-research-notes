@@ -1,0 +1,15 @@
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFan.potential.eq_1","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.scoreLaw_isProbabilityMeasure","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.expectedMax_eq_of_gram","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.scoreVector_inner","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.charFun_scoreLaw","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.scoreLaw","theorem":false}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext"],"constant":"NegativeVotingFanCovarianceLaw.scoreVector._proof_1","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.scoreLaw.eq_1","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.scoreLaw_eq_of_gram","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.scoreVector_apply","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.scoreVector","theorem":false}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.potential_eq_of_gram","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.continuous_scoreVector","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.linearCombination_norm_sq_eq_of_gram","theorem":true}
+FAN_COVARIANCE_LAW_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceLaw.expectedMax_eq_scoreLaw_integral","theorem":true}

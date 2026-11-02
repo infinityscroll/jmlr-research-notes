@@ -1,0 +1,27 @@
+{
+  "module": "GaussianFanCycleEhrhard",
+  "source_sha256": "24723d1fb6e5cd9906c23f177f5a5b309d608e2983812b4cdad17e605ab134d5",
+  "source_lines": 154,
+  "source_theorem_declarations": 7,
+  "compiled_constants_audited": 15,
+  "compiled_theorem_constants_audited": 14,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T03:33:01.110395+00:00",
+  "evidence": [
+    "GAUSSIAN_FAN_CYCLE_EHRHARD_BUILD.txt",
+    "GAUSSIAN_FAN_CYCLE_EHRHARD_AUDIT.lean",
+    "GAUSSIAN_FAN_CYCLE_EHRHARD_AXIOMS.txt",
+    "GAUSSIAN_FAN_CYCLE_EHRHARD_COVERAGE.txt"
+  ],
+  "mathematical_boundary": "Actual residual Ehrhard and explicit intrinsic-probability logarithmic refinement; actual optimizer flux condition is an explicit interface to root bridge; no full negative-voting conclusion."
+}

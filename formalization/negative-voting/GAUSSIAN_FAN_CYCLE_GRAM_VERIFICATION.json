@@ -1,0 +1,52 @@
+{
+  "checked_at_utc": "2026-11-02T02:11:43.991263+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_sha256": "08038fb1f6fb387e391d49d6813967de9b33c13e473bee01dedbc6a3ba4890ae",
+  "audit_sha256": "7f9861ed030def24dbb5c0e2ddfb049c6c914957b3c51c228a8b872db568a4b1",
+  "source_closure": {
+    "GaussianFanCycleGram.lean": "08038fb1f6fb387e391d49d6813967de9b33c13e473bee01dedbc6a3ba4890ae",
+    "GaussianFanCycleGeometry.lean": "175c71ce79ede1d5f40989013a532895001bed9b16273afe55ca250ebabac11b"
+  },
+  "frozen_complex_receipt_sha256": "e8dd201016fbd130190f7a5b6f159a33aa3f312f1a10bbe3bba7e2ab6b67ff8c",
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_exports": [
+    "NegativeVotingFanCycle.pairGram",
+    "NegativeVotingFanCycle.tripleGram",
+    "NegativeVotingFanCycle.pairGram_formula",
+    "NegativeVotingFanCycle.tripleGram_formula",
+    "NegativeVotingFanCycle.pairGram_nonneg",
+    "NegativeVotingFanCycle.tripleGram_nonneg",
+    "NegativeVotingFanCycle.pairGram_shear",
+    "NegativeVotingFanCycle.tripleGram_shear",
+    "NegativeVotingFanCycle.pairGram_projection_factor",
+    "NegativeVotingFanCycle.tripleGram_projection_factor",
+    "NegativeVotingFanCycle.triangleContent",
+    "NegativeVotingFanCycle.tetrahedronContent",
+    "NegativeVotingFanCycle.triangleContent_projection_factor",
+    "NegativeVotingFanCycle.tetrahedronContent_projection_factor",
+    "NegativeVotingFanCycle.triangleContent_swap_first",
+    "NegativeVotingFanCycle.triangleContent_swap_last",
+    "NegativeVotingFanCycle.tetrahedronContent_swap_first",
+    "NegativeVotingFanCycle.tetrahedronContent_swap_middle",
+    "NegativeVotingFanCycle.tetrahedronContent_swap_last",
+    "NegativeVotingFanCycle.triangleContent_perm",
+    "NegativeVotingFanCycle.tetrahedronContent_perm",
+    "NegativeVotingFanCycle.faceDirection_pair",
+    "NegativeVotingFanCycle.faceDirection_triple",
+    "NegativeVotingFanCycle.triangleContent_eq_edge_mul_height",
+    "NegativeVotingFanCycle.tetrahedronContent_eq_face_mul_height",
+    "NegativeVotingFanCycle.triangleContent_pos",
+    "NegativeVotingFanCycle.tetrahedronContent_pos",
+    "NegativeVotingFanCycle.reciprocal_pair_height",
+    "NegativeVotingFanCycle.reciprocal_triple_height",
+    "NegativeVotingFanCycle.barycentricOutwardVector_tetrahedron_normal"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual Gram2/Gram3 contents, all vertex permutation invariance, strict positivity on genuine target faces, orthogonal-height factorizations, and exact reciprocal content ratios. Gaussian stratum density transfer and A-B factorization remain separate."
+}

@@ -1,0 +1,40 @@
+ACTUAL GAUSSIAN CHEEGER AND AFFINE-FAN CUT CONDUCTANCE
+
+Main endpoints in GaussianCheeger.lean and GaussianFanCheeger.lean:
+  min(gamma(A),1-gamma(A))/pi <= openBoundaryMeasure(gamma,A)
+  min(sum_{i in I} mass_i,1-sum_{i in I} mass_i)
+    <= 2*pi*sum_{i in I,j notin I} ||B_i-B_j||*facetWeight_ij.
+Here mass and facetWeight are the literal winning-cell probabilities and
+intrinsic facet formulas. Sites must be injective. The ambient finite
+Euclidean dimension is arbitrary. Identification of those facet formulas
+with a differentiable mass Jacobian uses the separate full-rank theorem;
+no differentiability claim for every injective degenerate fan is made here.
+
+The proof derives the Gaussian functional inequality from the frozen
+GaussianL1Variance rotation/FTC/Rademacher result, uses an attributed
+Lipschitz-ramp conversion, covers each cut shell only by crossing-face tubes,
+and proves the true normal/tangent Gaussian tube estimate. It also derives
+cut-mass additivity using Gaussian tie-nullness. No Gaussian Cheeger,
+perimeter-to-facet, cut-mass, or boundary normalization premise remains.
+
+Constants are deliberately nonsharp: Cheeger 1/pi and a two-sided tube
+factor 2. No sharper manuscript constants are being reused.
+
+Upstream: HongruZhao/KLS500 c1a50992a81456849996deef2971d4a0b3190bdd,
+Apache-2.0. Only seven modules (672 lines) are reused. The sole alteration is
+DistanceRampVariance's import trim; theorem bodies are unchanged. The new
+adapter states the globally Lipschitz premise actually tested by those
+proofs. Original sources, license, notice, hashes, and the earlier isolated
+all-constant audit are in upstream/kls500. This does not claim the general
+KLS conjecture or use that repository's large general-KLS proof closure.
+
+The combined verifier builds the concrete final fan-cut theorem and audits
+all compiled constants owned by the thirteen relevant modules, including
+private/generated names, using actual Lean Names and collectAxioms. Only
+propext, Classical.choice, and Quot.sound are accepted. The complete local
+Lean source closure and exact compiler/mathlib revisions are pinned.
+
+Remaining for the retained-facet branch: finite weighted Cheeger/Poincare
+conversion, quantitative deletion of small facets, and specialization of
+mass/edge-length/degree bounds. The full negative-voting theorem is not
+asserted by this package.

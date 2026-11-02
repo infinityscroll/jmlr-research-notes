@@ -1,0 +1,9 @@
+ACTUAL GAUSSIAN SCORE LAW DETERMINED BY ITS GRAM MATRIX
+
+The scoreVector B x is the literal finite vector (<B_i,x>)_i, and scoreLaw B is the actual pushforward of stdGaussian by that continuous map. Its characteristic function at z is computed from the actual Gaussian integral as the characteristic function of stdGaussian at sum_i z_i B_i.
+
+If two row families have identical pairwise inner products, their linear-combination squared norms agree. The actual standard-Gaussian characteristic-function formula and uniqueness of characteristic functions then prove equality of scoreLaw B and scoreLaw C. The two ambient finite-dimensional real Hilbert spaces may be different; no ambient isometry or distribution-equivalence assumption is supplied.
+
+The literal expectedMax and potential are integrals against that score law. Therefore they agree under equal Gram matrices, including across different FSC.Coord dimensions. No row rank, nondegeneracy, mass positivity, optimizer existence, or offset regularity hypothesis is needed. Singular Gram matrices and coincident rows are included.
+
+This module does not itself define or differentiate the optimized covariance value, prove its concavity, or prove the full negative-voting theorem. Its pointwise potential identity can be applied to the actual optimized infimum without a new distributional premise.

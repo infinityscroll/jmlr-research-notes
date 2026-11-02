@@ -1,0 +1,14 @@
+Research stopped at the user request on 2026-11-02. All three research agents stopped. No follow-up research or automation was scheduled.
+
+The complete NegativeVoting.FullNegativeVotingStatement remains unproved. The manuscript is a research proof proposal; the Lean component checks do not by themselves establish its full theorem.
+
+Completed and checked components include uniform local covariance curvature; global PSD/exterior geometry and AE equality classification; the arbitrary-rank balanced-offset certificate and actual competitor transfer R <= D/r; the actual regular-noise pair coefficient, its continuity at ties, range bounds and smooth error majorant; actual quadratic/quartic moment and coherent transport identities; the actual old-cell pair switching estimate including true facet trace, projected escape, bad normal fibres and ambient far tails; and finite inverse-OU/plane trace identities.
+
+Remaining mathematical work:
+1. Complete the actual A2 second derivative and quantitative Hessian/unequal-row finite comparison, using the mass adjoint and the degree <= 4 polynomial facet trace.
+2. Derive the Gaussian Lq, normal-derivative and damping estimates for the smooth regular-noise majorant and actual structured forcing.
+3. Sum the pair switching estimate and complete both tiny-amplitude and moderate-amplitude regimes with fixed exponents, then apply them to the actual noise forcing.
+4. Complete the signed higher-chaos affine comparisons and combine local/exterior estimates into the full uniformly quantified inequality and equality theorem.
+5. Rebuild and audit that final theorem. External mathematical/priority review and arXiv submission are separate from Lean verification and remain pending.
+
+The four files under drafts/ are preserved working files, excluded from the verified project's default target, ownership inventory and source archives. DRAFTS_MANIFEST.json records their exact status. They are not claimed to be proved or audited. Restore them into a working proof checkout, register needed Lake targets there, and complete their checks before importing them into the verified project.

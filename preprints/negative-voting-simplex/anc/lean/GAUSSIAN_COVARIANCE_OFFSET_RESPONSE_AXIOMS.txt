@@ -1,0 +1,3 @@
+COVARIANCE_OFFSET_RESPONSE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsetResponse.hasDerivAt_covarianceOffsets_line","theorem":true}
+COVARIANCE_OFFSET_RESPONSE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsetResponse.intrinsic_offset_derivative_control","theorem":true}
+COVARIANCE_OFFSET_RESPONSE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsetResponse.hasDerivAt_deriv_covarianceValue_selected","theorem":true}

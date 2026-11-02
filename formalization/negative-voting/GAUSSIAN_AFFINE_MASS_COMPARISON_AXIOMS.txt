@@ -1,0 +1,11 @@
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential._simp_1_2","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineMassComparison.lineLogScale_difference_bound","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential._simp_1_3","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineMassComparison.affine_mass_log_ratio_bound","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential._simp_1_7","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineMassComparison.lineLogScale_gronwall","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential._simp_1_4","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential._simp_1_6","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential._simp_1_1","module":"GaussianAffineMassComparison","theorem":true}
+AFFINE_MASS_COMPARISON_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineMassComparison.gronwall_one_le_exponential._simp_1_5","module":"GaussianAffineMassComparison","theorem":true}

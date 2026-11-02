@@ -1,0 +1,91 @@
+⚠ [8932/8942] Replayed NegativeVoting.Routing
+warning: NegativeVoting/Routing.lean:26:0: automatically included section variable(s) unused in theorem `NegativeVoting.routingLoss_eq_sum`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: NegativeVoting/Routing.lean:55:50: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+⚠ [8933/8942] Replayed NegativeVoting.Integrability
+warning: NegativeVoting/Integrability.lean:20:0: automatically included section variable(s) unused in theorem `NegativeVoting.simplex_weight_le_one`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: NegativeVoting/Integrability.lean:48:0: automatically included section variable(s) unused in theorem `NegativeVoting.integrable_finite_max`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8934/8942] Replayed NegativeVoting.GaussianRouting
+warning: NegativeVoting/GaussianRouting.lean:53:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: NegativeVoting/GaussianRouting.lean:82:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8936/8942] Replayed NegativeVoting.NoiseStability
+warning: NegativeVoting/NoiseStability.lean:45:8: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵a̵s̵u̵r̵a̵b̵l̵e̵_̵p̵i̵_̵l̵a̵m̵b̵d̵a̵M̲e̲a̲s̲u̲r̲a̲b̲l̲e̲.̲o̲f̲_̲e̲v̲a̲l̲
+warning: NegativeVoting/NoiseStability.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: NegativeVoting/NoiseStability.lean:152:4: This simp argument is unused:
+  Complex.ofReal_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [charFun_gaussianReal, Complex.ofReal_zero, mul_zero, zero_mul, one_mul, zero_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NegativeVoting/NoiseStability.lean:152:24: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [charFun_gaussianReal, Complex.ofReal_zero, mul_zero, zero_mul, Complex.ofReal_one, zero_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8938/8942] Replayed NegativeVoting.RegularSimplex
+warning: NegativeVoting/RegularSimplex.lean:116:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8941/8942] Built GaussianSwitchingFibreGeometry (6.8s)
+warning: GaussianSwitchingFibreGeometry.lean:84:0: automatically included section variable(s) unused in theorem `NegativeVotingSwitchingFibre.measurableSet_cellFibreSet`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianSwitchingFibreGeometry.lean:145:0: automatically included section variable(s) unused in theorem `NegativeVotingSwitchingFibre.gaussianReward_eq_ordered`:
+  [FiniteDimensional ℝ E]
+  [MeasurableSpace E]
+  [BorelSpace E]
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [FiniteDimensional ℝ E] [MeasurableSpace E] [BorelSpace E] [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (8942 jobs).

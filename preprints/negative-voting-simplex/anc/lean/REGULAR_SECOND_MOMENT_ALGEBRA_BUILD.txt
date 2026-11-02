@@ -1,0 +1,5 @@
+⚠ [3092/3093] Built RegularSimplexSecondMomentAlgebra (3.2s)
+warning: RegularSimplexSecondMomentAlgebra.lean:98:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3093 jobs).

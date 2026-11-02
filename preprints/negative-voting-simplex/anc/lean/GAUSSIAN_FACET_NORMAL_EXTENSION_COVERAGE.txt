@@ -1,0 +1,3 @@
+Actual positive ambient normal extension
+
+The Schur covariance C_cond is extended by n tensor n. Positive definiteness is derived from the literal conditional linear map and invertibility of S. The actual Gaussian law is identified by its proved mean and covariance; no distributional interface is assumed. Every measurable planar event is transferred to its fixed cylinder under the ordinary full-dimensional affine Gaussian. The factor can be chosen PSD and invertible. At K=I the extended covariance is exactly I. Actual mapped-row facet weights and quantitative perturbation estimates are subsequent modules.

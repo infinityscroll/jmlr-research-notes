@@ -1,0 +1,16 @@
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower._simp_1_7","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.eventually_reference_second_gap","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.reference_second_gap_majorant_tendsto","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower._simp_1_1","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.referenceEll","module":"GaussianRegularSecondGap","theorem":false}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower._simp_1_4","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower._simp_1_3","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower._simp_1_6","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.second_gap_algebra","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.eventually_maximum_mean_sq_ge_one","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.referenceEll_nonneg_of_mean_sq","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularSecondGap.referenceJensenFloor","module":"GaussianRegularSecondGap","theorem":false}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularSecondGap.referenceEll._proof_1","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower._simp_1_2","module":"GaussianRegularSecondGap","theorem":true}
+REGULAR_SECOND_GAP_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularSecondGap.reference_tangent_floor_lower._simp_1_5","module":"GaussianRegularSecondGap","theorem":true}

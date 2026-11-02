@@ -1,0 +1,32 @@
+{
+  "build_commands": [
+    "lake build GaussianPolynomialTiltDerivatives",
+    "lake build GaussianCapPolynomialStein"
+  ],
+  "build_exit_codes": [
+    0,
+    0
+  ],
+  "audit_command": "lake env lean GAUSSIAN_POLYNOMIAL_STEIN_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 18,
+  "theorem_count": 15,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianPolynomialTiltDerivatives.lean": "066a25111906ed3929cdb06bc4a372c577d6c9d6fe8ba1152f2c3b1b355f1afa",
+    "GaussianCapPolynomialStein.lean": "a41249c2825e814dd17d0552e943f11cd173d28b1e90db545cc94bed6b1efc09",
+    "GaussianCapMixedMGF.lean": "5338a4112fd389e14c2d7a4bf11c4a1142f07445e19953ce2afd30ccc3671ace",
+    "GaussianCapSecondMoment.lean": "7af4717e1073947f1f1fbfa12cbabafda33f029bad45683f43d7a1742efdd0e9",
+    "GAUSSIAN_POLYNOMIAL_TILT_DERIVATIVES_BUILD.txt": "ab1cdc4943ff1d9ac9dc09e29e6437580dd61364ca92645470265f64cc3e3498",
+    "GAUSSIAN_CAP_POLYNOMIAL_STEIN_BUILD.txt": "e55f26066c1a838ba6360db22750680889ef86b8256a8ecda4bbf7f2129d4615",
+    "GAUSSIAN_POLYNOMIAL_STEIN_AUDIT.lean": "f2c58137b35fb5276b98ab510e3c65f69223a65dcdb237f68531caea3ba035f4",
+    "GAUSSIAN_POLYNOMIAL_STEIN_AXIOMS.txt": "35406be01a2f5e5c69a82abc1d975385a7cc5444294ed515274bc12ed22ebea8",
+    "GAUSSIAN_POLYNOMIAL_STEIN_COVERAGE.txt": "0e445974cf8868c5997e43409e87dc62f1393d2cf3c30997e20f2205a676fd7a"
+  }
+}

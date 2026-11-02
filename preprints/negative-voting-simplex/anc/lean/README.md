@@ -5,14 +5,11 @@ The complete Gaussian optimality and equality theorem is **not proved here**.
 Its exact quantifiers and admissible class are recorded in
 [MainGoal.lean](NegativeVoting/MainGoal.lean) as `FullNegativeVotingStatement`.
 
-The development now connects the actual correlated-Gaussian integral to the
-complete signed Hermite expansion, identifies the mass, centroid and quadratic
-terms, constructs regular references in the required dimensions, and proves
-reference symmetries and moments. It also checks the actual affine-reference
-comparison, prescribed Gaussian fan masses, the actual offset Jacobian,
-polyhedral covariance bounds with an explicit Ehrhard correction, and local
-Gaussian cap and weighted facet estimates. [COVERAGE.md](COVERAGE.md) records
-which analytic obligations remain and the hypotheses of each checked component.
+The 2026-11-02 stop checkpoint passes a source-backed build and exhaustive axiom audit of 4,474 compiled first-party theorem constants (2,539 named source declarations) across 281 modules. These counts describe checked components, not a completion percentage.
+
+The checked work includes uniform covariance curvature and global PSD geometry, the arbitrary-rank offset certificate and actual competitor transfer R ≤ D/r, regular-noise pair coefficients and their smooth majorant, quadratic/quartic moment transport, and actual Gaussian cell-pair switching bounds. [COVERAGE.md](COVERAGE.md) specifies the remaining inputs.
+
+All research agents were stopped at the author's request. Four unfinished files are saved separately in the [stop checkpoint](../../checkpoints/negative-voting-2026-11-02/STATUS.txt), outside the verified build. The manuscript PDF is unchanged by this source checkpoint; this coverage ledger records the current formalization status.
 
 ## Rebuild and audit
 
@@ -82,6 +79,4 @@ originals. They were unused by the concrete Gaussian endpoint and removed from
 the active source. Transitive audits before and after removal agree, and the
 endpoint type is identical. Active dependencies introduce no extra axioms.
 
-The manuscript's new geometric comparison, uniform constants and final theorem
-require further formal proof. Compilation of the components does not establish
-those remaining obligations.
+The actual second-chaos comparison, structured-forcing estimates, all-amplitude switching assembly, signed higher-chaos comparison and final theorem still require formal proof. Compilation of the components does not establish those remaining obligations.

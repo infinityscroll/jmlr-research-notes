@@ -1,0 +1,146 @@
+{
+  "frozen_modules_added": [
+    "GaussianCovarianceOffsetResponse",
+    "GaussianCovariancePriceDerivative",
+    "GaussianCovarianceOptimizerDegree",
+    "GaussianCovarianceMixedDerivative",
+    "GaussianFanMassConcavity",
+    "LocalConcavity",
+    "GaussianFanHessianContinuity",
+    "GaussianFanJointValueC2",
+    "GaussianCovarianceJointValueC2",
+    "GaussianOptimizerStability",
+    "GaussianCovarianceOptimizerLipschitz",
+    "GaussianValueSemiconcavity",
+    "GaussianCovarianceRealization",
+    "GaussianBalancedReference",
+    "GaussianBalancedCovarianceMaximum",
+    "GaussianCovarianceMaximumUniqueness",
+    "GaussianCompetitiveSharpMass",
+    "GaussianCompetitiveDeficit",
+    "GaussianRegularCovarianceDeficit",
+    "GaussianFanMassContinuity",
+    "GaussianCovarianceBoundaryContinuity",
+    "GaussianCovarianceClosedGraph",
+    "GaussianCovarianceUniformCompact",
+    "GaussianCovarianceUniformTransfer",
+    "GaussianCovarianceOptimizerEdges",
+    "GaussianCovarianceOptimizerConstants",
+    "GaussianCovarianceUniformMixed",
+    "GaussianCovarianceMixedNeighborhood"
+  ],
+  "sources": [
+    {
+      "path": "GaussianCovarianceOffsetResponse.lean",
+      "sha256": "76d75a2d141ed9f3aa7d6d81a16c182a4a9aa84744cb7ed0ce9bd02d8090e7f8"
+    },
+    {
+      "path": "GaussianCovariancePriceDerivative.lean",
+      "sha256": "1a4682d5aeb9c262176c9979dc8e662929761bc2e1b18d92e349d3926b7ad450"
+    },
+    {
+      "path": "GaussianCovarianceOptimizerDegree.lean",
+      "sha256": "2a83b983867355cbfd094af2fd261e476fa63c67bffa8c0ce63db0d6e2e6369d"
+    },
+    {
+      "path": "GaussianCovarianceMixedDerivative.lean",
+      "sha256": "6fc1296d06da1e92788f382a9cf23075ecc21a954e5d2928c0abfb37c77a5367"
+    },
+    {
+      "path": "GaussianFanMassConcavity.lean",
+      "sha256": "979494aa3be5aabcc874ce53e805732dc72e3fec17200603d21e1d9cee731a81"
+    },
+    {
+      "path": "LocalConcavity.lean",
+      "sha256": "668a569401ea1bb6938b7f1581b5cb5266fa545d38e4cf056efb7a457cc0aad6"
+    },
+    {
+      "path": "GaussianFanHessianContinuity.lean",
+      "sha256": "ab599ed369a4af06c0e0962630b388bb4937cceb12bec791b8c98fca297361cf"
+    },
+    {
+      "path": "GaussianFanJointValueC2.lean",
+      "sha256": "645850ebc73111b5e6adffe6878f3150a619de38564d85e63aa98808e2503040"
+    },
+    {
+      "path": "GaussianCovarianceJointValueC2.lean",
+      "sha256": "05f8013d3494735dc19074004356040d3d0a4bd99e64d360daf4a19a351e5895"
+    },
+    {
+      "path": "GaussianOptimizerStability.lean",
+      "sha256": "62025750ed45e523381b87bc3e9f6c159e2cf35b5df7d2e45b5a3c7fb77783e9"
+    },
+    {
+      "path": "GaussianCovarianceOptimizerLipschitz.lean",
+      "sha256": "9c9f24f6ceb530ff9d5f2458c78e0e5dcef1688094ee164fd0339e901c1d5a07"
+    },
+    {
+      "path": "GaussianValueSemiconcavity.lean",
+      "sha256": "e11e764b48e55dffb7da5444fcabb81f7ca778965e48570c209e99d90ae59f67"
+    },
+    {
+      "path": "GaussianCovarianceRealization.lean",
+      "sha256": "6d172d5aa631386850eda1e10dcfcfba387a65603d6ec2c72a83e55b4dd03da7"
+    },
+    {
+      "path": "GaussianBalancedReference.lean",
+      "sha256": "46fb48b69cd948baa6e00d47c8d3286a847a43be8672fbb2e8f58d7424ad1d16"
+    },
+    {
+      "path": "GaussianBalancedCovarianceMaximum.lean",
+      "sha256": "221f3653e29cb80fc160688580815246236270037c34f8f32ed165fb4b390a58"
+    },
+    {
+      "path": "GaussianCovarianceMaximumUniqueness.lean",
+      "sha256": "a8464f549d7a0c175a0613a4a1c73fab04ff053f777fbfd206cdc01fb395618c"
+    },
+    {
+      "path": "GaussianCompetitiveSharpMass.lean",
+      "sha256": "73005bec119765ba01c4ae03e59d43611da73e6e394147dd54c70d1f0cb9e227"
+    },
+    {
+      "path": "GaussianCompetitiveDeficit.lean",
+      "sha256": "9492a86f0fa9b8e1fc5b6a30d397c2c31d698351993133cf95e0d8ef387d1963"
+    },
+    {
+      "path": "GaussianRegularCovarianceDeficit.lean",
+      "sha256": "34cfe97cf2f087d483ef627f4ac3f7b5f4511e49357fe6e34c7164e7b1fa96ca"
+    },
+    {
+      "path": "GaussianFanMassContinuity.lean",
+      "sha256": "d38e0f3d8f19f2e9b15ba50647a2a9141701d3229dbafacb932836b4a57a752e"
+    },
+    {
+      "path": "GaussianCovarianceBoundaryContinuity.lean",
+      "sha256": "bae943d6556e5c9769d9d11e6941b3eb0cd097600c08d388b69a7685492eb2f0"
+    },
+    {
+      "path": "GaussianCovarianceClosedGraph.lean",
+      "sha256": "ec612903ad0f0878fe56335f78174253228657ff6738196f66bf224d0fcdf764"
+    },
+    {
+      "path": "GaussianCovarianceUniformCompact.lean",
+      "sha256": "e588a0d37abf290839e6aad7b7db40fcc8f441b1f115095225b63a35637a65cf"
+    },
+    {
+      "path": "GaussianCovarianceUniformTransfer.lean",
+      "sha256": "5920ce72f2ab1849d1238ebcfa91d074f2c4c488de20643feb12dbac6f1a3df1"
+    },
+    {
+      "path": "GaussianCovarianceOptimizerEdges.lean",
+      "sha256": "be8041b79a4444b0b5cc17eaa118913c3dcea9955e2ccef914d22c254dd18a7e"
+    },
+    {
+      "path": "GaussianCovarianceOptimizerConstants.lean",
+      "sha256": "f18469960d158d78ee8a51a4476477f1d17fb28729f39517c49d9d2c5abf5974"
+    },
+    {
+      "path": "GaussianCovarianceUniformMixed.lean",
+      "sha256": "75dea5e3178f515a6b0c015d3933fcadec7ae42b77dfde97e624fcc39ab706f1"
+    },
+    {
+      "path": "GaussianCovarianceMixedNeighborhood.lean",
+      "sha256": "c45d4beaf92f4d3d80028b687eb74846146a630312e062cabd8cebd083ad8216"
+    }
+  ]
+}

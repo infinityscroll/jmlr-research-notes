@@ -1,0 +1,27 @@
+{
+  "module": "GaussianFanCovarianceLaw",
+  "source_sha256": "578eeae94abf091086e3e7b626cb90a3faca8edfb9f94410e4cb6a059390395c",
+  "source_lines": 104,
+  "source_theorem_declarations": 9,
+  "compiled_constants_audited": 15,
+  "compiled_theorem_constants_audited": 13,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T02:56:19.505454+00:00",
+  "evidence": [
+    "GAUSSIAN_FAN_COVARIANCE_LAW_BUILD.txt",
+    "GAUSSIAN_FAN_COVARIANCE_LAW_AUDIT.lean",
+    "GAUSSIAN_FAN_COVARIANCE_LAW_AXIOMS.txt",
+    "GAUSSIAN_FAN_COVARIANCE_LAW_COVERAGE.txt"
+  ],
+  "mathematical_boundary": "Actual joint Gaussian score-law, expectedMax, and potential equality under Gram equality across ambient dimensions; no full negative-voting conclusion."
+}

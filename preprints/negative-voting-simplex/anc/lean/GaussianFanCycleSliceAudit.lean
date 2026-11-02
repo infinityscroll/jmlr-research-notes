@@ -1,0 +1,22 @@
+import GaussianFanCycleSlice
+
+#print axioms NegativeVotingFanCycle.coordinateCapNormal_pairing
+#print axioms NegativeVotingFanCycle.parentSliceToChild
+#print axioms NegativeVotingFanCycle.childToParentSlice
+#print axioms NegativeVotingFanCycle.childSliceEquiv
+#print axioms NegativeVotingFanCycle.childSliceCoordinates
+#print axioms NegativeVotingFanCycle.pinned_coordinateEmbed_eq_child
+#print axioms NegativeVotingFanCycle.childSliceCoordinates_gaussian_map
+#print axioms NegativeVotingFanCycle.coordinateFaceEvent
+#print axioms NegativeVotingFanCycle.measurableSet_coordinateFaceEvent
+#print axioms NegativeVotingFanCycle.pinned_normal_eq_offset
+#print axioms NegativeVotingFanCycle.coordinateFaceEvent_pin_iff_cap
+#print axioms NegativeVotingFanCycle.winnerStratum_insert_iff_of_tangent
+#print axioms NegativeVotingFanCycle.coordinateFaceEvent_pin_iff_child
+#print axioms NegativeVotingFanCycle.coordinate_sliceLaw
+#print axioms NegativeVotingFanCycle.coordinate_sliceMass_eq_child
+#print axioms NegativeVotingFanCycle.coordinate_slice_integral
+#print axioms NegativeVotingFanCycle.stratumMassAt
+#print axioms NegativeVotingFanCycle.stratumMassAt_pos
+#print axioms NegativeVotingFanCycle.stratum_boundary_weight_eq_child
+#print axioms NegativeVotingFanCycle.stratum_boundary_integral_eq_child

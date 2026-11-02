@@ -1,0 +1,23 @@
+GaussianQuadraticMovingCap: actual quadratic-tested moving polyhedra
+
+The former moving-cap derivative supported linear-growth tests. This module
+proves the extension to every continuous real test with an actual quadratic
+growth bound |F(x)|<=C(1+||x||^2). It reuses the literal cap, Gaussian
+slabs/disintegration, and derivative operators; those are not redefined.
+
+The new domination is derived explicitly: s^2 phi(s)<=2phi(0), hence the
+normal density times a quadratic test is bounded by5C phi(0)(1+||y||^2),
+uniformly in the normal coordinate. Gaussian fourth moments prove this
+dominator lies in L2, and its product with the actual moving-threshold
+speed is integrable. No formal differentiation rule or surface integral is
+a premise. The exact moving-rest-mask argument, nullness of crossings,
+finite telescoping, and dominated moving-slab theorem give the Frechet
+derivative of the actual tested cap with both normals and supports moving.
+
+The derivative is evaluated as the sum of actual Gaussian face integrals
+of test value times boundary velocity, with the normal density factor.
+This supplies the genuine quadratic cell-moment calculus needed by A2.
+It does not itself assert a second derivative or selected-offset C2.
+
+Source-backed build and exhaustive compiled-module transitive audit passed;
+only the standard three axioms occur in all12 theorem constants.

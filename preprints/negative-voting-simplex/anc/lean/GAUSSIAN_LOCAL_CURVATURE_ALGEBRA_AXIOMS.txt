@@ -1,0 +1,16 @@
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.factor_inner_conjugated","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.conjugatedDirection.eq_1","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.conjugatedDirection","theorem":false}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.localGaussianCurvature_of_selected_weights","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.conjugatedDirection._proof_1","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.conjugatedDirection_factor","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.regular_edge_norm_sq","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.near_identity_operator_norm._abel_1_1","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.actual_second_derivative_of_nearby_weights","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.normal_edge_energy_lower._simp_1_1","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.near_identity_operator_norm","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.frame_edge_energy_lower","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.mapped_normal_strain","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.normal_edge_energy_lower","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.near_identity_mapped_edge_norm_sq","theorem":true}
+LOCAL_CURVATURE_ALGEBRA_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingLocalCurvatureAlgebra.actual_second_derivative_of_weight_bound","theorem":true}

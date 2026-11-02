@@ -1,0 +1,1 @@
+Actual Gaussian exponential halfspace tail from the checked MGF; finite union bound for cap complements; every finite cap with normal norms<=D and thresholds>=D sqrt(2 log(2(card+1))) has mass at least 1/2. D>0 only in the final specialization. No independence between normals or ambient-dimensional cost. All constants audited against standard three axioms.

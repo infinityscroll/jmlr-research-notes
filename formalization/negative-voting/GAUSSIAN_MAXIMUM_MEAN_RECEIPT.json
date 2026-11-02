@@ -1,0 +1,26 @@
+{
+  "build_command": "lake build GaussianMaximumMeanBounds",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_MAXIMUM_MEAN_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 57,
+  "theorem_count": 51,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianMaximumMeanBounds.lean": "40023dc8f24586bb9f802242f2b6fa4c40b6ebe71a9e6f9fed80ac4443b93691",
+    "GaussianMaximumTailMargins.lean": "01496d8b8ea0a8f35b4954b5a4bb642f61a50e18184cae885630af22055f2924",
+    "GaussianDoubleExponentialIntegral.lean": "8d8fb410b3cb324927cbe8833e37a2d81b1be8c2af2db39894d2e707fb0bc63b",
+    "GaussianMaximum.lean": "1c83884ce61786f8efc96d91adf4dd3ac19650363771842b100326afe39398ea",
+    "GaussianTailRatio.lean": "180214d311c08738eb2410399bea424804eeec76bb8d2eb373bf1b348bd99529",
+    "GAUSSIAN_MAXIMUM_MEAN_AUDIT.lean": "be8177d3143cde85cd582683f7cfe12e00e28fb9a89166f2ac3501d7f52dc81b",
+    "GAUSSIAN_MAXIMUM_MEAN_AXIOMS.txt": "edd8eb5929434278b2cba86171e4996c866331487bfd66d1ca0b3910caea7426",
+    "GAUSSIAN_MAXIMUM_MEAN_BUILD.txt": "ee03e3a08491b7872b13b7434c1e1d7ead76ee78f11a818871ac7117a9845d1f",
+    "GAUSSIAN_MAXIMUM_MEAN_COVERAGE.txt": "5f8db126b8c77b990bfeb41c5235c1671b1e0a3ab695c404cb807792d083b17f"
+  }
+}

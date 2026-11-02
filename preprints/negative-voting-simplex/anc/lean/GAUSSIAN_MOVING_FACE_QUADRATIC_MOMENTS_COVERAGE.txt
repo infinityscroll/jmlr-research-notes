@@ -1,0 +1,7 @@
+Actual moving quadratic Gaussian face integrals.
+
+For finite unit normals with explicit NoCoincident at the base point, continuousAt_sliceTest_quadratic_growth proves joint continuity of the literal unnormalized Gaussian face integral of every continuous test F satisfying ||F(x)||<=K(1+||x||)^2. The integral is transferred to one fixed ambient standard Gaussian, the actual other-face mask stabilizes almost everywhere, and an explicit square-polynomial dominator is proved integrable from Gaussian L2 moments. No slice-integral continuity or dominated-convergence premise is assumed.
+
+continuousAt_slice_affine_product instantiates this to the actual products (<u,x>+a)(<v,x>+c) needed by the moving fan Hessian. Directions are fixed arbitrary vectors; all normals and supports vary jointly. The actual fan full-rank condition will separately discharge the unit/no-coincidence hypotheses in the next layer. No normalized conditional moments or reciprocal face probabilities are introduced.
+
+This is not the full negative-voting theorem.

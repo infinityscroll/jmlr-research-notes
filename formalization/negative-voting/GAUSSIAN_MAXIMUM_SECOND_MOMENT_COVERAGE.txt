@@ -1,0 +1,27 @@
+ACTUAL GAUSSIAN MAXIMUM SECOND MOMENTS
+
+GaussianMaximumSecondMoment.lean proves a weighted layer-cake identity for
+arbitrary measurable real functions under finite measures, then applies it
+to Z=b(M-b), where M is the actual maximum of n+2 independent standard
+Gaussian coordinates and b is the actual upper 1/(n+2) quantile.
+
+All tail regions are included. For n>0 the finite bound is
+
+ E Z^2 <= 5 + 4 b^4 exp(-exp((99/100)b^2/50)) + 8 b^2 2^(-(n+2)).
+
+The two remainders are proved to tend to zero, giving eventually E Z^2<=6.
+The variance is the literal ProbabilityTheory.variance of this finite
+Gaussian maximum, and its equality to the centered second-moment integral
+is exported. The actual conclusions include eventually
+
+ Var(M) <= 6/b^2,      Var(M) -> 0,      E M^2 <= 5 log(n+2).
+
+There is no assumed moment limit or Gumbel approximation. The module does
+not identify the regular simplex chaos coefficients, prove localization
+for arbitrary fractional competitors, or complete the negative-voting
+main theorem. GaussianMaximumLocalization separately strengthens the
+quantile and variance bounds and assembles the finite coefficient.
+
+Source-backed lake build GaussianMaximumSecondMoment passed. Exhaustive
+transitive audit covered all 47 compiled source-module constants, including
+43 theorem constants, allowing only propext, Classical.choice, Quot.sound.

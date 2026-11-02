@@ -1,0 +1,19 @@
+{
+  "module": "GaussianPrimalDualDeficit",
+  "source_sha256": "aca8211c3a7d6c65f589c7e7747735d47bbed5aab0d18973fa47c7c83d9b89a9",
+  "source_lines": 108,
+  "source_theorem_declarations": 4,
+  "compiled_constants_audited": 5,
+  "compiled_theorem_constants_audited": 5,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual feasible Gaussian assignments with coordinate masses at most2/m satisfy R(centroidRows f)<=referenceFirstWeight-centroidEnergy f+4 C(1+log m)^2 sum(p_i-1/m)^2. The row cap, centered centroids, actual primal value and singular/duplicate optimal dual certificate are derived; no row-rank or offset premise. C=mixedConstant+32768 pi^2."
+}

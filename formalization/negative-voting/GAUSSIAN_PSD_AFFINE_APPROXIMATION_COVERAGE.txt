@@ -1,0 +1,1 @@
+For any centered affine basis with row norms at most1 and any actual PSD operator S with rows S b_i bounded byR>0, explicit S+(R/(k+1))I yields invertible affine-basis rows centered, bounded by2R, and converging to S b. Invertibility follows from actual positive quadratic form. No square-root continuity or assumed approximation sequence.

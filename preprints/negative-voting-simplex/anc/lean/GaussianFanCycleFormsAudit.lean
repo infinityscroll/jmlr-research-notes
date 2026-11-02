@@ -1,0 +1,11 @@
+import GaussianFanCycleForms
+
+#print axioms NegativeVotingFanCycle.cycleEdgeWeight
+#print axioms NegativeVotingFanCycle.cycleTriangleWeight
+#print axioms NegativeVotingFanCycle.cycleTetrahedronWeight
+#print axioms NegativeVotingFanCycle.cycleMean
+#print axioms NegativeVotingFanCycle.cycleA
+#print axioms NegativeVotingFanCycle.cycleB
+#print axioms NegativeVotingFanCycle.cycleWeightedCoboundary
+#print axioms NegativeVotingFanCycle.cycleFactorizationRHS
+#print axioms NegativeVotingFanCycle.cycleA_sub_cycleB

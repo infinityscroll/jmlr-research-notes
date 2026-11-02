@@ -1,0 +1,26 @@
+{
+  "module": "GaussianMovingFaceQuadraticMoments",
+  "source_sha256": "8537848399b3d377bc63027c7ab6b3e06fe4a08a8da98faa7c87236bf6f8c6da",
+  "source_lines": 111,
+  "source_theorem_declarations": 4,
+  "compiled_constants_audited": 6,
+  "compiled_theorem_constants_audited": 5,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T04:58:39.633835+00:00",
+  "build_transcript": "GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AUDIT.lean",
+    "GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_AXIOMS.txt",
+    "GAUSSIAN_MOVING_FACE_QUADRATIC_MOMENTS_COVERAGE.txt"
+  ]
+}

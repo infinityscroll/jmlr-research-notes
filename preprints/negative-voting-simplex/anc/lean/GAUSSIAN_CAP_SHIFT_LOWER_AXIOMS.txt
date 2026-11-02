@@ -1,0 +1,5 @@
+CAP_SHIFT_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapShiftLower.memLp_exp_inner_restrict","theorem":true}
+CAP_SHIFT_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapShiftLower.exp_inner_sq","theorem":true}
+CAP_SHIFT_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianCapShiftLower.0.NegativeVotingCapShiftLower.integral_product_sq_le","theorem":true}
+CAP_SHIFT_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapShiftLower.cap_shift_mass_lower","theorem":true}
+CAP_SHIFT_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapShiftLower.integral_exp_inner","theorem":true}

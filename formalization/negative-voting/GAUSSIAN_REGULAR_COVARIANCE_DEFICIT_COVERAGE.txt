@@ -1,0 +1,25 @@
+GaussianRegularCovarianceDeficit: actual reference deficit and exact rigidity
+
+For every centered m-row family B in any finite Gaussian ambient dimension,
+with m=n+2>=3, define the actual deficit
+  R(B)=(w+sum_i ||B_i||^2)/2-optimizedValue(B,uniformMass).
+The module proves R>=0 and the exact equivalence
+  R=0 iff <B_i,B_j>=alpha^2(delta_ij-1/m) for every i,j.
+Here alpha=E[max of m independent standard normals]/(m-1) and
+w=alpha^2(m-1), with the actual Gaussian maximum already defined upstream.
+It also gives strict positivity exactly when this Gram identity fails.
+
+The proof reconstructs the actual rectangular row family in a centered
+Parseval simplex frame, identifies the genuine optimized Gaussian value and
+trace, and invokes the proved global balanced optimum and its uniqueness on
+the full PSD cone. No full-rank, purity, supplied optimum, or supplied strict
+Gaussian inequality is assumed. Singular row covariances are included.
+Corollaries apply directly to centroids of any Feasible completed-measurable
+fractional assignment, using its derived zero centroid sum.
+
+This is the full qualitative zero-deficit classification. It does not supply
+a quantitative lower bound on R in terms of the distance to the regular Gram
+matrix. That stronger estimate remains a distinct facet/ray task.
+
+Source-backed Lake build and exhaustive compiled-module axiom audit passed,
+including all generated/private helpers. Only the standard three axioms occur.

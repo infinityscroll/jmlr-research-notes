@@ -1,0 +1,49 @@
+ACTUAL CANONICAL GAUSSIAN OFFSET AND EXACT ELIMINATION
+
+Source: GaussianFanCanonicalOffset.lean.
+Namespace: NegativeVotingFanCanonicalOffset.
+
+For any actual Gaussian fan B,h with a positive centered singular bound,
+and any row direction D, define
+  g_i = mixedForm(B,h; D,0; 0,e_i)
+  v* = -J(B,h)^+ g,
+where J is the actual cell-mass Jacobian and ^+ is its checked canonical
+covariance pseudoinverse. hasDerivAt_mass_row_only proves directly that
+g_i is the derivative of the actual cell mass along B+tD with h fixed.
+
+The source derives sum_i g_i=0 by differentiating the actual total mass 1.
+The true fixed-row mass derivative identifies the offset block with J.
+The already-checked Gaussian Jacobian range/projection theorem proves
+Jv*=-g, and the pseudoinverse range theorem proves sum_i v*_i=0.
+
+hasDerivAt_mass_line_canonical derives zero first derivative of every actual
+cell mass along (D,v*). Thus the concrete Gaussian minimization theorem
+applies with no stationarity, solvability, or offset-existence premise.
+The canonical vector minimizes the actual Gaussian surface quadratic form
+over every global offset vector and is the unique minimizer in the centered
+gauge. Its exact remainder is the actual Jacobian energy.
+
+Finally canonicalOffset_elimination_formula proves the literal identity
+  Q(B,h;D,v*) = Q(B,h;D,0) - g^T J(B,h)^+ g.
+The cross-term identification is itself derived by differentiating the
+actual offset-gradient test sum_i mass_i v_i. No abstract Schur data or
+postulated Hessian formula substitutes for the actual Gaussian form.
+
+The same elimination identity is also proved directly for every actual
+mass-preserving tangent, without requiring its offset velocity to have
+zero sum. Two-sided minimization identifies its energy with the canonical
+one; no gauge assumption is silently inserted.
+
+The geometric input is the positive centered singular bound. These results
+are linear-response and surface-energy statements; they do not claim a
+finite mass-preserving nonlinear path, a final covariance concavity bound,
+or the full negative-voting theorem. The separate joint inverse-function
+and covariance-path results supply those subsequent parameterization steps.
+
+The exhaustive audit inventories all compiled source-module constants,
+including definitions and generated/private constants, and rejects any
+transitive axiom outside propext, Classical.choice, Quot.sound.
+
+Reproduce:
+  lake build GaussianFanCanonicalOffset
+  lake env lean GAUSSIAN_CANONICAL_OFFSET_AUDIT.lean

@@ -1,0 +1,13 @@
+GaussianAffineCapNormalization: exact affine cap geometry
+
+The module derives nonzero transported normal lengths, unit normalization,
+preservation of equality/opposition of normals under every injective linear
+transport, and preservation of the actual NoCoincident support condition.
+It proves that the normalized constraints define exactly the original affine
+pullback cap. No cap geometry or NoCoincident property of the transported
+system is assumed. The base unit-normal/NoCoincident hypotheses remain explicit.
+
+These are finite geometric ingredients for evaluating the actual Gaussian
+logarithmic derivative at every invertible point of an affine path.
+Source-backed Lake build and exhaustive source-module axiom audit passed;
+only the standard three axioms occur, including generated helpers.

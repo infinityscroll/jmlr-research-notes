@@ -1,0 +1,7 @@
+REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularFacetGaussianLower.facetLogConstant._proof_1","theorem":true}
+REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetGaussianLower.facetLogConstant","theorem":false}
+REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetGaussianLower.regular_shifted_facet_gaussian_lower","theorem":true}
+REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetGaussianLower.facetGaussianConstant_pos","theorem":true}
+REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetGaussianLower.facetLogConstant_pos","theorem":true}
+REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetGaussianLower.linear_quadratic_le_gaussian","theorem":true}
+REGULAR_FACET_GAUSSIAN_LOWER_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetGaussianLower.facetGaussianConstant","theorem":false}

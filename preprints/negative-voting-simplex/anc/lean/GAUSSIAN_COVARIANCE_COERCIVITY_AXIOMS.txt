@@ -1,0 +1,11 @@
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.integral_norm_sq_eq_trace","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.operatorTrace","theorem":false}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.operatorTrace._proof_1","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.penalizedValue_le_trace_cutoff","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.operatorValue_le_basisNorm_sqrt_trace","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.integral_inner_sq","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.trace_nonneg","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.continuous_operatorTrace","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.operatorTrace.eq_1","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.norm_le_trace","theorem":true}
+GAUSSIAN_COVARIANCE_COERCIVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceCoercivity.integral_norm_le_sqrt_trace","theorem":true}

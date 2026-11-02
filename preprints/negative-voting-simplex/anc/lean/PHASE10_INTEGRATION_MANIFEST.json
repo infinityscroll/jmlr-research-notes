@@ -1,0 +1,96 @@
+{
+  "frozen_modules_added": [
+    "GaussianCovarianceZeroFloorBound",
+    "GaussianAssignmentCoordinateBridge",
+    "GaussianBalancedFloorAnchor",
+    "GaussianAssignmentEquality",
+    "GaussianCovarianceMassPath",
+    "GaussianRegularizedMassConcavity",
+    "GaussianMassSemiconcavity",
+    "GaussianUniformMassBound",
+    "GaussianRegularFacetSeed",
+    "GaussianRegularFacetMean",
+    "GaussianAffineCapDerivative",
+    "GaussianAffineOperatorDerivative",
+    "GaussianAffineLogMassBound",
+    "GaussianAffineCapNormalization",
+    "GaussianAffinePathDerivative",
+    "GaussianAffineNormControl",
+    "GaussianConditionalSecondMoment",
+    "GaussianFacetConditionalPlane"
+  ],
+  "sources": [
+    {
+      "path": "GaussianCovarianceZeroFloorBound.lean",
+      "sha256": "6285eb1c70b6db94afdc5340d831902b7c30321f63d5f3b630b7b4ae986dcd33"
+    },
+    {
+      "path": "GaussianAssignmentCoordinateBridge.lean",
+      "sha256": "19a1ab70350638e41a3c4fc0a6ca2b79ee38583bad9a7d086c7251f85df6dfb3"
+    },
+    {
+      "path": "GaussianBalancedFloorAnchor.lean",
+      "sha256": "30af508933c6e601f897f07d1339870ecf36729fe3bc4c6bbc5145d56d82f05f"
+    },
+    {
+      "path": "GaussianAssignmentEquality.lean",
+      "sha256": "99b08df52cb80ec59345c99f0d97c2683fb6c259916b79ce6c737e1057061941"
+    },
+    {
+      "path": "GaussianCovarianceMassPath.lean",
+      "sha256": "0e7d4a6a89b388a6df6484f22c24f6376c0b93b10b62a1257b714c5a96da8c2e"
+    },
+    {
+      "path": "GaussianRegularizedMassConcavity.lean",
+      "sha256": "4c00988f507a15d5e4b1e4a5fba0e4e2ff19546502dbe6922c91d8e9fcfc0fbf"
+    },
+    {
+      "path": "GaussianMassSemiconcavity.lean",
+      "sha256": "610055eeba059dfad26599afe90bdc085c8276d2fcafaf15be21547a23807b6b"
+    },
+    {
+      "path": "GaussianUniformMassBound.lean",
+      "sha256": "37d3aa6f98d7fe46364a8f0afb1857e79e441c684c1248ba03dff8fc8ae696c5"
+    },
+    {
+      "path": "GaussianRegularFacetSeed.lean",
+      "sha256": "156488599ca6223c636e5d2fc91474f4b3d45e709f3403c7e1cc954da97a1a20"
+    },
+    {
+      "path": "GaussianRegularFacetMean.lean",
+      "sha256": "21d0fdcd29e5e8fb77fe624818df9faf95b6aca1f842092afd5ad9ab8c7e8b79"
+    },
+    {
+      "path": "GaussianAffineCapDerivative.lean",
+      "sha256": "8a1d0b212fbfc82e90650596ebb689ae15772a5953a5c4f207957459937a7410"
+    },
+    {
+      "path": "GaussianAffineOperatorDerivative.lean",
+      "sha256": "97f3e9ea1117423d350a3565603eccc49ceae95647958d9034bb80b14d083b58"
+    },
+    {
+      "path": "GaussianAffineLogMassBound.lean",
+      "sha256": "b204f61d079439c7ed493f46df204780a86ecb5cfae8f55edc77957443374bcb"
+    },
+    {
+      "path": "GaussianAffineCapNormalization.lean",
+      "sha256": "0c21d96fff43e6f8b53f9e5a5eddbe08379d86c6aa1cfb4169ace8042686c1d9"
+    },
+    {
+      "path": "GaussianAffinePathDerivative.lean",
+      "sha256": "ddeb74347589bf85fc87e433246449061a346f4e0d2bca7453a54b2772c9f592"
+    },
+    {
+      "path": "GaussianAffineNormControl.lean",
+      "sha256": "3922f7b9c492e002233b2413d0f0de5894fa631279f9f641f5d72167197e88ce"
+    },
+    {
+      "path": "GaussianConditionalSecondMoment.lean",
+      "sha256": "a7bb768b228c4f307d8b41ede13cc658ea3fb3b8f7d77eaf98ca826a41e29197"
+    },
+    {
+      "path": "GaussianFacetConditionalPlane.lean",
+      "sha256": "86c9b8d4e9f4c82df5c5887fd8b2e2321d2e2693411f951a62f277a3033d5b2a"
+    }
+  ]
+}

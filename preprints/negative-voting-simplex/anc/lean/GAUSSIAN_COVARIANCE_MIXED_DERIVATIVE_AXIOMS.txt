@@ -1,0 +1,2 @@
+COVARIANCE_MIXED_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixedDerivative.operator_line_gram","theorem":true}
+COVARIANCE_MIXED_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixedDerivative.operator_offsets_derivative_control","theorem":true}

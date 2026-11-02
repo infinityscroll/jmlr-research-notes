@@ -1,0 +1,16 @@
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.parseval_rankOne_edge_degree","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne_apply","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne_psd","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne_pairing","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne","theorem":false}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne._proof_2","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.exists_optimizer_factor_degree_le_one","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.right_max_derivative_nonpos","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne._proof_6","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne._proof_3","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne_trace","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne._proof_1","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne._proof_5","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.rankOne._proof_4","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.optimizer_price_le_trace","theorem":true}
+OPTIMIZER_DEGREE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOptimizerDegree.lowerCone_add_psd","theorem":true}

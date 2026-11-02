@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianAffineOperatorDerivative",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_OPERATOR_DERIVATIVE_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 18,
+  "theorem_count": 17,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffineOperatorDerivative.lean": "97f3e9ea1117423d350a3565603eccc49ceae95647958d9034bb80b14d083b58",
+    "GaussianAffineCapDerivative.lean": "8a1d0b212fbfc82e90650596ebb689ae15772a5953a5c4f207957459937a7410",
+    "GaussianCenteredParsevalBasis.lean": "a2cc5884f928302df1ef2f615fae62962d1f9b192cbd28ef724b3466985a5d1f",
+    "GAUSSIAN_AFFINE_OPERATOR_DERIVATIVE_AUDIT.lean": "b9f1a0a84a5985e439ea2c369e52f06ee430b64ed718f67eeb0eadb5573c7c87",
+    "GAUSSIAN_AFFINE_OPERATOR_DERIVATIVE_AXIOMS.txt": "2b84f9629a5f5cca515b45e5b128bee3d18103ba21c08b968b4b396e2af97092",
+    "GAUSSIAN_AFFINE_OPERATOR_DERIVATIVE_BUILD.txt": "73291cb48231eff8d191fe6507d9fdef47f8e571868e555884ddffc9267b5c32",
+    "GAUSSIAN_AFFINE_OPERATOR_DERIVATIVE_COVERAGE.txt": "7b5b393a3133ee3c728529523efd4d36d61c101ebaadcd48386b8e1a55d14d76"
+  }
+}

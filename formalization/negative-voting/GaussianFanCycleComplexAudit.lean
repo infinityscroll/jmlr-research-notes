@@ -1,0 +1,26 @@
+import GaussianFanCycleComplex
+
+#print axioms NegativeVotingFanCycle.AlternatingEdge
+#print axioms NegativeVotingFanCycle.AlternatingTriangle
+#print axioms NegativeVotingFanCycle.AlternatingTetrahedron
+#print axioms NegativeVotingFanCycle.edgeBoundary
+#print axioms NegativeVotingFanCycle.triangleBoundary
+#print axioms NegativeVotingFanCycle.tetrahedronBoundary
+#print axioms NegativeVotingFanCycle.vertexDelta
+#print axioms NegativeVotingFanCycle.coneEdge
+#print axioms NegativeVotingFanCycle.coneTriangle
+#print axioms NegativeVotingFanCycle.alternatingTriangle_swap_last
+#print axioms NegativeVotingFanCycle.coneEdge_alternating
+#print axioms NegativeVotingFanCycle.coneTriangle_alternating
+#print axioms NegativeVotingFanCycle.triangleBoundary_coneEdge
+#print axioms NegativeVotingFanCycle.tetrahedronBoundary_coneTriangle
+#print axioms NegativeVotingFanCycle.double_sum_zero_of_skew
+#print axioms NegativeVotingFanCycle.triangleBoundary_alternating
+#print axioms NegativeVotingFanCycle.tetrahedronBoundary_alternating
+#print axioms NegativeVotingFanCycle.edgeBoundary_triangleBoundary
+#print axioms NegativeVotingFanCycle.triangleBoundary_tetrahedronBoundary
+#print axioms NegativeVotingFanCycle.exists_triangle_filling
+#print axioms NegativeVotingFanCycle.exists_tetrahedron_filling
+#print axioms NegativeVotingFanCycle.sum_triple_rotate
+#print axioms NegativeVotingFanCycle.triangle_potential_telescopes
+#print axioms NegativeVotingFanCycle.boundary_pairing_mean_differences

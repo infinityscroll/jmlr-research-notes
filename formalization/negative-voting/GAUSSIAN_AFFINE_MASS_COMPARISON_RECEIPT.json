@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianAffineMassComparison",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_MASS_COMPARISON_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 11,
+  "theorem_count": 11,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffineMassComparison.lean": "e7d67e3af2cf11b8c01d9bc0b565b6ac562416602ad743658a5ad21bf8b22d95",
+    "GaussianAffineLogScale.lean": "5e0156237815cda5eb17d80d9d3307ff66dc150b7f69f25894357066fade3866",
+    "GAUSSIAN_AFFINE_MASS_COMPARISON_AUDIT.lean": "61488827bba2c6250e4a8a80a0a093344487f7053bbf04a8653ee54f12cbd2e1",
+    "GAUSSIAN_AFFINE_MASS_COMPARISON_AXIOMS.txt": "6bdae0742ec412da59349eb404f3c54c74bd41dc7919395bf5b785dfde7d71ad",
+    "GAUSSIAN_AFFINE_MASS_COMPARISON_BUILD.txt": "7b1c3f68e5fee088a0d94e6976be7a5ffa017a499bd6fdf74a9481ad9495b33e",
+    "GAUSSIAN_AFFINE_MASS_COMPARISON_COVERAGE.txt": "62525dac97a04dea428c9e2ea9ae1ead99b5878f426df446ad0313e383f127af"
+  }
+}

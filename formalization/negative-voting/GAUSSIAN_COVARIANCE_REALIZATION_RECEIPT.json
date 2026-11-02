@@ -1,0 +1,27 @@
+{
+  "build_command": "lake build GaussianCovarianceRealization",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_COVARIANCE_REALIZATION_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 35,
+  "theorem_count": 33,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCovarianceRealization.lean": "6d172d5aa631386850eda1e10dcfcfba387a65603d6ec2c72a83e55b4dd03da7",
+    "GaussianCenteredParsevalBasis.lean": "a2cc5884f928302df1ef2f615fae62962d1f9b192cbd28ef724b3466985a5d1f",
+    "GaussianCentroidEnergyAttainment.lean": "a1af75be52752974f7eea91507cc3178010ec506473de65bd716048f6ba6702d",
+    "GaussianCovarianceStrictConcavity.lean": "285212a3995e7abfa02b578e117356c62428c51cc70d9f092dfa8739f5664272",
+    "GaussianPositiveCovarianceFactor.lean": "2e84bd73452e5329769c29118f25cd70373fb085904217078acd40f11373c59b",
+    "GaussianFanCovarianceValue.lean": "56a29b531acad81f5a5d4a42aab8c44ac843a38e99b50f9597f87b081f7df714",
+    "GAUSSIAN_COVARIANCE_REALIZATION_AUDIT.lean": "023f3bbb2747f68cf57d499fecc33fe4a125ad60d0fffe27188be41a41f4b0c2",
+    "GAUSSIAN_COVARIANCE_REALIZATION_AXIOMS.txt": "88ca08c25312fd359db233a1ec3eea57f2ee1ac7af7c080ed093a3a61d9347e6",
+    "GAUSSIAN_COVARIANCE_REALIZATION_BUILD.txt": "9d45f75273dbb587b160bf9816007fa287556524f8b7456e51b47b58369fa4c8",
+    "GAUSSIAN_COVARIANCE_REALIZATION_COVERAGE.txt": "ccb96660a7d3a481330ef7275e5a21e7fc718ea8ef5d92b8a60ebc404d3f8670"
+  }
+}

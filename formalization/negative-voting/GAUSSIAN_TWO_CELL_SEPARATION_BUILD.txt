@@ -1,0 +1,1111 @@
+⚠ [8933/9025] Replayed WeakSimplexConjectureLean.Core.Euclidean
+warning: WeakSimplexConjectureLean/Core/Euclidean.lean:73:20: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8937/9025] Replayed FSC.Definitions
+warning: FSC/Definitions.lean:34:22: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Definitions.lean:52:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8938/9025] Replayed FSC.Support.Definitions
+warning: FSC/Support/Definitions.lean:40:11: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8940/9025] Replayed FSC.Gaussian.PinDefinitions
+warning: FSC/Gaussian/PinDefinitions.lean:85:19: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Gaussian/PinDefinitions.lean:96:17: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8942/9025] Replayed FSC.Support.Slicing
+warning: FSC/Support/Slicing.lean:120:11: `ProbabilityTheory.noAtoms_gaussianReal` has been deprecated: Use `ProbabilityTheory.nullSingletonClass_gaussianReal` instead
+
+Hint: Replace the deprecated name:
+  n̵o̵A̵t̵o̵m̵s̵_̵g̵a̵u̵s̵s̵i̵a̵n̵R̵e̵a̵l̵n̲u̲l̲l̲S̲i̲n̲g̲l̲e̲t̲o̲n̲C̲l̲a̲s̲s̲_̲g̲a̲u̲s̲s̲i̲a̲n̲R̲e̲a̲l̲
+warning: FSC/Support/Slicing.lean:120:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8943/9025] Replayed MarkovSemigroups.Abstract.DirichletForm
+warning: MarkovSemigroups/Abstract/DirichletForm.lean:30:0: 'Mathlib.MeasureTheory.Measure.MeasureSpace' has been deprecated: please replace this import by
+
+import Mathlib.Algebra.Order.Module.Field
+import Mathlib.Data.EReal.Inv
+import Mathlib.Tactic.Measurability
+import Mathlib.Topology.Algebra.InfiniteSum.Order
+import Mathlib.Topology.MetricSpace.Bounded
+⚠ [8944/9025] Replayed MarkovSemigroups.Abstract.Hypercontractivity
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:127:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:199:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:214:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:290:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:315:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+⚠ [8945/9025] Replayed MarkovSemigroups.Abstract.GrossODE
+warning: MarkovSemigroups/Abstract/GrossODE.lean:166:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:234:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:395:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1448:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1471:47: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̲diff_subset
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1514:45: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̲diff_subset
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1544:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1643:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1810:69: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̲diff_subset
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1861:54: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2084:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2109:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2247:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2331:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8947/9025] Replayed MarkovSemigroups.Diffusion.StroockVaropoulos
+warning: MarkovSemigroups/Diffusion/StroockVaropoulos.lean:70:5: Variable name `hu_one` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu_one
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8948/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.Euclidean
+info: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:112:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:121:48: This simp argument is unused:
+  NNReal.coe_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [NNReal.coe_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:975:33: This simp argument is unused:
+  NNReal.coe_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [NNReal.coe_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8949/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHermite
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:259:11: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:277:11: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:315:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+⚠ [8950/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanStein
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean:723:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8951/9025] Replayed MarkovSemigroups.General.OUEntropyDecomposition
+warning: MarkovSemigroups/General/OUEntropyDecomposition.lean:1447:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8952/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanEntropyDecay
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:41: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:54: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:41: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:54: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:58: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:45: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:58: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:997:79: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8953/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanFin
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:661:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:796:18: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:881:16: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hji, ContinuousLinearMap.toSpanSingleton_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:972:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1010:5: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1089:28: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1107:32: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1110:30: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1129:28: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1141:39: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1149:15: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1141:39: This simp argument is unused:
+  ContinuousLinearMap.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1161:26: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1162:13: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1209:8: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1217:8: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1227:8: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1218:54: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondPartial, partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1228:54: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondPartial, partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1255:35: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1255:35: This simp argument is unused:
+  ContinuousLinearMap.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1264:26: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1276:16: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1381:5: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1475:46: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mixCLM, ContinuousLinearMap.pi_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1515:16: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mixCLM, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1528:16: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mixCLM, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1592:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1936:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:2302:11: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:2544:28: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3157:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3286:52: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3384:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3442:37: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3705:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4101:34: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4186:11: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4197:8: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4206:19: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4602:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4605:31: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4640:29: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4642:29: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4689:33: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4696:33: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4801:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4855:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4858:31: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [8954/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanFinLp
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean:1352:42: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+⚠ [8956/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanGeneratorLp
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean:78:11: `MeasureTheory.memLp_finset_sum'` has been deprecated: Use `MeasureTheory.memLp_finsetSum'` instead
+
+Hint: Replace the deprecated name:
+  memLp_finset_̵s̵S̲um'
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean:433:20: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean:444:20: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+⚠ [8957/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanGeneratorLimit
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:277:11: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:377:8: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:294:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:538:13: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:557:13: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:768:11: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:995:7: `MeasureTheory.memLp_finset_sum'` has been deprecated: Use `MeasureTheory.memLp_finsetSum'` instead
+
+Hint: Replace the deprecated name:
+  memLp_finset_̵s̵S̲um'
+⚠ [8958/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanFinBE
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean:117:42: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean:156:42: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+⚠ [8959/9025] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHypercontractive
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean:269:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8963/9025] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PiGaussian
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean:49:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8966/9025] Replayed FSC.Support.Dilation
+warning: FSC/Support/Dilation.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FSC/Support/Dilation.lean:62:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8969/9025] Replayed FSC.Support.Differentiation
+warning: FSC/Support/Differentiation.lean:24:28: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:32:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:43:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:176:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:186:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FSC/Support/Differentiation.lean:191:20: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [8971/9025] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PrekopaLeindler
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:90:26: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:473:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:492:31: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:909:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8973/9025] Replayed WeakSimplexConjectureLean.Core.QuadraticCoercivity
+warning: WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean:63:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean:74:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8975/9025] Replayed FSC.Support.QuadraticTangent
+warning: FSC/Support/QuadraticTangent.lean:55:23: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/QuadraticTangent.lean:116:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [8976/9025] Replayed PolyhedralSupportBoundary
+warning: PolyhedralSupportBoundary.lean:100:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.convex_positive_mass_supports`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8977/9025] Replayed GaussianCapCovariance
+warning: GaussianCapCovariance.lean:59:22: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianCapCovariance.lean:55:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.translated_cap_membership`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapCovariance.lean:104:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [FSC.capMass, hz] at hb
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: GaussianCapCovariance.lean:99:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_restrict_ne_zero`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapCovariance.lean:114:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_integrableExpSet`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8978/9025] Replayed GaussianCapFirstMoment
+warning: GaussianCapFirstMoment.lean:79:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.gaussian_cap_vector_integrable`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8982/9025] Replayed NegativeVoting.Routing
+warning: NegativeVoting/Routing.lean:26:0: automatically included section variable(s) unused in theorem `NegativeVoting.routingLoss_eq_sum`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: NegativeVoting/Routing.lean:55:50: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+⚠ [8983/9025] Replayed NegativeVoting.Integrability
+warning: NegativeVoting/Integrability.lean:20:0: automatically included section variable(s) unused in theorem `NegativeVoting.simplex_weight_le_one`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: NegativeVoting/Integrability.lean:48:0: automatically included section variable(s) unused in theorem `NegativeVoting.integrable_finite_max`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8984/9025] Replayed NegativeVoting.GaussianRouting
+warning: NegativeVoting/GaussianRouting.lean:53:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: NegativeVoting/GaussianRouting.lean:82:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8986/9025] Replayed NegativeVoting.NoiseStability
+warning: NegativeVoting/NoiseStability.lean:45:8: `measurable_pi_lambda` has been deprecated: Use `Measurable.of_eval` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵a̵s̵u̵r̵a̵b̵l̵e̵_̵p̵i̵_̵l̵a̵m̵b̵d̵a̵M̲e̲a̲s̲u̲r̲a̲b̲l̲e̲.̲o̲f̲_̲e̲v̲a̲l̲
+warning: NegativeVoting/NoiseStability.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: NegativeVoting/NoiseStability.lean:152:4: This simp argument is unused:
+  Complex.ofReal_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [charFun_gaussianReal, Complex.ofReal_zero, mul_zero, zero_mul, one_mul, zero_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: NegativeVoting/NoiseStability.lean:152:24: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [charFun_gaussianReal, Complex.ofReal_zero, mul_zero, zero_mul, Complex.ofReal_one, zero_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8989/9025] Replayed NegativeVoting.RegularSimplex
+warning: NegativeVoting/RegularSimplex.lean:116:13: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8990/9025] Replayed GaussianFanMassBase
+warning: GaussianFanMassBase.lean:28:0: automatically included section variable(s) unused in theorem `NegativeVotingFan.score_integrable`:
+  [Fintype ι]
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassBase.lean:32:0: automatically included section variable(s) unused in theorem `NegativeVotingFan.integral_score`:
+  [Fintype ι]
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8991/9025] Replayed GaussianFanMassGradient
+warning: GaussianFanMassGradient.lean:42:0: automatically included section variable(s) unused in theorem `NegativeVotingFan.ae_scores_injective`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8993/9025] Replayed GaussianFanMassExistence
+warning: GaussianFanMassExistence.lean:16:0: automatically included section variable(s) unused in theorem `NegativeVotingFan.winningCell_measurable`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassExistence.lean:43:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [8998/9025] Replayed GaussianFanMassJacobian
+warning: GaussianFanMassJacobian.lean:72:0: automatically included section variable(s) unused in theorem `NegativeVotingFanJacobian.massDerivative_apply`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassJacobian.lean:125:0: automatically included section variable(s) unused in theorem `NegativeVotingFanJacobian.facetWeight_symm`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassJacobian.lean:219:0: automatically included section variable(s) unused in theorem `NegativeVotingFanJacobian.offsetJacobian_constant`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassJacobian.lean:291:0: automatically included section variable(s) unused in theorem `NegativeVotingFanJacobian.facetWeight_pos_of_strict_point`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8999/9025] Replayed GaussianFanMassInverse
+warning: GaussianFanMassInverse.lean:67:8: automatically included section variable(s) unused in theorem `NegativeVotingFanInverse.mem_centeredGauge`:
+  [DecidableEq ι]
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassInverse.lean:94:8: automatically included section variable(s) unused in theorem `NegativeVotingFanInverse.centering_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassInverse.lean:97:8: automatically included section variable(s) unused in theorem `NegativeVotingFanInverse.centering_centered`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassInverse.lean:103:0: automatically included section variable(s) unused in theorem `NegativeVotingFanInverse.centering_eq_zero_iff`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanMassInverse.lean:120:8: automatically included section variable(s) unused in theorem `NegativeVotingFanInverse.centeredMass_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9000/9025] Replayed GaussianFanOptimizedValue
+warning: GaussianFanOptimizedValue.lean:15:0: automatically included section variable(s) unused in theorem `NegativeVotingFanValue.potential_nonneg`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFanOptimizedValue.lean:69:0: automatically included section variable(s) unused in theorem `NegativeVotingFanValue.max_score_rows_sub_bound`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9003/9025] Replayed GaussianMaximum
+warning: GaussianMaximum.lean:51:0: automatically included section variable(s) unused in theorem `NegativeVotingGaussianMaximum.maximum_cdf`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianMaximum.lean:69:44: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9004/9025] Replayed GaussianTailRatio
+warning: GaussianTailRatio.lean:83:78: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: GaussianTailRatio.lean:83:78: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: GaussianTailRatio.lean:115:66: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GaussianTailRatio.lean:151:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9005/9025] Replayed GaussianMaximumTailMargins
+warning: GaussianMaximumTailMargins.lean:17:66: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: GaussianMaximumTailMargins.lean:51:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: GaussianMaximumTailMargins.lean:81:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: GaussianMaximumTailMargins.lean:81:19: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9006/9025] Replayed GaussianDoubleExponentialIntegral
+warning: GaussianDoubleExponentialIntegral.lean:42:68: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GaussianDoubleExponentialIntegral.lean:128:22: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [expOverSelf, Real.exp_ne_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9007/9025] Replayed GaussianMaximumMeanBounds
+warning: GaussianMaximumMeanBounds.lean:58:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianMaximumMeanBounds.lean:69:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianMaximumMeanBounds.lean:93:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: GaussianMaximumMeanBounds.lean:94:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GaussianMaximumMeanBounds.lean:93:15: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: GaussianMaximumMeanBounds.lean:334:81: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GaussianMaximumMeanBounds.lean:361:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9008/9025] Replayed GaussianMaximumSecondMoment
+warning: GaussianMaximumSecondMoment.lean:55:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+info: GaussianMaximumSecondMoment.lean:94:95: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: GaussianMaximumSecondMoment.lean:107:41: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: GaussianMaximumSecondMoment.lean:107:41: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: GaussianMaximumSecondMoment.lean:159:17: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: GaussianMaximumSecondMoment.lean:159:17: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9009/9025] Replayed GaussianMaximumLocalization
+info: GaussianMaximumLocalization.lean:39:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: GaussianMaximumLocalization.lean:83:57: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GaussianMaximumLocalization.lean:115:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GaussianMaximumLocalization.lean:163:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: GaussianMaximumLocalization.lean:163:19: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9015/9025] Replayed GaussianRegularMaximumMoments
+warning: GaussianRegularMaximumMoments.lean:39:8: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [eq_comm, Nat.cast_add, Nat.cast_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: GaussianRegularMaximumMoments.lean:40:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9016/9025] Replayed GaussianAssignmentDuality
+warning: GaussianAssignmentDuality.lean:28:0: automatically included section variable(s) unused in theorem `NegativeVotingAssignmentDuality.feasible_coordinate_bounds`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianAssignmentDuality.lean:119:0: automatically included section variable(s) unused in theorem `NegativeVotingAssignmentDuality.site_surjective`:
+  [Fintype ι]
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9017/9025] Replayed GaussianCentroidEnergyAttainment
+warning: GaussianCentroidEnergyAttainment.lean:30:0: automatically included section variable(s) unused in theorem `NegativeVotingCentroidOptimization.rowEnergy_nonneg`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCentroidEnergyAttainment.lean:31:25: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: GaussianCentroidEnergyAttainment.lean:33:0: automatically included section variable(s) unused in theorem `NegativeVotingCentroidOptimization.rowEnergy_sub_zero_iff`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCentroidEnergyAttainment.lean:147:54: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [9018/9025] Built GaussianTwoCellMeasure (6.3s)
+warning: GaussianTwoCellMeasure.lean:20:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.fractionalGaussian_le`:
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianTwoCellMeasure.lean:29:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.fractionalGaussian_integral`:
+  [BorelSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [BorelSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9020/9025] Built GaussianTwoCellScalar (6.8s)
+warning: GaussianTwoCellScalar.lean:14:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.bounded_density_interval`:
+  [IsFiniteMeasure ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsFiniteMeasure ν] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9022/9025] Built GaussianTwoCellSplit (5.3s)
+warning: GaussianTwoCellSplit.lean:25:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: GaussianTwoCellSplit.lean:42:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.pairUnion_bounds`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianTwoCellSplit.lean:51:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.pairUnion_measurable`:
+  [Nonempty ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianTwoCellSplit.lean:55:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.pairUnion_mass`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianTwoCellSplit.lean:61:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.pairUnion_centroid`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianTwoCellSplit.lean:70:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.upperPair_add_lowerPair`:
+  [Fintype ι]
+  [Nonempty ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Nonempty ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianTwoCellSplit.lean:219:47: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9024/9025] Built GaussianTwoCellSeparation (5.2s)
+warning: GaussianTwoCellSeparation.lean:18:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.resplitPair_energy_difference`:
+  [Nonempty ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianTwoCellSeparation.lean:81:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: GaussianTwoCellSeparation.lean:129:0: automatically included section variable(s) unused in theorem `NegativeVotingTwoCell.centroid_edge_upper_bound`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (9025 jobs).

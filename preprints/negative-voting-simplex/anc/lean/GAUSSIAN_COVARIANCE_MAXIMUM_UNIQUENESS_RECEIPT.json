@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianCovarianceMaximumUniqueness",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_COVARIANCE_MAXIMUM_UNIQUENESS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 3,
+  "theorem_count": 3,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCovarianceMaximumUniqueness.lean": "a8464f549d7a0c175a0613a4a1c73fab04ff053f777fbfd206cdc01fb395618c",
+    "GaussianBalancedCovarianceMaximum.lean": "221f3653e29cb80fc160688580815246236270037c34f8f32ed165fb4b390a58",
+    "GaussianCovarianceStrictConcavity.lean": "285212a3995e7abfa02b578e117356c62428c51cc70d9f092dfa8739f5664272",
+    "GAUSSIAN_COVARIANCE_MAXIMUM_UNIQUENESS_AUDIT.lean": "9b022e4b98e45dc886ba911d3882694e7f605fa1c724b2f8067acfa3be55a2ff",
+    "GAUSSIAN_COVARIANCE_MAXIMUM_UNIQUENESS_AXIOMS.txt": "fa00c010e691bce942219046ab869d3996b65b57c30d96045f77cb1719d4e53f",
+    "GAUSSIAN_COVARIANCE_MAXIMUM_UNIQUENESS_BUILD.txt": "5f5d6511924c98e738c88d28e4447ae18a393c64bbc7f00c13ef0df7774d1976",
+    "GAUSSIAN_COVARIANCE_MAXIMUM_UNIQUENESS_COVERAGE.txt": "39476868f8bb022680b992c6ae5bd6c6abbb350ecc3718d8be8589a9fb664538"
+  }
+}

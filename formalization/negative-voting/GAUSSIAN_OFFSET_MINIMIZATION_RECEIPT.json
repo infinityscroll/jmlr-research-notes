@@ -1,0 +1,27 @@
+{
+  "build_command": "lake build GaussianFanOffsetMinimization",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_OFFSET_MINIMIZATION_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 14,
+  "theorem_count": 14,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanOffsetMinimization.lean": "18cbc41fb5d2ee07ffdc9e59bd56e21e4006429ef0d6cb2472810df3248ee512",
+    "GaussianFanSecondVariation.lean": "0596e4c998ce834763988e8660a28b70f2880fa7db5af3b5f02742a8ccceb85d",
+    "GaussianFanQuadraticHessian.lean": "cdedc59beb018598c7d29b418fdc3aff638d221ba34ca9aac6ae3caa068b9e72",
+    "GaussianFanMassJacobian.lean": "74ecc4012d2575b0729fb554427c6228f322c867aa43a4396206e95b103de18e",
+    "GAUSSIAN_OFFSET_MINIMIZATION_AUDIT.lean": "59752785a87e5ef3af26ef2c8a5fd1f26b90f9a9d7cb420e5b6242a470a84cff",
+    "GAUSSIAN_OFFSET_MINIMIZATION_AXIOMS.txt": "833297e000438eec635159742bf436f75f591980c0dd96d1198970a4a6dd399e",
+    "GAUSSIAN_OFFSET_MINIMIZATION_BUILD.txt": "13edc9389232099fc58dcf001af73ea8a4050aef90bbbf016e808e95516fd917",
+    "GAUSSIAN_OFFSET_MINIMIZATION_COVERAGE.txt": "a20947cc03a0f8453b96e3e938fcc7235452176c66e1bd0cd970caadfda6578c",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
+  }
+}

@@ -1,0 +1,3 @@
+GAUSSIAN_BOUNDED_OFFSET_LIMIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetLimit.regularCovarianceDeficit_continuous_rows","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_LIMIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetLimit.exists_limiting_balanced_dual","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_LIMIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetLimit.potential_tendsto_rows_offsets","theorem":true}

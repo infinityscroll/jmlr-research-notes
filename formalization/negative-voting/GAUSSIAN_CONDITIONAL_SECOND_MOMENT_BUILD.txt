@@ -1,0 +1,504 @@
+⚠ [8930/8956] Replayed MarkovSemigroups.Abstract.DirichletForm
+warning: MarkovSemigroups/Abstract/DirichletForm.lean:30:0: 'Mathlib.MeasureTheory.Measure.MeasureSpace' has been deprecated: please replace this import by
+
+import Mathlib.Algebra.Order.Module.Field
+import Mathlib.Data.EReal.Inv
+import Mathlib.Tactic.Measurability
+import Mathlib.Topology.Algebra.InfiniteSum.Order
+import Mathlib.Topology.MetricSpace.Bounded
+⚠ [8931/8956] Replayed MarkovSemigroups.Abstract.Hypercontractivity
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:127:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:199:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:214:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:290:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:315:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+⚠ [8932/8956] Replayed MarkovSemigroups.Abstract.GrossODE
+warning: MarkovSemigroups/Abstract/GrossODE.lean:166:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:234:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:395:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1448:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1471:47: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̲diff_subset
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1514:45: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̲diff_subset
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1544:10: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1643:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1810:69: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̲diff_subset
+warning: MarkovSemigroups/Abstract/GrossODE.lean:1861:54: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2084:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2109:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2247:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MarkovSemigroups/Abstract/GrossODE.lean:2331:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8934/8956] Replayed MarkovSemigroups.Diffusion.StroockVaropoulos
+warning: MarkovSemigroups/Diffusion/StroockVaropoulos.lean:70:5: Variable name `hu_one` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu_one
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8935/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.Euclidean
+info: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:112:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:121:48: This simp argument is unused:
+  NNReal.coe_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [NNReal.coe_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:975:33: This simp argument is unused:
+  NNReal.coe_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [NNReal.coe_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8936/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHermite
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:259:11: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:277:11: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:315:8: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+⚠ [8937/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanStein
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean:723:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8938/8956] Replayed MarkovSemigroups.General.OUEntropyDecomposition
+warning: MarkovSemigroups/General/OUEntropyDecomposition.lean:1447:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8939/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanEntropyDecay
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:41: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:54: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:41: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:54: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:58: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:45: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:555:58: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:997:79: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8940/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanFin
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:661:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:796:18: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:881:16: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hji, ContinuousLinearMap.toSpanSingleton_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:972:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1010:5: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1089:28: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1107:32: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1110:30: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1129:28: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1141:39: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1149:15: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1141:39: This simp argument is unused:
+  ContinuousLinearMap.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1161:26: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1162:13: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1209:8: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1217:8: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1227:8: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1218:54: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondPartial, partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1228:54: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [secondPartial, partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1255:35: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1255:35: This simp argument is unused:
+  ContinuousLinearMap.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [partialDeriv, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1264:26: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1276:16: `ContinuousLinearMap.smul_apply` has been deprecated: Use `smul_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.smul_apply` to `smul_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵s̲m̲u̲l̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1381:5: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1475:46: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mixCLM, ContinuousLinearMap.pi_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1515:16: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mixCLM, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1528:16: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mixCLM, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1592:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:1936:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:2302:11: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:2544:28: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3157:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3286:52: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3384:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3442:37: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:3705:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4101:34: `ContinuousLinearMap.add_apply` has been deprecated: Use `add_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.add_apply` to `add_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵a̵d̵d̵_̵a̵p̵p̵l̵y̵a̲d̲d̲_̲a̲p̲p̲l̲y̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4186:11: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4197:8: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4206:19: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4602:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4605:31: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4640:29: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4642:29: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4689:33: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4696:33: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4801:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4855:31: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean:4858:31: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [8941/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanFinLp
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean:1352:42: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+⚠ [8943/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanGeneratorLp
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean:78:11: `MeasureTheory.memLp_finset_sum'` has been deprecated: Use `MeasureTheory.memLp_finsetSum'` instead
+
+Hint: Replace the deprecated name:
+  memLp_finset_̵s̵S̲um'
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean:433:20: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean:444:20: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+⚠ [8944/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanGeneratorLimit
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:277:11: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:377:8: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:294:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:538:13: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:557:13: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:768:11: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean:995:7: `MeasureTheory.memLp_finset_sum'` has been deprecated: Use `MeasureTheory.memLp_finsetSum'` instead
+
+Hint: Replace the deprecated name:
+  memLp_finset_̵s̵S̲um'
+⚠ [8945/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanFinBE
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean:117:42: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean:156:42: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
+⚠ [8946/8956] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHypercontractive
+warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean:269:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8955/8956] Built GaussianConditionalSecondMoment (8.7s)
+warning: GaussianConditionalSecondMoment.lean:179:62: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (8956 jobs).

@@ -1,0 +1,3 @@
+Actual divided-noise coefficient range envelope
+
+pairSlope_range_bounds and averagePairSlope_range_bounds derive both exponential bounds from the actual Gaussian mass Jacobian, using the exact facet-weight envelope and midpoint-path range contraction. negativePairCoefficient_range_bounds proves k lies between exp(-Q)/sqrt(1-r^2) and exp(Q)/sqrt(1-r^2), Q=(512e^3+1)*(tau*R*sqrt(1+log m)+tau^2*R^2), R the actual utility range and tau=r/sqrt(1-r^2). negativePairCoefficient_pos includes score ties. Ambient dimension is arbitrary; no full-span, coefficient-bound, or derivative assumption is added. The endpoint keeps the current quantitative inputs m=n+2, n>0 and actual Gaussian maximumMean n>=1. Smooth majorants and their Lq norms are not asserted here.

@@ -1,0 +1,15 @@
+The tensor moment(n,i,a,c) is the literal centered Gaussian quadratic
+moment of maxWeights(x,i). The unit coordinate rows have their centered
+singular lower bound and injectivity proved. Actual winning cells are
+identified with the complete normalized zero-offset cap. The checked cap
+second-moment theorem yields the actual boundary tensor.
+
+Its column/row sums vanish because each actual comparison normal sums to
+zero. Its trace vanishes because the actual conditional Gaussian slice
+lies in its zero-offset hyperplane. No radial-independence, row-sum,
+trace-zero, or tensor formula assumption is supplied.
+
+Source-backed Lake build passed. Exhaustive source-module transitive audit
+checked 27 compiled constants, including 24 theorem constants. Only
+propext, Classical.choice, and Quot.sound occur. The full negative-voting
+theorem is not asserted by this module.

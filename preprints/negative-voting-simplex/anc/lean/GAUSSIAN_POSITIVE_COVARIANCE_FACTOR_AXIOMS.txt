@@ -1,0 +1,17 @@
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.psdCone_convex","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.pdCone","theorem":false}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.mappedBasis","theorem":false}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.psdCone","theorem":false}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.symmetric_conjugate","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":[],"constant":"NegativeVotingPositiveCovariance.exists_positive_factor._simp_1_1","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceValue.gramVelocity.eq_1","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.mappedBasis._proof_1","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.mappedBasis_apply","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.pdCone_subset_psdCone","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.mappedBasis._proof_2","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.factor_gram","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.exists_positive_factor","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.conjugate_gramVelocity","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.regularize_positive","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.pdCone_convex","theorem":true}
+GAUSSIAN_POSITIVE_COVARIANCE_FACTOR_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPositiveCovariance.gramVelocity_posSemidef","theorem":true}

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "source_sha256": "c31ac6ea58ad9e86d5eba3037ea57e755fc5949aef35a3549739588a8fab1b6b",
+  "compiled_constants_audited": 29,
+  "compiled_theorems_audited": 25,
+  "scope": "Actual operator-valued Frechet derivative of the Gaussian expected-max gradient, identified with the derived symmetric mixed facet form."
+}

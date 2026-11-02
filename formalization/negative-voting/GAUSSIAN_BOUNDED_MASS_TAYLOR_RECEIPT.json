@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBoundedMassTaylor",
+  "source_sha256": "313016c1e0e30c787ab3a8b80e8d111de2f47472019b70b8d80871321e57825f",
+  "source_lines": 86,
+  "source_theorem_declarations": 2,
+  "compiled_constants_audited": 2,
+  "compiled_theorem_constants_audited": 2,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual lower Taylor bound along every centered mass segment within [1/(2m),3/(2m)], for affine-basis rows bounded by8 sqrt(1+log m)/m: Gamma(p+v)>=Gamma(p)-h(p).v-16384 pi^2(1+log m) sum(v^2). The selected-offset first derivative, actual Jacobian response, inverse-log gap and scalar integration are all derived, with no supplied Hessian/response premise. Constants contain no singular value. Qualitative affine independence remains; singular limiting dual offsets and the final R<=D/r transfer are separate."
+}

@@ -1,0 +1,7 @@
+GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformMassBound.assignmentFirstEnergy_bound_in_mass_window","theorem":true}
+GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformMassBound.assignmentFirstEnergy_bound_in_mass_window._proof_1_1","theorem":true}
+GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformMassBound.assignmentFirstEnergy_bound_in_mass_window._proof_1_2","theorem":true}
+GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformMassBound.eventually_uniform_mass_value_bound._proof_1_1","theorem":true}
+GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformMassBound.eventually_uniform_competitive_deficit_bounds","theorem":true}
+GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformMassBound.eventually_uniform_mass_value_bound","theorem":true}
+GAUSSIAN_UNIFORM_MASS_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformMassBound.eventually_uniform_sharp_competitive_mass_bound","theorem":true}

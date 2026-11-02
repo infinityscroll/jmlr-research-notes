@@ -1,0 +1,4 @@
+GAUSSIAN_FAN_JOINT_VALUE_C2_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValueC2.hasFDerivAt_joint_value_at","theorem":true}
+GAUSSIAN_FAN_JOINT_VALUE_C2_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValueC2.contDiffAt_jointValueDerivative","theorem":true}
+GAUSSIAN_FAN_JOINT_VALUE_C2_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValueC2.jointValue_C2","theorem":true}
+GAUSSIAN_FAN_JOINT_VALUE_C2_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanJointValueC2.hasFDerivAt_joint_value_at._abel_1_1","theorem":true}

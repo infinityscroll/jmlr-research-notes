@@ -1,0 +1,33 @@
+'NegativeVotingFanCycle.barycentricOutwardVector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_orthogonal_face_edge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.simplexOfAffineBasis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.eq_of_inner_basis_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_eq_altitude' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_norm_eq_reciprocal_height' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.faceDirection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_mem_face_orthogonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.projectedFaceGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceGapHeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceBoundaryNormal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_projectedFaceGap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.faceGapHeight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.barycentricOutwardVector_faceBoundaryNormal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.faceBoundaryNormal_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceProjection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.projectedFaceGap_eq_projection_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceGapHeight_eq_dist_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.projectedFaceGap_independent_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]

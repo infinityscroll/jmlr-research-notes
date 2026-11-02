@@ -1,0 +1,23 @@
+The actual distribution of finite Gaussian linear scores is proved to depend
+only on the Gram matrix, including different finite ambient dimensions.
+The proof computes the characteristic function of the pushed-forward actual
+standard Gaussian and applies characteristic-function uniqueness.
+
+The actual product score laws agree, and the correlation map commutes with
+linear scores. Consequently the actual regular-assignment noise integrals
+agree for equal Gram matrices. Every regular-simplex realization therefore
+has the canonical max-rule noise value. Measurable score observables and
+the actual reference winning mean/first chaos are transported as well.
+
+The final theorem eventually_uniform_regular_competitive_mass_window has one
+threshold before ambient dimension, reference rows, fractional f, and r.
+It proves the actual first mass window uniformly for every regular reference
+and every competitive AEMeasurable AE-simplex f in the full voting interval.
+No joint Gaussian-law, covariance-law, or regular-reference equivalence is
+an assumption. The full minimum-noise/equality theorem is not asserted.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for all 23 compiled constants (21 theorem constants). Only propext,
+Classical.choice and Quot.sound occur. A bounded independent endpoint/assembly
+review found no quantifier or competitor-scope defect; it was not a second
+proof of every analytic estimate.

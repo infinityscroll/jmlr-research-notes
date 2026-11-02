@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianFanCoherentChart",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_FAN_COHERENT_CHART_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 76,
+  "theorem_count": 69,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanCoherentChart.lean": "8dd1c749ebbce7ac3336f2288eed45ec142c7c3deaf7ebb983d8d70557d244b6",
+    "GaussianFanMassJacobian.lean": "74ecc4012d2575b0729fb554427c6228f322c867aa43a4396206e95b103de18e",
+    "GaussianFanMovingCells.lean": "61a492d93167d58269f2f2be5c728bb63fff225233649541989587de7949c745",
+    "GAUSSIAN_FAN_COHERENT_CHART_AUDIT.lean": "88cd58bd92b78397757eee38f5a7c7ccc3fcbaf925622e0cd08d0003d63b94df",
+    "GAUSSIAN_FAN_COHERENT_CHART_AXIOMS.txt": "8cd94b3237a6783a743803706a0938c1ad79b715b9899bd611a10c28d043ed45",
+    "GAUSSIAN_FAN_COHERENT_CHART_BUILD.txt": "ed53cb7d2ca94d7450071b1bdcc7f51c4747d661855b1c8a7db5a05257ea3fee",
+    "GAUSSIAN_FAN_COHERENT_CHART_COVERAGE.txt": "d3504a5e42e9f4ebafa1f889661eefa5c0449309f26709de90868a67911b8430"
+  }
+}

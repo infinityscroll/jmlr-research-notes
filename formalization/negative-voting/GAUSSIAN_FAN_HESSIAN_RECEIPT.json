@@ -1,0 +1,40 @@
+{
+  "build_command": "lake build GaussianFanSecondVariation",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_FAN_HESSIAN_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 38,
+  "theorem_count": 32,
+  "module_counts": {
+    "GaussianFanQuadraticHessian": {
+      "constants": 25,
+      "theorems": 20
+    },
+    "GaussianFanSecondVariation": {
+      "constants": 13,
+      "theorems": 12
+    }
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanQuadraticHessian.lean": "cdedc59beb018598c7d29b418fdc3aff638d221ba34ca9aac6ae3caa068b9e72",
+    "GaussianFanSecondVariation.lean": "0596e4c998ce834763988e8660a28b70f2880fa7db5af3b5f02742a8ccceb85d",
+    "GaussianFanMovingCells.lean": "61a492d93167d58269f2f2be5c728bb63fff225233649541989587de7949c745",
+    "GaussianFanTestedCells.lean": "ab1bf11f30855f11d16939b633948f86106f96e27ca10f1f99d9ac506efb0f7c",
+    "GaussianFanScoreHessian.lean": "b4953166ce720bb16187aedb2bdc8414ad99d8e3912447026122d5da1e2e116f",
+    "GaussianMovingCap.lean": "cb83db8b81d03087beed5fb899c3d06d27fdcf934bf95231518ca4096c47fe65",
+    "GaussianMovingSlab.lean": "aecc1fc483dc91c02c709e41fb57a8dcef8f591b1a86340a23e06f970f78a5f3",
+    "GAUSSIAN_FAN_HESSIAN_AUDIT.lean": "0a23568f34433c0ea11ecaa321f27a066935553fb8a7f91dedb7b4e6d266f240",
+    "GAUSSIAN_FAN_HESSIAN_AXIOMS.txt": "6c22f4d90264ae2ab468a62bcd7ebda870693a6dcfd5ba57a443821e37bf9787",
+    "GAUSSIAN_FAN_HESSIAN_BUILD.txt": "88c66f0ca24833fcf59ec5ce33d31a192f7deace5ab384ce135f8a4dc94418f0",
+    "GAUSSIAN_FAN_HESSIAN_COVERAGE.txt": "27c0a9ee0e91ad0d3bfa250b87e9c0c1a69515b0cad55eb8872780c528838438",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
+  }
+}

@@ -1,0 +1,7 @@
+SWITCHING_PAIR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingPair.pairPlaneBase","theorem":false}
+SWITCHING_PAIR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingPair.pairPlaneForcing_measurable","theorem":true}
+SWITCHING_PAIR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingPair.pairPlaneFacet","theorem":false}
+SWITCHING_PAIR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingPair.pairPlaneBase_on_plane","theorem":true}
+SWITCHING_PAIR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingPair.pairPlaneBase.eq_1","theorem":true}
+SWITCHING_PAIR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingPair.pairPlaneForcing","theorem":false}
+SWITCHING_PAIR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingPair.integral_cellReward_pair_bound","theorem":true}

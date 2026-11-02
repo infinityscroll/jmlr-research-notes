@@ -1,0 +1,101 @@
+[
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.massDerivative",
+    "theorem": false
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.massDerivative._proof_2",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.hasFDerivAt_mass_value._abel_1_2",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.massDerivative._proof_3",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointValue.jointValueDerivative.congr_simp",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.massDerivative_apply",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.massDerivative._proof_4",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.massDerivative._proof_1",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.hasFDerivAt_mass_value",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.massDerivative.eq_1",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanMassValueGradient.exists_local_C1_mass_gradient",
+    "theorem": true
+  }
+]

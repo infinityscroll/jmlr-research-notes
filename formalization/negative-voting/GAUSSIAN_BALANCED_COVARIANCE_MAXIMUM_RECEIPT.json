@@ -1,0 +1,27 @@
+{
+  "build_command": "lake build GaussianBalancedCovarianceMaximum",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_BALANCED_COVARIANCE_MAXIMUM_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 37,
+  "theorem_count": 36,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianBalancedCovarianceMaximum.lean": "221f3653e29cb80fc160688580815246236270037c34f8f32ed165fb4b390a58",
+    "GaussianBalancedReference.lean": "46fb48b69cd948baa6e00d47c8d3286a847a43be8672fbb2e8f58d7424ad1d16",
+    "GaussianCovarianceRefinedCurvature.lean": "b978b70e25fcb3d11775593fd2613c38bc14bee6bfe4b16980801fb0e66d365d",
+    "GaussianCovarianceConcavity.lean": "a16df656d33af8b4900f80243285854e8d35169c1ef1b2b31c93324a0df9d137",
+    "GaussianCovarianceRealization.lean": "6d172d5aa631386850eda1e10dcfcfba387a65603d6ec2c72a83e55b4dd03da7",
+    "GaussianCenteredParsevalBasis.lean": "a2cc5884f928302df1ef2f615fae62962d1f9b192cbd28ef724b3466985a5d1f",
+    "GAUSSIAN_BALANCED_COVARIANCE_MAXIMUM_AUDIT.lean": "757265897fe27e2d624261801d83943d3bb10b548374c999c1f863de60b9cb0f",
+    "GAUSSIAN_BALANCED_COVARIANCE_MAXIMUM_AXIOMS.txt": "6a17acd8ff22b6bdc34d84d33189a6650ea9d965e459c1f0bf47e8e13319152b",
+    "GAUSSIAN_BALANCED_COVARIANCE_MAXIMUM_BUILD.txt": "1efb3ca122615986e35610bbd3199d6e5eca2a3f67c395fd36655cec91947d89",
+    "GAUSSIAN_BALANCED_COVARIANCE_MAXIMUM_COVERAGE.txt": "da43a0d99391a2c2eefdbe4a1969956d0fc7dbedeabf779110d714da32f28ff5"
+  }
+}

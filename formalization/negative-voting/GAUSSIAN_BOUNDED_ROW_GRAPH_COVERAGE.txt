@@ -1,0 +1,1 @@
+Actual finite weighted-graph gap with full unequal-row correction K <= 4 Bmax Mmax sum(z^2) + 4 Bmax T retained and T^2 <= E K. Physical cut expansion gives lambda=min(kappa^2/(64 Bmax Mmax),kappa/(16 Bmax)). No degree bound, edge-separation lower bound, median premise, Gaussian cut premise discharge, offset-energy certificate, or full negative-voting claim.

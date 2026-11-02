@@ -1,0 +1,9 @@
+Unconditional actual global covariance deficit
+
+The actual balanced facet continuation supplies uniform local Gaussian curvature at c/L, with explicit c=facetRadius64>0. A constructed centered Parseval affine basis removes every reference-frame hypothesis. The actual Gaussian global concavity, boundary continuity and ray propagation yield the quantitative covariance bound for every PSD target, including singular targets, with one threshold before ambient dimension and rectangular row realization.
+
+The literal regular-orbit distance has the corresponding ray-profile bound when ambient dimension≥m-1. For exterior distance>1/m and row energy≤2w, the true covariance deficit R satisfies R≥c/(240 m³ sqrt L) and distance²≤(144/c)m sqrt(m) L R. The final theorem derives actual centered centroid rows and their energy bound from arbitrary completed-measurable fractional Gaussian competitors at0<r≤1/(m-1), in every finite ambient coordinate type and any actual regular reference orientation. The threshold precedes all of them.
+
+No local-curvature, Gaussian-law, facet-weight, offset-response, positivity-of-rank or chosen-frame premise remains in these global conclusions. The global bounded-row offset certificate needed for R≤D/r and the final full-noise comparison are separate unfinished targets. This module does not assert the full negative-voting theorem.
+
+All 16 owned compiled constants, including generated/private constants, were transitively audited. Only propext, Classical.choice and Quot.sound occur.

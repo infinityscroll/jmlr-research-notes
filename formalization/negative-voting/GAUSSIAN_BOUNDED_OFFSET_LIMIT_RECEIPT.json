@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBoundedOffsetLimit",
+  "source_sha256": "18aa7eb91d2462726a11a16ecb16c34b28e8d1dc98497937d51e768c0c74839b",
+  "source_lines": 95,
+  "source_theorem_declarations": 3,
+  "compiled_constants_audited": 3,
+  "compiled_theorem_constants_audited": 3,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual potentials converge jointly along rows and offsets; actual regular covariance deficits are continuous. A bounded sequence of true affine-basis balanced dual minimizers converging to arbitrary rows has an optimal limiting centered dual offset satisfying the same deficit-relative energy bound. No singular differentiability or assignment convergence is assumed. Explicit approximation existence is supplied in a separate module."
+}

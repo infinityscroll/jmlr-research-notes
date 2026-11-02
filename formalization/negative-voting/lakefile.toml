@@ -154,3 +154,855 @@ name = "GaussianEhrhardCoefficient"
 [lean_lib.leanOptions]
 autoImplicit = true
 
+[[lean_lib]]
+name = "GaussianFanMassInverse"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleComplex"
+
+[[lean_lib]]
+name = "GaussianFanJacobianPseudoInverse"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanTestedCells"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCapTelescoping"
+
+[[lean_lib]]
+name = "GaussianFanScoreHessian"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianMovingSlab"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianMovingCap"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleGauge"
+
+[[lean_lib]]
+name = "GaussianFanCycleGeometry"
+
+[[lean_lib]]
+name = "GaussianFanMovingCells"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanQuadraticHessian"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanSecondVariation"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleGram"
+
+[[lean_lib]]
+name = "GaussianCovariancePath"
+
+[[lean_lib]]
+name = "GaussianFanCentroidBoundary"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianMovingFaceMoments"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleStrata"
+
+[[lean_lib]]
+name = "GaussianFanOffsetMinimization"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanGradientDerivative"
+
+[[lean_lib]]
+name = "GaussianFanJointMass"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanEnvelope"
+
+[[lean_lib]]
+name = "GaussianFanCycleCoordinates"
+
+[[lean_lib]]
+name = "GaussianFanCanonicalOffset"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovariancePathRegularity"
+
+[[lean_lib]]
+name = "GaussianFanCycleNested"
+
+[[lean_lib]]
+name = "GaussianFanJointInverse"
+
+[[lean_lib]]
+name = "GaussianMaximum"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCovarianceEnvelope"
+
+[[lean_lib]]
+name = "GaussianFanOptimizedValue"
+
+[[lean_lib]]
+name = "GaussianFanCycleSlice"
+
+[[lean_lib]]
+name = "GaussianFanCovarianceLaw"
+
+[[lean_lib]]
+name = "GaussianTailRatio"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCovarianceHessian"
+
+[[lean_lib]]
+name = "GaussianFanCycleForms"
+
+[[lean_lib]]
+name = "GaussianFanCycleMoments"
+
+[[lean_lib]]
+name = "GaussianMaximumTailMargins"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleDeficit"
+
+[[lean_lib]]
+name = "GaussianDoubleExponentialIntegral"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleCoefficients"
+
+[[lean_lib]]
+name = "GaussianFanCycleFactorization"
+
+[[lean_lib]]
+name = "GaussianMaximumMeanBounds"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleBalance"
+
+[[lean_lib]]
+name = "GaussianFanCovarianceValue"
+
+[[lean_lib]]
+name = "GaussianFanValueDerivative"
+
+[[lean_lib]]
+name = "GaussianFanCycleResidual"
+
+[[lean_lib]]
+name = "GaussianFanCycleEhrhard"
+
+[[lean_lib]]
+name = "GaussianMaximumSecondMoment"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleAnalyticBridge"
+
+[[lean_lib]]
+name = "GaussianFanCycleFlux"
+
+[[lean_lib]]
+name = "GaussianFanCycleQuadratic"
+
+[[lean_lib]]
+name = "GaussianL1Variance"
+
+[[lean_lib]]
+name = "GaussianMaximumLocalization"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanCycleHessian"
+
+[[lean_lib]]
+name = "GaussianPolyhedralTube"
+
+[[lean_lib]]
+name = "GaussianFanCutFrontier"
+
+[[lean_lib]]
+name = "GaussianAffineBasisLower"
+
+[[lean_lib]]
+name = "GaussianRegularMaximumMoments"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanBoundaryTransfer"
+
+[[lean_lib]]
+name = "GaussianCheeger"
+
+[[lean_lib]]
+name = "GaussianCovarianceRefinedCurvature"
+
+[[lean_lib]]
+name = "GaussianPositiveCovarianceFactor"
+
+[[lean_lib]]
+name = "GaussianRegularQuadraticGeometry"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceConcavity"
+
+[[lean_lib]]
+name = "GaussianFanCheeger"
+
+[[lean_lib]]
+name = "GaussianRegularQuadraticSymmetry"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceMixedEstimate"
+
+[[lean_lib]]
+name = "RegularSimplexSecondMomentAlgebra"
+
+[[lean_lib]]
+name = "GaussianRegularChaosCoefficients"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianMassProfileEnvelope"
+
+[[lean_lib]]
+name = "GaussianCompetitiveParity"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFiniteGraphCoarea"
+
+[[lean_lib]]
+name = "GaussianFractionalMassEnergy"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceStrictConcavity"
+
+[[lean_lib]]
+name = "GaussianFiniteGraphRayleigh"
+
+[[lean_lib]]
+name = "GaussianCompetitiveMassWindow"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularScoreLaw"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceCoercivity"
+
+[[lean_lib]]
+name = "GaussianFanRetainedCuts"
+
+[[lean_lib]]
+name = "GaussianFanRetainedGap"
+
+[[lean_lib]]
+name = "GaussianCovarianceOptimizer"
+
+[[lean_lib]]
+name = "GaussianSecondChaosLower"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianLocalCovarianceFactor"
+
+[[lean_lib]]
+name = "GaussianRegularSecondGap"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanJointOffsets"
+
+[[lean_lib]]
+name = "GaussianFanRetainedCoefficient"
+
+[[lean_lib]]
+name = "GaussianAssignmentDuality"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceOptimizerContinuity"
+
+[[lean_lib]]
+name = "GaussianCovarianceJointValue"
+
+[[lean_lib]]
+name = "GaussianFanJointValue"
+
+[[lean_lib]]
+name = "GaussianFanOffsetCovarianceLaw"
+
+[[lean_lib]]
+name = "GaussianCentroidEnergyAttainment"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianMovingFaceQuadraticMoments"
+
+[[lean_lib]]
+name = "GaussianReferenceSecondEnergy"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanMassValueGradient"
+
+[[lean_lib]]
+name = "GaussianFanHessianContinuity"
+
+[[lean_lib]]
+name = "GaussianTwoCellScalar"
+
+[[lean_lib]]
+name = "GaussianTwoCellMeasure"
+
+[[lean_lib]]
+name = "GaussianTwoCellSplit"
+
+[[lean_lib]]
+name = "GaussianTwoCellSeparation"
+
+[[lean_lib]]
+name = "GaussianFanSelectedOffsets"
+
+[[lean_lib]]
+name = "GaussianCenteredParsevalBasis"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceOffsets"
+
+[[lean_lib]]
+name = "GaussianCovarianceRealization"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanJointValueC2"
+
+[[lean_lib]]
+name = "GaussianCovarianceJointValueC2"
+
+[[lean_lib]]
+name = "GaussianCovarianceOffsetResponse"
+
+[[lean_lib]]
+name = "GaussianOptimizerStability"
+
+[[lean_lib]]
+name = "GaussianCovariancePriceDerivative"
+
+[[lean_lib]]
+name = "GaussianBalancedReference"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFanMassContinuity"
+
+[[lean_lib]]
+name = "GaussianCovarianceBoundaryContinuity"
+
+[[lean_lib]]
+name = "GaussianCovarianceClosedGraph"
+
+[[lean_lib]]
+name = "GaussianCovarianceUniformCompact"
+
+[[lean_lib]]
+name = "GaussianCovarianceUniformTransfer"
+
+[[lean_lib]]
+name = "GaussianCovarianceOptimizerEdges"
+
+[[lean_lib]]
+name = "GaussianBalancedCovarianceMaximum"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceOptimizerLipschitz"
+
+[[lean_lib]]
+name = "GaussianCovarianceOptimizerDegree"
+
+[[lean_lib]]
+name = "GaussianCovarianceMixedDerivative"
+
+[[lean_lib]]
+name = "GaussianCovarianceMaximumUniqueness"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceOptimizerConstants"
+
+[[lean_lib]]
+name = "GaussianCovarianceUniformMixed"
+
+[[lean_lib]]
+name = "GaussianCompetitiveSharpMass"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianValueSemiconcavity"
+
+[[lean_lib]]
+name = "GaussianFanMassConcavity"
+
+[[lean_lib]]
+name = "GaussianCompetitiveDeficit"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularCovarianceDeficit"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "LocalConcavity"
+
+[[lean_lib]]
+name = "GaussianRegularFacetSeed"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceMixedNeighborhood"
+
+[[lean_lib]]
+name = "GaussianCovarianceMassPath"
+
+[[lean_lib]]
+name = "GaussianRegularFacetMean"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCovarianceZeroFloorBound"
+
+[[lean_lib]]
+name = "GaussianAffineCapDerivative"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianAssignmentCoordinateBridge"
+
+[[lean_lib]]
+name = "GaussianRegularizedMassConcavity"
+
+[[lean_lib]]
+name = "GaussianAffineOperatorDerivative"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianConditionalSecondMoment"
+
+[[lean_lib]]
+name = "GaussianAffineLogMassBound"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianBalancedFloorAnchor"
+
+[[lean_lib]]
+name = "GaussianMassSemiconcavity"
+
+[[lean_lib]]
+name = "GaussianAffineCapNormalization"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianUniformMassBound"
+
+[[lean_lib]]
+name = "GaussianAffinePathDerivative"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianAffineNormControl"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianAssignmentEquality"
+
+[[lean_lib]]
+name = "GaussianFacetConditionalPlane"
+
+[[lean_lib]]
+name = "GaussianAffinePositiveMass"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRayDeficit"
+
+[[lean_lib]]
+name = "GaussianFacetNormalExtension"
+
+[[lean_lib]]
+name = "GaussianAffineLogScale"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianAffineMassComparison"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFacetFixedCylinder"
+
+[[lean_lib]]
+name = "GaussianRegularFacetCylinder"
+
+[[lean_lib]]
+name = "GaussianAffinePolynomialComparison"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianCapShiftLower"
+
+[[lean_lib]]
+name = "GaussianScoreRealization"
+
+[[lean_lib]]
+name = "GaussianRegularCapProbability"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianProcrustesDistance"
+
+[[lean_lib]]
+name = "GaussianOperatorHSNorm"
+
+[[lean_lib]]
+name = "GaussianRegularFacetLogComparison"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFacetScoreWitness"
+
+[[lean_lib]]
+name = "GaussianCapUnionLower"
+
+[[lean_lib]]
+name = "GaussianFacetSchurBounds"
+
+[[lean_lib]]
+name = "GaussianFacetNormalPrefactor"
+
+[[lean_lib]]
+name = "GaussianRegularFacetStability"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianFacetMeanBound"
+
+[[lean_lib]]
+name = "GaussianRegularFacetNeighborhood"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianLocalCurvatureAlgebra"
+
+[[lean_lib]]
+name = "GaussianCovarianceSegment"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianConditionedFacetCap"
+
+[[lean_lib]]
+name = "GaussianBalancedOffsetControl"
+
+[[lean_lib]]
+name = "GaussianConditionedFacetWitness"
+
+[[lean_lib]]
+name = "GaussianFanOffsetRange"
+
+[[lean_lib]]
+name = "GaussianConditionedFacetLower"
+
+[[lean_lib]]
+name = "GaussianBalancedOffsetPath"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianBalancedOffsetEstimate"
+
+[[lean_lib]]
+name = "GaussianBalancedCovariancePath"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularMassSymmetry"
+
+[[lean_lib]]
+name = "GaussianRegularOUPotential"
+
+[[lean_lib]]
+name = "GaussianCovarianceSegmentGeometry"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularFacetGaussianLower"
+
+[[lean_lib]]
+name = "GaussianBalancedFacetBootstrap"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianExteriorReferenceBounds"
+
+[[lean_lib]]
+name = "GaussianUniformLocalCurvature"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularScoreProjection"
+
+[[lean_lib]]
+name = "GaussianExteriorOrbitBounds"
+
+[[lean_lib]]
+name = "GaussianGlobalCovarianceDeficit"
+
+[[lean_lib]]
+name = "GaussianQuadraticMovingCap"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularMassSeparation"
+
+[[lean_lib]]
+name = "GaussianRegularNoisePair"
+
+[[lean_lib]]
+name = "GaussianBoundedRowGraph"
+
+[[lean_lib]]
+name = "GaussianFanQuadraticMoments"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianBoundedRowGap"
+
+[[lean_lib]]
+name = "GaussianSecondChaosMassAdjoint"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularNoiseRoutingIntegral"
+
+[[lean_lib]]
+name = "GaussianBoundedOffsetResponse"
+
+[[lean_lib]]
+name = "GaussianSwitchingFibreGeometry"
+
+[[lean_lib]]
+name = "GaussianBoundedMassTaylor"
+
+[[lean_lib]]
+name = "GaussianSecondChaosFacetGradient"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularFacetRangeGeometry"
+
+[[lean_lib]]
+name = "GaussianRowMassValueUpper"
+
+[[lean_lib]]
+name = "GaussianPolynomialTiltDerivatives"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianBoundedOffsetCertificate"
+
+[[lean_lib]]
+name = "GaussianCapPolynomialStein"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularFacetRangeEnvelope"
+
+[[lean_lib]]
+name = "GaussianSwitchingFibreIntegration"
+
+[[lean_lib]]
+name = "GaussianCapPolarizedStein"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianBoundedOffsetLimit"
+
+[[lean_lib]]
+name = "GaussianQuarticMovingCap"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianSwitchingFarTail"
+
+[[lean_lib]]
+name = "GaussianPSDAffineApproximation"
+
+[[lean_lib]]
+name = "GaussianRegularPairRange"
+
+[[lean_lib]]
+name = "GaussianQuadraticAffineTransport"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianArbitraryRowOffsetCertificate"
+
+[[lean_lib]]
+name = "GaussianPrimalDualDeficit"
+
+[[lean_lib]]
+name = "GaussianCompetitiveCovarianceTransfer"
+
+[[lean_lib]]
+name = "GaussianRegularPairCoefficient"
+
+[[lean_lib]]
+name = "GaussianFanCoherentChart"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularPairCoefficientBounds"
+
+[[lean_lib]]
+name = "GaussianSwitchingCellCoordinates"
+
+[[lean_lib]]
+name = "GaussianFiniteHermiteInverseOU"
+
+[[lean_lib]]
+name = "GaussianFanQuarticMoments"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianRegularCoefficientMajorant"
+
+[[lean_lib]]
+name = "GaussianFanQuadraticTransport"
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianSwitchingPairBound"
+

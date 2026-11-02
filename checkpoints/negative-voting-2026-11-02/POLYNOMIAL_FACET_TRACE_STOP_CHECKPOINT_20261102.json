@@ -1,0 +1,43 @@
+{
+  "stopped_at_user_request": true,
+  "audited_frozen_module": {
+    "module": "GaussianFiniteHermiteInverseOU",
+    "source_sha256": "9cd0be4cf3a047e77150dce02dc62568c27da21314cb65b2fc0dbef98f4652c3",
+    "source_lines": 136,
+    "source_theorem_declarations": 10,
+    "compiled_constants_audited": 21,
+    "compiled_theorem_constants_audited": 19,
+    "all_transitive_axioms_standard": true,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "build_exit_code": 0,
+    "audit_exit_code": 0,
+    "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+    "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+    "coverage_boundary": "Actual finite normalized Hermite sums: exact coefficients and squared Gaussian integral, pointwise inverse OU identity for every input point, inverse L2 cost tau^(-k), and actual fixed-normal trace at q=1+tau^(-2) with dimension-independent Gaussian row constant. Finite coefficient degree bound is explicit in this module; its derivation for affine products is in the separately built but not yet audited GaussianPolynomialHermiteDegree. No ambient almost-everywhere identity is restricted to a measure-zero plane. This is an analytic prerequisite, not the full negative-voting theorem."
+  },
+  "unfinished_sources": [
+    {
+      "module": "GaussianPolynomialHermiteDegree",
+      "sha256": "aebe5640413330893f163e357febdec42f3fb02d490ffb0d416c1773709436b3",
+      "lines": 166,
+      "status": "Source-backed Lake build passed; transitive axiom audit has not been started. Actual raw-Hermite recurrence, coordinate-multiplication closure, finite affine-product degree, and literal finite normalized expansion all kernel-build."
+    },
+    {
+      "module": "GaussianPolynomialFacetTrace",
+      "sha256": "1ead97b865d7a64e72dbd25378c028f19351d0f7fb727b5acdbfb0316fa76a1e",
+      "lines": 130,
+      "status": "First build fails. Needs explicit eLpNorm finiteness and nonnegative rpow exponent in variable-q Holder; use current MemLp=eLpNorm<infinity instead of pair constructor; align 1/2-1/q with inverse notation; instantiate original MemLp using gammaFin before rewriting gammaPi expression. No fixes were made after the stop request."
+    }
+  ],
+  "next_obligations": [
+    "Finish and audit the existing GaussianPolynomialFacetTrace.lean; no proof escapes are present.",
+    "Run exhaustive source-owned transitive axiom audit for GaussianPolynomialHermiteDegree.lean.",
+    "Derive logarithmic specialization: facet probability pi>=m^(-4096), |a|<=A sqrt(1+log m), q approximately 8192(1+log m), yielding pi*C(A)*(1+log m)^4 times ambient L2 energy for actual degree<=4 affine-product sums. No logarithmic-specialization source was started.",
+    "Connect the resulting actual polynomial face trace to worker1 quadratic/quartic score and Stein tests."
+  ],
+  "full_theorem_status": "Not proved. The actual R<=D/r transfer is frozen in the separate complete 11-module R package; remaining noise-comparison work is owned by parent and other workers."
+}

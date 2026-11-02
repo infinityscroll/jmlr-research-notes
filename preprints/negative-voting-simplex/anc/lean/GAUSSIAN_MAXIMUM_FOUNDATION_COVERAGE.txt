@@ -1,0 +1,36 @@
+ACTUAL INDEPENDENT GAUSSIAN MAXIMUM AND QUANTILE-TAIL FOUNDATION
+
+Sources: GaussianMaximum.lean, GaussianTailRatio.lean.
+Namespaces: NegativeVotingGaussianMaximum, NegativeVotingGaussianTail.
+
+The maximum is the literal finite maximum under the product of standard
+one-dimensional Gaussian measures. The source derives its actual CDF
+Phi(t)^m and complementary survival probability, first/second moment
+integrability, and finite union/Bonferroni tail bounds.
+
+The sequence uses m=n+2 labels to keep its finite maximum nonempty at every
+natural index. upperQuantile n is the actual Gaussian upper 1/(n+2)
+quantile, with its CDF identity and divergence to infinity proved from the
+existing actual inverse-CDF construction. scaledMaximum n is exactly
+b_n*(M_(n+2)-b_n), and its mean is b_n*(mu_(n+2)-b_n).
+
+Using the already-vendored, checked Mulgund Mills inequalities, the source
+derives exact Gaussian upper/lower tail ratios, retaining the quadratic
+exponent. Consequently the ACTUAL scaled maximum satisfies, for n>0:
+  P(Z_n>t) <= exp(-t) for all t>=0;
+  P(Z_n<=-t) <= exp(-exp((99/100)*t))
+    for 0<=t<=b_n^2/50.
+The actual quantile also satisfies b_n^2<=2log(n+2).
+
+These are concrete distribution and moment-integrability statements.
+They do not yet prove a mean/quantile gap, bounded scaled second moments,
+a Gumbel limit, or the competitive mass-localization conclusion. The
+remaining integral/finite-tail estimates are being proved separately.
+
+Dependencies retain their existing attribution and pins. Every compiled
+constant in the two owned modules, including private/generated helpers,
+is checked by Lean.collectAxioms against the standard-three-only allowlist.
+
+Reproduce:
+  lake build GaussianTailRatio
+  lake env lean GAUSSIAN_MAXIMUM_FOUNDATION_AUDIT.lean

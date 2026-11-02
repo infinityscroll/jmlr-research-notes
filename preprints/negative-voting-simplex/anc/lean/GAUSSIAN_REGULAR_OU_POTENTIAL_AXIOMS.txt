@@ -1,0 +1,9 @@
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularOU.gaussianAverage_negative_regularAssignment","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularMassSymmetry.regular_mass_permuted_offsets","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularOU.negative_noise_weights","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularOU.negative_noise_scale_pos","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularOU.gaussianNoiseOperator_negative_regularAssignment","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularOU.gaussianAverage_negative_weights","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularOU.regularAssignment_ofLp_eq_weights","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularMassSymmetry.regular_mass_eq_of_offset_eq","theorem":true}
+GAUSSIAN_REGULAR_OU_POTENTIAL_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularMassSymmetry.mass_permuted_rows_offsets","theorem":true}

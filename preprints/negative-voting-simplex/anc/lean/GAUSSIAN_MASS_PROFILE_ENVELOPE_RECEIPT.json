@@ -1,0 +1,26 @@
+{
+  "module": "GaussianMassProfileEnvelope",
+  "source_sha256": "843af111db1f7671ae2849177b8d74f82977983b129b62f774bc76845eeaacff",
+  "source_lines": 98,
+  "source_theorem_declarations": 6,
+  "compiled_constants_audited": 6,
+  "compiled_theorem_constants_audited": 6,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T04:13:18.182707+00:00",
+  "evidence": [
+    "GAUSSIAN_MASS_PROFILE_ENVELOPE_BUILD.txt",
+    "GAUSSIAN_MASS_PROFILE_ENVELOPE_AUDIT.lean",
+    "GAUSSIAN_MASS_PROFILE_ENVELOPE_AXIOMS.txt",
+    "GAUSSIAN_MASS_PROFILE_ENVELOPE_COVERAGE.txt"
+  ]
+}

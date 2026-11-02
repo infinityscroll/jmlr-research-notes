@@ -1,0 +1,7 @@
+Actual regular negative-noise pair and fractional-routing comparison
+
+For n>0, actual Gaussian maximumMean(n)>=1, regular Gram delta_ij-1/(n+2), arbitrary finite ambient dimension, and 0<r<=1/2, regular_noise_pair_separation proves
+ T_{-r}g_j(x)-T_{-r}g_i(x) >= alpha*r*exp(-1-2*K*(1+log(n+2))*r^2*||P_B x||^2) * <B_i-B_j,x>
+whenever the score gap is nonnegative. Here alpha=referenceScale(n), K=facetGaussianConstant, g is the actual regularAssignment including symmetric ties, and P_B is the actual frameOperator. All constants and functions are the literal previously defined objects. No full affine-span assumption or spectator coordinate occurs in the exponential.
+
+The proof applies the checked actual Gaussian mass separation to labels j,i at physical shift -tau P_B x, tau=r/sqrt(1-r^2). The exact signed OU identity, r<=tau and tau^2<=2r^2 are proved. regular_noise_fractional_loss_lower sums this against arbitrary fractional simplex weights and identifies the reference potential using actual equal-offset mass symmetry. The endpoint pairs sum_i(p_i-g_i)T_{-r}g_i; this is the pairing itself, not twice that pairing. The corresponding noise-stability first-variation term has factor2. This package does not assert the complete negative-voting theorem.

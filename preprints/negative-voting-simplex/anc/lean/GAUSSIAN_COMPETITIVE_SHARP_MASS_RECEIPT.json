@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianCompetitiveSharpMass",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_COMPETITIVE_SHARP_MASS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 27,
+  "theorem_count": 26,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCompetitiveSharpMass.lean": "73005bec119765ba01c4ae03e59d43611da73e6e394147dd54c70d1f0cb9e227",
+    "GaussianReferenceSecondEnergy.lean": "bb90103f050d330036ca5cdc768515958723ac05d4ab48edd59c107734981933",
+    "NegativeVoting/VotingRange.lean": "e9fb64541c47bd8c0e00b5d4cb507458f5807d2992192311596f5e7bf0ad2a78",
+    "GAUSSIAN_COMPETITIVE_SHARP_MASS_AUDIT.lean": "9b453a8128c2fffe73323340a87a224099db5cd6e088d56c84dab6c38029d604",
+    "GAUSSIAN_COMPETITIVE_SHARP_MASS_AXIOMS.txt": "bf06949b71f0dbf93ce30c51b32590d7797fdfb91d5951c44971683d41d1c770",
+    "GAUSSIAN_COMPETITIVE_SHARP_MASS_BUILD.txt": "4f591ced04b558b630492eb64c3294781261e20723db0d131bcacb069277adc8",
+    "GAUSSIAN_COMPETITIVE_SHARP_MASS_COVERAGE.txt": "dd1a28155f23d8bd233016371f7ff3bda01bfdcaebe5a97ab163dc9bde13809e"
+  }
+}

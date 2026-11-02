@@ -1,0 +1,92 @@
+[
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets",
+    "theorem": false
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets_eq",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets_mass",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets_joint_C1",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets_joint_C1_at_mass",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets_mass_of_exists",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets.eq_1",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selected_mass_derivative",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets_eq_of_gram",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanSelectedOffsets.selectedOffsets.congr_simp",
+    "theorem": true
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianAffineLogMassBound",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_LOG_MASS_BOUND_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 12,
+  "theorem_count": 10,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffineLogMassBound.lean": "b204f61d079439c7ed493f46df204780a86ecb5cfae8f55edc77957443374bcb",
+    "GaussianAffineOperatorDerivative.lean": "97f3e9ea1117423d350a3565603eccc49ceae95647958d9034bb80b14d083b58",
+    "GaussianConditionalSecondMoment.lean": "a7bb768b228c4f307d8b41ede13cc658ea3fb3b8f7d77eaf98ca826a41e29197",
+    "GaussianRegularFacetMean.lean": "21d0fdcd29e5e8fb77fe624818df9faf95b6aca1f842092afd5ad9ab8c7e8b79",
+    "GAUSSIAN_AFFINE_LOG_MASS_BOUND_AUDIT.lean": "030deb011e2dea8cd913e955f07207c0b400c295ca5d4af44b56c76bfbd63135",
+    "GAUSSIAN_AFFINE_LOG_MASS_BOUND_AXIOMS.txt": "6a8298ed23cb32baf6321dd87852d9404f4fba52b691a4a6fc68c070fc22f0c5",
+    "GAUSSIAN_AFFINE_LOG_MASS_BOUND_BUILD.txt": "c5013b9f84e9b4694a0603ab810e16ca12144f6f2edac6cede929107a5b95646",
+    "GAUSSIAN_AFFINE_LOG_MASS_BOUND_COVERAGE.txt": "53e3de65ebc5ce12d55a8425932adb142a9026810867042fe22a6c917a1fb797"
+  }
+}

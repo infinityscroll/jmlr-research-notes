@@ -1,0 +1,39 @@
+ACTUAL RETAINED GAUSSIAN GRAPH GAP AND MIXED-CURVATURE CONNECTION
+
+GaussianFanRetainedCuts.lean derives the original cut constant
+  kappa = p0/(2*pi*ellMax)
+from actual winning masses >= p0 and actual edge lengths <= ellMax. It proves
+that deleting weights below tau loses at most tau*|S|*|S-complement| per cut.
+Thus tau*m <= kappa/2 retains cut constant kappa/2. Retained weights are literal
+thresholded intrinsic Gaussian facet weights, remain nonnegative and symmetric,
+and preserve every upper bound D on the original weighted row degrees.
+
+GaussianFanRetainedGap.lean combines the proved finite coarea and signed-square
+Rayleigh arguments with these actual Gaussian cuts. For centered real v:
+  ((p0/(2*pi*ellMax))^2/(32*D))*sum_i v_i^2
+    <= (1/2)*sum_{i,j retained} facetWeight_ij*(v_i-v_j)^2.
+The required scalar hypotheses are p0>=0, ellMax>0, tau>=0, D>0, the stated
+actual mass/edge/degree bounds, and tau*m<=kappa/2. No cut-expansion, coarea,
+Poincare, or spectral-gap estimate is assumed.
+
+For generic injective sites this is a statement about the literal facet
+formula. The full-rank Jacobian interpretation is used in the final affine-
+basis application, where that interpretation has already been proved.
+
+The affine-basis corollary uses exactly retainedOffsetEnergy from
+GaussianCovarianceMixedEstimate. The final
+canonicalOffset_control_from_actual_graph theorem inserts the proved
+coefficient into actual covariance-Hessian control, removing the earlier
+supplied Rayleigh premise. Its retained facet coefficient ceiling K remains
+explicit, along with the concrete mass/edge/degree/threshold bounds. These
+geometric inequalities must still be specialized to the main mass window.
+
+Constants are the proved nonsharp constants, not sharper manuscript values.
+For p0=c/m, ellMax=C*sqrt(L)/m and D<=D0, the coefficient has order 1/L;
+this scaling statement is arithmetic guidance, not a new Lean export here.
+
+Both new modules are audited over all compiled owned constants, including
+private/generated constants, with only propext, Classical.choice and
+Quot.sound allowed. Exact source closure, toolchain and mathlib pins are
+checked by verify_gaussian_retained_gap.py. The original KLS reuse/license
+pins are rechecked as part of the transitive Gaussian Cheeger dependency.

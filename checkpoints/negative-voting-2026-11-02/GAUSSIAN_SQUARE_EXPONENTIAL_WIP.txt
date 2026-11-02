@@ -1,0 +1,19 @@
+Work stopped at the user's request. No new proof work or audit should be inferred from this note.
+
+Unfinished source: GaussianSquareExponential.lean
+SHA256: 0c9ffccafe2a08c79649154557b06e7d1b38df76b0db052dcc4946f253e6deeb
+The standalone command lake env lean GaussianSquareExponential.lean completed with exit0. Its transcript is /tmp/negative-voting-square-exponential.log. One harmless unused-section-variable warning remains. This source is not registered in lakefile.toml, is not imported by the project root, has not received a source-backed Lake build, and has not received an exhaustive compiled-constant axiom audit. Treat it as an unaudited working draft, not a frozen theorem package.
+
+Actual proved source content:
+1. Integrability of exp(Z^2/4) under the actual standard real Gaussian, with integral <=2, derived from the Gaussian density and the ordinary Gaussian integral.
+2. For |s|<=1, actual integral exp((a+sZ)^2/8)<=2exp(a^2/4), with integrability derived.
+3. The same estimates for a+<v,X> under actual finite-dimensional stdGaussian, ||v||<=1, using the actual Gaussian scalar marginal law. Degenerate v is included.
+4. For any finite nonempty family of actual affine Gaussian scores with ||Bi||<=1, M=max_i|ai+<Bi,X>|, exp(M^2/8) is integrable with integral <=2 sum_i exp(ai^2/4).
+5. Exact eLpNorm of exp(M^2/(8q)), q>0, is (integral exp(M^2/8))^(1/q), and the preceding explicit bound follows. MemLp is derived.
+
+Remaining mathematical work for the parent task:
+- Bound the already-audited smoothPairError/r pointwise by C L sqrt(L) exp(M^2/(8q)), q=A L, L=1+log m, uniformly in the voting range r<=1/(m-1) for sufficiently large m.
+- Derive the eventual threshold and combine with the actual Gaussian moment bound. For shifted planes, the source supports arbitrary means ai; derive the required |ai|<=C sqrt(L) and bounded variances from the actual plane geometry.
+- The first two normal-derivative moment bounds and the required reciprocal-damping moments are not asserted by this file or by the frozen smooth-majorant package.
+
+A viable scalar route, not yet formalized: with W<=2L+2M, tau<=2r, and C=rangeFacetConstant, impose the eventual scalar conditions rL^2<=1 and 2560 C r q L^2<=1. They give Q=C(tau W sqrt(L)+tau^2 W^2)<=(1+M^2)/(64q). Use M^2<=16q exp(M^2/(16q)) and M<=1+M^2 to bound the prefactor. For 1<=q<=A L this yields a constant depending only on A and C times L sqrt(L) exp(M^2/(8q)). With q=A L and fixed A>=1, the finite Gaussian bound absorbs the factor m after taking the qth root. No new file for this scalar step was started.

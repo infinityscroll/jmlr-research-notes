@@ -1,0 +1,8 @@
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularFacetNeighborhood.facetRadius._proof_2","module":"GaussianRegularFacetNeighborhood","theorem":true}
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetNeighborhood.facetRadius_bounds","module":"GaussianRegularFacetNeighborhood","theorem":true}
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularFacetNeighborhood.facetRadius._proof_3","module":"GaussianRegularFacetNeighborhood","theorem":true}
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetNeighborhood.facetRadius","module":"GaussianRegularFacetNeighborhood","theorem":false}
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularFacetNeighborhood.facetRadius._proof_4","module":"GaussianRegularFacetNeighborhood","theorem":true}
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianRegularFacetNeighborhood.0.NegativeVotingRegularFacetNeighborhood.neighborhood_size","module":"GaussianRegularFacetNeighborhood","theorem":true}
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingRegularFacetNeighborhood.facetRadius._proof_1","module":"GaussianRegularFacetNeighborhood","theorem":true}
+REGULAR_FACET_NEIGHBORHOOD_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularFacetNeighborhood.regular_facetWeight_neighborhood","module":"GaussianRegularFacetNeighborhood","theorem":true}

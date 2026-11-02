@@ -1,0 +1,16 @@
+GaussianAffinePositiveMass: derived pathwise positivity
+
+A positive-mass finite Gaussian cap with unit normals has a point satisfying
+every defining inequality strictly: the finite union of hyperplanes is null.
+Every invertible affine pullback therefore contains a nonempty open subset,
+which has positive standard Gaussian measure. Consequently the entire actual
+near-identity path I+tA, tz has positive mass for |t|<=1 and ||A||op<=1/2.
+
+Only the original cap's mass is assumed positive. No positivity-along-path,
+interior-feasibility, or full-support hypothesis is supplied; those facts are
+proved or discharged by the actual standard Gaussian library theorem.
+This includes empty constraint sets and dimension0 whenever the hypotheses
+can be satisfied.
+
+Source-backed Lake build and exhaustive compiled-module transitive axiom
+audit passed for every declaration, using only the standard three axioms.

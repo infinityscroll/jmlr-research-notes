@@ -1,0 +1,12 @@
+'NegativeVotingFanCycle.faceDirection_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.mem_face_tangent_iff_anchor_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.mem_child_tangent_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceDirection_insert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceBoundaryNormal_mem_child_direction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.faceAnchor_insert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceDirection_rank_insert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceAnchor_insert_outward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.faceAnchor_norm_sq_insert' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.stratumDensityFactor_insert' depends on axioms: [propext, Classical.choice, Quot.sound]

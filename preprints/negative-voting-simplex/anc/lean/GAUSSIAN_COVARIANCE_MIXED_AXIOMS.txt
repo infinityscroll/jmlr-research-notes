@@ -1,0 +1,13 @@
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.retainedOffsetEnergy","theorem":false}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.offset_sq_le_refined","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.facetLogCoefficient","theorem":false}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.canonicalOffset_half_sq_le_curvature","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.facetLogCoefficient._proof_3","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.retainedOffsetEnergy_le_refined._simp_1_2","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.facetLogCoefficient.congr_simp","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.offset_sq_le_geometric_energy","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.normal_projection_pair_sq","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCovarianceMixed.facetLogCoefficient._proof_2","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.facetLogCoefficient_pos","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCovarianceMixed.facetLogCoefficient._proof_1","theorem":true}
+COVARIANCE_MIXED_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceMixed.retainedOffsetEnergy_le_refined","theorem":true}

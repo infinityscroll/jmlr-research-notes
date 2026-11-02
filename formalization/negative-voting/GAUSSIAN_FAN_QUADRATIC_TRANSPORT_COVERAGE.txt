@@ -1,0 +1,3 @@
+Actual quadratic fan derivative in one coherent affine field
+
+The module proves that a score-difference right inverse yields exactly the same joint normal/support velocity as the actual fan parameter map. The actual quadratic tested-cell derivative is therefore the literal cell integral of the proved affine transport bulk. A final theorem supplies the constructed score lift from genuine affine independence, itself derived from the positive centered singular bound, so no right-inverse existence or Gaussian transport conclusion remains assumed. This is a first-derivative representation for the forthcoming operator differentiation.

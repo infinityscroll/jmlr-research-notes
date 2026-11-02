@@ -1,0 +1,467 @@
+{
+  "checked_at_utc": "2026-11-02T08:08:36.425684+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "build_succeeded": true,
+  "all_owned_constant_audit_succeeded": true,
+  "owned_modules": [
+    "GaussianFacetNormalExtension"
+  ],
+  "owned_constants": 28,
+  "owned_theorem_constants": 26,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "constants": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance._proof_6",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance_quadratic",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.exists_extended_psd_factor_and_event_law",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.schurCovariance_symmetric",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.exists_extended_factor_and_event_law",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.schurCovariance_mem_plane",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.transportedSliceLaw_event_eq_cylinder",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance._proof_2",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance_eq_id._abel_1_2",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance_symmetric",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance._proof_5",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.schurCovariance_normal",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.exists_positive_psd_factor",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance.eq_1",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.schurCovariance_projection",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance_eq_id",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.conditionalMean_zero",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance._proof_1",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance._proof_4",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance_pd",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance_projected_pairing",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.symmetric_equiv_adjoint_apply",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance._proof_3",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance._proof_7",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.transportedSliceLaw_eq_projectedGaussian",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.integral_id_linearGaussian",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.extendedCovariance",
+      "theorem": false
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFacetConditionalPlane.cylindricalEvent",
+      "theorem": false
+    }
+  ],
+  "source_closure": {
+    "GaussianFacetNormalExtension.lean": "cfeebafa680bbd74068cddc05de57ab50e3dff05112e46f58773f61229a1f20c",
+    "GaussianFacetConditionalPlane.lean": "86c9b8d4e9f4c82df5c5887fd8b2e2321d2e2693411f951a62f277a3033d5b2a",
+    "GaussianFacetDisintegration.lean": "fe4451ccf59682a902909fa72f0dc768715c3a908e1f2da6db4150e3454bd169",
+    "GaussianFanCover.lean": "adcf4bd5a210309749f910ec60e61554e0b80396bf97d08ed5a8374fb17cd196",
+    "GaussianCapTailAndStrip.lean": "25ed1fa35fd09dc1fd97630e51ee5b5af47ee8038ce0405ae6b37d77bb43732e",
+    "GaussianSmallCap.lean": "90e1062d7a46a0a5bef9495cf8e211c84a54a0ae2328a7a88e2a4e8de447dfad",
+    "NegativeVoting/NoiseStability.lean": "f0544fc04fd58d75e624c7fd7929ffc71e758c2ead42f8800c958da0998f6aec",
+    "NegativeVoting/GaussianMoments.lean": "3fa960b1f4a0233ebcf5b6eb517305b713ce99ce15fff3815906b421600d2207",
+    "NegativeVoting/Integrability.lean": "421410bfbb3a1fc4f93f6aa06e93a49b75c10c1491244aa002ba58b571cc3226",
+    "NegativeVoting/Routing.lean": "c3cecd94f119728c0d07c2e5c74459b8dbcec1b395f6d536ffe6009f30d629a2",
+    "NegativeVoting/GaussianRouting.lean": "debfc8af92f119782ab22c6d990ad8ec70b8ca0f8758e88f93220080a6f9b4f6",
+    "NegativeVoting/RegularSimplex.lean": "39f0347728ea26e228bda19dcf3c3766b912ad63c623c0558e9d9eff96cce9d8",
+    "GaussianPositiveCovarianceFactor.lean": "2e84bd73452e5329769c29118f25cd70373fb085904217078acd40f11373c59b",
+    "GaussianCovariancePath.lean": "3d706e8bd9ef74698d18fa72971ef88f98a82a4c16dba24adaabc80552d0d78b",
+    "GaussianFanCovarianceValue.lean": "56a29b531acad81f5a5d4a42aab8c44ac843a38e99b50f9597f87b081f7df714",
+    "GaussianFanCovarianceLaw.lean": "578eeae94abf091086e3e7b626cb90a3faca8edfb9f94410e4cb6a059390395c",
+    "GaussianFanMassBase.lean": "4fe7277fac6a0bd825635b1c91317315f512bcee17eb99f85f15bd91b9c8835b",
+    "FSC/Support/Slicing.lean": "6d6c0df1ad29dfd42b5722dd17f70894c1544110c957fe888d64085e725c30f0",
+    "FSC/Support/Definitions.lean": "aded50fde42425ec7e93c45333f5406ee46a7f750287d263fc55142fb515bd96",
+    "FSC/Definitions.lean": "38aa259fffdafb3d05b18ab0947e0fd151b25fd7602e94ed0ba69ae6190085e0",
+    "WeakSimplexConjectureLean/Core/Correlation.lean": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007",
+    "WeakSimplexConjectureLean/Core/Matrix.lean": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e",
+    "WeakSimplexConjectureLean/Core/Euclidean.lean": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c",
+    "WeakSimplexConjectureLean/Core/Finite.lean": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a",
+    "WeakSimplexConjectureLean/Coding/Gram.lean": "2d0b2a08e71c088f854a94cd9948915a59fa510b33637813fadd9d8763ff5058",
+    "WeakSimplexConjectureLean/Normal/PDFCDF.lean": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec",
+    "FSC/Gaussian/SinglePin.lean": "21d7971ab4ca2aa4cf8c6edb01bb551a32716e2483e2f37554ad4ec9ca729b04",
+    "FSC/Gaussian/AffineLaw.lean": "88f54ccc3af63bd95e6a7a423a170c8fe81ad54aca7f67f0a00b2eafb8f52f1a",
+    "FSC/Gaussian/PinDefinitions.lean": "52f734d3c27c59633c02df7b244e838729df878d2276414579ff5178adee57c0",
+    "GaussianFanCovarianceHessian.lean": "16d21323bf6a870cd16c2723d7ca481693385039c0f540762a3eac02155df3a5",
+    "GaussianFanCovarianceEnvelope.lean": "e68617d947a4cc60e6eaaa7f3c6e20040949b692f922ec7622e72e5715b06cc4",
+    "GaussianFanEnvelope.lean": "c1b6a7b49b14594b93f3e7da8baae7c79517540a1c32206eebebd2cf150139aa",
+    "GaussianFanGradientDerivative.lean": "c31ac6ea58ad9e86d5eba3037ea57e755fc5949aef35a3549739588a8fab1b6b",
+    "GaussianFanSecondVariation.lean": "0596e4c998ce834763988e8660a28b70f2880fa7db5af3b5f02742a8ccceb85d",
+    "GaussianFanQuadraticHessian.lean": "cdedc59beb018598c7d29b418fdc3aff638d221ba34ca9aac6ae3caa068b9e72",
+    "GaussianMovingCap.lean": "cb83db8b81d03087beed5fb899c3d06d27fdcf934bf95231518ca4096c47fe65",
+    "GaussianFanScoreHessian.lean": "b4953166ce720bb16187aedb2bdc8414ad99d8e3912447026122d5da1e2e116f",
+    "GaussianFanMassJacobian.lean": "74ecc4012d2575b0729fb554427c6228f322c867aa43a4396206e95b103de18e",
+    "GaussianFanMassExistence.lean": "2c4a6cb9e6c18e479fe5298b4d7702ad53a5bcd3253f0db04045f3f545c8c95a",
+    "GaussianFanMassGradient.lean": "69da0b21c2a748ea2a977666d887529ae6acd9e77b2cea98a15ab9453623f231",
+    "GaussianFanMassMinimizer.lean": "0c1494d3b1760de63f9eb9932d97a0b71165de339a7994b7c748e9ab32c03310",
+    "GaussianFacetDegree.lean": "06f8af387de6141114904d4073c9df44d0d0c18b002fb27d7527bf2658a95642",
+    "GaussianWeightedFacetEnergy.lean": "8a39c98a49a16687ae1a8191f91d4f0dcdccb3853afcbd0c3900be60f07abd3b",
+    "GaussianNormalTrace.lean": "bfe30effbb36628c42aac724d7d5abd32a58225b7055ccbf7df0fcaa7b82bc32",
+    "GaussianHypercontractivityBridge.lean": "7462575223723cd082addb32a873ec780e0ecca54c69f1bc96e4429e4a792545",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanHypercontractive.lean": "530be6a241a7194ff8b7a9936ad86cceb5e3f08b8a6725457dcff06d5da5c692",
+    "MarkovSemigroups/Abstract/GrossODE.lean": "c27bac503b64be69f09b8c8d1330f9e4192e0510bc4c77f8ff1f9d7211b2d3d4",
+    "MarkovSemigroups/Abstract/Hypercontractivity.lean": "44be55e4e435300860332b876a259d0b04fcedb20e802091f8a31f1a79b49d0f",
+    "MarkovSemigroups/Abstract/DirichletForm.lean": "c085dfbdc6ff56aba00907f699f1d997c797909a4660eb0abef13cbf1fc9cc46",
+    "MarkovSemigroups/Diffusion/StroockVaropoulos.lean": "b75e7ebe154e68070af78284e75975ba8b27593b6fc1bab6144762ce893b7142",
+    "MarkovSemigroups/Diffusion/CarreDuChamp.lean": "734a2684be88a7d2c7d5ec5d2dc31d1f9f0f925f2ade1f42cdb117de7769bf54",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinBE.lean": "bbaa99dac505445ccb543678eff9ba5b86dabe781673004caad9d8123b2477e2",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLimit.lean": "3caaf6ceeec042f4707a94ec741ca0f721d81a6187194c02e54ce7d7486b6dd2",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanGeneratorLp.lean": "899c38a096d8852781d696fd31bfd1d07084bb0636b9ffcb203c0629d12fb9da",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanFinLp.lean": "8670fc9d39a2730a965731ce9c1df478e4e375044aa8f4a8c84215e11227dc42",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanFin.lean": "c883ce9a1b13ae8018d54c2e2d3440e4bc4adf83b2fc81db74a1bf2cd8d9ff31",
+    "MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean": "5e693d092721eaaa845ec7e5c2c3e050161440b88d5a14c0a59a28e11698b7a4",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean": "0b68c99b85b3be8e95b1d4f808dc5394333e0a43d657d6fd1a1eee59264e1dfe",
+    "MarkovSemigroups/General/OUEntropyDecomposition.lean": "27b8abb1f0673968782b19863449e14fff53184f81ffc4ed63fd916084ae8ac5",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean": "1587d69e4bf8bf481f4659f1dfaa7eb02733b99b61098fa2ff9e2ed04bfe22c1",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean": "dc98c0f4ca18bb65b2a66d9e33536dea6b22aeb833149b1377287cc07d2cf2e2",
+    "MarkovSemigroups/Instances/WorkInProgress/EuclideanGenerator.lean": "ceec1aecefd4ae5132685a0f7d0f48e07dd0dafe7db6e020d6e315884e5b1998",
+    "GaussianCapFirstMoment.lean": "8df4d3ae61c27ecf856e938c69c7bd837dc895c3eaf89d530d6ed7a17c5c03b3",
+    "GaussianCapCovariance.lean": "3d6cb79d8f4a48ff06b766adc5e1d7138c5dcc214ff3a952cd0d0170e56ed0db",
+    "PolyhedralSupportBoundary.lean": "f234c0e07e7935d2bfad6eb0fa33c6e5348c02d489daef56677db4027d3035d5",
+    "FSC/Support/QuadraticTangent.lean": "4292b223f3ef570c69bafe686109da25e6533540def13ff4ce7d93851e05b478",
+    "FSC/Support/Dilation.lean": "b36b1adfa7fbcc92408c99874ff3e4023968d826b6fa5e9cf0991c1aacba3db8",
+    "FSC/Gaussian/StandardDensity.lean": "521c45c94ad4ea9e6ac4de88827a19dcfef5f74168b228b13b3e1f2f61c81d64",
+    "WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890",
+    "WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean": "62fae25bff4f147a7565793479bc9146d6094ca7949c0fd18bfae627e560e985",
+    "WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4",
+    "FSC/Support/Differentiation.lean": "79ce8cacdd10ac0c1880cbef421a0395f385b6ee12a88500945836d0b2cdd188",
+    "FSC/Analysis/FinitePartialDerivatives.lean": "644663b75209dbb1ca02b0c2f547000da485714ffa9778a17df76b3477d5076a",
+    "FSC/Analysis/PartialDerivatives.lean": "67e3782c5ceb4185d5dac9fe0c2c9c2b90f9c1773cab4e6b4206b9199b44cd16",
+    "WeakSimplexConjectureLean/LogConcavity/Prekopa.lean": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896",
+    "WeakSimplexConjectureLean/LogConcavity/Basic.lean": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155",
+    "WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04",
+    "WeakSimplexConjectureLean/LogConcavity/Indicators.lean": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96",
+    "WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff",
+    "GaussianMassCentroid.lean": "8de11a80bd0c5ee12aff209f28ffe5f014877c329b321a6d80dea96820e21e29",
+    "WeakSimplexConjectureLean/Normal/TruncatedMoments.lean": "f768dfa4a020b9c2232163bc80ee13773313a5787d39021fe239ec741eb59456",
+    "GaussianMovingSlab.lean": "aecc1fc483dc91c02c709e41fb57a8dcef8f591b1a86340a23e06f970f78a5f3",
+    "GaussianCapTelescoping.lean": "8c094d04138132d23817457ffc467f8d3a111b944f81b90c85535019c47d7c76",
+    "GaussianFanTestedCells.lean": "ab1bf11f30855f11d16939b633948f86106f96e27ca10f1f99d9ac506efb0f7c",
+    "GaussianCapSecondMoment.lean": "7af4717e1073947f1f1fbfa12cbabafda33f029bad45683f43d7a1742efdd0e9",
+    "GaussianCapMixedMGF.lean": "5338a4112fd389e14c2d7a4bf11c4a1142f07445e19953ce2afd30ccc3671ace",
+    "GaussianFanMovingCells.lean": "61a492d93167d58269f2f2be5c728bb63fff225233649541989587de7949c745",
+    "GaussianFanCentroidBoundary.lean": "5644dca1efe29383052d8b9e03a3f7434bd3c226510748046855c989e49dcb5e",
+    "GaussianFanCanonicalOffset.lean": "6b2fbc9e9d20c4c1815ab81de0e852b23e381a4b127972fe660f28acf4179217",
+    "GaussianFanOffsetMinimization.lean": "18cbc41fb5d2ee07ffdc9e59bd56e21e4006429ef0d6cb2472810df3248ee512",
+    "GaussianFanJacobianPseudoInverse.lean": "80fc8fbee38a3519bc8b02ad6438aaff879ab54ae7709545fc7efdd09b374bd7",
+    "GaussianFanMassInverse.lean": "61b0c46e8293d305d084402cf39c4fc9b2090db72d0629371561f156aa6cf002",
+    "TauCeti/Analysis/Matrix/SchurComplement.lean": "1f40ffd975c1006369e64a892cdb8b46461ac6d4e7bff2fb91bb197bc5cb491d",
+    "TauCeti/Analysis/Matrix/CovariancePseudoInverse.lean": "a3fc783940ca3cc615cd84bf991c58d38aed37f3d100db576ccf0795f455f3c8",
+    "TauCeti/Analysis/Matrix/FunctionalCalculus.lean": "13769968b05eb84a5b661732c3425ea6b7d93801a0062fd921215a93ecdeeb79",
+    "TauCeti/Analysis/InnerProductSpace/PointSpectrum.lean": "83ed3ec7e6f31f2fe639d230842f583e416ea385d326d945ec57fddfc78ca15c",
+    "TauCeti/Analysis/InnerProductSpace/CourantFischer.lean": "62d35ded0fb5370caea3932912982616d88de38a112ea32f368698d698a1f0ca",
+    "TauCeti/Analysis/InnerProductSpace/BasisSpan.lean": "5235ba0d25c6c08aab3b88ec2de244d5f0546d24a9814c619f446063be672fca",
+    "TauCeti/LinearAlgebra/Dimension/Submodule.lean": "2765bd0fd51cbe14a82f4564a1ef4da84d5186a58f9ed07996ddec9128f5a8e4",
+    "TauCeti/Algebra/Module/Equiv/Basic.lean": "68d9c7da276778cd7f2086186626fb7186fff1d0cf5fa0c3788a1780e8f942c3",
+    "TauCeti/Analysis/InnerProductSpace/Spectrum.lean": "66edca14f699adf7166968ac595bf4eb07b14fe3959239c984cfd7306b8dd679",
+    "TauCeti/Analysis/InnerProductSpace/HilbertBasis/Basic.lean": "a67be884d9de4e9357b9904ac8b5b850ba2a06abcf86e92b2d0944e05b2c3eb6",
+    "TauCeti/Data/Fin/Tuple/Sort.lean": "3445e4f75c62855eb9f4d5330e83dc3a586b92430bd39718a808d9b53dfbe18e",
+    "TauCeti/LinearAlgebra/Eigenspace/Anticommute.lean": "259cbca1b8cb2c45e4c5ef5c10551d0981ed2bd578d45ee8c2111a34a0ac7897",
+    "TauCeti/Analysis/InnerProductSpace/Symmetric/FunctionalCalculus.lean": "83b7af3df2325eaef93474471c15914effa3a65e70deb459a1cf5c219fb83cf5",
+    "TauCeti/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Continuity.lean": "851829b20d28562c7e698426b29a48268692e2fb27a2de7d9baf71a4898a3b0b",
+    "TauCeti/Analysis/Matrix/L2OpNorm.lean": "9d0fadee3d3f5f5c8be50bfc5c19513249403971be59f037680bc6a47d9ddd32",
+    "TauCeti/Topology/Instances/Matrix.lean": "1fe63aac133539fefb3c42f5e3766f382a07065740eb48d6ae26f01fc80f35f7",
+    "TauCeti/Topology/Algebra/IsOpenUnits.lean": "dec77c143f287459419d10d863869aa41070877a01d7038f02af733d489db4a3",
+    "TauCeti/Analysis/InnerProductSpace/MoorePenrose.lean": "b271e5b434e4ee40d85c7984b7f88085bee4d0261adf6a1159a72755905e12db",
+    "TauCeti/Analysis/InnerProductSpace/SingularValues.lean": "c87ef0b68457bee4c9181c0137627aa24a47b550d85d8fdc711f2ac10da1abb7",
+    "TauCeti/Analysis/InnerProductSpace/Adjoint.lean": "32c96446b8b247e47be6da494728bc5c8362636c96e3a87d6682b529b9e9482f",
+    "TauCeti/Analysis/Normed/Operator/Basic.lean": "facb3e3d2b6e66023ffea30e4d39eda5e86a08eee73c89e827ce8757d4799261",
+    "TauCeti/Analysis/InnerProductSpace/Positive/SquareRoot.lean": "379a750063e7f80d8e2bccca9a8fc09232303315d9086a28081d221d9b940b4f",
+    "TauCeti/Analysis/InnerProductSpace/RangeProjection.lean": "436084beaa74ebd69d9c8b031029f34228d1402023de10d7ca45a7d5fda51995",
+    "TauCeti/Data/Finsupp/Antitone.lean": "1560d3b49995b4675f37b809e0adf135c39d0fc07c765aec9f0e25ecb63e157f",
+    "TauCeti/LinearAlgebra/Eigenspace/Comp.lean": "e47ff654d227c3ffe2da0252e7e6c6636f2d836090cd40019197dc1513092ef7",
+    "TauCeti/Analysis/SpecificLimits/RegularizedInverse.lean": "74a19a5dda366577b6506048f592b2276498f96fbe3d95d6f87cdc06e76c14a1",
+    "TauCeti/LinearAlgebra/Matrix/Block.lean": "fc3f63a0e8620de6d65de1dabe3584b640e3a824c44fa65af9abfaf1bd94a0ca",
+    "TauCeti/LinearAlgebra/Matrix/SchurComplement.lean": "f411bcddb40863ce01d18c8478d815a6e3a59e0ef2d95aa73b0ae950ea2e4694",
+    "TauCeti/Analysis/Matrix/PosSemidef/Block.lean": "67cec6877bb8152137dfc44453541f115f4ca7a5f9649c3eedc7072fd84a18ad",
+    "TauCeti/LinearAlgebra/Matrix/PosSemidef.lean": "9bc0bd49d7c8371a3d82a156b45f77e7c15563d09cdf6b10a767bef682432ee2",
+    "TauCeti/Compatibility/ProperStar.lean": "1bc70f2cf1a25109f27b4d5aa7d5db07ac7edab6607935bd35a00c81a001dd61",
+    "GaussianCovariancePathRegularity.lean": "a67b02af2b8f9ec4f5d292123532839c8f208c989fa87e83bcb7af3fe4d9c599",
+    "GaussianFanOptimizedValue.lean": "c91c818a974f3a4c95053c9261696068524345c3b3e6eb8e3c21b0a8471c9cc7",
+    "GaussianFanJointInverse.lean": "c96265b353103bb22321e4b0201c9add3a273774c696fe04ccf2494b3cb156c5",
+    "GaussianFanJointMass.lean": "d09b38b9fe746aff7b8ccda51cb6ebd4a9bdca6cbacd7fe5d0796a9c67fde03e",
+    "GaussianMovingFaceMoments.lean": "a89f5d5bc5804ddeae096e9104cb122e86d82b079107cd4a8151777391d84ee9",
+    "GaussianCovarianceRealization.lean": "6d172d5aa631386850eda1e10dcfcfba387a65603d6ec2c72a83e55b4dd03da7",
+    "GaussianCenteredParsevalBasis.lean": "a2cc5884f928302df1ef2f615fae62962d1f9b192cbd28ef724b3466985a5d1f",
+    "NegativeVoting/RegularSimplexExistence.lean": "5e1418d50a4823ab672f1e4a9f7dc48ab2de739fcbee68da0b3f06f6052c2dec",
+    "NegativeVoting/RegularSimplexCentroid.lean": "eed5595cbd9ee4f34313767ff17bdef3988800a8f22729489bc2d84f1ffd3e58",
+    "NegativeVoting/RegularSimplexMoments.lean": "201728484dbac68af1331e45398bbe79b2381b2f16f6616f2644f5bfa46c895a",
+    "NegativeVoting/GaussianCentroid.lean": "f2f8d1645d268bc344ed6de1b4699571ff1007a7a7f42728b2d3190c96965c67",
+    "GaussianCentroidEnergyAttainment.lean": "a1af75be52752974f7eea91507cc3178010ec506473de65bd716048f6ba6702d",
+    "GaussianAssignmentDuality.lean": "0b4187dd807506b9fcc455c26e14d499757cd2ffd4f96250736acfcbae5bdcfb",
+    "GaussianRegularMaximumMoments.lean": "9de6407a1ee4bdb2d4a45be6111ed64d1af5fcb027f98de165c2ddc0820048ad",
+    "GaussianMaximumLocalization.lean": "8335c140d25c4af824c8b97d805591e65462b3b5ab74858a7fd7afe4aa8f90a0",
+    "GaussianMaximumSecondMoment.lean": "05e98a06056f329b89258cbaf1e8c3a17f19ca6e8f4e98601ef5269be3df8f1c",
+    "GaussianMaximumMeanBounds.lean": "40023dc8f24586bb9f802242f2b6fa4c40b6ebe71a9e6f9fed80ac4443b93691",
+    "GaussianMaximumTailMargins.lean": "01496d8b8ea0a8f35b4954b5a4bb642f61a50e18184cae885630af22055f2924",
+    "GaussianTailRatio.lean": "180214d311c08738eb2410399bea424804eeec76bb8d2eb373bf1b348bd99529",
+    "GaussianMaximum.lean": "1c83884ce61786f8efc96d91adf4dd3ac19650363771842b100326afe39398ea",
+    "WeakSimplexConjectureLean/Normal/Mills.lean": "92b5f4e74b4bc1f94ee816097dc8ba149d335cf1c7f50bd7c7020ca3ceaf3e96",
+    "GaussianDoubleExponentialIntegral.lean": "8d8fb410b3cb324927cbe8833e37a2d81b1be8c2af2db39894d2e707fb0bc63b",
+    "GaussianSecondChaos.lean": "030b4cc1fca671017e1f6921abb490f51b7aade54da810203102fde9a43f3dbf",
+    "GaussianSpectralBridge.lean": "6a06c68a17eb334a1c14b3f810d337918cf964e3891fdc5d423f384efb96fa13",
+    "SlowEquilibration/GaussianNoiseL2.lean": "9fc2cec9062be30f9538cffded831c23a4ad7535f359533dc169c7e5fa9a335e",
+    "SlowEquilibration/Upstream/OAI/Computability/MinUncut/GaussianHermite.lean": "ad978785737df60d3fcaf588f4efd20e20e08f36d8e8d7eb4b2d4a0f6a3ad2af",
+    "GaussianCovarianceStrictConcavity.lean": "285212a3995e7abfa02b578e117356c62428c51cc70d9f092dfa8739f5664272",
+    "GaussianCovarianceConcavity.lean": "a16df656d33af8b4900f80243285854e8d35169c1ef1b2b31c93324a0df9d137",
+    "GaussianCovarianceRefinedCurvature.lean": "b978b70e25fcb3d11775593fd2613c38bc14bee6bfe4b16980801fb0e66d365d",
+    "GaussianAffineBasisLower.lean": "2fdc1d4efc06ca233afd1f7f67c950407483619e2319e9330ae352238b64528c",
+    "GaussianFanCycleGeometry.lean": "175c71ce79ede1d5f40989013a532895001bed9b16273afe55ca250ebabac11b",
+    "GaussianFanCycleHessian.lean": "b04a2517219ed4c366dcfdb1d1deb1eab4423a9ba54fdf832fcd180954b59a81",
+    "GaussianFanCycleQuadratic.lean": "7d53ee656da863012e1586de018ae3f57fc65fc83f8a333a003b5688950f2710",
+    "GaussianFanCycleAnalyticBridge.lean": "94831a417d72e356be19259757232134aa4906f44aa701586ea89c59203d8037",
+    "GaussianFanCycleForms.lean": "cf28e6e5edfcbabb484599dec30e1453ab381addecf3728ad44b1c6f181afd39",
+    "GaussianFanCycleSlice.lean": "51d9ccfd530b2395bf56a425588f4cf958ae86249412163bf2f1dd09178f383c",
+    "GaussianFanCycleNested.lean": "1ac42db25084fcf11a3383d14aae01e24eff40efb11d02abb315e3b2d198687f",
+    "GaussianFanCycleCoordinates.lean": "e82177f37f3b6a9450a7e2943b2f350a140103a110a94cb7e839b416848bcf8c",
+    "GaussianFanCycleStrata.lean": "2b732cebc0a027884256a265fd1e329ac9378a25784544b570e35e4ed9eefaff",
+    "GaussianFanCycleGram.lean": "08038fb1f6fb387e391d49d6813967de9b33c13e473bee01dedbc6a3ba4890ae",
+    "GaussianFanCycleGauge.lean": "357e5948c574cf19e0bc1416925d95aa699e31caa807bce1098929c9828e5ee2",
+    "GaussianFanCycleComplex.lean": "034b7690005971fd7ff623e75b23dfecdbfd2436fbe408e5e38e2d2a0e614bfd",
+    "NegativeVoting/WeightedGauge.lean": "20e006a74bd7e41d4e2001c1d609ca46afdbdd3a8c8cb9ea6c2769a90ea9df4b",
+    "GaussianFanCycleMoments.lean": "f69b4812377960064289925a0203f1eadb920b30926f484139f63074f5b42734",
+    "GaussianFanCycleDeficit.lean": "81f2945b95858abdb4c22dc57466add9ed87bd3b4498c4af50b5608cf17267f9",
+    "GaussianFanCycleCoefficients.lean": "0b2fd92b1528ff018fa30094913d2880b03efde88c7ea5bc360b65551659302f",
+    "GaussianCapCovarianceGap.lean": "84cd487e21142cab8a9d4e67a48869d788a1681158c1b31bfe98bc3b83dfdfab",
+    "GaussianFanCycleFlux.lean": "40d18787c5738dfa25f638dd01ade52ad7a9e00d11fcd0d05c1e5faa89788f2f",
+    "GaussianFanCycleResidual.lean": "c0ba1da9d793262388f5f94b5bccc92a1e5d01f86e85f09110dfc5772876e621",
+    "GaussianFanCycleBalance.lean": "77bdc4c96ea12fd3cc2b21683ee76da0e54cda8d4c466dbc082188b47a576152",
+    "GaussianFanCycleFactorization.lean": "9c2308809406fda0936e29dbe61eda74c0301bbf8b2d4ee276a4c495e7af0de8",
+    "GaussianFanCycleEhrhard.lean": "24723d1fb6e5cd9906c23f177f5a5b309d608e2983812b4cdad17e605ab134d5",
+    "GaussianEhrhardCoefficient.lean": "c3b1e8353541d10ab47e1e3d27724fb41bd965bdfc8914eb1885662d21261a54",
+    "GaussianEhrhardMomentBridge.lean": "409b550c7d6af48e66f5130e45747d945b8114aa451fa70c24b5f69f51a8fae3",
+    "GaussianEhrhardCurvature.lean": "d5c0ae2d3d92b1088d609bf25c178976d7115beb9992a6f1a06d42dbbd2e7120",
+    "GaussianPolyhedronEhrhard.lean": "8b8f04a015a795a78d8c8771d135974b9cca98ba352421bc33a458823c516e28",
+    "GaussianSoftPolyhedron.lean": "6e0bdcec9d704051af7e64af4154ee80a179a2bf2279bd85d0488fd1bfb7f8c0",
+    "OAI/Probability/GaussianPropeller/SmoothedConcavity.lean": "11d64faced9edf31cfa8c95ea82ab982d24b2359bbb62de882bfe18cd6b5a2d4",
+    "OAI/Probability/GaussianPropeller/HeatMaximum.lean": "a787f10ef7eb8504a1504e179034ac154a7dc1b8e3193c71c735cfbde858b25f",
+    "OAI/Probability/GaussianPropeller/QuantileCalculus.lean": "1722faea4717eccc24104f5418f35438258df0f52c0270ca682d202f2bc2c989",
+    "OAI/Probability/GaussianPropeller/Quantile.lean": "04b2f05102b1e09db83a71b5752ab8e2bdcfded91128b5ba7645978bb5934cc7",
+    "OAI/Probability/GaussianPropeller/HeatConvolution.lean": "da7a2cc29ecac8cec11c2ff8436d6ae89a3e65ecb708fd81f965f917409fd6c4",
+    "OAI/Probability/GaussianPropeller/Stein.lean": "e1352aaa2b2e14ad98170735010718a6153aca1177aa95b77c6f4c47ff9fb63c",
+    "OAI/Probability/GaussianPropeller/Translation.lean": "d4b1eeb028d84e9442427c51e376d43957b40629b26249e95b75503e3caabac9",
+    "OAI/Probability/GaussianPropeller/Gram.lean": "5149cf694330be22a1a69e9a86097b31c4cc20ddab89726c93d8a704bdfb469f",
+    "OAI/Probability/GaussianPropeller/Deletion.lean": "e6bf15ba09ec69d2285d29b6955e723758ef253081da7e79af6bafccdfe5087f",
+    "OAI/Probability/GaussianPropeller/Dual.lean": "f58861ba0168eaed0aa3a387347c2088179144270a0a697e50734411f07ab4ca",
+    "OAI/Probability/GaussianPropeller/Moments.lean": "74730af44b72b567814282c4a94cd95e16bf6367a9a510bd88a917bfa62655d9",
+    "OAI/Probability/GaussianPropeller/Model.lean": "71279fcc8cae39a4abb9aae802d64d1830d26aee301ec1731ad3dfb9bff18df2",
+    "GaussianFanValueDerivative.lean": "aa1be8776ed55bbea00a9d9ba1e11b1175bd6cf05544bd1ddcf2c54cd449bed5"
+  },
+  "scope": "The actual Schur slice covariance plus the unit-normal rank-one identity is positive definite. A positive semidefinite invertible symmetric factor is derived. Projection of its actual affine Gaussian equals the literal transported slice law, and every measurable planar event has exactly the probability of its cylindrical extension under that ordinary affine Gaussian. No Gaussian-law or square-root-existence premise remains."
+}

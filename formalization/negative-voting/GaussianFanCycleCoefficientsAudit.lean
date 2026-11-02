@@ -1,0 +1,17 @@
+import GaussianFanCycleCoefficients
+
+#print axioms NegativeVotingFanCycle.cycleEdgeWeight_pos
+#print axioms NegativeVotingFanCycle.cycleTriangleWeight_pos
+#print axioms NegativeVotingFanCycle.cycleTetrahedronWeight_nonneg
+#print axioms NegativeVotingFanCycle.cycleTriangleWeight_swap_first
+#print axioms NegativeVotingFanCycle.cycleTriangleWeight_swap_last
+#print axioms NegativeVotingFanCycle.cycleTriangleWeight_cyclic
+#print axioms NegativeVotingFanCycle.cycleTetrahedronWeight_swap_first
+#print axioms NegativeVotingFanCycle.cycleTetrahedronWeight_swap_middle
+#print axioms NegativeVotingFanCycle.cycleTetrahedronWeight_swap_last
+#print axioms NegativeVotingFanCycle.cycleMean_barycentric_outside
+#print axioms NegativeVotingFanCycle.cycleTriangleWeight_facet_mean
+#print axioms NegativeVotingFanCycle.cycleMean_swap_first
+#print axioms NegativeVotingFanCycle.cycleMean_cyclic
+#print axioms NegativeVotingFanCycle.cycle_weighted_triangle_alternating
+#print axioms NegativeVotingFanCycle.cycle_weighted_tetrahedron_alternating

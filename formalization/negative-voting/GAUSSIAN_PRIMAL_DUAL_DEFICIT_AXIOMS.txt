@@ -1,0 +1,5 @@
+GAUSSIAN_PRIMAL_DUAL_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPrimalDualDeficit.feasible_covariance_deficit_bound","theorem":true}
+GAUSSIAN_PRIMAL_DUAL_DEFICIT_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingPrimalDualDeficit.row_deficit_from_primal_value._simp_1_1","theorem":true}
+GAUSSIAN_PRIMAL_DUAL_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPrimalDualDeficit.feasible_centroid_norm_le","theorem":true}
+GAUSSIAN_PRIMAL_DUAL_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPrimalDualDeficit.row_deficit_from_primal_value","theorem":true}
+GAUSSIAN_PRIMAL_DUAL_DEFICIT_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingPrimalDualDeficit.dual_mass_shift","theorem":true}

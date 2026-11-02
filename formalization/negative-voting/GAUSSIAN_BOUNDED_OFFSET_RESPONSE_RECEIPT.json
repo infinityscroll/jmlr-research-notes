@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBoundedOffsetResponse",
+  "source_sha256": "2ddacd4bc3b4b46a3cb075eda7eed8c0f341d438061d41a0fd90bc290848fcba",
+  "source_lines": 127,
+  "source_theorem_declarations": 5,
+  "compiled_constants_audited": 12,
+  "compiled_theorem_constants_audited": 10,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual selected-offset curve along a positive centered mass direction is C1; differentiating actual Gaussian masses gives J hprime=v. In the balanced mass box with bounded rows, hprime dot v <=32768 pi^2 (1+log m) sum(v^2). No derivative, inverse Jacobian or response premise is assumed. Qualitative affine-basis hypothesis remains. No singular selected inverse, integrated Taylor estimate or offset-energy certificate is asserted by this module."
+}

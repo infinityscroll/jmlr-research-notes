@@ -1,0 +1,9 @@
+ACTUAL JOINT GAUSSIAN FAN INVERSE AND MASS-PRESERVING CURVES
+
+The actual map (B,h) -> (B,centeredMass(B,h)), with h in the literal centered gauge, is C1 and has an invertible derivative at every base configuration with a positive centered singular lower bound. Its offset block is identified by uniqueness of actual Frechet derivatives with the previously derived strict positive Gaussian mass Jacobian. Finite-dimensional injectivity supplies surjectivity; no inverse or invertibility premise is supplied.
+
+The inverse function theorem constructs an actual local C1 joint chart. Throughout its open target, the inverse retains the input rows and realizes the literal Gaussian cell masses in centered probability coordinates. A positive prescribed probability vector obtains its base offset from the already proved coercive existence and strict-Jacobian uniqueness.
+
+Principal curve endpoint exists_C1_offsets_along_rows: any C1 row curve at zero and any centered base offset produce an actual C1 offset curve, anchored to that base, centered at every parameter, and preserving the actual initial Gaussian cell masses on a neighborhood of zero. exists_C1_offsets_prescribed_along_rows additionally derives the base offset from an arbitrary positive probability vector. Thus optimizer-path existence and regularity are conclusions, not hypotheses.
+
+The chart is local. No full negative-voting theorem, cycle-refined covariance inequality, or optimized covariance concavity is asserted by this module. The derived actual offset curve is an input available to those subsequent proofs.

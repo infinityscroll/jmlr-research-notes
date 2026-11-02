@@ -1,0 +1,7 @@
+Actual unique covariance optimizer continuity.
+
+selectedCovariance is selected from the proved genuine global maximizers of 2Gamma(C,p)-trace(C) on C>=epsilon I, and lies in the derived compact region independent of p. The final selectedCovariance_continuous theorem proves continuity as p ranges over the actual positive probability simplex, for every epsilon>0 and actual affine basis b.
+
+The joint objective continuity premise in the intermediate closed-graph adapter is discharged by operatorValue_continuous_joint_positive and penalizedValue_continuous_joint_region. These compose the proved full covariance/mass C1 chart with literal positive covariance and probability coordinates. The compact-target graph is characterized by actual maximizing inequalities; its uniqueness is derived from strict concavity. No selected-optimizer continuity, compactness, uniqueness or existence is assumed in the final theorem.
+
+Local Lipschitz continuity and differentiability of the optimizer are not asserted. This is a component, not the full negative-voting theorem.

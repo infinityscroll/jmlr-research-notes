@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianCovarianceOffsets",
+  "sourceBackedBuild": true,
+  "constants": 12,
+  "theoremConstants": 10,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianCovarianceOffsets.lean": "2aba9eadb4e56868363fa30ba13745f4e8f21d4a0c1ec6f5adf7f9d66e7b74cf",
+    "GAUSSIAN_COVARIANCE_OFFSETS_AUDIT.lean": "c46cf29921f175dd9aaede1b705a9d0bae3e93468e7fd9400f8127e99a81713e",
+    "GAUSSIAN_COVARIANCE_OFFSETS_AXIOMS.txt": "da9a3b6133fe7d5f610d781cd2e1f0c92956456023448da2e08863abe32bacc2",
+    "GAUSSIAN_COVARIANCE_OFFSETS_BUILD.txt": "942e19b3a502807da58c412ed2275fd4635f08bebc4c7d1cc50cc19e24fb118d"
+  }
+}

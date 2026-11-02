@@ -1,0 +1,11 @@
+Actual Gaussian covariance boundary continuity and closed optimizer graph
+
+Source-backed build and exhaustive axiom audit passed for all 41 owned compiled constants (34 theorem constants), including generated names. All use only propext, Classical.choice and Quot.sound. Compiler/mathlib pins and all175 local dependency source hashes are preserved in GAUSSIAN_COVARIANCE_BOUNDARY_VERIFICATION.json.
+
+GaussianFanMassContinuity derives a bound on the actual centered-offset minimizer from the already proved coercive dual. On p_i,q_i>=delta>0 it proves |Gamma(B,p)-Gamma(B,q)| <= card(labels)*expectedMax(B,0)/delta * ||p-q||. This includes coincident rows and singular row systems. The genuine row Lipschitz estimate is uniform in the masses; combining the two gives actual joint row/mass continuity.
+
+GaussianCovarianceBoundaryContinuity composes this with the canonical PSD square-root rows and proves actual joint mass/covariance continuity at every PSD matrix/operator, including zero and deficient rank. It also proves the same continuity for the actual penalized objective. No supplied continuity hypothesis remains.
+
+GaussianCovarianceClosedGraph proves the whole actual optimizer graph closed when the nonnegative covariance floor, positive masses, and PSD covariance vary. The moving feasible cone is handled by translating every fixed PSD competitor by epsilon*I. A convergent genuine optimizer family with floor tending to zero consequently limits to a genuine global maximizer on the full PSD cone. No continuous choice or uniqueness of zero-floor optimizers is assumed.
+
+This package does not by itself prove a uniform neighborhood theorem: the common compact optimizer region and the corresponding uniform transfer are in the subsequent package under development.

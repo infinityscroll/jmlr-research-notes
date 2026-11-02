@@ -1,0 +1,13 @@
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineCapDerivative.affine_rankOne_cap_eq_preimage._simp_1_1","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.hasDerivAt_affine_rankOne_capMass","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingAffineCapDerivative.affineRankOneVelocity._proof_1","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.affineRankOneVelocity.eq_1","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.affineRankOneVelocity","module":"GaussianAffineCapDerivative","theorem":false}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.face_affine_integral","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.capJointDerivative_rankOne","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.capJointDerivative_one_ambient","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.affine_rankOne_cap_eq_preimage","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.capTest_one","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.tangentFace_integral_eq_slice","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineCapDerivative.hasDerivAt_affine_rankOne_gaussian_mass","module":"GaussianAffineCapDerivative","theorem":true}
+AFFINE_CAP_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingMovingCap.capTest.eq_1","module":"GaussianAffineCapDerivative","theorem":true}

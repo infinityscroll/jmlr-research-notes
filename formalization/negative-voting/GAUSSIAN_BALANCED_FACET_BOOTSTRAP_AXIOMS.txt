@@ -1,0 +1,1 @@
+BALANCED_FACET_BOOTSTRAP_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBalancedFacetBootstrap.balanced_covariance_shift_bound","module":"GaussianBalancedFacetBootstrap","theorem":true}

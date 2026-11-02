@@ -1,0 +1,7 @@
+Actual exterior covariance/orbit consequences
+
+For c∈(0,1], L=1+log m and the exact local Gaussian curvature radius c/L, the true regular-covariance deficit satisfies R≥c/(240 m³ sqrt L) when the literal regular-orbit distance exceeds1/m and the actual row energy is at most2w. It also satisfies distance²≤(144/c)m sqrt(m) L R. Singular rectangular rows and duplicate rows are allowed. No attainment of the orbit-distance infimum is assumed.
+
+One eventual threshold precedes every ambient dimension and row system. The actual competitive-assignment corollary derives centered Euclidean centroid rows and the row-energy cap from arbitrary completed-measurable fractional Gaussian competitors, via an actual coordinate isometry. It retains0<r≤1/(m-1).
+
+The LocalGaussianCurvature predicate remains an explicit premise here, and is discharged separately by the newly compiled GaussianGlobalCovarianceDeficit. The different transfer R≤D/r is not assumed or inferred. All 29 compiled owned constants are transitively audited, standard three axioms only.

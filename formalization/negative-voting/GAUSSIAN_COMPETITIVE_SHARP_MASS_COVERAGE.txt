@@ -1,0 +1,27 @@
+GaussianCompetitiveSharpMass: actual cubic mass localization
+
+For m=n+2 labels, the competitive assignment f is genuinely AEMeasurable
+and almost everywhere simplex valued under the finite-product standard
+Gaussian measure. Its mass deficit delta, first-chaos energy W, second-chaos
+energy A2, and negative-noise stability are the actual previously defined
+integrals and spectral coefficients. The regular comparison is transported
+from any RegularSimplexGram realization, in any finite ambient dimension.
+
+The endpoint eventually_uniform_sharp_mass_bound proves delta <= 512/m^3
+for every correlation magnitude 0 <= r <= 1/(m-1) and every actual competitor
+whose noise stability is at most that of the regular reference. One eventual
+threshold is chosen before the ambient dimension, reference, assignment and r.
+The case r=0 is included without dividing by r.
+
+One analytic premise remains: for one fixed absolute K >= 0,
+  W <= w + K (1+log m)^2 delta.
+The endpoint does not prove that mass-value estimate. Every other input is
+derived: the actual signed spectral comparison, the actual affine second-chaos
+tangent, the regular second-chaos gap in [0,50/m], the total-energy bound,
+and the limiting scalar coefficient. Thus this is an honest conditional
+localization theorem with exactly the currently pending mass-value input;
+it is not the full negative-voting theorem.
+
+Actual source-backed Lake build and exhaustive compiled source-module axiom
+audit completed successfully. The audit includes private/generated helpers
+and rejects any axioms outside propext, Classical.choice and Quot.sound.

@@ -1,0 +1,41 @@
+⚠ [3271/3272] Built GaussianCovariancePath (6.7s)
+warning: GaussianCovariancePath.lean:22:0: automatically included section variable(s) unused in theorem `NegativeVotingCovariancePath.diagonal_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCovariancePath.lean:30:8: automatically included section variable(s) unused in theorem `NegativeVotingCovariancePath.diagonal_one`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCovariancePath.lean:41:0: automatically included section variable(s) unused in theorem `NegativeVotingCovariancePath.diagonal_smul`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCovariancePath.lean:45:0: automatically included section variable(s) unused in theorem `NegativeVotingCovariancePath.diagonal_add`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCovariancePath.lean:70:0: automatically included section variable(s) unused in theorem `NegativeVotingCovariancePath.eventually_positive_coefficients`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCovariancePath.lean:77:0: automatically included section variable(s) unused in theorem `NegativeVotingCovariancePath.hasDerivAt_covarianceFactor`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCovariancePath.lean:112:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3272 jobs).

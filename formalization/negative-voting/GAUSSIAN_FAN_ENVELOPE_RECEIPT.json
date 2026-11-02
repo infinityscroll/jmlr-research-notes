@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "source_sha256": "c1b6a7b49b14594b93f3e7da8baae7c79517540a1c32206eebebd2cf150139aa",
+  "compiled_constants_audited": 16,
+  "compiled_theorems_audited": 13,
+  "scope": "Actual second Gaussian potential derivative along a locally prescribed-mass fan path, requiring only first offset derivatives and a second row derivative."
+}

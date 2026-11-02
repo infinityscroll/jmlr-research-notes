@@ -1,0 +1,22 @@
+For every m>=1, the module constructs an actual affine basis b indexed by
+Fin m in FSC.Coord(m-1), centered at zero, with exact Gram matrix
+inner(b_i,b_j)=delta_ij-1/m and exact Parseval identity
+sum_i inner(b_i,x) b_i=x.
+
+The existing regular-simplex existence construction supplies only the Gram
+matrix. This module derives the centered-coefficient norm identity, affine
+independence and full affine span, and proves the frame operator is identity.
+It does not assume an arbitrary affine basis has Parseval normalization.
+The singleton / zero-dimensional case is included.
+
+For every operator A, trace(A)=sum_i inner(b_i,A b_i). For every rectangular
+A:Coord d -> Coord e, trace(A* A)=sum_i ||A b_i||^2. The normalized frame also
+has sum_i||b_i||^2=m-1 and centered singular lower bound exactly 1.
+These are literal trace/energy identities for the covariance-optimizer bridge.
+
+The module does not assert a covariance optimizer exists, is full rank, or
+minimizes Gaussian noise stability; those are separate arguments.
+
+Source-backed Lake build and exhaustive source-module audit passed for all
+38 compiled constants (36 theorem constants), using only
+propext, Classical.choice and Quot.sound.

@@ -1,0 +1,14 @@
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.hybrid","theorem":false}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.hybrid_step","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapTelescoping.indicator_intersection_difference","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapTelescoping.cap_difference_as_moving_slabs_equiv","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Quot.sound"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.iInter_reindex","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapTelescoping.cap_difference_as_moving_slabs","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.hybrid_step._simp_1_3","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.iInter_reindex._simp_1_1","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapTelescoping.prod_difference","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.hybrid_step._proof_1_1","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapTelescoping.remaining_product_eq_mask","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCapTelescoping.indicator_iInter_eq_prod","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.hybrid.eq_1","theorem":true}
+TELESCOPE_AXIOMS {"axioms":["propext"],"constant":"_private.GaussianCapTelescoping.0.NegativeVotingCapTelescoping.hybrid_step._simp_1_2","theorem":true}

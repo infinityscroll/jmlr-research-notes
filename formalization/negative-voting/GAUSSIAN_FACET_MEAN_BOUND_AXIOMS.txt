@@ -1,0 +1,7 @@
+GAUSSIAN_FACET_MEAN_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetMean.facetWeight_mul_edge_le_one","theorem":true}
+GAUSSIAN_FACET_MEAN_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetMean.facetMeanScale","theorem":false}
+GAUSSIAN_FACET_MEAN_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetMean.facetMeanScale_le","theorem":true}
+GAUSSIAN_FACET_MEAN_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetMean.facet_directional_mean_bound","theorem":true}
+GAUSSIAN_FACET_MEAN_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetMean.facet_directional_mean_log_bound","theorem":true}
+GAUSSIAN_FACET_MEAN_BOUND_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFacetMean.stratum_directional_mean_bound","theorem":true}
+GAUSSIAN_FACET_MEAN_BOUND_AUDIT {"axioms":["propext"],"constant":"NegativeVotingFacetMean.facetMeanScale._proof_1","theorem":true}

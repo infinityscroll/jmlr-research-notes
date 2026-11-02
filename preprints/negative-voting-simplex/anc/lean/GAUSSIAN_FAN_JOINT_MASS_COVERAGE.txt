@@ -1,0 +1,9 @@
+ACTUAL JOINT GAUSSIAN FAN MASS C1 REGULARITY
+
+The actual mass map (B,h) -> mass B h is Frechet differentiable and C1 near every row configuration with a positive centered singular lower bound. The derivative is the actual weighted-cell boundary derivative, rewritten as a finite continuous linear operator built from the actual Gaussian slice zeroth and first moments. The proof derives operator-norm continuity from those actual moment integrals.
+
+A concrete row-sup perturbation bound proves that ||A-B|| < sigma/(2 card(labels)) preserves the centered singular lower bound sigma/2. Thus a neighborhood supporting all derivatives is proved, rather than supplied as an assumption.
+
+Hypotheses: finite nonempty labels, finite ambient Euclidean dimension, and the stated positive centered singular bound on the base row configuration. Offsets are arbitrary. No positive-mass, inverse-existence, derivative-continuity, moving-face formula, or conclusion premise is supplied to the principal endpoints.
+
+This module proves actual joint mass regularity. Joint inverse construction is the subsequent GaussianFanJointInverse module. It does not assert the full negative-voting theorem, a cycle-refined covariance inequality, or a completed optimized covariance Hessian.

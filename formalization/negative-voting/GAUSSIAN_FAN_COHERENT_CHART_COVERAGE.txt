@@ -1,0 +1,5 @@
+Actual common affine chart for all Gaussian fan cells
+
+For every affinely independent finite row family B in any finite ambient dimension, the module constructs a fixed continuous linear score-difference right inverse L from actual finite edge interpolation. No surjectivity or right-inverse existence is assumed. The maps T(p)=Id+L(score(p.rows-B)) and s(p)=L(p.offsets-h) give the literal identity winningCell(p,i)=(x -> T(p)x+s(p)) preimage winningCell(B,h,i), simultaneously for every cell and every parameter p. Centeredness and full ambient spanning are unnecessary.
+
+The coordinate maps are C-infinity, equal Id and zero at the base, and T is invertible throughout a derived neighborhood. Its inverse is C-infinity at the base. This is a qualitative calculus chart; no norm bound or minimal-norm/range claim about the interpolation lift is asserted. Quantitative transport bounds may choose a separately controlled right inverse.

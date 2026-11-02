@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianAffinePathDerivative",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_PATH_DERIVATIVE_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 8,
+  "theorem_count": 7,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffinePathDerivative.lean": "ddeb74347589bf85fc87e433246449061a346f4e0d2bca7453a54b2772c9f592",
+    "GaussianAffineCapNormalization.lean": "0c21d96fff43e6f8b53f9e5a5eddbe08379d86c6aa1cfb4169ace8042686c1d9",
+    "GAUSSIAN_AFFINE_PATH_DERIVATIVE_AUDIT.lean": "74aec864f4e5f6be2b6843d1ccd586b33899db30795094b0b325e5891c06d779",
+    "GAUSSIAN_AFFINE_PATH_DERIVATIVE_AXIOMS.txt": "4ee88a4ec3666424640ea161f27bd21dc89b6050590727a253687663aab5eec8",
+    "GAUSSIAN_AFFINE_PATH_DERIVATIVE_BUILD.txt": "ca3506eb8d9a175340673f7ad46872ef327e763df66a24a2ae93fdd0ceeac099",
+    "GAUSSIAN_AFFINE_PATH_DERIVATIVE_COVERAGE.txt": "f448b6512277aa6ef798d54e95c4f7899ca662a55af0ae608291348cb4b322b7"
+  }
+}

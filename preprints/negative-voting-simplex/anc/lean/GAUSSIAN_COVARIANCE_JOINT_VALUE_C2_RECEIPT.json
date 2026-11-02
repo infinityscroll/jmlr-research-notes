@@ -1,0 +1,26 @@
+{
+  "module": "GaussianCovarianceJointValueC2",
+  "source_sha256": "05f8013d3494735dc19074004356040d3d0a4bd99e64d360daf4a19a351e5895",
+  "source_lines": 59,
+  "source_theorem_declarations": 1,
+  "compiled_constants_audited": 1,
+  "compiled_theorem_constants_audited": 1,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T05:17:18.110365+00:00",
+  "build_transcript": "GAUSSIAN_JOINT_VALUE_C2_BUILD.txt",
+  "evidence": [
+    "GAUSSIAN_COVARIANCE_JOINT_VALUE_C2_AUDIT.lean",
+    "GAUSSIAN_COVARIANCE_JOINT_VALUE_C2_AXIOMS.txt",
+    "GAUSSIAN_COVARIANCE_JOINT_VALUE_C2_COVERAGE.txt"
+  ]
+}

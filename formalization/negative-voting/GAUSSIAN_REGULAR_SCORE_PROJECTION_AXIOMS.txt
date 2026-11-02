@@ -1,0 +1,7 @@
+GAUSSIAN_REGULAR_SCORE_PROJECTION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularScoreProjection.regular_score_sum_zero","theorem":true}
+GAUSSIAN_REGULAR_SCORE_PROJECTION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularScoreProjection.frame_preserves_scores","theorem":true}
+GAUSSIAN_REGULAR_SCORE_PROJECTION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularScoreProjection.regular_rows_sum_zero","theorem":true}
+GAUSSIAN_REGULAR_SCORE_PROJECTION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularScoreProjection.frame_norm_le","theorem":true}
+GAUSSIAN_REGULAR_SCORE_PROJECTION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularScoreProjection.frame_norm_sq","theorem":true}
+GAUSSIAN_REGULAR_SCORE_PROJECTION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularScoreProjection.frame_inner_self","theorem":true}
+GAUSSIAN_REGULAR_SCORE_PROJECTION_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRegularScoreProjection.frame_idempotent","theorem":true}

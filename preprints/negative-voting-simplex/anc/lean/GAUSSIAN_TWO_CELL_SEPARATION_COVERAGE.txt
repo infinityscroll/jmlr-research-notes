@@ -1,0 +1,16 @@
+Actual two-cell separation for Gaussian centroid-energy maximizers
+
+The source-backed Lake build and exhaustive transitive axiom audit passed for all 93 owned compiled constants (85 theorem constants), including private/generated declarations. Only propext, Classical.choice and Quot.sound occur. The exact compiler and mathlib revisions and the 91-file local source closure are recorded in GAUSSIAN_TWO_CELL_SEPARATION_VERIFICATION.json.
+
+Owned modules: GaussianTwoCellScalar, GaussianTwoCellMeasure, GaussianTwoCellSplit, GaussianTwoCellSeparation.
+
+Main endpoint: NegativeVotingTwoCell.centroid_separation_at_global_optimum. For an actual Feasible assignment f globally maximizing centroidEnergy among all completed-measurable fractional simplex assignments with the same masses, dimension d>=2 and distinct labels i,j of positive mass, it proves
+  sqrt(2*pi) p_i p_j <= ||centroidRows(f)_i-centroidRows(f)_j||.
+
+The proof constructs a unit direction perpendicular to the pair-total centroid. It forms the actual Gaussian measure with density f_i+f_j and its projection, proves domination by the standard normal law and its density ceiling 1/sqrt(2*pi), derives finite mass and first-moment integrability, obtains an exact half-line threshold by continuity and the intermediate-value theorem, and constructs the competing fractional assignment. All cell masses and the pair-total centroid are proved preserved. Literal one-sided first moments of any centered bounded-density finite measure yield the projected separation. The actual global maximum and the parallelogram identity finish the norm comparison. No split, density estimate, centroid formula, injectivity, full rank or purity is assumed.
+
+centroidRows_injective_at_global_optimum is an immediate consequence. centroid_edge_upper_bound derives the upper edge estimate from the previously proved Gaussian centroid entropy bound; it does not require optimality. centroid_edges_in_mass_window combines the bounds:
+  sqrt(2*pi) p0^2 <= edge <= 2(C sqrt(2 log m)+1/sqrt(2*pi))/m,
+provided all masses lie in [p0,C/m], p0>0 and m>=1.
+
+This supplies actual optimizer geometry, not the complete negative-voting theorem. Transfer from physical centroid maximizers to all covariance maximizers and uniform epsilon->0 stability still requires the covariance realization/closed-graph arguments under active development.

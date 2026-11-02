@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianAffineNormControl",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_NORM_CONTROL_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 21,
+  "theorem_count": 19,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffineNormControl.lean": "3922f7b9c492e002233b2413d0f0de5894fa631279f9f641f5d72167197e88ce",
+    "GaussianAffinePathDerivative.lean": "ddeb74347589bf85fc87e433246449061a346f4e0d2bca7453a54b2772c9f592",
+    "GAUSSIAN_AFFINE_NORM_CONTROL_AUDIT.lean": "c1e05a418b6df838c7ea324ce201216596849913c667314c398b8181ca59dfb9",
+    "GAUSSIAN_AFFINE_NORM_CONTROL_AXIOMS.txt": "008c5e34379f255e928788aaa4fbd6ab76c3400b3e2e95bf6f1d43980c2b83fd",
+    "GAUSSIAN_AFFINE_NORM_CONTROL_BUILD.txt": "07b086b33ffe68ba7ade577eb436c16c746bb7bfa617c54e946670a3a309bb70",
+    "GAUSSIAN_AFFINE_NORM_CONTROL_COVERAGE.txt": "616c7942b80e9d76ed299d7ac5f6221225f314f35d754b97760c65c5d0f2183f"
+  }
+}

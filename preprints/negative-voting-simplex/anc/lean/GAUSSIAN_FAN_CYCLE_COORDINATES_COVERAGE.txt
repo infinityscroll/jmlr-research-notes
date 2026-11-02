@@ -1,0 +1,13 @@
+Actual Gaussian coordinate transfer for finite score strata
+
+An actual standard orthonormal basis identifies the stratum tangent subspace with FSC.Coord of its derived finrank. The constructed coordinate cap is exactly the actual tied-max score stratum in these isometric coordinates. Unit-normal and NoCoincident hypotheses for FSC are discharged from the previously proved simplex geometry, not retained as extra hypotheses. Strict feasibility gives positive actual Gaussian mass using the existing full-support Gaussian theorem.
+
+The concrete Gaussian cap first-moment identity applies with every geometric hypothesis derived. The ambient coordinate embedding pairs with a test vector as a constant anchor term plus its actual tangent-projected dual score. Integrability and the integral mean decomposition are derived. The literal centered normalized ambient directional variance is then bounded by the squared norm of the actual tangent projection, closing the Brascamp-Lieb covariance input for these concrete finite score strata.
+
+The file additionally proves the orthogonal norm decomposition and the exact pointwise Gaussian density factorization into the normal-anchor density factor and FSC.standardDensity in tangent coordinates. The normal factor uses rank(faceDirection) and is strictly positive. This is pointwise density equality; no independent Hausdorff change-of-variables theorem is asserted here.
+
+27 public exports:18 theorems,8 definitions,1 coordinate-space abbreviation. All are transitive-axiom audited against the complete local import closure. Existing FSC support/differentiation inputs are credited to Abhijeet Mulgund's MIT-licensed library; the Gaussian calculus is from Mathlib and the previously frozen cap modules. No new mathematical axioms or equivalent assumed moment/covariance conclusions are introduced.
+
+Still missing for the cycle factorization: identify the actual boundary slice Gaussian with the child stratum's tangent Gaussian, prove the nested-anchor density ratio, transfer the boundary fluxes to one shared collection of child masses/means, and assemble A-B. This file does not claim the complete covariance Hessian or the main negative-voting theorem.
+
+Reproduce: python3 verify_fan_cycle_coordinates.py --lake /absolute/path/to/lake

@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianUniformLocalCurvature",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_UNIFORM_LOCAL_CURVATURE_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 4,
+  "theorem_count": 4,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianUniformLocalCurvature.lean": "99c1cc69a28c13267bb7df53969abdbdff3847295326196f18be930e1938959d",
+    "GaussianBalancedFacetBootstrap.lean": "9215bc98921531587956acf7f1152408a32e7a48fe9b31a0fa90998338db19dd",
+    "GaussianLocalCurvatureAlgebra.lean": "a79b134ee3c18ef279e9a0a4679347982d363af36389d0f171518ee11ea17b51",
+    "GAUSSIAN_UNIFORM_LOCAL_CURVATURE_AUDIT.lean": "f7ed502fa2f4a2e862c82a0d98fea264b16a236012436ef31d31bde3459f7562",
+    "GAUSSIAN_UNIFORM_LOCAL_CURVATURE_AXIOMS.txt": "075d4fd835b5b5e3f651829afbc0fc15b90d30512cc6e99197950888a7d2e38a",
+    "GAUSSIAN_UNIFORM_LOCAL_CURVATURE_BUILD.txt": "78f9a8c1fbb439230d65df96d06f74554606825a7a54a6385ad8b4d65908fa0c",
+    "GAUSSIAN_UNIFORM_LOCAL_CURVATURE_COVERAGE.txt": "e21d78bae82d1319af16839247c404a152964d1132174ee2807f5e4664b52593"
+  }
+}

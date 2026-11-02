@@ -1,0 +1,14 @@
+{
+  "module": "RegularSimplexSecondMomentAlgebra",
+  "sha256": "3322c56c7fa27333375b3f483530d6009f977ab5b793209139d8adab60a91930",
+  "compiled_constants": 12,
+  "theorem_constants": 12,
+  "status": "passed",
+  "source_backed_build": "REGULAR_SECOND_MOMENT_ALGEBRA_BUILD.txt",
+  "audit": "REGULAR_SECOND_MOMENT_ALGEBRA_AXIOMS.txt",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "module": "GaussianRayDeficit",
+  "source_sha256": "3ec96c9f474cc7b4ae0afdbaa715807a735f2ee9add5c56694c1c1a5e1bf9816",
+  "source_lines": 446,
+  "source_theorem_declarations": 19,
+  "compiled_constants_audited": 38,
+  "compiled_theorem_constants_audited": 34,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "The global Gaussian ray propagation and exact physical normalization are proved. LocalGaussianCurvature is an explicit unproved quantitative local input, not an axiom and not supplied as a conclusion. Full negative voting remains unproved."
+}

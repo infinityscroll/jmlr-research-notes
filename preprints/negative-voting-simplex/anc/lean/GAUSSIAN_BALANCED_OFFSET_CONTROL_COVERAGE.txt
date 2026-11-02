@@ -1,0 +1,9 @@
+Actual balanced offset response
+
+The source proves the complete-graph spectral lower bound for the actual offset Jacobian and bounds the actual Gaussian row quadratic form from conditional variance and the actual facet means. The canonical offset minimization identity bounds the squared centered response.
+
+Its operator_offset_l2_bound applies to the literal derivative at0 of t↦operatorOffsets b p (C+t A). For symmetric invertible R with R²=C, inverse norm≤N, actual selected facet weights in [wmin,wmax] and actual edge lengths≥ell, it proves wmin Σ_i(offsetDerivative_i)² ≤ (wmax/2)(1+(5 sqrt(1+log(1/(wmin ell))))²) N² HS(A)². The factor1/2 from the true covariance response is already included. Parseval normalization is explicit. The derivative is also proved centered.
+
+The true Gaussian Jacobian, conditional moments, response law and mass-preserving minimization are derived; no such conclusion is a supplied assumption. Actual weight/edge bounds remain for the finite local bootstrap. This does not prove the full negative-voting theorem.
+
+All 11 owned compiled constants including generated/private constants were transitively audited: only propext, Classical.choice and Quot.sound.

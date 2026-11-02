@@ -1,0 +1,36 @@
+ACTUAL GAUSSIAN MAXIMUM MEAN / QUANTILE SEPARATION
+
+GaussianMaximumMeanBounds.lean is a checked theorem about the actual maximum
+of n+2 independent standard Gaussian coordinates. Put m=n+2,
+b=upperQuantile n, mu=maximumMean n, Z=b(M-b).
+
+The proof derives the signed tail-integral identity E Z, integrates the
+finite positive-tail bound on [0,8], and bounds all three negative-tail
+regions. For n>0 and b^2>=1000000 it gives the explicit finite inequality
+
+ b(mu-b) >= 187/250 - 23/99
+             - b^2 exp(-exp((99/100)b^2/50)) - 3 b 2^(-m).
+
+Both displayed remainders are proved to tend to zero from the actual
+quantile's divergence and b<=m. Consequently, eventually b(mu-b)>=103/200.
+No Gumbel limit, Euler-constant identity, unproved asymptotic notation, or
+mean/quantile separation hypothesis is used for this eventual conclusion.
+
+Writing the literal expressions F=m phi(b)^2 and w=mu^2/(m-1), actual
+Mills inequalities and the mean bound give eventually
+
+ m(F-w) <= 97/100 + 1/b^2 <= 39/40 < 1.
+
+These formulas supply the strict first-moment coefficient margin needed
+in competitive mass localization. This module does not identify w with
+the complete regular-simplex chaos coefficient in Lean, prove the parity
+inequality for arbitrary fractional assignments, bound the second-chaos
+coefficient, or finish the full negative-voting theorem. Those are separate
+mathematical steps. The final actual eventual theorems have no analytic
+premises; only the finite helper reference_gap_bound has its explicitly
+named mean-gap premise, discharged by eventually_scaledMaximum_mean_lower.
+
+Verification: source-backed lake build GaussianMaximumMeanBounds passed;
+all 57 compiled source-module constants, including 51 theorem constants,
+passed exhaustive transitive collectAxioms audit. Only propext,
+Classical.choice, and Quot.sound occur. No custom axioms or placeholders.

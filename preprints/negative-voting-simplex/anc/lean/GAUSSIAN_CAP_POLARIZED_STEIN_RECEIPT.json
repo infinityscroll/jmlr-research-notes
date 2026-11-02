@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianCapPolarizedStein",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_CAP_POLARIZED_STEIN_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 5,
+  "theorem_count": 5,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianCapPolarizedStein.lean": "4dcc7e4d83412b9dcef87a7a8aab2b4552ca19a3301f603fc9ad308e457fb1f5",
+    "GaussianCapPolynomialStein.lean": "a41249c2825e814dd17d0552e943f11cd173d28b1e90db545cc94bed6b1efc09",
+    "GAUSSIAN_CAP_POLARIZED_STEIN_AUDIT.lean": "3a4abbfb39201e19624f5a1e703f93249f023f3e9fab9abe3a73aaefcd78a21a",
+    "GAUSSIAN_CAP_POLARIZED_STEIN_AXIOMS.txt": "233b083c35152de36add5463e43d6ffc4678ed7f1ec2bd756e815476202c87f9",
+    "GAUSSIAN_CAP_POLARIZED_STEIN_BUILD.txt": "f4c47e7a7254727b308ce3377e6e8f1a9e56525383f28d6133b640b2c9317d00",
+    "GAUSSIAN_CAP_POLARIZED_STEIN_COVERAGE.txt": "3ab7018021f93d70961419a9001e4856cf75eca503501713a0cda5e112bd2926"
+  }
+}

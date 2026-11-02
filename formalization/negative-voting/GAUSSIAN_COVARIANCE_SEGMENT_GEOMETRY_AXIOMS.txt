@@ -1,0 +1,5 @@
+COVARIANCE_SEGMENT_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceSegmentGeometry.symmetric_square_positive","module":"GaussianCovarianceSegmentGeometry","theorem":true}
+COVARIANCE_SEGMENT_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceSegmentGeometry.symmetric_inverse","module":"GaussianCovarianceSegmentGeometry","theorem":true}
+COVARIANCE_SEGMENT_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceSegmentGeometry.mapped_regular_edge_lower._abel_1_1","module":"GaussianCovarianceSegmentGeometry","theorem":true}
+COVARIANCE_SEGMENT_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceSegmentGeometry.mapped_regular_edge_lower","module":"GaussianCovarianceSegmentGeometry","theorem":true}
+COVARIANCE_SEGMENT_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceSegmentGeometry.exists_segment_factor","module":"GaussianCovarianceSegmentGeometry","theorem":true}

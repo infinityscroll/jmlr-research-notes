@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "theorem_count": 2856,
+  "named_theorem_count": 1681,
+  "allowed_logical_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "actual Gaussian spectral, moment, reference, affine comparison, trace and local cap components; the full Gaussian theorem remains unproved",
+  "log_sha256": "5e65f85a6ab1ff4b45ba0bb036c6f100bc835711d67ed1c7e8ccc6e4ed33eea1",
+  "first_party_module_count": 156
+}

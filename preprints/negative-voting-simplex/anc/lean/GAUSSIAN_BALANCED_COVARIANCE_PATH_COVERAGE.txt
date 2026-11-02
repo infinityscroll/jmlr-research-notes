@@ -1,0 +1,20 @@
+GaussianBalancedCovariancePath: actual intrinsic balancing path
+
+The module defines the actual global selected label offset for covariance
+I+tH and its physical reconstruction. It proves equality to the selected
+offset at every actual symmetric invertible factor of that covariance,
+identity-covariance offset0, ordinary C1 regularity at every positive-definite
+point, and exact recovery of the physical score offsets.
+
+Its derivative bridge proves literally
+ ||d physicalShift(t)/dt||^2
+   = sum_i [deriv_s operatorOffsets(b,U,(I+tH)+sH)(0)_i]^2.
+The right side is exactly the derivative used by the checked numeric offset
+response theorem; the covariance factor1/2 is not inserted again, and no
+Pi-norm conversion or dimension factor is used. The C1 hypotheses are
+discharged by the actual Gaussian covariance offset inverse, at every
+positive-definite point; positivity along the small segment is supplied
+by the genuine factor construction in the next geometry adapter.
+
+Source-backed Lake build and exhaustive compiled-module transitive axiom
+audit passed, including generated helpers; only standard3 occur.

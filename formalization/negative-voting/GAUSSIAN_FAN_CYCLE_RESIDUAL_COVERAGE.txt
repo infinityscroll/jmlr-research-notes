@@ -1,0 +1,9 @@
+ACTUAL GAUSSIAN RESIDUAL ENERGY AND CORRECTED MEAN
+
+The genuine global cell-vector differences z_a-z_j are paired with the actual covariance-deficit correction. The actual triangle-mean terms cancel by their proved cyclic invariance and linearity. This identifies the cross term with the true facet means; no cross-term cancellation is a hypothesis.
+
+The actual cycleFlux is w_aj*(mean_edge(z_a-z_j)+beta_a-beta_j), using one global offset vector beta. Its skew symmetry is proved. If this literal flux has zero graph divergence, orthogonality to the global offset gradient identifies its mean pairing with the full inverse-weight cycle energy. The actual positive-weight Gaussian gauge is constructed using the proved CycleBalance theorem.
+
+Main endpoint exists_actual_cycle_residual proves total actual covariance deficit minus the ENTIRE cycleMeanEnergy equals the actual residual deficit energy. The residual is z_a-z_j minus the actual barycentric correction. The correction is proved tangent, and cycleResidual_tangential_mean proves its exact mean: minus the global beta difference minus the normal affine-anchor pairing. The anchor term is retained.
+
+Remaining optimizer interface: divergence-free cycleFlux must be derived from the actual offset minimizer using the ambient surface/intrinsic-stratum identification. It is a stated linear first-order condition, not an assumed residual inequality or covariance factorization. Ehrhard on the actual residuals is the subsequent GaussianFanCycleEhrhard module. No full negative-voting conclusion is asserted here.

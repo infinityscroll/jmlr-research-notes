@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianBalancedFacetBootstrap",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_BALANCED_FACET_BOOTSTRAP_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 1,
+  "theorem_count": 1,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianBalancedFacetBootstrap.lean": "9215bc98921531587956acf7f1152408a32e7a48fe9b31a0fa90998338db19dd",
+    "GaussianCovarianceSegmentGeometry.lean": "48892980ac5581d9d78a281f25bf39a7e5dda028ce5a49d4d7c8eb6b67b40e7c",
+    "GaussianBalancedOffsetEstimate.lean": "8b3f9629bab935649b7017b8f1a5dcd2b907cce1902f04c9d3ea41e99fc6b154",
+    "GAUSSIAN_BALANCED_FACET_BOOTSTRAP_AUDIT.lean": "93ac144a4911f0be5df2375d5b49a774ad03fa8d835d3be73d99877b1a5e2deb",
+    "GAUSSIAN_BALANCED_FACET_BOOTSTRAP_AXIOMS.txt": "6489c60b5c871ab0de91810932a9b5fd5cb4e2dc4c68f91644156b13e22b664c",
+    "GAUSSIAN_BALANCED_FACET_BOOTSTRAP_BUILD.txt": "f9f804254f64b442b526e033e7b09c989d634771a39652cf467335ea1be30405",
+    "GAUSSIAN_BALANCED_FACET_BOOTSTRAP_COVERAGE.txt": "364e24243cf97b4319fbc8c1277d039266c424657dcda0a316b73552453c44b5"
+  }
+}

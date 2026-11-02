@@ -1,0 +1,27 @@
+GaussianBalancedFacetBootstrap: actual balanced-offset continuation
+
+For m=n+2, L=1+log m, actual maximumMean(n)>=1, an actual affine Parseval
+regular frame b, and symmetric H with HS(H)<=facetRadius(64)/L, the single
+main theorem derives, simultaneously for every t in[0,1],
+
+ ||physicalOffsetMap(b,operatorOffsets(b,U,I+tH))||
+      <=64 sqrt(L) HS(H) t.
+
+This is a statement about the actual selected Gaussian offsets. It assumes
+no facet comparability, conditional moment, response bound, or offset-size
+bound. All those inputs are derived from the previously checked Gaussian
+geometry, event moments, canonical offset minimization, and finite frame.
+
+The proof applies the library boundary-only derivative barrier theorem.
+At a possible contact point with64 sqrt(L) HS(H)t, the actual neighborhood
+comparison gives strict facet weights between half and twice the regular
+weight. The genuine covariance offset derivative has L2 norm at most
+32 sqrt(L) HS(H); the physical reconstruction preserves that norm exactly.
+The strict derivative improvement closes the whole segment. HS(H)=0 is
+handled as an actual constant covariance/offset path.
+
+One explicit positive absolute radius is fixed before ambient dimension,
+frame, direction, and segment parameter. No hidden first-exit or compactness
+assumption and no norm conversion producing a dimension factor occur.
+Source-backed build and exhaustive one-constant transitive audit passed;
+only propext, Classical.choice, and Quot.sound occur.

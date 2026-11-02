@@ -1,0 +1,3 @@
+Actual regular score projection in arbitrary ambient dimension
+
+The operator is the already defined finite frameOperator B, literally sum_i <B_i,x>B_i. From the exact regular Gram matrix delta_ij-1/m, GaussianRegularScoreProjection derives centering, zero score sum, preservation of every score, norm squared equal to the sum of squared scores, norm contraction, and idempotence. No full affine-span assumption is used. This permits the regular-noise comparison to depend on the Gaussian score span rather than unused ambient coordinates. It is a concrete input to the negative-voting comparison, not the complete main theorem.

@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianFanQuarticMoments",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_FAN_QUARTIC_MOMENTS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 16,
+  "theorem_count": 15,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanQuarticMoments.lean": "c354870b4bdb6f9607d04422ebb2384eb7586b30980a4b52a253fad870f4f832",
+    "GaussianQuarticMovingCap.lean": "f8bd6245703d5d0fa34abb80fc5378f3cc6f33aac3c2dd7d672a09a76066f32b",
+    "GaussianFanMovingCells.lean": "61a492d93167d58269f2f2be5c728bb63fff225233649541989587de7949c745",
+    "GaussianQuadraticAffineTransport.lean": "fd00a35366fec0b3259cec73a16fb1f45625dcea42daa84858869745f8a6691d",
+    "GAUSSIAN_FAN_QUARTIC_MOMENTS_AUDIT.lean": "a3e1899e87a0e41661e64f11fb493d927e62724eec71c850c12165db33095b9c",
+    "GAUSSIAN_FAN_QUARTIC_MOMENTS_AXIOMS.txt": "a422ee49ec5997c2c397f12f84a61cb9dc2179553dc38538940745e9ead0b03c",
+    "GAUSSIAN_FAN_QUARTIC_MOMENTS_BUILD.txt": "360749d38ae8efa4c8f82aa0b7c4320225fd9a1e8dd57c4917a9a152402dea4f",
+    "GAUSSIAN_FAN_QUARTIC_MOMENTS_COVERAGE.txt": "a66f4a88c0251c48f1d007cb718b688fb39ad46f7de29f49072fe64dfba5190f"
+  }
+}

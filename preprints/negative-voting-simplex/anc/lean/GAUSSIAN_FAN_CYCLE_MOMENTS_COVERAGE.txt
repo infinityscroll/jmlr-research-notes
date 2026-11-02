@@ -1,0 +1,20 @@
+Frozen actual Gaussian stratum means
+
+GaussianFanCycleMoments proves that cap sets, cap masses, physical stratum
+masses and normalized means are independent of the selected anchor in S.
+This follows from the literal winning-score stratum, not presumed symmetry.
+
+The actual Gaussian first-moment formula and exact parent-child slice law give
+mu_S mean_S(v) = mu_S <v,q_S> + sum_{k outside S} mu_{S+k}<v,n_(S,k)>.
+Here q_S is the true orthogonal affine origin, n is the inward boundary normal,
+and all child masses have one shared perpendicular-density normalization.
+For the actual barycentric vector v_k with k outside S, the affine term is zero
+and all boundary terms but k vanish. Hence
+mu_S mean_S(v_k) = mu_{S+k}/height_(S,k).
+This is the geometric Gaussian coefficient used in the central A-B calculation.
+The module also proves finite linearity of the actual integral mean and the
+centering identity sum_k mean_S(v_k)=0 from sum_k v_k=0.
+
+All12 theorem exports passed standard3 transitive axiom audit; complete46-file
+local source closure is pinned. No Gaussian mean identity is a premise. The
+assembled A-B factorization and covariance-deficit realization remain separate.

@@ -1,0 +1,35 @@
+Joint continuity of actual Gaussian pinned-face moments
+Source: GaussianMovingFaceMoments.lean
+Namespace: NegativeVotingMovingFaceMoments
+
+Actual objects
+FSC.sliceMass w b j is the existing Gaussian mass of all remaining halfspace
+constraints under FSC.sliceLaw(w_j,b_j). The new sliceFirstMoment is the
+unnormalized vector integral over the same actual constrained slice.
+No covariance/moment function is substituted by an assumed proxy.
+
+Closed analytic steps
+1. At unit, NoCoincident base normals/supports, every remaining inequality
+   on the explicit affine slice has locally stable truth value for almost
+   every sample of one fixed ambient standard Gaussian. The exceptional
+   boundary sets are null by FSC.ae_slice_boundary_ne.
+2. The actual slice mass is jointly continuous in every normal and support,
+   using the finite Gaussian measure and proved AE indicator convergence.
+3. The actual first moment is exactly the integral of the affine slicePoint
+   times the actual moving constraint mask under that fixed ambient Gaussian.
+4. If ||w'_j||<=2 and |b'_j|<=A, the slice realization obeys
+     ||slicePoint(w',b',j,X)|| <= 2 A + 5 ||X||.
+   The neighborhood A=|b_j|+1 is derived from ordinary parameter continuity.
+5. This explicit Gaussian-integrable dominator and the derived pointwise
+   convergence prove joint continuity of the actual vector first moment.
+
+The base hypotheses are unit normals and FSC.NoCoincident. Positivity of
+face mass, assumed continuity, assumed domination, and assumed boundary
+variation identities are not premises. Nearby parameters are permitted to
+have nonunit normals; the explicit affine pushforward defines the slice law
+there too, and the joint continuity conclusion is on the full parameter space.
+The physical fan application composes with its unit-normal parameter map.
+
+This source does not yet assemble the mass-map C1 theorem or joint implicit
+inverse h(B,p). It supplies their concrete continuity inputs. Build and
+exhaustive source-module transitive axiom results are recorded in the receipt.

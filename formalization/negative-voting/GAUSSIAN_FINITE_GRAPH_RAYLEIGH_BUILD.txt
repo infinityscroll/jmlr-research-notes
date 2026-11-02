@@ -1,0 +1,23 @@
+⚠ [3092/3093] Built GaussianFiniteGraphRayleigh (3.2s)
+warning: GaussianFiniteGraphRayleigh.lean:42:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraphRayleigh.centered_pair_energy`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFiniteGraphRayleigh.lean:52:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraphRayleigh.weighted_difference_cauchy`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFiniteGraphRayleigh.lean:73:0: automatically included section variable(s) unused in theorem `NegativeVotingFiniteGraphRayleigh.absolute_pair_energy_le_degree`:
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianFiniteGraphRayleigh.lean:164:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3093 jobs).

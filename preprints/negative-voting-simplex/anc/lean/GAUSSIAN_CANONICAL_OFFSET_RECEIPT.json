@@ -1,0 +1,27 @@
+{
+  "build_command": "lake build GaussianFanCanonicalOffset",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_CANONICAL_OFFSET_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 20,
+  "theorem_count": 18,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianFanCanonicalOffset.lean": "6b2fbc9e9d20c4c1815ab81de0e852b23e381a4b127972fe660f28acf4179217",
+    "GaussianFanOffsetMinimization.lean": "18cbc41fb5d2ee07ffdc9e59bd56e21e4006429ef0d6cb2472810df3248ee512",
+    "GaussianFanJacobianPseudoInverse.lean": "80fc8fbee38a3519bc8b02ad6438aaff879ab54ae7709545fc7efdd09b374bd7",
+    "GaussianFanMassJacobian.lean": "74ecc4012d2575b0729fb554427c6228f322c867aa43a4396206e95b103de18e",
+    "GAUSSIAN_CANONICAL_OFFSET_AUDIT.lean": "6b83de32aa69529bc60e92bec5b4796d7740f61ce8169ef6ed19fbba0cec787a",
+    "GAUSSIAN_CANONICAL_OFFSET_AXIOMS.txt": "aa24eabec821502e194e1b49302702afc6600a24ae16374fd406a05ac0ca1fd3",
+    "GAUSSIAN_CANONICAL_OFFSET_BUILD.txt": "d745b724f66af4183d9d4749e3e8df4c4d266ebecf33bd9ebb6b828d722a4685",
+    "GAUSSIAN_CANONICAL_OFFSET_COVERAGE.txt": "2eec20fcb93e4e14570f301f105b561cc577214c387dd3686995e044a3fe3c89",
+    "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lake-manifest.json": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199"
+  }
+}

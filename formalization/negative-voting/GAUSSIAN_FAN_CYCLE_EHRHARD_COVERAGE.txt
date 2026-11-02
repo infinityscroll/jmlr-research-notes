@@ -1,0 +1,14 @@
+ACTUAL EHRHARD REFINEMENT AFTER FULL CYCLE SUBTRACTION
+
+Every proper nonempty winner stratum has actual intrinsic Gaussian cap probability in (0,1). Positivity was already derived from a strict point; this module derives strict upper bound one from an explicit open complementary halfspace and the actual unit normal. For at least three vertices this applies to every genuine edge facet.
+
+The actual conditional-variance Ehrhard theorem is instantiated in the genuine intrinsic coordinates. Its rank-one term uses the actual ambient conditioned mean minus the perpendicular affine anchor. Multiplication by the actual edge weight yields the actual covariance-deficit bound.
+
+Main endpoint actual_cycle_ehrhard_bound applies that estimate to the actual residual vectors constructed by the weighted Gaussian cycle gauge. It proves
+  (1/2) sum_ordered w_e a(pi_e) [Delta beta_e + <Delta z_e,anchor_e>]^2
+  <= (1/2) sum_ordered Deficit_e(Delta z_e,Delta z_e) - full_cycle_energy.
+The entire cycle energy is subtracted; the proof does not replace the remainder by raw deficit. The normal-anchor correction and ordered-edge normalization are exact.
+
+actual_cycle_log_ehrhard_bound gives the explicit coefficient exp(-4)/(2(1+2 log(1/pi_e))) from the checked Gaussian inverse-Mills estimate. The pi_e are literal intrinsic facet probabilities, not cell masses; no O(log m) coefficient is inferred without additional geometry.
+
+The only remaining optimizer premise is zero graph divergence of the literal global-offset cycleFlux. Root's actual surface/mass-derivative bridge discharges this for the canonical global offset response. No inverse deficit, supplied gauge, covariance factorization, facet mass estimate or Ehrhard inequality is assumed. This module does not assert the full negative-voting theorem.

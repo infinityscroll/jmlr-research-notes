@@ -1,0 +1,27 @@
+GaussianSecondChaosMassAdjoint: actual Gaussian mass adjoint
+
+The right-hand side g is defined from the already derived actual A2 Frechet
+derivative evaluated on each pure-offset coordinate. Its sum is proved zero
+from literal invariance of Gaussian winning cells under a common offset.
+The Jacobian is the actual intrinsic-facet-weight Gaussian mass Laplacian J.
+The canonical c=J^+g is constructed, centered, and proved to satisfy Jc=g;
+no range compatibility, adjoint equation, or Schur datum is supplied.
+
+The actual joint mass derivative restricted to offsets is proved equal to J
+by uniqueness of two independently derived actual Gaussian derivatives.
+Symmetry then gives
+  dA2(0,k) = sum_i c_i dmass_i(0,k)
+for every offset increment. Thus the corrected actual derivative
+  dA2 - sum_i c_i dmass_i
+annihilates all pure-offset increments and depends only on row increments.
+For a genuine mass-preserving velocity (D,k), the actual A2 first variation
+is exactly the corrected row-only derivative.
+
+This proves the precise vanishing coefficient that removes offset
+acceleration in a later second-order chain rule. No selected-offset second
+derivative is assumed or asserted here. The full transport Hessian formula
+and quantitative estimates remain in the next module.
+
+Source-backed Lake build and exhaustive compiled-module transitive axiom
+audit passed, including generated helper constants. Only the standard three
+axioms occur.

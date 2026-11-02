@@ -1,0 +1,3 @@
+Coordinate Hilbert-Schmidt norm adapters
+
+An explicit finite Euclidean coefficient vector realizes the existing operatorHilbertSchmidt definition. The triangle inequalities and exact rank-one norm ||u tensor v||HS=||u||||v|| follow. These are dimension-independent finite identities; no Gaussian or positivity assumptions occur.

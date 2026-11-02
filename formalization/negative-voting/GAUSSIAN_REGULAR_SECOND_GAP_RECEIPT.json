@@ -1,0 +1,27 @@
+{
+  "build_command": "lake build GaussianRegularSecondGap",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_SECOND_GAP_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 16,
+  "theorem_count": 14,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularSecondGap.lean": "b4861d2d2723f09b8188dda711de1fbe64e82f21632b95e3addd23fe7fba81d5",
+    "GaussianSecondChaosLower.lean": "9b012832c730ad6adcf12472d2fc221c9606f4a74e790edb3d9954d384ce3d40",
+    "GaussianRegularChaosCoefficients.lean": "d75d800e30b89e880a49e2bcb437f5bc3da388af29141f4d0135eb3f2ff0787c",
+    "GaussianMaximumLocalization.lean": "8335c140d25c4af824c8b97d805591e65462b3b5ab74858a7fd7afe4aa8f90a0",
+    "GaussianMaximumSecondMoment.lean": "05e98a06056f329b89258cbaf1e8c3a17f19ca6e8f4e98601ef5269be3df8f1c",
+    "GaussianMaximumMeanBounds.lean": "40023dc8f24586bb9f802242f2b6fa4c40b6ebe71a9e6f9fed80ac4443b93691",
+    "GAUSSIAN_REGULAR_SECOND_GAP_AUDIT.lean": "bf624c4cfc419dfde3419357554b6754142fb96b9f023b4093adb32cdf618c5a",
+    "GAUSSIAN_REGULAR_SECOND_GAP_AXIOMS.txt": "a30d9f7b0d5eaafe28e31b2d409b68c3266768053c6483a28c0b1b43591439e2",
+    "GAUSSIAN_REGULAR_SECOND_GAP_BUILD.txt": "64301426f2517abfcbbf87830066ad2a170b8d35ccd089e712c0bb2892fcd730",
+    "GAUSSIAN_REGULAR_SECOND_GAP_COVERAGE.txt": "c72e8ce8902d49bfb2f405345bbf5cbec130ee6b34e7d736922d73243a6ff1bc"
+  }
+}

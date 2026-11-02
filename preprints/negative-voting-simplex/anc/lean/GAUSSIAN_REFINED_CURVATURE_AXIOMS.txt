@@ -1,0 +1,3 @@
+REFINED_CURVATURE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceRefinement.hasDerivAt_intrinsic_covariance_value","theorem":true}
+REFINED_CURVATURE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceRefinement.exists_actual_covariance_derivatives","theorem":true}
+REFINED_CURVATURE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceRefinement.exists_actual_refined_covariance_derivatives","theorem":true}

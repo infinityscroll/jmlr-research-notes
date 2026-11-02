@@ -1,0 +1,16 @@
+Concrete finite-simplex cycle identities
+
+GaussianFanCycleComplex.lean has15 theorems and9 definitions. It constructs alternating oriented edge/triangle/tetrahedron arrays, literal finite boundary sums, and explicit cone witnesses. Boundary-of-boundary vanishes. Every divergence-free alternating edge flow has a triangle filling. Every boundary-zero alternating triangle chain has a tetrahedron filling. Neither exactness nor a chain-complex identity is an input.
+
+The additional global cross-term identity derives subtraction of a common triangle mean from cyclic reindexing and cell-difference telescoping. No covariance, Gaussian stratum, matrix-factorization or curvature hypothesis is used.
+
+Normalization is explicit:
+- Alternating arrays index all ordered tuples; coefficients change sign under odd permutations, and repeated vertices vanish.
+- Each unoriented edge, triangle and tetrahedron energy is counted2,6 and24 times, respectively, by its raw ordered-tuple sum. To match manuscript energy conventions use factors1/2,1/6 and1/24.
+- The cross-term theorem boundary_pairing_mean_differences has one distinguished edge(a,b) per ordered triple(c,a,b). Both sides are2 times the manuscript's unoriented-edge identity. If all three triangle edges are instead included for every ordered triple, that enlarged RHS is3 times this theorem's RHS and needs an additional factor1/3.
+- No B-energy/CYC identity is asserted yet. The same normalization must be retained when the actual weighted gauge and Gaussian stratum matrices are assembled.
+
+The finite route is independent of the general-target infinite-dimensional Hodge/CFJ proof; see GAUSSIAN_FAN_CYCLE_DEPENDENCY_AUDIT.txt for the equation-level map and remaining actual analytic obligations.
+
+Reproduce: python3 verify_fan_cycle_complex.py --lake /absolute/path/to/lake
+All24 exports have transitive axioms restricted to propext, Classical.choice and Quot.sound. No sorry/admit/custom axiom/native_decide is present.

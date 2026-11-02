@@ -1,0 +1,26 @@
+{
+  "module": "GaussianL1Variance",
+  "source_sha256": "1c778e6aaa5274321f1d664c11843aa88ceb3fcabea36c266fcbf942ff2494ee",
+  "source_lines": 298,
+  "source_theorem_declarations": 22,
+  "compiled_constants_audited": 29,
+  "compiled_theorem_constants_audited": 26,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T03:47:58.897016+00:00",
+  "evidence": [
+    "GAUSSIAN_L1_VARIANCE_BUILD.txt",
+    "GAUSSIAN_L1_VARIANCE_AUDIT.lean",
+    "GAUSSIAN_L1_VARIANCE_AXIOMS.txt",
+    "GAUSSIAN_L1_VARIANCE_COVERAGE.txt"
+  ]
+}

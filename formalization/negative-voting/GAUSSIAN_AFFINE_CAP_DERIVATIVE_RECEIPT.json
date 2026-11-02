@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianAffineCapDerivative",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_CAP_DERIVATIVE_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 13,
+  "theorem_count": 12,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffineCapDerivative.lean": "8a1d0b212fbfc82e90650596ebb689ae15772a5953a5c4f207957459937a7410",
+    "GaussianMovingCap.lean": "cb83db8b81d03087beed5fb899c3d06d27fdcf934bf95231518ca4096c47fe65",
+    "GaussianCapSecondMoment.lean": "7af4717e1073947f1f1fbfa12cbabafda33f029bad45683f43d7a1742efdd0e9",
+    "GAUSSIAN_AFFINE_CAP_DERIVATIVE_AUDIT.lean": "c782d47cf0e97e15e4dc745903b7b86db64ea6fef22ab2faef0114c15d507995",
+    "GAUSSIAN_AFFINE_CAP_DERIVATIVE_AXIOMS.txt": "dcd31673aee0a26b0b66d8d986290ed910140a06901749291945b730f6e1cf7b",
+    "GAUSSIAN_AFFINE_CAP_DERIVATIVE_BUILD.txt": "423e4796a0eb98a003c4fd23aea75f5d988c05d84ebd891d30d4731b952f9a35",
+    "GAUSSIAN_AFFINE_CAP_DERIVATIVE_COVERAGE.txt": "0a6e0727ab9fe1a55af8c861b789913a011c29ea7de53af24b39b08fc21c1692"
+  }
+}

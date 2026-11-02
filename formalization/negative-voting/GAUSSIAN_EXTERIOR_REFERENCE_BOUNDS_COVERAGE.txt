@@ -1,0 +1,7 @@
+Actual exterior reference and row-energy bounds
+
+Mills lower tails and actual finite Gaussian maximum moments prove eventually L/m²≤alpha²≤20L/m², where m=n+2,L=1+log m,alpha=E[max Gaussian]/(m-1). No asymptotic quantile formula is assumed.
+
+The independently frozen actual competitive deficit theorem gives W≤2w for every completed-measurable fractional Gaussian rule competing against any actual regular reference at strictly negative correlation -r,0<r≤1/(m-1). One threshold precedes all finite ambient coordinate types, reference orientations, assignments and correlations. The positivity of r is explicit because this proof divides by r.
+
+All 10 owned compiled constants were audited transitively, standard three axioms only. The geometric covariance deficit R and the distinct transfer R≤D/r are not inferred from this energy bound.

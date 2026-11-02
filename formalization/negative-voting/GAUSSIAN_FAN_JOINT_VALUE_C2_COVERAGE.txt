@@ -1,0 +1,7 @@
+GaussianFanJointValueC2
+
+The actual optimized Gaussian fan value is jointly C2 in every row and centered prescribed-mass coordinate at each positive-mass centered-singular-lower-bound point. The actual derivative at arbitrary mass coordinates is proved by translation. Its full gradient is jointValueDerivative at the actual selected centered offsets, and is C1 by the actual Hessian-continuity and mass-inverse theorems. No differentiability of a maximizing covariance is assumed.
+
+This proves full multivariable C2 regularity, not merely directional second derivatives. It does not yet prove local Lipschitz regularity or differentiability of the penalized covariance optimizer.
+
+Source-backed build and exhaustive source-module audit passed; only propext, Classical.choice, Quot.sound appear transitively.

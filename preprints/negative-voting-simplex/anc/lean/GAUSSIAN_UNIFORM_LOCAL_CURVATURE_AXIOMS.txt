@@ -1,0 +1,4 @@
+UNIFORM_LOCAL_CURVATURE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformLocalCurvature.uniform_local_curvature","module":"GaussianUniformLocalCurvature","theorem":true}
+UNIFORM_LOCAL_CURVATURE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingRayDeficit.LocalGaussianCurvature.congr_simp","module":"GaussianUniformLocalCurvature","theorem":true}
+UNIFORM_LOCAL_CURVATURE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformLocalCurvature.eventually_uniform_local_curvature","module":"GaussianUniformLocalCurvature","theorem":true}
+UNIFORM_LOCAL_CURVATURE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingUniformLocalCurvature.balanced_selected_weights_near_identity","module":"GaussianUniformLocalCurvature","theorem":true}

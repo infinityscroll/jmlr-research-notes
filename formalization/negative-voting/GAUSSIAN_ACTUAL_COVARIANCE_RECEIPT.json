@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "files": {
+    "GaussianCovariancePathRegularity.lean": "a67b02af2b8f9ec4f5d292123532839c8f208c989fa87e83bcb7af3fe4d9c599",
+    "GaussianFanCovarianceEnvelope.lean": "e68617d947a4cc60e6eaaa7f3c6e20040949b692f922ec7622e72e5715b06cc4",
+    "GaussianFanOptimizedValue.lean": "c91c818a974f3a4c95053c9261696068524345c3b3e6eb8e3c21b0a8471c9cc7",
+    "GaussianFanCovarianceHessian.lean": "16d21323bf6a870cd16c2723d7ca481693385039c0f540762a3eac02155df3a5"
+  },
+  "compiled_constants_audited": 35,
+  "compiled_theorems_audited": 32,
+  "scope": "Actual optimized dual infimum, including row continuity at singular systems, and covariance Hessian with a constructed spectral factor and a constructed local C1 prescribed-mass offset curve; all offset variables eliminated by the actual Jacobian pseudoinverse."
+}

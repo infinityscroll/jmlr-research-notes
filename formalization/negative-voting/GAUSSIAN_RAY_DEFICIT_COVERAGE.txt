@@ -1,0 +1,16 @@
+GaussianRayDeficit coverage
+
+Actual Gaussian content:
+- Positive row homogeneity follows from the proved primal assignment optimum, and covariance square homogeneity includes singular covariances.
+- The normalized PSD ray uses actual Gaussian global concavity, actual boundary continuity, and actual first/second derivative existence. It never differentiates at a singular endpoint.
+- The physical normalized reference derivative is derived from the actual Gaussian centroid/Price identity.
+- The regularCovarianceDeficit is the actual row-energy/optimized-value expression, for arbitrary centered rectangular row systems.
+
+Quantitative endpoint:
+regularCovarianceDeficit_ray_bound_normalized proves R >= alpha^2*e^2/(48*m)*min(1,radius/e), including e=0 and singular targets. Here m=n+2, alpha=referenceScale n, normalized K=alpha^-2 rowCovariance, e=HS(K-I).
+
+Remaining premise:
+LocalGaussianCurvature b U radius (alpha/(12*m)) is the explicit literal local second-derivative inequality for every positive C with HS(C-I)<=radius and every symmetric H. This file does not prove that local facet-bootstrap estimate. It proves its global propagation with no separate Gaussian law, continuity, derivative, or homogeneity assumption.
+
+Audit:
+All constants owned by this source, including generated/private theorem constants, were checked for authored axioms and nonstandard transitive axioms. Only propext, Classical.choice, and Quot.sound occur. The source has no sorry/admit/axiom/native_decide/unsafe/implemented_by.

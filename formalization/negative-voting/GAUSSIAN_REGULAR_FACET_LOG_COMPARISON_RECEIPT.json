@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianRegularFacetLogComparison",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_FACET_LOG_COMPARISON_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 9,
+  "theorem_count": 9,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularFacetLogComparison.lean": "8f221f384d55a0ea45750a87659cb232cccbf2b671c1cb6efca1d4da6a9fb950",
+    "GaussianRegularCapProbability.lean": "c9936104ef14b82f4b54d694ab06769490a1b24d5cfa9afe3a4fced93c520f91",
+    "GAUSSIAN_REGULAR_FACET_LOG_COMPARISON_AUDIT.lean": "e87c7cef32608c43b692406589d9d4ed4eb85021049f60607ca4280d0bf43674",
+    "GAUSSIAN_REGULAR_FACET_LOG_COMPARISON_AXIOMS.txt": "041e13d91bca67b197e2781e0054586f868a5baf71575da5303a27896ddb6542",
+    "GAUSSIAN_REGULAR_FACET_LOG_COMPARISON_BUILD.txt": "79cc503fad8e3c2725cdf90728b740fc79c42c36213d16c15894f53a466aa671",
+    "GAUSSIAN_REGULAR_FACET_LOG_COMPARISON_COVERAGE.txt": "aadda5455ac543e0a2ab7641c6505d8a8b084c7b6666fef263f5cb9fd2174dab"
+  }
+}

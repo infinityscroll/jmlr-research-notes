@@ -1,0 +1,69 @@
+GaussianFanMassInverse.lean — unique actual offsets and C1 inverse charts
+
+Namespace: NegativeVotingFanInverse
+Model: actual standard Gaussian winning-cell masses from GaussianFanMassBase.
+Hypotheses: arbitrary finite nonempty label set; fixed sites B satisfying
+CenteredSingularLowerBound B sigma for some sigma>0. Target probability
+vectors p satisfy every p_i>0 and sum_i p_i=1.
+
+GLOBAL UNIQUENESS AND EXISTENCE
+hasDerivAt_mass_line_pairing differentiates the actual map along h+t*v:
+  d/dt sum_i v_i mass_i(B,h+t*v) = v^T J(B,h+t*v) v.
+centered_offsets_unique uses strict positivity for nonzero centered v and
+the real mean-value monotonicity theorem. Two centered offsets with the
+same actual Gaussian mass vector must coincide. No convexity/uniqueness
+certificate is assumed.
+existsUnique_offsets_with_prescribed_masses combines this argument with the
+previously proved actual coercive minimizer/mass-existence theorem.
+
+ACTUAL GAUGE AND DERIVATIVE
+centeredGauge is the literal zero-sum submodule of (iota -> R).
+centering is a proved continuous linear map:
+  v -> v - (sum_i v_i)/card(iota).
+centeredMass B h = centering(mass B h).
+Since actual masses sum to one, this equals mass B h - uniform pointwise.
+centeredMassDerivative is composed from the already checked mass Frechet
+derivative, the gauge inclusion, and this centering projection.
+hasFDerivAt_centeredMass and contDiff_centeredMass derive its derivative
+and C1 regularity; these are not assumptions on a surrogate map.
+
+DERIVED INVERTIBILITY AND INVERSE FUNCTION THEOREM
+centeredMassDerivative_injective uses actual Jacobian strict positivity.
+If centering(Jv)=0, then Jv is constant. Pairing with centered v gives
+v^T Jv=0, hence v=0. Finite-dimensional injectivity implies surjectivity.
+centeredMassDerivativeEquiv constructs the resulting continuous linear
+equivalence; no inverse matrix or differentiability premise is supplied.
+
+exists_local_C1_mass_inverse applies Mathlib's C1 inverse function theorem
+to the actual centered mass map. It produces an OpenPartialHomeomorph whose
+forward function is exactly centeredMass B, whose source contains h, whose
+inverse is C1 at the image, and whose inverse derivative is the inverse
+of the derived actual Jacobian on the gauge.
+
+mass_chart_inverse_contDiffOn proves the inverse is C1 on the entire open
+target, using the already proved derivative invertibility at every source
+point. mass_chart_inverse_realizes proves, for every q in that target,
+  mass B (e.symm q) = q + uniform.
+exists_prescribed_mass_C1_chart provides such a chart at the unique centered
+offset realizing any strictly positive probability vector p. Its open
+target contains centering p. All identities outside the target are left
+unspecified, as required for a local inverse.
+
+BOUNDARIES
+This is an inverse in the mass/offset variables for fixed sites B. It does
+not yet prove smooth dependence when B moves, identify the mixed/full
+site-offset Hessian, bound the inverse norm uniformly in label count, or
+settle the full negative-voting theorem. The norm on the gauge is inherited
+from the finite Pi space; finite dimension justifies the continuous linear
+inverse, without claiming a quantitative condition number.
+
+VERIFICATION
+Build: lake build GaussianFanMassInverse.
+Exhaustive compiled-source audit:
+  lake env lean GAUSSIAN_FAN_MASS_INVERSE_AUDIT.lean.
+The audit checks every compiled constant from the source module, including
+generated/private declarations, with Lean.collectAxioms. Only propext,
+Classical.choice, and Quot.sound are permitted. Exact frozen source hash
+and final results are recorded in GAUSSIAN_FAN_MASS_INVERSE_RECEIPT.json.
+Frozen predecessor modules were not edited. The new lean_lib registration
+was added to lakefile.toml with the parent's explicit authorization.

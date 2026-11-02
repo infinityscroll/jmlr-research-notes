@@ -1,0 +1,7 @@
+GaussianFanHessianContinuity: actual moving Gaussian fan Hessian continuity
+
+The actual quadratic slice moment continuity is transported through the actual normalized fan cell parameters. Finite basis reconstruction proves operator-norm continuity of every affine tested-cell derivative, the full second derivative, and the actual expected-max bilinear Hessian. The gradient has actual C1 regularity; the Gaussian expected maximum is jointly C2 in every row and offset coordinate at each centered-singular-lower-bound point. Unit normals, noncoincident faces, Gaussian domination and actual boundary derivatives are derived from frozen predecessors. No assumed Hessian-continuity premise appears.
+
+Scope: the quantitative centered singular lower bound is explicit; affine bases can discharge it via GaussianAffineBasisLower. This module does not prove C2 of an optimized mass/covariance value or regularity of a maximizing covariance; those are subsequent steps.
+
+The source-backed Lake build and exhaustive source-module constant audit passed. All transitive axioms are propext, Classical.choice, Quot.sound only.

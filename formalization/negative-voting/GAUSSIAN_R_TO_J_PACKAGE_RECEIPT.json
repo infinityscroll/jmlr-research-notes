@@ -1,0 +1,85 @@
+{
+  "modules": [
+    {
+      "module": "GaussianBoundedRowGraph",
+      "source_sha256": "8f7b9fe26f753c9f23035c868f89c45c54a0e52f2ff7868d06834a65f2873172",
+      "receipt": "GAUSSIAN_BOUNDED_ROW_GRAPH_RECEIPT.json",
+      "compiled_constants": 32,
+      "compiled_theorems": 27
+    },
+    {
+      "module": "GaussianBoundedRowGap",
+      "source_sha256": "0e445d6a06cebf4fe015a3ce2ea8b9326f8652afe699fa188e833a8404aeff3c",
+      "receipt": "GAUSSIAN_BOUNDED_ROW_GAP_RECEIPT.json",
+      "compiled_constants": 7,
+      "compiled_theorems": 6
+    },
+    {
+      "module": "GaussianBoundedOffsetResponse",
+      "source_sha256": "2ddacd4bc3b4b46a3cb075eda7eed8c0f341d438061d41a0fd90bc290848fcba",
+      "receipt": "GAUSSIAN_BOUNDED_OFFSET_RESPONSE_RECEIPT.json",
+      "compiled_constants": 12,
+      "compiled_theorems": 10
+    },
+    {
+      "module": "GaussianBoundedMassTaylor",
+      "source_sha256": "313016c1e0e30c787ab3a8b80e8d111de2f47472019b70b8d80871321e57825f",
+      "receipt": "GAUSSIAN_BOUNDED_MASS_TAYLOR_RECEIPT.json",
+      "compiled_constants": 2,
+      "compiled_theorems": 2
+    },
+    {
+      "module": "GaussianRowMassValueUpper",
+      "source_sha256": "f2ef24e71e72fa565878a0521fc4391920061d8a7c3a0490eff69d4aa92837e3",
+      "receipt": "GAUSSIAN_ROW_MASS_VALUE_UPPER_RECEIPT.json",
+      "compiled_constants": 5,
+      "compiled_theorems": 5
+    },
+    {
+      "module": "GaussianBoundedOffsetCertificate",
+      "source_sha256": "75540df334677ac1564377e280a7ebbcacbad6b6999d58aaa20af3311e228b0d",
+      "receipt": "GAUSSIAN_BOUNDED_OFFSET_CERTIFICATE_RECEIPT.json",
+      "compiled_constants": 16,
+      "compiled_theorems": 15
+    },
+    {
+      "module": "GaussianBoundedOffsetLimit",
+      "source_sha256": "18aa7eb91d2462726a11a16ecb16c34b28e8d1dc98497937d51e768c0c74839b",
+      "receipt": "GAUSSIAN_BOUNDED_OFFSET_LIMIT_RECEIPT.json",
+      "compiled_constants": 3,
+      "compiled_theorems": 3
+    },
+    {
+      "module": "GaussianPSDAffineApproximation",
+      "source_sha256": "0358252e99cfab82a99c878f7bcd68ec532c3ac82d616f53051bc394c057760b",
+      "receipt": "GAUSSIAN_PSD_AFFINE_APPROXIMATION_RECEIPT.json",
+      "compiled_constants": 11,
+      "compiled_theorems": 10
+    },
+    {
+      "module": "GaussianArbitraryRowOffsetCertificate",
+      "source_sha256": "c606770c91284b8632a6b86cfcde969e1d9754ddf9dc441a547e3e13cd342e1a",
+      "receipt": "GAUSSIAN_ARBITRARY_ROW_OFFSET_CERTIFICATE_RECEIPT.json",
+      "compiled_constants": 2,
+      "compiled_theorems": 2
+    },
+    {
+      "module": "GaussianPrimalDualDeficit",
+      "source_sha256": "aca8211c3a7d6c65f589c7e7747735d47bbed5aab0d18973fa47c7c83d9b89a9",
+      "receipt": "GAUSSIAN_PRIMAL_DUAL_DEFICIT_RECEIPT.json",
+      "compiled_constants": 5,
+      "compiled_theorems": 5
+    },
+    {
+      "module": "GaussianCompetitiveCovarianceTransfer",
+      "source_sha256": "0d3e649b339c219a37d452cfa38850dec8858fb88539784260ad9b5f711d0008",
+      "receipt": "GAUSSIAN_COMPETITIVE_COVARIANCE_TRANSFER_RECEIPT.json",
+      "compiled_constants": 3,
+      "compiled_theorems": 3
+    }
+  ],
+  "compiled_constants": 98,
+  "compiled_theorems": 88,
+  "all_builds_and_transitive_axiom_audits_passed": true,
+  "boundary": "Actual arbitrary-rank R<=D/r and R<=128r/m, not full negative-voting theorem."
+}

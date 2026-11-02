@@ -1,0 +1,24 @@
+For arbitrary finite score rows B in FSC.Coord d, and strictly positive
+probabilities p summing to one, the actual optimizedValue(B,p) is the attained
+greatest linear assignment value over every AEMeasurable, AE-simplex rule
+whose literal Gaussian coordinate integrals equal p.
+
+The construction takes the finite range of B, adds the requested probabilities
+within each duplicate-row group, and applies actual prescribed-mass fan
+existence only to these distinct sites. It then distributes each group winner
+by p_i/P_group. Thus duplicate rows, rank deficiency and d=0 are included.
+The constructed rule is Borel and pointwise simplex; no purity is claimed.
+
+Pointwise weighted-score domination proves weak duality for all completed-
+measurable competitors. The explicit group rule saturates the score maximum.
+Pulling back and centering the group offsets gives an attained centered dual
+offset. The final optimizedValue_isGreatest and optimizedValue_eq_sSup use
+the literal set of feasible Gaussian integral values, not a supplied duality
+or optimizer-attainment premise.
+
+Global centroid-energy maximization and covariance optimizer realization are
+separate later steps. No full negative-voting theorem is asserted here.
+
+Source-backed Lake build and exhaustive source-module transitive audit passed
+for all 46 compiled constants (37 theorem constants). Only propext,
+Classical.choice and Quot.sound occur.

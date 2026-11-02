@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianAffineCapNormalization",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_AFFINE_CAP_NORMALIZATION_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 13,
+  "theorem_count": 11,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianAffineCapNormalization.lean": "0c21d96fff43e6f8b53f9e5a5eddbe08379d86c6aa1cfb4169ace8042686c1d9",
+    "GaussianAffineLogMassBound.lean": "b204f61d079439c7ed493f46df204780a86ecb5cfae8f55edc77957443374bcb",
+    "GAUSSIAN_AFFINE_CAP_NORMALIZATION_AUDIT.lean": "d2afb4b6296ac8dafedfc8794b6f7bcb3148b30d84980508da9d6391ab73cb55",
+    "GAUSSIAN_AFFINE_CAP_NORMALIZATION_AXIOMS.txt": "5e9e214a88cd6f55460351885594c8b00ebe8fd7fd1f5fcc04bd69d493ccb0e2",
+    "GAUSSIAN_AFFINE_CAP_NORMALIZATION_BUILD.txt": "ca1b2a3b2d232e662b7daddad9c64faf550f24e27a8194e7de8043408a64b2c6",
+    "GAUSSIAN_AFFINE_CAP_NORMALIZATION_COVERAGE.txt": "bee59e921f3f718d486b128d6e2c88efc55048289bce0a7ab3ba31db057bac29"
+  }
+}

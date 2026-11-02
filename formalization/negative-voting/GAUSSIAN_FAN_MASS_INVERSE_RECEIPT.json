@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-02T01:38:30.225031+00:00",
+  "source": "GaussianFanMassInverse.lean",
+  "sha256": "61b0c46e8293d305d084402cf39c4fc9b2090db72d0629371561f156aa6cf002",
+  "line_count": 251,
+  "source_theorem_declarations": 16,
+  "compiled_constants": 54,
+  "compiled_theorem_constants": 48,
+  "build_command": "lake build GaussianFanMassInverse",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_FAN_MASS_INVERSE_AUDIT.lean",
+  "audit_exit_code": 0,
+  "all_compiled_source_constants_audited": true,
+  "allowed_logical_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Unique centered offsets for positive probability vectors; actual centered Gaussian mass-map derivative bijectivity; constructed local inverse with inverse-Jacobian derivative and C1 on its whole open target; literal Gaussian probability realization.",
+  "not_asserted": "Moving-site regularity, full mixed Hessian, quantitative inverse-norm bound uniform in label count, full negative-voting theorem."
+}

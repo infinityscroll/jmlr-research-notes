@@ -1,0 +1,190 @@
+{
+  "checked_at_utc": "2026-11-02T04:09:49.187901+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "build_succeeded": true,
+  "all_owned_constant_audit_succeeded": true,
+  "owned_modules": [
+    "GaussianFiniteGraphCoarea"
+  ],
+  "owned_constants": 19,
+  "owned_theorem_constants": 16,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "constants": [
+    {
+      "axioms": [
+        "propext"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cut_threshold_indicator._simp_1_2",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.weighted_l1_of_cut",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cutWeight_one",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.weighted_absolute_sum_eq_twice",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.integrable_interval_indicator",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cutWeight.congr_simp",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cutWeight",
+      "theorem": false
+    },
+    {
+      "axioms": [
+        "propext"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cut_threshold_indicator._simp_1_3",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cut_count_le_card_mul_min",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cut_threshold_indicator",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.thresholdCut",
+      "theorem": false
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.integrated_cut_comparison",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.integral_cut_threshold",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.abs_sub_positive_parts",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.integrable_cut_threshold",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.instDecidable_gaussianFiniteGraphCoarea",
+      "theorem": false
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.integral_interval_indicator",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.thresholdCut.eq_1",
+      "theorem": true
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "constant": "NegativeVotingFiniteGraph.cutWeight.eq_1",
+      "theorem": true
+    }
+  ],
+  "source_closure": {
+    "GaussianFiniteGraphCoarea.lean": "3cca7997191eb556be3641dccf30ab9e4a336aa76b2fb1376ff9ee5a02488e2f"
+  },
+  "scope": "Actual finite coarea identity for threshold cuts, and ordered L1 graph inequality from cut expansion; no coarea, median or Poincare estimate assumed."
+}

@@ -1,0 +1,27 @@
+{
+  "module": "GaussianFanCycleDeficit",
+  "source_sha256": "81f2945b95858abdb4c22dc57466add9ed87bd3b4498c4af50b5608cf17267f9",
+  "source_lines": 364,
+  "source_theorem_declarations": 17,
+  "compiled_constants_audited": 40,
+  "compiled_theorem_constants_audited": 37,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T03:17:04.853797+00:00",
+  "evidence": [
+    "GAUSSIAN_FAN_CYCLE_DEFICIT_BUILD.txt",
+    "GAUSSIAN_FAN_CYCLE_DEFICIT_AUDIT.lean",
+    "GAUSSIAN_FAN_CYCLE_DEFICIT_AXIOMS.txt",
+    "GAUSSIAN_FAN_CYCLE_DEFICIT_COVERAGE.txt"
+  ],
+  "mathematical_boundary": "Actual cycle B form equals covariance-deficit energy; residual/Ehrhard and full negative-voting conclusion remain subsequent."
+}

@@ -1,0 +1,4 @@
+import GaussianFanCycleBalance
+
+#print axioms NegativeVotingFanCycle.cycleA_eq_cycleB_of_actual_gauge
+#print axioms NegativeVotingFanCycle.exists_actual_gaussian_cycle_balance

@@ -1,0 +1,12 @@
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.conditional_quadratic_pairing","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.coordinate_quadratic_integrable","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.conditional_mean_probability_bound","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.operatorHilbertSchmidt.eq_1","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.quadratic_score_eq_entries","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.conditional_quadratic_score_bound","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.affine_log_mass_derivative_bound","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.quadratic_score_integrable","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.operatorHilbertSchmidt","module":"GaussianAffineLogMassBound","theorem":false}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.operatorEntries","module":"GaussianAffineLogMassBound","theorem":false}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.tensor_pairing_cauchy","module":"GaussianAffineLogMassBound","theorem":true}
+AFFINE_LOG_MASS_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffineLogMassBound.operatorEntries.eq_1","module":"GaussianAffineLogMassBound","theorem":true}

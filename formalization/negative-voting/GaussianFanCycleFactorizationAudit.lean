@@ -1,0 +1,10 @@
+import GaussianFanCycleFactorization
+
+#print axioms NegativeVotingFanCycle.alternatingTetrahedron_zero_of_repeat
+#print axioms NegativeVotingFanCycle.tetrahedron_times_actual_mean
+#print axioms NegativeVotingFanCycle.actual_mean_weighted_triangle_alternating
+#print axioms NegativeVotingFanCycle.triangleCoboundary_cyclic_edges
+#print axioms NegativeVotingFanCycle.cycleA_sub_cycleB_reorder
+#print axioms NegativeVotingFanCycle.actual_cycle_pairing_average
+#print axioms NegativeVotingFanCycle.actual_cycle_pairing_collapse
+#print axioms NegativeVotingFanCycle.actual_fan_cycle_factorization

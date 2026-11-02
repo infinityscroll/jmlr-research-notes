@@ -1,0 +1,28 @@
+{
+  "module": "GaussianFanJacobianPseudoInverse",
+  "source_sha256": "80fc8fbee38a3519bc8b02ad6438aaff879ab54ae7709545fc7efdd09b374bd7",
+  "source_lines": 247,
+  "source_theorem_declarations": 15,
+  "compiled_constants_audited": 30,
+  "compiled_theorem_constants_audited": 28,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "toolchain": "Lean 4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "audit_scope": "Every compiled constant owned by this source module, including generated/private declarations.",
+  "source_proof_escape_scan": [],
+  "recorded_utc": "2026-11-02T01:48:10.011171+00:00",
+  "evidence": [
+    "GAUSSIAN_FAN_PSEUDOINVERSE_BUILD.txt",
+    "GAUSSIAN_FAN_PSEUDOINVERSE_AUDIT.lean",
+    "GAUSSIAN_FAN_PSEUDOINVERSE_AXIOMS.txt",
+    "GAUSSIAN_FAN_PSEUDOINVERSE_COVERAGE.txt"
+  ],
+  "mathematical_boundary": "Canonical offset pseudoinverse and actual inverse-chart derivative. Does not assert the joint moving-row Hessian or main negative-voting theorem."
+}

@@ -1,0 +1,26 @@
+{
+  "build_command": "lake build GaussianSecondChaosLower",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_SECOND_CHAOS_LOWER_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 29,
+  "theorem_count": 24,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianSecondChaosLower.lean": "9b012832c730ad6adcf12472d2fc221c9606f4a74e790edb3d9954d384ce3d40",
+    "GaussianRegularScoreLaw.lean": "dc708f4cf14fd511d436b795c42bb16cca0fc8c2a91ca4f083b904154e4641aa",
+    "GaussianSecondChaos.lean": "030b4cc1fca671017e1f6921abb490f51b7aade54da810203102fde9a43f3dbf",
+    "GaussianFractionalMassEnergy.lean": "ff2190783c392d77270fcc94a2383b595067905ac25d5298464a0eb4c1355bf0",
+    "GaussianMassCentroid.lean": "8de11a80bd0c5ee12aff209f28ffe5f014877c329b321a6d80dea96820e21e29",
+    "GAUSSIAN_SECOND_CHAOS_LOWER_AUDIT.lean": "0341f7fc101fe56eb301cb3d4ee54e0ec957ee5644129e7b2f9cf9135f041c3e",
+    "GAUSSIAN_SECOND_CHAOS_LOWER_AXIOMS.txt": "f425d6c505e7768e09ad5d4e7ef4031ea5c6ba55aa0bae1a2bd339c0c307373f",
+    "GAUSSIAN_SECOND_CHAOS_LOWER_BUILD.txt": "0ed4abf9af02280aea11a2e9d9b3ca30893dc05f89317adcb91b637a3f3fd1f7",
+    "GAUSSIAN_SECOND_CHAOS_LOWER_COVERAGE.txt": "9fb2c6846b5fabce4ebac3f8e790ee064cc1eb29abb28d2df1135edb9c75e020"
+  }
+}

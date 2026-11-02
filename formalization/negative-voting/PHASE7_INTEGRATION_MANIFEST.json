@@ -1,0 +1,156 @@
+{
+  "frozen_modules_added": [
+    "GaussianCovarianceMixedEstimate",
+    "RegularSimplexSecondMomentAlgebra",
+    "GaussianFiniteGraphRayleigh",
+    "GaussianRegularMaximumMoments",
+    "GaussianRegularQuadraticGeometry",
+    "GaussianRegularQuadraticSymmetry",
+    "GaussianRegularChaosCoefficients",
+    "GaussianCompetitiveParity",
+    "GaussianFractionalMassEnergy",
+    "GaussianCompetitiveMassWindow",
+    "GaussianRegularScoreLaw",
+    "GaussianPositiveCovarianceFactor",
+    "GaussianCovarianceConcavity",
+    "GaussianMassProfileEnvelope",
+    "GaussianCovarianceStrictConcavity",
+    "GaussianCovarianceCoercivity",
+    "GaussianCovarianceOptimizer",
+    "GaussianPolyhedralTube",
+    "GaussianFanCutFrontier",
+    "GaussianFanBoundaryTransfer",
+    "GaussianCheeger",
+    "GaussianFanCheeger",
+    "GaussianFiniteGraphCoarea",
+    "GaussianFanRetainedCuts",
+    "GaussianFanRetainedGap",
+    "GaussianSecondChaosLower",
+    "GaussianRegularSecondGap",
+    "GaussianLocalCovarianceFactor",
+    "GaussianFanJointOffsets",
+    "GaussianFanRetainedCoefficient"
+  ],
+  "sources": [
+    {
+      "path": "GaussianCovarianceMixedEstimate.lean",
+      "sha256": "495047f3b15685c732885291ff378418a0b7e520bb18ee0a060326d647bd1f20"
+    },
+    {
+      "path": "RegularSimplexSecondMomentAlgebra.lean",
+      "sha256": "3322c56c7fa27333375b3f483530d6009f977ab5b793209139d8adab60a91930"
+    },
+    {
+      "path": "GaussianFiniteGraphRayleigh.lean",
+      "sha256": "8c23cf88b8d08faef2ff3328dceff1c4f4d8a57ce69627d444ddc19933da3666"
+    },
+    {
+      "path": "GaussianRegularMaximumMoments.lean",
+      "sha256": "9de6407a1ee4bdb2d4a45be6111ed64d1af5fcb027f98de165c2ddc0820048ad"
+    },
+    {
+      "path": "GaussianRegularQuadraticGeometry.lean",
+      "sha256": "a06b5bdf5b8d837175761b88c08d02b25ac840211a4c6accc9996a30265777dc"
+    },
+    {
+      "path": "GaussianRegularQuadraticSymmetry.lean",
+      "sha256": "bb86826ebdf63e90c0736ad69312c3056176ff07855af96192a356a67560bb6f"
+    },
+    {
+      "path": "GaussianRegularChaosCoefficients.lean",
+      "sha256": "d75d800e30b89e880a49e2bcb437f5bc3da388af29141f4d0135eb3f2ff0787c"
+    },
+    {
+      "path": "GaussianCompetitiveParity.lean",
+      "sha256": "8ce82d13882c50f766c1dcda337f8ade78c3238a89238db34a0b8129ffbb17aa"
+    },
+    {
+      "path": "GaussianFractionalMassEnergy.lean",
+      "sha256": "ff2190783c392d77270fcc94a2383b595067905ac25d5298464a0eb4c1355bf0"
+    },
+    {
+      "path": "GaussianCompetitiveMassWindow.lean",
+      "sha256": "81b0e02119d4641fea4f5526a3aac36b61f166e1dd80f7cad044350a99157ead"
+    },
+    {
+      "path": "GaussianRegularScoreLaw.lean",
+      "sha256": "dc708f4cf14fd511d436b795c42bb16cca0fc8c2a91ca4f083b904154e4641aa"
+    },
+    {
+      "path": "GaussianPositiveCovarianceFactor.lean",
+      "sha256": "2e84bd73452e5329769c29118f25cd70373fb085904217078acd40f11373c59b"
+    },
+    {
+      "path": "GaussianCovarianceConcavity.lean",
+      "sha256": "a16df656d33af8b4900f80243285854e8d35169c1ef1b2b31c93324a0df9d137"
+    },
+    {
+      "path": "GaussianMassProfileEnvelope.lean",
+      "sha256": "843af111db1f7671ae2849177b8d74f82977983b129b62f774bc76845eeaacff"
+    },
+    {
+      "path": "GaussianCovarianceStrictConcavity.lean",
+      "sha256": "285212a3995e7abfa02b578e117356c62428c51cc70d9f092dfa8739f5664272"
+    },
+    {
+      "path": "GaussianCovarianceCoercivity.lean",
+      "sha256": "0c0440fbd5228f04aedbbdc1b5558d1f52eedb2a7cdec722a9b6905edf01e7b3"
+    },
+    {
+      "path": "GaussianCovarianceOptimizer.lean",
+      "sha256": "d38573729676e6ee0f9fbce08c520685e8d2b43373036872ddbaffe1f51697bf"
+    },
+    {
+      "path": "GaussianPolyhedralTube.lean",
+      "sha256": "967a2e9cf70cd9b8a38c519542cddcb6c0413af6342902060b1ff3b6ded4342b"
+    },
+    {
+      "path": "GaussianFanCutFrontier.lean",
+      "sha256": "6882d690a3e2b3c7115089d21ccbddb74955df0187b8de7575c6fa806bdcfdaf"
+    },
+    {
+      "path": "GaussianFanBoundaryTransfer.lean",
+      "sha256": "655cb8a810814ea268b1eab157777b9eff13bef67f7773d97631a319dd177ce5"
+    },
+    {
+      "path": "GaussianCheeger.lean",
+      "sha256": "7461f35ca9c7e071d39ed71b236c1ec2bea2933f9a89c84be2a88fdc3da1289e"
+    },
+    {
+      "path": "GaussianFanCheeger.lean",
+      "sha256": "434fbf128b8ebdf3d7cbc5b24a7aa866a1b7d140e3655304cdcba79552bb6dc4"
+    },
+    {
+      "path": "GaussianFiniteGraphCoarea.lean",
+      "sha256": "3cca7997191eb556be3641dccf30ab9e4a336aa76b2fb1376ff9ee5a02488e2f"
+    },
+    {
+      "path": "GaussianFanRetainedCuts.lean",
+      "sha256": "afff0cdf03de59dab2e4e73e27e4b4d0b77b92e2e8727f46dfc8ef0b6ffbe844"
+    },
+    {
+      "path": "GaussianFanRetainedGap.lean",
+      "sha256": "401f162cb8d95c0e736caf8fca0a06a7d62eff848cafdeabe0570aa73e03dc47"
+    },
+    {
+      "path": "GaussianSecondChaosLower.lean",
+      "sha256": "9b012832c730ad6adcf12472d2fc221c9606f4a74e790edb3d9954d384ce3d40"
+    },
+    {
+      "path": "GaussianRegularSecondGap.lean",
+      "sha256": "b4861d2d2723f09b8188dda711de1fbe64e82f21632b95e3addd23fe7fba81d5"
+    },
+    {
+      "path": "GaussianLocalCovarianceFactor.lean",
+      "sha256": "7e11ffa38b73891726bde6dd4ec689cff3648b418eb904a5918ab4145e1ee55a"
+    },
+    {
+      "path": "GaussianFanJointOffsets.lean",
+      "sha256": "2b813881558c366513b9d9105b50d22034a0407be6b66340270e84f40e071a2a"
+    },
+    {
+      "path": "GaussianFanRetainedCoefficient.lean",
+      "sha256": "2029aa992602e10f7e7b128d076b67f81297046e491b595be0d79a4f7ea877b1"
+    }
+  ]
+}

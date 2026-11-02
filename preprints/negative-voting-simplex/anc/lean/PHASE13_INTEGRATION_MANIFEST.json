@@ -1,0 +1,186 @@
+{
+  "frozen_modules_added": [
+    "GaussianQuadraticMovingCap",
+    "GaussianFanQuadraticMoments",
+    "GaussianSecondChaosMassAdjoint",
+    "GaussianSecondChaosFacetGradient",
+    "GaussianPolynomialTiltDerivatives",
+    "GaussianCapPolynomialStein",
+    "GaussianCapPolarizedStein",
+    "GaussianQuarticMovingCap",
+    "GaussianQuadraticAffineTransport",
+    "GaussianFanCoherentChart",
+    "GaussianFanQuarticMoments",
+    "GaussianFanQuadraticTransport",
+    "GaussianRegularNoiseRoutingIntegral",
+    "GaussianRegularFacetRangeGeometry",
+    "GaussianRegularFacetRangeEnvelope",
+    "GaussianRegularPairRange",
+    "GaussianRegularPairCoefficient",
+    "GaussianRegularPairCoefficientBounds",
+    "GaussianRegularCoefficientMajorant",
+    "GaussianFiniteHermiteInverseOU",
+    "GaussianBoundedRowGraph",
+    "GaussianBoundedRowGap",
+    "GaussianBoundedOffsetResponse",
+    "GaussianBoundedMassTaylor",
+    "GaussianRowMassValueUpper",
+    "GaussianBoundedOffsetCertificate",
+    "GaussianBoundedOffsetLimit",
+    "GaussianPSDAffineApproximation",
+    "GaussianArbitraryRowOffsetCertificate",
+    "GaussianPrimalDualDeficit",
+    "GaussianCompetitiveCovarianceTransfer",
+    "GaussianSwitchingFibreGeometry",
+    "GaussianSwitchingFibreIntegration",
+    "GaussianSwitchingFarTail",
+    "GaussianSwitchingCellCoordinates",
+    "GaussianSwitchingPairBound"
+  ],
+  "sources": [
+    {
+      "path": "GaussianQuadraticMovingCap.lean",
+      "sha256": "1007a7852124c68b593f2549d0075ffb96f7fc463ccabbd920ddb71454136195"
+    },
+    {
+      "path": "GaussianFanQuadraticMoments.lean",
+      "sha256": "ee89456a9d66a3c2eab747b0f29719021e9dab7391a8c3aab984dea729445e76"
+    },
+    {
+      "path": "GaussianSecondChaosMassAdjoint.lean",
+      "sha256": "86494ba1ca6f7d6484552c30fc04f4e8c1ffe1c0fa98c89dad805c12ff269769"
+    },
+    {
+      "path": "GaussianSecondChaosFacetGradient.lean",
+      "sha256": "298784e65a9ade7bc4ae2c6426f03edecfdb4c9f74f109e7b1f46060afe0bb1c"
+    },
+    {
+      "path": "GaussianPolynomialTiltDerivatives.lean",
+      "sha256": "066a25111906ed3929cdb06bc4a372c577d6c9d6fe8ba1152f2c3b1b355f1afa"
+    },
+    {
+      "path": "GaussianCapPolynomialStein.lean",
+      "sha256": "a41249c2825e814dd17d0552e943f11cd173d28b1e90db545cc94bed6b1efc09"
+    },
+    {
+      "path": "GaussianCapPolarizedStein.lean",
+      "sha256": "4dcc7e4d83412b9dcef87a7a8aab2b4552ca19a3301f603fc9ad308e457fb1f5"
+    },
+    {
+      "path": "GaussianQuarticMovingCap.lean",
+      "sha256": "f8bd6245703d5d0fa34abb80fc5378f3cc6f33aac3c2dd7d672a09a76066f32b"
+    },
+    {
+      "path": "GaussianQuadraticAffineTransport.lean",
+      "sha256": "fd00a35366fec0b3259cec73a16fb1f45625dcea42daa84858869745f8a6691d"
+    },
+    {
+      "path": "GaussianFanCoherentChart.lean",
+      "sha256": "8dd1c749ebbce7ac3336f2288eed45ec142c7c3deaf7ebb983d8d70557d244b6"
+    },
+    {
+      "path": "GaussianFanQuarticMoments.lean",
+      "sha256": "c354870b4bdb6f9607d04422ebb2384eb7586b30980a4b52a253fad870f4f832"
+    },
+    {
+      "path": "GaussianFanQuadraticTransport.lean",
+      "sha256": "bda9c5da1f80098e1f66d09de871ef44ca10ffe733c855d8c443f2063b3bc31d"
+    },
+    {
+      "path": "GaussianRegularNoiseRoutingIntegral.lean",
+      "sha256": "453bee8fe51c7e3ce175268924d35fade772aa6f8d980d253e0acf106a3d8e93"
+    },
+    {
+      "path": "GaussianRegularFacetRangeGeometry.lean",
+      "sha256": "2aadef332fca0eec92f14a96c3e99969c91a17679f0289e3fcf0407c197e4f61"
+    },
+    {
+      "path": "GaussianRegularFacetRangeEnvelope.lean",
+      "sha256": "e162724c2dd031046d7eb6ca78579912cb1a9de313ed8966cb670ff6d058f954"
+    },
+    {
+      "path": "GaussianRegularPairRange.lean",
+      "sha256": "d566271763bb38f42e3827b80ed66cd381f49d4d6892a35a82d18ca14c95c0d8"
+    },
+    {
+      "path": "GaussianRegularPairCoefficient.lean",
+      "sha256": "47537e81a20c9d3aab88d85f02311bcd74139e21f2a786b5d74f0bb29d680867"
+    },
+    {
+      "path": "GaussianRegularPairCoefficientBounds.lean",
+      "sha256": "d0e9b3a63f15a29549397d4f86d90b78c53ab109c46baf774e5a226abd30ed7c"
+    },
+    {
+      "path": "GaussianRegularCoefficientMajorant.lean",
+      "sha256": "9f4a61255cbf64c4bde0ba981c596ef55729fe8b50343f06a35d7e91516b1a9d"
+    },
+    {
+      "path": "GaussianFiniteHermiteInverseOU.lean",
+      "sha256": "9cd0be4cf3a047e77150dce02dc62568c27da21314cb65b2fc0dbef98f4652c3"
+    },
+    {
+      "path": "GaussianBoundedRowGraph.lean",
+      "sha256": "8f7b9fe26f753c9f23035c868f89c45c54a0e52f2ff7868d06834a65f2873172"
+    },
+    {
+      "path": "GaussianBoundedRowGap.lean",
+      "sha256": "0e445d6a06cebf4fe015a3ce2ea8b9326f8652afe699fa188e833a8404aeff3c"
+    },
+    {
+      "path": "GaussianBoundedOffsetResponse.lean",
+      "sha256": "2ddacd4bc3b4b46a3cb075eda7eed8c0f341d438061d41a0fd90bc290848fcba"
+    },
+    {
+      "path": "GaussianBoundedMassTaylor.lean",
+      "sha256": "313016c1e0e30c787ab3a8b80e8d111de2f47472019b70b8d80871321e57825f"
+    },
+    {
+      "path": "GaussianRowMassValueUpper.lean",
+      "sha256": "f2ef24e71e72fa565878a0521fc4391920061d8a7c3a0490eff69d4aa92837e3"
+    },
+    {
+      "path": "GaussianBoundedOffsetCertificate.lean",
+      "sha256": "75540df334677ac1564377e280a7ebbcacbad6b6999d58aaa20af3311e228b0d"
+    },
+    {
+      "path": "GaussianBoundedOffsetLimit.lean",
+      "sha256": "18aa7eb91d2462726a11a16ecb16c34b28e8d1dc98497937d51e768c0c74839b"
+    },
+    {
+      "path": "GaussianPSDAffineApproximation.lean",
+      "sha256": "0358252e99cfab82a99c878f7bcd68ec532c3ac82d616f53051bc394c057760b"
+    },
+    {
+      "path": "GaussianArbitraryRowOffsetCertificate.lean",
+      "sha256": "c606770c91284b8632a6b86cfcde969e1d9754ddf9dc441a547e3e13cd342e1a"
+    },
+    {
+      "path": "GaussianPrimalDualDeficit.lean",
+      "sha256": "aca8211c3a7d6c65f589c7e7747735d47bbed5aab0d18973fa47c7c83d9b89a9"
+    },
+    {
+      "path": "GaussianCompetitiveCovarianceTransfer.lean",
+      "sha256": "0d3e649b339c219a37d452cfa38850dec8858fb88539784260ad9b5f711d0008"
+    },
+    {
+      "path": "GaussianSwitchingFibreGeometry.lean",
+      "sha256": "1db85d24329da855e377adc3513069f769771862516dc13dadf37c6e432a79e5"
+    },
+    {
+      "path": "GaussianSwitchingFibreIntegration.lean",
+      "sha256": "06e62e374d92ca8e431b0be5b4f0eee8631178eedda7ba95f042198b1325a306"
+    },
+    {
+      "path": "GaussianSwitchingFarTail.lean",
+      "sha256": "cc555604bdf23f77500426624dee30c2852f36da40c41e2d8603c94cd3079819"
+    },
+    {
+      "path": "GaussianSwitchingCellCoordinates.lean",
+      "sha256": "967af0f554ec866e2a597d5ba90b133dd50bebe738fa5f3a4e4206987bc9ce21"
+    },
+    {
+      "path": "GaussianSwitchingPairBound.lean",
+      "sha256": "1af348ca1dadb30baea7cdbeaa5788856af2e139db82448d37985d8404160c7f"
+    }
+  ]
+}

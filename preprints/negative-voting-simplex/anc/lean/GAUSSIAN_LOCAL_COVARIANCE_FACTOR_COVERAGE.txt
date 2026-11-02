@@ -1,0 +1,7 @@
+Actual multivariable smooth covariance factor.
+
+For every positive-definite operator C0 in a finite-dimensional real inner-product space, the module constructs a genuinely smooth local map A on the actual self-adjoint operator submodule. It returns an invertible symmetric R with R^2=C0, A(C0)=R, and, on a neighborhood of C0, the literal identity <A(C)x,A(C)y>=<x,Cy> for every x,y. The finite-row corollary inherits smoothness and the exact row Gram identity.
+
+The construction proves that the symmetric squaring map has Frechet derivative 2 Id at the identity and invokes the actual inverse function theorem there. Congruence by R^{-1} and multiplication by R produce the factor at arbitrary positive C0. It does not differentiate eigenvectors, assume smooth square roots, or infer multivariable regularity from one-dimensional directional jets. The chart A need not itself be symmetric; its Gram identity is the required physical covariance identity.
+
+This module supplies an actual analytic prerequisite; it does not by itself prove optimizer continuity, Hessian continuity, or the full negative-voting theorem.

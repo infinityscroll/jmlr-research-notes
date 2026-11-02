@@ -1,0 +1,19 @@
+{
+  "module": "GaussianPSDAffineApproximation",
+  "source_sha256": "0358252e99cfab82a99c878f7bcd68ec532c3ac82d616f53051bc394c057760b",
+  "source_lines": 69,
+  "source_theorem_declarations": 3,
+  "compiled_constants_audited": 11,
+  "compiled_theorem_constants_audited": 10,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "For any centered affine basis with row norms at most1 and any actual PSD operator S with rows S b_i bounded byR>0, explicit S+(R/(k+1))I yields invertible affine-basis rows centered, bounded by2R, and converging to S b. Invertibility follows from actual positive quadratic form. No square-root continuity or assumed approximation sequence."
+}

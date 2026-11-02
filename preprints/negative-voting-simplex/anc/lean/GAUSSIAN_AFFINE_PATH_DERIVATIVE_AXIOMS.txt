@@ -1,0 +1,8 @@
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.equiv_adjoint_injective","module":"GaussianAffinePathDerivative","theorem":true}
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.affineMass_log_derivative_bound","module":"GaussianAffinePathDerivative","theorem":true}
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.affineMass_eq_normalized","module":"GaussianAffinePathDerivative","theorem":true}
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.affine_path_cap_preimage._abel_1_1","module":"GaussianAffinePathDerivative","theorem":true}
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.affineMass._proof_1","module":"GaussianAffinePathDerivative","theorem":true}
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.affine_path_cap_preimage","module":"GaussianAffinePathDerivative","theorem":true}
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.affineMass","module":"GaussianAffinePathDerivative","theorem":false}
+AFFINE_PATH_DERIVATIVE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAffinePathDerivative.differentiableAt_log_affineMass","module":"GaussianAffinePathDerivative","theorem":true}

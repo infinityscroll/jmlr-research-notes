@@ -1,0 +1,7 @@
+Numerical balanced Gaussian offset response
+
+For m=n+2, alpha=referenceScale n, and actual uniform mass offsets, balanced_operator_offset_l2_sq_bound proves Σ_i [deriv(t↦operatorOffsets b U(C+t A))0_i]² ≤1024(1+log m) HS(A)². balanced_operator_offset_l2_bound takes the square root and gives the constant32. The norm is the literal Euclidean label norm, not the Pi supremum norm. The actual covariance derivative includes the correct factor1/2; no further scaling is needed when applying it along a covariance segment.
+
+Hypotheses: a Parseval affine basis; maximumMean n≥1; a symmetric invertible factor R with R²=C and symmetric inverse, inverse norm≤2; actual selected facet weights in [alpha/(2m),2alpha/m]; actual mapped edge lengths≥1; symmetric perturbation A. Conditional means, Gaussian variance, actual Jacobian, mass-preserving response and differentiation are derived in the checked dependency chain. The finite local continuation still has to establish the weight bounds along its whole path.
+
+The numerical scalar estimate is derived using alpha*m≥1, hence the regular facet weight≥m^-2. All 11 owned compiled constants, including generated/private constants, were transitively audited; only propext, Classical.choice and Quot.sound occur. This is a proof component, not the full negative-voting theorem.

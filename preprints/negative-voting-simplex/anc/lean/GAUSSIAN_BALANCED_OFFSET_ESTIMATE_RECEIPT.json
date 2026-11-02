@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBalancedOffsetEstimate",
+  "source_sha256": "8b3f9629bab935649b7017b8f1a5dcd2b907cce1902f04c9d3ea41e99fc6b154",
+  "source_lines": 107,
+  "source_theorem_declarations": 3,
+  "compiled_constants_audited": 11,
+  "compiled_theorem_constants_audited": 11,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Dimension-uniform constant32 for the literal balanced covariance-direction offset derivative under actual facet weights in [alpha/(2m),2alpha/m], actual edges at least1 and symmetric covariance factor inverse norm at most2. The Gaussian maximum mean must be at least1. These geometric premises will be discharged by the separate local continuation."
+}

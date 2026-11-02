@@ -1,0 +1,8 @@
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.coordinate_map_measurePreserving","theorem":true}
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.coordinate_integral","theorem":true}
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.coordinate_centroid_norm_sq","theorem":true}
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.coordinateRule_feasible","theorem":true}
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.coordinateRule_centroidEnergy","theorem":true}
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.coordinateRule","theorem":false}
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.exists_feasible_centroid_representation","theorem":true}
+ASSIGNMENT_COORDINATE_BRIDGE_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingAssignmentCoordinateBridge.assignmentFirstEnergy_bound_of_small_floors","theorem":true}

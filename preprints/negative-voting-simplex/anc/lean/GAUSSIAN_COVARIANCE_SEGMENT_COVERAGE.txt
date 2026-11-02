@@ -1,0 +1,19 @@
+GaussianCovarianceSegment: an actual full covariance path
+
+For each symmetric H with ||H||op<=1/8, the module constructs S(t) in an
+actual orthonormal eigenbasis, S(0)=I, positive semidefinite for all real t.
+For every |t|<=2 it proves S(t)^2=I+tH, ordinary C1 regularity, the actual
+first derivative V(t), and ||S(t)-I||op<=2||H||op. It constructs an invertible
+continuous-linear-equivalence representative M of S(t), with ||M^-1||op<=2,
+and proves the exact velocity V(t)=(1/2)M^-1 H and ||V(t)||HS<=||H||HS.
+
+The interval extends past both endpoints of [0,1], so the derivatives used
+by the balancing continuation are genuine ordinary derivatives. Eigenvalue
+bounds, positive coefficients, invertibility, inverse norm and velocity
+estimates are all derived. No smooth-factor or inverse-bound premise is
+supplied. This extends the earlier local-at-zero factor to the full segment.
+
+Source-backed Lake build and exhaustive compiled-module transitive axiom
+audit passed, including generated helpers. Only the standard three axioms
+occur. Existing spectral smoothness was reused from the frozen covariance
+path regularity module.

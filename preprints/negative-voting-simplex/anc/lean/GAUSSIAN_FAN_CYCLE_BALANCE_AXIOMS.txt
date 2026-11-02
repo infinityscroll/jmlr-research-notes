@@ -1,0 +1,2 @@
+'NegativeVotingFanCycle.cycleA_eq_cycleB_of_actual_gauge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.exists_actual_gaussian_cycle_balance' depends on axioms: [propext, Classical.choice, Quot.sound]

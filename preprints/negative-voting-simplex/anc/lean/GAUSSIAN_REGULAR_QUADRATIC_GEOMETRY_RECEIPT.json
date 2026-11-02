@@ -1,0 +1,26 @@
+{
+  "build_command": "lake build GaussianRegularQuadraticGeometry",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_QUADRATIC_GEOMETRY_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 27,
+  "theorem_count": 24,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularQuadraticGeometry.lean": "a06b5bdf5b8d837175761b88c08d02b25ac840211a4c6accc9996a30265777dc",
+    "GaussianRegularMaximumMoments.lean": "9de6407a1ee4bdb2d4a45be6111ed64d1af5fcb027f98de165c2ddc0820048ad",
+    "GaussianCapSecondMoment.lean": "7af4717e1073947f1f1fbfa12cbabafda33f029bad45683f43d7a1742efdd0e9",
+    "GaussianFanTestedCells.lean": "ab1bf11f30855f11d16939b633948f86106f96e27ca10f1f99d9ac506efb0f7c",
+    "GaussianFacetDegree.lean": "06f8af387de6141114904d4073c9df44d0d0c18b002fb27d7527bf2658a95642",
+    "GAUSSIAN_REGULAR_QUADRATIC_GEOMETRY_AUDIT.lean": "e95ba2c050655161cc4b8ce5e017c104425874af4b72f1898ffb761f189a76bf",
+    "GAUSSIAN_REGULAR_QUADRATIC_GEOMETRY_AXIOMS.txt": "7de579f2d6edfea1ab888c13bdcc8b497d4c0c5562683d1e8da9333403579208",
+    "GAUSSIAN_REGULAR_QUADRATIC_GEOMETRY_BUILD.txt": "c926660146d92bc8b9ff5e21164753359f8bbfe2a2fbca50fda8fe5b1c9e209c",
+    "GAUSSIAN_REGULAR_QUADRATIC_GEOMETRY_COVERAGE.txt": "5a9f8f493b868bcdccd81b8ff43037372aaacd25e72c6eefa4515e219493983f"
+  }
+}

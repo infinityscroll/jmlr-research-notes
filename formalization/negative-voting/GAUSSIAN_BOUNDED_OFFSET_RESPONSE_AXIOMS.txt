@@ -1,0 +1,12 @@
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":[],"constant":"NegativeVotingBoundedOffsetResponse.inverse_pairing_bound._simp_1_1","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.massLine_sum","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.massLine","theorem":false}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.offsetLine.eq_1","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.offsetLine_jacobian_response","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.offsetLine_pairing_bound","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.massLine.eq_1","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.offsetLine","theorem":false}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.inverse_pairing_bound","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.offsetLine_C1","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.offsetLine.congr_simp","theorem":true}
+GAUSSIAN_BOUNDED_OFFSET_RESPONSE_AUDIT {"axioms":["propext","Quot.sound"],"constant":"NegativeVotingBoundedOffsetResponse.massLine_sum._simp_1_2","theorem":true}

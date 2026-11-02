@@ -1,0 +1,44 @@
+{
+  "checked_at_utc": "2026-11-02T02:04:02.799912+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_sha256": "175c71ce79ede1d5f40989013a532895001bed9b16273afe55ca250ebabac11b",
+  "audit_sha256": "f9eaa312c315a43c5f8aecd852376e7461d2e5c3a41834a08889c903e3cca572",
+  "source_closure": {
+    "GaussianFanCycleGeometry.lean": "175c71ce79ede1d5f40989013a532895001bed9b16273afe55ca250ebabac11b"
+  },
+  "frozen_complex_receipt_sha256": "e8dd201016fbd130190f7a5b6f159a33aa3f312f1a10bbe3bba7e2ab6b67ff8c",
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_exports": [
+    "NegativeVotingFanCycle.barycentricOutwardVector",
+    "NegativeVotingFanCycle.barycentricOutwardVector_inner",
+    "NegativeVotingFanCycle.barycentricOutwardVector_edge",
+    "NegativeVotingFanCycle.barycentricOutwardVector_sum",
+    "NegativeVotingFanCycle.barycentricOutwardVector_ne_zero",
+    "NegativeVotingFanCycle.barycentricOutwardVector_orthogonal_face_edge",
+    "NegativeVotingFanCycle.simplexOfAffineBasis",
+    "NegativeVotingFanCycle.eq_of_inner_basis_edges",
+    "NegativeVotingFanCycle.barycentricOutwardVector_eq_altitude",
+    "NegativeVotingFanCycle.barycentricOutwardVector_norm_eq_reciprocal_height",
+    "NegativeVotingFanCycle.faceDirection",
+    "NegativeVotingFanCycle.barycentricOutwardVector_mem_face_orthogonal",
+    "NegativeVotingFanCycle.projectedFaceGap",
+    "NegativeVotingFanCycle.faceGapHeight",
+    "NegativeVotingFanCycle.faceBoundaryNormal",
+    "NegativeVotingFanCycle.barycentricOutwardVector_projectedFaceGap",
+    "NegativeVotingFanCycle.faceGapHeight_pos",
+    "NegativeVotingFanCycle.barycentricOutwardVector_faceBoundaryNormal",
+    "NegativeVotingFanCycle.faceBoundaryNormal_norm",
+    "NegativeVotingFanCycle.faceProjection",
+    "NegativeVotingFanCycle.projectedFaceGap_eq_projection_sub",
+    "NegativeVotingFanCycle.faceGapHeight_eq_dist_projection",
+    "NegativeVotingFanCycle.projectedFaceGap_independent_anchor"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual Riesz barycentric normals, actual simplex altitude and reciprocal-height identities, genuine face projections and normalized projected-gap normals. Gaussian stratum density transfer, area/volume ratios and the A-B factorization remain separate."
+}

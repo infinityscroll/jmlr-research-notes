@@ -1,0 +1,25 @@
+GaussianAffineLogMassBound: actual dimension-independent Gaussian score bound
+
+For a positive-mass finite Gaussian cap C with unit, NoCoincident base normals,
+let p=gamma(C). For any actual linear operator A and translation z, the module
+proves the bound on the literal logarithmic mass derivative
+  |deriv_0 log gamma{x : (I+t A)x+t z in C}|
+  <= 4 exp(1) (1+log(1/p)) ||A||HS
+     + ||z|| (2 sqrt(log(1/p)) + 1/sqrt(2 pi)).
+The Hilbert--Schmidt norm is the actual coordinate sum of squared operator
+entries. There is no ambient dimension factor. No derivative, moment, density
+ratio, or hypercontractive estimate appears as a hypothesis.
+
+The proof derives the exact coordinate pairing with the actual conditional
+quadratic moment tensor, proves its finite tensor Cauchy bound, applies the
+checked actual Gaussian hypercontractivity/degree-two estimate, and combines
+it with the actual conditional mean bound. The actual affine/logarithmic cap
+derivative comes from the two frozen derivative modules. Completed Gaussian
+integrals and all relevant moment integrability are explicit.
+
+This is a local derivative theorem; transporting the estimate along actual
+invertible affine paths and integrating it remains the next finite-facet
+comparison step. It is not asserted to be that integrated comparison.
+
+Source-backed Lake build and exhaustive compiled-module axiom audit both
+passed, including generated helpers. Only the standard three axioms occur.

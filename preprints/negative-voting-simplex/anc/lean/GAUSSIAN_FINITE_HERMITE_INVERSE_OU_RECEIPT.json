@@ -1,0 +1,19 @@
+{
+  "module": "GaussianFiniteHermiteInverseOU",
+  "source_sha256": "9cd0be4cf3a047e77150dce02dc62568c27da21314cb65b2fc0dbef98f4652c3",
+  "source_lines": 136,
+  "source_theorem_declarations": 10,
+  "compiled_constants_audited": 21,
+  "compiled_theorem_constants_audited": 19,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual finite normalized Hermite sums: exact coefficients and squared Gaussian integral, pointwise inverse OU identity for every input point, inverse L2 cost tau^(-k), and actual fixed-normal trace at q=1+tau^(-2) with dimension-independent Gaussian row constant. Finite coefficient degree bound is explicit in this module; its derivation for affine products is in the separately built but not yet audited GaussianPolynomialHermiteDegree. No ambient almost-everywhere identity is restricted to a measure-zero plane. This is an analytic prerequisite, not the full negative-voting theorem."
+}

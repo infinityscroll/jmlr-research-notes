@@ -1,0 +1,12 @@
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.indicator_quadraticMoment_eq","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.conditional_quadratic_frobenius_bound","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.quadratic_energy_le_smoothed","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.euclidean_conditional_quadratic_frobenius_bound","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.smoothing_parameters","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.euclideanConditionalQuadraticTensor","theorem":false}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.indicator_quadratic_frobenius_bound","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.euclideanConditionalQuadraticTensor._proof_1","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.gaussian_toLp_measurePreserving","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.conditional_quadratic_frobenius_bound._simp_1_1","theorem":true}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.conditionalQuadraticTensor","theorem":false}
+GAUSSIAN_CONDITIONAL_SECOND_MOMENT_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingConditionalSecondMoment.smoothed_indicator_norm_le","theorem":true}

@@ -1,0 +1,25 @@
+Frozen actual cycle-form interface
+
+GaussianFanCycleForms defines the literal Gaussian data:
+w_ab = mu_{a,b}/|b_a-b_b| for distinct a,b, and 1 on repeated edges;
+D_abc = triangleContent/mu_{a,b,c} on distinct triples, and 1 otherwise;
+c_abcd = mu_{a,b,c,d}/tetrahedronContent;
+mean_abc(v) is the actual normalized Gaussian mean of <v,x> on that stratum.
+The contents are the already-proved sqrt Gram determinants, namely 2A and6V.
+Masses include the proved perpendicular Gaussian density factor.
+
+The forms are
+A(lambda,eta) = (1/2) sum_ab boundary(lambda)_ab boundary(eta)_ab / w_ab;
+B(lambda,eta) = (1/2) sum_abkl lambda_kab eta_lab
+                 (1/w_ab-D_kab mean_lab(v_k)).
+The exact intended factorization on alternating triangles is
+A-B = -(1/24) sum_abkl c_abkl delta(D lambda)_abkl delta(D eta)_abkl.
+This factorization is NOT asserted in this module. It defines its literal
+right side and proves the exact entrywise A-B expansion that starts the proof.
+Ordered edge/triangle/tetrahedron normalization is2/6/24; no full raw-array
+matrix equality outside the alternating subspace is claimed.
+
+All9 exports passed their standard3 transitive axiom audits. Complete49-file
+local source closure and compiler/mathlib revisions are pinned. The actual
+Gaussian coefficient identities and covariance-deficit realization of B are
+separate subsequent theorems, not assumptions added to these definitions.

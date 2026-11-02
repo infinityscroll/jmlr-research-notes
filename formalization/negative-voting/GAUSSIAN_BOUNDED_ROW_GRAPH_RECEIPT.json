@@ -1,0 +1,19 @@
+{
+  "module": "GaussianBoundedRowGraph",
+  "source_sha256": "8f7b9fe26f753c9f23035c868f89c45c54a0e52f2ff7868d06834a65f2873172",
+  "source_lines": 277,
+  "source_theorem_declarations": 13,
+  "compiled_constants_audited": 32,
+  "compiled_theorem_constants_audited": 27,
+  "all_transitive_axioms_standard": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "coverage_boundary": "Actual finite weighted-graph gap with full unequal-row correction K <= 4 Bmax Mmax sum(z^2) + 4 Bmax T retained and T^2 <= E K. Physical cut expansion gives lambda=min(kappa^2/(64 Bmax Mmax),kappa/(16 Bmax)). No degree bound, edge-separation lower bound, median premise, Gaussian cut premise discharge, offset-energy certificate, or full negative-voting claim."
+}

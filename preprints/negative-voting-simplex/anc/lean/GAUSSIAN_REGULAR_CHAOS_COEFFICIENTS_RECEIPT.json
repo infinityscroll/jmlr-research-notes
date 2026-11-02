@@ -1,0 +1,27 @@
+{
+  "build_command": "lake build GaussianRegularChaosCoefficients",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_CHAOS_COEFFICIENTS_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 18,
+  "theorem_count": 18,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularChaosCoefficients.lean": "d75d800e30b89e880a49e2bcb437f5bc3da388af29141f4d0135eb3f2ff0787c",
+    "GaussianRegularQuadraticSymmetry.lean": "bb86826ebdf63e90c0736ad69312c3056176ff07855af96192a356a67560bb6f",
+    "GaussianRegularQuadraticGeometry.lean": "a06b5bdf5b8d837175761b88c08d02b25ac840211a4c6accc9996a30265777dc",
+    "RegularSimplexSecondMomentAlgebra.lean": "3322c56c7fa27333375b3f483530d6009f977ab5b793209139d8adab60a91930",
+    "GaussianSecondChaos.lean": "030b4cc1fca671017e1f6921abb490f51b7aade54da810203102fde9a43f3dbf",
+    "GaussianMaximumLocalization.lean": "8335c140d25c4af824c8b97d805591e65462b3b5ab74858a7fd7afe4aa8f90a0",
+    "GAUSSIAN_REGULAR_CHAOS_COEFFICIENTS_AUDIT.lean": "e32c565dc63839f678ddc77de1d0ccdc86cbbd065afca598640225228ee561ae",
+    "GAUSSIAN_REGULAR_CHAOS_COEFFICIENTS_AXIOMS.txt": "5457ab6d906e9ef946b175c504dcfe4a84b66a7e144b1c3b5015775cc397829b",
+    "GAUSSIAN_REGULAR_CHAOS_COEFFICIENTS_BUILD.txt": "c4202bc48c81564455a948a215a8e87c948038978313bc4e9229b43f6fb3f43f",
+    "GAUSSIAN_REGULAR_CHAOS_COEFFICIENTS_COVERAGE.txt": "ca6540ef3d2b9f4f205c6273c6bee1c87155e884878d3ce279bcd94df55fab30"
+  }
+}

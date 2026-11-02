@@ -1,0 +1,12 @@
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.hasFDerivAt_operatorValue_mass","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.operatorOffsets.eq_1","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.operatorOffsets_joint_C1","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.operatorMassGradient_joint_C1","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext"],"constant":"NegativeVotingCovarianceOffsets.covarianceOffsets._proof_1","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingFanCovarianceValue.covarianceValue.congr_simp","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.operatorOffsets","theorem":false}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.covarianceOffsets_gram","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.covarianceOffsets.congr_simp","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.covarianceOffsets","theorem":false}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceConcavity.operatorValue.eq_1","theorem":true}
+COVARIANCE_OFFSETS_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceOffsets.contDiff_massDerivative","theorem":true}

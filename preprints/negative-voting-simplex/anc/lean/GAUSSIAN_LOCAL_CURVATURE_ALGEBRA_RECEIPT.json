@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianLocalCurvatureAlgebra",
+  "sourceBackedBuild": true,
+  "constants": 16,
+  "theoremConstants": 15,
+  "sha256": {
+    "GaussianLocalCurvatureAlgebra.lean": "a79b134ee3c18ef279e9a0a4679347982d363af36389d0f171518ee11ea17b51",
+    "GAUSSIAN_LOCAL_CURVATURE_ALGEBRA_AUDIT.lean": "2cf0d319b1b97297433a729f0d458c782aac4e5497a972888131d862470d02b1",
+    "GAUSSIAN_LOCAL_CURVATURE_ALGEBRA_AXIOMS.txt": "da0199faf0fb2a16e1716a28419dd453c2a536e386e22a29ffe614f05c56f027",
+    "GAUSSIAN_LOCAL_CURVATURE_ALGEBRA_BUILD.txt": "7846cd65dc85b3f5427eee74b87c48632e1ff2c203cf97b2a61959db7980c3a8"
+  }
+}

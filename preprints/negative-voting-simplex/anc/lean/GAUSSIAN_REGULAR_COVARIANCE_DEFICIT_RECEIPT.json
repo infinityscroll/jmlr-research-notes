@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianRegularCovarianceDeficit",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_COVARIANCE_DEFICIT_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 20,
+  "theorem_count": 19,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularCovarianceDeficit.lean": "34cfe97cf2f087d483ef627f4ac3f7b5f4511e49357fe6e34c7164e7b1fa96ca",
+    "GaussianCovarianceMaximumUniqueness.lean": "a8464f549d7a0c175a0613a4a1c73fab04ff053f777fbfd206cdc01fb395618c",
+    "GAUSSIAN_REGULAR_COVARIANCE_DEFICIT_AUDIT.lean": "5945ec86000ecf42eac329652b60de62529840e7dfebaef2a86ea2146b275b87",
+    "GAUSSIAN_REGULAR_COVARIANCE_DEFICIT_AXIOMS.txt": "abd4cd306d4e848a5774aced70e58ae6e5ac6cc66572e5e7443b4a318f5681dd",
+    "GAUSSIAN_REGULAR_COVARIANCE_DEFICIT_BUILD.txt": "25a960f233d8973d32e7d29168efa64b00ca1f504f1d4779e0e13b9fab74b8b6",
+    "GAUSSIAN_REGULAR_COVARIANCE_DEFICIT_COVERAGE.txt": "0ce0b4cb60b0d21afbe8bdef07a672fe0b04b1968eabff86d38113a1789d2aa3"
+  }
+}

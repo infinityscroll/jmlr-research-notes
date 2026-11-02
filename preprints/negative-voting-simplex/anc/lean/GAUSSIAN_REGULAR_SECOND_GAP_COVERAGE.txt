@@ -1,0 +1,21 @@
+Let m=n+2, w be the actual canonical first-chaos energy, ell=mw-1,
+and F0=ell^2/(2m). For one eventual alphabet threshold, this module proves
+
+ 0 <= A2(regular reference)-F0 <= 50/m.
+
+A2 is identified with the actual reference second Hermite coefficient by the
+already checked canonical tensor theorem. The lower bound is the actual
+assignment-independent affine tangent applied to the canonical max rule.
+The upper bound uses only the checked actual maximum variance <=6/log(m),
+actual second moment <=5log(m), and their exact variance identity, plus an
+explicit algebraic bound 48+126log(m)^2/(m-2) after multiplication by m.
+The remaining logarithmic remainder tends to zero. The necessary ell>=0 is
+derived eventually from the actual quantile/maximum-mean lower bound.
+
+This closes the numerical regular-reference remainder for second-stage
+competitive localization. No O(1/m) hypothesis, Euler-gamma value, Gumbel
+limit, or supplied moment formula is assumed. Mass-value semiconcavity and
+the full negative-voting theorem are separate obligations.
+
+Source-backed Lake build and exhaustive transitive audit passed for all
+16 compiled constants (14 theorem constants), standard three axioms only.

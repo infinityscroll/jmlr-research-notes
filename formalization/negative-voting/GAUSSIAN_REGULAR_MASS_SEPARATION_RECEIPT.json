@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "module": "GaussianRegularMassSeparation",
+  "sourceBackedBuild": true,
+  "constants": 32,
+  "theoremConstants": 27,
+  "sha256": {
+    "GaussianRegularMassSeparation.lean": "7f268b313522f248d1a9a420d878b765cb67ab2e6830540a8957ef271dba7778",
+    "GAUSSIAN_REGULAR_MASS_SEPARATION_AUDIT.lean": "d45e3daea0049d2d92c082f1be6f1b00c33bdd7dd8f249fba26f69450f97c04d",
+    "GAUSSIAN_REGULAR_MASS_SEPARATION_AXIOMS.txt": "fcdcc00f9650e2c3557bf95232d38b206faeff4a3da202f94585c50cffd260b3",
+    "GAUSSIAN_REGULAR_MASS_SEPARATION_BUILD.txt": "ed064bf881b8199b8cf2853e2a408bf08eae04e167744f3e225e33f26cc04221"
+  }
+}

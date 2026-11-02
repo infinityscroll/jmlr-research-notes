@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "module": "GaussianFanJointValue",
+  "sourceBackedBuild": true,
+  "constants": 7,
+  "theoremConstants": 5,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "sha256": {
+    "GaussianFanJointValue.lean": "f1a5374cbddcd7f6045f379f4863cc2fc6e8a4ee28c659bf455888f0de03b4dd",
+    "GAUSSIAN_JOINT_VALUE_AUDIT.lean": "56c78e87b6d54f6730e0f33d6757b45e7241a8d6b19cb03463f4791075b31c14",
+    "GAUSSIAN_JOINT_VALUE_AXIOMS.txt": "c3ecbad769c6b6de9774828ec8057f417c363a476d739372ccb68647d9f1100c",
+    "GAUSSIAN_JOINT_VALUE_BUILD.txt": "bc6e7fcd50107fc5b4a82f097ce3df1c404f0582255062cccd67f57582964d6c"
+  }
+}

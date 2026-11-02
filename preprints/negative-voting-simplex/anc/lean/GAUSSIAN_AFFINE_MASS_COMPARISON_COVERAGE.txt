@@ -1,0 +1,21 @@
+GaussianAffineMassComparison: integrated actual Gaussian probability ratio
+
+With p(t)=Gaussian{x:(I+tA)x+tz belongs to C}, F(t)=sqrt(1-log p(t)),
+K=4 exp(1)||A||HS, and eps=3||z||, the module proves on [0,1]:
+  F(t) <= gronwallBound(F(0),K,eps,t),
+  |F(1)-F(0)| <= K G+eps,
+  |log(p(1)/p(0))| <= (K G+eps)(G+F(0)),
+where G=gronwallBound(F(0),K,eps,1).
+The elementary majorant G <= (F(0)+eps)exp(K) is also proved, including K=0.
+
+The hypotheses are only the original finite unit-normal NoCoincident cap,
+its actual positive Gaussian mass, ||A||op<=1/2, and any translation z.
+Actual positivity, differentiability, conditional moment estimates, norm
+control, the differential inequality, Gronwall integration, and the mean-value
+step are discharged by this module and its frozen dependencies. No analytic
+estimate is supplied as a premise.
+
+The next module simplifies this to an absolute-constant polynomial bound in
+||A||HS log(1/p0), ||z|| sqrt(log(1/p0)), and ||z||^2.
+Source-backed Lake build and exhaustive compiled-module axiom audit passed;
+all declarations, including generated helpers, use only the standard three.

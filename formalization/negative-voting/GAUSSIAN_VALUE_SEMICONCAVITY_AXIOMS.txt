@@ -1,0 +1,14 @@
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.fullHessian_bound","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.scalar_schur_bound","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.partial_maximum_concaveOn","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.penalty_maximum_concaveOn","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.fullHessian._proof_3","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.concaveOn_of_segment_jets","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.fullHessian","theorem":false}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.line_second","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.line_second_quadratic_penalty","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.local_penalty_value_concave","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.joint_penalty_concaveOn","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.fullHessian._proof_1","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.fullHessian._proof_2","theorem":true}
+GAUSSIAN_VALUE_SEMICONCAVITY_AUDIT {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingValueSemiconcavity.block_quadratic","theorem":true}

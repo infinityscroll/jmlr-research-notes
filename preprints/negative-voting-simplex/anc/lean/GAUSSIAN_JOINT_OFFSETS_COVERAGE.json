@@ -1,0 +1,64 @@
+[
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointOffsets.exists_joint_C1_offsets",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointOffsets.centered_zero_mass_line_response",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointOffsets.covariance_offset_response",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointOffsets.mass_line_derivative_eq",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointOffsets.centered_mass_line_response",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointOffsets.covariance_offset_response._simp_1_1",
+    "theorem": true
+  },
+  {
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "constant": "NegativeVotingFanJointOffsets.exists_C1_offsets_along_rows_masses",
+    "theorem": true
+  }
+]

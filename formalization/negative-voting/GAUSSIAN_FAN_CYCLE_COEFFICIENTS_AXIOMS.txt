@@ -1,0 +1,17 @@
+'NegativeVotingFanCycle.cycleEdgeWeight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTriangleWeight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTetrahedronWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTriangleWeight_swap_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTriangleWeight_swap_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTriangleWeight_cyclic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTetrahedronWeight_swap_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTetrahedronWeight_swap_middle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTetrahedronWeight_swap_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleMean_barycentric_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleTriangleWeight_facet_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleMean_swap_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleMean_cyclic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycle_weighted_triangle_alternating' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycle_weighted_tetrahedron_alternating' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

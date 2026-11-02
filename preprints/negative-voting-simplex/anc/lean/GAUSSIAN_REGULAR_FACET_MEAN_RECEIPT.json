@@ -1,0 +1,23 @@
+{
+  "build_command": "lake build GaussianRegularFacetMean",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_FACET_MEAN_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 5,
+  "theorem_count": 5,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularFacetMean.lean": "21d0fdcd29e5e8fb77fe624818df9faf95b6aca1f842092afd5ad9ab8c7e8b79",
+    "GaussianRegularFacetSeed.lean": "156488599ca6223c636e5d2fc91474f4b3d45e709f3403c7e1cc954da97a1a20",
+    "GAUSSIAN_REGULAR_FACET_MEAN_AUDIT.lean": "048c2bb031499b999a8f14ac8e3f87769887f4a3618071b53c1b35b09791209a",
+    "GAUSSIAN_REGULAR_FACET_MEAN_AXIOMS.txt": "762068a3dd0262683cd36880d553ee52a2562480db0a9b020144b0149be50a4e",
+    "GAUSSIAN_REGULAR_FACET_MEAN_BUILD.txt": "0eafceb30dd691bdcb783aa569e2c2bfdbb3e96a32264e8341fbeb400dbf891c",
+    "GAUSSIAN_REGULAR_FACET_MEAN_COVERAGE.txt": "edae04c0b90e5e78f7d4a0ff72520d19a6476fc0a36e08493d7e8a243564443d"
+  }
+}

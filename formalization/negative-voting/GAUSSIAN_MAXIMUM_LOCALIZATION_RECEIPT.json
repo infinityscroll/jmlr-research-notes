@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianMaximumLocalization",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_MAXIMUM_LOCALIZATION_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 29,
+  "theorem_count": 24,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianMaximumLocalization.lean": "8335c140d25c4af824c8b97d805591e65462b3b5ab74858a7fd7afe4aa8f90a0",
+    "GaussianMaximumSecondMoment.lean": "05e98a06056f329b89258cbaf1e8c3a17f19ca6e8f4e98601ef5269be3df8f1c",
+    "GaussianMaximumMeanBounds.lean": "40023dc8f24586bb9f802242f2b6fa4c40b6ebe71a9e6f9fed80ac4443b93691",
+    "GaussianTailRatio.lean": "180214d311c08738eb2410399bea424804eeec76bb8d2eb373bf1b348bd99529",
+    "GAUSSIAN_MAXIMUM_LOCALIZATION_AUDIT.lean": "78d86c1892ecc7970bee5c69d1ad80b6ef511e9e718aa5d64d359d12b8702ff7",
+    "GAUSSIAN_MAXIMUM_LOCALIZATION_AXIOMS.txt": "32b2c40a9c15abe154f509b781d3929f6bbbbe57c05bad9b467426fbab51b5bc",
+    "GAUSSIAN_MAXIMUM_LOCALIZATION_BUILD.txt": "6b5ad36105da7312b1c082ba22c7706852bae4490ce4c06a5179d7079453bb76",
+    "GAUSSIAN_MAXIMUM_LOCALIZATION_COVERAGE.txt": "c4c56a15f2bcd92c585fb2be0513a9ace956d6366aad635c79d98c00bd1505cf"
+  }
+}

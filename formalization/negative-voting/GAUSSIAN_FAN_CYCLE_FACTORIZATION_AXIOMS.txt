@@ -1,0 +1,12 @@
+'NegativeVotingFanCycle.alternatingTetrahedron_zero_of_repeat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.tetrahedron_times_actual_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.actual_mean_weighted_triangle_alternating' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingFanCycle.triangleCoboundary_cyclic_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.cycleA_sub_cycleB_reorder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.actual_cycle_pairing_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.actual_cycle_pairing_collapse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingFanCycle.actual_fan_cycle_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]

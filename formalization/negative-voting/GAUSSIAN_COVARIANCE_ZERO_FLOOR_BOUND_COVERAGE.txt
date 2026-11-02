@@ -1,0 +1,2 @@
+Bounds on every sufficiently small positive-floor covariance maximum extend to every PSD covariance and every feasible Gaussian centroid energy. The proof uses actual boundary continuity of the objective along C+epsilon I; no convergence or continuity of a selected optimizer is assumed.
+Source-backed build and exhaustive owned-constants axiom audit passed. This is an ingredient, not a proof of the full voting theorem.

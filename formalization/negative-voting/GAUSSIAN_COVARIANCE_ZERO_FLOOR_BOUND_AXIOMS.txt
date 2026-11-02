@@ -1,0 +1,2 @@
+COVARIANCE_ZERO_FLOOR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceZeroFloorBound.covariance_bound_of_small_floors","theorem":true}
+COVARIANCE_ZERO_FLOOR_BOUND_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingCovarianceZeroFloorBound.centroidEnergy_bound_of_small_floors","theorem":true}

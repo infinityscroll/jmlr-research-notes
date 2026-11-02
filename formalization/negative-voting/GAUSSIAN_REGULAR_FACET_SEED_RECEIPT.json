@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianRegularFacetSeed",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_FACET_SEED_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 6,
+  "theorem_count": 6,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularFacetSeed.lean": "156488599ca6223c636e5d2fc91474f4b3d45e709f3403c7e1cc954da97a1a20",
+    "GaussianBalancedReference.lean": "46fb48b69cd948baa6e00d47c8d3286a847a43be8672fbb2e8f58d7424ad1d16",
+    "GaussianFanCentroidBoundary.lean": "5644dca1efe29383052d8b9e03a3f7434bd3c226510748046855c989e49dcb5e",
+    "GaussianRegularSecondGap.lean": "b4861d2d2723f09b8188dda711de1fbe64e82f21632b95e3addd23fe7fba81d5",
+    "GAUSSIAN_REGULAR_FACET_SEED_AUDIT.lean": "7bddc6be5bacb452569447a843cc729426273463aa36525436ba1d18fb39f0de",
+    "GAUSSIAN_REGULAR_FACET_SEED_AXIOMS.txt": "867c9d2e1e9d70276f06ebcef07a2bd88169a80795b2b1af1b2e098611723992",
+    "GAUSSIAN_REGULAR_FACET_SEED_BUILD.txt": "945466b25ff923dd66d5da97049be996dd839064f92382e9d375e76192091d5a",
+    "GAUSSIAN_REGULAR_FACET_SEED_COVERAGE.txt": "e8b0fb639e713900e6d5b25cc529c3a8e5680f387cb129d5f365745d204c92ea"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "build_command": "lake build GaussianSecondChaosMassAdjoint",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_SECOND_CHAOS_MASS_ADJOINT_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 27,
+  "theorem_count": 23,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianSecondChaosMassAdjoint.lean": "86494ba1ca6f7d6484552c30fc04f4e8c1ffe1c0fa98c89dad805c12ff269769",
+    "GaussianFanQuadraticMoments.lean": "ee89456a9d66a3c2eab747b0f29719021e9dab7391a8c3aab984dea729445e76",
+    "GaussianFanJacobianPseudoInverse.lean": "80fc8fbee38a3519bc8b02ad6438aaff879ab54ae7709545fc7efdd09b374bd7",
+    "GAUSSIAN_SECOND_CHAOS_MASS_ADJOINT_AUDIT.lean": "7104a60c0c132fbc95895fe9b57a8005cbaabe581fd042199444b369118bb08a",
+    "GAUSSIAN_SECOND_CHAOS_MASS_ADJOINT_AXIOMS.txt": "fb60cd992320d1253995fb86fbd5254f00ecf83ccc4c194f0d94e2ff75529de4",
+    "GAUSSIAN_SECOND_CHAOS_MASS_ADJOINT_BUILD.txt": "86cc849a41176614dc85385c2636bd9a7330cb08b4822bce2df117bf57aa89fc",
+    "GAUSSIAN_SECOND_CHAOS_MASS_ADJOINT_COVERAGE.txt": "222c7521096c485151341ab5f81dedff3cc0e3a58e8c20ffee70b92a587fcd11"
+  }
+}

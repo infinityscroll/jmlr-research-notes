@@ -1,0 +1,25 @@
+{
+  "build_command": "lake build GaussianRegularScoreLaw",
+  "build_exit_code": 0,
+  "audit_command": "lake env lean GAUSSIAN_REGULAR_SCORE_LAW_AUDIT.lean",
+  "audit_exit_code": 0,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "constant_count": 23,
+  "theorem_count": 21,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "GaussianRegularScoreLaw.lean": "dc708f4cf14fd511d436b795c42bb16cca0fc8c2a91ca4f083b904154e4641aa",
+    "GaussianCompetitiveMassWindow.lean": "81b0e02119d4641fea4f5526a3aac36b61f166e1dd80f7cad044350a99157ead",
+    "GaussianRegularMaximumMoments.lean": "9de6407a1ee4bdb2d4a45be6111ed64d1af5fcb027f98de165c2ddc0820048ad",
+    "GaussianFractionalMassEnergy.lean": "ff2190783c392d77270fcc94a2383b595067905ac25d5298464a0eb4c1355bf0",
+    "GAUSSIAN_REGULAR_SCORE_LAW_AUDIT.lean": "f43d51add0e706db2de0e0cd6ab696f5cfa6a5f73c91cb743d05653a033a10f6",
+    "GAUSSIAN_REGULAR_SCORE_LAW_AXIOMS.txt": "338bb60b6af21a681d819609cf6b0f6b0721ba7b691ba2ab18b7d0339a5e287f",
+    "GAUSSIAN_REGULAR_SCORE_LAW_BUILD.txt": "e14b133065000d19e0c04ce33456e0cac30ad7ab54978fc5805afb97d9f94104",
+    "GAUSSIAN_REGULAR_SCORE_LAW_COVERAGE.txt": "a35c0f2bb48bd60ecc95ef65f24b9d5ca673f70b6655f14eeee46a64179538d5"
+  }
+}

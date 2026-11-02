@@ -1,0 +1,17 @@
+Dimension-free conditional Gaussian second-moment deviation
+
+For every finite n and measurable event E of standard Gaussian probability p>0, define
+  T_jk = (1/p) integral_E (x_j*x_k - delta_jk) dgamma.
+The new theorem proves
+  sqrt(sum_j sum_k T_jk^2) <= 4*exp(1)*(1+log(1/p)).
+This is the actual conditional second-moment deviation from the identity matrix. It holds without convexity, smooth boundary, dimension or small-probability hypotheses, including p=1 and n=0.
+
+The product-Gaussian and Euclidean stdGaussian forms are both proved. The Euclidean transport uses the actual MeasurableEquiv.toLp Gaussian pushforward law; no tensor-transfer or density premise is supplied. Endpoint: NegativeVotingConditionalSecondMoment.euclidean_conditional_quadratic_frobenius_bound. The literal Euclidean tensor is euclideanConditionalQuadraticTensor.
+
+Proof ingredients are previously checked concrete Gaussian hypercontractivity, the exact indicator Lp norm, the actual Hermite coefficient law under Gaussian smoothing, Parseval with summability derived from L2 membership, and the exact second-chaos/Frobenius identity. The smoothing choice tau^2=1/(2*(1+log(1/p))) keeps tau strictly between zero and one for every permitted p. The resulting constant is explicit and deliberately loose. No abstract assumed spectral basis, chaos decomposition, or hypercontractive hypothesis is introduced.
+
+Reuse/provenance: GaussianChaosDecay, GaussianHypercontractivityBridge and GaussianSecondChaos are the frozen local foundations. Their source closure retains the attributed pinned upstream Gaussian Hermite and Markov-semigroup developments. Only the actual proved hypercontractive endpoint is used; the transitive all-owned-constant audit must reject any legacy custom axioms from unrelated imported declarations.
+
+See GAUSSIAN_CONDITIONAL_SECOND_MOMENT_VERIFICATION.json for the source-backed build, full local source hashes, exact compiler/mathlib pins and exhaustive transitive axiom inventory. This bounded result is an analytic input to the separate negative-voting proof, not a claim that its entire formalization is complete.
+
+Final source-backed verification passed: 12 compiled owned constants, 10 theorem constants, 25 pinned local source files. All transitive axioms are among propext, Classical.choice and Quot.sound.

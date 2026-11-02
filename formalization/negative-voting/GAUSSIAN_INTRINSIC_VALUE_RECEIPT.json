@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "files": {
+    "GaussianFanCovarianceValue.lean": "56a29b531acad81f5a5d4a42aab8c44ac843a38e99b50f9597f87b081f7df714",
+    "GaussianFanValueDerivative.lean": "aa1be8776ed55bbea00a9d9ba1e11b1175bd6cf05544bd1ddcf2c54cd449bed5"
+  },
+  "compiled_constants_audited": 31,
+  "compiled_theorems_audited": 27,
+  "scope": "Intrinsic covariance value from actual equal-Gram laws, continuity through covariance rank loss, actual straight-Gram-line Hessian, actual C1 optimized row value and centroid/Price derivative."
+}

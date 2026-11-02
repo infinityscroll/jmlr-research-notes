@@ -1,0 +1,13 @@
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":[],"constant":"NegativeVotingSwitchingFibre.good_unit_cell_reward._simp_1_1","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.gaussianReward_eq_ordered","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.restricted_reward_zero","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.gaussianReward.eq_1","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.good_unit_cell_reward","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.gaussianReward_continuousOn","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.unitCellReward","theorem":false}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.gaussianReward_nonneg","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.gaussianReward","theorem":false}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.cellFibreSet","theorem":false}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.restricted_reward_le_full","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.measurableSet_cellFibreSet","theorem":true}
+SWITCHING_FIBRE_GEOMETRY_AXIOMS {"axioms":["propext","Classical.choice","Quot.sound"],"constant":"NegativeVotingSwitchingFibre.restricted_reward_integrable","theorem":true}

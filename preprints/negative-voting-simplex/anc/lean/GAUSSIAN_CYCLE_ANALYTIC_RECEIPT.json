@@ -1,0 +1,14 @@
+{
+  "module": "GaussianFanCycleAnalyticBridge",
+  "sha256": "94831a417d72e356be19259757232134aa4906f44aa701586ea89c59203d8037",
+  "compiled_constants": 24,
+  "theorem_constants": 24,
+  "source_backed_build": "GAUSSIAN_CYCLE_ANALYTIC_BUILD.txt",
+  "audit": "GAUSSIAN_CYCLE_ANALYTIC_AXIOMS.txt",
+  "status": "passed",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
