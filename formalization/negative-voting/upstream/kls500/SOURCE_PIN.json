@@ -1,0 +1,47 @@
+{
+  "repository": "https://github.com/HongruZhao/KLS500",
+  "revision": "c1a50992a81456849996deef2971d4a0b3190bdd",
+  "upstream_lean": "4.35.0-rc3",
+  "upstream_mathlib": "4beb549110aa44b87d699166cece6e3642bddf34",
+  "pilot_lean": "4.35.0-rc2",
+  "pilot_mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "files": {
+    "KLS/Definitions.lean": {
+      "upstream_sha256": "03cbf1b33c56933d4fb03ad5d6659829bf62be7f35a0c5aedfdb91c5efb91ec6",
+      "modifications": [],
+      "ported_sha256": "03cbf1b33c56933d4fb03ad5d6659829bf62be7f35a0c5aedfdb91c5efb91ec6"
+    },
+    "KLS/LocalRademacher.lean": {
+      "upstream_sha256": "9f3d6aa128c9d2a2e52645c950f5615ebece79776057d846ea820e5bfc18578a",
+      "modifications": [],
+      "ported_sha256": "9f3d6aa128c9d2a2e52645c950f5615ebece79776057d846ea820e5bfc18578a"
+    },
+    "KLS/DistanceRamp.lean": {
+      "upstream_sha256": "e8269bf2c42c518008f9c79345dd6225f8fcf2e829f9a4ce3ac10a0de4f4cf0e",
+      "modifications": [],
+      "ported_sha256": "e8269bf2c42c518008f9c79345dd6225f8fcf2e829f9a4ce3ac10a0de4f4cf0e"
+    },
+    "KLS/DistanceRampVariance.lean": {
+      "upstream_sha256": "9aa6e21232b11b7f0c98016dcb24a6eb5103853799ccbca162159e80134a0dd6",
+      "modifications": [
+        "Replace unused large variance/PDE import with KLS.DistanceRamp; theorem bodies unchanged."
+      ],
+      "ported_sha256": "49c02c36c4b622eff3b28e99e7f64bce481730f37c986b1be19fba0a8662b5d0"
+    },
+    "KLS/BoundedVarianceCheegerShell.lean": {
+      "upstream_sha256": "655a1ea266b4f1dbf89a70b50c2dffcab4ad40c321e70b5fdcdcfc4b84070c89",
+      "modifications": [],
+      "ported_sha256": "655a1ea266b4f1dbf89a70b50c2dffcab4ad40c321e70b5fdcdcfc4b84070c89"
+    },
+    "KLS/BoundaryComparison.lean": {
+      "upstream_sha256": "8b7740c8e8521904b6b4a93600e40cdaf4caba7261eb1470c20bcd2794bdc31e",
+      "modifications": [],
+      "ported_sha256": "8b7740c8e8521904b6b4a93600e40cdaf4caba7261eb1470c20bcd2794bdc31e"
+    },
+    "KLS/BoundedVarianceCheegerBoundary.lean": {
+      "upstream_sha256": "991bc92474382a46e44a6a8fbb1b834472727188b5d43ad8377899890e28e18b",
+      "modifications": [],
+      "ported_sha256": "991bc92474382a46e44a6a8fbb1b834472727188b5d43ad8377899890e28e18b"
+    }
+  }
+}

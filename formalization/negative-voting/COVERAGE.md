@@ -1,19 +1,32 @@
-# Formalization coverage — 2026-11-02 stop checkpoint
+# Formalization coverage — completed original Gaussian target
 
-**The complete `NegativeVoting.FullNegativeVotingStatement` remains unproved.** It is an explicit proposition in `NegativeVoting/MainGoal.lean`, not an axiom or a theorem.
+**`NegativeVoting.full_negative_voting : NegativeVoting.FullNegativeVotingStatement` is proved.** The original statement file is byte-identical to the repository baseline. Its historical outstanding-goal comment has not been edited.
 
-The latest source-backed project build and exhaustive first-party axiom audit passed: **4,474 compiled theorem constants, 2,539 named declarations, 281 modules**. Only `propext`, `Classical.choice`, and `Quot.sound` occur. These counts do not measure how much of the main theorem is finished. See `PHASE13_INTEGRATED_VERIFICATION_RECEIPT.json` and its complete transcript.
+The source-backed build, closed exact-target regression and exhaustive first-party axiom audit passed: **8,403 compiled theorem constants, 4,504 named declarations, 505 modules**. The final theorem has no parameters or unresolved analytic premises. Its transitive axioms are exactly `propext`, `Classical.choice`, and `Quot.sound`.
 
-| Component | Checked result | Still required |
-|---|---|---|
-| Gaussian noise foundation | Actual signed Hermite expansion, moments, affine comparison and retained centroid square, OU composition and trace tools | Final quantitative signed-noise comparisons |
-| Covariance and offsets | Uniform local curvature, global PSD/exterior geometry, arbitrary-rank/duplicate-row balanced dual-offset certificate, actual AE competitor transfer R ≤ D/r, and zero-deficit equality classification | Use these endpoints in the final local/exterior comparison |
-| Regular noise potential | Actual pair coefficient continuous at ties; global range bounds; exact error majorant and its smoothness; AE fractional routing integral | Gaussian Lq, damping and normal-derivative bounds for the actual forcing |
-| Second-chaos calculus | Actual quadratic/quartic cell derivatives, mass adjoint and pure-offset cancellation, common affine chart and quadratic transport identity | Actual second derivative, quantitative Hessian bound and unequal-row finite comparison |
-| Switching cap | Exact actual-cell normal disintegration and pair reward bound with genuine facet trace, third-label escape, bad normal fibres and ambient far tail | Ordered-label summation, tiny/moderate amplitude combination, and discharge of the actual structured-forcing hypotheses |
-| Polynomial trace | Pointwise finite inverse OU, its L2 cost and actual fixed-plane Lq trace | Audit affine-product degree expansion; finish conditional polynomial trace and its logarithmic specialization |
-| Full theorem | Exact admissible class and quantifiers recorded | Complete inequality, equality and uniform-threshold assembly |
+[Publication verification](completion-evidence/PUBLICATION-VERIFICATION-20261103.json) · [Original receipt and all source hashes](completion-evidence/STAGE18-VERIFICATION.json) · [Full transcript](completion-evidence/full-verification-stage18-20261103.log) · [Exact-target check](completion-evidence/full-target-check-20261103.log)
 
-Four working drafts are saved under `checkpoints/negative-voting-2026-11-02/` at the repository root. They are excluded from the verified Lake targets and source archive. Their manifest distinguishes failed builds, a standalone compile, and a source-built file whose axiom audit has not been run. They are not included in the checked counts.
+| Component | Verified result |
+|---|---|
+| Build recovery | Seven pinned KLS files and reconstructed Cheeger adapter; explicit provenance, original licenses and downstream checks preserved |
+| Concrete objects | Actual product Gaussian law and correlated pair, simplex-valued fractional rules, normalized regular Gram matrices and argmax assignments |
+| Global comparison | Actual competitor deficit transfer, covariance geometry, row payment, second-chaos comparison and exterior localization |
+| Balanced local estimate | Actual normalized second-energy loss, with free-tail, covariance, curvature and selected-offset inputs discharged |
+| Local geometry | Paid regular reference, radial normalization, covariance smallness and exact energy invariance derived from the competitor |
+| Local noise rigidity | Actual own-centroid replacement, unequal-mass mixed term, full signed high-mode tail and uniform scalar absorption |
+| AE transfer | Measurable representatives preserve actual Gaussian noise, centroids, deficit and orbit distance |
+| Final assembly | One threshold before all dimensions and correlations; full voting interval; Gaussian inequality and exact AE regular equality class |
 
-Normal regularity, moment and geometry premises remain explicit in every component theorem. In particular, ordinary Lq control is not substituted for the stronger normal controls required by the all-amplitude switching argument. No internal prose review is imported as an axiom. External mathematical and priority review remain separate from these kernel checks.
+## Exact scope
+
+There is one M ≥ 3 such that for every m ≥ M and every finite ambient dimension d ≥ m−1, a regular reference can be chosen before the correlation and competitor. For all −1/(m−1) ≤ ρ < 0 and all componentwise AE-measurable, AE simplex-valued fractional assignments, that reference minimizes Gaussian noise stability. Equality holds iff the competitor is AE a regular assignment in the same dimension. Unequal masses and empty labels are allowed. The left endpoint and arbitrarily small strictly negative correlations are included.
+
+The final theorem does not assume bounds on moments, curvature, covariance, tails, offsets, or mass balance. Those appear only in intermediate lemmas and are proved before the final application.
+
+## Verification and boundaries
+
+`verify.py` builds the project, inventories compiled first-party theorems, rejects source proof escapes, audits every theorem's transitive axioms, pins the original target hash, and compiles an exact-type regression using the final theorem. The separate internal semantic and composition audits found no changed definitions, vacuous reference quantifier, or scope weakening. These reviews are distinct from external peer review.
+
+The numerical value of M is not supplied. Small alphabets, the wider negative-correlation supplement, quantitative stability, discrete voting transfer and UGC hardness are outside this formal target. Completing this proof does not independently establish priority for the mathematical result.
+
+The original missing Cheeger adapter was reconstructed, not recovered byte for byte. Its provenance and all upstream attribution remain explicit. Earlier checkpoints and receipts are unchanged. The completed Lean sources and verification records accompany this GitHub publication. The publication receipt records a fresh build and exhaustive audit, with only documentation changes since stage 18. No author contact is part of this publication.

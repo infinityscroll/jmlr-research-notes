@@ -1,0 +1,31 @@
+NegativeVotingLocalBalancedSecondChaos.actual_eventual_local_balanced_second_loss : NegativeVotingLocalOwnCentroidRigidity.EventualLocalBalancedSecondLoss
+  NegativeVotingLocalBalancedSecondChaos.localBalancedConstant 18
+NegativeVotingLocalOwnCentroidRigidity.eventually_local_rigidity_of_balanced_loss : ∀ (C : ℝ) (k : ℕ),
+  0 ≤ C →
+    NegativeVotingLocalOwnCentroidRigidity.EventualLocalBalancedSecondLoss C k →
+      ∀ᶠ (n : ℕ) in Filter.atTop,
+        ∀ (d : ℕ),
+          n + 1 ≤ d →
+            ∀ (Ref : Fin (n + 2) → Fin d → ℝ),
+              NegativeVoting.RegularSimplexGram Ref →
+                ∀ (f : (Fin d → ℝ) → Fin (n + 2) → ℝ),
+                  (∀ (i : Fin (n + 2)), AEMeasurable (fun x => f x i) (NegativeVoting.standardGaussian (Fin d))) →
+                    (∀ᵐ (x : Fin d → ℝ) ∂NegativeVoting.standardGaussian (Fin d), NegativeVoting.SimplexWeights (f x)) →
+                      ∀ (r : ℝ),
+                        0 < r →
+                          r ≤ 1 / (↑n + 1) →
+                            NegativeVoting.gaussianNoiseStability (-r) f ≤
+                                NegativeVoting.gaussianNoiseStability (-r) (NegativeVoting.regularAssignment Ref) →
+                              NegativeVotingProcrustes.regularOrbitDistance n
+                                    (NegativeVotingCentroidOptimization.centroidRows
+                                      (NegativeVotingAssignmentCoordinateBridge.coordinateRule
+                                        (LinearIsometryEquiv.refl ℝ (FSC.Coord d)) f)) ≤
+                                  1 / (↑n + 2) →
+                                NegativeVotingRegularCovarianceDeficit.regularCovarianceDeficit n
+                                    (NegativeVotingCentroidOptimization.centroidRows
+                                      (NegativeVotingAssignmentCoordinateBridge.coordinateRule
+                                        (LinearIsometryEquiv.refl ℝ (FSC.Coord d)) f)) =
+                                  0
+NegativeVotingFullAssembly.eventual_competitive_rigidity : NegativeVotingMainGoalAssembly.EventualCompetitiveRigidity
+NegativeVoting.full_negative_voting : NegativeVoting.FullNegativeVotingStatement
+'NegativeVoting.full_negative_voting' depends on axioms: [propext, Classical.choice, Quot.sound]

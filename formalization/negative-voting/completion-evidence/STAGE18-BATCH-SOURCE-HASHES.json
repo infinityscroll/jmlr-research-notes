@@ -1,0 +1,6 @@
+{
+  "GaussianBalancedCovarianceSecondChaos.lean": "0e746001ef023a5ad1deb8d6edf685ed1c6c35a5db5ee81417178e5a2beb9d6f",
+  "GaussianLocalOwnCentroidRigidity.lean": "334ba11ef7805392b5476b19ce991db6cb300289fc61e5c1cb30ac3ecdb021ee",
+  "GaussianLocalBalancedSecondChaos.lean": "e7dc54611c444c7a491a0b71ba7b562445300db07a9f2edaa069af8c244d0a21",
+  "GaussianFullNegativeVoting.lean": "fe01bad5eed6d0e3ac402abac65e49e3b2b2d287172d489e10adf08d0c8074cd"
+}

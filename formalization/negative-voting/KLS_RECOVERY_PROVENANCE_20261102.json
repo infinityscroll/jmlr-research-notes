@@ -1,0 +1,75 @@
+{
+  "status": "SOURCE_RECOVERY_AND_DOWNSTREAM_BUILD_PASS_AXIOM_AUDIT_PENDING",
+  "repository": "https://github.com/HongruZhao/KLS500",
+  "revision": "c1a50992a81456849996deef2971d4a0b3190bdd",
+  "retrieval": "GitHub connector fetch_file at exact commit",
+  "license": "Apache-2.0",
+  "license_path": "upstream/kls500/LICENSE",
+  "notice_path": "upstream/kls500/NOTICE",
+  "originals_directory": "upstream/kls500/originals",
+  "historical_pin_recovered_from": "GAUSSIAN_CHEEGER_FRONTIER_VERIFICATION.json:upstream_kls500_pin",
+  "sources": {
+    "KLS/Definitions.lean": {
+      "active_sha256": "03cbf1b33c56933d4fb03ad5d6659829bf62be7f35a0c5aedfdb91c5efb91ec6",
+      "upstream_sha256": "03cbf1b33c56933d4fb03ad5d6659829bf62be7f35a0c5aedfdb91c5efb91ec6",
+      "matches_historical_pin": true,
+      "modifications": []
+    },
+    "KLS/LocalRademacher.lean": {
+      "active_sha256": "9f3d6aa128c9d2a2e52645c950f5615ebece79776057d846ea820e5bfc18578a",
+      "upstream_sha256": "9f3d6aa128c9d2a2e52645c950f5615ebece79776057d846ea820e5bfc18578a",
+      "matches_historical_pin": true,
+      "modifications": []
+    },
+    "KLS/DistanceRamp.lean": {
+      "active_sha256": "e8269bf2c42c518008f9c79345dd6225f8fcf2e829f9a4ce3ac10a0de4f4cf0e",
+      "upstream_sha256": "e8269bf2c42c518008f9c79345dd6225f8fcf2e829f9a4ce3ac10a0de4f4cf0e",
+      "matches_historical_pin": true,
+      "modifications": []
+    },
+    "KLS/DistanceRampVariance.lean": {
+      "active_sha256": "49c02c36c4b622eff3b28e99e7f64bce481730f37c986b1be19fba0a8662b5d0",
+      "upstream_sha256": "9aa6e21232b11b7f0c98016dcb24a6eb5103853799ccbca162159e80134a0dd6",
+      "matches_historical_pin": true,
+      "modifications": [
+        "Replace unused large variance/PDE import with KLS.DistanceRamp; theorem bodies unchanged."
+      ]
+    },
+    "KLS/BoundedVarianceCheegerShell.lean": {
+      "active_sha256": "655a1ea266b4f1dbf89a70b50c2dffcab4ad40c321e70b5fdcdcfc4b84070c89",
+      "upstream_sha256": "655a1ea266b4f1dbf89a70b50c2dffcab4ad40c321e70b5fdcdcfc4b84070c89",
+      "matches_historical_pin": true,
+      "modifications": []
+    },
+    "KLS/BoundaryComparison.lean": {
+      "active_sha256": "8b7740c8e8521904b6b4a93600e40cdaf4caba7261eb1470c20bcd2794bdc31e",
+      "upstream_sha256": "8b7740c8e8521904b6b4a93600e40cdaf4caba7261eb1470c20bcd2794bdc31e",
+      "matches_historical_pin": true,
+      "modifications": []
+    },
+    "KLS/BoundedVarianceCheegerBoundary.lean": {
+      "active_sha256": "991bc92474382a46e44a6a8fbb1b834472727188b5d43ad8377899890e28e18b",
+      "upstream_sha256": "991bc92474382a46e44a6a8fbb1b834472727188b5d43ad8377899890e28e18b",
+      "matches_historical_pin": true,
+      "modifications": []
+    }
+  },
+  "adapter": {
+    "path": "GaussianCheegerRampAdapter.lean",
+    "historical_sha256": "6c34a15aceaeba4a3c176037ed6affd8124f0e8eed8b5754adfeb69e84d32b19",
+    "current_sha256": "be844cea867c5c4fd369bc7a69816c503c38ffe9477615e29dc24c42bc25f19c",
+    "exact_historical_file_recovered": false,
+    "reconstruction": "Four ramp conversion theorem bodies copied from pinned KLS/BoundedVarianceCheegerShell.lean and KLS/BoundedVarianceCheegerBoundary.lean. Namespace changed to NegativeVotingCheegerAdapter; LocallyLipschitz premise restricted to an existential global Lipschitz constant; actual ramp witness supplies its global Lipschitz bound. Added provenance header. All theorem conclusions and downstream GaussianCheeger.lean unchanged."
+  },
+  "scope": "Recover only the seven previously used modules and faithful adapter; no general KLS conjecture proof imported; historical receipts unchanged.",
+  "validation": {
+    "command": "lake build GaussianCheegerRampAdapter GaussianCheeger GaussianFanCheeger",
+    "exit_code": 0,
+    "log_path": "/tmp/negative-voting-bc-cheeger-recovery-build2-20261102.log",
+    "log_sha256": "519f710d6d7675b7d6e5b55c20f654b8407a444f95338321293353f76a5eee83",
+    "kernel_toolchain": "leanprover/lean4:v4.35.0-rc2",
+    "scope": "All seven recovered KLS modules, reconstructed adapter, and unchanged GaussianCheeger/GaussianFanCheeger source build successfully. No KLS theorem-body port was required. Exhaustive fresh axiom audit remains root-owned."
+  },
+  "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+  "notice_sha256": "b617b346eddc6e513c42d3d5941ca52d4f3420556bcc77323e6677c2220c94f1"
+}

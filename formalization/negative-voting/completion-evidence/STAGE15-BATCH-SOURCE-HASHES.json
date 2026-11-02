@@ -1,0 +1,17 @@
+{
+  "GaussianVarianceLocalBounds.lean": "3948640d08d12b1de92b35e0e7637570ccec46dccd29d65b8decf80dcadf6683",
+  "GaussianDiagonalHazardTaylor.lean": "56f0902a9bfb67e27ffba81591eb2880ab141f0a0da8fd99e2560f5a6e2cce1b",
+  "GaussianSecondChaosAbsorption.lean": "3ff01c4101a2587629197722cd1aed0042a4f55a5b53d392448f1ac7069248d4",
+  "GaussianActualRowPayment.lean": "21984335a15279e22d9a166a7c54accde86c84e8059241052ef3cb2291462b01",
+  "GaussianMainGoalAssembly.lean": "7ed5fb36182f6c4c7ef4ce07245cefb6efc041853e75e5f0894d48df3ea0ec23",
+  "GaussianBalancedEqualRowSecondChaos.lean": "a09b1837c55841903f4b9fa44879cbc1afe7828be67f866d80ebbc9807ba4fe2",
+  "GaussianExteriorNoiseAssembly.lean": "d60f0430a92fa93986574d4162799874960239b2fb9873220b51836b2753122b",
+  "GaussianOrthantTraceCancellation.lean": "dc3bac8a6d72585e6eb5279fe2ea25fbc5ec54229acdb7c50a5cf7f86eb8b8be",
+  "GaussianMassHessianBulk.lean": "aab3d57e5b1009b2540868a22a0ee327cead5aaf4ec49380275f5ef43399527e",
+  "GaussianEqualDiagonalOperatorProjection.lean": "54411eebeabda23769406315127afc8945e29f6df9c52f465cc0ed59e00d35d9",
+  "GaussianThresholdFan.lean": "09a7b5eac9104ce55aa943c69335219c364ede229e9a2993fdf0ae4f3a9b0e32",
+  "GaussianOrthantTraceAlgebra.lean": "726f1176d19827294658eee7a008e2f519182209395aa48996b456040037188f",
+  "GaussianRelativeTailMomentComparison.lean": "c057ad694a4dd28e709eb168cdf7f55e471dc061dd57d3a2018d7dea242ba940",
+  "GaussianLocalRectangleAbsorption.lean": "27769880ef97955858cda6b3c39ed6209d8eb525931d80e9ce2f6bdb05357ef8",
+  "GaussianSecondEnergyCovarianceLaw.lean": "c26648ddd609bd3856bfdb270c433b8503f04d67dc8ac85f14947324fd938e68"
+}

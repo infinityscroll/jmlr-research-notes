@@ -1,0 +1,14 @@
+{
+  "GaussianCovarianceDeficitRectangle.lean": "d1c3fd340a1528efadae672ee1c528d6c6570e39bfd4cefa6c8f18678ec7c6d4",
+  "GaussianCovarianceEnergyRectangle.lean": "622681c108dc4fb33c859525f668a420056a6e84efb25874cdeabdf6f59931c3",
+  "GaussianDiagonalHazardSecondControl.lean": "0a784c4a87f03e4833e6ccd83ea10c709c385b6247f6b4a048e501d124634482",
+  "GaussianHazardPolynomialIntegralDerivative.lean": "8c2a6d65420d0abe1b6e16f65c193cc135745c6173c87c4f291a81f999905939",
+  "GaussianDiagonalSecondBalanceEquation.lean": "e4b3686be314c8205774d1b7161666631f612caf60b8a86055cda159edf9644b",
+  "GaussianNormalizedDiagonalDeviation.lean": "b3f3ad74e6e45bbd57d4961600b8c9a480b60248a03d6e416dcd44c3cca5e3fc",
+  "GaussianNormalizedRowPayment.lean": "e32a27caa33e8850484332aef739b27a4ad65f00a7a373efca67593be54c83dc",
+  "GaussianEqualRowProxyLoss.lean": "5b80e83a11409248de9f89c3804a0e85a331f47ae2195425a5cd8854908862ef",
+  "GaussianCompetitiveSecondChaosComparison.lean": "ab469a33ea39dee7c73de6068b1dc567d762a5c7b1f0856db681e3e3b762f813",
+  "GaussianVariancePathSymmetry.lean": "fdb9b961247fb000871a73cc3fd3f62bff294bada7e9777048376703538c99a3",
+  "GaussianHazardSecondIntegralDerivative.lean": "ee405eecec78d72a6bda1ae1296421abb14eef6aa8eea1fe358e6d340ef5e4a5",
+  "GaussianBalancedOffsetCertificateCancellation.lean": "3986092dcea0a5ddd17fcebf8ed7b29e75af99efa47d22960494e135b4235d3f"
+}

@@ -1,14 +1,14 @@
 # Research proofs and reproducible notes
 
-Substantial results and reproducible experiments through 2 November 2026.
+Substantial results and reproducible experiments through 3 November 2026.
 These are research notes with explicit assumptions and limitations,
 not accepted papers or claims of author endorsement.
 
-## Preprint and partial Lean formalization
+## Preprint and completed Gaussian Lean theorem
 
 [The integrated preprint](preprints/negative-voting-simplex/output/pdf/negative_voting_simplex_preprint.pdf), by Jitendra Prajapati ([ORCID](https://orcid.org/0009-0008-7493-0311)), consolidates the large-alphabet negative-voting argument and its credited dependencies. [LaTeX sources and submission notes](preprints/negative-voting-simplex/README.txt) and a [upload bundle with proof companions](archives/negative-voting-simplex-arxiv-source-2026-11-02.tar.gz) include the supporting analytic proof files. This is a GitHub preprint package; it has not been submitted to arXiv.
 
-[The Lean project](formalization/negative-voting/README.md) now passes a source-backed build and exhaustive axiom audit of 4,474 first-party theorem constants across 281 modules. Checked advances include uniform covariance geometry, arbitrary-rank offset control and the actual competitor deficit transfer, regular-noise pair coefficients, moment transport, and actual Gaussian cell-pair switching bounds. **The complete negative-voting theorem remains unproved in Lean.** See the [current coverage](formalization/negative-voting/COVERAGE.md), [stop checkpoint and remaining work](checkpoints/negative-voting-2026-11-02/STATUS.txt), and [source archive](archives/negative-voting-lean-2026-11-02.tar.gz). The manuscript PDF is unchanged in this source checkpoint; unfinished drafts are preserved outside the verified build.
+[The Lean project](formalization/negative-voting/README.md) now proves the exact original `FullNegativeVotingStatement` as [`NegativeVoting.full_negative_voting`](formalization/negative-voting/GaussianFullNegativeVoting.lean). The source-backed build and exhaustive axiom audit pass for 8,403 first-party theorem constants across 505 modules, with no admissions or extra mathematical axioms. This covers every sufficiently large alphabet, every permitted ambient dimension, the full negative voting interval, arbitrary AE fractional assignments, and the exact equality class. See the [completion receipt](formalization/negative-voting/completion-evidence/STAGE18-VERIFICATION.json) and [scope ledger](formalization/negative-voting/COVERAGE.md). The numerical alphabet threshold, small alphabets and separate discrete/UGC consequences are outside this formal target. The manuscript PDF and [earlier checkpoint](checkpoints/negative-voting-2026-11-02/STATUS.txt) are unchanged. The completed formalization is in the linked Lean project; historical source archives retain their original checkpoint contents. See the [publication verification](formalization/negative-voting/completion-evidence/PUBLICATION-VERIFICATION-20261103.json).
 
 ## 2 November — integrated negative-voting proof
 

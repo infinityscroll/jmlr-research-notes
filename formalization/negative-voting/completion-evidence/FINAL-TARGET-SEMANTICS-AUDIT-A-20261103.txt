@@ -1,0 +1,147 @@
+FINAL TARGET SEMANTICS AUDIT A
+Date: 2026-11-03
+Repository: /Users/dusk/negative-voting-lean-completion-20261102
+Reviewed original commit: c2dea8cf6e02c371d00fa368499b699fd73d2a7c
+
+VERDICT
+PASS: no changed target, vacuous admissibility/reference, weakened noise range,
+dimension-dependent threshold, or weakened equality class was found. The literal
+FullNegativeVotingStatement agrees with the original repository's Gaussian
+theorem. This is a source-level semantic review, not an independent replay of
+the entire analytic proof or a substitute for the final kernel/axiom audit.
+
+The reviewed final source declares the exact unconditional theorem
+  NegativeVoting.full_negative_voting : NegativeVoting.FullNegativeVotingStatement
+by composing the actual local and exterior endpoints. There is no extra analytic
+hypothesis on this declaration. Root's saved final build log was read back and
+ends BUILD SUCCESS (9554 jobs). Its standalone target check elaborates precisely
+the declaration above and prints only propext, Classical.choice and Quot.sound
+as transitive axioms. This reviewer read those outputs but did not launch a
+compiler or rerun that check. The broader 505-module aggregate audit was still
+running at this receipt's final readback and is not certified by this receipt.
+
+SOURCE PINS (SHA-256; relative to formalization/negative-voting unless noted)
+NegativeVoting/MainGoal.lean
+ fe8f21515f4af803af7cbd14c3741377e6a4dcd508aeaf749a2821544c6c86c6
+NegativeVoting/NoiseStability.lean
+ f0544fc04fd58d75e624c7fd7929ffc71e758c2ead42f8800c958da0998f6aec
+NegativeVoting/RegularSimplex.lean
+ 39f0347728ea26e228bda19dcf3c3766b912ad63c623c0558e9d9eff96cce9d8
+NegativeVoting/Routing.lean
+ c3cecd94f119728c0d07c2e5c74459b8dbcec1b395f6d536ffe6009f30d629a2
+NegativeVoting/Admissible.lean
+ 9e25dfe7895fc0f76116635a6bde5b468026c9bbee9a7829b0d23c054201aa98
+NegativeVoting/RegularSimplexExistence.lean
+ 5e1418d50a4823ab672f1e4a9f7dc48ab2de739fcbee68da0b3f06f6052c2dec
+GaussianMainGoalAssembly.lean
+ 7ed5fb36182f6c4c7ef4ce07245cefb6efc041853e75e5f0894d48df3ea0ec23
+GaussianAssignmentEquality.lean
+ 99b08df52cb80ec59345c99f0d97c2683fb6c259916b79ce6c737e1057061941
+GaussianRegularScoreLaw.lean
+ dc708f4cf14fd511d436b795c42bb16cca0fc8c2a91ca4f083b904154e4641aa
+GaussianFullNegativeVoting.lean
+ fe01bad5eed6d0e3ac402abac65e49e3b2b2d287172d489e10adf08d0c8074cd
+Repository preprints/negative-voting-simplex/01_statement_inputs.tex
+ 92a2bd480214d15759881f5c419b8316ba23ff1791f7f50948c8f3c2454452f3
+completion-evidence/full-target-check-20261103.log
+ e21d78404be3292bde4371b87b61a73d01ea2e25f55360eaa07dbf12337d83d4
+completion-evidence/full-target-build-20261103.log
+ 8dfbb1cdaecc5e9d34fc08726f95d4fa74dad1554fb288c61d0e76459dee9706
+
+ORIGINAL-TARGET COMPARISON
+Read the complete MainGoal, NoiseStability, RegularSimplex, Admissible and
+RegularSimplexExistence files; inspected the underlying SimplexWeights,
+Gaussian construction, actual equality bridge, equal-Gram noise law, and final
+assembly. The defining files above are unchanged against the pinned original
+HEAD. A direct git-show SHA of original MainGoal is the same fe8f215... value.
+Also checked that GaussianMoments, GaussianRouting, Integrability and the paper's
+01_statement_inputs.tex are unchanged. The paper's main theorem states the same
+large-alphabet, all finite dimensions N >= m-1, entire negative voting interval,
+unrestricted fractional-assignment inequality and regular-only equality.
+
+QUANTIFIERS AND NONVACUITY
+1. MainGoal:25-43 chooses a natural threshold M >= 3 before m, dimension,
+   correlation or competitor. The bound is consequently uniform in all of them.
+   For each m >= M and every n with m-1 <= n+1 it then constructs a regular
+   reference before introducing rho and f. A reference depending on rho or f
+   cannot satisfy the literal quantifier order used here.
+2. N=n+1 covers every allowed finite dimension: m >= 3 and N >= m-1 imply
+   N >= 2. No relevant zero-dimensional case is silently lost. The natural
+   subtraction m-1 agrees with the intended integer subtraction on this range.
+3. The regular-reference requirement is existential, not an implication from
+   an impossible Gram premise. RegularSimplexExistence constructs the centered
+   simplex in dimension m-1 and pads it in every larger dimension. The final
+   assembly actually calls exists_regularSimplexGram_main_dimensions.
+4. The correlation interval is exactly -1/(m-1) <= rho < 0. Its left endpoint
+   is included, and there is no positive lower bound on r=-rho. Since m >= 3,
+   this interval is contained in [-1/2,0), so the Gaussian coupling is valid.
+   Replacing m by k+2 in the final assembly gives 0 < r <= 1/(k+1) exactly.
+5. No equal-mass, purity, optimality, stationary-point, rank, positive-label-mass,
+   or near-regular hypothesis is imposed on the target's competitor. Routing:18
+   defines SimplexWeights as coordinate nonnegativity and sum one; each weight
+   is therefore at most one. Constant, fractional and nonuniform rules are
+   included. Componentwise AE measurability and AE simplex membership suffice.
+
+ACTUAL NOISE OBJECTIVE; NO DEFAULT-INTEGRAL LOOPHOLE
+6. NoiseStability:18-40 defines gamma as the finite product of gaussianReal 0 1,
+   takes independent X,Y with this law, and uses
+     X_rho = rho X + sqrt(1-rho^2) Y,
+     S_rho(f) = E sum_i f_i(X) f_i(X_rho).
+   This is the genuine same-assignment correlated Gaussian objective, not a
+   finite Hermite truncation, a first-moment proxy, or a two-rule/bilinear model.
+7. The source proves the correlated second marginal is gamma by characteristic
+   functions and product measures. Thus AE changes remain AE under both inputs.
+   Admissible constructs a measurable everywhere-simplex representative, proves
+   objective invariance, and proves integrable_noiseIntegrand_of_ae. Its integral
+   lies in [0,1]. The use of an ordinary real-valued Bochner integral cannot
+   exploit Lean's value for nonintegrable functions on the admitted class.
+
+EQUALITY CLASS AND NORMALIZATION
+8. RegularSimplexGram is the exact Gram matrix I-11^T/m. Consequently the rows
+   sum to zero, have equal nonzero norm, pairwise squared distance two, and span
+   an (m-1)-dimensional regular simplex. Arbitrary such rows in the fixed ambient
+   space include every orthogonal orientation and relabeling. They are not a
+   single chosen orientation or only a covariance-law equality condition.
+9. regularAssignment is the maximum of the actual linear scores. Tie weights
+   are divided equally, but regular rows are distinct and the Gaussian tie
+   sets are null; ae_regularAssignment_indicator proves this is an indicator
+   partition almost everywhere. Positive common scaling, including the paper's
+   centroid normalization alpha, preserves exactly these winning cells.
+10. The equality clause is a genuine iff: the ENTIRE vector-valued f equals a
+    regular assignment almost everywhere in the SAME ambient Gaussian space.
+    It does not merely identify its masses, centroids, Gram matrix or objective.
+    There is no demand for pointwise agreement on null sets.
+11. GaussianAssignmentEquality:123-138 obtains this AE rule equality from actual
+    zero centroid deficit using the rule's own mass vector, zero nonnegative
+    routing loss and Gaussian-null ties. It assumes no uniform/positive mass.
+    The reverse implication uses both AE invariance and the actual equal-Gram
+    noise law in GaussianRegularScoreLaw:143-161.
+
+FINAL ASSEMBLY CHECK
+12. EventualCompetitiveRigidity has its eventual label threshold before dimension,
+    reference, fractional rule and r. Its analytic conclusion is zero actual
+    centroid deficit for every competitive rule. GaussianFullNegativeVoting
+    instantiates that premise by exterior localization followed by local
+    rigidity; its source does not retain an unproved local/E2/tail premise.
+13. GaussianMainGoalAssembly sets M=max(N+2,3), constructs the regular reference,
+    and introduces rho and f afterward. Competition yields the regular class
+    and hence equality of objective. The noncompetitive branch is strictly
+    larger by linear order. This proves both the minimization and exact iff;
+    no minimizer-existence or compactness assumption is required.
+
+HONEST CLAIM / LIMITATIONS
+The saved standalone kernel and transitive axiom check supports the exact
+claim: Lean has proved the repository's original full
+large-alphabet Gaussian negative-voting proposition, including all finite
+N >= m-1, every rho in [-1/(m-1),0), all AE-measurable fractional rules, and
+regular-simplex equality precisely modulo Gaussian-null sets.
+This does not supply a numerical threshold, remaining small m, positive rho,
+all negative Gaussian correlations, bilinear rules, infinite-dimensional inputs,
+the paper's separate discrete/UGC consequences, external peer acceptance or
+priority. This reviewer contributed analytic implementation modules, so this is
+an independent check of the final semantics, not an external independent proof.
+
+Documentation-only observation: the unchanged historical MainGoal header says
+that no theorem asserting the proposition is supplied. That describes the
+original baseline and becomes stale when the new final theorem is sealed; it
+does not change the proposition. No proof or shared source was edited here.

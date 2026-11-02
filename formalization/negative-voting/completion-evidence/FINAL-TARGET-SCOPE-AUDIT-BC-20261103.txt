@@ -1,0 +1,100 @@
+FINAL TARGET / ASSEMBLY / EXTERIOR SCOPE AUDIT
+Date: 2026-11-03
+Reviewer: independent implementation subagent BC; internal source-and-signature review.
+Repository: /Users/dusk/negative-voting-lean-completion-20261102
+
+VERDICT AT THIS CHECKPOINT
+PASS for the exact target, final conditional assembly, equality-class bridge,
+and unconditional eventual exterior exclusion. No scope weakening found.
+The forthcoming actual local conditional theorem has not yet been supplied;
+its scope review is PENDING and is not certified by this receipt. In particular,
+this receipt does not assert EventualCompetitiveRigidity or the full theorem.
+
+PINNED SOURCES (SHA-256)
+NegativeVoting/MainGoal.lean
+ fe8f21515f4af803af7cbd14c3741377e6a4dcd508aeaf749a2821544c6c86c6
+GaussianMainGoalAssembly.lean
+ 7ed5fb36182f6c4c7ef4ce07245cefb6efc041853e75e5f0894d48df3ea0ec23
+GaussianExteriorNoiseAssembly.lean
+ d60f0430a92fa93986574d4162799874960239b2fb9873220b51836b2753122b
+GaussianAssignmentEquality.lean
+ 99b08df52cb80ec59345c99f0d97c2683fb6c259916b79ce6c737e1057061941
+NegativeVoting/RegularSimplexExistence.lean
+ 5e1418d50a4823ab672f1e4a9f7dc48ab2de739fcbee68da0b3f06f6052c2dec
+NegativeVoting/Admissible.lean
+ 9e25dfe7895fc0f76116635a6bde5b468026c9bbee9a7829b0d23c054201aa98
+The target file's current hash equals the hash of its tracked HEAD version.
+
+EXACT QUANTIFIERS
+1. MainGoal.lean:25-43 states an existential alphabet threshold M>=3 BEFORE
+   every m>=M, ambient n with m-1<=n+1, and the reference. The regular reference
+   is chosen AFTER m and n but BEFORE rho and f. Its dependence on the noise
+   or competitor is therefore forbidden by the literal proposition.
+2. The noise interval is -(1/(m-1))<=rho<0. The lower endpoint is included;
+   there is no positive lower bound on -rho and no exclusion of correlations
+   tending to zero. The theorem is not a positive-noise or absolute-value
+   surrogate: it uses the actual correlated Gaussian noise integral.
+3. The rules are all componentwise AEMeasurable functions that are simplex
+   valued almost everywhere. SimplexWeights means nonnegative coordinates
+   summing to one, not a pure partition or a prescribed equal-mass class.
+   No everywhere-Borel or pointwise-simplex restriction appears in the target.
+4. The equality statement is an iff with actual AE equality to some normalized
+   regular assignment in the SAME ambient space. It is not merely an equality
+   of centroid Gram matrices, score laws, or first/second moments. Arbitrary
+   regular orientation and relabeling are included by the existential rows.
+
+ASSEMBLY AND EQUALITY
+5. GaussianMainGoalAssembly:18-26 makes its sole analytic premise explicit:
+   eventual actual competitive rigidity. The eventual quantifier is before
+   d, reference, fractional rule and r. No dimension-dependent threshold is
+   introduced there.
+6. Lines 44-56 choose M=max(N+2,3), write m=k+2 and invoke actual regular-row
+   existence in every admissible dimension (including dimension m-1).
+   The reference is returned on lines 51-52 before rho/f are introduced on 53.
+7. Lines 57-66 transform r=-rho exactly, retaining r<=1/(k+1). Since m>=3,
+   the spectral uses of r<1 do not remove the voting endpoint.
+8. Lines 67-80 use the competitive-rigidity premise only for competitors with
+   noise<=reference, then apply product_regular_of_zero_covariance_deficit.
+   The other branch is strictly larger by linear order. Equality in either
+   direction is completed by AE invariance of the objective and the proved
+   common noise law of regular assignments. No final inequality is assumed.
+9. GaussianAssignmentEquality:123-144 has only actual AE admissibility and
+   zero covariance deficit as its inputs. It constructs Feasible at the rule's
+   OWN mass vector, derives a unique Gaussian score winner almost everywhere,
+   and transports back from Euclidean to finite product coordinates using the
+   actual Gaussian measure map. Positive or uniform masses are not assumed.
+10. Admissible.lean supplies an actual Borel simplex representative and proves
+    integrability/objective invariance for AE rules. Thus Lean's zero convention
+    for a nonintegrable integral is not being used to extend the scope.
+
+EXTERIOR EXCLUSION
+11. GaussianExteriorNoiseAssembly:185-218 proves, eventually before all other
+    variables, that every actual competitive AE fractional rule has regular
+    orbit distance <=1/m. Its hypotheses are exactly dimension, regular Gram,
+    AE admissibility, 0<r<=1/(m-1), and actual competition. No row-payment,
+    tail, spectral, moment, selected-offset or near-regular premise remains.
+12. The internal exterior branch is strict distance>1/m; negating it yields the
+    closed local ball, so the boundary is retained. Strict positive deficit is
+    derived from the actual exterior floor. The second-chaos and FULL SIGNED
+    infinite tail are each absorbed by deficit/4. The exact noise identity then
+    contradicts competition. No sign is assumed for individual tail summands.
+13. A regular orbit orientation chosen inside the tail proof may depend on the
+    competitor, but line 86's exact deficit/noise identity identifies its noise
+    with the fixed Ref. This does not alter the target's reference quantifiers.
+
+AUTOMATIC IMPLICIT-PREMISE CHECK
+A lightweight Lean invocation, not another dependency/axiom audit, checked the
+compiled signatures of the assembly, equality endpoint and exterior endpoint.
+It also elaborated exactly:
+  EventualCompetitiveRigidity -> FullNegativeVotingStatement
+using fullStatement_of_eventual_competitive_rigidity directly.
+Command exited 0. Log: /tmp/negative-voting-final-scope-signatures-bc.log
+No extra unknown autoImplicit parameter occurs in these compiled types.
+No source was edited by this review; no full axiom audit was duplicated.
+
+REMAINING BOUNDARY
+The final local theorem and its eventual unconditional instantiation must still
+be inspected and composed with the exterior theorem to establish the explicit
+EventualCompetitiveRigidity premise. Passing this scope review alone is not a
+proof of that premise or completion of MainGoal. Final axiom/dependency audits
+remain root-owned.

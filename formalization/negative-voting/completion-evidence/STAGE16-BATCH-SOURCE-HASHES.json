@@ -1,0 +1,13 @@
+{
+  "GaussianThresholdCDFDerivative.lean": "e9e381497e45c3431ac007fd88ea1466bb6d388fce543b49d029ba030f5ce8c3",
+  "GaussianThresholdCDFTailComparison.lean": "c7dd4752f9e51e349b4ef1e884190d2d28d87725ee92008bb14b479fa016f6fd",
+  "GaussianRelativeMomentAbsorption.lean": "663a2e23f2fba83d2fcd2c33bc8f0301b630fdf3604e6c92464c35b997fae09e",
+  "GaussianLocalOrbitDeficitPayment.lean": "574351bd0fa803ede444271348c222da2f966bce806e79fae26b9f093803e3fd",
+  "GaussianLocalNoiseAbsorption.lean": "956158a630267f8aa0398ad24d92775e945b92cdbe14a2a113c047283d4572fa",
+  "GaussianRelativeMomentLogAbsorption.lean": "abe83853f811516d63499e603bba02396cd08ca1f3a6d1ea896c06942c6ba5cd",
+  "GaussianEqualRowLabelAugmentation.lean": "370f13fc2d0b7e6ec3573ba1bbe0250f86b33a30e698a1860e75dd4e423a962e",
+  "GaussianEqualRowFreeMomentBridge.lean": "b8a7a11a0ed3cbad869bc893aedacfb4b1a50388dd0dd19eb70c4a772a447376",
+  "GaussianNearBalancedEnergyMixedBound.lean": "142b404f6fbad8387ecfc05a56244a46c99d876f51185975da4c817e1fb0fe0c",
+  "GaussianOwnCentroidPrimalGap.lean": "03dd259074df85e3e1c23f7e8c0f41cc3fcb3500e9ac30589454c50f66eba894",
+  "GaussianNearBalancedTailLogBound.lean": "15191f8910de7c58c63ef6d36cd4bac9bfea441df4cae830e84b6931d835ecd9"
+}

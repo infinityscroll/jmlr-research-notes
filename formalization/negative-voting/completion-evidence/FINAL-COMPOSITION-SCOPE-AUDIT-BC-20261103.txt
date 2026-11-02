@@ -1,0 +1,115 @@
+FINAL COMPOSITION AND EXACT-TARGET SCOPE AUDIT
+Date: 2026-11-03
+Reviewer: BC, internal independent source/scope audit. This reviewer implemented
+some supporting tail/normalization modules; this is not external peer review.
+
+VERDICT: PASS. No theorem-scope weakening or remaining free analytic premise
+was found in the final compiled endpoint. The exact original proposition is
+inhabited by NegativeVoting.full_negative_voting. This receipt resolves the
+local-source and final-composition PENDING items in the two earlier BC scope
+receipts; those historical receipts have been preserved unchanged.
+
+FROZEN SOURCE HASHES (SHA-256)
+NegativeVoting/MainGoal.lean
+ fe8f21515f4af803af7cbd14c3741377e6a4dcd508aeaf749a2821544c6c86c6
+GaussianMainGoalAssembly.lean
+ 7ed5fb36182f6c4c7ef4ce07245cefb6efc041853e75e5f0894d48df3ea0ec23
+GaussianExteriorNoiseAssembly.lean
+ d60f0430a92fa93986574d4162799874960239b2fb9873220b51836b2753122b
+GaussianNormalizedLocalGeometry.lean
+ 14c00e3de1bac479896446d1b4e4b182104da5fcfb84aa30d3b2bfc90c09a894
+GaussianLocalOrbitDeficitPayment.lean
+ 574351bd0fa803ede444271348c222da2f966bce806e79fae26b9f093803e3fd
+GaussianBalancedCovarianceSecondChaos.lean
+ 0e746001ef023a5ad1deb8d6edf685ed1c6c35a5db5ee81417178e5a2beb9d6f
+GaussianLocalOwnCentroidRigidity.lean
+ 334ba11ef7805392b5476b19ce991db6cb300289fc61e5c1cb30ac3ecdb021ee
+GaussianLocalBalancedSecondChaos.lean
+ e7dc54611c444c7a491a0b71ba7b562445300db07a9f2edaa069af8c244d0a21
+GaussianFullNegativeVoting.lean
+ fe01bad5eed6d0e3ac402abac65e49e3b2b2d287172d489e10adf08d0c8074cd
+
+SOURCE REVIEW
+The complete final local rigidity source, complete local balanced wrapper and
+complete final assembly were read. The target/assembly/exterior/equality and
+normalized geometry had already been fully reviewed in the prior receipts.
+The normalized balanced E2 theorem's exact signature was checked against its
+forward use; its entire analytic dependency closure was not re-audited here.
+
+1. The local theorem explicitly names EventualLocalBalancedSecondLoss(C,k).
+   This is an actual selected-balanced secondEnergy statement for centered
+   rows in the closed orbit ball, with actual covariance deficit. It is not a
+   hypothesis about a surrogate tensor, finite chaos truncation or given
+   numerical covariance bound.
+2. The local proof derives its needed near-regular geometry and same-mass
+   replacement from the actual competitor. It obtains the mass half-window
+   from competition, uses the literal own-centroid rows, and retains the mixed
+   sqrt(M(F+Z)Z) term. The full signed high-tail and cap errors are absorbed by
+   uniform scalar thresholds. All thresholds precede d, Ref, f and r.
+3. R>0 is used only inside the contradiction branch after actual centered-row
+   deficit nonnegativity and the assumption R!=0. Thus the equality branch is
+   not removed by the positive-deficit hypothesis of the balanced E2 input.
+4. The final local endpoint at GaussianLocalOwnCentroidRigidity:235 onwards
+   accepts componentwise AEMeasurable, AE-simplex fractional assignments. The
+   Borel representative transfer preserves both actual noise and centroid
+   rows, hence preserves the orbit condition and covariance deficit. No
+   pointwise-simplex, positive-mass or equal-mass restriction survives.
+5. LocalBalancedSecondChaos:27-44 proves the exact named E2 input with the
+   fixed constant 2*rectangleLogConstant and exponent18. It supplies actual
+   normalized row energy, covariance smallness and the minimal n+1-dimensional
+   reference core; scaling preserves the actual selected secondEnergy. The
+   normalized deficit costs only the proved factor2. No E2, covariance-factor,
+   CDF, trace, curvature or smoothing hypothesis remains on this theorem.
+6. FullNegativeVoting:17-23 instantiates the conditional local theorem with
+   that proved E2 input and its proved nonnegative fixed constant. It intersects
+   the local/exterior eventual sets, feeds exterior's closed orbit-ball output
+   directly into local rigidity, and proves EventualCompetitiveRigidity with
+   no assumptions. The identical Ref/f/r are used in both branches.
+7. FullNegativeVoting:31-33 applies the existing exact assembly to this proved
+   rigidity endpoint. The final theorem is not another conditional reduction.
+
+EXACT ORIGINAL SCOPE RETAINED
+- One alphabet threshold M>=3 before all m>=M and ambient dimensions.
+- Every finite ambient dimension at least m-1, including the minimal dimension.
+- A regular reference exists for each m/dimension and is chosen before rho/f.
+- Every -(1/(m-1))<=rho<0, including the left endpoint and arbitrarily small
+  strictly negative correlations. No further lower bound on -rho is imposed.
+- All completed-measurable AE fractional simplex rules, without prescribed
+  masses, positivity of individual masses or purity assumptions.
+- Actual Gaussian correlated-pair noise stability, with the regular rule as
+  minimizer. Equality iff the rule is AE equal to an actual normalized regular
+  assignment in the same ambient space, allowing arbitrary orientation/labels.
+- The target file remains byte-identical to tracked HEAD at the recorded hash.
+
+COMPILED SIGNATURE / AXIOM CHECK
+After root reported the registered build PASS9554, an independent lightweight
+Lean invocation imported GaussianFullNegativeVoting and checked the four
+compiled endpoint signatures. It exited 0. In particular:
+
+  NegativeVotingLocalBalancedSecondChaos.actual_eventual_local_balanced_second_loss
+    : EventualLocalBalancedSecondLoss localBalancedConstant 18
+  NegativeVotingFullAssembly.eventual_competitive_rigidity
+    : NegativeVotingMainGoalAssembly.EventualCompetitiveRigidity
+  NegativeVoting.full_negative_voting
+    : NegativeVoting.FullNegativeVotingStatement
+
+The following exact-target regression also elaborated:
+  example : NegativeVoting.FullNegativeVotingStatement :=
+    NegativeVoting.full_negative_voting
+
+The transitive axiom query returned exactly:
+  [propext, Classical.choice, Quot.sound]
+No sorryAx, custom axiom, extra autoImplicit hypothesis or free analytic
+parameter occurs in the final compiled declaration.
+
+Command: lake env lean /tmp/negative-voting-final-composition-scope-bc.lean
+Output: /tmp/negative-voting-final-composition-scope-bc.log
+This was a small endpoint check, not a duplicate exhaustive inventory audit.
+The root-owned exhaustive dependency/axiom audit and exact-target regression
+remain separate evidence. No shared inventory or frozen proof was edited.
+
+EARLIER RECEIPTS PRESERVED
+FINAL-TARGET-SCOPE-AUDIT-BC-20261103.txt
+ SHA256 b4ec2b8dd47f93678450b54d0f582dc8c3287ff10dbd6f47f229841381736bba
+NORMALIZED-LOCAL-GEOMETRY-SCOPE-AUDIT-BC-20261103.txt
+ SHA256 e2a0d626c3483a28b7251f0254ed8cccc8984c1931aa054f7f7dc43e926d0f77

@@ -1,0 +1,68 @@
+NORMALIZED LOCAL GEOMETRY AND FORWARD-APPLICATION AUDIT
+Date: 2026-11-03
+Internal independent source review by BC. No source edits or new axiom audit.
+
+VERDICT: No substantive mathematical or scope mismatch found.
+
+FROZEN SOURCES READ IN FULL
+GaussianNormalizedLocalGeometry.lean
+ SHA256 14c00e3de1bac479896446d1b4e4b182104da5fcfb84aa30d3b2bfc90c09a894
+GaussianLocalOrbitDeficitPayment.lean
+ SHA256 574351bd0fa803ede444271348c222da2f966bce806e79fae26b9f093803e3fd
+
+DRAFT FORWARD APPLICATION READ IN FULL (not certified as compiled here)
+GaussianLocalBalancedSecondChaos.lean
+ snapshot SHA256 e7dc54611c444c7a491a0b71ba7b562445300db07a9f2edaa069af8c244d0a21
+Its imported eventual_normalized_balanced_secondEnergy declaration and the
+actual EventualLocalBalancedSecondLoss definition were compared literally.
+
+CHECKS
+1. LocalOrbitDeficitPayment keeps the closed orbit ball d_orbit<=1/m and
+   chooses its threshold before ambient dimension and rows. The ray factor
+   min(1,(c/L)/(d/alpha)) is bounded BELOW by c/L using d<=alpha. The resulting
+   d_orbit^2<=(48/c)m L R has the correct inequality direction.
+2. For R>0, the infimum approximation is chosen with both strict tolerances
+   2/m and sqrt(2Q). Thus one actual regular U satisfies BOTH absolute squared
+   distance<=4/m^2 and relative squared distance<=(96/c)m L R. No attainment of
+   the regular-orbit infimum is assumed. The strict R>0 hypothesis is retained.
+3. The radial normalization is literal B/s, s=sqrt(rowEnergy(B)/w). Its distance
+   from B is the radial part w(s-1)^2 and is no larger than distance to any
+   regular U of energy w. The triangle inequality yields normalized distance
+   <=4 times the original squared distance.
+4. The eventual threshold gives L>=1048576. Absolute distance<=4/m^2 therefore
+   implies distance<=alpha^2/256. Row energy zero would force B=0 and distance
+   w>=alpha^2, a contradiction. Hence inversion of s is legitimate. The same
+   radial estimate proves s>=1/2; this is not an assumed normalization bound.
+5. Parseval contraction of the regular frame bounds the Gram perturbation by
+   6E+3E^2 with E=normalized row error/alpha^2. The normalized distance bound
+   gives E<=16/L<=1/65536, which indeed implies covariance HS^2<=1/1024.
+   The intrinsic core is Coord(n+2-1), dimension n+1. Actual rows may lie in
+   any ambient e; no e>=n+2 spectator assumption is imposed.
+6. The exact radial deficit identity, nonnegativity of centered-row deficit,
+   and s>=1/2 give R(B/s)<=2R(B). This is not an assumed deficit comparison.
+7. Actual centered singular lower bound alpha/2 is derived from row closeness.
+   It legitimizes selectedOffsets_scaled and selected_secondEnergy_scaled.
+   Thus the selected equal-mass E2 is exactly preserved by B->B/s; equality of
+   Gaussian score laws alone is not substituted for tensor/energy equality.
+8. The draft wrapper calls the normalized balanced theorem with the minimal
+   referenceBasis, centered normalized rows, exact reference energy, and the
+   proved covariance smallness. Argument order is correct: basis centering,
+   Parseval, Gram, row centering, energy, smallness. Its result is transferred
+   using the exact E2 identity and R(B/s)<=2R(B); the coefficient becomes
+   2*rectangleLogConstant, and the factor L^18*sqrt(m) remains unchanged.
+9. The target EventualLocalBalancedSecondLoss asks R(B)>0, centered B, and the
+   closed 1/m orbit ball. The wrapper supplies precisely that target. The
+   local rigidity proof derives R>0 only after nonnegativity and a contrary
+   assumption R!=0, so this strict premise does not omit the equality case.
+10. The full moving LocalOwnCentroidRigidity draft was also read, including
+    AE representative transfer. Its final statement retains all dimensions,
+    references, AE fractional rules and 0<r<=1/(m-1). It is explicitly
+    conditional only on EventualLocalBalancedSecondLoss. Its final frozen hash
+    and build result are still awaited for a binding scope addendum.
+
+LIMITS
+This is an audit of geometry, normalization, theorem scope and forward matching.
+It does not independently re-audit the entire normalized balanced E2 proof or
+replace the root-owned dependency/axiom audit. The draft wrapper and moving
+local source are not claimed compiled by this receipt. No issue requiring a
+mathematical correction was identified.

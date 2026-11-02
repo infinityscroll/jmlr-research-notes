@@ -1,0 +1,19 @@
+{
+  "GaussianHazardWeightedSecondBounds": "b2269319c998ccc0f4369e6031e444cba0faeb0cd9edc0ae55211be4c6d75e2c",
+  "GaussianHazardSecondMomentIntegral": "0207a7969cabf8d02d7bcd1995e3cdc57b39d0b4cd866cae6638efa403c1c4c6",
+  "GaussianDiagonalOffsetContinuation": "53c31d173f6857496cee59bfc5883f981c90a48622c53f388669aa4b764db0a2",
+  "GaussianHazardRawIntegralDerivative": "0af6f673896c26f0c81682670ffeac076e2a6c788150cae3e56dea760b2aa4c7",
+  "GaussianNearRegularEnergyRectangle": "ef785f1c4fac1b3239b94d7ef4f04e4ad7b58c5b2f15221fc75d281b4091dc17",
+  "GaussianCovarianceFactorDistance": "9d5cd6af3b3cf221c3a5a289225af903872e7445b72e7d5c0d748251f17a7488",
+  "GaussianCovarianceSupportingPriceBound": "8cb7431f4acf6a3aaad86ef52535f6990ab945a9a87e539c29b5695f58f71df6",
+  "GaussianDiagonalIntegratedLaplacian": "98c5b2f7e161f974dc3710d078d8a8471d6056085de7348653393b14a1ebcc92",
+  "GaussianDiagonalCovarianceSupport": "185396ba65e13a7ed2789840369af01dc74bdd62c550ff212a95797136820f61",
+  "GaussianDiagonalFrameRealization": "345b22d36d42d3d61ebac314787cee6d9b297843d52d40c07679d865626fb616",
+  "GaussianDiagonalDerivativeEnvelopes": "94921addbc90b5cb27a43bf4571c8d31b68a0d35598d821231138751cb9f2450",
+  "GaussianDiagonalSecondForcingBound": "f169b13c18a1af28c49fb0481a69040f8b471dfedf7062995fb476aa326ce021",
+  "GaussianDiagonalSupportAlgebra": "e97ce4b8074da3a325cbd62d2db58cc87ce0d6454906e32d2b22d5006a0b9543",
+  "GaussianSummedTaylorRemainder": "cce638f4975822cb6eade3ca733744d285046cdc8d901c6ea062f98aa426afd2",
+  "GaussianSelectedOffsetSecondDerivative": "7c8ff39d4eadcfc2f141c98acd57ffc024a7c5ffefec310960aa4237b7f2526d",
+  "GaussianDiagonalVarianceSupport": "837afb857f0a45bd693ec7cf097eb95d16e9af80b21781cb362195d9fa9a952d",
+  "GaussianDiagonalSecondOffsetBound": "5aa0e5b1290506aa9e61d7107d3d95dd0b2a55e6b00cff6bbe97024b119470e7"
+}

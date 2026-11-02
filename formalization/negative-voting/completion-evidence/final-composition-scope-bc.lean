@@ -1,0 +1,7 @@
+import GaussianFullNegativeVoting
+#check @NegativeVotingLocalBalancedSecondChaos.actual_eventual_local_balanced_second_loss
+#check @NegativeVotingLocalOwnCentroidRigidity.eventually_local_rigidity_of_balanced_loss
+#check @NegativeVotingFullAssembly.eventual_competitive_rigidity
+#check @NegativeVoting.full_negative_voting
+#print axioms NegativeVoting.full_negative_voting
+example : NegativeVoting.FullNegativeVotingStatement := NegativeVoting.full_negative_voting

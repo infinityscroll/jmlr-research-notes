@@ -1,0 +1,24 @@
+NegativeVoting.full_negative_voting : NegativeVoting.FullNegativeVotingStatement
+'NegativeVoting.full_negative_voting' depends on axioms: [propext, Classical.choice, Quot.sound]
+def NegativeVoting.FullNegativeVotingStatement : Prop :=
+∃ M,
+  ∃ (hM : 3 ≤ M),
+    ∀ (m : ℕ) (hm : M ≤ m) (n : ℕ),
+      m - 1 ≤ n + 1 →
+        ∃ reference,
+          NegativeVoting.RegularSimplexGram reference ∧
+            ∀ (ρ : ℝ),
+              -(1 / (↑m - 1)) ≤ ρ →
+                ρ < 0 →
+                  ∀ (f : (Fin (n + 1) → ℝ) → Fin m → ℝ),
+                    (∀ (i : Fin m), AEMeasurable (fun x => f x i) (NegativeVoting.standardGaussian (Fin (n + 1)))) →
+                      (∀ᵐ (x : Fin (n + 1) → ℝ) ∂NegativeVoting.standardGaussian (Fin (n + 1)),
+                          NegativeVoting.SimplexWeights (f x)) →
+                        NegativeVoting.gaussianNoiseStability ρ (NegativeVoting.regularAssignment reference) ≤
+                            NegativeVoting.gaussianNoiseStability ρ f ∧
+                          (NegativeVoting.gaussianNoiseStability ρ f =
+                              NegativeVoting.gaussianNoiseStability ρ (NegativeVoting.regularAssignment reference) ↔
+                            ∃ rows,
+                              NegativeVoting.RegularSimplexGram rows ∧
+                                ∀ᵐ (x : Fin (n + 1) → ℝ) ∂NegativeVoting.standardGaussian (Fin (n + 1)),
+                                  f x = NegativeVoting.regularAssignment rows x)

@@ -1,0 +1,8 @@
+{
+  "GaussianNormalizedLocalGeometry.lean": "14c00e3de1bac479896446d1b4e4b182104da5fcfb84aa30d3b2bfc90c09a894",
+  "GaussianEqualRowTailFreeComparison.lean": "71264186c45fa9a0b0f9399a055646abdc81f687e0441f2b8d0dcb2fe753130f",
+  "GaussianNearBalancedTailUniform.lean": "e2503a7e16bc5ea71ac81b5cda1f6cb5eb75408b0fe576353177d8275612ef2b",
+  "GaussianNearBalancedNoiseAbsorption.lean": "fd247682e2cdd87473c4a580a3869e2e1e430da8955e4834c5416379befbe265",
+  "GaussianOwnCentroidCellNoise.lean": "cd13b766b2b9dbe8f2ac404cbb4f28bded01af806dbd3459729fad66c7089720",
+  "GaussianLocalOwnCentroidGeometry.lean": "59564c8accdac5da52642d33456b92444a0854a985b5773e393b996d0c1c13b7"
+}
