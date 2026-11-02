@@ -1,0 +1,27 @@
+name = "negative_voting_polyhedral_support_modern"
+version = "0.1.0"
+defaultTargets = ["FSC.Support.QuadraticTangent"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "065356127b1dc0016f66b7283ce0ce2c4055aa55"
+
+[[lean_lib]]
+name = "WeakSimplexConjectureLean"
+
+[[lean_lib]]
+name = "FSC"
+
+[[lean_lib]]
+name = "PolyhedralSupportBoundary"
+
+[[lean_lib]]
+name = "GaussianCapCovariance"
+
+[[lean_lib]]
+name = "GaussianCapFirstMoment"

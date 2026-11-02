@@ -1,0 +1,69 @@
+Actual Gaussian polyhedral second moment / boundary identity
+
+Source: GaussianCapSecondMoment.lean
+Namespace: NegativeVotingPolyhedral
+
+Let gamma be the actual standard Gaussian on FSC.Coord d. Let
+C={x: for every j, <w_j,x> <= b_j}, with finitely many unit normals. Require
+the same explicit NoCoincident condition as the first-moment module: distinct
+indices with equal normals have unequal supports, and those with opposite
+normals have nonopposite supports.
+
+For each j, nu_j is the actual affine Gaussian sliceLaw(w_j,b_j), supported
+on <w_j,x>=b_j. Let E_j={x: for every k!=j, <w_k,x> <= b_k}. The theorem is
+
+  integral_C <u,x><v,x> dgamma(x)
+    = gamma(C)<u,v>
+      - sum_j phi(b_j)<w_j,u> integral_{E_j}<v,x> dnu_j(x).
+
+The face integral is restricted and unnormalized. There is no additional
+sliceMass factor multiplying that integral. This is the bilinear form of
+
+  integral_C x tensor x dgamma
+    = gamma(C) I - sum_j phi(b_j) w_j tensor integral_{E_j}x dnu_j.
+
+Both the coordinate identity and symmetry of the summed boundary tensor are
+also proved. Individual face contributions are not assumed symmetric.
+
+Actual proof inputs and derivation
+  * Translation preserves NoCoincident for every real shift parameter.
+  * The exact Gaussian change-of-density identity transports test-function
+    integrals, including the first moment, to the translated cap.
+  * A face event is represented as an actual standard-Gaussian polyhedron in
+    residual coordinates. Its normals are
+      w_k - <w_k,w_j>w_j
+    and supports are b_k - b_j<w_k,w_j>, for k!=j. Residual normals may vanish;
+    the previously proved cap MGF translation identity allows that.
+  * The shifted face flux is exactly the exponential tilt of the original
+    fixed face. No moving-boundary derivative is assumed.
+  * The face slice laws are proved Gaussian, including singular laws. Their
+    restricted linear exponential moments are derived, so the face MGF
+    derivative is the actual face first moment.
+  * The resulting tilted first-moment identity is differentiated at zero.
+    GaussianCapMixedMGF supplies the actual mixed-moment derivative, with
+    moment domination proved from Gaussian exponential integrability.
+  * Uniqueness of derivatives gives the claimed second moment.
+
+Main exports
+  gaussian_cap_bilinear_second_moment
+  gaussian_cap_coordinate_second_moment
+  gaussian_cap_boundary_tensor_symmetric
+  face_flux_tilt
+  cap_tilt_first_moment_boundary
+
+Scope and attribution
+  No positive-cap-mass, moment, face-regularity, or derivative premise is
+  added. Unit normals and NoCoincident remain explicit. These are concrete
+  Gaussian integration-by-parts identities, not a new moment theorem or a
+  complete formalization of the main negative-voting theorem.
+  The FSC support derivative is credited to Abhijeet Mulgund's MIT-licensed
+  source; the probability and differentiation calculus is mathlib (Apache-2.0).
+  Full source provenance remains in the preserved dependency files.
+
+Build and audit
+  lake build GaussianCapSecondMoment
+  lake env lean GaussianCapSecondMomentAudit.lean
+  python3 verify_second_moment.py --lake /absolute/path/to/lake
+
+All 24 theorem declarations are audited transitively. The verifier preserves
+all three frozen receipts and checks the frozen mixed-MGF helper source hash.

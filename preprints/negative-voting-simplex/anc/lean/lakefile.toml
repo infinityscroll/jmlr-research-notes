@@ -49,5 +49,108 @@ name = "GaussianNormalTrace"
 [[lean_lib]]
 name = "GaussianCapTailAndStrip"
 
+[[lean_lib]]
+name = "GaussianFanCover"
 
+[[lean_lib]]
+name = "GaussianNormalDerivatives"
+
+[[lean_lib]]
+name = "GaussianChaosDecay"
+
+[[lean_lib]]
+name = "GaussianFacetDisintegration"
+
+[[lean_lib]]
+name = "GaussianSmoothingComposition"
+
+[[lean_lib]]
+name = "GaussianLowModeProjection"
+
+[[lean_lib]]
+name = "FSC"
+
+[[lean_lib]]
+name = "PolyhedralSupportBoundary"
+
+[[lean_lib]]
+name = "GaussianCapCovariance"
+
+[[lean_lib]]
+name = "GaussianCapFirstMoment"
+
+[[lean_lib]]
+name = "GaussianWeightedFacetEnergy"
+
+[[lean_lib]]
+name = "GaussianMassCentroid"
+
+[[lean_lib]]
+name = "GaussianFacetDegree"
+
+[[lean_lib]]
+name = "GaussianFanMassBase"
+
+[[lean_lib]]
+name = "GaussianFanMassMinimizer"
+
+[[lean_lib]]
+name = "GaussianFanMassGradient"
+
+[[lean_lib]]
+name = "GaussianFanMassExistence"
+
+[[lean_lib]]
+name = "GaussianCapMixedMGF"
+
+[[lean_lib]]
+name = "GaussianCapSecondMoment"
+
+[[lean_lib]]
+name = "GaussianCapCovarianceGap"
+
+[[lean_lib]]
+name = "GaussianFanMassJacobian"
+
+[[lean_lib]]
+name = "TauCeti"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "OAI"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianSoftPolyhedron"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianPolyhedronEhrhard"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianEhrhardCurvature"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianEhrhardMomentBridge"
+
+[lean_lib.leanOptions]
+autoImplicit = true
+
+[[lean_lib]]
+name = "GaussianEhrhardCoefficient"
+
+[lean_lib.leanOptions]
+autoImplicit = true
 

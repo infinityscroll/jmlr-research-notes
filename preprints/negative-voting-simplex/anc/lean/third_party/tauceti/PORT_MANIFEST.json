@@ -1,0 +1,142 @@
+{
+  "upstream_commit": "92efba7b44b38e541bc007dc7839ff09613b2bc9",
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "files": [
+    {
+      "path": "TauCeti/Algebra/Module/Equiv/Basic.lean",
+      "sha256": "68d9c7da276778cd7f2086186626fb7186fff1d0cf5fa0c3788a1780e8f942c3"
+    },
+    {
+      "path": "TauCeti/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Continuity.lean",
+      "sha256": "851829b20d28562c7e698426b29a48268692e2fb27a2de7d9baf71a4898a3b0b"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/Adjoint.lean",
+      "sha256": "32c96446b8b247e47be6da494728bc5c8362636c96e3a87d6682b529b9e9482f"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/BasisSpan.lean",
+      "sha256": "5235ba0d25c6c08aab3b88ec2de244d5f0546d24a9814c619f446063be672fca"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/CourantFischer.lean",
+      "sha256": "62d35ded0fb5370caea3932912982616d88de38a112ea32f368698d698a1f0ca"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/HilbertBasis/Basic.lean",
+      "sha256": "a67be884d9de4e9357b9904ac8b5b850ba2a06abcf86e92b2d0944e05b2c3eb6"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/MoorePenrose.lean",
+      "sha256": "b271e5b434e4ee40d85c7984b7f88085bee4d0261adf6a1159a72755905e12db"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/PointSpectrum.lean",
+      "sha256": "83ed3ec7e6f31f2fe639d230842f583e416ea385d326d945ec57fddfc78ca15c"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/Positive/SquareRoot.lean",
+      "sha256": "379a750063e7f80d8e2bccca9a8fc09232303315d9086a28081d221d9b940b4f"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/RangeProjection.lean",
+      "sha256": "436084beaa74ebd69d9c8b031029f34228d1402023de10d7ca45a7d5fda51995"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/SingularValues.lean",
+      "sha256": "c87ef0b68457bee4c9181c0137627aa24a47b550d85d8fdc711f2ac10da1abb7"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/Spectrum.lean",
+      "sha256": "66edca14f699adf7166968ac595bf4eb07b14fe3959239c984cfd7306b8dd679"
+    },
+    {
+      "path": "TauCeti/Analysis/InnerProductSpace/Symmetric/FunctionalCalculus.lean",
+      "sha256": "83b7af3df2325eaef93474471c15914effa3a65e70deb459a1cf5c219fb83cf5"
+    },
+    {
+      "path": "TauCeti/Analysis/Matrix/CovariancePseudoInverse.lean",
+      "sha256": "a3fc783940ca3cc615cd84bf991c58d38aed37f3d100db576ccf0795f455f3c8"
+    },
+    {
+      "path": "TauCeti/Analysis/Matrix/FunctionalCalculus.lean",
+      "sha256": "13769968b05eb84a5b661732c3425ea6b7d93801a0062fd921215a93ecdeeb79"
+    },
+    {
+      "path": "TauCeti/Analysis/Matrix/L2OpNorm.lean",
+      "sha256": "9d0fadee3d3f5f5c8be50bfc5c19513249403971be59f037680bc6a47d9ddd32"
+    },
+    {
+      "path": "TauCeti/Analysis/Matrix/PosSemidef/Block.lean",
+      "sha256": "67cec6877bb8152137dfc44453541f115f4ca7a5f9649c3eedc7072fd84a18ad"
+    },
+    {
+      "path": "TauCeti/Analysis/Matrix/SchurComplement.lean",
+      "sha256": "1f40ffd975c1006369e64a892cdb8b46461ac6d4e7bff2fb91bb197bc5cb491d"
+    },
+    {
+      "path": "TauCeti/Analysis/Normed/Operator/Basic.lean",
+      "sha256": "facb3e3d2b6e66023ffea30e4d39eda5e86a08eee73c89e827ce8757d4799261"
+    },
+    {
+      "path": "TauCeti/Analysis/SpecificLimits/RegularizedInverse.lean",
+      "sha256": "74a19a5dda366577b6506048f592b2276498f96fbe3d95d6f87cdc06e76c14a1"
+    },
+    {
+      "path": "TauCeti/Compatibility/ProperStar.lean",
+      "sha256": "1bc70f2cf1a25109f27b4d5aa7d5db07ac7edab6607935bd35a00c81a001dd61"
+    },
+    {
+      "path": "TauCeti/Data/Fin/Tuple/Sort.lean",
+      "sha256": "3445e4f75c62855eb9f4d5330e83dc3a586b92430bd39718a808d9b53dfbe18e"
+    },
+    {
+      "path": "TauCeti/Data/Finsupp/Antitone.lean",
+      "sha256": "1560d3b49995b4675f37b809e0adf135c39d0fc07c765aec9f0e25ecb63e157f"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Dimension/Submodule.lean",
+      "sha256": "2765bd0fd51cbe14a82f4564a1ef4da84d5186a58f9ed07996ddec9128f5a8e4"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Eigenspace/Anticommute.lean",
+      "sha256": "259cbca1b8cb2c45e4c5ef5c10551d0981ed2bd578d45ee8c2111a34a0ac7897"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Eigenspace/Comp.lean",
+      "sha256": "e47ff654d227c3ffe2da0252e7e6c6636f2d836090cd40019197dc1513092ef7"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Matrix/Block.lean",
+      "sha256": "fc3f63a0e8620de6d65de1dabe3584b640e3a824c44fa65af9abfaf1bd94a0ca"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Matrix/PosSemidef.lean",
+      "sha256": "9bc0bd49d7c8371a3d82a156b45f77e7c15563d09cdf6b10a767bef682432ee2"
+    },
+    {
+      "path": "TauCeti/LinearAlgebra/Matrix/SchurComplement.lean",
+      "sha256": "f411bcddb40863ce01d18c8478d815a6e3a59e0ef2d95aa73b0ae950ea2e4694"
+    },
+    {
+      "path": "TauCeti/Topology/Algebra/IsOpenUnits.lean",
+      "sha256": "dec77c143f287459419d10d863869aa41070877a01d7038f02af733d489db4a3"
+    },
+    {
+      "path": "TauCeti/Topology/Instances/Matrix.lean",
+      "sha256": "1fe63aac133539fefb3c42f5e3766f382a07065740eb48d6ae26f01fc80f35f7"
+    }
+  ],
+  "backported_mathlib_commit": "2cabef97b63d3275776b8b060d802de6a6fa1055",
+  "backport_sources": [
+    {
+      "path": "upstream_mathlib_original/Mathlib/Algebra/Star/Basic.lean",
+      "sha256": "297c31d580ae2708924155684a964da9f182544937b58c7940342237caabd979"
+    },
+    {
+      "path": "upstream_mathlib_original/Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+      "sha256": "5be17f3863e896311a280129ce6fd8e73f48026ab697ce7cc89491afbe90e6a9"
+    }
+  ]
+}

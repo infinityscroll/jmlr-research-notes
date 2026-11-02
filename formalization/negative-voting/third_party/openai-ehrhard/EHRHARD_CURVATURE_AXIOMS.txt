@@ -1,0 +1,2 @@
+'NegativeVotingEhrhard.quantile_curve_second_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.ehrhard_curve_curvature' depends on axioms: [propext, Classical.choice, Quot.sound]

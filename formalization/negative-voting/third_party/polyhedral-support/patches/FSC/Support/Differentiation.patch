@@ -1,0 +1,11 @@
+--- originals/FSC/Support/Differentiation.lean
++++ FSC/Support/Differentiation.lean
+@@ -185,7 +185,7 @@
+   have hslice (z : ℝ) : sliceLaw (w j) z s = g z := by
+     letI : IsProbabilityMeasure (sliceLaw (w j) z) := by
+       unfold sliceLaw
+-      exact Measure.isProbabilityMeasure_map (by fun_prop)
++      infer_instance
+     have he : {y : Coord d | ∀ k, k ≠ j → inner ℝ (w k) y ≤ Function.update b j z k} = s := by
+       ext y
+       simp only [s, Set.mem_setOf_eq]

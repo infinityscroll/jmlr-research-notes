@@ -1,0 +1,58 @@
+ACTUAL GAUSSIAN FACET DEGREE: EXACT SCOPE
+2 November 2026
+
+GaussianFacetDegree.lean, namespace NegativeVotingFacetDegree.
+
+Primary endpoint: intrinsicWeightedDegree_uniform_of_gram.
+This bounds the literal intrinsic Gaussian degree appearing in
+GaussianWeightedFacetEnergy, rather than a separate abstract graph degree.
+
+The proved chain is:
+1. Nonnegative surface weights and a common inward angle c give total
+   surface area <= norm(actual cell centroid)/c.
+2. GaussianCapFirstMoment supplies the actual vector boundary identity.
+   GaussianMassCentroid supplies the explicit logarithmic mass bound.
+3. Dividing by ell_min gives degree <= norm(centroid)/(c*ell_min).
+4. The centered singular lower bound proves distinct score rows, actual
+   unit comparison normals, and absence of parallel distinct comparison
+   normals at a cell. Consequently FSC.NoCoincident is derived, for arbitrary
+   affine offsets, rather than supplied as a generic-position premise.
+5. The actual cap equals the affine winning cell.
+6. The outward cap slice law is proved equal to the inward chart's intrinsic
+   tangent Gaussian. Residual face constraints are equivalent to the actual
+   facet once the comparison-plane equation is imposed. Thus its slice mass
+   is exactly the intrinsic facet probability, with one density factor and
+   one edge-length denominator. The erased-label/subtype reindexing is proved.
+
+Inward-angle conventions:
+  outward normal = (B_j-B_i)/||B_j-B_i||,
+  support = (h_i-h_j)/||B_j-B_i||,
+  inward direction = B_i/||B_i||.
+The direct Gram criterion is
+  c ||B_j-B_i|| ||B_i|| <= G_ii-G_ji.
+A conservative concrete sufficient criterion is
+  alpha^2/2 <= G_ii <= 2 alpha^2,
+  G_jj <= 2 alpha^2, G_ji <= alpha^2/4,
+with alpha>0. This supplies angle c=1/32. No equal-row assumption is used.
+
+Final remaining data in the primary endpoint:
+* centered singular lower scale sigma>0;
+* sigma >= e sqrt(L)/m, e>0;
+* m>=1, L>=1, log(m)<=L;
+* cell mass <= C/m, C>=0;
+* the displayed Gram inequalities.
+Then the actual degree at label i is at most
+  32 [C sqrt(2)+(sqrt(2*pi))^(-1)] / e.
+For the intended L=1+log(m), the elementary L/log inequalities hold when
+m>=1. The theorem is in finite-dimensional Euclidean space FSC.Coord d,
+with arbitrary d and finite label type; the bound has no d dependence.
+
+No degree, Gaussian integration-by-parts formula, conditional-Gaussian law,
+unit-normal condition, or NoCoincident hypothesis remains in that endpoint.
+No equality between the input score rows B and the affine cell centroid M
+is assumed: the proof uses the actual centroid M throughout.
+
+Remaining integration work is to establish the spectral scale and Gram
+bounds from the manuscript's near-regular score regime, combine this degree
+with the actual forcing trace bounds, and assemble the complete cap/local
+comparison. This module does not assert the global voting theorem.

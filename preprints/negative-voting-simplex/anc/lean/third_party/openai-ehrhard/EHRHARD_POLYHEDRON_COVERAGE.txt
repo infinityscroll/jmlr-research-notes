@@ -1,0 +1,55 @@
+ACTUAL FINITE-POLYHEDRON EHRHARD CONCAVITY
+
+Classical theorem; this is formal infrastructure, not a new priority claim.
+
+The starting dependency is the OpenAI smooth Ehrhard proof, pinned to
+openai/math@1581d4cbdd69a0faf34b2089614fe2a814316a6a and copied verbatim from the
+vendor snapshot in pmaronow/slowequilibration-palomar@a28aaa336343c4caf43791ababd8ed0ee5c7b58e.
+All 12 dependency files compile unchanged. OPENAI-EHRHARD-PROVENANCE.json records
+the exact hashes and OPENAI-MATH-LICENSE preserves Apache-2.0 licensing.
+
+NEW PROVED EXTENSION
+Namespace NegativeVotingEhrhard.
+closedPolyhedron w b = {x : EuclideanSpace R i | forall j, <w_j,x> <= b_j}.
+translatedPolyhedronMass w b x is the actual standard-Gaussian integral of
+1_C(x+z), and is proved equal to gamma(C-x).
+
+gaussian_polyhedron_ehrhard_concave proves:
+  0 < gamma(C) < 1 implies x |-> Phi^{-1}(gamma(C-x)) is concave on the full space.
+The normals and offsets are arbitrary. Redundant, coincident, and zero normals
+are allowed. There is no positivity assumption on each individual inequality,
+no boundary-nullness assumption, and no smoothness premise on the polyhedron.
+
+The proof constructs f_n(x) = n - sum_j log(1+exp(n^2*(<w_j,x>-b_j))).
+GaussianSoftPolyhedron.lean proves the actual gradient and Hessian, continuity,
+global bounds, concavity, and applicability of the checked smooth Ehrhard theorem.
+GaussianPolyhedronEhrhard.lean proves Phi(f_n(x)) -> 1_C(x) at every point, including
+the boundary. A bound of one supplies dominated convergence for the actual heat
+integrals. Inverse-CDF continuity transfers their limits. Pointwise limits preserve
+the concavity inequality. Finally, the positive Gaussian translation density
+proves all translated masses are in (0,1) from the original mass assumption alone.
+
+VERIFICATION
+GaussianSoftPolyhedron.lean and GaussianPolyhedronEhrhard.lean build successfully.
+All 43 public declarations in these two modules pass transitive #print axioms
+checks with only propext, Classical.choice, and Quot.sound. Exact source hashes
+and the full declaration audit are in EHRHARD_POLYHEDRON_VERIFICATION.json.
+The imported 12-file closure and its principal semantic endpoints have a separate
+EHRHARD_UPSTREAM_VERIFICATION.json receipt.
+
+CALCULUS BRIDGE
+GaussianEhrhardCurvature.lean derives the scalar consequence
+  phi(q(p(0))) * p''(0) + q(p(0)) * p'(0)^2 <= 0
+from actual concavity of q composed with p and ordinary first/second derivative
+hypotheses. It is kept separate from the concrete Gaussian-moment conversion,
+so derivative hypotheses are never presented as a proved covariance theorem.
+
+REPRODUCTION
+Install the version in lean-toolchain, then from this directory run:
+  lake exe cache get
+  lake build GaussianPolyhedronEhrhard GaussianEhrhardCurvature
+  lake env lean EhrhardUpstreamAudit.lean
+  lake env lean EhrhardPolyhedronAudit.lean
+  lake env lean EhrhardCurvatureAudit.lean
+The local development checkout reuses an existing cache via .lake/packages;
+that cache is not source material and is not part of the proof archive.

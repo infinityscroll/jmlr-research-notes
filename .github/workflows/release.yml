@@ -54,6 +54,7 @@ jobs:
           python3 verify_dependency.py
           python3 verify_mulgund.py
           python3 verify_hypercontractivity.py
+          python3 verify_extended_dependencies.py
           python3 verify.py
       - name: Install scientific dependencies for manual verification
         if: github.event_name == 'workflow_dispatch'

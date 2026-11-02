@@ -1,0 +1,196 @@
+{
+  "source": "GaussianMassCentroid.lean",
+  "source_sha256": "8de11a80bd0c5ee12aff209f28ffe5f014877c329b321a6d80dea96820e21e29",
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "lake_manifest_sha256": "4ec85cdaee1cc43219feecd1f5feae7480b64067af95f5f716fee6ede4240199",
+  "standalone_lean_exit_code": 0,
+  "lake_build_exit_code": 0,
+  "axiom_audit_exit_code": 0,
+  "declarations": 36,
+  "theorems": 32,
+  "definitions": 4,
+  "axioms_by_declaration": {
+    "NegativeVotingMassCentroid.upperIndicator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.upperIndicator_comp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.fractional_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.fractional_mul_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.fractional_threshold_remainder_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.fractional_threshold_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussian_lower_first_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussian_upper_first_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussian_upper_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussian_fractional_threshold_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.normalPDF_even": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.continuous_normalCDF": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.strictMono_normalCDF": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.exists_normalCDF_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.normalCDF_neg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.remainder_bound_of_gaussian_score": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.threshold_bound_of_gaussian_score": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.normalQuantile": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.normalCDF_normalQuantile": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.normalQuantile_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianMassProfile": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.normalPDF_sqrt_two_log": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.fractional_vector_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.inner_gaussianCentroid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.unit_direction_threshold_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid_norm_le_threshold": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.fractional_ae_zero_of_mass_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.fractional_ae_one_of_mass_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid_eq_zero_of_mass_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid_eq_zero_of_mass_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid_norm_le_quantile": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid_norm_le_profile": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.unit_direction_remainder_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid_norm_le_mass_threshold": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingMassCentroid.gaussianCentroid_norm_le_logarithmic_mass_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Classical Gaussian mass-centroid localization bound, not the full negative-voting theorem."
+}

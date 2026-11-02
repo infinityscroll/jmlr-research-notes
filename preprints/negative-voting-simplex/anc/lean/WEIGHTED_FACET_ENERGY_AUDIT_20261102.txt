@@ -1,0 +1,296 @@
+WEIGHTED FACET ENERGY: ACTUAL FORCING, GENERIC FAILURE, AND LOSS BUDGET
+2 November 2026
+
+Result and scope
+----------------
+The uniform weighted-facet bound is valid for the actual forcing described
+below, provided the explicitly separated fan geometry and smoothed-input
+factorizations in the manuscript hold. In fact its normalization gives
+
+  E_fac(v) <= C L^(-3),  L=1+log m.                         (A)
+
+This is a mathematical derivation of the particular missing estimate, not
+a Lean proof of that estimate and not a validation of the global theorem.
+The argument below does not assume E_fac(v) or the cap conclusion. It
+explains why an arbitrary normalized quadratic, whose facet energy can
+grow like (log m)^2, is not an in-class counterexample. It also computes
+the remaining theorem's precise tolerance for a weaker estimate.
+
+Sources inspected directly
+--------------------------
+Within the publication repository frontier/negative-voting-simplex:
+* dependency_review/proof_sources/
+  OWN_CENTROID_SCORE_BALL_FULL_VOTING_RIGIDITY_WITH_WEIGHTED_CAP_20261031.txt
+  Sections 1--7, especially definitions (5), factorizations (8)--(9),
+  weighted estimate (11), and normalization (12).
+* AFFINE_LINEAR_FAN_HYPERCONTRACTIVE_TRACE_WITH_EXACT_OFFSET_CANCELLATION_V2_20261031.txt
+  in the same directory, Sections 1--4.
+* FULL_SIGNED_AFFINE_HERMITE_TAIL_RELATIVE_COMPARISON_20261031.txt
+  in the same directory, Sections 1--4 and the actual boundary estimate.
+* UNEQUAL_ROW_AFFINE_SECOND_CHAOS_HESSIAN_AND_FINITE_COMPARISON_20261031.txt
+  in the same directory, Sections 1--3.
+* preprints/negative-voting-simplex/04_local_comparison.tex.
+Also inspected this pilot's LOCAL_COMPARISON_AUDIT_20261102.txt and the
+actual GaussianNormalTrace, GaussianNormalDerivatives, and
+GaussianFacetDisintegration Lean statements. Frozen sources were not edited.
+
+1. Exact notation and explicit geometric inputs
+----------------------------------------------
+Let f be the original measurable simplex assignment. B is its actual
+centroid matrix, f0 the affine allocation with score rows B and the same
+mass vector, and g a regular reference. Let
+
+  d=||B-B0||_F, z=p-U, D=d+||z||,
+  u=T_sqrt(r) Pi_(odd>=3)(f-f0), Uodd=||u||_2,
+  qB=T_-r Pi_(>=2)f0, q0=T_-r Pi_(>=2)g,
+  a=qB-q0-T_sqrt(r)u, delta_l_i(x)=(B_i-B0_i).x+h_i.
+
+The forcing used by the manuscript is exactly
+
+  psi_i=kappa^(-1)[e_r |delta_l_i|+|a_i|/r],
+  theta=Ctheta L^4(rD+sqrt(r)Uodd),  v_i=psi_i/theta.          (1)
+
+Here 0<r<=1/(m-1), kappa=exp(-1-eta|P0 x|^2),
+eta<=C r^2 L, and rank(P0)<=m. The letter v in (1) is the normalized
+nonnegative cap forcing, NOT the signed assignment difference f-f0.
+
+For each unordered facet e=ij let ell_e=||B_i-B_j||,
+mu_e=lambda_e(F_e), w_e=mu_e/ell_e, and nu_e=lambda_e/mu_e on F_e.
+The energy is
+
+  E_fac(v)=sum_(i<j) w_ij E_nu_ij[v_i^2+v_j^2].              (2)
+
+The geometric facts needed in this calculation are:
+G1. Degree bound: max_i sum_(j!=i) w_ij <= Dg, a fixed constant.
+G2. Signed normal offsets satisfy |a_e|<=Aoff sqrt(L).
+G3. Writing F_e inside its containing hyperplane using intrinsic standard
+    tangent Gaussian gamma_T, its subset probability pi_e satisfies
+    pi_e>=m^(-Api), with fixed Api independent of m and N.
+G4. ||h||_2<=Kh L D, and ||B-B0||_F=d<=D.
+All facets used here have positive mass. A zero-mass facet, in a more
+general statement, contributes zero and can be omitted.
+
+These are properties of the affine fan. They are not assumptions about
+the desired cap energy or arbitrary high-chaos functions. Their full Lean
+assembly remains separate from the Gaussian operator estimate.
+
+G1 has a concrete route: Gaussian integration by parts gives M=Laplacian*B.
+The upper mass bound Cp/m gives ||M_i||<=C sqrt(L)/m<=C alpha.
+Since B is centered and its restriction to 1-perp has least singular value
+>=c alpha, Laplacian=M B^+. Thus ||row_i(Laplacian)||<=C and its nonnegative
+diagonal, equal to sum_j w_ij, is bounded. This uses the actual centroid
+M of f0, not B=M, and does not require a small facet probability estimate.
+
+For completeness, G2--G3 have a direct geometric route without assigning
+all m offsets to a prescribed score vector. Normalize A=B/alpha and b=h/alpha.
+The lower cell mass and bounded row differences imply |b_i-b_j|<=C sqrt(L).
+Use the mean-zero offset gauge. To construct a witness on facet ij choose
+score coordinates y_i=H sqrt(L)-b_i, y_j=H sqrt(L)-b_j, and set each other
+score coordinate to -(y_i+y_j)/(m-2). The squared norm is O(L), not O(mL).
+The right inverse of A on 1-perp gives an ambient witness of squared norm
+O(L), exactly on the pair plane, with i,j utilities above all others by
+K sqrt(L) if H is large enough. A centered tangent Gaussian has all its
+m normalized score coordinates bounded by K sqrt(L) with probability at
+least 1/2, by a union bound. Translate that event to the witness. Its
+Gaussian probability is at least (1/4)exp(-C L) by Cameron--Martin/Cauchy.
+This proves a polynomial lower bound. The closest plane point is a_e n_e;
+using an arbitrary tangentially shifted origin with a centered tangent law
+would be incorrect. Constants are allowed to depend on the fixed score
+conditioning and mass-box constants, not m or ambient dimension.
+
+2. The actual smoothed inputs: no arbitrary unsmoothed quadratic
+--------------------------------------------------------------
+The manuscript supplies, at one fixed t=c/sqrt(L),
+
+  qB-q0=T_t V_D,       ||V_D||_(L2;ell2)<=KD r^2 L^(5/2) D,
+  T_sqrt(r)u=T_t V_u,  ||V_u||_(L2;ell2)<=Ku r^(3/2)L^(3/2) Uodd. (3)
+
+The first factorization follows by integrating the affine boundary
+derivative, with the trace cutoff at degree 2; it is a separate affine
+calculus input. In its operator factor, s=r/t and Lambda=O(L), so the
+cutoff-2 norm factor is s^2 Lambda=O(r^2 L^2), and the boundary velocity
+norm contributes O(sqrt(L)D). The second factorization follows directly
+from u having no degrees below 3: V_u=T_(sqrt(r)/t)u, with norm factor
+(sqrt(r)/t)^3. These times lie in [-1,1] for all sufficiently large m.
+
+Nothing in this audit replaces (3) by a bound for a generic un-smoothed
+L2 input. The factors r, t, and the normalization theta are essential.
+
+3. Actual conditional OU restriction, with its constants visible
+-------------------------------------------------------------
+For any scalar L2 input F, the exact normal-row calculation and tangential
+hypercontractivity give, on the ENTIRE plane at offset a,
+
+  ||T_t F(a,.)||_LQ(gamma_T) <= K_t(a)||F||_2,
+  K_t(a)=(1-t^4)^(-1/4) exp[t^2 a^2/(2(1+t^2))],             (4)
+
+provided Q>=2 and t^2(Q-1)<=1. These are the concrete operators identified
+by GaussianFacetDisintegration and GaussianNormalTrace. For a measurable
+plane subset E of probability pi, Holder gives for Q>=s>=1
+
+  ||H||_Ls(gamma_T(.|E)) <= pi^(-1/Q)||H||_LQ(gamma_T).       (5)
+
+In particular choose Q=1+t^(-2), or a fixed positive multiple of L
+compatible with (4). With t=c/sqrt(L), G2--G3 imply
+
+  pi^(-1/Q) <= exp(Api log(m)/Q) <= exp(Api c^2),
+  K_t(a) <= (1-c^4)^(-1/4) exp(c^2 Aoff^2/2),               (6)
+
+after fixing c<1. Thus each fixed conditional L4 or L8 norm of T_t F
+is at most Kt||F||_2, with Kt independent of m,N. This holds for arbitrary
+L2 F, not merely positive, polynomial, or switch-compatible inputs.
+
+Fixed L32 alone does NOT prove the uniform conditional estimate: it costs
+pi^(-1/32), possibly m^(Api/32). The operator formalization must use Q
+growing like L (or explicitly carry a smaller affordable power loss).
+There is no m^2 facet count in (6); later summation uses G1 label by label.
+
+4. Elementary factors and their precise Holder requirements
+----------------------------------------------------------
+The following fixed conditional moment estimates suffice:
+
+  ||kappa^(-1)||_L8(nu_e) <= Kkap,
+  ||e_r/r||_L8(nu_e) <= Ke L^(3/2),
+  ||delta_l_i||_L4(nu_e) <= Klinear(sqrt(L)||delta B_i||+|h_i|).
+                                                               (7)
+
+They can be derived by (5) and entire-plane moments at Q=O(L); a conditional
+Brascamp--Lieb theorem is not necessary for this particular estimate.
+For the last bound, a linear form under the entire plane has mean bounded
+by |a_e|||delta B_i|| and variance <=||delta B_i||^2, and its LQ norm is
+at most C sqrt(Q)||delta B_i|| plus its mean and offset.
+
+For kappa, the Gaussian quadratic exponential depends only on rank(P0)<=m.
+For plane X=a_e n_e+Y and b>0 small,
+
+  E exp(b|P0 X|^2) <= (1-2b)^(-m/2)
+          exp[b|P0(a_e n_e)|^2/(1-2b)].                       (8)
+
+This follows by diagonalizing the covariance P0 P_T P0, whose eigenvalues
+are in [0,1] and rank is at most m. Taking b=Q eta is admissible since
+Q eta=O(L^2/m^2), and even Q eta*m=O(L^2/m) tends to zero. Fixed Holder
+multiples of Q are allowed after increasing the fixed alphabet threshold.
+No determinant over unused ambient dimensions occurs.
+
+For e_r use its actual definition
+
+  e_r=C[r^2+r sqrt(L)W+r^2 W^2]
+              exp(C[r sqrt(L)W+r^2 W^2]),
+  W=log(sum_i exp X_i)+log(sum_i exp(-X_i)), X_i=(B0_i/alpha).x.
+
+On any containing plane the coordinate means are O(sqrt(L)), variances
+are bounded, and W has expectation O(L), Lipschitz constant <=2, and
+LQ norm O(L+sqrt(Q)). Gaussian concentration controls the displayed
+exponential and its fixed Holder multiples at Q=O(L): r L^(3/2)->0,
+Q r^2->0. Therefore ||e_r/r||_LQ<=C L^(3/2), and (5) gives (7).
+These calculations retain the log-sum-exp's O(log m) baseline; replacing
+W by O(sqrt(log m)) would be an error but is unnecessary here.
+
+5. The weighted estimate, derived without cancellation assumptions
+---------------------------------------------------------------
+For each incident pair and either label i, Holder with exponents 8,8,4
+and (7) gives
+
+  ||kappa^(-1)e_r |delta_l_i|||_L2(nu_e)
+     <= C r L^(3/2)(sqrt(L)||delta B_i||+|h_i|).
+
+For the other term, use exponents 4,4 and (3)--(6):
+
+  ||kappa^(-1)|a_i|/r||_L2(nu_e)
+     <= C/r (||V_D,i||_2+||V_u,i||_2).
+
+The constants are uniform over all incident facets. Squaring, using
+(x+y)^2<=2x^2+2y^2, and summing labels with G1 proves
+
+  E_fac(psi) <= C [r^2(L^4 d^2+L^3||h||^2)
+                       +(||V_D||_2^2+||V_u||_2^2)/r^2]
+             <= C [r^2 L^5 D^2+r L^3 Uodd^2].               (9)
+
+This explicitly uses
+sum_(i<j) w_ij(A_i+A_j)=sum_i A_i sum_(j!=i) w_ij<=Dg sum_i A_i.
+There is no hidden sum of m individual upper bounds and no sign
+cancellation on the facets. The lower-degree/odd constraints matter in
+obtaining (3), while the weighted summation itself needs no further sign
+or routing constraint.
+
+Dividing (9) by theta^2 and using L>=1 gives
+
+ E_fac(v) <= C/Ctheta^2 *
+    [L^(-3)(rD)^2+L^(-5)(sqrt(r)Uodd)^2]/(rD+sqrt(r)Uodd)^2
+          <= (C/Ctheta^2)L^(-3).                            (10)
+
+When theta=0, r>0 implies D=Uodd=0; (3), G4 and the explicit definitions
+make the forcing zero (up to the relevant Gaussian null sets). There
+is no inverse-amplitude or inverse-r lower cutoff in (9)--(10).
+
+6. A genuine generic quadratic obstruction, outside the actual class
+------------------------------------------------------------------
+Consider the regular fan on m Gaussian coordinates and one label i.
+Let X_i=Z_i-average(Z), sigma_i^2=1-1/m, and put
+
+  Q_i=H_2(X_i/sigma_i)/sqrt(2),  Q_k=0 for k!=i.
+
+Its vector L2 norm is one. By symmetry and M=Laplacian*B0, the regular
+centroid-score weights are exactly w_ij=1/m. Under a winning ij facet,
+the common coordinates Z_i=Z_j=Y have density proportional to
+exp(-Y^2) Phi(Y)^(m-2). This distribution concentrates at order sqrt(log m).
+The common Gaussian mean average(Z) remains independent of the fan and
+has variance 1/m. Consequently E_nu Q_i^2 is of order (log m)^2, and
+
+  sum_(j!=i) w_ij E_nu_ij Q_i^2 = Theta((log m)^2).            (11)
+
+A lower bound alone already disproves a uniform raw-polynomial estimate:
+the facet probability is >=c m^-2/sqrt(log m) by integrating over a
+window of width 1/sqrt(log m) above sqrt(2log m). Its portion with
+Y<=sqrt(log m) is <=exp(-c sqrt(m)/sqrt(log m)), hence negligible after
+normalization. With conditional probability tending to one, also
+|average(Z)|<=1, so |Q_i|>=c log m. The matching upper bound follows
+from fixed-degree conditional Gaussian moments and polynomial rarity.
+
+But T_t Q_i=t^2 Q_i. Its weighted squared energy is t^4 times (11),
+which is O(1) at t=c/sqrt(L). The actual normalized smoothed inputs have
+the additional L^(-3/2) or L^(-5/2) vector amplitude from (3) and (1).
+Thus (11) is not a counterexample to the manuscript's actual v; it
+pinpoints exactly why erasing smoothing from that definition would fail.
+
+7. Affordable-loss fallback for the final theorem
+------------------------------------------------
+Suppose only E_fac(v)<=C A_m is proved, with A_m>=1. Keep the other cap
+normal-sup and full-space bounds. The tiny-amplitude cap proof becomes
+
+  Bcap<=C A_m theta^2+C m^K theta^(21/8).
+
+The same fixed cutoff B>8K/5 absorbs the remainder, while the moderate
+amplitude argument is unchanged. Therefore the combined cap costs
+at most C A_m theta^2. In the actual-to-affine identity this changes
+the error to
+
+  C A_m L^8[r^3 D^2+r^2 Uodd^2].                            (12)
+
+The residual odd square is absorbable if A_m L^8/m^2->0.
+The mass-square contribution is O(A_m L^8/m^3).
+The critical shape comparison uses d^2<=C m sqrt(L) R, producing an
+additional relative coefficient of rR bounded by
+
+  C A_m r^2 m L^(17/2) <= C A_m L^(17/2)/m.                 (13)
+
+Thus a sufficient tolerance is A_m=o(m/L^(17/2)). Every fixed logarithmic
+loss is affordable. So is A_m=m^delta L^K for any fixed delta<1 and fixed K.
+An order-m loss is NOT absorbed by the present estimates merely because
+r<=1/(m-1); it would require a sharper argument.
+
+Even the generic quadratic loss A_m=L^2 would fit inside the manuscript's
+already looser r^2 m L^11 shape-error term, since 2+17/2=21/2<11.
+No such fallback is needed if (3), G1--G4, and the actual OU restriction
+are established: (10) is stronger than the claimed uniform bound.
+
+Conclusion for implementation
+-----------------------------
+The next useful Lean assembly is conditional only on the explicit fan
+geometry G1--G4, the factorization/norm bounds (3), and separately proved
+moment bounds for the actual elementary factors. The operator side should
+prove (4)--(5) at variable Q, then the finite weighted Holder calculation
+(9)--(10). No generic un-smoothed quadratic trace theorem should replace
+this chain. This audit finds no in-class weighted-energy counterexample;
+it does not discharge the separate affine-calculus, mass-localization,
+or global comparison obligations.

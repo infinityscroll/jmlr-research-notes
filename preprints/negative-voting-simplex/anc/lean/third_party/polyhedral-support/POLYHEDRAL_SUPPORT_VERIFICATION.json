@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-02T00:19:40.516498+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "boundary_sha256": "f234c0e07e7935d2bfad6eb0fa33c6e5348c02d489daef56677db4027d3035d5",
+  "source_manifest_sha256": "1ec657c61ced0974076bb8514cd2efa943e81ab08e10de6d7146f7094f9a6829",
+  "audit_sha256": "9515edd0e695b127f263c1826f98195b7cefd9ccb169ee6c7c2f67f9c1d7e92f",
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_endpoints": [
+    "FSC.normalResidual_indep_inner",
+    "FSC.lintegral_normalSlice",
+    "FSC.hasDerivAt_capMass_update",
+    "FSC.hasFDerivAt_capMass",
+    "FSC.capMass_support_C1",
+    "FSC.hasDerivAt_capMass_dilate",
+    "FSC.capEnergy_eq_of_hasFDerivAt",
+    "FSC.capMass_logConcave",
+    "FSC.convexOn_inv_capMass",
+    "FSC.quadratic_support_tangent",
+    "NegativeVotingPolyhedral.normal_slice_disintegration",
+    "NegativeVotingPolyhedral.support_frechet_derivative",
+    "NegativeVotingPolyhedral.support_C1",
+    "NegativeVotingPolyhedral.support_directional_derivative",
+    "NegativeVotingPolyhedral.support_dilation_energy",
+    "NegativeVotingPolyhedral.positive_support_tangent",
+    "NegativeVotingPolyhedral.convex_positive_mass_supports",
+    "NegativeVotingPolyhedral.convexOn_inv_capMass_positive_mass",
+    "NegativeVotingPolyhedral.positive_mass_support_tangent"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual fixed-normal Gaussian support calculus; no main-optimality claim."
+}

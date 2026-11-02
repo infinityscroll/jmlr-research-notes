@@ -1,0 +1,18 @@
+Actual Gaussian Ehrhard moment and covariance correction
+
+Source: GaussianEhrhardMomentBridge.lean.
+Final export: NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_conditional_variance_le.
+
+For any finite Euclidean dimension and finite family of arbitrary affine halfspaces, let C be their closed intersection, p=gamma(C) in (0,1), and M1=integral_C <v,x> dgamma. The actual normalized centered conditional variance satisfies
+  Var_C(<v,X>) <= ||v||^2 - (1+p*q(p)/phi(q(p)))*(M1/p)^2.
+Here q and phi are the actual inverse standard Gaussian CDF and standard Gaussian density from the attributed OpenAI GaussianPropeller dependency.
+
+The file derives all required inputs: exponential integrability at every real tilt, exact translated mass exp(-t^2||v||^2/2)*MGF(t), its first derivative at every t, its second derivative at0 equal to M2-p||v||^2, polynomial moment integrability, and the literal centered-variance expansion. Genuine polyhedral Ehrhard concavity and the separately checked scalar quantile-curvature lemma then imply the displayed bound.
+
+No unit-normal, noncoincidence, boundary smoothness, full-rank, differentiation-under-integral, covariance, or moment assumption appears in the concrete final theorem. Only the actual mass restriction0<p<1 is required. Normals may be zero, repeated, or linearly dependent.
+
+This module does not itself prove positivity or a quantitative logarithmic lower bound for kappa(p)=1+p*q(p)/phi(q(p)); those are separate scalar steps. It also does not prove the final covariance-Hodge comparison or negative-voting optimality.
+
+All12 theorems and4 concrete definitions are checked for transitive axioms (standard propext, Classical.choice, Quot.sound only). The verifier checks the complete local source closure, exact compiler/mathlib pins, and preserves all three frozen dependency receipts. Existing OpenAI source attribution and licenses remain unchanged.
+
+Reproduce: python3 verify_ehrhard_moments.py --lake /absolute/path/to/lake

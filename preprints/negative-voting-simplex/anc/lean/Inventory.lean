@@ -7,7 +7,7 @@ private def firstPartyModule (name : Name) : Bool :=
   (`NegativeVoting).isPrefixOf name ||
     #[`GaussianSpectralBridge, `GaussianSecondChaos, `GaussianAffineComparison,
       `MulgundGaussianComparison, `GaussianHypercontractivityBridge,
-      `GaussianSmallCap, `GaussianCapTailAndStrip, `GaussianNormalTrace].contains name
+      `GaussianSmallCap, `GaussianCapTailAndStrip, `GaussianNormalTrace, `GaussianNormalDerivatives, `GaussianFanCover, `GaussianFacetDisintegration, `GaussianChaosDecay, `PolyhedralSupportBoundary, `GaussianCapCovariance, `GaussianCapFirstMoment, `GaussianSmoothingComposition, `GaussianLowModeProjection, `GaussianWeightedFacetEnergy, `GaussianMassCentroid, `GaussianFacetDegree, `GaussianCapMixedMGF, `GaussianCapSecondMoment, `GaussianCapCovarianceGap, `GaussianFanMassBase, `GaussianFanMassMinimizer, `GaussianFanMassGradient, `GaussianFanMassExistence, `GaussianSoftPolyhedron, `GaussianPolyhedronEhrhard, `GaussianEhrhardCurvature, `GaussianEhrhardMomentBridge, `GaussianEhrhardCoefficient, `GaussianFanMassJacobian].contains name
 
 run_cmd do
   let env ← getEnv

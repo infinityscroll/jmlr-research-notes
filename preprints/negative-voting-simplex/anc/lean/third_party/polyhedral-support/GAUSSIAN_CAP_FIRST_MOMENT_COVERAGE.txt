@@ -1,0 +1,59 @@
+Actual Gaussian polyhedral first moment / boundary identity
+
+Source: GaussianCapFirstMoment.lean
+Namespace: NegativeVotingPolyhedral
+
+Let gamma be the actual standard Gaussian on the finite real Euclidean space
+FSC.Coord d. Let C={x: for every j, <w_j,x> <= b_j}, with a finite index type.
+Assume each normal w_j has norm 1 and the supporting hyperplanes are not
+coincident: for distinct j,k, w_j=w_k implies b_j!=b_k, and w_j=-w_k implies
+b_j!=-b_k. These are the explicit premises of every boundary identity.
+
+The scalar identity is
+
+  integral_C <v,x> dgamma(x)
+    = -sum_j phi(b_j) sliceMass(w,b,j) <w_j,v>.
+
+The vector identity is
+
+  integral_C x dgamma(x)
+    = -sum_j phi(b_j) sliceMass(w,b,j) w_j.
+
+Here phi is the actual standard normal density. sliceMass is the actual
+conditional Gaussian face probability defined in FSC.Support.Definitions:
+the Gaussian residual is translated onto <w_j,x>=b_j and tested against all
+remaining halfspaces. Singular face laws are retained explicitly.
+
+No positive-cap-mass, moment-integrability, or differentiability hypothesis
+is imposed. All required moments and derivatives are derived. The proof:
+  * Differentiates the actual translated cap mass using FSC's concrete
+    support derivative.
+  * Differentiates the exact MGF translation identity already proved in
+    GaussianCapCovariance.lean. Its Gaussian quadratic factor has derivative
+    zero at the origin.
+  * Identifies that derivative with the actual restricted first moment,
+    using mathlib's analytic MGF calculus and proved exponential integrability.
+  * Commutes inner products and coordinate projections with the actual
+    vector integral, using derived Gaussian vector integrability.
+
+Six audited exports
+  cap_translation_derivative
+  cap_mgf_first_derivative_boundary
+  gaussian_cap_first_moment
+  gaussian_cap_vector_integrable
+  gaussian_cap_vector_first_moment
+  gaussian_cap_coordinate_first_moment
+
+Attribution
+  This is a concrete integration proof of a standard Gaussian boundary
+  identity. The support derivative is from Abhijeet Mulgund's MIT-licensed
+  FSC source at the commit recorded in PROVENANCE.txt. The MGF calculus is
+  mathlib, including Remy Degenne's Apache-2.0 MGFAnalytic module. It is not
+  a claim of a new integration-by-parts theorem or a complete main proof.
+
+Verification
+  lake build GaussianCapFirstMoment
+  lake env lean GaussianCapFirstMomentAudit.lean
+  python3 verify_first_moment.py --lake /absolute/path/to/lake
+
+The verifier preserves the frozen Boundary/Covariance source and receipts.

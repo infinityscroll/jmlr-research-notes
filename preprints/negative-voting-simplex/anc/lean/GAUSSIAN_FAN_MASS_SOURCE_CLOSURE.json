@@ -1,0 +1,26 @@
+{
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "local_sources": {
+    "FSC/Definitions.lean": "38aa259fffdafb3d05b18ab0947e0fd151b25fd7602e94ed0ba69ae6190085e0",
+    "FSC/Gaussian/AffineLaw.lean": "88f54ccc3af63bd95e6a7a423a170c8fe81ad54aca7f67f0a00b2eafb8f52f1a",
+    "FSC/Gaussian/PinDefinitions.lean": "52f734d3c27c59633c02df7b244e838729df878d2276414579ff5178adee57c0",
+    "FSC/Gaussian/SinglePin.lean": "21d7971ab4ca2aa4cf8c6edb01bb551a32716e2483e2f37554ad4ec9ca729b04",
+    "FSC/Support/Definitions.lean": "aded50fde42425ec7e93c45333f5406ee46a7f750287d263fc55142fb515bd96",
+    "FSC/Support/Slicing.lean": "6d6c0df1ad29dfd42b5722dd17f70894c1544110c957fe888d64085e725c30f0",
+    "GaussianFanMassBase.lean": "4fe7277fac6a0bd825635b1c91317315f512bcee17eb99f85f15bd91b9c8835b",
+    "GaussianFanMassExistence.lean": "2c4a6cb9e6c18e479fe5298b4d7702ad53a5bcd3253f0db04045f3f545c8c95a",
+    "GaussianFanMassGradient.lean": "69da0b21c2a748ea2a977666d887529ae6acd9e77b2cea98a15ab9453623f231",
+    "GaussianFanMassMinimizer.lean": "0c1494d3b1760de63f9eb9932d97a0b71165de339a7994b7c748e9ab32c03310",
+    "NegativeVoting/GaussianMoments.lean": "3fa960b1f4a0233ebcf5b6eb517305b713ce99ce15fff3815906b421600d2207",
+    "NegativeVoting/GaussianRouting.lean": "debfc8af92f119782ab22c6d990ad8ec70b8ca0f8758e88f93220080a6f9b4f6",
+    "NegativeVoting/Integrability.lean": "421410bfbb3a1fc4f93f6aa06e93a49b75c10c1491244aa002ba58b571cc3226",
+    "NegativeVoting/RegularSimplex.lean": "39f0347728ea26e228bda19dcf3c3766b912ad63c623c0558e9d9eff96cce9d8",
+    "NegativeVoting/Routing.lean": "c3cecd94f119728c0d07c2e5c74459b8dbcec1b395f6d536ffe6009f30d629a2",
+    "WeakSimplexConjectureLean/Coding/Gram.lean": "2d0b2a08e71c088f854a94cd9948915a59fa510b33637813fadd9d8763ff5058",
+    "WeakSimplexConjectureLean/Core/Correlation.lean": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007",
+    "WeakSimplexConjectureLean/Core/Euclidean.lean": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c",
+    "WeakSimplexConjectureLean/Core/Finite.lean": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a",
+    "WeakSimplexConjectureLean/Core/Matrix.lean": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e",
+    "WeakSimplexConjectureLean/Normal/PDFCDF.lean": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec"
+  }
+}

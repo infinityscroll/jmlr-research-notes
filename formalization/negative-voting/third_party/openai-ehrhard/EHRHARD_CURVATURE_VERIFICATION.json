@@ -1,0 +1,19 @@
+{
+  "source": "GaussianEhrhardCurvature.lean",
+  "source_sha256": "d5c0ae2d3d92b1088d609bf25c178976d7115beb9992a6f1a06d42dbbd2e7120",
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "axioms_by_declaration": {
+    "NegativeVotingEhrhard.quantile_curve_second_derivative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "NegativeVotingEhrhard.ehrhard_curve_curvature": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "scope": "Generic calculus consequence; concrete Gaussian derivatives are derived separately by GaussianEhrhardMomentBridge."
+}

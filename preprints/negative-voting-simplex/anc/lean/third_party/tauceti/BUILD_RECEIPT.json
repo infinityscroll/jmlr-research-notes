@@ -1,0 +1,111 @@
+{
+  "utc_completed": "2026-11-02T01:13:28.913083+00:00",
+  "upstream_repository": "https://github.com/TauCetiProject/TauCeti",
+  "upstream_commit": "92efba7b44b38e541bc007dc7839ff09613b2bc9",
+  "upstream_lean_file_count": 30,
+  "original_manifest_rows": 35,
+  "duplicate_manifest_rows_removed": 5,
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "lean_version_output": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "build_target": "TauCeti.Analysis.Matrix.SchurComplement",
+  "build_exit_code": 0,
+  "audit_exit_code": 0,
+  "compiled_source_modules": [
+    "TauCeti.Algebra.Module.Equiv.Basic",
+    "TauCeti.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Continuity",
+    "TauCeti.Analysis.InnerProductSpace.Adjoint",
+    "TauCeti.Analysis.InnerProductSpace.BasisSpan",
+    "TauCeti.Analysis.InnerProductSpace.CourantFischer",
+    "TauCeti.Analysis.InnerProductSpace.HilbertBasis.Basic",
+    "TauCeti.Analysis.InnerProductSpace.MoorePenrose",
+    "TauCeti.Analysis.InnerProductSpace.PointSpectrum",
+    "TauCeti.Analysis.InnerProductSpace.Positive.SquareRoot",
+    "TauCeti.Analysis.InnerProductSpace.RangeProjection",
+    "TauCeti.Analysis.InnerProductSpace.SingularValues",
+    "TauCeti.Analysis.InnerProductSpace.Spectrum",
+    "TauCeti.Analysis.InnerProductSpace.Symmetric.FunctionalCalculus",
+    "TauCeti.Analysis.Matrix.CovariancePseudoInverse",
+    "TauCeti.Analysis.Matrix.FunctionalCalculus",
+    "TauCeti.Analysis.Matrix.L2OpNorm",
+    "TauCeti.Analysis.Matrix.PosSemidef.Block",
+    "TauCeti.Analysis.Matrix.SchurComplement",
+    "TauCeti.Analysis.Normed.Operator.Basic",
+    "TauCeti.Analysis.SpecificLimits.RegularizedInverse",
+    "TauCeti.Compatibility.ProperStar",
+    "TauCeti.Data.Fin.Tuple.Sort",
+    "TauCeti.Data.Finsupp.Antitone",
+    "TauCeti.LinearAlgebra.Dimension.Submodule",
+    "TauCeti.LinearAlgebra.Eigenspace.Anticommute",
+    "TauCeti.LinearAlgebra.Eigenspace.Comp",
+    "TauCeti.LinearAlgebra.Matrix.Block",
+    "TauCeti.LinearAlgebra.Matrix.PosSemidef",
+    "TauCeti.LinearAlgebra.Matrix.SchurComplement",
+    "TauCeti.Topology.Algebra.IsOpenUnits",
+    "TauCeti.Topology.Instances.Matrix"
+  ],
+  "compiled_source_constant_count": 668,
+  "compiled_source_theorem_constant_count": 611,
+  "all_compiled_source_constants_transitively_audited": true,
+  "allowed_logical_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "named_endpoint_axioms": {
+    "Matrix.PosSemidef.schur_complement\u2082\u2082": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.PosSemidef.schur_complement\u2081\u2081": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.PosSemidef.toBlocks\u2081\u2082_mul_covariancePseudoInverse_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.PosSemidef.schur_complement\u2082\u2082_covariancePseudoInverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.PosSemidef.schur_complement\u2081\u2081_covariancePseudoInverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.isMoorePenroseInverse_covariancePseudoInverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.eq_covariancePseudoInverse_of_penrose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.toEuclideanLin_mul_covariancePseudoInverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.tendsto_inv_sq_add_smul_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Matrix.measurable_covariancePseudoInverse": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_manifest_sha256": "fc3fd57963b2c51e6edc2ff2ae2fea9c7dbe48e5b3e45c1071f8301f7fdd32ef",
+  "port_manifest_sha256": "2c8b059b0364a6d6b657ff6be1882a20d931c21e85e8a62496a643ae29dacedd",
+  "exact_patch_sha256": "d29e462916254d942ab97a20d27cc594cb0c1e7e18852f1eb551774196a791d6",
+  "scope": "Finite-dimensional singular Schur complement and canonical pseudoinverse algebra; not Gaussian Hessian identification or the full negative-voting theorem."
+}

@@ -1,0 +1,5 @@
+import GaussianCapCovarianceGap
+
+#print axioms NegativeVotingPolyhedral.cap_conditional_covariance_expansion
+#print axioms NegativeVotingPolyhedral.gaussian_cap_covariance_boundary_gap
+#print axioms NegativeVotingPolyhedral.gaussian_cap_covariance_boundary_gap_nonneg

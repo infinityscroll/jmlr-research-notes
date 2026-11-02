@@ -1,0 +1,125 @@
+GAUSSIAN SMOOTHING COMPOSITION AND VARIABLE-q TRACE: CHECKED COVERAGE
+
+Source: GaussianSmoothingComposition.lean
+Namespace: NegativeVotingSmoothingComposition
+Lean: leanprover/lean4:v4.35.0-rc2
+mathlib: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+Source SHA256: a01095fc8d3c67debba45e08263c3e75e5edf495d1d85c30fcc17ec068101cf5
+
+ACTUAL OU COMPOSITION
+
+For every arbitrary raw f in L2(gamma_n) and 0<tau,sigma<1,
+
+  T_tau(T_sigma f) = T_(tau*sigma) f, gamma_n-almost everywhere.
+
+T is the actual finite-product Gaussian averaging integral, including its
+sqrt(1-correlation^2) noise coefficient. The proof transfers the already checked
+L2 Gaussian semigroup through its actual-integral coeFn identities and Gaussian
+AE congruence; it does not assume a desired composition identity for raw inputs.
+
+VARIABLE-EXPONENT NORMAL TRACE
+
+For 0<tau<1, q=1+tau^(-2), and f in L2(gamma_n x gamma_1),
+
+  ||T_tau f(.,a)||_q <= sqrt(C(tau,a)) ||f||_2,
+
+  C(tau,a) = 1/[sqrt(1-tau^2)*sqrt(1+tau^2)]
+             * exp(tau^2*a^2/(1+tau^2)).
+
+The actual product-integral endpoint is
+actual_product_normalTrace_lq_bound_sharp.
+
+For A>=0, the literal supremum over EVERY real a in [-A,A] belongs to Lq and
+has the same bound with a replaced by A. This is proved by
+actual_product_normal_sup_lq_memLp_and_bound. The exponent is variable, so the
+weighted-facet argument may choose q comparable to log(m), rather than being
+restricted to q=32. The exact relation is q=1+tau^(-2).
+
+HIGH-CHAOS COMPOSITION BOUNDARY
+
+Suppose the actual product-Hermite coefficients of f below degree k vanish.
+The existing checked GaussianChaosDecay theorem supplies actual L2 contraction
+by sigma^k. This module combines it with composition and hypercontractivity:
+
+  ||T_(tau*sigma) f||_(1+tau^(-2)) <= sigma^k ||f||_2.
+
+It also supplies the q=32 specialization under tau^2<=1/31.
+
+The stronger actual normal-supremum endpoint is
+actual_gaussian_normal_sup_highChaos_lq_bound. For f in L2(gamma_(n+1)),
+0<tau,sigma<1, A>=0, and vanishing coefficients below degree k, define
+
+  S(x) = sup_{a in [-A,A]} |T_(tau*sigma) f(e^{-1}(x,a))|,
+  e(v) = ((v(j+1))_{j=0,...,n-1}, v(0)).
+
+The theorem proves S belongs to Lq(gamma_n), q=1+tau^(-2), and
+
+  ||S||_q <= sqrt(C(tau,A)) sigma^k ||f||_2.
+
+The measurable coordinate equivalence e is explicit, preserves the actual
+Gaussian product measures, and preserves every appropriate Lp norm. It is not
+an unstated identification between Fin(n+1) and a product domain.
+
+WHY THE NORMAL-SLICE COMPOSITION IS VALID
+
+A full-space AE identity alone would not justify equality on every fixed normal
+slice. This module first transports the true full-space semigroup identity
+through e. Fubini gives almost-every-normal equality on almost every tangent
+fibre. Previously proved normal differentiability gives continuity on both
+sides; the one-dimensional Gaussian has full support, so the equality extends
+to ALL real normal parameters on one common tangential full-measure set. This
+is normalTrace_smoothing_comp_ae_all_parameters. The subsequent supremum
+comparison uses that simultaneous statement.
+
+MATHEMATICAL SCOPE
+
+No boundedness or Borel-only representative condition is imposed on the input.
+The high-chaos hypothesis is vanishing of explicit Hermite coefficients, not an
+assumed smoothing norm bound. The companion finite-projection module is the
+place that derives this hypothesis for concrete low-mode subtraction.
+
+The module does not establish the new negative-voting global comparison,
+weighted Gaussian facet energies, arbitrary spatial orthogonal transport,
+or a two-normal geometric estimate. It provides the actual analytic composition
+and trace bridge those later estimates require. Classical Gaussian semigroup,
+Hermite, and hypercontractive foundations remain attributed to their checked
+upstream sources.
+
+VERIFICATION
+
+lake build GaussianSmoothingComposition: success, exit 0.
+lake env lean GaussianSmoothingComposition.lean: success, exit 0, no diagnostics.
+All 26 exports (23 theorems and 3 definitions) individually passed #print axioms.
+The exact axiom union is {propext, Classical.choice, Quot.sound}.
+No sorryAx, custom analytic axiom, or native_decide trust is used.
+The parent exhaustive compiled-environment audit is the publication-wide
+reproducible verification command.
+
+DECLARATION INVENTORY
+
+theorem NegativeVotingSmoothingComposition.ouSemigroupFin_comp_ae
+theorem NegativeVotingSmoothingComposition.gaussianAverage_comp_ae
+theorem NegativeVotingSmoothingComposition.gaussianAverage_l2_contraction
+theorem NegativeVotingSmoothingComposition.gaussianAverage_memLp_two
+theorem NegativeVotingSmoothingComposition.gaussianAverage_factorized_lq_bound
+theorem NegativeVotingSmoothingComposition.gaussianAverage_highChaos_lq_bound
+theorem NegativeVotingSmoothingComposition.gaussianAverage_highChaos_l32_bound
+theorem NegativeVotingSmoothingComposition.normalTrace_lq_bound_sharp
+theorem NegativeVotingSmoothingComposition.actual_product_normalTrace_lq_bound_sharp
+theorem NegativeVotingSmoothingComposition.exists_normalTrace_lq_uniform_envelope
+theorem NegativeVotingSmoothingComposition.normalTraceSup_lq_memLp_and_bound
+theorem NegativeVotingSmoothingComposition.actual_product_normal_sup_lq_memLp_and_bound
+def NegativeVotingSmoothingComposition.normalCoordinates
+theorem NegativeVotingSmoothingComposition.normalCoordinates_apply
+theorem NegativeVotingSmoothingComposition.normalCoordinates_measurePreserving
+def NegativeVotingSmoothingComposition.normalLift
+theorem NegativeVotingSmoothingComposition.normalLift_memLp
+theorem NegativeVotingSmoothingComposition.normalLift_eLpNorm
+theorem NegativeVotingSmoothingComposition.normalCoordinates_mix
+theorem NegativeVotingSmoothingComposition.normalCoordinates_symm_mix
+def NegativeVotingSmoothingComposition.productGaussianAverage
+theorem NegativeVotingSmoothingComposition.gaussianAverage_normalCoordinates
+theorem NegativeVotingSmoothingComposition.normalTrace_normalCoordinates_ae_all_parameters
+theorem NegativeVotingSmoothingComposition.normalTrace_smoothing_comp_ae_all_parameters
+theorem NegativeVotingSmoothingComposition.normalTraceSup_highChaos_lq_bound
+theorem NegativeVotingSmoothingComposition.actual_gaussian_normal_sup_highChaos_lq_bound

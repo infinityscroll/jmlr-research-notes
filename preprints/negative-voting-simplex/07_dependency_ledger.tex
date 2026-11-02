@@ -82,15 +82,34 @@ cancellation from equal masses. Local one-dimensional Gaussian cap lemmas
 prove the short-fibre integral, its explicit cubic error, and the
 large-perturbation contribution under their stated normal regularity and
 moment hypotheses. The exact Gaussian kernel row norm and actual $L^{32}$ normal
-trace bound are proved for arbitrary square-integrable inputs; normal
-derivative and supremum estimates remain separate obligations. Actual
+trace bound, normal derivatives, literal interval supremum estimates,
+OU composition and high-chaos projections are proved for the stated
+square-integrable inputs. Actual
 Gaussian slab and third-label tangent-strip bounds are also checked.
-Finite covariance algebra, weighted gauge selection,
-scalar asymptotics, and conditional assembly are also supplied.
+The actual prescribed-mass affine fan exists for every positive mass vector
+and distinct sites. Its offset mass Jacobian is the intrinsic facet
+Laplacian; affine independence gives positive facets, kernel exactly the
+constants, strict positivity on the centered gauge, and $C^1$ dependence
+on offsets. Actual polyhedral first and second moments, weighted facet
+estimates and degree bounds are also checked.
+
+OpenAI's smooth Ehrhard proof is extended to actual finite Gaussian
+polyhedra. For $p=\gamma(C)\in(0,1)$, the resulting checked bound is
+\[
+ \operatorname{Var}(\langle v,X\rangle\mid C)
+ \le \|v\|^2-
+ \frac{e^{-4}}{2(1+2\log(1/p))}
+ \bigl(\mathbb E[\langle v,X\rangle\mid C]\bigr)^2.
+\]
+Finite covariance algebra, weighted gauge selection, singular
+Schur-complement calculus, scalar asymptotics, and conditional assembly
+are also supplied.
 
 The development imports attributed, checked proofs of the Gaussian Hermite
 basis and noise action, Gaussian hypercontractivity, and Mulgund's
-common-threshold comparison. These are prior mathematical results, not
+common-threshold comparison, its polyhedral support calculus, OpenAI's
+smooth Ehrhard theorem, and Tau Ceti's singular Schur-complement results.
+These are prior mathematical results, not
 contributions of this manuscript. The vendored sources, exact revisions,
 licenses, compatibility changes, and independent statement and axiom audits
 are included in the source package. Every first-party theorem is audited by
@@ -98,8 +117,9 @@ its compiled source module, including generated helpers; only the standard
 Lean axioms are permitted.
 
 The full statement of Theorem~\ref{thm:main} is recorded as an unproved
-proposition. The Gaussian covariance/offset geometry, weighted facet-energy
-bounds, complete facet/cap assembly, dimension-and-noise-uniform localization,
+proposition. The actual optimized covariance Hessian and finite-stratum
+cycle factorization, quantitative offset control, complete facet/cap
+assembly, dimension-and-noise-uniform localization,
 and discrete transfer still require formal proofs. A conditional assembly
 or a fixed-constant eventual threshold does not establish these inputs.
 Neither source checksums nor PDF compilation certify the analytic argument.

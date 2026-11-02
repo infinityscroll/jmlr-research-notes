@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-02",
+  "purpose": "Find existing Lean proofs that discharge concrete remaining obligations of the negative-voting formalization.",
+  "not_a_novelty_clearance": true,
+  "candidates": [
+    {
+      "repository": "https://github.com/pmaronow/slowequilibration-palomar",
+      "commit": "a28aaa336343c4caf43791ababd8ed0ee5c7b58e",
+      "original_source": "https://github.com/openai/math",
+      "original_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+      "module": "vendor/openai-math/OAI/Probability/GaussianPropeller/SmoothedConcavity.lean",
+      "use": "Smooth Ehrhard concavity; extend to actual finite polyhedra and differentiate to strengthen covariance\u2013mean estimate.",
+      "status": "Integrated and verified: 12 unchanged upstream modules and nine audited exports. Five first-party extension modules prove actual finite-polyhedron Ehrhard concavity and the explicit conditional covariance correction; all 77 public extension declarations audited in isolation and all compiled theorem constants covered by the combined first-party audit.",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "https://github.com/TauCetiProject/TauCeti",
+      "commit": "92efba7b44b38e541bc007dc7839ff09613b2bc9",
+      "module": "TauCeti/Analysis/Matrix/SchurComplement.lean",
+      "use": "Canonical pseudoinverse and singular Schur complement for finite matrix offset/gauge algebra.",
+      "status": "Integrated and verified: 31 active modules, all 668 compiled constants transitively audited, standard logical axioms only. Endpoint statements unchanged; one proved Mathlib compatibility backport.",
+      "remaining": "Actual Gaussian Hessian identification and its quantitative estimates are not consequences of the abstract matrix theorem.",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "https://github.com/LeanPool/lean-pool",
+      "commit": "edbe5bd56f476cc2965564676b66199f281ab714",
+      "module": "LeanPool/NandakumarRamanaRao/NRR/EMP/OptimalTransportCore.lean",
+      "status": "Read theorem and proof; no import.",
+      "reason": "Specialized to equal area in bounded planar convex bodies, not arbitrary prescribed Gaussian masses in arbitrary dimension. Our direct Gaussian dual minimization and gradient route is now proved.",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "https://github.com/TauCetiProject/TauCeti",
+      "commit": "92efba7b44b38e541bc007dc7839ff09613b2bc9",
+      "module": "TauCeti/MeasureTheory/OptimalTransport/Duality/Attainment.lean",
+      "status": "Read theorem and proof; no import.",
+      "reason": "Attainment endpoint requires a bounded continuous cost; the direct Gaussian finite-target dual is unbounded. Provides no immediate shortcut over the completed direct proof.",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "https://github.com/mbrc12/brenier-lean",
+      "commit": "91e6125c638af4285429ec28d50b26a685ea23d2",
+      "module": "OptimalTransport/Brenier.lean",
+      "status": "Read main signature and supporting proof source; no import.",
+      "reason": "General convex transport-potential result, not a ready finite affine-fan weight theorem. Uses Lean 4.29; direct existence route now completed."
+    },
+    {
+      "repository": "https://github.com/human-ai-mathematics/kls-lean",
+      "commit": "33fff6ea218ae07e42115bd1eacfcf7d39c534cb",
+      "module": "formalization/FunctionalInequalities/KLS/LogConcave/BrascampLieb.lean",
+      "status": "Read smooth and weak variance/Hessian endpoints; reserve only.",
+      "reason": "Smooth strictly convex tilted potentials require a separate hard-polyhedron approximation and do not directly supply the stronger Ehrhard rank-one correction. Current actual conditional Gaussian variance is already proved.",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "https://github.com/RemyDegenne/colt-2026-83",
+      "commit": "3f6c0f296a3b7e4aa8fe333225505f5b2f61f9e0",
+      "module": "Maiti2026Power/Mathlib/Probability/GaussianInterpolation.lean",
+      "status": "Read actual interpolation derivative signature; candidate for covariance-variation work.",
+      "remaining": "C2 input with bounded second derivative; unsmoothed maximum requires additional justification.",
+      "license": "Apache-2.0"
+    },
+    {
+      "repository": "https://github.com/abhmul/full-simplex-conjecture-lean",
+      "commit": "ae04e529427c26b18fb89a276c31954176dec6dd",
+      "module": "FSC/Gaussian/ThresholdExpansion.lean",
+      "status": "Read additional C2 threshold and normalized covariance variation endpoints; reserve. Existing fixed-normal support calculus already used.",
+      "remaining": "Displayed complete Hessian theorem uses common positive thresholds and correlation-matrix hypotheses; arbitrary affine-cell offsets need further work."
+    },
+    {
+      "repository": "https://github.com/pmaronow/fluctuations-palomar",
+      "commit": "52e8a21a2497f28811a3154dea6d37e819ccc088",
+      "module": "SKConstants/Upstream/OAI/Probability/SKBarriers/Gaussian/GaussianCovarianceStep.lean",
+      "status": "Read exact log-partition Hessian decomposition and response identities; reserve.",
+      "remaining": "Requires bounded smooth derivatives of input, not directly hard winning cells."
+    }
+  ]
+}

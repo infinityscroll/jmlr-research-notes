@@ -1,0 +1,34 @@
+'NegativeVotingPolyhedral.noCoincident_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_integral_density_test_translate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingPolyhedral.cap_tilt_test_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.measurableSet_faceEvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.face_affine_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.slicePreimage_eq_residual_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.sliceMass_eq_residual_capMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.sliceLaw_isGaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.face_integrableExpSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.hasDerivAt_faceMGF_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.face_affine_test_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.faceMGF_eq_residual_mgf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.faceDirection_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.faceResidual_inner_direction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.faceResidualSupports_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.faceMGF_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.normalPDF_shift_tilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.face_flux_tilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_tilt_first_moment_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_tilt_first_moment_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.hasDerivAt_cap_tilt_first_moment_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_bilinear_second_moment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_coordinate_second_moment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_boundary_tensor_symmetric' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

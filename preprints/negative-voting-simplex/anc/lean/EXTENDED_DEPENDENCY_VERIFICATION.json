@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "polyhedral_pinned_sources": 26,
+  "polyhedral_audited_endpoints": 19,
+  "ehrhard_pinned_sources": 12,
+  "ehrhard_audited_exports": 9,
+  "tauceti_pinned_source_modules": 31,
+  "tauceti_compiled_constants_audited": 668,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Attributed prerequisite proofs only; full negative-voting theorem remains unproved."
+}

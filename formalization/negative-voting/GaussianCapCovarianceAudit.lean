@@ -1,0 +1,19 @@
+import GaussianCapCovariance
+
+#print axioms NegativeVotingPolyhedral.integrable_exp_inner
+#print axioms NegativeVotingPolyhedral.integrable_exp_inner_restrict
+#print axioms NegativeVotingPolyhedral.standardDensity_shift_tilt
+#print axioms NegativeVotingPolyhedral.translated_cap_membership
+#print axioms NegativeVotingPolyhedral.cap_integral_density_translate
+#print axioms NegativeVotingPolyhedral.cap_mgf_translate
+#print axioms NegativeVotingPolyhedral.cap_restrict_ne_zero
+#print axioms NegativeVotingPolyhedral.cap_shift_mass_pos
+#print axioms NegativeVotingPolyhedral.cap_integrableExpSet
+#print axioms NegativeVotingPolyhedral.cap_cgf_analytic
+#print axioms NegativeVotingPolyhedral.cap_score_moment_integrable
+#print axioms NegativeVotingPolyhedral.cap_centered_square_integrable
+#print axioms NegativeVotingPolyhedral.cap_log_translate_concave
+#print axioms NegativeVotingPolyhedral.cap_cgf_sub_quadratic_concave
+#print axioms NegativeVotingPolyhedral.cap_cgf_second_derivative_le
+#print axioms NegativeVotingPolyhedral.gaussian_cap_conditional_variance_le
+#print axioms NegativeVotingPolyhedral.gaussian_cap_conditional_second_moment_le

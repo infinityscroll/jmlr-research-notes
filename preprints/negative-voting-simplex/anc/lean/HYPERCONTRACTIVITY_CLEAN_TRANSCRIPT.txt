@@ -1,4 +1,4 @@
-⚠ [3018/3263] Replayed MarkovSemigroups.Abstract.DirichletForm
+⚠ [3018/3238] Replayed MarkovSemigroups.Abstract.DirichletForm
 warning: MarkovSemigroups/Abstract/DirichletForm.lean:30:0: 'Mathlib.MeasureTheory.Measure.MeasureSpace' has been deprecated: please replace this import by
 
 import Mathlib.Algebra.Order.Module.Field
@@ -6,7 +6,7 @@ import Mathlib.Data.EReal.Inv
 import Mathlib.Tactic.Measurability
 import Mathlib.Topology.Algebra.InfiniteSum.Order
 import Mathlib.Topology.MetricSpace.Bounded
-⚠ [3019/3263] Replayed MarkovSemigroups.Abstract.Hypercontractivity
+⚠ [3019/3238] Replayed MarkovSemigroups.Abstract.Hypercontractivity
 warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:127:2: Try this: 
   haveI̵
 
@@ -33,7 +33,7 @@ But this is not relevant for proofs because of proof irrelevance.
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:290:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
 warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:315:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
-⚠ [3037/3263] Replayed MarkovSemigroups.Abstract.GrossODE
+⚠ [3037/3238] Replayed MarkovSemigroups.Abstract.GrossODE
 warning: MarkovSemigroups/Abstract/GrossODE.lean:166:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -108,14 +108,14 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [3040/3263] Replayed MarkovSemigroups.Diffusion.StroockVaropoulos
+⚠ [3040/3238] Replayed MarkovSemigroups.Diffusion.StroockVaropoulos
 warning: MarkovSemigroups/Diffusion/StroockVaropoulos.lean:70:5: Variable name `hu_one` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _hu_one
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [3188/3263] Replayed MarkovSemigroups.Instances.WorkInProgress.Euclidean
+⚠ [3188/3238] Replayed MarkovSemigroups.Instances.WorkInProgress.Euclidean
 info: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:112:4: Try this:
   [apply] ring_nf
   
@@ -136,7 +136,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [NNReal.coe_add]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [3193/3263] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHermite
+⚠ [3193/3238] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHermite
 warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:259:11: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
 
 Hint: Replace the deprecated name:
@@ -149,15 +149,15 @@ warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:315:8: 
 
 Hint: Replace the deprecated name:
   integrable_finset_̵s̵S̲um
-⚠ [3194/3263] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanStein
+⚠ [3194/3238] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanStein
 warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean:723:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3195/3263] Replayed MarkovSemigroups.General.OUEntropyDecomposition
+⚠ [3195/3238] Replayed MarkovSemigroups.General.OUEntropyDecomposition
 warning: MarkovSemigroups/General/OUEntropyDecomposition.lean:1447:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3196/3263] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanEntropyDecay
+⚠ [3196/3238] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanEntropyDecay
 warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:41: this tactic is never executed
 
 Note: This linter can be disabled with `set_option linter.unreachableTactic false`
@@ -498,7 +498,7 @@ But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 Build completed successfully (3277 jobs).
-⚠ [3018/3090] Replayed MarkovSemigroups.Abstract.DirichletForm
+⚠ [3018/3242] Replayed MarkovSemigroups.Abstract.DirichletForm
 warning: MarkovSemigroups/Abstract/DirichletForm.lean:30:0: 'Mathlib.MeasureTheory.Measure.MeasureSpace' has been deprecated: please replace this import by
 
 import Mathlib.Algebra.Order.Module.Field
@@ -506,7 +506,7 @@ import Mathlib.Data.EReal.Inv
 import Mathlib.Tactic.Measurability
 import Mathlib.Topology.Algebra.InfiniteSum.Order
 import Mathlib.Topology.MetricSpace.Bounded
-⚠ [3019/3090] Replayed MarkovSemigroups.Abstract.Hypercontractivity
+⚠ [3019/3242] Replayed MarkovSemigroups.Abstract.Hypercontractivity
 warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:127:2: Try this: 
   haveI̵
 
@@ -533,7 +533,7 @@ But this is not relevant for proofs because of proof irrelevance.
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:290:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
 warning: MarkovSemigroups/Abstract/Hypercontractivity.lean:315:45: `ContinuousLinearMap.lipschitz` has been deprecated: Use `ContinuousLinearMap.lipschitzWith` instead
-⚠ [3037/3090] Replayed MarkovSemigroups.Abstract.GrossODE
+⚠ [3037/3242] Replayed MarkovSemigroups.Abstract.GrossODE
 warning: MarkovSemigroups/Abstract/GrossODE.lean:166:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -608,14 +608,14 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [3040/3090] Replayed MarkovSemigroups.Diffusion.StroockVaropoulos
+⚠ [3040/3242] Replayed MarkovSemigroups.Diffusion.StroockVaropoulos
 warning: MarkovSemigroups/Diffusion/StroockVaropoulos.lean:70:5: Variable name `hu_one` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _hu_one
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [3189/3279] Replayed MarkovSemigroups.Instances.WorkInProgress.Euclidean
+⚠ [3188/3242] Replayed MarkovSemigroups.Instances.WorkInProgress.Euclidean
 info: MarkovSemigroups/Instances/WorkInProgress/Euclidean.lean:112:4: Try this:
   [apply] ring_nf
   
@@ -636,7 +636,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [NNReal.coe_add]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [3194/3279] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHermite
+⚠ [3193/3242] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanHermite
 warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:259:11: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
 
 Hint: Replace the deprecated name:
@@ -649,15 +649,15 @@ warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanHermite.lean:315:8: 
 
 Hint: Replace the deprecated name:
   integrable_finset_̵s̵S̲um
-⚠ [3195/3279] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanStein
+⚠ [3194/3242] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanStein
 warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanStein.lean:723:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3196/3279] Replayed MarkovSemigroups.General.OUEntropyDecomposition
+⚠ [3195/3242] Replayed MarkovSemigroups.General.OUEntropyDecomposition
 warning: MarkovSemigroups/General/OUEntropyDecomposition.lean:1447:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3197/3279] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanEntropyDecay
+⚠ [3196/3242] Replayed MarkovSemigroups.Instances.WorkInProgress.EuclideanEntropyDecay
 warning: MarkovSemigroups/Instances/WorkInProgress/EuclideanEntropyDecay.lean:102:41: this tactic is never executed
 
 Note: This linter can be disabled with `set_option linter.unreachableTactic false`

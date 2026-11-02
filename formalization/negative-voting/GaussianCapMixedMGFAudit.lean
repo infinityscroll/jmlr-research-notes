@@ -1,0 +1,3 @@
+import GaussianCapMixedMGF
+#print axioms NegativeVotingPolyhedral.cap_score_exp_memLp
+#print axioms NegativeVotingPolyhedral.hasDerivAt_cap_mixed_mgf

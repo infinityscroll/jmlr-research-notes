@@ -1,0 +1,8 @@
+'NegativeVotingPolyhedral.cap_translation_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_mgf_first_derivative_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_first_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_vector_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_vector_first_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_coordinate_first_moment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

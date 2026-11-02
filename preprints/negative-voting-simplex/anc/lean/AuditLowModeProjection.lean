@@ -1,0 +1,15 @@
+import GaussianLowModeProjection
+#print axioms NegativeVotingProjection.projectModes_memLp
+#print axioms NegativeVotingProjection.removeModes_memLp
+#print axioms NegativeVotingProjection.coeff_projectModes
+#print axioms NegativeVotingProjection.coeff_removeModes
+#print axioms NegativeVotingProjection.removeModes_integral_sq_le
+#print axioms NegativeVotingProjection.mem_lowerModes_iff
+#print axioms NegativeVotingProjection.highModes_memLp
+#print axioms NegativeVotingProjection.highModes_coeff_vanish
+#print axioms NegativeVotingProjection.highModes_integral_sq_le
+#print axioms NegativeVotingProjection.gaussianAverage_highModes_integral_sq_le
+
+#print axioms NegativeVotingProjection.highModes_eLpNorm_le
+
+#print axioms NegativeVotingProjection.actual_gaussian_normal_sup_highModes_lq_bound

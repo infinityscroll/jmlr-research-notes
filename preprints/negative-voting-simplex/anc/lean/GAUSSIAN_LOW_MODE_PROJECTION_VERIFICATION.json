@@ -1,0 +1,14 @@
+{
+  "source": "GaussianLowModeProjection.lean",
+  "sha256": "965bd7a6fbc0ebde79ba3aa707b19e7bd99cb4d110cf72530bc846ccfbdb329c",
+  "compiled": true,
+  "public_theorems_audited": 12,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build_log_sha256": "948b5f7912ed61f491a9b5cb4f3aea36554458d4b15cced08d90e41f6ba44333",
+  "axiom_log_sha256": "23e1e03401fce148955e2979f73f525e520edfc21aed4a9f8c42074b750cde28",
+  "full_theorem_proved": false
+}

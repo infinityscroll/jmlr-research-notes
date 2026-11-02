@@ -1,0 +1,28 @@
+import GaussianFanMassExistence
+
+#print axioms NegativeVotingFan.score_integrable
+#print axioms NegativeVotingFan.integral_score
+#print axioms NegativeVotingFan.max_integrable
+#print axioms NegativeVotingFan.offset_le_expectedMax
+#print axioms NegativeVotingFan.maxScore_sub_bound
+#print axioms NegativeVotingFan.max_score_offset_bound
+#print axioms NegativeVotingFan.expectedMax_sub_bound
+#print axioms NegativeVotingFan.expectedMax_lipschitz
+#print axioms NegativeVotingFan.potential_continuous
+#print axioms NegativeVotingFan.norm_le_card_mul_max_of_sum_zero
+#print axioms NegativeVotingFan.potential_ge_massLower_mul_norm
+#print axioms NegativeVotingFan.exists_potential_minimizer
+#print axioms NegativeVotingFan.weights_measurable
+#print axioms NegativeVotingFan.weights_simplex
+#print axioms NegativeVotingFan.weights_integrable
+#print axioms NegativeVotingFan.mass_sum
+#print axioms NegativeVotingFan.ae_scores_injective
+#print axioms NegativeVotingFan.hasDerivAt_maxScore_direction
+#print axioms NegativeVotingFan.max_score_line_lipschitz
+#print axioms NegativeVotingFan.hasDerivAt_expectedMax
+#print axioms NegativeVotingFan.hasDerivAt_potential
+#print axioms NegativeVotingFan.winningCell_measurable
+#print axioms NegativeVotingFan.mass_eq_winningCell
+#print axioms NegativeVotingFan.masses_eq_of_minimizer
+#print axioms NegativeVotingFan.exists_offsets_with_prescribed_masses
+#print axioms NegativeVotingFan.exists_affine_fan_with_prescribed_gaussian_masses

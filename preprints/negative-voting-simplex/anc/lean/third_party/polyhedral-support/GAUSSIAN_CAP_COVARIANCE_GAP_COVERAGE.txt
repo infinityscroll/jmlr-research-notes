@@ -1,0 +1,13 @@
+Actual normalized conditional-covariance boundary gap
+
+The three kernel-checked theorems use the actual restricted standard Gaussian and unnormalized Gaussian face integrals. The normalized centered bilinear covariance is defined by its literal integral, expanded using derived Gaussian moments, and then evaluated using the previously checked first- and second-moment boundary identities.
+
+For positive cap mass p, unit outward normals w_j, and the explicit NoCoincident condition,
+  <u,v> - Cov_C(u,v) = Q(u,v)/p + F(u)F(v)/p^2,
+where F(v)=sum_j phi(b_j) sliceMass_j <w_j,v> and Q(u,v)=sum_j phi(b_j)<w_j,u> integral_face_j <v,x>.
+The diagonal right-hand side is nonnegative by the previously checked conditional Gaussian variance bound. No covariance identity, matrix factorization, symmetry or positive-semidefinite conclusion is assumed.
+
+Scope: this supplies one Gaussian polyhedral input for the negative-voting comparison. It does not prove the covariance-Hodge estimate or the final global optimization theorem.
+
+Reproduce: python3 verify_covariance_gap.py --lake /absolute/path/to/lake
+The verifier preserves all four earlier verification receipts and checks their frozen source hashes. Only the standard Lean axioms propext, Classical.choice, and Quot.sound are permitted.

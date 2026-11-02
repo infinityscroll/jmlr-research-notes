@@ -1,0 +1,5 @@
+import GaussianFanMassMinimizer
+
+#print axioms NegativeVotingFan.norm_le_card_mul_max_of_sum_zero
+#print axioms NegativeVotingFan.potential_ge_massLower_mul_norm
+#print axioms NegativeVotingFan.exists_potential_minimizer

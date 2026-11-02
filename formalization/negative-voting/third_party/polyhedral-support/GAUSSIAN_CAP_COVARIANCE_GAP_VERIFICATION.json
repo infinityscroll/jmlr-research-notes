@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-11-02T00:56:26.029051+00:00",
+  "source_sha256": "84cd487e21142cab8a9d4e67a48869d788a1681158c1b31bfe98bc3b83dfdfab",
+  "audit_sha256": "47af9c62ecca0b7ff60dd92c093fc825f79ce556a5fa7aedd880e7a35b81eb2e",
+  "frozen_dependency_sources": {
+    "PolyhedralSupportBoundary.lean": "f234c0e07e7935d2bfad6eb0fa33c6e5348c02d489daef56677db4027d3035d5",
+    "GaussianCapCovariance.lean": "3d6cb79d8f4a48ff06b766adc5e1d7138c5dcc214ff3a952cd0d0170e56ed0db",
+    "GaussianCapFirstMoment.lean": "8df4d3ae61c27ecf856e938c69c7bd837dc895c3eaf89d530d6ed7a17c5c03b3",
+    "GaussianCapMixedMGF.lean": "5338a4112fd389e14c2d7a4bf11c4a1142f07445e19953ce2afd30ccc3671ace",
+    "GaussianCapSecondMoment.lean": "7af4717e1073947f1f1fbfa12cbabafda33f029bad45683f43d7a1742efdd0e9"
+  },
+  "frozen_dependency_receipts": {
+    "POLYHEDRAL_SUPPORT_VERIFICATION.json": "cfa662298db6d8af217f5cd7382a2a99a262ee40dd70ee2b4652b71c41ed4a10",
+    "GAUSSIAN_CAP_COVARIANCE_VERIFICATION.json": "198a5f2936289e010dfd8c7a34b485f8a02073629e4e116b91e16591f82bcf61",
+    "GAUSSIAN_CAP_FIRST_MOMENT_VERIFICATION.json": "65a5681dbcfaee70ffff800e09c164c35a52458094ba6f1cbdfdb32e73cf77c1",
+    "GAUSSIAN_CAP_SECOND_MOMENT_VERIFICATION.json": "667af5af4bfec2e854acf0e5ed2b872c4c1a79f91ee1f4fb29264f74dec43e8a"
+  },
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_declarations": [
+    "NegativeVotingPolyhedral.cap_conditional_covariance_expansion",
+    "NegativeVotingPolyhedral.gaussian_cap_covariance_boundary_gap",
+    "NegativeVotingPolyhedral.gaussian_cap_covariance_boundary_gap_nonneg"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual normalized conditional covariance, boundary-gap identity and positive semidefiniteness."
+}

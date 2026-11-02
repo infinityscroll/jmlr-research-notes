@@ -1,0 +1,7 @@
+Concrete finite Hermite projection and Gaussian smoothing
+
+The finite set lowerModes k contains exactly the multi-indices of degree below k, including the zero-dimensional and k=0 cases. projectModes is the actual finite Hermite sum. highModes subtracts it from f. The file proves coefficient cancellation, L2 membership, squared-energy and L2-norm contraction, and decay after actual Gaussian smoothing.
+
+The final endpoint actual_gaussian_normal_sup_highModes_lq_bound bounds the literal normal-interval supremum of T_(tau*sigma)(highModes k f) in L^(1+tau^(-2)) by sqrt(normalRowSquare tau A)*sigma^k*||f||2. It assumes raw Gaussian L2 membership, 0<tau,sigma<1, and A>=0. Vanishing coefficients and residual norm bounds are derived, not supplied as premises.
+
+This is classical analytic infrastructure. It does not assert the full negative-voting comparison, nor identify the paper's forcing term with an arbitrary smoothed residual.

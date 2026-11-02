@@ -1,0 +1,19 @@
+Prescribed Gaussian masses for actual finite affine fans
+
+Endpoint: NegativeVotingFan.exists_affine_fan_with_prescribed_gaussian_masses.
+For any finite nonempty label set, finite Euclidean dimension, fixed injective sites B_i, and real p_i>0 with sum p_i=1, there exist real offsets h_i summing to zero such that
+  gamma({x : for every j, <B_j,x>+h_j <= <B_i,x>+h_i}) = p_i.
+The statement uses actual Gaussian measures of explicit closed winning cells. Full rank is not required. Distinctness supplies null tie sets for each fixed offset vector.
+
+Proof chain:
+1. Actual finite Gaussian scores and their maximum are integrable. The expected maximum is 1-Lipschitz in the sup norm of offsets and is at least every individual offset.
+2. The dual E max_i(<B_i,X>+h_i) - sum_i p_i h_i is coercive on centered offsets. A compact sublevel gives an actual minimizer.
+3. Gaussian ties are null. At a unique winner the finite maximum has its literal directional derivative. A global Lipschitz bound permits differentiation under the Gaussian integral without assuming one common neighborhood in which all samples keep their winner.
+4. The dual derivative in direction v is sum_i (mass_i-p_i)v_i. At a minimizer choose v_i=mass_i-p_i; it is centered. Stationarity forces the sum of squared discrepancies to be zero.
+5. Tie-nullness identifies the maxWeights integrals with the Gaussian measures of the actual closed winning cells.
+
+All26 theorem declarations across Base, Minimizer, Gradient, and Existence are audited for transitive axioms. Only propext, Classical.choice, and Quot.sound are allowed. These files contain no sorry/admit/custom axiom/native_decide. The verifier checks the complete local import-source closure, the exact mathlib revision and Lean compiler commit, and preserves the separate frozen minimizer receipt.
+
+Scope: this closes prescribed-positive-mass existence for the Gaussian affine fans used by the comparison argument. It does not prove uniqueness of offsets, twice differentiability, the quantitative covariance/Hodge estimate, or final negative-voting optimality. It is a formalized analytic ingredient, not a new claim that semi-discrete mass existence was previously unknown.
+
+Reproduce: python3 verify_fan_mass.py --lake /absolute/path/to/lake

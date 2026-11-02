@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-11-02T00:25:51.146321+00:00",
+  "source_sha256": "8df4d3ae61c27ecf856e938c69c7bd837dc895c3eaf89d530d6ed7a17c5c03b3",
+  "audit_sha256": "57fac528b7f448b24a92bbdc6df64f5287017c8e8337516118824c83a58ea714",
+  "base_verification_sha256": "cfa662298db6d8af217f5cd7382a2a99a262ee40dd70ee2b4652b71c41ed4a10",
+  "covariance_verification_sha256": "198a5f2936289e010dfd8c7a34b485f8a02073629e4e116b91e16591f82bcf61",
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_declarations": [
+    "NegativeVotingPolyhedral.cap_translation_derivative",
+    "NegativeVotingPolyhedral.cap_mgf_first_derivative_boundary",
+    "NegativeVotingPolyhedral.gaussian_cap_first_moment",
+    "NegativeVotingPolyhedral.gaussian_cap_vector_integrable",
+    "NegativeVotingPolyhedral.gaussian_cap_vector_first_moment",
+    "NegativeVotingPolyhedral.gaussian_cap_coordinate_first_moment"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual scalar, vector and coordinate Gaussian cap first-moment boundary identities."
+}

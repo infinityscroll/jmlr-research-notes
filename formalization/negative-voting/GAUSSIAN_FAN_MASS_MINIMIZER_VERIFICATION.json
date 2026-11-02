@@ -1,0 +1,13 @@
+{
+  "source": "GaussianFanMassMinimizer.lean",
+  "sha256": "0c1494d3b1760de63f9eb9932d97a0b71165de339a7994b7c748e9ab32c03310",
+  "compiled": true,
+  "theorems_audited": 3,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "meaning": "Actual expected-Gaussian-maximum dual attains minimum on zero-sum offset gauge for strictly positive prescribed masses summing to one. Pairwise distinct sites not required for minimization.",
+  "full_negative_voting_theorem_proved": false
+}

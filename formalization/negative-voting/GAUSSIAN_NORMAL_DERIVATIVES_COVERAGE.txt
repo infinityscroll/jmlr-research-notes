@@ -1,0 +1,148 @@
+GAUSSIAN NORMAL DERIVATIVES AND INTERVAL SUPREMUM: CHECKED COVERAGE
+
+Source: GaussianNormalDerivatives.lean
+Namespace: NegativeVotingNormalDerivatives
+Lean: leanprover/lean4:v4.35.0-rc2
+mathlib: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+Source SHA256: c83bb8584ff0de985f381f2341474295dbec5fc49348c1d78497020bad3279e9
+
+ACTUAL MATHEMATICAL ENDPOINTS
+
+Let gamma_n be the finite product of n standard real Gaussians and let f belong
+to L2(gamma_n x gamma_1), with no boundedness or Borel-representative assumption.
+Set sigma=sqrt(1-tau^2), and use the actual joint Gaussian integral
+
+  U_a(x) = integral f(tau*x + sigma*z, tau*a + sigma*y)
+                    d(gamma_n x gamma_1)(z,y).
+
+1. Exact actual normal derivatives.
+   The first and second derivatives of the density ratio K(tau,a,y) are proved
+   pointwise from its exponential formula. For the first derivative,
+
+     integral (partial_a K)^2 dgamma_1 = D(tau,a),
+     D(tau,a) = C(tau,a) *
+       [tau^2/(1-tau^4) + tau^4*a^2/(1+tau^2)^2],
+     C(tau,a) = 1/[sqrt(1-tau^2)*sqrt(1+tau^2)]
+                 * exp(tau^2*a^2/(1+tau^2)).
+
+   All row identities use tau^2<1. Differentiation under the normal integral is
+   proved for arbitrary Gaussian L2 input with an explicit local polynomial
+   dominating function. Differentiation through the tangential integral is also
+   proved. The endpoint ae_hasDerivAt_actual_product_trace states that one
+   Gaussian-full-measure set of x supports the actual derivative of U_a(x) at
+   every real normal parameter a.
+
+2. Literal uncountable normal supremum.
+   If 0<tau and tau^2<=1/31 and A>=0, define
+
+     S(x) = sup over all real a in [-A,A] of |U_a(x)|.
+
+   actual_product_normal_sup_memLp_and_bound proves both
+
+     S belongs to L32(gamma_n),
+     ||S||_32 <= sqrt(C(tau,A)) * ||f||_2.
+
+   This is an actual supremum theorem. Its AE measurability is derived from the
+   proved normal continuity by reduction to a countable dense set. It is not
+   merely a list of separate fixed-a estimates.
+
+3. Uniform envelope for actual first derivatives.
+   exists_actual_product_trace_derivative_l32_uniform_envelope proves the
+   existence of a nonnegative measurable L32 envelope G with
+
+     ||G||_32 <= sqrt(D(tau,A)) * ||f||_2,
+     for gamma_n-almost every x, for EVERY a in [-A,A],
+       |d U_a(x)/da| <= G(x).
+
+   Here the derivative is Lean's actual deriv of the displayed Gaussian product
+   integral. This gives a measurable envelope for the full derivative family;
+   the file does not separately define a raw derivative-supremum random variable.
+
+All constants above are independent of the tangential dimension n. A radius-one
+interval centered at b is included by choosing A=|b|+1.
+
+HOW THE COMMON AE SET IS PROVED
+
+Fibre L2 membership first gives a parameter-independent full-measure set of
+normal fibres. The actual Gaussian tangent mixture preserves Gaussian measure.
+Its product pullback followed by Fubini produces one x-exceptional set before
+quantification over the real parameter a. The common pointwise dominator is
+sqrt(C(tau,A)) times the tangential Gaussian average of the fibre L2 norm.
+That fibre norm has exactly the original L2 norm, and actual Gaussian
+hypercontractivity gives its L32 bound.
+
+Completed-measurable f is replaced by its strongly measurable representative.
+A proved all-parameter congruence transfers both traces and derivative traces
+back to f on one common AE set. No uncountable intersection of separate
+fixed-parameter AE conclusions is used. The actual joint-integral identification
+is likewise simultaneous in a, with integrability and Fubini proved.
+
+RELATION TO THE MAIN TARGET
+
+This supplies the dimension-independent fixed-normal trace, normal interval
+supremum, and first normal derivative input for the local comparison argument.
+The general Gaussian hypercontractive inequality is an attributed imported
+classical result; the present module proves its concrete trace consequences.
+The full negative-voting comparison, arbitrary-normal orthogonal transport,
+two-normal/face-intersection estimates, and second-derivative trace estimates
+are not asserted by this module. No hypothesis equivalent to any of those
+conclusions is added, and no custom analytic axiom is used.
+
+VERIFICATION
+
+lake build GaussianNormalDerivatives: success, exit 0.
+lake env lean GaussianNormalDerivatives.lean: success, exit 0, no diagnostics.
+Every one of the 46 exports (38 theorems, 8 definitions) was individually audited
+with #print axioms. The exact union is {propext, Classical.choice, Quot.sound}.
+There is no sorryAx, custom axiom, native_decide trust, or admitted proof.
+The parent project's exhaustive compiled-environment inventory supplies the
+publication-wide reproducible audit.
+
+DECLARATION INVENTORY
+
+def NegativeVotingNormalDerivatives.normalKernelDerivative
+def NegativeVotingNormalDerivatives.normalKernelSecondDerivative
+def NegativeVotingNormalDerivatives.normalDerivativeRowSquare
+theorem NegativeVotingNormalDerivatives.hasDerivAt_normalKernel
+theorem NegativeVotingNormalDerivatives.hasDerivAt_normalKernelDerivative
+theorem NegativeVotingNormalDerivatives.normalKernelDerivative_measurable
+theorem NegativeVotingNormalDerivatives.normalKernelDerivative_memLp
+theorem NegativeVotingNormalDerivatives.gaussian_integral_sub_sq
+theorem NegativeVotingNormalDerivatives.integral_normalKernel_sq_mul
+theorem NegativeVotingNormalDerivatives.integral_normalKernelDerivative_sq
+theorem NegativeVotingNormalDerivatives.normalDerivativeRowSquare_nonneg
+theorem NegativeVotingNormalDerivatives.eLpNorm_normalKernelDerivative_eq
+def NegativeVotingNormalDerivatives.normalDerivativeEnvelope
+theorem NegativeVotingNormalDerivatives.normalRowBound_mono_abs
+theorem NegativeVotingNormalDerivatives.normalKernelDerivative_le_envelope
+theorem NegativeVotingNormalDerivatives.normalDerivativeEnvelope_memLp
+theorem NegativeVotingNormalDerivatives.hasDerivAt_normalIntegral
+theorem NegativeVotingNormalDerivatives.hasDerivAt_shifted_normalIntegral
+theorem NegativeVotingNormalDerivatives.ae_hasDerivAt_normalSection
+def NegativeVotingNormalDerivatives.normalFiberNorm
+theorem NegativeVotingNormalDerivatives.norm_integral_mul_le_l2
+theorem NegativeVotingNormalDerivatives.normalRowSquare_mono_abs
+theorem NegativeVotingNormalDerivatives.normalFiberNorm_memLp_norm
+theorem NegativeVotingNormalDerivatives.normalSection_norm_le_fiber
+theorem NegativeVotingNormalDerivatives.normalSection_measurable_of_measurable
+theorem NegativeVotingNormalDerivatives.ae_normalTrace_interval_bound_of_measurable
+theorem NegativeVotingNormalDerivatives.normalTrace_congr_ae_all_parameters
+theorem NegativeVotingNormalDerivatives.exists_normalTrace_l32_uniform_envelope
+theorem NegativeVotingNormalDerivatives.normalTrace_eq_product_ae_all_parameters
+theorem NegativeVotingNormalDerivatives.exists_actual_product_trace_l32_uniform_envelope
+def NegativeVotingNormalDerivatives.normalDerivativeSection
+def NegativeVotingNormalDerivatives.normalDerivativeTrace
+theorem NegativeVotingNormalDerivatives.normalDerivativeRowSquare_mono_abs
+theorem NegativeVotingNormalDerivatives.normalDerivativeSection_measurable_of_measurable
+theorem NegativeVotingNormalDerivatives.normalDerivativeSection_norm_le_fiber
+theorem NegativeVotingNormalDerivatives.ae_hasDerivAt_normalTrace_of_measurable
+theorem NegativeVotingNormalDerivatives.normalDerivativeTrace_congr_ae_all_parameters
+theorem NegativeVotingNormalDerivatives.ae_hasDerivAt_normalTrace
+theorem NegativeVotingNormalDerivatives.ae_hasDerivAt_actual_product_trace
+theorem NegativeVotingNormalDerivatives.ae_normalDerivativeTrace_interval_bound_of_measurable
+theorem NegativeVotingNormalDerivatives.exists_normalDerivativeTrace_l32_uniform_envelope
+theorem NegativeVotingNormalDerivatives.exists_actual_product_trace_derivative_l32_uniform_envelope
+def NegativeVotingNormalDerivatives.normalTraceSup
+theorem NegativeVotingNormalDerivatives.normalTraceSup_aestronglyMeasurable
+theorem NegativeVotingNormalDerivatives.normalTraceSup_memLp_and_bound
+theorem NegativeVotingNormalDerivatives.actual_product_normal_sup_memLp_and_bound

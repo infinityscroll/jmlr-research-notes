@@ -1,11 +1,11 @@
 Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)
 065356127b1dc0016f66b7283ce0ce2c4055aa55
-⚠ [2520/2796] Replayed WeakSimplexConjectureLean.Core.Euclidean
+⚠ [2476/2758] Replayed WeakSimplexConjectureLean.Core.Euclidean
 warning: WeakSimplexConjectureLean/Core/Euclidean.lean:73:20: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
-⚠ [3199/3294] Replayed WeakSimplexConjectureLean.Vendor.StatLean.GaussianMGFShift
+⚠ [3200/3352] Replayed WeakSimplexConjectureLean.Vendor.StatLean.GaussianMGFShift
 warning: WeakSimplexConjectureLean/Vendor/StatLean/GaussianMGFShift.lean:90:2: Try this: 
   haveI̵
 
@@ -22,7 +22,7 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [3208/3294] Replayed WeakSimplexConjectureLean.Normal.TiltFunctions
+⚠ [3209/3352] Replayed WeakSimplexConjectureLean.Normal.TiltFunctions
 warning: WeakSimplexConjectureLean/Normal/TiltFunctions.lean:122:37: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -35,7 +35,7 @@ warning: WeakSimplexConjectureLean/Normal/TiltFunctions.lean:173:34: `Set.mem_se
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [3209/3294] Replayed WeakSimplexConjectureLean.Core.QuadraticCoercivity
+⚠ [3210/3352] Replayed WeakSimplexConjectureLean.Core.QuadraticCoercivity
 warning: WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean:63:2: Try this: 
   letI̵
 
@@ -52,12 +52,12 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [3212/3294] Replayed WeakSimplexConjectureLean.Tilt.CompactMaximizer
+⚠ [3213/3352] Replayed WeakSimplexConjectureLean.Tilt.CompactMaximizer
 warning: WeakSimplexConjectureLean/Tilt/CompactMaximizer.lean:140:21: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [3219/3294] Replayed WeakSimplexConjectureLean.Orthant.AdaptiveReduction
+⚠ [3220/3352] Replayed WeakSimplexConjectureLean.Orthant.AdaptiveReduction
 warning: WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean:33:27: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
 
 Hint: Replace the deprecated name:
@@ -66,7 +66,7 @@ warning: WeakSimplexConjectureLean/Orthant/AdaptiveReduction.lean:112:39: `Set.m
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [3222/3294] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PiGaussian
+⚠ [3223/3352] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PiGaussian
 warning: WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean:49:2: Try this: 
   haveI̵
 
@@ -75,12 +75,12 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [3223/3294] Replayed WeakSimplexConjectureLean.Gaussian.DensityRatio
+⚠ [3224/3352] Replayed WeakSimplexConjectureLean.Gaussian.DensityRatio
 warning: WeakSimplexConjectureLean/Gaussian/DensityRatio.lean:287:21: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
-⚠ [3224/3294] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PrekopaLeindler
+⚠ [3225/3352] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PrekopaLeindler
 warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:90:26: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -101,7 +101,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [3226/3294] Replayed WeakSimplexConjectureLean.Product.NormalizedSelfConvolution
+⚠ [3227/3352] Replayed WeakSimplexConjectureLean.Product.NormalizedSelfConvolution
 warning: WeakSimplexConjectureLean/Product/NormalizedSelfConvolution.lean:389:2: Try this: 
   letI̵
 

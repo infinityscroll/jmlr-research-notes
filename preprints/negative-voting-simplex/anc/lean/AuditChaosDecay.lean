@@ -1,0 +1,5 @@
+import GaussianChaosDecay
+#print axioms NegativeVotingChaosDecay.coefficient_energy_hasSum_of_memLp
+#print axioms NegativeVotingChaosDecay.noise_integral_sq_decay
+#print axioms NegativeVotingChaosDecay.gaussianAverage_integral_sq_decay
+#print axioms NegativeVotingChaosDecay.gaussianAverage_eLpNorm_decay

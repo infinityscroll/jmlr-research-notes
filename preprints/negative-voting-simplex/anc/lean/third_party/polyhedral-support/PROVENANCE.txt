@@ -1,0 +1,69 @@
+Gaussian polyhedral support calculus: isolated modern compatibility port
+
+Primary source
+  Abhijeet Mulgund, full-simplex-conjecture-lean
+  https://github.com/abhmul/full-simplex-conjecture-lean
+  Commit ae04e529427c26b18fb89a276c31954176dec6dd
+  License: MIT, preserved in LICENSES/full-simplex-MIT.txt.
+
+WeakSimplex dependency
+  https://github.com/abhmul/weak-simplex-conjecture-lean
+  Required commit a204c53cae45652d12524132dbb9a2e0ffe8cf78
+  License: MIT, preserved in LICENSES/weak-simplex-MIT.txt.
+  All 14 required source files are byte-identical at a204c53... and at the
+  previously integrated commit dcf1a45bc22ec54775314927b2a95fbe7c630edf.
+  Thirteen existing modern source files were reused after that comparison.
+  Coding/Gram.lean is the only newly required WeakSimplex source module.
+
+Embedded upstream material
+  The three Vendor/StatLean files preserve their Apache-2.0 provenance notices
+  for StatLean commit 31c61ed887bf3be0def314a3b3e5375d203b5ba1.
+  FSC/Analysis/FinitePartialDerivatives.lean preserves the explicit attribution
+  to A Tucker and mathlib's Apache-2.0 private variable-slice lemma.
+  FSC/Gaussian/StandardDensity.lean preserves its narrow-adaptation notice.
+  The complete Apache-2.0 text is in LICENSES/mathlib-Apache-2.0.txt; copying
+  these files does not replace their original licenses or authorship.
+
+Toolchain
+  Original: Lean 4.31.0, mathlib fabf563a7c95a166b8d7b6efca11c8b4dc9d911f.
+  Modern: Lean 4.35.0-rc2, mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55.
+
+Compatibility modifications
+  All 26 original source files are retained under originals/.
+  SOURCE_MANIFEST.json records per-file hashes, imports, exact commits, and
+  reuse status. The complete non-Mathlib closure is 26 files / 4,018 lines;
+  the increment over the prior integrated closure is 13 files / 2,040 lines.
+  Patches against the pinned originals are retained under patches/.
+
+  FSC/Support/Differentiation.lean:
+    Replace the removed Measure.isProbabilityMeasure_map theorem application
+    with infer_instance, using the modern probability-map instance.
+
+  WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean:
+    Reuse the previously checked modern proof repair: two elaborator
+    compatibility options and removal of obsolete simplification lemmas.
+
+  No imported theorem statement or assumption was changed.
+
+New boundary file
+  PolyhedralSupportBoundary.lean provides six transparent restatements or
+  elementary derivative compositions, plus three feasible-domain extension
+  lemmas proved from the imported Gaussian cap log-concavity. It is an integration interface, not a
+  claim of new authorship of the imported Gaussian theorems.
+
+Scope
+  Fixed normals, arbitrary finite ambient dimension, explicit affine Gaussian
+  slice laws (including singular slice laws), actual threshold Frechet/C1
+  derivatives, actual dilation energy, and positive-support tangent comparison.
+  The imported tangent requires both support arrays to be strictly positive.
+  The separate positive_mass_support_tangent extends this to positive cap
+  probabilities: it follows the same convex reciprocal-mass argument, after
+  proving convexity of the full positive-probability domain by log-concavity.
+  It therefore permits zero or negative support coordinates. This is credited
+  as an integration extension of the upstream argument, not a priority claim.
+  In both variants the base point must exclude coincident supporting
+  hyperplanes; the comparison point may have coincident faces. Derivative
+  and energy endpoints do not require positive supports.
+
+  This port does not prove moving-normal derivatives, covariance Hessians,
+  uniform stratum constants, or the main negative-voting optimality theorem.

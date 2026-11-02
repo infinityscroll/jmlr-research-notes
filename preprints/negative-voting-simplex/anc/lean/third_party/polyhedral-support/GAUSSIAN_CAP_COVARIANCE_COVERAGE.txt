@@ -1,0 +1,60 @@
+Actual conditional Gaussian covariance bound
+
+Source: GaussianCapCovariance.lean
+Namespace: NegativeVotingPolyhedral
+Compiler: Lean 4.35.0-rc2
+Mathlib: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+
+Let gamma be the actual standard Gaussian on FSC.Coord d, a finite real
+Euclidean space. Let C={x: for every j, <w_j,x> <= b_j}, where the index type
+is finite. Put p=gamma(C)>0. For every vector v, the main theorem proves
+
+  (1/p) integral_C (<v,x> - (1/p) integral_C <v,y> dgamma(y))^2 dgamma(x)
+    <= ||v||^2.
+
+This is the directional statement that the actual conditional covariance is
+bounded above by the identity. The theorem does not assume that covariance
+bound, a derivative formula, an integrability condition, or regularity of the
+boundary. Normals need not be unit, distinct, independent, or nonzero.
+
+Proof chain
+  1. Scalar projections of the actual standard Gaussian have their exact
+     Gaussian laws. All exponential moments, and then all polynomial moments
+     under restriction to C, are integrable.
+  2. The explicit Gaussian density satisfies the pointwise exponential-tilt
+     identity. Lebesgue translation invariance then gives the actual identity
+
+       M_C,v(t) = exp(t^2 ||v||^2/2) gamma(C-tv).
+
+  3. Positive mass at t=0 implies positive mass for every translate, using
+     the positivity of the actual MGF. Gaussian cap log-concavity yields
+     concavity of log gamma(C-tv).
+  4. Consequently cgf_C,v(t)-t^2||v||^2/2 is concave. Its first derivative
+     is antitone and its second derivative is nonpositive.
+  5. Mathlib's analytic MGF calculus identifies the actual CGF second
+     derivative with the normalized centered second moment, giving the bound.
+
+Main exports
+  gaussian_cap_conditional_variance_le
+  gaussian_cap_conditional_second_moment_le
+  cap_centered_square_integrable
+  cap_score_moment_integrable
+  cap_mgf_translate
+  cap_cgf_sub_quadratic_concave
+
+Attribution and scope
+  The actual Gaussian cap log-concavity input is from Abhijeet Mulgund's
+  MIT-licensed full-simplex-conjecture-lean, at the commit recorded in
+  PROVENANCE.txt. The exact Gaussian law and MGF-analytic differentiation
+  input is mathlib; MGFAnalytic.lean credits Remy Degenne, Apache-2.0.
+  This module supplies a concrete integration proof of a standard Gaussian
+  covariance estimate. It is not a new covariance theorem or a claim that
+  the full negative-voting optimality theorem has been formalized.
+
+Build and audit
+  lake build GaussianCapCovariance
+  lake env lean GaussianCapCovarianceAudit.lean
+  python3 verify_covariance.py --lake /absolute/path/to/lake
+
+All 17 declarations are audited transitively. The receipt and transcript are
+GAUSSIAN_CAP_COVARIANCE_VERIFICATION.json and GAUSSIAN_CAP_COVARIANCE_AXIOMS.txt.

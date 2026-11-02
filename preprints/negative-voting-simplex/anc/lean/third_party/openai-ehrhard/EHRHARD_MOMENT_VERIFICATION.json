@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-11-02T01:17:55.724844+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "source_sha256": "409b550c7d6af48e66f5130e45747d945b8114aa451fa70c24b5f69f51a8fae3",
+  "source_closure_sha256": "dcc634ea45bdd28ca04c68dae97e60598aef466c6ae3d64970fc7236668dd9d0",
+  "local_source_count": 16,
+  "frozen_dependency_receipts": {
+    "EHRHARD_UPSTREAM_VERIFICATION.json": "2f0483721cef60eaa25923714cd2547180caed3d9d5259247cc50e81c3a30b32",
+    "EHRHARD_POLYHEDRON_VERIFICATION.json": "14eb249986442c391f3048c1cf093282b8d424eb5d9948b59c8ecc68f9ead8d7",
+    "EHRHARD_CURVATURE_VERIFICATION.json": "ffbf5c307cfddcee10d31394fc9e5387f14dbec797dfe82ee1642f29d5ab8393"
+  },
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_exports": [
+    "NegativeVotingEhrhard.polyhedronMoment",
+    "NegativeVotingEhrhard.polyhedronMass",
+    "NegativeVotingEhrhard.polyhedron_integrableExpSet",
+    "NegativeVotingEhrhard.polyhedron_moment_integrable",
+    "NegativeVotingEhrhard.translatedPolyhedronMass_zero",
+    "NegativeVotingEhrhard.translatedPolyhedronMass_mgf",
+    "NegativeVotingEhrhard.polyhedronTiltDerivative",
+    "NegativeVotingEhrhard.hasDerivAt_gaussian_tilt_prefactor",
+    "NegativeVotingEhrhard.hasDerivAt_translatedPolyhedronMass_line",
+    "NegativeVotingEhrhard.polyhedronTiltDerivative_zero",
+    "NegativeVotingEhrhard.hasDerivAt_polyhedronTiltDerivative_zero",
+    "NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_moment_bound",
+    "NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_second_moment_le",
+    "NegativeVotingEhrhard.polyhedronConditionalVariance",
+    "NegativeVotingEhrhard.polyhedronConditionalVariance_expansion",
+    "NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_conditional_variance_le"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual first/second Gaussian moments and normalized conditional-variance Ehrhard correction for finite polyhedra of mass strictly between0 and1. No positive/lower-bound assertion for the correction coefficient is included."
+}

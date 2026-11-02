@@ -42,6 +42,7 @@ jobs:
           python3 verify_dependency.py
           python3 verify_mulgund.py
           python3 verify_hypercontractivity.py
+          python3 verify_extended_dependencies.py
       - name: Audit every project theorem and its axioms
         working-directory: formalization/negative-voting
         run: python3 verify.py

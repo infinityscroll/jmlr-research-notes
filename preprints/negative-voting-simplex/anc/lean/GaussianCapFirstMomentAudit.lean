@@ -1,0 +1,8 @@
+import GaussianCapFirstMoment
+
+#print axioms NegativeVotingPolyhedral.cap_translation_derivative
+#print axioms NegativeVotingPolyhedral.cap_mgf_first_derivative_boundary
+#print axioms NegativeVotingPolyhedral.gaussian_cap_first_moment
+#print axioms NegativeVotingPolyhedral.gaussian_cap_vector_integrable
+#print axioms NegativeVotingPolyhedral.gaussian_cap_vector_first_moment
+#print axioms NegativeVotingPolyhedral.gaussian_cap_coordinate_first_moment

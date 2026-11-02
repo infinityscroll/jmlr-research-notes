@@ -1,0 +1,18 @@
+OAI.GaussianPropeller.EhrhardSmooth.qheat_concave.{uι} {ι : Type uι} [Fintype ι] {f : EuclideanSpace ℝ ι → ℝ}
+  {g : EuclideanSpace ℝ ι → EuclideanSpace ℝ ι} {K : EuclideanSpace ℝ ι → EuclideanSpace ℝ ι →L[ℝ] EuclideanSpace ℝ ι}
+  (hf : ∀ (x : EuclideanSpace ℝ ι), HasFDerivAt f ((innerSL ℝ) (g x)) x)
+  (hg : ∀ (x : EuclideanSpace ℝ ι), HasFDerivAt g (K x) x) (hK : Continuous K) {L : NNReal} {D : ℝ}
+  (hL : ∀ (x : EuclideanSpace ℝ ι), ‖g x‖ ≤ ↑L) (hD : ∀ (x : EuclideanSpace ℝ ι), ‖K x‖ ≤ D)
+  (hconc : ConcaveOn ℝ Set.univ f) {T : ℝ} (hT : 0 ≤ T) :
+  ConcaveOn ℝ Set.univ (OAI.GaussianPropeller.EhrhardSmooth.qheat f T)
+'OAI.GaussianPropeller.EhrhardSmooth.qheat_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.EhrhardSmooth.qheat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.EhrhardSmooth.heat_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.HeatConvolution.heat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.Quantile.Φ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.Quantile.q' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.Quantile.Φ_q' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.Quantile.hasDerivAt_q' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.GaussianPropeller.QuantilePDE.quantile_gradient_line_derivative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,551 @@
+{
+  "entry": "FSC.Support.QuadraticTangent",
+  "full_commit": "ae04e529427c26b18fb89a276c31954176dec6dd",
+  "required_weak_commit": "a204c53cae45652d12524132dbb9a2e0ffe8cf78",
+  "current_integrated_weak_commit": "dcf1a45bc22ec54775314927b2a95fbe7c630edf",
+  "source_toolchain": "leanprover/lean4:v4.31.0",
+  "source_mathlib": "fabf563a7c95a166b8d7b6efca11c8b4dc9d911f",
+  "sections": {
+    "FSC": {
+      "file_count": 12,
+      "raw_lines": 1853,
+      "nonempty_code_lines": 1512,
+      "absent_from_main": [
+        "FSC/Support/QuadraticTangent.lean",
+        "FSC/Support/Dilation.lean",
+        "FSC/Support/Definitions.lean",
+        "FSC/Definitions.lean",
+        "FSC/Gaussian/StandardDensity.lean",
+        "FSC/Support/Differentiation.lean",
+        "FSC/Support/Slicing.lean",
+        "FSC/Gaussian/SinglePin.lean",
+        "FSC/Gaussian/AffineLaw.lean",
+        "FSC/Gaussian/PinDefinitions.lean",
+        "FSC/Analysis/FinitePartialDerivatives.lean",
+        "FSC/Analysis/PartialDerivatives.lean"
+      ]
+    },
+    "WeakSimplex": {
+      "file_count": 14,
+      "raw_lines": 2165,
+      "nonempty_code_lines": 1512,
+      "absent_from_main": [
+        "WeakSimplexConjectureLean/Coding/Gram.lean"
+      ]
+    }
+  },
+  "total_local_file_count": 26,
+  "total_local_raw_lines": 4018,
+  "external_imports_not_recurred": [
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.Group.Pointwise.Set.Scalar",
+    "Mathlib.Algebra.Order.Chebyshev",
+    "Mathlib.Algebra.Order.Star.Real",
+    "Mathlib.Analysis.CStarAlgebra.Matrix",
+    "Mathlib.Analysis.Calculus.ContDiff.Operations",
+    "Mathlib.Analysis.Calculus.Deriv.AffineMap",
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Analysis.Calculus.FDeriv.Partial",
+    "Mathlib.Analysis.Calculus.FDeriv.Pi",
+    "Mathlib.Analysis.Calculus.ParametricIntegral",
+    "Mathlib.Analysis.Convex.Basic",
+    "Mathlib.Analysis.Convex.Deriv",
+    "Mathlib.Analysis.InnerProductSpace.EuclideanDist",
+    "Mathlib.Analysis.InnerProductSpace.PiL2",
+    "Mathlib.Analysis.MeanInequalities",
+    "Mathlib.Analysis.Normed.Lp.MeasurableSpace",
+    "Mathlib.Analysis.SpecialFunctions.Pow.NNReal",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Data.Finset.Piecewise",
+    "Mathlib.LinearAlgebra.Matrix.PosDef",
+    "Mathlib.MeasureTheory.Constructions.BorelSpace.ContinuousLinearMap",
+    "Mathlib.MeasureTheory.Constructions.BorelSpace.Order",
+    "Mathlib.MeasureTheory.Constructions.BorelSpace.Real",
+    "Mathlib.MeasureTheory.Constructions.Pi",
+    "Mathlib.MeasureTheory.Integral.Indicator",
+    "Mathlib.MeasureTheory.Integral.IntegralEqImproper",
+    "Mathlib.MeasureTheory.Integral.Layercake",
+    "Mathlib.MeasureTheory.Integral.Lebesgue.Map",
+    "Mathlib.MeasureTheory.Integral.Pi",
+    "Mathlib.MeasureTheory.Measure.Haar.NormedSpace",
+    "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+    "Mathlib.MeasureTheory.Measure.Lebesgue.EqHaar",
+    "Mathlib.MeasureTheory.Measure.WithDensity",
+    "Mathlib.Probability.CDF",
+    "Mathlib.Probability.Distributions.Gaussian.Fernique",
+    "Mathlib.Probability.Distributions.Gaussian.HasGaussianLaw.Independence",
+    "Mathlib.Probability.Distributions.Gaussian.Multivariate",
+    "Mathlib.Probability.Distributions.Gaussian.Real",
+    "Mathlib.Topology.MetricSpace.ProperSpace"
+  ],
+  "changed_weak_modules": [],
+  "missing": [],
+  "token_flags": {},
+  "modules": [
+    {
+      "module": "FSC.Analysis.FinitePartialDerivatives",
+      "path": "FSC/Analysis/FinitePartialDerivatives.lean",
+      "raw_lines": 205,
+      "nonempty_code_lines": 167,
+      "sha256": "644663b75209dbb1ca02b0c2f547000da485714ffa9778a17df76b3477d5076a",
+      "imports": [
+        "FSC.Analysis.PartialDerivatives",
+        "Mathlib.Data.Finset.Piecewise",
+        "Mathlib.Analysis.Calculus.FDeriv.Pi"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "644663b75209dbb1ca02b0c2f547000da485714ffa9778a17df76b3477d5076a",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "644663b75209dbb1ca02b0c2f547000da485714ffa9778a17df76b3477d5076a"
+    },
+    {
+      "module": "FSC.Analysis.PartialDerivatives",
+      "path": "FSC/Analysis/PartialDerivatives.lean",
+      "raw_lines": 84,
+      "nonempty_code_lines": 66,
+      "sha256": "67e3782c5ceb4185d5dac9fe0c2c9c2b90f9c1773cab4e6b4206b9199b44cd16",
+      "imports": [
+        "Mathlib.Analysis.Calculus.FDeriv.Partial",
+        "Mathlib.Analysis.Calculus.Deriv.Basic",
+        "Mathlib.Analysis.Calculus.ContDiff.Operations"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "67e3782c5ceb4185d5dac9fe0c2c9c2b90f9c1773cab4e6b4206b9199b44cd16",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "67e3782c5ceb4185d5dac9fe0c2c9c2b90f9c1773cab4e6b4206b9199b44cd16"
+    },
+    {
+      "module": "FSC.Definitions",
+      "path": "FSC/Definitions.lean",
+      "raw_lines": 97,
+      "nonempty_code_lines": 73,
+      "sha256": "38aa259fffdafb3d05b18ab0947e0fd151b25fd7602e94ed0ba69ae6190085e0",
+      "imports": [
+        "WeakSimplexConjectureLean.Core.Correlation",
+        "WeakSimplexConjectureLean.Core.Euclidean",
+        "WeakSimplexConjectureLean.Coding.Gram",
+        "Mathlib.Probability.Distributions.Gaussian.Multivariate"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "38aa259fffdafb3d05b18ab0947e0fd151b25fd7602e94ed0ba69ae6190085e0",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "38aa259fffdafb3d05b18ab0947e0fd151b25fd7602e94ed0ba69ae6190085e0"
+    },
+    {
+      "module": "FSC.Gaussian.AffineLaw",
+      "path": "FSC/Gaussian/AffineLaw.lean",
+      "raw_lines": 78,
+      "nonempty_code_lines": 60,
+      "sha256": "88f54ccc3af63bd95e6a7a423a170c8fe81ad54aca7f67f0a00b2eafb8f52f1a",
+      "imports": [
+        "FSC.Definitions",
+        "Mathlib.Probability.Distributions.Gaussian.HasGaussianLaw.Independence"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "88f54ccc3af63bd95e6a7a423a170c8fe81ad54aca7f67f0a00b2eafb8f52f1a",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "88f54ccc3af63bd95e6a7a423a170c8fe81ad54aca7f67f0a00b2eafb8f52f1a"
+    },
+    {
+      "module": "FSC.Gaussian.PinDefinitions",
+      "path": "FSC/Gaussian/PinDefinitions.lean",
+      "raw_lines": 109,
+      "nonempty_code_lines": 78,
+      "sha256": "52f734d3c27c59633c02df7b244e838729df878d2276414579ff5178adee57c0",
+      "imports": [
+        "FSC.Definitions",
+        "WeakSimplexConjectureLean.Normal.PDFCDF"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "52f734d3c27c59633c02df7b244e838729df878d2276414579ff5178adee57c0",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "52f734d3c27c59633c02df7b244e838729df878d2276414579ff5178adee57c0"
+    },
+    {
+      "module": "FSC.Gaussian.SinglePin",
+      "path": "FSC/Gaussian/SinglePin.lean",
+      "raw_lines": 197,
+      "nonempty_code_lines": 163,
+      "sha256": "21d7971ab4ca2aa4cf8c6edb01bb551a32716e2483e2f37554ad4ec9ca729b04",
+      "imports": [
+        "FSC.Gaussian.AffineLaw",
+        "FSC.Gaussian.PinDefinitions"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "21d7971ab4ca2aa4cf8c6edb01bb551a32716e2483e2f37554ad4ec9ca729b04",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "21d7971ab4ca2aa4cf8c6edb01bb551a32716e2483e2f37554ad4ec9ca729b04"
+    },
+    {
+      "module": "FSC.Gaussian.StandardDensity",
+      "path": "FSC/Gaussian/StandardDensity.lean",
+      "raw_lines": 88,
+      "nonempty_code_lines": 45,
+      "sha256": "521c45c94ad4ea9e6ac4de88827a19dcfef5f74168b228b13b3e1f2f61c81d64",
+      "imports": [
+        "FSC.Definitions",
+        "WeakSimplexConjectureLean.Vendor.StatLean.PiGaussian",
+        "WeakSimplexConjectureLean.Vendor.StatLean.WithDensityMap",
+        "Mathlib.MeasureTheory.Integral.Pi"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "521c45c94ad4ea9e6ac4de88827a19dcfef5f74168b228b13b3e1f2f61c81d64",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "521c45c94ad4ea9e6ac4de88827a19dcfef5f74168b228b13b3e1f2f61c81d64"
+    },
+    {
+      "module": "FSC.Support.Definitions",
+      "path": "FSC/Support/Definitions.lean",
+      "raw_lines": 44,
+      "nonempty_code_lines": 29,
+      "sha256": "aded50fde42425ec7e93c45333f5406ee46a7f750287d263fc55142fb515bd96",
+      "imports": [
+        "FSC.Definitions",
+        "WeakSimplexConjectureLean.Normal.PDFCDF"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "aded50fde42425ec7e93c45333f5406ee46a7f750287d263fc55142fb515bd96",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "aded50fde42425ec7e93c45333f5406ee46a7f750287d263fc55142fb515bd96"
+    },
+    {
+      "module": "FSC.Support.Differentiation",
+      "path": "FSC/Support/Differentiation.lean",
+      "raw_lines": 349,
+      "nonempty_code_lines": 312,
+      "sha256": "616a2c9b273e47be62b72ab5ef14a154a4707b4714a86801718e13764b16e845",
+      "imports": [
+        "FSC.Support.Slicing",
+        "FSC.Analysis.FinitePartialDerivatives",
+        "Mathlib.MeasureTheory.Integral.Indicator",
+        "Mathlib.Analysis.Calculus.ParametricIntegral"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "616a2c9b273e47be62b72ab5ef14a154a4707b4714a86801718e13764b16e845",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "79ce8cacdd10ac0c1880cbef421a0395f385b6ee12a88500945836d0b2cdd188"
+    },
+    {
+      "module": "FSC.Support.Dilation",
+      "path": "FSC/Support/Dilation.lean",
+      "raw_lines": 292,
+      "nonempty_code_lines": 261,
+      "sha256": "b36b1adfa7fbcc92408c99874ff3e4023968d826b6fa5e9cf0991c1aacba3db8",
+      "imports": [
+        "FSC.Support.Definitions",
+        "FSC.Gaussian.StandardDensity",
+        "Mathlib.Probability.Distributions.Gaussian.Fernique",
+        "Mathlib.MeasureTheory.Measure.Haar.NormedSpace",
+        "Mathlib.Analysis.Calculus.ParametricIntegral"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "b36b1adfa7fbcc92408c99874ff3e4023968d826b6fa5e9cf0991c1aacba3db8",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "b36b1adfa7fbcc92408c99874ff3e4023968d826b6fa5e9cf0991c1aacba3db8"
+    },
+    {
+      "module": "FSC.Support.QuadraticTangent",
+      "path": "FSC/Support/QuadraticTangent.lean",
+      "raw_lines": 184,
+      "nonempty_code_lines": 158,
+      "sha256": "4292b223f3ef570c69bafe686109da25e6533540def13ff4ce7d93851e05b478",
+      "imports": [
+        "FSC.Support.Dilation",
+        "FSC.Support.Differentiation",
+        "WeakSimplexConjectureLean.LogConcavity.Prekopa",
+        "WeakSimplexConjectureLean.LogConcavity.Indicators",
+        "Mathlib.Analysis.MeanInequalities",
+        "Mathlib.Analysis.Convex.Deriv",
+        "Mathlib.Analysis.Calculus.Deriv.AffineMap"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "4292b223f3ef570c69bafe686109da25e6533540def13ff4ce7d93851e05b478",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "4292b223f3ef570c69bafe686109da25e6533540def13ff4ce7d93851e05b478"
+    },
+    {
+      "module": "FSC.Support.Slicing",
+      "path": "FSC/Support/Slicing.lean",
+      "raw_lines": 126,
+      "nonempty_code_lines": 100,
+      "sha256": "6d6c0df1ad29dfd42b5722dd17f70894c1544110c957fe888d64085e725c30f0",
+      "imports": [
+        "FSC.Support.Definitions",
+        "FSC.Gaussian.SinglePin"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "modern_initial_sha256": "6d6c0df1ad29dfd42b5722dd17f70894c1544110c957fe888d64085e725c30f0",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "6d6c0df1ad29dfd42b5722dd17f70894c1544110c957fe888d64085e725c30f0"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Coding.Gram",
+      "path": "WeakSimplexConjectureLean/Coding/Gram.lean",
+      "raw_lines": 187,
+      "nonempty_code_lines": 157,
+      "sha256": "2d0b2a08e71c088f854a94cd9948915a59fa510b33637813fadd9d8763ff5058",
+      "imports": [
+        "WeakSimplexConjectureLean.Core.Correlation",
+        "Mathlib.Algebra.Order.Chebyshev",
+        "Mathlib.Algebra.Order.Star.Real"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": false,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "2d0b2a08e71c088f854a94cd9948915a59fa510b33637813fadd9d8763ff5058",
+      "reused_existing_modern_port": false,
+      "modern_final_sha256": "2d0b2a08e71c088f854a94cd9948915a59fa510b33637813fadd9d8763ff5058"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Core.Correlation",
+      "path": "WeakSimplexConjectureLean/Core/Correlation.lean",
+      "raw_lines": 20,
+      "nonempty_code_lines": 8,
+      "sha256": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007",
+      "imports": [
+        "WeakSimplexConjectureLean.Core.Matrix"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "2acfd50723cd5157d3322b3aed30e892cbd05844baf606b2e48385f3eebce007"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Core.Euclidean",
+      "path": "WeakSimplexConjectureLean/Core/Euclidean.lean",
+      "raw_lines": 78,
+      "nonempty_code_lines": 46,
+      "sha256": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c",
+      "imports": [
+        "WeakSimplexConjectureLean.Core.Finite",
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Analysis.Normed.Lp.MeasurableSpace",
+        "Mathlib.MeasureTheory.Constructions.BorelSpace.ContinuousLinearMap",
+        "Mathlib.MeasureTheory.Constructions.BorelSpace.Order"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "a0124d3f6719941b8e9227237ca23c4a1cfa73b981fb5679de956a9eaee6d92c"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Core.Finite",
+      "path": "WeakSimplexConjectureLean/Core/Finite.lean",
+      "raw_lines": 12,
+      "nonempty_code_lines": 3,
+      "sha256": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a",
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Fin"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "e9db7eb475d01d806a9fcfce7a23bb96f47ecb72eff8a01aaae79e92e242527a"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Core.Matrix",
+      "path": "WeakSimplexConjectureLean/Core/Matrix.lean",
+      "raw_lines": 44,
+      "nonempty_code_lines": 23,
+      "sha256": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e",
+      "imports": [
+        "WeakSimplexConjectureLean.Core.Euclidean",
+        "Mathlib.Analysis.CStarAlgebra.Matrix",
+        "Mathlib.LinearAlgebra.Matrix.PosDef"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "092008cee50c81cd54a701895d2580a19b4aec6a14e5e4a1db0222dcb9ac094e"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Core.QuadraticCoercivity",
+      "path": "WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean",
+      "raw_lines": 130,
+      "nonempty_code_lines": 105,
+      "sha256": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff",
+      "imports": [
+        "WeakSimplexConjectureLean.Core.Correlation",
+        "Mathlib.Topology.MetricSpace.ProperSpace"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "0c39844635b1fdc1458bcabebd696e9516bafcab82dcb4b78375cc7c747b96ff"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.LogConcavity.Basic",
+      "path": "WeakSimplexConjectureLean/LogConcavity/Basic.lean",
+      "raw_lines": 61,
+      "nonempty_code_lines": 42,
+      "sha256": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155",
+      "imports": [
+        "Mathlib.Analysis.Convex.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.NNReal"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "e421bd47a9a52d6c4161de5a2b86a461a9fc98f9bb09b24cf5f9ebcc0fa23155"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.LogConcavity.Indicators",
+      "path": "WeakSimplexConjectureLean/LogConcavity/Indicators.lean",
+      "raw_lines": 91,
+      "nonempty_code_lines": 66,
+      "sha256": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96",
+      "imports": [
+        "WeakSimplexConjectureLean.LogConcavity.Basic",
+        "WeakSimplexConjectureLean.Core.QuadraticCoercivity",
+        "Mathlib.MeasureTheory.Constructions.BorelSpace.Real"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "4af07f782bc2ca7ff6be37475f5f1247e39b046618b7cf24a1d5e63a00fe2e96"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.LogConcavity.Prekopa",
+      "path": "WeakSimplexConjectureLean/LogConcavity/Prekopa.lean",
+      "raw_lines": 98,
+      "nonempty_code_lines": 78,
+      "sha256": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896",
+      "imports": [
+        "WeakSimplexConjectureLean.LogConcavity.Basic",
+        "WeakSimplexConjectureLean.Vendor.StatLean.PrekopaLeindler"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "2e74229e2f1011e37912ce9ad886a90fdab7629ff41ce767beb816e655eb7896"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Normal.PDFCDF",
+      "path": "WeakSimplexConjectureLean/Normal/PDFCDF.lean",
+      "raw_lines": 115,
+      "nonempty_code_lines": 95,
+      "sha256": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec",
+      "imports": [
+        "Mathlib.MeasureTheory.Integral.IntegralEqImproper",
+        "Mathlib.Probability.CDF",
+        "Mathlib.Probability.Distributions.Gaussian.Real"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "d7320883621e13f4a854c6c442eec22a1b359d5f98d022850abde532ca03e3ec"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Vendor.StatLean.PiGaussian",
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean",
+      "raw_lines": 72,
+      "nonempty_code_lines": 33,
+      "sha256": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890",
+      "imports": [
+        "WeakSimplexConjectureLean.Vendor.StatLean.PiWithDensity",
+        "Mathlib.Probability.Distributions.Gaussian.Real"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "5c9060620eac834b896613fc672d6cfc8a35c2b2be5ab16f48a8d6da0a1fb890"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Vendor.StatLean.PiWithDensity",
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean",
+      "raw_lines": 169,
+      "nonempty_code_lines": 97,
+      "sha256": "348d915e5d3b758ed057feb8a3cc13066e99d09b9287f95f8c8f9cb0cff07b7e",
+      "imports": [
+        "Mathlib.MeasureTheory.Constructions.Pi",
+        "Mathlib.MeasureTheory.Measure.WithDensity",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Map"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "62fae25bff4f147a7565793479bc9146d6094ca7949c0fd18bfae627e560e985",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "62fae25bff4f147a7565793479bc9146d6094ca7949c0fd18bfae627e560e985"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Vendor.StatLean.PrekopaLeindler",
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean",
+      "raw_lines": 1048,
+      "nonempty_code_lines": 741,
+      "sha256": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+        "Mathlib.MeasureTheory.Measure.Lebesgue.EqHaar",
+        "Mathlib.MeasureTheory.Constructions.Pi",
+        "Mathlib.MeasureTheory.Integral.Layercake",
+        "Mathlib.Algebra.Group.Pointwise.Set.Scalar",
+        "Mathlib.Analysis.MeanInequalities",
+        "Mathlib.Analysis.InnerProductSpace.EuclideanDist",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "aba9c34cf91358263bc2dd959495e78e3d42ddbccf02bd82e409a2e70bcbdd04"
+    },
+    {
+      "module": "WeakSimplexConjectureLean.Vendor.StatLean.WithDensityMap",
+      "path": "WeakSimplexConjectureLean/Vendor/StatLean/WithDensityMap.lean",
+      "raw_lines": 40,
+      "nonempty_code_lines": 18,
+      "sha256": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4",
+      "imports": [
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Map",
+        "Mathlib.MeasureTheory.Measure.WithDensity"
+      ],
+      "forbidden_token_scan": [],
+      "already_in_main": true,
+      "unchanged_at_current_weak_commit": true,
+      "modern_initial_sha256": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4",
+      "reused_existing_modern_port": true,
+      "modern_final_sha256": "b272864791b6a0b7e73e1588cb4cb031f0347a70d2f70e5898da86c5cd19dcf4"
+    }
+  ],
+  "compilation_status": "FSC.Support.QuadraticTangent and all nine PolyhedralSupportBoundary endpoints built successfully; selected transitive axiom audit covers 10 imported endpoints plus all nine boundary/extension endpoints.",
+  "modern_mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "modern_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "modified_source_files": [
+    "FSC/Support/Differentiation.lean",
+    "WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean"
+  ]
+}

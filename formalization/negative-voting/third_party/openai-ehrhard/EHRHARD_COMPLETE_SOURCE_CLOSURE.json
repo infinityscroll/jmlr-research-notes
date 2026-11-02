@@ -1,0 +1,29 @@
+{
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "local_sources": {
+    "GaussianEhrhardCoefficient.lean": "c3b1e8353541d10ab47e1e3d27724fb41bd965bdfc8914eb1885662d21261a54",
+    "GaussianEhrhardMomentBridge.lean": "409b550c7d6af48e66f5130e45747d945b8114aa451fa70c24b5f69f51a8fae3",
+    "GaussianEhrhardCurvature.lean": "d5c0ae2d3d92b1088d609bf25c178976d7115beb9992a6f1a06d42dbbd2e7120",
+    "GaussianPolyhedronEhrhard.lean": "8b8f04a015a795a78d8c8771d135974b9cca98ba352421bc33a458823c516e28",
+    "GaussianSoftPolyhedron.lean": "6e0bdcec9d704051af7e64af4154ee80a179a2bf2279bd85d0488fd1bfb7f8c0",
+    "OAI/Probability/GaussianPropeller/SmoothedConcavity.lean": "11d64faced9edf31cfa8c95ea82ab982d24b2359bbb62de882bfe18cd6b5a2d4",
+    "OAI/Probability/GaussianPropeller/HeatMaximum.lean": "a787f10ef7eb8504a1504e179034ac154a7dc1b8e3193c71c735cfbde858b25f",
+    "OAI/Probability/GaussianPropeller/QuantileCalculus.lean": "1722faea4717eccc24104f5418f35438258df0f52c0270ca682d202f2bc2c989",
+    "OAI/Probability/GaussianPropeller/Quantile.lean": "04b2f05102b1e09db83a71b5752ab8e2bdcfded91128b5ba7645978bb5934cc7",
+    "OAI/Probability/GaussianPropeller/HeatConvolution.lean": "da7a2cc29ecac8cec11c2ff8436d6ae89a3e65ecb708fd81f965f917409fd6c4",
+    "OAI/Probability/GaussianPropeller/Stein.lean": "e1352aaa2b2e14ad98170735010718a6153aca1177aa95b77c6f4c47ff9fb63c",
+    "OAI/Probability/GaussianPropeller/Translation.lean": "d4b1eeb028d84e9442427c51e376d43957b40629b26249e95b75503e3caabac9",
+    "OAI/Probability/GaussianPropeller/Gram.lean": "5149cf694330be22a1a69e9a86097b31c4cc20ddab89726c93d8a704bdfb469f",
+    "OAI/Probability/GaussianPropeller/Deletion.lean": "e6bf15ba09ec69d2285d29b6955e723758ef253081da7e79af6bafccdfe5087f",
+    "OAI/Probability/GaussianPropeller/Dual.lean": "f58861ba0168eaed0aa3a387347c2088179144270a0a697e50734411f07ab4ca",
+    "OAI/Probability/GaussianPropeller/Moments.lean": "74730af44b72b567814282c4a94cd95e16bf6367a9a510bd88a917bfa62655d9",
+    "OAI/Probability/GaussianPropeller/Model.lean": "71279fcc8cae39a4abb9aae802d64d1830d26aee301ec1731ad3dfb9bff18df2"
+  },
+  "audited_extension_modules": [
+    "GaussianSoftPolyhedron.lean",
+    "GaussianPolyhedronEhrhard.lean",
+    "GaussianEhrhardCurvature.lean",
+    "GaussianEhrhardMomentBridge.lean",
+    "GaussianEhrhardCoefficient.lean"
+  ]
+}

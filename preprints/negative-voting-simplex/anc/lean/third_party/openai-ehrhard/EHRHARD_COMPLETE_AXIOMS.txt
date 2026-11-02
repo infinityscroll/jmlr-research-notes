@@ -1,0 +1,95 @@
+'NegativeVotingEhrhard.softplus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.hasDerivAt_softplus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softplus_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.self_le_softplus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softplus_le_log_two_of_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.convexOn_softplus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.sigmoid_curvature_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.penaltyArgument' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.penaltyGradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.penaltyHessian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.hasFDerivAt_penaltyArgument' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.hasFDerivAt_softplus_penalty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.hasFDerivAt_penaltyGradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.continuous_penaltyHessian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.norm_penaltyGradient_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.norm_penaltyHessian_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softPolyhedron' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softPolyhedronGradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softPolyhedronHessian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softPolyhedron_fderiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softPolyhedronGradient_fderiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.continuous_softPolyhedronHessian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.norm_softPolyhedronGradient_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.norm_softPolyhedronHessian_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.concaveOn_softPolyhedron' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.qheat_softPolyhedron_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.closedPolyhedron' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyApprox' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softPolyhedron_inside_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.softPolyhedron_le_single_violation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyApprox_tendsto_atTop_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyApprox_tendsto_atBot_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyApprox_cdf_tendsto_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.translatedPolyhedronMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.measurableSet_closedPolyhedron' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.translatedPolyhedronMass_eq_measure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyApprox_heat_tendsto_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyApprox_qheat_tendsto_quantile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.quantile_translatedPolyhedronMass_concave' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.gaussian_translate_mass_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.translatedPolyhedronMass_eq_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.translatedPolyhedronMass_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.quantile_curve_second_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.ehrhard_curve_curvature' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyhedronMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyhedronMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyhedron_integrableExpSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyhedron_moment_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.translatedPolyhedronMass_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.translatedPolyhedronMass_mgf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyhedronTiltDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.hasDerivAt_gaussian_tilt_prefactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.hasDerivAt_translatedPolyhedronMass_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.polyhedronTiltDerivative_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.hasDerivAt_polyhedronTiltDerivative_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_moment_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_second_moment_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.polyhedronConditionalVariance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.polyhedronConditionalVariance_expansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.gaussian_polyhedron_ehrhard_conditional_variance_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.ehrhardCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.integrable_mul_phi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.phi_tendsto_atBot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.phi_truncated_first_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.integrable_gaussian_tail_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.gaussian_tail_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.phi_short_interval_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.gaussian_tail_gap_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.ehrhardCoefficient_cdf_neg_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.cdf_eq_gaussianReal_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.gaussian_cdf_neg_le_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.ehrhardCoefficient_quantile_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.ehrhardCoefficient_log_mass_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.ehrhardCoefficient_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingEhrhard.ehrhardCoefficient_lower_of_mass_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingEhrhard.gaussian_polyhedron_quantitative_variance_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,3 @@
+import GaussianEhrhardCurvature
+#print axioms NegativeVotingEhrhard.quantile_curve_second_derivative
+#print axioms NegativeVotingEhrhard.ehrhard_curve_curvature

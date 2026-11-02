@@ -1,0 +1,70 @@
+GAUSSIAN MASS–CENTROID: CHECKED CLASSICAL LOCALIZATION INPUT
+
+Source: GaussianMassCentroid.lean
+Namespace: NegativeVotingMassCentroid
+Compiler: Lean 4.35.0-rc2
+mathlib: 065356127b1dc0016f66b7283ce0ce2c4055aa55
+
+ACTUAL MEASURE AND INPUT CLASS
+E is any finite-dimensional real inner product space with its Borel measurable
+structure. The measure is mathlib's actual stdGaussian E. A fractional cell f
+is AEMeasurable and satisfies 0 <= f <= 1 almost everywhere; no pointwise Borel
+representative, assumed centroid integrability, or prescribed Gaussian score law
+is required by the concrete centroid endpoints. Gaussian centroid means the
+Bochner integral c(f) = integral f(x) * x d(stdGaussian E), with scalar multiplication.
+
+CHECKED ENDPOINTS
+1. gaussianCentroid_norm_le_threshold:
+   mass(f) = 1 - Phi(t) implies ||c(f)|| <= phi(t).
+
+2. gaussianCentroid_norm_le_quantile:
+   mass(f) = p, 0 < p < 1 implies ||c(f)|| <= phi(Phi^{-1}(p)).
+   normalQuantile is defined by Classical.choose only after proving that the
+   actual Gaussian CDF attains every p in (0,1); normalQuantile_unique proves
+   this is the unique inverse value. Existence, strict monotonicity, continuity,
+   and Phi(-t) = 1-Phi(t) are proved from the checked CDF derivatives and limits.
+
+3. gaussianCentroid_norm_le_profile:
+   ||c(f)|| <= gaussianMassProfile(mass(f)) without a positive-mass hypothesis.
+   The profile equals phi(Phi^{-1}(p)) in (0,1), and zero at both endpoints.
+   A zero-mass fractional cell is zero almost everywhere; a full-mass cell is
+   one almost everywhere. Their actual Gaussian centroids are zero.
+
+4. unit_direction_remainder_bound:
+   For ||w||=1 and every real t,
+   <w,c(f)> <= phi(t) + t*(mass(f) - (1-Phi(t))).
+
+5. gaussianCentroid_norm_le_mass_threshold:
+   For t >= 0, ||c(f)|| <= t*mass(f) + phi(t).
+
+6. gaussianCentroid_norm_le_logarithmic_mass_bound:
+   For real m >= 1 and mass(f) <= C/m,
+   ||c(f)|| <= (C*sqrt(2*log(m)) + 1/sqrt(2*pi))/m.
+   The density substitution at sqrt(2*log(m)) is exact; this theorem contains
+   no unspecified asymptotic constant.
+
+PROOF CONTENT
+The fractional bathtub comparison is proved pointwise, retaining the exact
+mass remainder, and then integrated after establishing every integrability
+claim. The upper Gaussian half-line has mass 1-Phi(t) and first moment phi(t).
+The actual law of <w,X>, for unit w and X distributed as stdGaussian E, is proved
+in the already-checked GaussianCapTailAndStrip module and applied here. Choosing
+w in the centroid direction converts the scalar bound into the Euclidean norm
+bound. No Gaussian isoperimetric inequality is postulated or imported as an axiom.
+
+ATTRIBUTION AND SCOPE
+This is a formalization of a classical sharp Gaussian bound used by the research
+proof, not a new mathematical priority claim. It reuses WeakSimplex.normalCDF,
+normalPDF, their checked derivatives/limits, and truncated_first_moment from the
+attributed WeakSimplexConjectureLean dependency. It also reuses the checked actual
+projection law NegativeVotingCapTail.gaussian_inner_map. Equality rigidity for
+nontrivial extremizing cells is not asserted by this module. This module alone
+does not prove the negative-voting theorem.
+
+VERIFICATION
+36 public declarations: 32 theorems and 4 definitions.
+The standalone module and `lake build GaussianMassCentroid` pass. The transitive
+#print axioms audit covers all 36 declarations; every declaration uses only
+propext, Classical.choice, and Quot.sound. There are no sorry/admit statements,
+custom axioms, native_decide proofs, or unsafe declarations in this source.
+A machine-readable source/axiom receipt is in GAUSSIAN_MASS_CENTROID_VERIFICATION.json.

@@ -1,0 +1,13 @@
+✔ [8931/8942] Built OAI.Probability.GaussianPropeller.Model (7.5s)
+✔ [8932/8942] Built OAI.Probability.GaussianPropeller.Moments (3.0s)
+✔ [8933/8942] Built OAI.Probability.GaussianPropeller.Dual (4.9s)
+✔ [8934/8942] Built OAI.Probability.GaussianPropeller.Deletion (4.4s)
+✔ [8935/8942] Built OAI.Probability.GaussianPropeller.Gram (5.1s)
+✔ [8936/8942] Built OAI.Probability.GaussianPropeller.Translation (5.2s)
+✔ [8937/8942] Built OAI.Probability.GaussianPropeller.Stein (5.3s)
+✔ [8938/8942] Built OAI.Probability.GaussianPropeller.HeatConvolution (7.2s)
+✔ [8939/8942] Built OAI.Probability.GaussianPropeller.Quantile (3.0s)
+✔ [8940/8942] Built OAI.Probability.GaussianPropeller.QuantileCalculus (4.8s)
+✔ [8941/8942] Built OAI.Probability.GaussianPropeller.HeatMaximum (5.6s)
+✔ [8942/8942] Built OAI.Probability.GaussianPropeller.SmoothedConcavity (6.3s)
+Build completed successfully (8942 jobs).

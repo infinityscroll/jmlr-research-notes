@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-11-02T01:07:28.680314+00:00",
+  "compiler": "Lean (version 4.35.0-rc2, arm64-apple-darwin24.6.0, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "sources": {
+    "GaussianFanMassBase.lean": "4fe7277fac6a0bd825635b1c91317315f512bcee17eb99f85f15bd91b9c8835b",
+    "GaussianFanMassMinimizer.lean": "0c1494d3b1760de63f9eb9932d97a0b71165de339a7994b7c748e9ab32c03310",
+    "GaussianFanMassGradient.lean": "69da0b21c2a748ea2a977666d887529ae6acd9e77b2cea98a15ab9453623f231",
+    "GaussianFanMassExistence.lean": "2c4a6cb9e6c18e479fe5298b4d7702ad53a5bcd3253f0db04045f3f545c8c95a"
+  },
+  "source_closure_sha256": "fe2d8dc55673a716df7ae9c292043d1f7a6e2f188cc7727aff4daddf6a76f1ed",
+  "local_source_count": 21,
+  "audit_sha256": "02a61546c03b28a0c477530eae38534507699f3fb5582d7baaa57ea0d1e951a3",
+  "frozen_minimizer_receipt_sha256": "f19d5543a13b0ad8081c3f7cddf9c2607b302d7d6d067e619bb42cec0751b3ee",
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_declarations": [
+    "NegativeVotingFan.score_integrable",
+    "NegativeVotingFan.integral_score",
+    "NegativeVotingFan.max_integrable",
+    "NegativeVotingFan.offset_le_expectedMax",
+    "NegativeVotingFan.maxScore_sub_bound",
+    "NegativeVotingFan.max_score_offset_bound",
+    "NegativeVotingFan.expectedMax_sub_bound",
+    "NegativeVotingFan.expectedMax_lipschitz",
+    "NegativeVotingFan.potential_continuous",
+    "NegativeVotingFan.norm_le_card_mul_max_of_sum_zero",
+    "NegativeVotingFan.potential_ge_massLower_mul_norm",
+    "NegativeVotingFan.exists_potential_minimizer",
+    "NegativeVotingFan.weights_measurable",
+    "NegativeVotingFan.weights_simplex",
+    "NegativeVotingFan.weights_integrable",
+    "NegativeVotingFan.mass_sum",
+    "NegativeVotingFan.ae_scores_injective",
+    "NegativeVotingFan.hasDerivAt_maxScore_direction",
+    "NegativeVotingFan.max_score_line_lipschitz",
+    "NegativeVotingFan.hasDerivAt_expectedMax",
+    "NegativeVotingFan.hasDerivAt_potential",
+    "NegativeVotingFan.winningCell_measurable",
+    "NegativeVotingFan.mass_eq_winningCell",
+    "NegativeVotingFan.masses_eq_of_minimizer",
+    "NegativeVotingFan.exists_offsets_with_prescribed_masses",
+    "NegativeVotingFan.exists_affine_fan_with_prescribed_gaussian_masses"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual arbitrary strictly positive Gaussian winning-cell masses for fixed finite distinct sites; centered offsets exist. No uniqueness or C2/Hessian theorem is asserted."
+}

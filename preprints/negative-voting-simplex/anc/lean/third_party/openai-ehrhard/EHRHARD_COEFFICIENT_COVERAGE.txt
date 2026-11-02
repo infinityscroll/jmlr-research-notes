@@ -1,0 +1,48 @@
+EXPLICIT POSITIVE EHRHARD COVARIANCE COEFFICIENT
+
+Source: GaussianEhrhardCoefficient.lean
+Namespace: NegativeVotingEhrhard
+
+Let p be an actual Gaussian cell mass in (0,1), q the standard Gaussian inverse
+CDF, and phi its density. Define kappa(p) = 1 + p*q(p)/phi(q(p)).
+
+CHECKED SCALAR BOUNDS
+  kappa(p) >= exp(-4) / (2*(1 + q(p)^2));
+  kappa(p) >= exp(-4) / (2*(1 + 2*log(1/p))) > 0.
+If p >= 1/M and M >= 1, then
+  kappa(p) >= exp(-4) / (2*(1 + 2*log(M))).
+
+ACTUAL CONDITIONAL VARIANCE
+For an arbitrary finite closed Gaussian polyhedron C with p = gamma(C) in (0,1),
+and any vector v, gaussian_polyhedron_quantitative_variance_le proves
+
+  (1/p) integral_C (<v,x> - M1/p)^2 dgamma(x)
+    <= ||v||^2 - [exp(-4)/(2*(1+2*log(1/p)))] * (M1/p)^2,
+
+where M1 = integral_C <v,x> dgamma(x). Thus the variance, mean, probability,
+and coefficient all refer to the actual Gaussian measure. No assumed
+isoperimetry, differentiability, covariance inequality, or coefficient bound
+appears as a premise of this endpoint.
+
+PROOF OF THE COEFFICIENT
+At q(p)=-a <= 0, the exact gap identity is
+  phi(a)-a*Phi(-a) = integral_(-infinity,-a] (-a-x)*phi(x) dx.
+The first moment is obtained from mathlib's weighted Gaussian integrability
+and the antiderivative -phi. Put delta=1/(1+a). On the literal interval
+[-a-2*delta,-a-delta], the linear gap is at least delta and the density is at
+least exp(-4)*phi(a). Integrating gives exp(-4)*delta^2*phi(a). The elementary
+inequality (1+a)^2 <= 2*(1+a^2) yields the first bound. For q(p)>=0, kappa>=1.
+An actual Gaussian Chernoff estimate bounds q(p)^2 by 2*log(1/p) when q(p)<=0.
+This proves the logarithmic form. No additional Mills-ratio source was used.
+
+VERIFICATION AND SCOPE
+This module has 16 public declarations (15 theorems, one definition).
+verify_ehrhard_complete.py checks the exact 17-file local source closure,
+the pinned Lean/mathlib versions, a Lake build, and all 77 declarations in the
+five new extension modules. The imported smooth Ehrhard endpoint has its own
+transitive axiom audit. All audits permit only propext, Classical.choice, and
+Quot.sound. EHRHARD_COMPLETE_VERIFICATION.json records the completed run.
+
+These are classical Ehrhard and Gaussian localization facts formalized for the
+research project. They are not claimed as newly discovered mathematical results,
+and they do not alone constitute a proof of the negative-voting theorem.

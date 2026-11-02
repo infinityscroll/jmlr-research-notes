@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-11-02T00:45:09.620369+00:00",
+  "source_sha256": "7af4717e1073947f1f1fbfa12cbabafda33f029bad45683f43d7a1742efdd0e9",
+  "audit_sha256": "3cffd9d371e1c3300f68f8c2d14580f92f6161332f5d211d34dd09e2815f5652",
+  "frozen_dependency_sources": {
+    "PolyhedralSupportBoundary.lean": "f234c0e07e7935d2bfad6eb0fa33c6e5348c02d489daef56677db4027d3035d5",
+    "GaussianCapCovariance.lean": "3d6cb79d8f4a48ff06b766adc5e1d7138c5dcc214ff3a952cd0d0170e56ed0db",
+    "GaussianCapFirstMoment.lean": "8df4d3ae61c27ecf856e938c69c7bd837dc895c3eaf89d530d6ed7a17c5c03b3",
+    "GaussianCapMixedMGF.lean": "5338a4112fd389e14c2d7a4bf11c4a1142f07445e19953ce2afd30ccc3671ace"
+  },
+  "frozen_dependency_receipts": {
+    "POLYHEDRAL_SUPPORT_VERIFICATION.json": "cfa662298db6d8af217f5cd7382a2a99a262ee40dd70ee2b4652b71c41ed4a10",
+    "GAUSSIAN_CAP_COVARIANCE_VERIFICATION.json": "198a5f2936289e010dfd8c7a34b485f8a02073629e4e116b91e16591f82bcf61",
+    "GAUSSIAN_CAP_FIRST_MOMENT_VERIFICATION.json": "65a5681dbcfaee70ffff800e09c164c35a52458094ba6f1cbdfdb32e73cf77c1"
+  },
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_declarations": [
+    "NegativeVotingPolyhedral.noCoincident_translate",
+    "NegativeVotingPolyhedral.cap_integral_density_test_translate",
+    "NegativeVotingPolyhedral.cap_tilt_test_translate",
+    "NegativeVotingPolyhedral.measurableSet_faceEvent",
+    "NegativeVotingPolyhedral.face_affine_inner",
+    "NegativeVotingPolyhedral.slicePreimage_eq_residual_cap",
+    "NegativeVotingPolyhedral.sliceMass_eq_residual_capMass",
+    "NegativeVotingPolyhedral.sliceLaw_isGaussian",
+    "NegativeVotingPolyhedral.face_integrableExpSet",
+    "NegativeVotingPolyhedral.hasDerivAt_faceMGF_zero",
+    "NegativeVotingPolyhedral.face_affine_test_inner",
+    "NegativeVotingPolyhedral.faceMGF_eq_residual_mgf",
+    "NegativeVotingPolyhedral.faceDirection_norm_sq",
+    "NegativeVotingPolyhedral.faceResidual_inner_direction",
+    "NegativeVotingPolyhedral.faceResidualSupports_translate",
+    "NegativeVotingPolyhedral.faceMGF_translate",
+    "NegativeVotingPolyhedral.normalPDF_shift_tilt",
+    "NegativeVotingPolyhedral.face_flux_tilt",
+    "NegativeVotingPolyhedral.cap_tilt_first_moment_translate",
+    "NegativeVotingPolyhedral.cap_tilt_first_moment_boundary",
+    "NegativeVotingPolyhedral.hasDerivAt_cap_tilt_first_moment_boundary",
+    "NegativeVotingPolyhedral.gaussian_cap_bilinear_second_moment",
+    "NegativeVotingPolyhedral.gaussian_cap_coordinate_second_moment",
+    "NegativeVotingPolyhedral.gaussian_cap_boundary_tensor_symmetric"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual bilinear and coordinate Gaussian second-moment boundary identities."
+}

@@ -1,0 +1,80 @@
+GaussianFanMassJacobian.lean — actual offset-mass Jacobian
+
+Namespace: NegativeVotingFanJacobian
+Ambient model: FSC.Coord d with its actual standard Gaussian measure.
+Label set: arbitrary finite nonempty type with decidable equality.
+
+1. Actual derivative, not an assumed Hessian
+   For fixed sites B and offsets h, NegativeVotingFan.mass B h i is the
+   integral of the actual maximum-score assignment. Under a positive
+   CenteredSingularLowerBound B sigma, mass_eq_capMass identifies it with
+   the real Gaussian measure of the winning polyhedron. Unit normals and
+   noncoincidence are derived by frozen GaussianFacetDegree lemmas.
+
+   hasFDerivAt_mass follows by composing the checked FSC cap-mass Frechet
+   derivative with the explicit continuous linear threshold map
+       h -> ((h_i-h_j)/||B_j-B_i||)_(j != i).
+   hasFDerivAt_mass_vector assembles the full vector derivative.
+   contDiff_mass_vector proves the actual mass map is C1 in all offsets
+   for these fixed sites, using the actual cap C1 theorem.
+
+2. Exact coefficient and orientation
+   facetWeight B h i j = phi(pairOffset_ij)/||B_i-B_j|| times the intrinsic
+   Gaussian probability of the actual ij facet. This is exactly the
+   coefficient in GaussianWeightedFacetEnergy/GaussianFacetDegree, with
+   one density factor and one edge denominator.
+
+   massDerivative_apply evaluates the actual derivative as
+       D mass_i(h)[v] = sum_j a_ij (v_i-v_j).
+   massDerivative_eq_offsetJacobian identifies its literal finite matrix
+       J = diag(sum_j a_ij) - (a_ij).
+   Diagonal a_ii is zero. There is no duplicate pair factor in this formula.
+
+3. Symmetry, energy, and positivity
+   facetWeight_eq_ambient transports the intrinsic probability to the
+   actual ambient affine-slice Gaussian measure. Reversing both the unit
+   normal and its scalar offset leaves this pushforward measure unchanged.
+   The actual affine facet is symmetric under i,j. These facts prove a_ij=a_ji.
+
+   offsetJacobian_isHermitian and offsetJacobian_posSemidef are unconditional
+   matrix facts for these literal coefficients, not PSD hypotheses.
+   The exact ordered-pair identity is
+       v^T J v = (1/2) sum_i sum_j a_ij (v_i-v_j)^2.
+   offsetJacobian_constant proves J annihilates constant offsets.
+
+4. Strict positivity is derived from actual geometry
+   affineIndependent_of_centered_lower derives affine independence from
+   the positive centered singular lower bound.
+   exists_inner_values extends the linear functional on an independent
+   family and applies finite-dimensional Riesz representation.
+   exists_strict_pair_point uses this to produce, for any distinct i,j and
+   any h, an actual point where i,j tie and strictly beat all other labels.
+
+   facetWeight_pos_of_strict_point constructs a nonempty open preimage
+   under the affine Gaussian plane projection. Full-support Gaussian
+   positivity implies the actual face measure is strictly positive.
+   Thus facetWeight_pos_of_affineIndependent has no assumed face-measure
+   or graph-connectivity input.
+
+   offsetJacobian_energy_zero_iff and offsetJacobian_kernel_iff show the
+   nullspace is exactly the constants under affine independence.
+   offsetJacobian_pos_centered proves v^T J v > 0 for every nonzero v
+   satisfying sum_i v_i=0. The final _of_lower corollary supplies affine
+   independence from the manuscript's positive centered singular bound.
+
+5. Remaining boundaries
+   This is the complete offset-mass block for fixed sites. It does not
+   identify the full joint site/offset Hessian or prove moving-normal
+   derivative formulas. Strict positivity is qualitative at each B,h;
+   no uniform spectral lower bound in label count or along rank limits
+   is claimed. No full negative-voting theorem is asserted.
+
+Build and audit
+   Build: lake build GaussianFanMassJacobian.
+   Audit: lake env lean GAUSSIAN_FAN_MASS_JACOBIAN_AUDIT.lean.
+   The audit enumerates every compiled constant whose source module is
+   GaussianFanMassJacobian and checks transitive axioms directly via
+   Lean.collectAxioms, including generated and private constants.
+   Allowed logical axioms: propext, Classical.choice, Quot.sound.
+   Exact source hash and final results: GAUSSIAN_FAN_MASS_JACOBIAN_RECEIPT.json.
+   Frozen predecessors were not edited.

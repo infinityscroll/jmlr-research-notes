@@ -1,0 +1,48 @@
+GAUSSIAN WEIGHTED FACET ENERGY: EXACT SCOPE
+2 November 2026
+
+GaussianWeightedFacetEnergy.lean, namespace NegativeVotingWeightedFacet.
+
+The actual set-integral inequality is proved, for finite measures:
+  integral_F v^2 <= measure(F)^(15/16) * ||v||_32^2.
+The finite incidence sum is derived with the same exponent. The final
+actual-Gaussian endpoint is affineWeightedFacetEnergy_eighth_power_bound.
+
+Its energy convention is sum_(i != j) phi(a_ij)/ell_ij times the integral
+of v_i^2 over the actual ij facet, in intrinsic tangent coordinates.
+It does NOT sum v_i^2+v_j^2 over ordered pairs. For symmetric physical
+facets it is the unordered sum of both endpoint squares, without a 2.
+The chart uses a_ij=(h_j-h_i)/||B_i-B_j|| and the unit normal toward i.
+The comparison-plane identity and closedness of the charted facet are
+proved. The Gaussian density upper bound is discharged from its formula.
+
+The final hypotheses left visible are:
+* ell_ij >= c sqrt(L)/m, with c,L,m positive;
+* actual weighted degree sum_j phi(a_ij) pi_ij/ell_ij <= degree;
+* each source-label whole-plane trace has L32 norm at most K_i >= 0.
+The K_i are uniform over that label's incident planes; their squared
+sum is retained in the conclusion. No energy or cap conclusion is assumed.
+
+The precise resulting bound is:
+  E <= ((1/sqrt(2*pi))/c)^(1/16) * degree^(15/16)
+       * m^(1/8) * L^(-1/32) * sum_i K_i^2.
+The key finite Holder step uses
+  A*pi^(15/16) = A^(1/16)*(A*pi)^(15/16),
+where A=phi(a)/ell and A*pi is the actual offset-Laplacian edge weight.
+This avoids every individual facet-probability upper or lower bound.
+
+There is also an optional direct-probability theorem with its upper
+probability hypothesis explicit. No claim is made that the sharp
+constant-factor bound pi_ij <= C sqrt(L)/m^2 holds for all nearby fans;
+it is unnecessary for the degree-based endpoint.
+
+This is sufficient for the all-amplitude cap's main term once the actual
+forcing trace bounds are supplied. With sum K_i^2 bounded, its additional
+relative shape loss is O(m^(-7/8)*L^(271/32)), which tends to zero.
+If the audited forcing normalization gives sum K_i^2=O(L^-3), that is
+O(m^(-7/8)*L^(175/32)). These last asymptotic substitutions are mathematical
+bookkeeping here, not an assertion that the global theorem is formalized.
+
+The actual degree, fan separation, and forcing trace hypotheses still need
+their separate assembly. The exact affine normal disintegration has already
+been proved in GaussianFacetDisintegration; no proof source was altered.

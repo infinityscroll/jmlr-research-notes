@@ -1,0 +1,21 @@
+import PolyhedralSupportBoundary
+
+#print axioms FSC.normalResidual_indep_inner
+#print axioms FSC.lintegral_normalSlice
+#print axioms FSC.hasDerivAt_capMass_update
+#print axioms FSC.hasFDerivAt_capMass
+#print axioms FSC.capMass_support_C1
+#print axioms FSC.hasDerivAt_capMass_dilate
+#print axioms FSC.capEnergy_eq_of_hasFDerivAt
+#print axioms FSC.capMass_logConcave
+#print axioms FSC.convexOn_inv_capMass
+#print axioms FSC.quadratic_support_tangent
+#print axioms NegativeVotingPolyhedral.normal_slice_disintegration
+#print axioms NegativeVotingPolyhedral.support_frechet_derivative
+#print axioms NegativeVotingPolyhedral.support_C1
+#print axioms NegativeVotingPolyhedral.support_directional_derivative
+#print axioms NegativeVotingPolyhedral.support_dilation_energy
+#print axioms NegativeVotingPolyhedral.positive_support_tangent
+#print axioms NegativeVotingPolyhedral.convex_positive_mass_supports
+#print axioms NegativeVotingPolyhedral.convexOn_inv_capMass_positive_mass
+#print axioms NegativeVotingPolyhedral.positive_mass_support_tangent

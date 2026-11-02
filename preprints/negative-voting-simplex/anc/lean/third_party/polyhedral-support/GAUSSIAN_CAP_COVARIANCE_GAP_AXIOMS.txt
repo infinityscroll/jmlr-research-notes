@@ -1,0 +1,9 @@
+'NegativeVotingPolyhedral.cap_conditional_covariance_expansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_covariance_boundary_gap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_covariance_boundary_gap_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

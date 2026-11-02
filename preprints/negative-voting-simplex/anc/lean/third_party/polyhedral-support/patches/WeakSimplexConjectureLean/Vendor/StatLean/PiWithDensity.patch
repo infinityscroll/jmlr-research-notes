@@ -1,0 +1,22 @@
+--- originals/WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean
++++ WeakSimplexConjectureLean/Vendor/StatLean/PiWithDensity.lean
+@@ -1,6 +1,10 @@
+ import Mathlib.MeasureTheory.Constructions.Pi
+ import Mathlib.MeasureTheory.Measure.WithDensity
+ import Mathlib.MeasureTheory.Integral.Lebesgue.Map
++
++set_option backward.isDefEq.respectTransparency false
++set_option backward.isDefEq.respectTransparency.types false
++
+ 
+ /-!
+ Vendored from StatLean commit `31c61ed887bf3be0def314a3b3e5375d203b5ba1`, original path
+@@ -78,7 +82,7 @@
+             rw [← mp.symm.lintegral_comp h_prod_meas]
+             simp_rw [MeasurableEquiv.piFinSuccAbove_symm_apply, Fin.insertNthEquiv,
+               Fin.prod_univ_succ, Fin.insertNth_zero, Equiv.coe_fn_mk, Fin.cons_succ,
+-              Fin.zero_succAbove, cast_eq, Fin.cons_zero]
++              Fin.zero_succAbove, Fin.cons_zero]
+             rfl
+         _ = (∫⁻ x, f 0 x ∂μ 0)
+               * ∫⁻ y : (i : Fin n) → E i.succ,

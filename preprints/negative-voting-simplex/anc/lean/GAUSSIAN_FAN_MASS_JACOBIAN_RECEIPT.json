@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-02T01:28:22.787806+00:00",
+  "source": "GaussianFanMassJacobian.lean",
+  "sha256": "74ecc4012d2575b0729fb554427c6228f322c867aa43a4396206e95b103de18e",
+  "line_count": 432,
+  "source_theorem_declarations": 28,
+  "compiled_constants": 47,
+  "compiled_theorem_constants": 43,
+  "build_command": "lake build GaussianFanMassJacobian",
+  "build_exit_code": 0,
+  "axiom_audit_command": "lake env lean GAUSSIAN_FAN_MASS_JACOBIAN_AUDIT.lean",
+  "audit_exit_code": 0,
+  "allowed_logical_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "all_compiled_source_constants_audited": true,
+  "formalized_scope": "Actual offset-mass Frechet derivative and C1 map, intrinsic Gaussian facet graph Laplacian, symmetry and PSD, positive pair facets from affine independence, kernel exactly constants, strict positivity on centered gauge.",
+  "not_asserted": "Joint site/offset Hessian, moving-normal derivatives, quantitative spectral lower bound uniform in m, full negative-voting theorem."
+}

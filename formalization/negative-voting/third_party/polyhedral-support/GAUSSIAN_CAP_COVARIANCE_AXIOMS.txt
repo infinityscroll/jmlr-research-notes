@@ -1,0 +1,21 @@
+'NegativeVotingPolyhedral.integrable_exp_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.integrable_exp_inner_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.standardDensity_shift_tilt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.translated_cap_membership' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_integral_density_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_mgf_translate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_restrict_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_shift_mass_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_integrableExpSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_cgf_analytic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_score_moment_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_centered_square_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_log_translate_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_cgf_sub_quadratic_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.cap_cgf_second_derivative_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_conditional_variance_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NegativeVotingPolyhedral.gaussian_cap_conditional_second_moment_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

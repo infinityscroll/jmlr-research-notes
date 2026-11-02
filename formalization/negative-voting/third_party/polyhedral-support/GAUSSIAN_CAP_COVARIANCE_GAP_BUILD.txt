@@ -1,0 +1,278 @@
+⚠ [2526/2877] Replayed WeakSimplexConjectureLean.Core.Euclidean
+warning: WeakSimplexConjectureLean/Core/Euclidean.lean:73:20: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [3189/3226] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PiGaussian
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PiGaussian.lean:49:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3200/3226] Replayed WeakSimplexConjectureLean.Core.QuadraticCoercivity
+warning: WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean:63:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: WeakSimplexConjectureLean/Core/QuadraticCoercivity.lean:74:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3205/3226] Replayed FSC.Definitions
+warning: FSC/Definitions.lean:34:22: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Definitions.lean:52:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [3206/3226] Replayed FSC.Support.Definitions
+warning: FSC/Support/Definitions.lean:40:11: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [3208/3226] Replayed FSC.Support.Dilation
+warning: FSC/Support/Dilation.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FSC/Support/Dilation.lean:62:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [3213/3226] Replayed FSC.Gaussian.PinDefinitions
+warning: FSC/Gaussian/PinDefinitions.lean:85:19: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Gaussian/PinDefinitions.lean:96:17: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [3215/3226] Replayed FSC.Support.Slicing
+warning: FSC/Support/Slicing.lean:120:11: `ProbabilityTheory.noAtoms_gaussianReal` has been deprecated: Use `ProbabilityTheory.nullSingletonClass_gaussianReal` instead
+
+Hint: Replace the deprecated name:
+  n̵o̵A̵t̵o̵m̵s̵_̵g̵a̵u̵s̵s̵i̵a̵n̵R̵e̵a̵l̵n̲u̲l̲l̲S̲i̲n̲g̲l̲e̲t̲o̲n̲C̲l̲a̲s̲s̲_̲g̲a̲u̲s̲s̲i̲a̲n̲R̲e̲a̲l̲
+warning: FSC/Support/Slicing.lean:120:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3216/3226] Replayed FSC.Support.Differentiation
+warning: FSC/Support/Differentiation.lean:24:28: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:32:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:43:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:176:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/Differentiation.lean:186:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FSC/Support/Differentiation.lean:191:20: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [3217/3226] Replayed WeakSimplexConjectureLean.Vendor.StatLean.PrekopaLeindler
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:90:26: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:473:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:492:31: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: WeakSimplexConjectureLean/Vendor/StatLean/PrekopaLeindler.lean:909:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3219/3226] Replayed FSC.Support.QuadraticTangent
+warning: FSC/Support/QuadraticTangent.lean:55:23: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: FSC/Support/QuadraticTangent.lean:116:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+⚠ [3220/3226] Replayed PolyhedralSupportBoundary
+warning: PolyhedralSupportBoundary.lean:100:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.convex_positive_mass_supports`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3221/3226] Replayed GaussianCapCovariance
+warning: GaussianCapCovariance.lean:59:22: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianCapCovariance.lean:55:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.translated_cap_membership`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapCovariance.lean:104:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [FSC.capMass, hz] at hb
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: GaussianCapCovariance.lean:99:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_restrict_ne_zero`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapCovariance.lean:114:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_integrableExpSet`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3222/3226] Replayed GaussianCapFirstMoment
+warning: GaussianCapFirstMoment.lean:79:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.gaussian_cap_vector_integrable`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3224/3226] Replayed GaussianCapSecondMoment
+warning: GaussianCapSecondMoment.lean:20:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.noCoincident_translate`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:32:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_integral_density_test_translate`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:97:24: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: GaussianCapSecondMoment.lean:95:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.measurableSet_faceEvent`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:101:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.face_affine_inner`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:115:4: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: GaussianCapSecondMoment.lean:137:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: GaussianCapSecondMoment.lean:133:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.face_integrableExpSet`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:161:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.face_affine_test_inner`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:185:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.faceDirection_norm_sq`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:193:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.faceResidual_inner_direction`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapSecondMoment.lean:369:4: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ℝ≥0∞) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+⚠ [3225/3226] Built GaussianCapCovarianceGap (3.3s)
+warning: GaussianCapCovarianceGap.lean:34:0: automatically included section variable(s) unused in theorem `NegativeVotingPolyhedral.cap_conditional_covariance_expansion`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: GaussianCapCovarianceGap.lean:79:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: GaussianCapCovarianceGap.lean:99:13: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3226 jobs).

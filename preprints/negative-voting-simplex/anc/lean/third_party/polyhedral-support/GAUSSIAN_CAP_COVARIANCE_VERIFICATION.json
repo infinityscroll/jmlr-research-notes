@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-11-02T00:19:46.807662+00:00",
+  "source_sha256": "3d6cb79d8f4a48ff06b766adc5e1d7138c5dcc214ff3a952cd0d0170e56ed0db",
+  "audit_sha256": "631ce98ec38edbc0e69ebe4c9b102ea92621e3585ef1dc3a581418287521554c",
+  "base_verification_sha256": "cfa662298db6d8af217f5cd7382a2a99a262ee40dd70ee2b4652b71c41ed4a10",
+  "build_succeeded": true,
+  "axiom_audit_succeeded": true,
+  "audited_declarations": [
+    "NegativeVotingPolyhedral.integrable_exp_inner",
+    "NegativeVotingPolyhedral.integrable_exp_inner_restrict",
+    "NegativeVotingPolyhedral.standardDensity_shift_tilt",
+    "NegativeVotingPolyhedral.translated_cap_membership",
+    "NegativeVotingPolyhedral.cap_integral_density_translate",
+    "NegativeVotingPolyhedral.cap_mgf_translate",
+    "NegativeVotingPolyhedral.cap_restrict_ne_zero",
+    "NegativeVotingPolyhedral.cap_shift_mass_pos",
+    "NegativeVotingPolyhedral.cap_integrableExpSet",
+    "NegativeVotingPolyhedral.cap_cgf_analytic",
+    "NegativeVotingPolyhedral.cap_score_moment_integrable",
+    "NegativeVotingPolyhedral.cap_centered_square_integrable",
+    "NegativeVotingPolyhedral.cap_log_translate_concave",
+    "NegativeVotingPolyhedral.cap_cgf_sub_quadratic_concave",
+    "NegativeVotingPolyhedral.cap_cgf_second_derivative_le",
+    "NegativeVotingPolyhedral.gaussian_cap_conditional_variance_le",
+    "NegativeVotingPolyhedral.gaussian_cap_conditional_second_moment_le"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Actual conditional variance bound for a positive-mass finite Gaussian polyhedron."
+}
